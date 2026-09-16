@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PLAY ZONE Parent Portal - Check slot availability, book sessions for multiple children, track active memberships, view visit invoices, and customize birthday party packages.">
+  <title>Dashboard - Play Zone</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260912">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="brand-logo" aria-label="Play Zone Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line">
+              <span>PLAY</span>
+              <span class="logo-sq-blue" aria-hidden="true"></span>
+            </div>
+            <div class="logo-line">
+              <span>ZONE</span>
+              <span class="logo-tri-yellow" aria-hidden="true"></span>
+              <span class="logo-dot-red" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+
+        <ul class="nav-menu" role="menubar">
+          <li class="nav-item nav-dropdown" role="none">
+            <a href="../index.html" class="nav-link" role="menuitem">
+              Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="../index.html" class="nav-dropdown-link" role="menuitem">Home 1</a>
+              <a href="../index1.html" class="nav-dropdown-link" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item" role="none"><a href="play-zones.html" class="nav-link" role="menuitem">Play Zones</a></li>
+          <li class="nav-item" role="none"><a href="birthday-parties.html" class="nav-link" role="menuitem">Birthday Parties</a></li>
+          <li class="nav-item" role="none"><a href="membership-plans.html" class="nav-link" role="menuitem">Membership Plans</a></li>
+          <li class="nav-item" role="none"><a href="safety-standards.html" class="nav-link" role="menuitem">Safety Standards</a></li>
+          <li class="nav-item" role="none"><a href="dashboard.html" class="nav-link active" role="menuitem">Dashboard</a></li>
+          <li class="nav-item nav-dropdown" role="none">
+            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Pages <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+            </a>
+            <div class="nav-dropdown-menu dropdown-align-right" role="menu">
+              <a href="contact.html" class="nav-dropdown-link" role="menuitem">Contact</a>
+              <a href="coming-soon.html" class="nav-dropdown-link" role="menuitem">Coming Soon</a>
+              <a href="404.html" class="nav-dropdown-link" role="menuitem">404</a>
+              <a href="privacy.html" class="nav-dropdown-link" role="menuitem">Privacy Policy</a>
+              <a href="terms.html" class="nav-dropdown-link" role="menuitem">Terms &amp; Conditions</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="header-actions">
+          <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="dir-toggle-pill" role="group" aria-label="Direction Switcher (LTR / RTL)">
+            <button type="button" class="dir-btn active" data-dir="ltr" title="Left to Right Layout">LTR</button>
+            <button type="button" class="dir-btn" data-dir="rtl" title="Right to Left Layout">RTL</button>
+          </div>
+          <a href="signin.html" class="btn btn-outline-red btn-sm"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+          <button type="button" class="mobile-nav-btn" aria-label="Open Navigation Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-symbol-block">
+            <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+            <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <nav class="mobile-drawer-links">
+        <a href="../index.html">Home 1</a>
+        <a href="../index1.html">Home 2</a>
+        <a href="play-zones.html">Play Zones</a>
+        <a href="birthday-parties.html">Birthday Parties</a>
+        <a href="membership-plans.html">Membership Plans</a>
+        <a href="safety-standards.html">Safety Standards</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="404.html">404</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="signin.html" class="btn btn-outline-red btn-block">
+        <i class="fas fa-sign-out-alt"></i> LOGOUT
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Dashboard Wrapper -->
+  <main id="main-content" class="dashboard-wrapper">
+    <div class="container">
+
+      <!-- User Welcome & Status Bar -->
+      <section class="dashboard-header-bar" aria-label="Parent Profile Summary">
+        <div class="user-welcome-info">
+          <div class="user-avatar-circle" aria-hidden="true">SJ</div>
+          <div>
+            <h1>Welcome Back, Sarah Jenkins!</h1>
+            <p class="user-children-summary" id="banner-registered-children">
+              <i class="fas fa-child" style="color: var(--primary-blue);"></i> Registered Children: <strong>Leo (Age 4)</strong> &amp; <strong>Maya (Age 2)</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="user-quick-stats">
+          <div class="stat-pill">
+            <span class="stat-label">Active Pass</span>
+            <span class="stat-val" id="header-active-pass-val" style="color: var(--accent-yellow-text);">Gold Explorer</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Remaining Sessions</span>
+            <span class="stat-val" id="membership-remaining-count">8 of 12</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Waiver Status</span>
+            <span class="stat-val" style="color: var(--accent-green); font-size: 0.95rem;">
+              <i class="fas fa-check-circle"></i> Signed &amp; Valid
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Navigation Tabs -->
+      <nav class="dashboard-tabs" aria-label="Dashboard Navigation">
+        <button type="button" class="dash-tab-btn active" data-tab="booking-tab">
+          <i class="fas fa-calendar-check"></i> Slot Booking
+        </button>
+        <button type="button" class="dash-tab-btn" data-tab="membership-tab">
+          <i class="fas fa-crown"></i> Active Membership
+        </button>
+        <button type="button" class="dash-tab-btn" data-tab="history-tab">
+          <i class="fas fa-receipt"></i> Visits &amp; Invoices
+        </button>
+        <button type="button" class="dash-tab-btn" data-tab="party-tab">
+          <i class="fas fa-birthday-cake"></i> Birthday Party Planner
+        </button>
+        <button type="button" class="dash-tab-btn" data-tab="profile-tab">
+          <i class="fas fa-users-cog"></i> Children &amp; Waivers
+        </button>
+      </nav>
+
+      <!-- ====================================================================
+           TAB 1: Slot Availability & Real-Time Booking Engine
+           ==================================================================== -->
+      <div id="booking-tab" class="dash-tab-pane active" role="tabpanel" aria-labelledby="booking-tab">
+        <div class="booking-engine-grid">
+          <!-- Left: Selection Controls -->
+          <div class="dash-card">
+            <h2 class="dash-card-title">
+              <span><i class="fas fa-clock" style="color: var(--primary-blue);"></i> Real-Time Slot Availability</span>
+              <span class="badge badge-green"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> Live System</span>
+            </h2>
+
+            <!-- Step 1: Select Date -->
+            <div class="form-group">
+              <label for="booking-date-picker" class="form-label">1. Select Play Date</label>
+              <input type="date" id="booking-date-picker" class="form-control" style="font-weight: 700;">
+            </div>
+
+            <!-- Step 2: Select Zone -->
+            <div class="form-group">
+              <label class="form-label">2. Select Age Group Zone</label>
+              <div class="zone-selector-grid">
+                <div class="zone-select-card" data-zone-name="Baby Zone (0 - 2 Years)" data-zone-price="15">
+                  <span class="zone-select-dot" style="background-color: var(--accent-yellow);"></span>
+                  <div>
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.15rem;">Baby Zone</h4>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">0 – 2 Yrs • $15/child</span>
+                  </div>
+                </div>
+
+                <div class="zone-select-card selected" data-zone-name="Explorer Zone (3 - 5 Years)" data-zone-price="18">
+                  <span class="zone-select-dot" style="background-color: var(--primary-blue);"></span>
+                  <div>
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.15rem;">Explorer Zone</h4>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">3 – 5 Yrs • $18/child</span>
+                  </div>
+                </div>
+
+                <div class="zone-select-card" data-zone-name="Adventure Zone (6 - 8 Years)" data-zone-price="20">
+                  <span class="zone-select-dot" style="background-color: var(--accent-red);"></span>
+                  <div>
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.15rem;">Adventure Zone</h4>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">6 – 8 Yrs • $20/child</span>
+                  </div>
+                </div>
+
+                <div class="zone-select-card" data-zone-name="Challenge Zone (9 - 12 Years)" data-zone-price="22">
+                  <span class="zone-select-dot" style="background-color: var(--accent-green);"></span>
+                  <div>
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.15rem;">Challenge Zone</h4>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">9 – 12 Yrs • $22/child</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Available Time Slots -->
+            <div class="form-group">
+              <label class="form-label">3. Choose 2-Hour Play Session Slot</label>
+              <div class="time-slot-grid">
+                <button type="button" class="time-slot-btn selected" data-slot="10:00 AM - 12:00 PM">
+                  <span class="slot-time">10:00 AM – 12:00 PM</span>
+                  <span class="slot-left">14 slots left</span>
+                </button>
+                <button type="button" class="time-slot-btn" data-slot="12:30 PM - 02:30 PM">
+                  <span class="slot-time">12:30 PM – 02:30 PM</span>
+                  <span class="slot-left">9 slots left</span>
+                </button>
+                <button type="button" class="time-slot-btn" data-slot="03:00 PM - 05:00 PM">
+                  <span class="slot-time">03:00 PM – 05:00 PM</span>
+                  <span class="slot-left" style="color: var(--accent-red-text);">3 slots left!</span>
+                </button>
+                <button type="button" class="time-slot-btn" data-slot="05:30 PM - 07:30 PM">
+                  <span class="slot-time">05:30 PM – 07:30 PM</span>
+                  <span class="slot-left">18 slots left</span>
+                </button>
+                <button type="button" class="time-slot-btn" data-slot="07:30 PM - 09:30 PM">
+                  <span class="slot-time">07:30 PM – 09:30 PM</span>
+                  <span class="slot-left">22 slots left</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Number of Children -->
+            <div class="form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <label class="form-label" style="margin-bottom: 0.2rem;">4. Number of Children</label>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">1 Adult entry included complimentary per child</span>
+                </div>
+                <div class="counter-input-group">
+                  <button type="button" id="child-count-minus" class="counter-btn" aria-label="Decrease children count">-</button>
+                  <span id="child-count-value" class="counter-value">1</span>
+                  <button type="button" id="child-count-plus" class="counter-btn" aria-label="Increase children count">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add-on: Anti-Skid Socks -->
+            <div style="background-color: var(--bg-surface-alt); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-socks" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Play Zone Grip Socks ($3.50 / pair)</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Mandatory for all children &amp; adults on play mats</div>
+                </div>
+              </div>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="include-socks-checkbox" style="accent-color: var(--primary-blue); transform: scale(1.2);">
+                <span style="font-weight: 700; font-size: 0.85rem;">Add Pairs</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Right: Real-time Price Summary & Checkout -->
+          <div>
+            <div class="booking-summary-card">
+              <h3><i class="fas fa-ticket-alt"></i> Booking Summary</h3>
+
+              <div class="summary-line-item">
+                <span>Selected Zone</span>
+                <strong id="summary-zone-name">Explorer Zone (3 - 5 Years)</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Play Date</span>
+                <strong id="summary-slot-date">Today</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Time Window</span>
+                <strong id="summary-slot-time">10:00 AM - 12:00 PM</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Number of Children</span>
+                <strong id="summary-children-count">1 Child</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Session Fee</span>
+                <strong id="summary-subtotal-price">$18.00</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Grip Socks</span>
+                <strong id="summary-socks-price">$0.00</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Adult Supervison</span>
+                <strong style="color: #6EE7B7;">FREE (1 Adult/Child)</strong>
+              </div>
+
+              <div class="summary-total-line">
+                <span>Total Amount</span>
+                <span id="summary-total-price" style="color: var(--accent-yellow); font-size: 1.6rem;">$18.00</span>
+              </div>
+
+              <div style="margin-top: 1.5rem; font-size: 0.78rem; opacity: 0.85; line-height: 1.4;">
+                <i class="fas fa-shield-alt"></i> Free cancellation up to 2 hours before session start. Instant confirmation pass generated upon booking.
+              </div>
+
+              <button type="button" id="confirm-session-booking-btn" class="btn btn-primary-red btn-block btn-lg" style="margin-top: 1.5rem;">
+                <i class="fas fa-lock"></i> BOOK &amp; ISSUE PASS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           TAB 2: Active Membership Management
+           ==================================================================== -->
+      <div id="membership-tab" class="dash-tab-pane" role="tabpanel" aria-labelledby="membership-tab">
+        <div class="dash-card" style="margin-bottom: 2rem;">
+          <h2 class="dash-card-title">
+            <span><i class="fas fa-crown" style="color: var(--accent-yellow);"></i> Active Membership Pass</span>
+            <span class="badge badge-yellow">Status: Active</span>
+          </h2>
+
+          <div class="membership-pass-card" id="active-pass-card">
+            <div class="pass-card-header">
+              <div>
+                <span class="pass-tier-badge" id="membership-pass-tier-badge">GOLD EXPLORER PASS</span>
+                <h3 style="color: var(--white); font-size: 1.5rem; margin-top: 0.5rem;" id="membership-pass-holder-name">Sarah Jenkins</h3>
+                <span style="font-size: 0.85rem; color: #CBD5E1;" id="membership-pass-id-desc">Pass ID: #PZ-GLD-88419 &bull; Kids: Leo &amp; Maya</span>
+              </div>
+              <!-- QR Code Mockup -->
+              <div style="background: white; padding: 8px; border-radius: 8px; text-align: center;">
+                <i class="fas fa-qrcode" style="font-size: 3.5rem; color: #0F172A;"></i>
+                <div style="font-size: 0.65rem; color: #475569; font-weight: 800;">SCAN AT GATE</div>
+              </div>
+            </div>
+
+            <div class="pass-remaining-meter">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 700;">
+                <span>Session Utilization</span>
+                <span id="membership-utilization-label">8 visits remaining (4 used)</span>
+              </div>
+              <div class="meter-track">
+                <div id="membership-meter-fill" class="meter-fill" style="width: 66%;"></div>
+              </div>
+            </div>
+
+            <div class="pass-footer-info">
+              <div><i class="fas fa-calendar-alt"></i> Valid Through: <strong>December 31, 2026</strong></div>
+              <div><i class="fas fa-coffee"></i> <span id="membership-cafe-perk">10% Cafe Discount Active</span></div>
+            </div>
+          </div>
+
+          <!-- Membership Actions -->
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button type="button" id="renew-membership-btn" class="btn btn-primary-blue">
+              <i class="fas fa-sync-alt"></i> Renew Pass (+12 Visits)
+            </button>
+            <button type="button" id="upgrade-membership-btn" class="btn btn-outline-red">
+              <i class="fas fa-arrow-up"></i> Upgrade to Platinum VIP
+            </button>
+            <a href="membership-plans.html" class="btn btn-outline-blue">View All Plan Tiers</a>
+          </div>
+        </div>
+
+        <!-- Member Perks Grid -->
+        <div class="dash-card">
+          <h3 style="font-size: 1.15rem; margin-bottom: 1.25rem;" id="membership-perks-title">Your Gold Pass Perks</h3>
+          <div class="dash-perks-grid" id="membership-perks-container">
+            <div style="display: flex; gap: 0.75rem;">
+              <i class="fas fa-bolt" style="color: var(--accent-yellow); font-size: 1.25rem;"></i>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Priority Gate Access</h4>
+                <p style="font-size: 0.8rem; color: var(--text-body);">Skip weekend check-in queues directly through the VIP turnstile.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <i class="fas fa-birthday-cake" style="color: var(--accent-red); font-size: 1.25rem;"></i>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">15% Birthday Discount</h4>
+                <p style="font-size: 0.8rem; color: var(--text-body);">Applies automatically to any birthday party package booked.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <i class="fas fa-coffee" style="color: var(--primary-blue); font-size: 1.25rem;"></i>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Parents Lounge Cafe</h4>
+                <p style="font-size: 0.8rem; color: var(--text-body);">Free barista coffee on every visit plus 10% off kid snacks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           TAB 3: Visit History & Itemized Invoices
+           ==================================================================== -->
+      <div id="history-tab" class="dash-tab-pane" role="tabpanel" aria-labelledby="history-tab">
+        <div class="dash-card">
+          <h2 class="dash-card-title">
+            <span><i class="fas fa-history" style="color: var(--primary-blue);"></i> Visit History &amp; Invoices</span>
+            <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">Showing past 12 months</span>
+          </h2>
+
+          <div class="data-table-container">
+            <table class="data-table" aria-label="Visit Records Table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Visit Date</th>
+                  <th>Play Zone</th>
+                  <th>Children</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#PZ-90412</strong></td>
+                  <td>Aug 22, 2026 (10:00 AM)</td>
+                  <td>Explorer Zone</td>
+                  <td>Leo Jenkins (4y)</td>
+                  <td>$18.00</td>
+                  <td><span class="badge badge-green">Completed</span></td>
+                  <td>
+                    <button type="button" class="btn btn-outline-blue btn-sm view-invoice-btn" data-inv-id="INV-2026-90412" data-inv-date="Aug 22, 2026" data-inv-amount="$18.00" data-inv-desc="Explorer Zone 2-Hour Session (1 Child)">
+                      <i class="fas fa-file-invoice"></i> Invoice
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#PZ-88910</strong></td>
+                  <td>Aug 14, 2026 (03:00 PM)</td>
+                  <td>Baby &amp; Explorer Zones</td>
+                  <td>Leo &amp; Maya Jenkins</td>
+                  <td>$33.00</td>
+                  <td><span class="badge badge-green">Completed</span></td>
+                  <td>
+                    <button type="button" class="btn btn-outline-blue btn-sm view-invoice-btn" data-inv-id="INV-2026-88910" data-inv-date="Aug 14, 2026" data-inv-amount="$33.00" data-inv-desc="Baby + Explorer Zone Sibling Combo (2 Children)">
+                      <i class="fas fa-file-invoice"></i> Invoice
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#PZ-81204</strong></td>
+                  <td>Jul 28, 2026 (01:00 PM)</td>
+                  <td>Gold Membership Renewal</td>
+                  <td>Annual Pass</td>
+                  <td>$199.00</td>
+                  <td><span class="badge badge-green">Completed</span></td>
+                  <td>
+                    <button type="button" class="btn btn-outline-blue btn-sm view-invoice-btn" data-inv-id="INV-2026-81204" data-inv-date="Jul 28, 2026" data-inv-amount="$199.00" data-inv-desc="Gold Explorer Membership Pass (12 Play Sessions)">
+                      <i class="fas fa-file-invoice"></i> Invoice
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#PZ-79841</strong></td>
+                  <td>Jul 05, 2026 (11:00 AM)</td>
+                  <td>Baby Zone</td>
+                  <td>Maya Jenkins (2y)</td>
+                  <td>$15.00</td>
+                  <td><span class="badge badge-green">Completed</span></td>
+                  <td>
+                    <button type="button" class="btn btn-outline-blue btn-sm view-invoice-btn" data-inv-id="INV-2026-79841" data-inv-date="Jul 05, 2026" data-inv-amount="$15.00" data-inv-desc="Baby Zone Sensory Session (1 Child)">
+                      <i class="fas fa-file-invoice"></i> Invoice
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           TAB 4: Birthday Party Customizer & Quotation
+           ==================================================================== -->
+      <div id="party-tab" class="dash-tab-pane" role="tabpanel" aria-labelledby="party-tab">
+        <div class="booking-engine-grid">
+          <!-- Left: Party Configurator -->
+          <div class="dash-card">
+            <h2 class="dash-card-title">
+              <span><i class="fas fa-birthday-cake" style="color: var(--accent-red);"></i> Customize Birthday Party</span>
+              <span class="badge badge-red">Private Suite</span>
+            </h2>
+
+            <!-- Step 1: Package Choice -->
+            <div class="form-group">
+              <label class="form-label">1. Choose Party Package Tier</label>
+              <div class="bday-package-grid">
+                <div class="bday-package-card zone-select-card" data-package-name="Mini Bash" data-base-price="249" data-base-guests="10">
+                  <div>
+                    <h4 style="font-size: 0.9rem;">Mini Bash</h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">$249 (10 Kids)</span>
+                  </div>
+                </div>
+
+                <div class="bday-package-card zone-select-card selected" data-package-name="Super Play Party" data-base-price="399" data-base-guests="15">
+                  <div>
+                    <h4 style="font-size: 0.9rem;">Super Party</h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">$399 (15 Kids)</span>
+                  </div>
+                </div>
+
+                <div class="bday-package-card zone-select-card" data-package-name="VIP Mega Celebration" data-base-price="599" data-base-guests="20">
+                  <div>
+                    <h4 style="font-size: 0.9rem;">VIP Mega</h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">$599 (20 Kids)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Theme Selector -->
+            <div class="form-group">
+              <label class="form-label">2. Select Party Theme</label>
+              <div class="bday-theme-grid">
+                <div class="party-theme-card zone-select-card selected" data-theme-name="Cosmic Space Odyssey">
+                  <i class="fas fa-rocket" style="color: var(--primary-blue);"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Space Odyssey</span>
+                </div>
+                <div class="party-theme-card zone-select-card" data-theme-name="Jungle Safari Expedition">
+                  <i class="fas fa-paw" style="color: var(--accent-yellow-text);"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Jungle Safari</span>
+                </div>
+                <div class="party-theme-card zone-select-card" data-theme-name="Superhero Academy">
+                  <i class="fas fa-mask" style="color: var(--accent-red);"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Superheroes</span>
+                </div>
+                <div class="party-theme-card zone-select-card" data-theme-name="Enchanted Princess &amp; Knights">
+                  <i class="fas fa-chess-queen theme-icon-purple"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Princess/Castle</span>
+                </div>
+                <div class="party-theme-card zone-select-card" data-theme-name="Under the Sea Aquarium">
+                  <i class="fas fa-water theme-icon-cyan"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Under the Sea</span>
+                </div>
+                <div class="party-theme-card zone-select-card" data-theme-name="Dino Adventure Land">
+                  <i class="fas fa-dragon" style="color: var(--accent-green);"></i>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Dino Land</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Guest Count Slider -->
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <label for="party-guest-slider" class="form-label" style="margin-bottom: 0;">3. Guest Count (Children)</label>
+                <strong id="party-guest-count-val" style="font-size: 1.1rem; color: var(--primary-blue);">15 Kids</strong>
+              </div>
+              <input type="range" id="party-guest-slider" min="10" max="40" value="15" step="1" style="width: 100%; accent-color: var(--primary-blue);">
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">
+                Extra children beyond package base allowance are $22/child (includes food, grip socks &amp; drinks).
+              </span>
+            </div>
+
+            <!-- Step 4: Birthday Star & Date Details -->
+            <div class="bday-details-grid">
+              <div class="form-group">
+                <label for="party-child-name" class="form-label">Birthday Star's Name</label>
+                <input type="text" id="party-child-name" class="form-control" placeholder="e.g. Leo" value="Leo Jenkins">
+              </div>
+              <div class="form-group">
+                <label for="party-preferred-date" class="form-label">Preferred Date</label>
+                <input type="date" id="party-preferred-date" class="form-control" value="2026-09-12">
+              </div>
+            </div>
+
+            <!-- Step 5: Optional Add-ons -->
+            <div class="form-group">
+              <label class="form-label">5. Optional Party Add-ons</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.8rem; background-color: var(--bg-surface-alt); border-radius: var(--radius-sm); border: 1px solid var(--border-color); cursor: pointer;">
+                  <span style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                    <input type="checkbox" class="party-addon-check" data-price="60" checked style="accent-color: var(--primary-blue);">
+                    Themed 2-Tier Birthday Cake
+                  </span>
+                  <strong style="font-size: 0.85rem;">+$60.00</strong>
+                </label>
+
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.8rem; background-color: var(--bg-surface-alt); border-radius: var(--radius-sm); border: 1px solid var(--border-color); cursor: pointer;">
+                  <span style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                    <input type="checkbox" class="party-addon-check" data-price="75" style="accent-color: var(--primary-blue);">
+                    Face Painter &amp; Balloon Twister (1 Hour)
+                  </span>
+                  <strong style="font-size: 0.85rem;">+$75.00</strong>
+                </label>
+
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.8rem; background-color: var(--bg-surface-alt); border-radius: var(--radius-sm); border: 1px solid var(--border-color); cursor: pointer;">
+                  <span style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                    <input type="checkbox" class="party-addon-check" data-price="120" style="accent-color: var(--primary-blue);">
+                    Kids Magic Show &amp; Comedy Act (45 Mins)
+                  </span>
+                  <strong style="font-size: 0.85rem;">+$120.00</strong>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Instant Party Quotation -->
+          <div>
+            <div class="booking-summary-card" style="background: linear-gradient(135deg, #1F2937, #111827);">
+              <h3><i class="fas fa-receipt"></i> Party Quotation</h3>
+
+              <div class="summary-line-item">
+                <span>Selected Package</span>
+                <strong id="party-summary-pack-name">Super Play Party (15 Kids)</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Chosen Theme</span>
+                <strong id="party-summary-theme-name">Cosmic Space Odyssey</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Total Guest Kids</span>
+                <strong id="party-summary-guests">15 Kids (15 included)</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Extra Guest Surcharge</span>
+                <strong id="party-summary-extra-fee">$0.00</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Selected Add-ons</span>
+                <strong id="party-summary-addons">$60.00</strong>
+              </div>
+              <div class="summary-line-item">
+                <span>Dedicated Party Host</span>
+                <strong style="color: #6EE7B7;">INCLUDED</strong>
+              </div>
+
+              <div class="summary-total-line">
+                <span>Estimated Total</span>
+                <span id="party-summary-grand-total" style="color: var(--accent-yellow); font-size: 1.6rem;">$459.00</span>
+              </div>
+
+              <div style="margin-top: 1.5rem; font-size: 0.78rem; opacity: 0.8; line-height: 1.4;">
+                Deposit of 25% required upon reservation. Our party coordinator will verify availability and finalize your custom menu within 24 hours.
+              </div>
+
+              <button type="button" id="book-party-package-btn" class="btn btn-primary-red btn-block btn-lg" style="margin-top: 1.5rem;">
+                <i class="fas fa-calendar-star"></i> RESERVE PARTY SUITE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           TAB 5: Child Profiles & Digital Waivers
+           ==================================================================== -->
+      <div id="profile-tab" class="dash-tab-pane" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="dash-two-col-grid">
+          <!-- Left: Registered Children -->
+          <div class="dash-card">
+            <h2 class="dash-card-title">
+              <span><i class="fas fa-child" style="color: var(--primary-blue);"></i> Registered Children</span>
+              <button type="button" class="btn btn-primary-blue btn-sm" id="btn-open-add-child">
+                + Add Child
+              </button>
+            </h2>
+
+            <div id="children-list-container" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <!-- Populated dynamically by dashboard.js -->
+            </div>
+          </div>
+
+          <!-- Right: Digital Safety Waiver Details -->
+          <div class="dash-card">
+            <h2 class="dash-card-title">
+              <span><i class="fas fa-file-contract" style="color: var(--accent-green);"></i> Digital Safety Waiver</span>
+              <span class="badge badge-green">Valid</span>
+            </h2>
+
+            <div style="background-color: var(--bg-surface-alt); padding: 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.6; color: var(--text-body);">
+              <p><strong>Signed by:</strong> Sarah Jenkins (Mother / Legal Guardian)</p>
+              <p><strong>Sign Date:</strong> January 15, 2026</p>
+              <p><strong>Valid Until:</strong> January 15, 2027 (Auto-Renews with Active Membership)</p>
+              <p style="margin-top: 0.5rem; color: var(--text-muted);">
+                Covers play equipment rules, emergency medical contact permission, and anti-skid socks safety enforcement.
+              </p>
+            </div>
+
+            <button type="button" id="btn-view-waiver-modal" class="btn btn-outline-blue btn-block">
+              <i class="fas fa-eye"></i> View Full Signed Waiver PDF
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODALS: Booking Pass Modal, Invoice Modal, Party Modal
+       ========================================================================== -->
+
+  <!-- 1. Instant Booking Confirmation Pass Modal -->
+  <div id="booking-success-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-booking-title">
+    <div class="modal-dialog">
+      <div class="modal-header" style="background-color: var(--primary-blue); color: var(--white);">
+        <h3 id="modal-booking-title" class="modal-title" style="color: var(--white);"><i class="fas fa-check-circle"></i> Play Pass Issued!</h3>
+        <button type="button" class="modal-close-btn" style="color: var(--white);" aria-label="Close modal" onclick="window.closeModal('booking-success-modal');">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div style="display: inline-block; background: #FFFFFF; padding: 12px; border-radius: 12px; box-shadow: var(--shadow-md); margin-bottom: 1.25rem;">
+          <i class="fas fa-qrcode" style="font-size: 6rem; color: #0F172A;"></i>
+          <div style="font-size: 0.75rem; font-weight: 800; color: #334155; margin-top: 4px;">FAST PASS ENTRY</div>
+        </div>
+
+        <h4 style="font-size: 1.35rem; margin-bottom: 0.25rem;" id="ticket-booking-id">PZ-941824</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Show this QR code at the reception turnstile for express check-in.</p>
+
+        <div style="text-align: left; background-color: var(--bg-surface-alt); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span style="color: var(--text-muted);">Play Zone:</span>
+            <strong id="ticket-zone-name">Explorer Zone</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span style="color: var(--text-muted);">Date &amp; Slot:</span>
+            <strong id="ticket-date-time">Today at 10:00 AM</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span style="color: var(--text-muted);">Attendees:</span>
+            <strong id="ticket-kids-count">1 Child</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">Total Paid:</span>
+            <strong id="ticket-total-paid" style="color: var(--primary-blue); font-size: 1.1rem;">$18.00</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary-blue btn-block" onclick="window.print();">
+          <i class="fas fa-print"></i> Print / Save Ticket Pass
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Printable Invoice Modal -->
+  <div id="invoice-detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-inv-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-inv-title" class="modal-title"><i class="fas fa-file-invoice"></i> Play Zone Invoice</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal" onclick="window.closeModal('invoice-detail-modal');">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+          <div>
+            <h4 style="font-size: 1.25rem;">PLAY ZONE INDOOR AREA</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">123 Play Street, Fun City, 560001<br>GST/Tax ID: 29AABCP1234F1Z5</p>
+          </div>
+          <div style="text-align: right;">
+            <h5 id="modal-inv-id" style="font-size: 1rem; color: var(--primary-blue);">INV-2026-90412</h5>
+            <span id="modal-inv-date" style="font-size: 0.8rem; color: var(--text-muted);">Aug 22, 2026</span>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 1rem 0; margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 0.5rem;">
+            <span id="modal-inv-desc">Explorer Zone 2-Hour Session</span>
+            <span id="modal-inv-amount">$18.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+            <span>Taxes &amp; Facility Service Charge</span>
+            <span>Included</span>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 900; margin-bottom: 1.5rem;">
+          <span>Total Paid</span>
+          <span id="modal-inv-total" style="color: var(--primary-blue);">$18.00</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="print-invoice-btn" class="btn btn-primary-blue btn-sm">
+          <i class="fas fa-print"></i> Print Invoice
+        </button>
+        <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.closeModal('invoice-detail-modal');">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Party Request Received Modal -->
+  <div id="party-success-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header" style="background-color: var(--accent-red); color: white;">
+        <h3 class="modal-title" style="color: white;"><i class="fas fa-birthday-cake"></i> Party Request Submitted!</h3>
+        <button type="button" class="modal-close-btn" style="color: white;" onclick="window.closeModal('party-success-modal');">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div style="font-size: 3.5rem; color: var(--accent-yellow); margin-bottom: 1rem;"><i class="fas fa-gift"></i></div>
+        <h4>Your Private Suite is Reserved Provisionally!</h4>
+        <p style="font-size: 0.9rem; color: var(--text-body); margin: 0.75rem auto 1.5rem auto;">
+          Our event coordinator will contact you at <strong>+91 1234 567 890</strong> or your email to confirm theme cake flavor, balloon arrangements, and dietary options.
+        </p>
+        <button type="button" class="btn btn-primary-blue btn-sm" onclick="window.closeModal('party-success-modal');">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Add Child Profile Modal -->
+  <div id="add-child-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-add-child-title">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <div class="modal-header" style="background-color: var(--primary-blue); color: var(--white);">
+        <h3 id="modal-add-child-title" class="modal-title" style="color: var(--white);"><i class="fas fa-user-plus"></i> Add Registered Child</h3>
+        <button type="button" class="modal-close-btn" style="color: var(--white);" aria-label="Close modal" onclick="window.closeModal('add-child-modal');">&times;</button>
+      </div>
+      <form id="add-child-form" class="modal-body" style="padding: 1.75rem;">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="add-child-name">Child's Full Name *</label>
+          <input type="text" id="add-child-name" class="form-control" placeholder="e.g. Noah Jenkins" required>
+        </div>
+
+        <div class="form-row-two-col" style="margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="add-child-age">Age (Years) *</label>
+            <input type="number" id="add-child-age" class="form-control" min="0" max="14" placeholder="e.g. 5" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="add-child-dob">Date of Birth</label>
+            <input type="date" id="add-child-dob" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="add-child-zone">Recommended Play Zone *</label>
+          <select id="add-child-zone" class="form-control" required>
+            <option value="Baby Zone (Ages 0-2)">Baby Zone (Ages 0-2)</option>
+            <option value="Explorer Zone (Ages 2-4)" selected>Explorer Zone (Ages 2-4)</option>
+            <option value="Adventure Zone (Ages 4-8)">Adventure Zone (Ages 4-8)</option>
+            <option value="Challenge Ninja (Ages 8-14)">Challenge Ninja (Ages 8-14)</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="add-child-notes">Special Care, Allergies or Notes</label>
+          <textarea id="add-child-notes" class="form-control" rows="2" placeholder="e.g. Peanut allergy, asthma inhaler, sensory sensitive..."></textarea>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="add-child-phone">Emergency Contact Phone *</label>
+          <input type="tel" id="add-child-phone" class="form-control" value="+1 (555) 382-9910" required>
+        </div>
+
+        <div style="background-color: var(--bg-surface-alt); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-body); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-check-circle" style="color: var(--accent-green);"></i>
+          <span>Child will automatically be covered under active signed digital waiver.</span>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end; border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 0.5rem;">
+          <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.closeModal('add-child-modal');">Cancel</button>
+          <button type="submit" class="btn btn-primary-blue btn-sm"><i class="fas fa-plus"></i> Save Child</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. Edit Child Profile Modal -->
+  <div id="edit-child-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-edit-child-title">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3 id="modal-edit-child-title" class="modal-title"><i class="fas fa-user-edit" style="color: var(--primary-blue);"></i> Edit Child Profile</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal" onclick="window.closeModal('edit-child-modal');">&times;</button>
+      </div>
+      <form id="edit-child-form" class="modal-body" style="padding: 1.75rem;">
+        <input type="hidden" id="edit-child-id">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="edit-child-name">Child's Full Name *</label>
+          <input type="text" id="edit-child-name" class="form-control" required>
+        </div>
+
+        <div class="form-row-two-col" style="margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="edit-child-age">Age (Years) *</label>
+            <input type="number" id="edit-child-age" class="form-control" min="0" max="14" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-child-dob">Date of Birth</label>
+            <input type="date" id="edit-child-dob" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="edit-child-zone">Assigned Play Zone *</label>
+          <select id="edit-child-zone" class="form-control" required>
+            <option value="Baby Zone (Ages 0-2)">Baby Zone (Ages 0-2)</option>
+            <option value="Explorer Zone (Ages 2-4)">Explorer Zone (Ages 2-4)</option>
+            <option value="Adventure Zone (Ages 4-8)">Adventure Zone (Ages 4-8)</option>
+            <option value="Challenge Ninja (Ages 8-14)">Challenge Ninja (Ages 8-14)</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="edit-child-notes">Special Care, Allergies or Notes</label>
+          <textarea id="edit-child-notes" class="form-control" rows="2" placeholder="Any allergies, sensory needs or emergency notes..."></textarea>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="edit-child-phone">Emergency Contact Phone *</label>
+          <input type="tel" id="edit-child-phone" class="form-control" required>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 0.5rem;">
+          <button type="button" id="btn-delete-child" class="btn btn-outline-red btn-sm" style="flex-shrink: 0;">
+            <i class="fas fa-trash-alt"></i> Remove Child
+          </button>
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; margin-left: auto;">
+            <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.closeModal('edit-child-modal');">Cancel</button>
+            <button type="submit" class="btn btn-primary-blue btn-sm"><i class="fas fa-save"></i> Save Changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. View Full Signed Waiver PDF Modal -->
+  <div id="waiver-document-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-waiver-title">
+    <div class="modal-dialog" style="max-width: 760px; max-height: 90vh;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 8px; background: var(--accent-green-light); color: var(--accent-green); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <div style="min-width: 0;">
+            <h3 id="modal-waiver-title" class="modal-title" style="font-size: 1.15rem; margin: 0; line-height: 1.3;">Official Digital Safety Waiver</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Document ID: WAIVER-REF-2026-9812A • Status: Verified &amp; Signed</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal" onclick="window.closeModal('waiver-document-modal');">&times;</button>
+      </div>
+
+      <div class="modal-body" id="waiver-document-content" style="padding: clamp(1.25rem, 3vw, 2rem); font-family: var(--font-primary); font-size: 0.88rem; line-height: 1.65;">
+        <!-- Official Document Header -->
+        <div class="waiver-doc-header">
+          <div class="waiver-doc-brand">
+            <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 900; color: #0D5BE1; letter-spacing: -0.02em; line-height: 1.2;">PLAY ZONE INDOOR AREA</div>
+            <div style="font-size: 0.75rem; color: #6B7280; line-height: 1.35;">123 Play Street, Fun City • BIS Safe Play Certified #BIS-2026-SP-0914</div>
+            <div style="font-size: 0.75rem; color: #6B7280; line-height: 1.35;">Tel: +1 (555) 019-2834 • Email: safety@playzone.com</div>
+          </div>
+          <div class="waiver-doc-status">
+            <span style="display: inline-flex; align-items: center; gap: 0.35rem; background: #DEF7EC; color: #03543F; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.04em; border: 1px solid #31C48D; white-space: nowrap;">
+              <i class="fas fa-check-circle"></i> Legally Binding &amp; Active
+            </span>
+            <div style="font-size: 0.75rem; color: #6B7280; line-height: 1.35;">Effective: Jan 15, 2026 – Jan 15, 2027</div>
+          </div>
+        </div>
+
+        <h4 style="font-size: clamp(0.95rem, 2.5vw, 1.1rem); font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem; color: #111827;">
+          PARTICIPANT LIABILITY RELEASE, SAFETY WAIVER &amp; MEDICAL AUTHORIZATION
+        </h4>
+
+        <!-- Guardian & Minors Information Grid -->
+        <div class="waiver-guardian-info">
+          <div class="form-row-two-col" style="margin-bottom: 0.75rem;">
+            <div>
+              <span style="font-size: 0.75rem; color: #6B7280; display: block; text-transform: uppercase; font-weight: 700;">Legal Guardian / Signatory:</span>
+              <strong style="color: #111827;">Sarah Jenkins</strong> (Mother)
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: #6B7280; display: block; text-transform: uppercase; font-weight: 700;">Emergency Contact:</span>
+              <strong style="color: #111827;">+1 (555) 382-9910</strong>
+            </div>
+          </div>
+          <div>
+            <span style="font-size: 0.75rem; color: #6B7280; display: block; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem;">Minor Participants Covered:</span>
+            <div id="waiver-covered-children-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Document Clauses -->
+        <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.82rem; color: #374151;">
+          <div>
+            <strong style="color: #111827;">1. Assumption of Inherent Risk:</strong>
+            I understand that indoor play structures, slides, climbing walls, ninja obstacle courses, and trampoline zones involve active physical exertion and inherent risks of minor injuries. I voluntarily assume full responsibility for the participation of the registered child(ren).
+          </div>
+          <div>
+            <strong style="color: #111827;">2. Mandatory Grip Socks &amp; Attire Policy:</strong>
+            I certify that all minors under my supervision shall wear certified rubber anti-skid grip socks and remove loose jewelry, necklaces, and sharp objects prior to entry into play zones.
+          </div>
+          <div>
+            <strong style="color: #111827;">3. Parental Supervision &amp; Code of Conduct:</strong>
+            I understand that children under the age of 8 must have parent/guardian presence on facility premises at all times. Rough play, pushing, and climbing up down-slides are strictly prohibited.
+          </div>
+          <div>
+            <strong style="color: #111827;">4. Emergency Medical Treatment Authorization:</strong>
+            In the unforeseen event of a medical emergency where I cannot be contacted immediately, I authorize Play Zone certified First Aid &amp; CPR personnel to arrange medical evaluation and paramedic transport.
+          </div>
+          <div>
+            <strong style="color: #111827;">5. CCTV Surveillance &amp; Child Safety Monitoring:</strong>
+            I acknowledge that Play Zone operates 24/7 CCTV recording throughout play and common areas strictly for child security and audit verification.
+          </div>
+        </div>
+
+        <!-- Digital Signature Box -->
+        <div class="digital-sig-box" style="background: #F3F4F6; border: 1px dashed #9CA3AF; border-radius: 8px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span style="font-size: 0.75rem; color: #6B7280; display: block; text-transform: uppercase; font-weight: 700;">Verified Digital Signature:</span>
+            <div style="font-family: 'Brush Script MT', 'Caveat', cursive, serif; font-size: 2.2rem; color: #0D5BE1; line-height: 1.2; padding: 0.25rem 0;">
+              Sarah Jenkins
+            </div>
+            <div style="font-size: 0.72rem; color: #6B7280;">
+              Digital Signature ID: <code style="background: #E5E7EB; padding: 2px 4px; border-radius: 4px;">SHA256: 8f4a-29b1-e044-c71d</code>
+            </div>
+          </div>
+          <div style="text-align: right; font-size: 0.78rem; color: #4B5563;">
+            <div><strong>IP Address:</strong> 192.168.1.42</div>
+            <div><strong>Timestamp:</strong> 2026-01-15 10:24:18 EST</div>
+            <div><strong>SMS 2FA:</strong> Verified (+1 555-***-9910)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="waiver-footer-secure">
+          <i class="fas fa-lock" style="color: var(--accent-green);"></i> Encrypted &amp; Stored Securely
+        </div>
+        <div class="waiver-footer-actions">
+          <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.print();">
+            <i class="fas fa-print"></i> Print / Save PDF
+          </button>
+          <button type="button" class="btn btn-primary-blue btn-sm" onclick="window.closeModal('waiver-document-modal');">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7: Upgrade Membership Modal -->
+  <div id="upgrade-membership-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-upgrade-title">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <div class="modal-header" style="background: linear-gradient(135deg, #1E3A8A, #0D5BE1); color: var(--white);">
+        <h3 id="modal-upgrade-title" class="modal-title" style="color: var(--white); font-size: 1.25rem;">
+          <i class="fas fa-crown" style="color: var(--accent-yellow);"></i> Upgrade to Platinum VIP
+        </h3>
+        <button type="button" class="modal-close-btn" style="color: var(--white);" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 1.75rem;">
+        <!-- Comparison Summary -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: var(--bg-surface-alt); border: 1.5px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem; text-align: center;">
+            <div style="font-size: 0.72rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Current Plan</div>
+            <div style="font-size: 1.1rem; font-weight: 900; color: var(--accent-yellow-text); margin-top: 0.25rem;">Gold Explorer</div>
+            <div style="font-size: 1.4rem; font-weight: 900; margin: 0.25rem 0;">$89<span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/mo</span></div>
+            <div style="font-size: 0.78rem; color: var(--text-body);">12 Sessions / Month</div>
+          </div>
+
+          <div style="background: rgba(13, 91, 225, 0.08); border: 2px solid var(--primary-blue); border-radius: var(--radius-md); padding: 1rem; text-align: center; position: relative;">
+            <span style="position: absolute; top: -10px; right: 10px; background: var(--accent-red); color: white; padding: 2px 8px; border-radius: 9999px; font-size: 0.65rem; font-weight: 800;">VIP UNLIMITED</span>
+            <div style="font-size: 0.72rem; font-weight: 800; color: var(--primary-blue); text-transform: uppercase;">Upgrade To</div>
+            <div style="font-size: 1.1rem; font-weight: 900; color: var(--primary-blue); margin-top: 0.25rem;">Platinum VIP</div>
+            <div style="font-size: 1.4rem; font-weight: 900; margin: 0.25rem 0;">$139<span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/mo</span></div>
+            <div style="font-size: 0.78rem; color: #059669; font-weight: 700;">Unlimited Sessions</div>
+          </div>
+        </div>
+
+        <!-- Unlocked Benefits -->
+        <h4 style="font-size: 0.92rem; font-weight: 800; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em;">Unlocked VIP Privileges:</h4>
+        <ul style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem; margin-bottom: 1.5rem; list-style: none; padding: 0;">
+          <li style="display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> <strong>Unlimited Access:</strong> Visit any day &amp; time with zero session limits or blackout dates.
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> <strong>Free Grip Socks:</strong> Complimentary pair for every child on every visit ($7 saved/visit).
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> <strong>20% Cafe Discount:</strong> Boosted discount on barista coffee and kids snacks.
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> <strong>25% Off Birthday Parties:</strong> Maximum discount across all private party suites.
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> <strong>VIP Parents Lounge:</strong> Dedicated quiet co-working desks and express turnstile access.
+          </li>
+        </ul>
+
+        <!-- Billing Summary & Prorated Calculation -->
+        <div style="background: var(--bg-surface-alt); border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-color); margin-bottom: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+            <span style="color: var(--text-body);">Prorated Upgrade Charge Today:</span>
+            <strong style="color: var(--primary-blue); font-size: 1rem;">+$50.00</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+            <span>Next Automatic Renewal:</span>
+            <span>December 31, 2026 ($139/mo)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">
+            <span>Payment Method:</span>
+            <span><i class="fab fa-cc-visa" style="color: #1E3A8A;"></i> Visa ending in <strong>4242</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+        <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.closeModal('upgrade-membership-modal')">Cancel</button>
+        <button type="button" id="confirm-upgrade-plan-btn" class="btn btn-primary-red btn-sm">
+          <i class="fas fa-arrow-up"></i> Confirm &amp; Upgrade Now ($50/mo)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand & Details -->
+        <div class="footer-col">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-symbol-block">
+              <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+              <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.25rem; line-height: 1.6;">
+            Bauhaus-inspired indoor play wonderland &amp; family activity center designed for children ages 0 to 12. Safe, hygienic, and certified.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle fb" aria-label="Play Zone on Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle ig" aria-label="Play Zone on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle yt" aria-label="Play Zone on YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <ul class="footer-contact-details">
+            <li><i class="fas fa-phone-alt"></i> <span>+91 1234 567 890</span></li>
+            <li><i class="fas fa-envelope"></i> <span>hello@playzone.com</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span>123 Play Street, Fun City, 560001</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Explore & Play -->
+        <div class="footer-col">
+          <h4>EXPLORE &amp; PLAY</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+            <li><a href="play-zones.html">Play Zones</a></li>
+            <li><a href="birthday-parties.html">Birthday Parties</a></li>
+            <li><a href="membership-plans.html">Membership Plans</a></li>
+            <li><a href="safety-standards.html">Safety Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Parent Portal -->
+        <div class="footer-col">
+          <h4>PARENT PORTAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company & Legal -->
+        <div class="footer-col">
+          <h4>COMPANY &amp; LEGAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="404.html">404</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sub-bar">
+        <div>&copy; 2026 Play Zone. All rights reserved.</div>
+        <div class="footer-sub-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=20260912"></script>
+  <script src="../assets/js/dashboard.js?v=20260912"></script>
+</body>
+</html>

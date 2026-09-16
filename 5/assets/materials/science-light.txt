@@ -1,0 +1,22 @@
+NORTHSTAR TUTORING — FOR SCHOOL STUDENTS
+Science — Light: Reflection & Refraction
+Class 10 | Tutor: Priya Menon | 3 September 2026
+
+Reflection is the return of light into the same medium after striking a surface. The angle of incidence equals the angle of reflection, measured from the normal.
+
+Refraction is the change in direction when light crosses between media at an angle because its speed changes. Light entering a medium with a higher refractive index bends towards the normal.
+
+Practice:
+1. A ray strikes a mirror at 35 degrees to the normal. Find the angle of reflection.
+2. What happens to a ray that enters glass from air along the normal?
+3. Define refractive index relative to vacuum.
+4. Draw a labelled ray diagram for refraction from air into glass.
+
+Answers:
+1. 35 degrees. 2. Its speed changes, but its direction does not.
+3. n = c/v, where c is the speed of light in vacuum and v is the speed in the medium.
+4. Include incident ray, refracted ray, surface and normal. The refracted ray bends towards the normal.
+
+Check sign conventions in your textbook before using mirror or lens formulas.
+
+Original sample learning material. For template demonstration.

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a5963"/>
+      <stop offset="100%" stop-color="#0a2e34"/>
+    </linearGradient>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffea9e"/>
+      <stop offset="50%" stop-color="#f5c364"/>
+      <stop offset="100%" stop-color="#cb811b"/>
+    </linearGradient>
+    <linearGradient id="favDie" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff2de"/>
+    </linearGradient>
+  </defs>
+
+  <!-- High-Contrast Badge Base -->
+  <rect width="64" height="64" rx="16" fill="url(#favBg)"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#f5c364" stroke-opacity="0.38" stroke-width="1.4"/>
+
+  <!-- Bold Board Game Die (Left) -->
+  <g transform="translate(19, 34) rotate(-8)">
+    <rect x="-12" y="-11" width="24" height="24" rx="5" fill="#d7cbba"/>
+    <rect x="-12" y="-12" width="24" height="24" rx="5" fill="url(#favDie)" stroke="#ffffff" stroke-width="0.8"/>
+    <!-- 5 Big High-Contrast Red Pips -->
+    <circle cx="-6" cy="-6" r="2.2" fill="#bf3e26"/>
+    <circle cx="6" cy="-6" r="2.2" fill="#bf3e26"/>
+    <circle cx="0" cy="0" r="2.2" fill="#bf3e26"/>
+    <circle cx="-6" cy="6" r="2.2" fill="#bf3e26"/>
+    <circle cx="6" cy="6" r="2.2" fill="#bf3e26"/>
+  </g>
+
+  <!-- Golden Wooden Meeple Token (Right) -->
+  <path transform="translate(44, 34) scale(0.68) translate(-32, -32)" 
+    d="M 32 8.3 C 28.6 8.3 25.8 11.1 25.8 14.5 C 25.8 17.2 27.5 19.5 29.8 20.4 C 24.5 21.8 17.5 25.5 12.5 29 C 10.2 30.6 10 33.8 12.2 35.6 C 14.4 37.4 17.4 36.2 21.6 33.2 C 21.2 36.8 20.5 41 19.5 45.2 C 18.2 50.5 15.5 53.5 14.8 55.2 C 14.4 56.1 15 56.8 16 56.8 L 26.2 56.8 C 27.6 56.8 28.2 55.5 28.2 53.5 C 28.2 49 29.8 43 32 43 C 34.2 43 35.8 49 35.8 53.5 C 35.8 55.5 36.4 56.8 37.8 56.8 L 48 56.8 C 49 56.8 49.6 56.1 49.2 55.2 C 48.5 53.5 45.8 50.5 44.5 45.2 C 43.5 41 42.8 36.8 42.4 33.2 C 46.6 36.2 49.6 37.4 51.8 35.6 C 54 33.8 53.8 30.6 51.5 29 C 46.5 25.5 39.5 21.8 34.2 20.4 C 36.5 19.5 38.2 17.2 38.2 14.5 C 38.2 11.1 35.4 8.3 32 8.3 Z" 
+    fill="url(#favGold)"/>
+</svg>

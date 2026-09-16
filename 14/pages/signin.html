@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to your MoveMate customer account to track your active move, view itemized invoices and manage bookings.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Sign In — MoveMate</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css?v=39">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=39">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=39">
+</head>
+<body class="auth-body">
+  <a class="skip-link" href="#main-content">Skip to sign in form</a>
+  <header class="standalone-topbar auth-topbar">
+    <a class="brand" href="../index.html" aria-label="MoveMate Home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#075fd7"/><path d="M15 28 32 14l17 14v21H15Z" fill="#fff"/><path d="M10 36h33v12H10zM43 39h9l4 5v4H43z" fill="#78b9ff" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="50" r="5" fill="#062344" stroke="#fff" stroke-width="2"/><circle cx="48" cy="50" r="5" fill="#062344" stroke="#fff" stroke-width="2"/><path d="M28 49V31h8v18" fill="none" stroke="#075fd7" stroke-width="2.5"/></svg>
+      </span>
+      <span class="brand-type"><strong>MoveMate</strong><small>We Move With Care</small></span>
+    </a>
+    <div class="standalone-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button class="icon-btn rtl-toggle" type="button" aria-label="Switch to right-to-left layout (RTL)" title="Switch to right-to-left layout (RTL)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16m0 0-4-4m4 4-4 4M20 16H4m0 0 4-4m-4 4 4 4"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="auth-shell" id="main-content">
+    <section class="auth-art">
+      <div class="auth-art-content">
+        <h1>Your Move, Always Within Reach.</h1>
+        <p>Follow your packing crew, live GPS truck coordinates and digital tax receipts from your centralized dashboard.</p>
+        <picture>
+          <source srcset="../assets/images/photo-mover-cta.webp" type="image/webp">
+          <img src="../assets/images/photo-mover-cta.jpg" alt="Friendly MoveMate mover with a moving box" width="1024" height="1536">
+        </picture>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-top-bar">
+          <a class="link-arrow" href="../index.html" style="margin-bottom:0">
+            <span>←</span>
+            <span>Back to Home</span>
+          </a>
+        </div>
+        <span class="eyebrow">Customer Portal</span>
+        <h2>Welcome Back</h2>
+        <p>Sign in to track your current relocation or access your moving history.</p>
+
+        <form data-auth-form="signin" novalidate>
+          <div class="field">
+            <label for="signinEmail">Email Address</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <input id="signinEmail" name="email" type="email" autocomplete="email" placeholder="rahul@example.com" required>
+            </div>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <div class="password-row">
+              <label for="signinPassword">Password</label>
+              <a class="text-brand" href="forgot-password.html" style="font-size:0.82rem;font-weight:600">Forgot password?</a>
+            </div>
+            <div class="password-input-wrap">
+              <input id="signinPassword" name="password" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" required>
+              <button class="password-toggle-btn" type="button" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.88rem;cursor:pointer">
+            <input type="checkbox" name="remember" checked style="width:17px;height:17px;accent-color:var(--brand-ink)">
+            <span>Remember my sign-in on this device</span>
+          </label>
+
+          <button class="btn btn-primary full btn-lg" type="submit" style="margin-top:10px">
+            <span>Sign In to Dashboard</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          New to MoveMate?
+          <a class="text-brand" href="signup.html"><strong>Create an account</strong></a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/main.js?v=39"></script>
+  <script src="../assets/js/dashboard.js?v=23"></script>
+</body>
+</html>

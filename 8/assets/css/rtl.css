@@ -1,0 +1,200 @@
+[dir="rtl"] .scroll-progress {
+  right: 0;
+  left: auto;
+  transform-origin: right;
+}
+
+[dir="rtl"] .skip-link {
+  right: 0.75rem;
+  left: auto;
+}
+
+[dir="rtl"] .nav-links a::after {
+  transform-origin: left;
+}
+
+[dir="rtl"] .nav-links a:hover::after,
+[dir="rtl"] .nav-links a[aria-current="page"]::after {
+  transform-origin: right;
+}
+
+[dir="rtl"] .hero__media::after {
+  background: linear-gradient(270deg, var(--paper) 0%, transparent 22%);
+}
+
+[dir="rtl"] .hero__index {
+  right: 1.5rem;
+  left: auto;
+}
+
+[dir="rtl"] .product-card__tag {
+  right: 0.75rem;
+  left: auto;
+}
+
+[dir="rtl"] .image-callout::after {
+  background: linear-gradient(270deg, rgba(20, 18, 15, 0.87) 0%, rgba(20, 18, 15, 0.45) 48%, rgba(20, 18, 15, 0.08) 100%);
+}
+
+[dir="rtl"] .footer-column a:hover {
+  transform: translateX(-0.2rem);
+}
+
+[dir="rtl"] .story-copy p:first-child::first-letter {
+  float: right;
+  margin: 0.08em 0 0 0.12em;
+}
+
+[dir="rtl"] .wizard-result {
+  border-right: 3px solid var(--rust);
+  border-left: 0;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+[dir="rtl"] .rec-card__meta .price {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .field--password input {
+  padding-right: 0.95rem;
+  padding-left: 3rem;
+}
+
+[dir="rtl"] .password-toggle {
+  right: auto;
+  left: 0.5rem;
+}
+
+[dir="rtl"] .bag-badge {
+  right: auto;
+  left: 0.15rem;
+}
+
+[dir="rtl"] .modal--drawer {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  border-right: 1px solid var(--line);
+  border-left: 0;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.25);
+}
+
+[dir="rtl"] .search-match-item:hover {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .icon[name="arrow-up-right"] {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn--header-signin {
+  margin-left: 0;
+  margin-right: 0.35rem;
+}
+
+[dir="rtl"] .catalog-item {
+  border-left: 0;
+  border-right: 3px solid transparent;
+}
+
+[dir="rtl"] .catalog-item:hover {
+  border-right-color: var(--rust);
+  border-left-color: transparent;
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .text-link:hover .icon {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .map-floating-badge {
+  right: auto;
+  left: 1.25rem;
+}
+
+[dir="rtl"] .map-focus-pill {
+  left: auto;
+  right: 1.25rem;
+}
+
+[dir="rtl"] .nav-dropdown__menu {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) translateY(6px);
+}
+
+[dir="rtl"] .nav-dropdown:hover .nav-dropdown__menu,
+[dir="rtl"] .nav-dropdown:focus-within .nav-dropdown__menu,
+[dir="rtl"] .nav-dropdown.is-open .nav-dropdown__menu {
+  transform: translateX(50%) translateY(0);
+}
+
+@media (max-width: 1023px) {
+  [dir="rtl"] .hero__media::after {
+    background: linear-gradient(180deg, var(--paper) 0%, transparent 25%);
+  }
+
+  [dir="rtl"] .nav-links {
+    left: 1.5rem;
+    right: auto;
+  }
+
+  [dir="rtl"] .nav-dropdown__menu {
+    right: auto;
+    left: auto;
+    transform: none !important;
+  }
+
+  [dir="rtl"] .nav-links > a,
+  [dir="rtl"] .nav-dropdown__btn,
+  [dir="rtl"] .nav-dropdown__item {
+    text-align: right;
+  }
+
+  [dir="rtl"] .nav-dropdown__item {
+    padding: 0.55rem 1.65rem 0.55rem 0.85rem !important;
+  }
+
+  [dir="rtl"] .nav-dropdown__item:hover {
+    padding-right: 1.85rem !important;
+    padding-left: 0.85rem !important;
+  }
+}
+
+@media (max-width: 639px) {
+  [dir="rtl"] .image-callout::after {
+    background: linear-gradient(180deg, rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.9));
+  }
+
+  [dir="rtl"] .nav-links {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+
+  [dir="rtl"] .btn--header-signin {
+    margin-left: 0;
+    margin-right: 0.15rem;
+  }
+
+  [dir="rtl"] .map-floating-badge,
+  [dir="rtl"] .map-focus-pill {
+    left: auto;
+    right: 0.75rem;
+  }
+}
+
+[dir="rtl"] .auth-standalone-footer a .icon,
+[dir="rtl"] .not-found__actions .btn .icon {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .cta-banner::before {
+  background: linear-gradient(270deg, var(--rust), var(--gold), transparent);
+}
+
+[dir="rtl"] .cta-banner__action {
+  align-items: flex-start;
+}
+

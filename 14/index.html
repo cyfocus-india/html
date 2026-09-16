@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoveMate provides safe, transparent home shifting, professional packing and office relocation services across India.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Home 1 — MoveMate</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=39">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=39">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=39">
+  <style>
+    /* Critical UI & Zero-Layout-Shift Overrides */
+    .fleet-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+    .fleet-card { position: relative; display: flex; flex-direction: column; background: var(--surface-card, #ffffff); border: 1px solid var(--line, #e2e8f0); border-radius: var(--radius-lg, 12px); padding: 22px 18px; box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.06)); overflow: visible; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .fleet-card.featured { border-color: var(--brand, #075fd7); background: linear-gradient(180deg, rgba(7, 95, 215, 0.04) 0%, var(--surface-card, #ffffff) 25%); box-shadow: 0 8px 26px rgba(7, 95, 215, 0.12); }
+    .fleet-ribbon { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #d97706, #b45309); color: #ffffff !important; font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 14px; border-radius: 9999px; box-shadow: 0 3px 10px rgba(180, 83, 9, 0.35); white-space: nowrap; z-index: 3; }
+    .fleet-card-header { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 28px; margin-bottom: 14px; }
+    .fleet-type-badge { font-size: 0.69rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 3px 9px; border-radius: 9999px; background: #e8f2ff; color: #0548a6; border: 1px solid #c7dfff; white-space: nowrap; flex-shrink: 0; }
+    .fleet-type-badge.prime { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; font-weight: 750; }
+    .fleet-match-pill { font-size: 0.74rem; font-weight: 600; color: #53657d; white-space: nowrap; text-align: right; flex-shrink: 0; }
+    .fleet-visual-box { background: var(--surface-2, #f8fafc); border: 1px solid var(--line, #e2e8f0); border-radius: var(--radius-md, 10px); padding: 12px 10px 10px; text-align: center; margin-bottom: 16px; min-height: 168px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+    .fleet-image-frame { display: flex; align-items: center; justify-content: center; width: 100%; height: 124px; margin: 0 auto 6px; overflow: hidden; }
+    .fleet-vehicle-img { width: 100%; max-width: 240px; height: 100%; max-height: 120px; object-fit: contain; display: block; margin: 0 auto; transition: transform 0.3s ease; }
+    .fleet-card:hover .fleet-vehicle-img { transform: scale(1.05); }
+    .fleet-dimen { font-size: 0.74rem; font-weight: 600; color: var(--brand-ink, #053b85); white-space: nowrap; }
+    .fleet-card-body h3 { font-size: 1.15rem; margin: 0 0 8px; color: var(--ink, #0f172a); }
+    .fleet-desc { font-size: 0.82rem; line-height: 1.45; color: #475569; margin-bottom: 14px; min-height: 52px; }
+    .fleet-specs { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px dashed var(--line, #e2e8f0); margin-bottom: 18px; }
+    .fleet-spec-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.77rem; line-height: 1.35; min-height: 20px; gap: 8px; }
+    .fleet-spec-row span { color: #53657d; font-weight: 500; white-space: nowrap; }
+    .fleet-spec-row strong { color: var(--ink, #0f172a); font-weight: 600; text-align: right; white-space: nowrap; }
+    .fleet-card-footer { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line-light, #f1f5f9); display: flex; flex-direction: column; gap: 10px; }
+    .fleet-price-lead { display: flex; justify-content: space-between; align-items: baseline; min-height: 28px; }
+    .fleet-price-lead small { font-size: 0.76rem; font-weight: 500; color: #53657d; white-space: nowrap; }
+    .fleet-price-lead strong { font-size: 1.15rem; font-weight: 700; color: var(--brand-ink, #053b85); white-space: nowrap; }
+    .fleet-card-footer .btn { width: 100%; justify-content: center; }
+    .fleet-guarantees-strip { margin-top: 32px; padding: 18px 22px; border-radius: var(--radius-lg, 12px); background: var(--surface-card, #ffffff); border: 1px solid var(--line, #e2e8f0); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.06)); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+    /* Move Planner Header Anchoring */
+    .planner-header-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: nowrap; padding-bottom: 18px; border-bottom: 1px solid var(--line-light, #f1f5f9); }
+    .planner-header-info { flex: 1 1 auto; min-width: 0; }
+    .planner-main-heading { font-size: 1.35rem; line-height: 1.25; color: var(--navy, #0f172a); margin: 0; font-weight: 700; word-break: break-word; }
+    .planner-est-price { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 1px; white-space: nowrap; }
+
+    @media (max-width: 1200px) {
+      .fleet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fleet-guarantees-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 767px) {
+      .fleet-grid { grid-template-columns: 1fr; }
+      .fleet-guarantees-strip { grid-template-columns: 1fr; gap: 14px; padding: 16px; }
+      .planner-header-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .planner-est-price { align-items: flex-start; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div data-site-header></div>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="MoveMate Introduction">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="trust-pill">
+            <span class="avatar-stack" aria-hidden="true">
+              <span>R</span><span>P</span><span>A</span>
+            </span>
+            <span>Trusted by 10,000+ happy families</span>
+          </div>
+          <h1>Home Shifting &amp; Packing Services</h1>
+          <div class="hero-script">We Pack. We Move. We Care.</div>
+          <p class="hero-lead">From delicate packing to on-time delivery, we make your relocation effortless, secure and completely transparent.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary quote-open" type="button">
+              <span>Book Your Move</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a class="btn btn-outline" href="pages/services.html">
+              <span>Explore Services</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="hero-stats" aria-label="MoveMate highlights">
+            <div class="mini-stat">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span><strong>10+ Years</strong><small>Trusted experience</small></span>
+            </div>
+            <div class="mini-stat">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 16h13V7H3zM16 10h3l2 3v3h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+              </span>
+              <span><strong>5,000+</strong><small>Successful moves</small></span>
+            </div>
+            <div class="mini-stat">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/></svg>
+              </span>
+              <span><strong>4.8 / 5.0</strong><small>Customer rating</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <picture>
+            <source srcset="assets/images/photo-hero-home.webp" type="image/webp">
+            <img src="assets/images/photo-hero-home.jpg" alt="Two MoveMate movers in the cab of a company moving van before a local and long-distance shift" width="1500" height="1000" fetchpriority="high">
+          </picture>
+          <span class="hero-media-tag">Crew dispatched • Live from Bengaluru hub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Unique Section: MoveMate Engineered Logistics Fleet & Cargo Shield -->
+    <section class="section fleet-showcase-section" aria-labelledby="fleetTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Proprietary Fleet &amp; Cargo Care</span>
+          <h2 id="fleetTitle">Engineered Vehicles Built for Zero-Damage Shifting</h2>
+          <p>We never load your life’s possessions into open, hired day-trucks. Every MoveMate relocation travels in a dedicated, weather-sealed, GPS-tracked container engineered specifically for household protection.</p>
+        </div>
+
+        <!-- Interactive Fleet Filter Tabs -->
+        <div class="fleet-filter-bar reveal" role="tablist" aria-label="Filter fleet vehicles">
+          <button class="fleet-tab active" type="button" data-fleet-filter="all" role="tab" aria-selected="true">All Vehicles</button>
+          <button class="fleet-tab" type="button" data-fleet-filter="local" role="tab" aria-selected="false">Local Apartments (1–2 BHK)</button>
+          <button class="fleet-tab" type="button" data-fleet-filter="family" role="tab" aria-selected="false">Family &amp; Intercity (2–3 BHK)</button>
+          <button class="fleet-tab" type="button" data-fleet-filter="linehaul" role="tab" aria-selected="false">Luxury Villas (4+ BHK)</button>
+          <button class="fleet-tab" type="button" data-fleet-filter="auto" role="tab" aria-selected="false">Vehicle Carrier</button>
+        </div>
+
+        <!-- 4-Card Fleet Grid -->
+        <div class="fleet-grid reveal">
+          <!-- Vehicle 1 -->
+          <article class="fleet-card" data-fleet-type="local">
+            <div class="fleet-card-header">
+              <span class="fleet-type-badge">Metro Intra-City</span>
+              <span class="fleet-match-pill">1 BHK / Studio</span>
+            </div>
+            <div class="fleet-visual-box">
+              <div class="fleet-image-frame">
+                <picture>
+                  <source srcset="assets/images/fleet-city-sprinter.webp" type="image/webp">
+                  <img src="assets/images/fleet-city-sprinter.png" alt="MoveMate City Sprinter - 14 ft Low-Clearance Chassis" class="fleet-vehicle-img" width="240" height="120" loading="lazy">
+                </picture>
+              </div>
+              <div class="fleet-dimen">14 ft • Low-Clearance Chassis</div>
+            </div>
+            <div class="fleet-card-body">
+              <h3>MoveMate City Sprinter</h3>
+              <p class="fleet-desc">Engineered for narrow metropolitan streets and tight gated apartment basement ramps with zero parking obstruction.</p>
+              <div class="fleet-specs">
+                <div class="fleet-spec-row">
+                  <span>Cargo Space</span>
+                  <strong>550 cu.ft (~25 Boxes)</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Max Payload</span>
+                  <strong>2.5 Metric Tons</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Society Entry</span>
+                  <strong>&lt;2.6m Clearance Pass</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Wall Armor</span>
+                  <strong>Anti-Scratch Wood Slats</strong>
+                </div>
+              </div>
+            </div>
+            <div class="fleet-card-footer">
+              <div class="fleet-price-lead">
+                <small>Local moves starting at</small>
+                <strong>₹2,800*</strong>
+              </div>
+              <a class="btn btn-outline btn-sm" href="pages/pricing.html?moveType=local&amp;homeSize=studio#calculator">
+                <span>Book This Vehicle</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Vehicle 2 -->
+          <article class="fleet-card featured" data-fleet-type="family">
+            <div class="fleet-ribbon">★ Most Popular</div>
+            <div class="fleet-card-header">
+              <span class="fleet-type-badge prime">Express Intercity</span>
+              <span class="fleet-match-pill">2–3 BHK Home</span>
+            </div>
+            <div class="fleet-visual-box">
+              <div class="fleet-image-frame">
+                <picture>
+                  <source srcset="assets/images/fleet-safevault-19.webp" type="image/webp">
+                  <img src="assets/images/fleet-safevault-19.png" alt="MoveMate SafeVault 19 - 19 ft All-Weather Double Sealed" class="fleet-vehicle-img" width="240" height="120" loading="lazy">
+                </picture>
+              </div>
+              <div class="fleet-dimen">19 ft • All-Weather Double Sealed</div>
+            </div>
+            <div class="fleet-card-body">
+              <h3>MoveMate SafeVault 19</h3>
+              <p class="fleet-desc">Our flagship heavy-duty container truck with air-cushioned suspension to protect electronics and glass on highway relocations.</p>
+              <div class="fleet-specs">
+                <div class="fleet-spec-row">
+                  <span>Loading Volume</span>
+                  <strong>1,150 cu. ft.</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Payload Capacity</span>
+                  <strong>5.5 Metric Tonnes</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Transit Coverage</span>
+                  <strong>Interstate Routes</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Telematics GPS</span>
+                  <strong>Live Shock Sensor</strong>
+                </div>
+              </div>
+            </div>
+            <div class="fleet-card-footer">
+              <div class="fleet-price-lead">
+                <small>Intercity routes from</small>
+                <strong>₹6,500*</strong>
+              </div>
+              <a class="btn btn-primary btn-sm" href="pages/pricing.html?moveType=intercity&amp;homeSize=2bhk#calculator">
+                <span>Book This Vehicle</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Vehicle 3 -->
+          <article class="fleet-card" data-fleet-type="linehaul">
+            <div class="fleet-card-header">
+              <span class="fleet-type-badge">Linehaul Freight</span>
+              <span class="fleet-match-pill">4+ BHK &amp; Villas</span>
+            </div>
+            <div class="fleet-visual-box">
+              <div class="fleet-image-frame">
+                <picture>
+                  <source srcset="assets/images/fleet-prime-linehaul.webp" type="image/webp">
+                  <img src="assets/images/fleet-prime-linehaul.png" alt="MoveMate Prime Linehaul - 32 ft Multi-Axle Super-Carrier" class="fleet-vehicle-img" width="240" height="120" loading="lazy">
+                </picture>
+              </div>
+              <div class="fleet-dimen">32 ft • Multi-Axle Super-Carrier</div>
+            </div>
+            <div class="fleet-card-body">
+              <h3>MoveMate Prime Linehaul</h3>
+              <p class="fleet-desc">Maximum-capacity multi-axle freight carrier for extensive multi-story homes, luxury villas, and corporate office shifting.</p>
+              <div class="fleet-specs">
+                <div class="fleet-spec-row">
+                  <span>Cargo Space</span>
+                  <strong>1,950 cu.ft (~120 Boxes)</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Max Payload</span>
+                  <strong>14.0 Metric Tons</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Security Seal</span>
+                  <strong>Tamper-Proof Barcode</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Driver Crew</span>
+                  <strong>Dual-Relay Non-Stop</strong>
+                </div>
+              </div>
+            </div>
+            <div class="fleet-card-footer">
+              <div class="fleet-price-lead">
+                <small>Long-haul starting at</small>
+                <strong>₹14,500*</strong>
+              </div>
+              <a class="btn btn-outline btn-sm" href="pages/pricing.html?moveType=intercity&amp;homeSize=4bhk#calculator">
+                <span>Book This Vehicle</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Vehicle 4 -->
+          <article class="fleet-card" data-fleet-type="auto">
+            <div class="fleet-card-header">
+              <span class="fleet-type-badge">Vehicle Carrier</span>
+              <span class="fleet-match-pill">Cars &amp; Bikes</span>
+            </div>
+            <div class="fleet-visual-box">
+              <div class="fleet-image-frame">
+                <picture>
+                  <source srcset="assets/images/fleet-autoshield.webp" type="image/webp">
+                  <img src="assets/images/fleet-autoshield.png" alt="MoveMate AutoShield - Enclosed Hydraulic Ramp Carrier" class="fleet-vehicle-img" width="240" height="120" loading="lazy">
+                </picture>
+              </div>
+              <div class="fleet-dimen">Enclosed • Hydraulic Ramp Carrier</div>
+            </div>
+            <div class="fleet-card-body">
+              <h3>MoveMate AutoShield</h3>
+              <p class="fleet-desc">Zero-road-wear closed vehicle carrier with hydraulic wheel-locking cradles and non-abrasive soft straps for sedans &amp; SUVs.</p>
+              <div class="fleet-specs">
+                <div class="fleet-spec-row">
+                  <span>Vehicle Bay</span>
+                  <strong>Dedicated Private Bay</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Wheel Anchors</span>
+                  <strong>Hydraulic Floor Clamps</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Audit SLA</span>
+                  <strong>40-Point Pre-Trip</strong>
+                </div>
+                <div class="fleet-spec-row">
+                  <span>Odometer Added</span>
+                  <strong>0 km (Pure Carrier)</strong>
+                </div>
+              </div>
+            </div>
+            <div class="fleet-card-footer">
+              <div class="fleet-price-lead">
+                <small>Auto transport from</small>
+                <strong>₹5,200*</strong>
+              </div>
+              <a class="btn btn-outline btn-sm" href="pages/pricing.html?moveType=auto&amp;homeSize=car#calculator">
+                <span>Book This Vehicle</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fleet Assurance Banner -->
+        <div class="fleet-guarantees-strip reveal">
+          <div class="fleet-guarantee-item">
+            <span class="fleet-guarantee-icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>100% Dedicated Sealed Container</strong>
+              <small>Never mixed with third-party freight</small>
+            </div>
+          </div>
+          <div class="fleet-guarantee-item">
+            <span class="fleet-guarantee-icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Steam-Sanitized Cargo Bays</strong>
+              <small>Zero dust, odors, or oil residues</small>
+            </div>
+          </div>
+          <div class="fleet-guarantee-item">
+            <span class="fleet-guarantee-icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Hydraulic Tail-Lift Equipped</strong>
+              <small>Mechanical loading prevents drops</small>
+            </div>
+          </div>
+          <div class="fleet-guarantee-item">
+            <span class="fleet-guarantee-icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Satellite GPS Telematics</strong>
+              <small>Live position and checkpoint alerts</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Move Size & Packing Estimator Section -->
+    <section class="section move-planner-section" aria-labelledby="plannerTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Smart Move Estimator</span>
+          <h2 id="plannerTitle">Interactive Move Size &amp; Box Estimator</h2>
+          <p>Select your home configuration to view estimated packing cartons, recommended truck capacity, dedicated crew allocation, and upfront pricing.</p>
+        </div>
+
+        <!-- Size Selection Tabs -->
+        <div class="planner-size-tabs reveal" role="tablist" aria-label="Select home size">
+          <button class="planner-tab" type="button" role="tab" data-size="1bhk" aria-selected="false">
+            <span class="planner-tab-title">1 BHK / Studio</span>
+            <span class="planner-tab-sub">15–22 Boxes • 2 Movers</span>
+          </button>
+          <button class="planner-tab active" type="button" role="tab" data-size="2bhk" aria-selected="true">
+            <span class="planner-tab-badge">Most Popular</span>
+            <span class="planner-tab-title">2 BHK Standard</span>
+            <span class="planner-tab-sub">28–38 Boxes • 3 Movers</span>
+          </button>
+          <button class="planner-tab" type="button" role="tab" data-size="3bhk" aria-selected="false">
+            <span class="planner-tab-title">3 BHK Spacious</span>
+            <span class="planner-tab-sub">45–60 Boxes • 4 Movers</span>
+          </button>
+          <button class="planner-tab" type="button" role="tab" data-size="4bhk" aria-selected="false">
+            <span class="planner-tab-title">4+ BHK / Villa</span>
+            <span class="planner-tab-sub">70–95+ Boxes • 5-6 Movers</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Planner Card -->
+        <div class="planner-panel reveal">
+          <!-- Left Column: Specs & Inclusions -->
+          <div class="planner-details">
+            <div class="planner-header-row">
+              <div class="planner-header-info">
+                <span class="planner-badge" id="plannerTag">Standard Family Move</span>
+                <h3 id="plannerHeading" class="planner-main-heading">2 BHK Standard Family Apartment</h3>
+              </div>
+              <div class="planner-est-price">
+                <small>Estimated Starting At</small>
+                <strong id="plannerPrice">₹4,500*</strong>
+                <span id="plannerPriceType">Local (Intercity from ₹11,500*)</span>
+              </div>
+            </div>
+
+            <!-- 4 Spec Metric Chips -->
+            <div class="planner-metrics-grid">
+              <div class="planner-metric-item">
+                <div class="metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div class="metric-info">
+                  <small>Recommended Truck</small>
+                  <strong id="plannerTruck">14–17 Ft Dedicated Container</strong>
+                </div>
+              </div>
+
+              <div class="planner-metric-item">
+                <div class="metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+                </div>
+                <div class="metric-info">
+                  <small>Estimated Cartons</small>
+                  <strong id="plannerBoxes">28 – 38 Heavy-Duty Boxes</strong>
+                </div>
+              </div>
+
+              <div class="planner-metric-item">
+                <div class="metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="metric-info">
+                  <small>Certified Movers</small>
+                  <strong id="plannerCrew">3 Dedicated Professionals</strong>
+                </div>
+              </div>
+
+              <div class="planner-metric-item">
+                <div class="metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="metric-info">
+                  <small>Est. Pack &amp; Loading</small>
+                  <strong id="plannerTime">3.5 – 4.5 Hours</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inclusions Checklist -->
+            <div class="planner-inclusions">
+              <h4>Included with this Move:</h4>
+              <ul class="planner-checklist" id="plannerInclusionsList">
+                <li>2 Queen/King Beds disassembly, protective wrap &amp; reassembly</li>
+                <li>Large double-door fridge &amp; front-load washing machine armor covers</li>
+                <li>55"–65" OLED TV custom foam cushioning &amp; wooden edge bumpers</li>
+                <li>3–5 Seater sofa dustproof shrink wrapping + dining table &amp; 4 chairs</li>
+                <li>Complete modular kitchen packing with segregated glassware padding</li>
+                <li>Complimentary ₹1,00,000 transit cover + live GPS milestones</li>
+              </ul>
+            </div>
+
+            <!-- Action Row -->
+            <div class="planner-cta-row">
+              <a class="btn btn-primary planner-book-btn" id="plannerBookBtn" href="pages/pricing.html?homeSize=2bhk&amp;moveType=local#calculator" data-size="2bhk">
+                <span id="plannerBookText">Book 2 BHK Move</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <div class="planner-guarantee-note">
+                <span>✓ 100% Fixed Price Guarantee</span>
+                <span>✓ Zero Surprise Moving Day Surcharges</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Material Showcase -->
+          <div class="planner-visual">
+            <div class="planner-media-frame">
+              <picture>
+                <source srcset="assets/images/photo-boxes-stack.webp" type="image/webp">
+                <img src="assets/images/photo-boxes-stack.jpg" alt="Organized MoveMate 5-ply cartons and packed furniture ready in apartment hallway on moving day" width="1200" height="800" loading="lazy">
+              </picture>
+
+              <!-- Floating Chip Top -->
+              <div class="planner-chip chip-materials">
+                <span class="badge-icon-box" aria-hidden="true">📦</span>
+                <div>
+                  <strong>100% Fresh 5-Ply Materials</strong>
+                  <small>Double-corrugated edge bumpers</small>
+                </div>
+              </div>
+
+              <!-- Floating Chip Bottom -->
+              <div class="planner-chip chip-inventory">
+                <div class="chip-dot-live" aria-hidden="true"></div>
+                <div>
+                  <strong>Digital Barcode Inventory</strong>
+                  <small>Room-wise color tags for easy unpacking</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Move Tracking & Workflow Section -->
+    <section class="section-tight" aria-labelledby="trackingTitle">
+      <div class="container journey-panel reveal">
+        <div class="journey-copy">
+          <span class="eyebrow">Live Move Visibility</span>
+          <h2 id="trackingTitle">Book, Track &amp; Relax</h2>
+          <p>Follow your entire moving journey from pickup to delivery with live checkpoint updates, crew contact and digital itemized invoices.</p>
+          <div class="timeline" aria-label="Moving progress workflow">
+            <div class="timeline-step">
+              <span class="timeline-dot">✓</span>
+              <strong>Booking<br>Confirmed</strong>
+            </div>
+            <div class="timeline-step">
+              <span class="timeline-dot">✓</span>
+              <strong>Packing Crew<br>Assigned</strong>
+            </div>
+            <div class="timeline-step active">
+              <span class="timeline-dot">3</span>
+              <strong>In<br>Transit</strong>
+            </div>
+            <div class="timeline-step pending">
+              <span class="timeline-dot">4</span>
+              <strong>Delivered<br>&amp; Settled</strong>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="pages/signin.html">
+              <span>Track My Move</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline" href="pages/how-it-works.html">
+              <span>How It Works</span>
+            </a>
+          </div>
+        </div>
+        <div class="journey-cards" aria-label="Live tracking and invoice preview widgets">
+          <article class="floating-card tracking-card">
+            <div class="card-top">
+              <strong>Track Your Move</strong>
+              <small class="paid-pill" style="font-size:0.7rem">MM124567</small>
+            </div>
+            <div class="status-line">
+              <span class="timeline-dot" style="width:32px;height:32px;box-shadow:none;font-size:0.85rem">3</span>
+              <span>In transit to destination</span>
+            </div>
+            <div class="route-line" aria-hidden="true"></div>
+            <small>Estimated Delivery</small><br>
+            <strong style="color:var(--brand-ink);font-size:1.05rem">22 May 2026, 6:00 PM</strong>
+          </article>
+          <article class="floating-card invoice-card">
+            <div class="card-top">
+              <strong>Final Invoice</strong>
+              <span class="paid-pill">Paid</span>
+            </div>
+            <div class="invoice-row"><span>Packing Charges</span><strong>₹2,500</strong></div>
+            <div class="invoice-row"><span>Transport Charges</span><strong>₹6,000</strong></div>
+            <div class="invoice-row"><span>Loading / Unloading</span><strong>₹3,000</strong></div>
+            <div class="invoice-row"><span>Insurance Protection</span><strong>₹500</strong></div>
+            <div class="invoice-row invoice-total"><span>Total Paid</span><strong class="text-brand">₹12,000</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & Impact Stats Section -->
+    <section class="section-tight" aria-labelledby="reviewsTitle">
+      <div class="container testimonial-band reveal">
+        <div class="impact-stats" style="color:#fff">
+          <div class="impact-stat">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <strong data-count="10" data-suffix="+">10+</strong>
+            <span>Years of relocation excellence</span>
+          </div>
+          <div class="impact-stat">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 16h13V7H3zM16 10h3l2 3v3h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+            </span>
+            <strong data-count="5000" data-suffix="+">5,000+</strong>
+            <span>Happy families shifted safely</span>
+          </div>
+          <div class="impact-stat">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </span>
+            <strong data-count="1000" data-suffix="+">1,000+</strong>
+            <span>Cities &amp; towns covered</span>
+          </div>
+          <div class="impact-stat">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <strong data-count="98" data-suffix="%">98%</strong>
+            <span>On-time delivery performance</span>
+          </div>
+        </div>
+
+        <div class="testimonial-grid">
+          <blockquote class="testimonial-copy">
+            <h3 id="reviewsTitle">What Our Customers Say</h3>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“MoveMate made our intercity move from Bengaluru to Delhi completely stress-free. The packing team was punctual, handled our fragile glass and ceramics with utmost care, and delivered everything on schedule without a single scratch.”</p>
+            <footer>
+              <strong>Priya Sharma</strong><br>
+              <small>Bengaluru → Delhi • 3 BHK Relocation</small>
+            </footer>
+          </blockquote>
+          <div class="media-frame">
+            <picture>
+              <source srcset="assets/images/photo-testimonial-family.webp" type="image/webp">
+              <img class="family-art" src="assets/images/photo-testimonial-family.jpg" alt="A family unpacking cartons together in the living room of their new home" width="1200" height="800" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner & Guarantees -->
+    <section class="section-tight" aria-label="Ready to Move CTA">
+      <div class="container cta-panel reveal">
+        <div class="cta-media">
+          <picture>
+            <source srcset="assets/images/photo-mover-cta.webp" type="image/webp">
+            <img src="assets/images/photo-mover-cta.jpg" alt="A MoveMate crew member carrying a sealed carton on moving day" width="900" height="1100" loading="lazy">
+          </picture>
+        </div>
+        <div>
+          <span class="eyebrow">Get Started Today</span>
+          <h2>Ready For a Calmer Move?</h2>
+          <p>Get your transparent, zero-obligation instant estimate in under 2 minutes.</p>
+        </div>
+        <button class="btn btn-primary btn-lg quote-open" type="button">
+          <span>Get a Free Quote</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="container benefit-row" style="margin-top:20px">
+        <div class="benefit-item">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+          <span><strong>Free Instant Quotation</strong><small>No booking obligation</small></span>
+        </div>
+        <div class="benefit-item">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <span><strong>No Hidden Charges</strong><small>Transparent fixed rates</small></span>
+        </div>
+        <div class="benefit-item">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+          </span>
+          <span><strong>Insured &amp; Protected</strong><small>Zero-damage promise</small></span>
+        </div>
+        <div class="benefit-item">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </span>
+          <span><strong>24/7 Dedicated Support</strong><small>Always here when you need us</small></span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="assets/js/main.js?v=39"></script>
+</body>
+</html>

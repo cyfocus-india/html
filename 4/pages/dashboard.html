@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Wag &amp; Whisker</title>
+<meta name="description" content="Manage your Wag &amp; Whisker account: pet profiles, orders, grooming appointments, wishlist, auto-ship subscriptions and Paw Points.">
+<meta name="author" content="Wag &amp; Whisker">
+<meta name="theme-color" content="#0f5c5c" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121a1c" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://wagandwhisker.example/pages/dashboard.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wag &amp; Whisker">
+<meta property="og:title" content="My Account Dashboard | Wag &amp; Whisker">
+<meta property="og:description" content="Manage your Wag &amp; Whisker account: pet profiles, orders, grooming appointments, wishlist, auto-ship subscriptions and Paw Points.">
+<meta property="og:url" content="https://wagandwhisker.example/pages/dashboard.html">
+<meta property="og:image" content="https://wagandwhisker.example/assets/images/og-image.jpg">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.0.0">
+<link rel="stylesheet" href="../assets/css/rtl.css?v=1.0.0">
+<script>(function(d){var h=d.documentElement,t,r;h.className=h.className.replace('no-js','js');try{t=localStorage.getItem('ww-theme');r=localStorage.getItem('ww-dir')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}h.setAttribute('data-theme',t);if(r==='rtl'){h.setAttribute('dir','rtl')}})(document);</script>
+<script src="../assets/js/products.js?v=1.0.0" defer></script>
+<script src="../assets/js/main.js?v=1.0.0" defer></script>
+<script src="../assets/js/dashboard.js?v=1.0.0" defer></script>
+<meta name="robots" content="noindex">
+</head>
+<body data-root="../" data-page="dashboard">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<main id="main" tabindex="-1">
+<div class="container">
+  <div class="dash" data-dashboard>
+    <aside class="dash-side" aria-label="Account navigation">
+      <div class="dash-brand">
+        <a class="brand" href="../index.html" aria-label="Wag and Whisker, home">
+          <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" aria-hidden="true"><rect width="66" height="66" rx="20" fill="#0F5C5C"/><g fill="#FFF8EF"><ellipse cx="19.5" cy="25" rx="5" ry="6.2" transform="rotate(-18 19.5 25)"/><ellipse cx="28" cy="17.5" rx="5.2" ry="6.6" transform="rotate(-6 28 17.5)"/><ellipse cx="38.5" cy="17.5" rx="5.2" ry="6.6" transform="rotate(6 38.5 17.5)"/><ellipse cx="47" cy="25" rx="5" ry="6.2" transform="rotate(18 47 25)"/><path d="M33.2 30c-6.8 0-13.6 7.4-15.3 13.4-1.5 5.5 2.5 9.6 7.3 8.6 3.3-.7 5.3-2.1 8-2.1s4.7 1.4 8 2.1c4.8 1 8.8-3.1 7.3-8.6C46.8 37.4 40 30 33.2 30z"/></g><path fill="#F28C38" d="M33.2 47.2l-3.6-3.4c-1.6-1.5-1.3-4 .7-4.6 1.2-.4 2.3.2 2.9 1 .6-.8 1.7-1.4 2.9-1 2 .6 2.3 3.1.7 4.6z"/></svg>
+          <span class="brand__text"><span class="brand__name">Wag <span>&amp;</span> Whisker</span><span class="brand__tag">Pet portal</span></span>
+        </a>
+      </div>
+
+      <nav aria-label="Account sections">
+        <ul class="dash-nav">
+          <li><a href="#overview" data-dash-link="overview" aria-current="true"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Overview</a></li>
+          <li><a href="#pets" data-dash-link="pets"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>My pets<span class="badge" data-badge-pets>2</span></a></li>
+          <li><a href="#orders" data-dash-link="orders"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>Orders</a></li>
+          <li><a href="#appointments" data-dash-link="appointments"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Appointments<span class="badge" data-badge-appointments>1</span></a></li>
+          <li><a href="#wishlist" data-dash-link="wishlist"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Wishlist</a></li>
+          <li><a href="#autoship" data-dash-link="autoship"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>Auto-ship</a></li>
+          <li><a href="#settings" data-dash-link="settings"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>Settings</a></li>
+          <li><button type="button" class="dash-nav__btn" data-modal-open="dash-signout-modal" aria-controls="dash-signout-modal" aria-haspopup="dialog" aria-expanded="false"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>Sign out</button></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="dash-main">
+      <div class="dash-topbar">
+        <div class="dash-topbar__actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle><svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="RTL: switch to right-to-left layout" data-dir-toggle><span class="dir-toggle__label" data-dir-label>RTL</span></button>
+        </div>
+      </div>
+      <section class="dash-section" id="overview" data-dash-section="overview" aria-labelledby="ov-title">
+        <div class="dash-head">
+          <div>
+            <p class="eyebrow"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><span data-greeting>Good day</span>, <span data-dash-greeting-name>Ananya</span></p>
+            <h1 id="ov-title">Your pack at a glance</h1>
+          </div>
+          <button class="btn btn-accent" type="button" data-modal-open="dash-booking-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Book a groom</button>
+        </div>
+
+        <div class="dash-cards mt-6">
+          <div class="dash-stat" role="button" tabindex="0" data-dash-jump="points" aria-label="Paw Points: 1240. Click to view Paw Points details"><span class="icon-bubble tint-dogs"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></span><span class="dash-stat__num" data-count="1240">0</span><small>Paw Points</small><span class="trend">+180 this month</span></div>
+          <div class="dash-stat" role="button" tabindex="0" data-dash-link="orders" aria-label="Orders placed: 18. Click to view all orders"><span class="icon-bubble tint-cats"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg></span><span class="dash-stat__num" data-count="18">0</span><small>Orders placed</small><span class="trend">2 on the way</span></div>
+          <div class="dash-stat" role="button" tabindex="0" data-dash-link="appointments" aria-label="Next groom: 14 Sep. Click to manage appointments"><span class="icon-bubble tint-fish"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span><span class="dash-stat__num" data-ov-next-date>14 Sep</span><small>Next groom</small><span class="trend" data-ov-next-desc>Mango · Full Groom</span></div>
+          <div class="dash-stat" role="button" tabindex="0" data-dash-link="autoship" aria-label="Saved with auto-ship: ₹3420. Click to manage auto-ship"><span class="icon-bubble tint-small"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span><span class="dash-stat__num">₹<span data-count="3420">0</span></span><small>Saved with auto-ship</small><span class="trend">Since Jan 2026</span></div>
+        </div>
+
+        <div class="dash-grid mt-6">
+          <div class="panel"><div class="panel__head"><h2>Monthly spend</h2><span class="muted" style="font-size:var(--fs-sm)">Last 6 months</span></div><div class="bar-chart" data-bar-chart role="img" aria-label="Monthly spend from April to September 2026, rising to ₹4,747 in September"><div class="bar-chart__col"><div class="bar-chart__bar" data-h="44"><span>₹2,100</span></div><small>Apr</small></div><div class="bar-chart__col"><div class="bar-chart__bar" data-h="72"><span>₹3,400</span></div><small>May</small></div><div class="bar-chart__col"><div class="bar-chart__bar" data-h="38"><span>₹1,800</span></div><small>Jun</small></div><div class="bar-chart__col"><div class="bar-chart__bar" data-h="88"><span>₹4,200</span></div><small>Jul</small></div><div class="bar-chart__col"><div class="bar-chart__bar" data-h="63"><span>₹2,997</span></div><small>Aug</small></div><div class="bar-chart__col"><div class="bar-chart__bar" data-h="100"><span>₹4,747</span></div><small>Sep</small></div></div></div>
+          <div class="panel text-center" id="points-panel"><div class="panel__head"><h2>Paw Points</h2></div>
+            <div class="ring" data-ring="1240" data-ring-max="1500"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52"/></svg><div class="ring__label"><strong>1,240</strong><small>of 1,500</small></div></div>
+            <p class="muted mt-4" style="font-size:var(--fs-sm)"><strong>260 points</strong> to Pack Leader and a free quarterly Full Groom.</p></div>
+        </div>
+
+        <div class="dash-grid mt-6">
+          <div class="panel"><div class="panel__head"><h2>Recent orders</h2><a href="#orders" data-dash-link="orders">View all</a></div><div class="data-table"><table><thead><tr><th scope="col">Order</th><th scope="col">Date</th><th scope="col">Total</th><th scope="col">Status</th><th scope="col">Receipt</th></tr></thead><tbody><tr><td><strong>WW-10507</strong></td><td>11 Sep 2026</td><td>₹449</td><td><span class="status status--processing">Processing</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10507">Invoice</button></td></tr><tr><td><strong>WW-10502</strong></td><td>10 Sep 2026</td><td>₹1,799</td><td><span class="status status--transit">Out for delivery</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10502">Invoice</button></td></tr><tr><td><strong>WW-10482</strong></td><td>08 Sep 2026</td><td>₹2,499</td><td><span class="status status--delivered">Delivered</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10482">Invoice</button></td></tr></tbody></table></div></div>
+          <div class="panel"><div class="panel__head"><h2>Upcoming</h2><a href="#appointments" data-dash-link="appointments">Manage</a></div>
+            <div class="appt" role="button" tabindex="0" data-dash-link="appointments" aria-label="View grooming appointment details"><div class="appt__date" data-ov-appt-badge><strong>14</strong><small>Sep</small></div><div><h3 data-ov-appt-title>Mango · Full Groom</h3><p data-ov-appt-meta>Sat 10:30 AM with Neha</p></div></div>
+            <div class="appt" role="button" tabindex="0" data-dash-link="autoship" aria-label="View auto-ship details"><div class="appt__date"><strong>18</strong><small>Sep</small></div><div><h3>Kibble auto-ship</h3><p>Delivery 4–8 PM</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-section" id="pets" data-dash-section="pets" aria-labelledby="pets-h" hidden>
+        <div class="dash-head"><h2 id="pets-h" class="h2">My pets</h2><button class="btn btn-primary" type="button" data-modal-open="dash-pet-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Add a pet</button></div>
+        <div class="grid-2 mt-6" data-pets-grid>
+          <div class="pet-profile tint-dogs" data-pet-id="mango"><span class="avatar"><img src="../assets/images/pet-mango.webp" alt="Mango the corgi" width="400" height="400" loading="lazy"></span><div><h3>Mango</h3><p>Corgi · 3 yrs · 11 kg<br>Allergic to chicken · Last groom 17 Aug</p></div></div>
+          <div class="pet-profile tint-cats" data-pet-id="luna"><span class="avatar"><img src="../assets/images/pet-luna.webp" alt="Luna the British Shorthair cat" width="400" height="400" loading="lazy"></span><div><h3>Luna</h3><p>British Shorthair · 5 yrs · 4.2 kg<br>Indoor cat · Vaccines due Nov</p></div></div>
+          <button class="pet-profile pet-profile--add" type="button" data-modal-open="dash-pet-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Add a pet</button>
+        </div>
+      </section>
+
+      <section class="dash-section" id="orders" data-dash-section="orders" aria-labelledby="orders-h" hidden>
+        <div class="dash-head"><h2 id="orders-h" class="h2">Orders</h2></div>
+        <div class="panel mt-6"><div class="data-table"><table><caption class="sr-only">All orders</caption><thead><tr><th scope="col">Order</th><th scope="col">Date</th><th scope="col">Items</th><th scope="col">Total</th><th scope="col">Status</th><th scope="col">Receipt</th></tr></thead><tbody data-orders-tbody><tr><td><strong>WW-10482</strong></td><td>08 Sep 2026</td><td class="cell-items">Grain-Free Chicken Kibble · 3 kg + 2 more</td><td>₹2,499</td><td><span class="status status--delivered">Delivered</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10482">Invoice</button></td></tr><tr><td><strong>WW-10455</strong></td><td>29 Aug 2026</td><td class="cell-items">Cloud Sherpa Cat Bed</td><td>₹1,899</td><td><span class="status status--delivered">Delivered</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10455">Invoice</button></td></tr><tr><td><strong>WW-10431</strong></td><td>21 Aug 2026</td><td class="cell-items">Feather Teaser Wand, Jingle Ball Trio</td><td>₹598</td><td><span class="status status--delivered">Delivered</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10431">Invoice</button></td></tr><tr><td><strong>WW-10502</strong></td><td>10 Sep 2026</td><td class="cell-items">No-Pull Trail Harness</td><td>₹1,799</td><td><span class="status status--transit">Out for delivery</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10502">Invoice</button></td></tr><tr><td><strong>WW-10507</strong></td><td>11 Sep 2026</td><td class="cell-items">Peanut Butter Bone Biscuits · 1 kg</td><td>₹449</td><td><span class="status status--processing">Processing</span></td><td><button class="btn btn-ghost btn-sm" type="button" data-dash-invoice="WW-10507">Invoice</button></td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="dash-section" id="appointments" data-dash-section="appointments" aria-labelledby="appt-h" hidden>
+        <div class="dash-head"><h2 id="appt-h" class="h2">Appointments</h2><button class="btn btn-primary" type="button" data-modal-open="dash-booking-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>New booking</button></div>
+        <div class="panel mt-6" data-appts-container>
+          <div class="appt" data-appt-id="apt-101"><div class="appt__date"><strong>14</strong><small>Sep</small></div><div><h3 data-appt-pet-service>Mango · Full Groom + teeth brushing</h3><p data-appt-slot>Saturday 10:30 AM · Neha Joshi · Est. ₹1,698</p></div><div class="cluster"><button class="btn btn-ghost btn-sm" type="button" data-dash-reschedule="apt-101">Reschedule</button><button class="btn btn-ghost btn-sm" type="button" data-dash-cancel="apt-101" style="color:var(--danger)">Cancel</button></div></div>
+          <div class="appt" data-appt-id="apt-past-1"><div class="appt__date" style="background:var(--surface-sunk);color:var(--text-muted)"><strong>17</strong><small>Aug</small></div><div><h3>Mango · Bath &amp; Brush</h3><p>Completed · Neha Joshi · ₹799</p></div><button class="btn btn-ghost btn-sm" type="button" data-dash-rebook="Mango" data-service="Bath &amp; Brush" data-groomer="Neha Joshi">Book again</button></div>
+          <div class="appt" data-appt-id="apt-past-2"><div class="appt__date" style="background:var(--surface-sunk);color:var(--text-muted)"><strong>02</strong><small>Jul</small></div><div><h3>Luna · Cat Spa</h3><p>Completed · Imran Sayed · ₹1,699</p></div><button class="btn btn-ghost btn-sm" type="button" data-dash-rebook="Luna" data-service="Cat Spa" data-groomer="Imran Sayed">Book again</button></div>
+        </div>
+      </section>
+
+      <section class="dash-section" id="wishlist" data-dash-section="wishlist" aria-labelledby="wish-h" hidden>
+        <div class="dash-head"><h2 id="wish-h" class="h2">Wishlist</h2><span class="muted" data-wishlist-summary></span></div>
+        <div class="product-grid mt-6" data-wishlist-grid></div>
+        <div class="empty-state mt-6" data-wishlist-empty hidden><span class="icon-bubble icon-bubble--lg"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><h3>Nothing saved yet</h3><p>Tap the heart on any product to save it here for later.</p><button class="btn btn-primary" type="button" data-modal-open="dash-browse-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Browse pack favorites</button></div>
+      </section>
+
+      <section class="dash-section" id="autoship" data-dash-section="autoship" aria-labelledby="auto-h" hidden>
+        <div class="dash-head"><h2 id="auto-h" class="h2">Auto-ship</h2><button class="btn btn-primary btn-sm" type="button" data-modal-open="dash-autoship-add-modal"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Add item</button></div>
+        <div class="panel mt-6" data-autoship-list>
+          <div class="appt" data-autoship-row="kibble">
+            <img src="../assets/images/p-kibble.webp" alt="Chicken Kibble" width="64" height="64" loading="lazy" style="width:64px;height:64px;border-radius:14px;object-fit:cover">
+            <div>
+              <h3>Grain-Free Chicken Kibble · 3 kg</h3>
+              <p data-autoship-info>Every 4 weeks · next delivery <span data-autoship-date>18 Sep</span> · 5% saved</p>
+            </div>
+            <div class="cluster" style="margin-inline-start:auto">
+              <label class="check"><input type="checkbox" checked data-autoship-toggle="Grain-Free Chicken Kibble · 3 kg"><span>Active</span></label>
+              <button class="btn btn-ghost btn-sm" type="button" data-autoship-skip="kibble">Skip next</button>
+            </div>
+          </div>
+          <div class="appt" data-autoship-row="biscuits">
+            <img src="../assets/images/p-bone-biscuits.webp" alt="Bone Biscuits" width="64" height="64" loading="lazy" style="width:64px;height:64px;border-radius:14px;object-fit:cover">
+            <div>
+              <h3>Peanut Butter Bone Biscuits · 500 g</h3>
+              <p data-autoship-info>Every 6 weeks · next delivery <span data-autoship-date>02 Oct</span> · 5% saved</p>
+            </div>
+            <div class="cluster" style="margin-inline-start:auto">
+              <label class="check"><input type="checkbox" checked data-autoship-toggle="Peanut Butter Bone Biscuits · 500 g"><span>Active</span></label>
+              <button class="btn btn-ghost btn-sm" type="button" data-autoship-skip="biscuits">Skip next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-section" id="settings" data-dash-section="settings" aria-labelledby="set-h" hidden>
+        <div class="dash-head"><h2 id="set-h" class="h2">Settings</h2></div>
+        <form class="form-card mt-6" id="dash-settings-form" novalidate data-keep>
+          <div class="form-grid">
+            <div class="field"><label for="st-name">Full name <span class="req" aria-hidden="true">*</span></label><input class="input" type="text" id="st-name" name="name" required autocomplete="name" value="Ananya Rao" data-min="2"><p class="field-error" id="st-name-error"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>Please enter your full name.</span></p></div>
+            <div class="field"><label for="st-email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" type="email" id="st-email" name="email" required autocomplete="email" value="ananya@example.com"><p class="field-error" id="st-email-error"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>Please enter a valid email address.</span></p></div>
+            <div class="field"><label for="st-phone">Mobile <span class="req" aria-hidden="true">*</span></label><input class="input" type="tel" id="st-phone" name="phone" required autocomplete="tel" value="98765 43210" data-rule="phone"><p class="field-error" id="st-phone-error"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>Please enter a valid 10-digit mobile number.</span></p></div>
+            <div class="field" data-tip><label for="st-pin">Delivery PIN code <span class="req" aria-hidden="true">*</span></label><span class="tooltip" role="tooltip">We deliver same-day to PIN codes starting with 411.</span><input class="input" type="text" id="st-pin" name="pin" required value="411001" data-rule="pincode" inputmode="numeric" maxlength="6"><p class="field-error" id="st-pin-error"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg><span>Please enter a valid 6-digit PIN code.</span></p></div>
+            <fieldset class="field span-2"><legend class="field-label">Appearance</legend><div class="pills mt-2">
+              <label class="pill"><input type="radio" name="theme-pref" value="system" data-theme-choice><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>System</span></label>
+              <label class="pill"><input type="radio" name="theme-pref" value="light" data-theme-choice><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>Light</span></label>
+              <label class="pill"><input type="radio" name="theme-pref" value="dark" data-theme-choice><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>Dark</span></label>
+            </div></fieldset>
+            <fieldset class="field span-2"><legend class="field-label">Notifications</legend><div class="filter-options mt-2">
+              <label class="check"><input type="checkbox" name="notif_whatsapp" checked><span>Order &amp; delivery updates on WhatsApp</span></label>
+              <label class="check"><input type="checkbox" name="notif_grooming" checked><span>Grooming reminders</span></label>
+              <label class="check"><input type="checkbox" name="notif_newsletter"><span>The Paw Post newsletter</span></label>
+            </div></fieldset>
+          </div>
+          <div class="form-foot"><span></span><button class="btn btn-primary" type="submit">Save changes</button></div>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- In-Dashboard Modals -->
+
+<!-- Appointment Booking Modal -->
+<div class="modal" id="dash-booking-modal" role="dialog" aria-modal="true" aria-labelledby="bk-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close booking modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <h2 id="bk-modal-title" class="h3"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg> Book a grooming session</h2>
+      <p class="muted mt-2">Personalized, low-stress care at our Koregaon Park salon.</p>
+      <form id="dash-booking-form" class="stack mt-6" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="bk-pet">Select pet <span class="req" aria-hidden="true">*</span></label>
+            <select class="input" id="bk-pet" name="pet" required>
+              <option value="Mango (Corgi)">Mango (Corgi)</option>
+              <option value="Luna (British Shorthair)">Luna (British Shorthair)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bk-service">Service package <span class="req" aria-hidden="true">*</span></label>
+            <select class="input" id="bk-service" name="service" required>
+              <option value="Full Groom (₹1,499)">Full Groom (Haircut, bath, ears, nails) · ₹1,499</option>
+              <option value="Bath & Brush (₹799)">Bath &amp; Brush (Warm bath, blow dry, brush) · ₹799</option>
+              <option value="Cat Spa (₹1,699)">Cat Spa (Low-stress feline bath &amp; groom) · ₹1,699</option>
+              <option value="Puppy / Kitten First Groom (₹999)">Puppy / Kitten First Groom · ₹999</option>
+              <option value="De-Shedding Treatment (₹1,299)">De-Shedding &amp; Undercoat Treatment · ₹1,299</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bk-date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="date" id="bk-date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="bk-groomer">Preferred groomer</label>
+            <select class="input" id="bk-groomer" name="groomer">
+              <option value="Neha Joshi">Neha Joshi (Senior Canine Stylist)</option>
+              <option value="Imran Sayed">Imran Sayed (Cat &amp; Fear-Free Specialist)</option>
+              <option value="Priya Sharma">Priya Sharma (Bath &amp; Coat Care)</option>
+              <option value="First Available">First Available Groomer</option>
+            </select>
+          </div>
+          <fieldset class="field span-2">
+            <legend class="field-label">Preferred time slot <span class="req" aria-hidden="true">*</span></legend>
+            <div class="pills mt-2">
+              <label class="pill"><input type="radio" name="slot" value="Morning 10:30 AM" checked><span>Morning 10:30 AM</span></label>
+              <label class="pill"><input type="radio" name="slot" value="Afternoon 02:00 PM"><span>Afternoon 02:00 PM</span></label>
+              <label class="pill"><input type="radio" name="slot" value="Evening 05:00 PM"><span>Evening 05:00 PM</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field span-2">
+            <legend class="field-label">Optional add-ons</legend>
+            <div class="filter-options mt-2">
+              <label class="check"><input type="checkbox" name="addon_teeth" value="Teeth brushing"><span>Teeth brushing (+₹199)</span></label>
+              <label class="check"><input type="checkbox" name="addon_nails" value="Nail grinding"><span>Paw balm &amp; nail smooth grind (+₹149)</span></label>
+              <label class="check"><input type="checkbox" name="addon_flea" value="Flea & tick rinse"><span>Organic flea &amp; tick rinse (+₹249)</span></label>
+            </div>
+          </fieldset>
+          <div class="field span-2">
+            <label for="bk-notes">Special instructions or pet temperament notes</label>
+            <textarea class="textarea" id="bk-notes" name="notes" rows="2" placeholder="e.g. sensitive paws, gets excited around other dogs"></textarea>
+          </div>
+        </div>
+        <div class="cluster" style="justify-content:flex-end">
+          <button class="btn btn-ghost" type="button" data-modal-close>Cancel</button>
+          <button class="btn btn-primary" type="submit">Confirm booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Reschedule Appointment Modal -->
+<div class="modal modal--sm" id="dash-reschedule-modal" role="dialog" aria-modal="true" aria-labelledby="resched-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close reschedule modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <h2 id="resched-modal-title" class="h4">Reschedule appointment</h2>
+      <p class="muted mt-2" data-resched-summary>Update date and time for your grooming session.</p>
+      <form id="dash-reschedule-form" class="stack mt-4" novalidate>
+        <input type="hidden" id="resched-appt-id" name="appt_id">
+        <div class="field">
+          <label for="resched-date">New date <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="date" id="resched-date" name="date" required>
+        </div>
+        <fieldset class="field">
+          <legend class="field-label">New time slot <span class="req" aria-hidden="true">*</span></legend>
+          <div class="pills mt-2">
+            <label class="pill"><input type="radio" name="resched_slot" value="Morning 10:30 AM" checked><span>Morning 10:30 AM</span></label>
+            <label class="pill"><input type="radio" name="resched_slot" value="Afternoon 02:00 PM"><span>Afternoon 02:00 PM</span></label>
+            <label class="pill"><input type="radio" name="resched_slot" value="Evening 05:00 PM"><span>Evening 05:00 PM</span></label>
+          </div>
+        </fieldset>
+        <div class="cluster" style="justify-content:flex-end;margin-top:var(--sp-4)">
+          <button class="btn btn-ghost" type="button" data-modal-close>Keep current</button>
+          <button class="btn btn-primary" type="submit">Update schedule</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Add Pet Modal -->
+<div class="modal modal--sm" id="dash-pet-modal" role="dialog" aria-modal="true" aria-labelledby="pet-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close add pet modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <h2 id="pet-modal-title" class="h4">Add a pet to your pack</h2>
+      <p class="muted mt-2">Save breed details, weight, and allergy notes for personalized services.</p>
+      <form id="dash-pet-form" class="stack mt-4" novalidate>
+        <div class="field">
+          <label for="new-pet-name">Pet name <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="new-pet-name" name="name" required placeholder="e.g. Bruno, Coco">
+        </div>
+        <div class="field">
+          <label for="new-pet-species">Pet species <span class="req" aria-hidden="true">*</span></label>
+          <select class="input" id="new-pet-species" name="species" required>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+            <option value="Fish">Fish</option>
+            <option value="Small Pet">Small Pet (Hamster, Rabbit, etc.)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="new-pet-breed">Breed <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="new-pet-breed" name="breed" required placeholder="e.g. Golden Retriever, Persian Cat">
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="new-pet-age">Age</label>
+            <input class="input" type="text" id="new-pet-age" name="age" placeholder="e.g. 2 yrs">
+          </div>
+          <div class="field">
+            <label for="new-pet-weight">Weight</label>
+            <input class="input" type="text" id="new-pet-weight" name="weight" placeholder="e.g. 14 kg">
+          </div>
+        </div>
+        <div class="field">
+          <label for="new-pet-notes">Health &amp; care notes</label>
+          <input class="input" type="text" id="new-pet-notes" name="notes" placeholder="e.g. Sensitive ears, no chicken snacks">
+        </div>
+        <div class="cluster" style="justify-content:flex-end;margin-top:var(--sp-4)">
+          <button class="btn btn-ghost" type="button" data-modal-close>Cancel</button>
+          <button class="btn btn-primary" type="submit">Save pet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Invoice / Order Details Modal -->
+<div class="modal" id="dash-invoice-modal" role="dialog" aria-modal="true" aria-labelledby="inv-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close invoice modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body" id="dash-invoice-content">
+      <h2 id="inv-modal-title" class="h4">Order invoice &amp; tracking</h2>
+      <!-- Dynamically filled by dashboard.js -->
+    </div>
+  </div>
+</div>
+
+<!-- Wishlist In-Dashboard Catalog Browser Modal -->
+<div class="modal" id="dash-browse-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close browse modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <div class="dash-head">
+        <div>
+          <h2 id="browse-modal-title" class="h4">Pack favorites &amp; recommendations</h2>
+          <p class="muted mt-1">Tap the heart on any item to instantly add or remove it from your saved wishlist.</p>
+        </div>
+      </div>
+      <div class="product-grid mt-6" id="dash-browse-grid">
+        <!-- Rendered by dashboard.js with products from products.js -->
+      </div>
+      <div class="cluster mt-6" style="justify-content:flex-end">
+        <button class="btn btn-primary" type="button" data-modal-close>Done browsing</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Auto-Ship Item Modal -->
+<div class="modal modal--sm" id="dash-autoship-add-modal" role="dialog" aria-modal="true" aria-labelledby="auto-add-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close auto-ship add modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <h2 id="auto-add-title" class="h4">Add auto-ship subscription</h2>
+      <p class="muted mt-2">Get fresh food and treats delivered on your schedule with a flat 5% subscriber savings.</p>
+      <form id="dash-autoship-add-form" class="stack mt-4" novalidate>
+        <div class="field">
+          <label for="auto-product">Select item <span class="req" aria-hidden="true">*</span></label>
+          <select class="input" id="auto-product" name="product" required>
+            <option value="Salmon & Tuna Gourmet Wet Pouch · 12 Pack">Salmon &amp; Tuna Gourmet Wet Pouch · 12 Pack (₹1,199)</option>
+            <option value="Freeze-Dried Chicken Liver Bites · 200 g">Freeze-Dried Chicken Liver Bites · 200 g (₹549)</option>
+            <option value="Dental Chews Fresh Mint · 30 Pack">Dental Chews Fresh Mint · 30 Pack (₹799)</option>
+            <option value="Organic Wheatgrass Seeds & Planter">Organic Cat Wheatgrass Seeds &amp; Planter (₹349)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="auto-freq">Delivery frequency <span class="req" aria-hidden="true">*</span></label>
+          <select class="input" id="auto-freq" name="frequency" required>
+            <option value="2 weeks">Every 2 weeks</option>
+            <option value="4 weeks" selected>Every 4 weeks</option>
+            <option value="6 weeks">Every 6 weeks</option>
+            <option value="8 weeks">Every 8 weeks</option>
+          </select>
+        </div>
+        <div class="cluster" style="justify-content:flex-end;margin-top:var(--sp-4)">
+          <button class="btn btn-ghost" type="button" data-modal-close>Cancel</button>
+          <button class="btn btn-primary" type="submit">Start auto-ship</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Sign Out Confirmation Modal -->
+<div class="modal modal--sm" id="dash-signout-modal" role="dialog" aria-modal="true" aria-labelledby="signout-modal-title" hidden>
+  <div class="modal__dialog">
+    <button class="icon-btn modal__close" type="button" aria-label="Close sign out modal" data-modal-close><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal__body">
+      <span class="icon-bubble icon-bubble--lg tint-cats"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg></span>
+      <h2 id="signout-modal-title" class="h4 mt-4">Sign out of Ananya's account?</h2>
+      <p class="muted mt-2">Your saved pet profiles, active grooming appointments, and auto-ship settings will remain securely saved on this browser.</p>
+      <div class="cluster mt-6" style="justify-content:flex-end">
+        <button class="btn btn-ghost" type="button" data-modal-close>Stay signed in</button>
+        <button class="btn btn-primary" type="button" id="dash-confirm-signout">Sign out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="backdrop" data-backdrop hidden></div>
+<div class="toast-region" role="status" aria-live="polite" data-toasts></div>
+<a class="to-top" href="#main" aria-label="Back to top" data-to-top><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
+</body>
+</html>

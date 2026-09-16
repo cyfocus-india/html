@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Sign in to your DriveWay student dashboard.">
+  <meta name="theme-color" content="#08263f">
+  <title>Sign In | DriveWay</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="../assets/js/main.js" defer></script>
+</head>
+<body class="auth-page">
+  <main id="main-content" class="auth-wrapper">
+    <div class="utility-standalone-top-bar">
+      <div class="utility-top-bar-inner">
+        <a class="brand" href="../index.html" aria-label="DriveWay home">
+          <span class="brand-mark" aria-hidden="true"><i data-lucide="gauge"></i></span>
+          <span><span class="brand-word">Drive<span class="accent">Way</span></span><span class="brand-sub">DRIVING SCHOOL</span></span>
+        </a>
+        <div class="utility-top-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><i data-lucide="moon"></i></button>
+          <button class="icon-button rtl-btn" id="rtl-toggle" type="button" aria-label="Toggle layout direction (RTL/LTR)" title="Toggle layout direction"><span class="rtl-badge">RTL</span></button>
+          <a class="btn btn-outline btn-sm" href="../index.html"><i data-lucide="arrow-left"></i> <span>Home</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-body-container">
+      <div class="auth-card-container">
+        <section class="form-shell" aria-labelledby="signin-title">
+          <!-- Sign In View -->
+          <div id="signin-view" class="auth-view active">
+            <span class="tag"><i data-lucide="user-check"></i> Student Portal</span>
+            <h1 id="signin-title">Sign In</h1>
+            <p>Sign in to book lessons and track your progress.</p>
+            <div class="form-message" role="status">Login successful. Opening your dashboard…</div>
+            <form class="validate-form" id="signin-form" novalidate data-success="Login successful. Opening your dashboard…" data-redirect="dashboard.html">
+              <div class="field">
+                <label for="signin-email">Email address</label>
+                <input id="signin-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="signin-password">Password</label>
+                  <a href="#forgot-password" class="forgot-link" id="to-forgot-btn">Forgot password?</a>
+                </div>
+                <input id="signin-password" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="Enter your password" required>
+                <div class="field-error"></div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Sign In <i data-lucide="arrow-right"></i></button>
+            </form>
+            <div class="auth-card-footer">
+              New student? <a href="signup.html" class="accent-link">Create an account</a>
+            </div>
+          </div>
+
+          <!-- Forgot Password View -->
+          <div id="forgot-view" class="auth-view" style="display: none;">
+            <span class="tag"><i data-lucide="key-round"></i> Account Recovery</span>
+            <h1 id="forgot-title">Forgot Password</h1>
+            <p>Enter your registered email address and we'll send you instructions to reset your password.</p>
+            <div class="form-message" id="forgot-form-message" role="status"></div>
+            <form class="validate-form" id="forgot-form" novalidate data-success="Password reset instructions have been sent to your email! Please check your inbox and spam folder.">
+              <div class="field">
+                <label for="forgot-email">Email address</label>
+                <input id="forgot-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+                <div class="field-error"></div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit"><i data-lucide="mail"></i> Send Reset Link</button>
+            </form>
+            <div class="auth-card-footer">
+              <a href="#signin" id="to-signin-btn" class="back-link"><i data-lucide="arrow-left"></i> Back to Sign In</a>
+            </div>
+          </div>
+        </section>
+
+        <div class="auth-trust-badges">
+          <span class="auth-trust-item"><i data-lucide="shield-check"></i> 256-Bit SSL Encrypted</span>
+          <span class="auth-trust-item"><i data-lucide="award"></i> Official Student Portal</span>
+          <span class="auth-trust-item"><i data-lucide="lock"></i> Secure Access</span>
+        </div>
+        <p class="auth-help-text">Need assistance? <a href="contact.html">Contact Student Support</a> or call <strong>+91 98765 43210</strong></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

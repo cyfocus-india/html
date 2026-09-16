@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a Glowé account.">
+  <title>Sign Up — Glowé</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body data-page="signup" data-depth="1">
+  <main id="main-content">
+    <section class="auth-wrap">
+      <div class="auth-art" role="img" aria-label="Glowé skincare collection"></div>
+      <div class="auth-panel">
+        <div class="auth-card" data-reveal>
+          <div class="auth-card-header">
+            <a class="brand" href="../index.html" aria-label="Glowé home">
+              <span class="brand-emblem" aria-hidden="true">
+                <svg class="brand-logo-svg" viewBox="0 0 44 44" width="34" height="34" fill="none" role="img">
+                  <rect width="44" height="44" rx="13" fill="#fcf0ed" stroke="#f4ded9" stroke-width="1.2" class="brand-emblem-bg"/>
+                  <path d="M22 10 C22 10 30 18 30 24 C30 28.4 26.4 32 22 32 C17.6 32 14 28.4 14 24 C14 18 22 10 22 10 Z" fill="url(#brandSunGrad-signup)" opacity="0.9"/>
+                  <path d="M22 32 C22 32 33 29 33 19 C27 19 22 24 22 32 Z" fill="url(#brandLeafGrad-signup)"/>
+                  <path d="M22 32 C22 32 25 25 32 20" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+                  <defs>
+                    <linearGradient id="brandLeafGrad-signup" x1="14" y1="12" x2="32" y2="34" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#7a9155"/>
+                      <stop offset="100%" stop-color="#556c34"/>
+                    </linearGradient>
+                    <linearGradient id="brandSunGrad-signup" x1="18" y1="10" x2="34" y2="26" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#eb7378"/>
+                      <stop offset="100%" stop-color="#d99a34"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <span class="brand-text-wrap">
+                <span class="brand-title">Glowé</span>
+                <span class="brand-tag">BOTANICAL SCIENCE</span>
+              </span>
+            </a>
+            <div class="auth-card-actions">
+              <div class="standalone-utility-bar" aria-label="Appearance and layout settings">
+                <button class="icon-btn theme-button" type="button" aria-label="Toggle color theme" title="Toggle color theme"><i data-lucide="moon"></i></button>
+                <button class="dir-toggle-btn rtl-button" type="button" aria-label="Toggle right-to-left layout" title="Toggle RTL layout"><span class="dir-badge">RTL</span></button>
+              </div>
+              <a class="btn btn-outline btn-sm auth-home-btn" href="../index.html"><i data-lucide="arrow-left"></i> Home</a>
+            </div>
+          </div>
+          <span class="eyebrow">Account Registration</span>
+          <h1>Sign Up</h1>
+          <p class="lead">Create an account to save routines, favorites and your quiz results.</p>
+          <form data-validate data-success="Your demo account details look great." novalidate>
+            <div class="field">
+              <label for="signup-name">Full name</label>
+              <input id="signup-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="signup-email">Email address</label>
+              <input id="signup-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="signup-password">Password</label>
+              <div class="password-wrap">
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                <button class="icon-btn password-toggle" type="button" aria-label="Show password"><i data-lucide="eye"></i></button>
+              </div>
+            </div>
+            <label class="check-row"><input type="checkbox" required> I accept the <a class="accent" href="terms.html">Terms</a> and <a class="accent" href="privacy.html">Privacy Policy</a>.</label>
+            <button class="btn btn-coral" style="width:100%;margin-top:22px" type="submit">Sign Up <i data-lucide="arrow-right"></i></button>
+          </form>
+          <p style="text-align:center;margin-top:20px" class="muted">Already a member? <a class="accent" href="signin.html">Sign In</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/lucide.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

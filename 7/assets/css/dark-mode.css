@@ -1,0 +1,848 @@
+/* ==========================================================================
+   PLAY ZONE - Dark Mode Stylesheet (assets/css/dark-mode.css)
+   Activated via [data-theme="dark"] on <html>
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Surface & Background Dark Overrides */
+  --bg-page: #0B0F19;
+  --bg-surface: #111827;
+  --bg-surface-alt: #161F30;
+  --bg-surface-soft: #1E293B;
+  --bg-accent-section: #131E35;
+  --border-color: #2D3748;
+  --border-color-subtle: #1E293B;
+
+  /* Typography Dark Overrides */
+  --text-heading: #F9FAFB;
+  --text-body: #DCE3ED;
+  --text-muted: #AEBBCC;
+
+  /* ------------------------------------------------------------------
+     Neutral ramp inversion.
+     The neutral-400..950 tokens are used throughout the site as TEXT
+     colours (paragraphs, captions, meta labels, table cells). On a dark
+     surface the light-mode values collapse to 1.5:1 - 3:1 and the copy
+     effectively disappears. Flipping the ramp here restores WCAG AA
+     contrast everywhere at once instead of patching each component.
+     Contrast is measured against --bg-surface (#111827).
+     ------------------------------------------------------------------ */
+  --neutral-950: #FFFFFF;
+  --neutral-900: #F9FAFB; /* 16.6:1 */
+  --neutral-800: #EEF2F7; /* 15.3:1 */
+  --neutral-700: #DCE3ED; /* 12.8:1 */
+  --neutral-600: #C6D0DE; /* 10.2:1  - the main body-copy token */
+  --neutral-500: #AEBBCC; /*  7.8:1  - subtext / meta */
+  --neutral-400: #93A2B5; /*  5.6:1  - inactive marks */
+
+  /* Brand Adjustments for Dark Contrast */
+  --primary-blue-light: #1A2E56;
+  --primary-blue-subtle: #132240;
+  --accent-yellow-light: #3D2F05;
+  --accent-yellow-text: #FBD34D;
+  --accent-red-text: #FF8B8B;
+  --accent-red-light: #3F1414;
+  --accent-green: #34D399;
+  --accent-green-light: #0B3326;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   Tinted chips, badges & tags
+   In light mode these pair a pale tint background with the saturated brand
+   colour. On dark surfaces that pairing collapses (e.g. #0D5BE1 on #1A2E56 is
+   1.4:1), so each tone gets a deep tint plus a lightened brand foreground.
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .badge-blue,
+[data-theme="dark"] .section-tag,
+[data-theme="dark"] .tone-blue {
+  background-color: #16305C;
+  color: #9EC5FD;
+}
+
+[data-theme="dark"] .badge-red,
+[data-theme="dark"] .tone-red {
+  background-color: #4A1717;
+  color: #FCA5A5;
+}
+
+[data-theme="dark"] .badge-yellow,
+[data-theme="dark"] .tone-yellow {
+  background-color: #3D2F05;
+  color: #FBD34D;
+}
+
+[data-theme="dark"] .badge-green,
+[data-theme="dark"] .tone-green {
+  background-color: #0B3326;
+  color: #6EE7B7;
+}
+
+[data-theme="dark"] .tone-purple {
+  background-color: #2E1B4D;
+  color: #C4B5FD;
+}
+
+/* Component Dark Adjustments */
+[data-theme="dark"] .site-header {
+  background-color: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .nav-link {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .nav-dropdown-menu {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .nav-dropdown-link {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .nav-dropdown-link:hover {
+  background-color: var(--primary-blue-light);
+  color: #9EC5FD;
+  border-left-color: #7FB0FF;
+}
+
+[data-theme="dark"][dir="rtl"] .nav-dropdown-link:hover {
+  border-right-color: #7FB0FF;
+}
+
+[data-theme="dark"] .icon-control-btn,
+[data-theme="dark"] .mobile-nav-btn {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .icon-control-btn:hover {
+  background-color: #1D3562;
+  color: #9EC5FD;
+  border-color: #3B82F6;
+}
+
+/* --------------------------------------------------------------------------
+   Accent text on dark surfaces
+   The saturated brand blue (#0D5BE1) and red (#E52E2E) read at 2:1 - 3.9:1 on
+   the dark canvas. Links, active tabs and inline accents get lightened
+   variants; solid brand-coloured buttons keep the saturated originals.
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .form-link,
+[data-theme="dark"] .portal-switch-prompt a,
+[data-theme="dark"] .dash-tab-btn.active,
+[data-theme="dark"] .dash-tab-btn:hover,
+[data-theme="dark"] .faq-question-btn:hover,
+[data-theme="dark"] .stat-pill .stat-val,
+[data-theme="dark"] .btn-outline-blue,
+[data-theme="dark"] .btn-secondary {
+  color: #7FB0FF;
+}
+
+[data-theme="dark"] .btn-outline-blue,
+[data-theme="dark"] .btn-secondary {
+  border-color: #7FB0FF;
+}
+
+[data-theme="dark"] .btn-outline-blue:hover,
+[data-theme="dark"] .btn-secondary:hover {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .btn-outline-red {
+  color: #FF8B8B;
+  border-color: #FF8B8B;
+}
+
+[data-theme="dark"] .btn-outline-red:hover {
+  background-color: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .footer-nav-list a:hover,
+[data-theme="dark"] .mobile-drawer-links a.active,
+[data-theme="dark"] .zone-direct-arrow {
+  color: #FF8B8B;
+}
+
+[data-theme="dark"] .nav-link.active::after {
+  background-color: #FF8B8B;
+}
+
+[data-theme="dark"] .user-avatar-circle {
+  background-color: #16305C;
+  color: #9EC5FD;
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .dash-tab-btn.active {
+  border-bottom-color: #7FB0FF;
+}
+
+[data-theme="dark"] .dir-toggle-pill {
+  background-color: #1E293B;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .dir-btn {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .dir-btn.active {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .ref-hero-section {
+  background-color: var(--bg-page);
+}
+
+[data-theme="dark"] .ref-hero-typography h1 {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .ref-hero-copy {
+  color: #C6D0DE;
+}
+
+[data-theme="dark"] .highlights-strip {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .highlight-text h4 {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .highlight-text p {
+  color: #AEBBCC;
+}
+
+[data-theme="dark"] .zone-tile {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .zone-tile-body {
+  background-color: var(--bg-surface);
+  border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .zone-tile-explorer .zone-visual-area {
+  background-color: #132240;
+}
+
+[data-theme="dark"] .zone-tile-adventure .zone-visual-area {
+  background-color: #331313;
+}
+
+[data-theme="dark"] .zone-tile-challenge .zone-visual-area {
+  background-color: #112648;
+}
+
+[data-theme="dark"] .dual-promo-card {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] .cake-layer-top {
+  background-color: #1E293B;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .safety-highlight-section {
+  background-color: var(--bg-accent-section);
+}
+
+[data-theme="dark"] .safety-ballpit-round {
+  border-color: #1E293B;
+}
+
+[data-theme="dark"] .parents-preview-card {
+  background-color: #131E35;
+}
+
+[data-theme="dark"] .portal-form-box {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #0F172A;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .form-label {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .service-icon.c-blue {
+  background-color: #1E3A8A;
+  color: #93C5FD;
+}
+
+[data-theme="dark"] .service-icon.c-red {
+  background-color: #7F1D1D;
+  color: #FCA5A5;
+}
+
+[data-theme="dark"] .service-icon.c-yellow {
+  background-color: #78350F;
+  color: #FDE047;
+}
+
+[data-theme="dark"] .site-footer {
+  background-color: #0F172A;
+  border-top-color: #1E293B;
+}
+
+[data-theme="dark"] .footer-nav-list a,
+[data-theme="dark"] .footer-contact-details li {
+  color: #B6C2D2;
+}
+
+[data-theme="dark"] .footer-sub-bar {
+  border-top-color: #1E293B;
+  color: #A3B0C2;
+}
+
+[data-theme="dark"] .footer-sub-links a:hover {
+  color: #93C5FD;
+}
+
+/* Dashboard Dark Enhancements */
+[data-theme="dark"] .dashboard-header-bar,
+[data-theme="dark"] .dash-card {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] .zone-select-card {
+  border-color: #334155;
+  background-color: #0F172A;
+}
+
+[data-theme="dark"] .zone-select-card:hover {
+  border-color: var(--primary-blue);
+  background-color: #1E293B;
+}
+
+[data-theme="dark"] .zone-select-card.selected {
+  border-color: #3B82F6;
+  background-color: #1E3A8A;
+}
+
+[data-theme="dark"] .time-slot-btn {
+  background-color: #0F172A;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .counter-btn {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .data-table th {
+  background-color: #1E293B;
+  color: #F8FAFC;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .data-table td {
+  border-color: #1E293B;
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .data-table tr:hover td {
+  background-color: #1E293B;
+}
+
+[data-theme="dark"] .toast {
+  background-color: #1E293B;
+  color: #F8FAFC;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .modal-dialog {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] #waiver-document-content {
+  background-color: #1A2234 !important;
+  color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] #waiver-document-content h4 {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #waiver-document-content .waiver-guardian-info {
+  background-color: #131A28 !important;
+  border-color: #2D3748 !important;
+}
+
+[data-theme="dark"] #waiver-document-content .waiver-guardian-info strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #waiver-document-content strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #waiver-document-content .digital-sig-box {
+  background-color: #131A28 !important;
+  border-color: #4A5568 !important;
+}
+
+[data-theme="dark"] #waiver-document-content code {
+  background-color: #243049 !important;
+  color: #93C5FD !important;
+}
+
+/* Live Interactive Contact Map Dark Theme */
+[data-theme="dark"] .contact-live-map-section {
+  background-color: #0B1120;
+  border-color: #1E293B;
+}
+
+[data-theme="dark"] .map-interactive-bar {
+  background-color: #161F30;
+  border-color: #1E293B;
+}
+
+[data-theme="dark"] .map-chip {
+  background-color: #0F172A;
+  border-color: #334155;
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .map-chip:hover {
+  border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .map-chip.active {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+  border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .map-floating-card {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+[data-theme="dark"] .map-card-address {
+  color: #C6D0DE;
+}
+
+[data-theme="dark"] .map-card-note {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .map-card-status {
+  color: #6EE7B7;
+  background: rgba(16, 185, 129, 0.16);
+}
+
+[data-theme="dark"] .filter-pill-btn {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  color: var(--text-body);
+}
+
+[data-theme="dark"] .filter-pill-btn:hover {
+  background-color: var(--bg-surface-soft);
+  color: #60A5FA;
+  border-color: #60A5FA;
+}
+
+[data-theme="dark"] .filter-pill-btn.active {
+  background-color: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 4px 14px rgba(13, 91, 225, 0.45);
+}
+
+[data-theme="dark"] .gallery-tile-item {
+  background-color: var(--bg-surface-soft);
+}
+
+[data-theme="dark"] .back-to-top-btn {
+  background-color: var(--primary-blue);
+  border-color: #334155;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .back-to-top-btn:hover {
+  background-color: var(--accent-red);
+  box-shadow: 0 6px 22px rgba(229, 46, 46, 0.6);
+}
+
+[data-theme="dark"] .faq-accordion-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .faq-chevron {
+  background-color: var(--bg-surface-soft);
+}
+
+[data-theme="dark"] .faq-answer-panel p {
+  color: #C6D0DE;
+}
+
+[data-theme="dark"] .table-scroll-hint {
+  color: #AEBBCC;
+}
+
+/* Mobile Drawer Dark Mode */
+[data-theme="dark"] .mobile-nav-drawer {
+  background-color: #111827;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .mobile-drawer-links a {
+  color: #E2E8F0;
+  border-bottom-color: #1E293B;
+}
+
+
+/* Select & Textarea Dark Mode */
+[data-theme="dark"] select.form-control,
+[data-theme="dark"] textarea.form-control {
+  background-color: #0F172A;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] select.form-control option {
+  background-color: #1E293B;
+  color: #F8FAFC;
+}
+
+/* Coming Soon Countdown Dark Mode */
+[data-theme="dark"] .countdown-unit-card {
+  background-color: #161F30;
+  border-color: #2D3748;
+  color: #F8FAFC;
+}
+
+/* Birthday Party Planner Cards Dark Mode */
+[data-theme="dark"] .bday-package-grid .zone-select-card,
+[data-theme="dark"] .bday-theme-grid .zone-select-card {
+  background-color: #0F172A;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .bday-package-grid .zone-select-card:hover,
+[data-theme="dark"] .bday-theme-grid .zone-select-card:hover {
+  border-color: var(--primary-blue);
+  background-color: #1E293B;
+}
+
+[data-theme="dark"] .bday-package-grid .zone-select-card.selected,
+[data-theme="dark"] .bday-theme-grid .zone-select-card.selected {
+  border-color: #3B82F6;
+  background-color: #1E3A8A;
+}
+
+/* Interactive Arena Blueprint Dark Mode (Home 2) */
+[data-theme="dark"] .blueprint-filter-btn {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .blueprint-filter-btn:hover {
+  background-color: var(--bg-surface);
+  color: #60A5FA;
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .blueprint-filter-btn.active {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .blueprint-canvas-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .blueprint-scale-pill {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .blueprint-canvas-wrapper {
+  background-color: #0F172A;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .blueprint-inspector-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .bp-quick-chip {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .bp-quick-chip.active {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .inspector-specs-grid {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tag-chip {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .eng-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+/* Schedule Card Dark Mode (Home 2) */
+[data-theme="dark"] .schedule-card {
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Slot Checker Bar Dark Mode (Home 2) */
+[data-theme="dark"] .slot-checker-bar {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+/* Gallery Tile Overlay Dark Mode */
+[data-theme="dark"] .gallery-tile-item {
+  background-color: #1E293B;
+}
+
+/* Safety Page Cards Dark Mode */
+[data-theme="dark"] .safety-highlight-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+/* Membership Plan Cards Dark Mode */
+[data-theme="dark"] .membership-cards-grid .dash-card {
+  background-color: #161F30;
+  border-color: #2D3748;
+}
+
+/* Contact Info Cards Dark Mode */
+[data-theme="dark"] .contact-info-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   Content Presentation Kit — dark surfaces
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .feature-card {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .feature-card:hover {
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .chip {
+  background-color: var(--bg-surface-soft);
+  border-color: #334155;
+  color: var(--text-body);
+}
+
+[data-theme="dark"] .media-figure {
+  background-color: var(--bg-surface-soft);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .media-figure figcaption {
+  background-color: var(--bg-surface-alt);
+  border-top-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .fact-strip {
+  background-color: var(--border-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .fact-strip > div,
+[data-theme="dark"] .fact-strip .fact-item {
+  background-color: var(--bg-surface);
+}
+
+[data-theme="dark"] .fact-strip > div:hover,
+[data-theme="dark"] .fact-strip .fact-item:hover {
+  background-color: var(--bg-surface-soft);
+}
+
+[data-theme="dark"] .fact-icon {
+  background-color: rgba(99, 140, 255, 0.18);
+  color: #9EC5FD;
+}
+
+[data-theme="dark"] .step-item {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .step-item:hover {
+  border-color: #60A5FA;
+}
+
+[data-theme="dark"] .step-badge {
+  background-color: rgba(99, 140, 255, 0.18);
+  color: #9EC5FD;
+}
+
+[data-theme="dark"] .editorial-media::before {
+  opacity: 0.75;
+}
+
+/* Section bands that are set through inline styles on the page keep their
+   token values, so only the standalone helpers need re-pairing here. */
+[data-theme="dark"] .info-band {
+  background-color: var(--bg-accent-section);
+}
+
+[data-theme="dark"] .zone-layout-card {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+}
+
+/* Membership plan cards */
+[data-theme="dark"] .plan-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .plan-card-featured {
+  border-color: #3B82F6;
+  box-shadow: 0 10px 28px -4px rgba(59, 130, 246, 0.25), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .plan-card-art-wrap {
+  border-bottom-color: var(--border-color);
+  background-color: var(--bg-surface-soft);
+}
+
+[data-theme="dark"] .plan-card-art {
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .plan-card-value {
+  background-color: var(--bg-surface-soft);
+  color: var(--text-body);
+}
+
+[data-theme="dark"] .data-table th.th-highlight {
+  background-color: #16305C;
+  color: #9EC5FD;
+}
+
+[data-theme="dark"] .theme-icon-purple { color: #C4B5FD; }
+[data-theme="dark"] .theme-icon-cyan { color: #67E8F9; }
+
+/* Saturated brand blue drops to ~2.8:1 on the dark card surfaces, so numeric
+   highlights and countdown digits get the lightened variant. */
+[data-theme="dark"] .cell-accent,
+[data-theme="dark"] .countdown-num {
+  color: #7FB0FF;
+}
+
+/* Home 2 Hero Section Dark Mode */
+[data-theme="dark"] .hero-alt-search {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+[data-theme="dark"] .home2-hero-frame {
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-color);
+}
+
+[data-theme="dark"] .home2-badge-float {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* Zone Matcher Dark Mode (Home 2) */
+[data-theme="dark"] .matcher-tab-btn {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .matcher-tab-btn.active {
+  background-color: var(--bg-surface);
+  border-color: #3B82F6;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .matcher-panel {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .matcher-badge-float {
+  background-color: rgba(15, 23, 42, 0.92);
+}
+
+[data-theme="dark"] .perk-card {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-color);
+}
+
+/* Standalone Auth & Status Pages Dark Mode */
+[data-theme="dark"] .auth-top-controls {
+  background-color: rgba(17, 24, 39, 0.88);
+  border-color: var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+
+

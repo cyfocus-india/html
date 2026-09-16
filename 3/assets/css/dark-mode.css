@@ -1,0 +1,250 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #fff2f2;
+  --ink-soft: #c9b7bd;
+  --paper: #1c1117;
+  --paper-deep: #281720;
+  --surface: #25161e;
+  --plum: #e7a1b6;
+  --plum-deep: #3f1429;
+  --rose: #ef8fae;
+  --blush: #633147;
+  --peach: #855044;
+  --sage: #a9bd9b;
+  --sage-soft: #263528;
+  --gold: #e0bd79;
+  --border: rgba(255, 237, 240, .14);
+  --shadow-sm: 0 12px 28px rgba(0,0,0,.22);
+  --shadow-lg: 0 28px 70px rgba(0,0,0,.38);
+}
+
+:root[data-theme="dark"] .site-header { background: rgba(28, 17, 23, .88); }
+:root[data-theme="dark"] .product-tag,
+:root[data-theme="dark"] .image-card-label,
+:root[data-theme="dark"] .shop-hero-photo figcaption,
+:root[data-theme="dark"] .page-hero-photo figcaption,
+:root[data-theme="dark"] .zone-label { background: rgba(37, 22, 30, .92); color: var(--ink); border-color: rgba(255, 237, 240, .16); box-shadow: 0 10px 28px rgba(0, 0, 0, .35); }
+:root[data-theme="dark"] .btn-primary { background: #b85574; color: #fff; }
+:root[data-theme="dark"] .btn-primary:hover { background: #d16d8c; }
+:root[data-theme="dark"] .product-art:not(.product-photo) { filter: saturate(.78) brightness(.72); }
+:root[data-theme="dark"] .product-art.product-photo img { filter: saturate(.88) brightness(.82); }
+:root[data-theme="dark"] .product-card:hover .product-art.product-photo img { filter: saturate(.96) brightness(.9); }
+:root[data-theme="dark"] .field input,
+:root[data-theme="dark"] .field select,
+:root[data-theme="dark"] .field textarea,
+:root[data-theme="dark"] .choice label { background: #1d1118; }
+:root[data-theme="dark"] .editorial-hero::after { background: linear-gradient(90deg, rgba(20,8,14,.82), rgba(20,8,14,.2) 72%); }
+
+:root[data-theme="dark"] .btn-header-signin { background: #b85574; color: #fff; }
+:root[data-theme="dark"] .btn-header-signin:hover { background: #d16d8c; }
+:root[data-theme="dark"] .dir-toggle { background: rgba(37, 22, 30, 0.6); }
+:root[data-theme="dark"] .dir-opt.is-active { background: #b85574; color: #fff; }
+:root[data-theme="dark"] .cart-count { background: #b85574; border-color: var(--paper); }
+:root[data-theme="dark"] .cart-drawer { background: var(--paper-deep); }
+:root[data-theme="dark"] .cart-header { background: rgba(37, 22, 30, 0.95); }
+:root[data-theme="dark"] .delivery-progress { background: var(--surface); }
+:root[data-theme="dark"] .cart-footer { background: var(--surface); }
+:root[data-theme="dark"] .cart-item { background: var(--surface); }
+:root[data-theme="dark"] .cart-item-thumb { background: var(--paper); }
+:root[data-theme="dark"] .qty-stepper { background: var(--paper); }
+:root[data-theme="dark"] .cart-note-details { background: var(--paper); }
+:root[data-theme="dark"] .cart-note-input { background: var(--surface); color: var(--ink); }
+:root[data-theme="dark"] .checkout-modal { background: var(--surface); }
+:root[data-theme="dark"] .checkout-order-preview { background: var(--paper); }
+:root[data-theme="dark"] .order-summary-box { background: var(--paper); }
+:root[data-theme="dark"] .nav-dropdown-menu { background: var(--surface); border-color: var(--border); }
+:root[data-theme="dark"] .nav-dropdown-item:hover,
+:root[data-theme="dark"] .nav-dropdown-item.is-current { background: var(--paper); color: var(--plum) !important; }
+:root[data-theme="dark"] .mobile-menu {
+  background: var(--surface);
+  border-color: var(--border);
+}
+:root[data-theme="dark"] .mobile-menu-backdrop {
+  background: rgba(10, 4, 8, 0.65);
+}
+:root[data-theme="dark"] .mobile-menu-links > a:hover,
+:root[data-theme="dark"] .mobile-dropdown-btn:hover,
+:root[data-theme="dark"] .mobile-menu-links > a[aria-current="page"] {
+  background: var(--paper);
+  color: var(--plum);
+}
+:root[data-theme="dark"] .mobile-dropdown-item:hover,
+:root[data-theme="dark"] .mobile-dropdown-item.is-current {
+  color: var(--plum) !important;
+  background: var(--paper);
+}
+:root[data-theme="dark"] .live-map-iframe {
+  filter: brightness(.78) invert(1) contrast(2.2) hue-rotate(200deg) saturate(.4) brightness(.9);
+}
+:root[data-theme="dark"] .map-zone-pill {
+  background: rgba(37, 22, 30, 0.92);
+  color: #efb5c5;
+  border-color: var(--border);
+}
+:root[data-theme="dark"] .map-zone-pill:hover,
+:root[data-theme="dark"] .map-zone-pill.is-active {
+  background: #b85574;
+  color: #ffffff;
+}
+:root[data-theme="dark"] .occasion-card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+:root[data-theme="dark"] .service-card,
+:root[data-theme="dark"] .quote-card,
+:root[data-theme="dark"] .step-card,
+:root[data-theme="dark"] .form-card,
+:root[data-theme="dark"] .auth-card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+:root[data-theme="dark"] .service-card:hover {
+  background: var(--paper-deep);
+}
+:root[data-theme="dark"] .cta-panel {
+  background: linear-gradient(135deg, #381a27, #2c1622 60%, #3d232a);
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .cta-panel h2,
+:root[data-theme="dark"] .cta-panel .eyebrow {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .filter-btn {
+  background: var(--surface);
+  color: var(--ink-soft);
+  border-color: var(--border);
+}
+:root[data-theme="dark"] .filter-btn:hover,
+:root[data-theme="dark"] .filter-btn.is-active {
+  background: #b85574;
+  color: #ffffff;
+  border-color: #b85574;
+}
+:root[data-theme="dark"] .order-ref-badge {
+  background: var(--blush);
+  color: #ffffff;
+}
+:root[data-theme="dark"] .form-success {
+  background: var(--sage-soft);
+  color: #c9e4c5;
+}
+:root[data-theme="dark"] .service-icon {
+  background: rgba(184, 85, 116, 0.22);
+  color: var(--plum);
+}
+
+/* Toast visibility in dark mode */
+:root[data-theme="dark"] .toast {
+  background: #4a2035;
+  color: #fff2f2;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .45);
+}
+
+/* Add-to-cart button contrast fix */
+:root[data-theme="dark"] .add-cart {
+  background: #b85574;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(184, 85, 116, 0.3);
+}
+:root[data-theme="dark"] .add-cart:hover {
+  background: #d16d8c;
+  box-shadow: 0 4px 14px rgba(184, 85, 116, 0.45);
+}
+
+/* Progress bar track visibility */
+:root[data-theme="dark"] .progress-bar-track {
+  background: rgba(231, 161, 182, 0.18);
+}
+
+/* Delivery banner dark mode */
+:root[data-theme="dark"] .delivery-banner {
+  background: #2a1220;
+  border: 1px solid var(--border);
+}
+:root[data-theme="dark"] .delivery-banner p {
+  color: rgba(255, 242, 242, 0.88);
+}
+:root[data-theme="dark"] .delivery-banner .btn-light {
+  background: rgba(255, 250, 245, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+:root[data-theme="dark"] .delivery-banner .btn-light:hover {
+  background: rgba(255, 250, 245, 0.2);
+}
+
+/* Auth page gradient fix */
+:root[data-theme="dark"] .auth-page {
+  background: radial-gradient(circle at 14% 18%, rgba(184, 85, 116, .15), transparent 28%),
+              radial-gradient(circle at 85% 72%, rgba(169, 189, 155, .12), transparent 28%),
+              var(--paper-deep);
+}
+
+/* Occasion card decorative circles in dark */
+:root[data-theme="dark"] .occasion-card::before {
+  opacity: .3;
+}
+
+/* Stat card border in dark */
+:root[data-theme="dark"] .stat-card {
+  border-color: var(--border);
+}
+
+/* FAQ button in dark mode */
+:root[data-theme="dark"] .faq-button strong {
+  color: var(--ink);
+}
+
+/* Hero vertical in dark mode */
+:root[data-theme="dark"] .hero-vertical {
+  color: var(--plum);
+  opacity: .9;
+}
+
+/* Error code in dark mode */
+:root[data-theme="dark"] .error-code {
+  color: rgba(231, 161, 182, 0.16);
+}
+
+/* Choice label checked state */
+:root[data-theme="dark"] .choice input:checked + label {
+  background: rgba(184, 85, 116, .18);
+  border-color: #b85574;
+  color: var(--ink);
+}
+
+/* Studio Experiences in dark mode */
+:root[data-theme="dark"] .experience-perks {
+  background: rgba(28, 17, 24, 0.85);
+  border-color: rgba(255, 237, 240, 0.12);
+}
+:root[data-theme="dark"] .experience-badge {
+  background: rgba(45, 25, 36, 0.9);
+  color: var(--rose);
+  border-color: rgba(255, 237, 240, 0.15);
+}
+:root[data-theme="dark"] .experience-badge.badge-consult {
+  background: rgba(75, 30, 50, 0.9);
+  color: #f3b7c8;
+  border-color: rgba(207, 104, 136, 0.4);
+}
+:root[data-theme="dark"] .experience-time {
+  color: #c4aab4;
+}
+:root[data-theme="dark"] .experience-time svg,
+:root[data-theme="dark"] .experience-time i {
+  color: var(--rose);
+}
+:root[data-theme="dark"] .perk-label {
+  color: #d8b8c4;
+}
+:root[data-theme="dark"] .perk-label svg,
+:root[data-theme="dark"] .perk-label i {
+  color: var(--rose);
+}
+:root[data-theme="dark"] .studio-amenities-strip {
+  background: var(--surface);
+  border-color: var(--border);
+}
+

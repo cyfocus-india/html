@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up | Oven &amp; Bloom</title>
+    <meta
+      name="description"
+      content="Create an account with Oven &amp; Bloom bakery to save custom cake briefs, delivery addresses and order history."
+    />
+    <meta name="robots" content="noindex" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist:wght@400;500;600;700&display=swap"
+    />
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <aside class="auth-art">
+        <img
+          src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"
+          width="1200"
+          height="1600"
+          alt="Fresh fruit dessert in the bakery"
+        />
+        <div class="auth-art__copy">
+          <h2>Your next favourite<br />is worth remembering.</h2>
+        </div>
+      </aside>
+      <section class="auth-panel">
+        <form class="auth-form" action="#" data-validate novalidate>
+          <div class="auth-panel__top">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"><i class="ph ph-cake"></i></span
+              ><span>Oven &amp; Bloom</span></a
+            >
+            <div class="page-actions">
+              <button
+                class="icon-btn"
+                type="button"
+                data-direction-toggle
+                aria-label="Switch to Right-to-Left layout (RTL)"
+                aria-pressed="false"
+              >
+                <span class="dir-badge" aria-hidden="true">RTL</span>
+              </button>
+              <button
+                class="icon-btn"
+                type="button"
+                data-theme-toggle
+                aria-label="Use dark theme"
+                aria-pressed="false"
+              >
+                <i class="ph ph-moon" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <span class="eyebrow">Join the table</span>
+          <h1>Create an account.</h1>
+          <p class="lead">
+            Demo registration form. Connect your authentication provider before
+            production.
+          </p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="signup-name">Your name</label
+              ><input
+                id="signup-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              /><span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="signup-email">Email address</label
+              ><input
+                id="signup-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              /><span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="signup-password">Create a password</label
+              ><input
+                id="signup-password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              /><span class="field-error"></span>
+            </div>
+            <button class="btn btn--primary" type="submit">
+              Create account
+            </button>
+            <p class="form-status">
+              Demo validation complete. Connect an authentication service to
+              register.
+            </p>
+          </div>
+          <p style="margin-top: 2rem">
+            Already a member?
+            <a class="text-link" href="signin.html"
+              >Sign in <i class="ph ph-arrow-right"></i
+            ></a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

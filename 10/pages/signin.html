@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Sign in to the Elevate Learning HR manager portal.">
+    <title>Sign In | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-story">
+        <a class="brand" href="../index.html"
+          ><span class="brand-mark"><i data-lucide="book-open-check"></i></span
+          ><span
+            ><b>Elevate Learning</b
+            ><small>Corporate Training Center</small></span
+          ></a
+        >
+        <div class="auth-story-copy reveal">
+          <p class="eyebrow"><span></span> HR manager portal</p>
+          <h1>Welcome back.</h1>
+          <p>
+            Manage training programs, enroll employees and track every learner’s
+            progress in one calm workspace.
+          </p>
+          <ul class="auth-benefits">
+            <li><i data-lucide="users"></i> Manage enrollments and batches</li>
+            <li>
+              <i data-lucide="chart-no-axes-combined"></i> Track attendance and
+              progress
+            </li>
+            <li>
+              <i data-lucide="award"></i> Generate completion certificates
+            </li>
+            <li>
+              <i data-lucide="calendar-days"></i> View schedules and seat
+              availability
+            </li>
+          </ul>
+        </div>
+        <div class="auth-quote">
+          <p>“A clear view of capability—without the spreadsheet chase.”</p>
+        </div>
+      </section>
+      <section class="auth-content">
+        <div class="auth-top-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span>
+          </button>
+        </div>
+        <div class="auth-card glass reveal">
+          <span class="program-icon blue"
+            ><i data-lucide="shield-check"></i
+          ></span>
+          <h2>Sign In</h2>
+          <p>Enter your work credentials to continue.</p>
+          <form
+            class="auth-form"
+            data-validate
+            data-success-target="dashboard.html"
+            novalidate
+          >
+            <div class="field">
+              <label for="email">Work email</label>
+              <div class="input-wrap">
+                <i data-lucide="mail"></i
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                  aria-describedby="email-error">
+              </div>
+              <span class="error" id="email-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="input-wrap">
+                <i data-lucide="lock-keyhole"></i
+                ><input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter your password"
+                  data-minlength="8"
+                  required
+                  aria-describedby="password-error"><button
+                  class="password-toggle"
+                  type="button"
+                  data-password-toggle="#password"
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+              <span class="error" id="password-error" role="alert"></span>
+            </div>
+            <div class="form-meta">
+              <label class="check-label"
+                ><input type="checkbox"> Remember me</label
+              ><a href="forgot-password.html">Forgot password?</a>
+            </div>
+            <button class="button" type="submit">
+              Sign in securely <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+          <p class="auth-switch">
+            New to the portal? <a href="signup.html">Create an account</a>
+          </p>
+          <div class="auth-card-footer">
+            Demo: any valid work email and 8-character password.
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/forms.js"></script>
+  </body>
+</html>

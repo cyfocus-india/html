@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Create a SolarNest customer account.">
+  <title>Create Account — SolarNest</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body data-page="signup">
+  <div class="standalone-layout">
+    <div class="standalone-nav">
+      <a class="btn btn-sm btn-outline" href="../index.html"><i data-lucide="arrow-left"></i> Back to Home</a>
+      <div class="standalone-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme"><i data-lucide="moon"></i></button>
+        <button class="icon-button rtl-toggle" type="button" data-rtl-toggle aria-label="Toggle right-to-left layout" title="Toggle RTL layout"><span class="rtl-label">RTL</span></button>
+      </div>
+    </div>
+    <main id="main-content" class="standalone-body">
+      <section class="card auth-shell reveal">
+        <a class="brand" href="../index.html" aria-label="SolarNest home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="brand-svg" width="38" height="38" fill="none">
+              <defs>
+                <linearGradient id="sn-sun-su" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFBD22"/><stop offset="100%" stop-color="#FF7A00"/></linearGradient>
+                <linearGradient id="sn-panel-su" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E78C2"/><stop offset="100%" stop-color="#0E4273"/></linearGradient>
+                <linearGradient id="sn-leaf-su" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#55D85C"/><stop offset="100%" stop-color="#248A3D"/></linearGradient>
+              </defs>
+              <circle cx="22" cy="15" r="7.5" fill="url(#sn-sun-su)"/>
+              <g stroke="#FFBD22" stroke-width="1.8" stroke-linecap="round" opacity="0.9">
+                <line x1="22" y1="3" x2="22" y2="6"/><line x1="22" y1="24" x2="22" y2="26"/><line x1="10" y1="15" x2="13" y2="15"/><line x1="31" y1="15" x2="34" y2="15"/>
+              </g>
+              <path d="M7 35 L22 21 L37 35 L31 36 L22 26 L13 36 Z" fill="url(#sn-panel-su)"/>
+              <path d="M15 29 L29 29 M18 25 L26 25 M22 22 L22 33" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+              <path d="M5 36 C 10 40, 17 41.5, 24 39.5 C 32 37.5, 37 30, 39 23 C 39 29, 34 38, 25 41 C 17 42.5, 9 40.5, 5 36 Z" fill="url(#sn-leaf-su)"/>
+            </svg>
+          </span>
+          <span class="brand-text-wrap"><span class="brand-name" dir="ltr"><span class="solar">Solar</span><span class="nest">Nest</span></span><small class="brand-tagline">Clean Energy, Bright Future</small></span>
+        </a>
+        <h1>Create your account</h1>
+        <p>Keep your quote, installation milestones and support in one place.</p>
+        <div class="form-success" role="status">Your demonstration account has been created.</div>
+        <form class="validated-form" novalidate>
+          <div class="field">
+            <label for="signup-name">Full name</label>
+            <input id="signup-name" name="name" autocomplete="name" required placeholder="Your name">
+            <div class="field-error"></div>
+          </div>
+          <div class="field">
+            <label for="signup-email">Email address</label>
+            <input id="signup-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+            <div class="field-error"></div>
+          </div>
+          <div class="field">
+            <label for="signup-phone">Phone number</label>
+            <input id="signup-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91 98765 43210">
+            <div class="field-error"></div>
+          </div>
+          <div class="field">
+            <label for="signup-password">Create password</label>
+            <input id="signup-password" name="password" type="password" minlength="8" autocomplete="new-password" required placeholder="At least 8 characters">
+            <div class="field-error"></div>
+          </div>
+          <button class="btn" type="submit" style="width:100%">Create Account <i data-lucide="user-plus"></i></button>
+          <p class="center muted" style="margin-top:18px">Already have an account? <a class="kicker" href="signin.html">Sign in</a></p>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

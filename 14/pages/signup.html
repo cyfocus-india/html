@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create your MoveMate customer account to schedule shifting, track moves in real-time, and manage invoices.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Sign Up — MoveMate</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css?v=39">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=39">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=39">
+</head>
+<body class="auth-body">
+  <a class="skip-link" href="#main-content">Skip to account creation form</a>
+  <header class="standalone-topbar auth-topbar">
+    <a class="brand" href="../index.html" aria-label="MoveMate Home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#075fd7"/><path d="M15 28 32 14l17 14v21H15Z" fill="#fff"/><path d="M10 36h33v12H10zM43 39h9l4 5v4H43z" fill="#78b9ff" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="50" r="5" fill="#062344" stroke="#fff" stroke-width="2"/><circle cx="48" cy="50" r="5" fill="#062344" stroke="#fff" stroke-width="2"/><path d="M28 49V31h8v18" fill="none" stroke="#075fd7" stroke-width="2.5"/></svg>
+      </span>
+      <span class="brand-type"><strong>MoveMate</strong><small>We Move With Care</small></span>
+    </a>
+    <div class="standalone-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button class="icon-btn rtl-toggle" type="button" aria-label="Switch to right-to-left layout (RTL)" title="Switch to right-to-left layout (RTL)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16m0 0-4-4m4 4-4 4M20 16H4m0 0 4-4m-4 4 4 4"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="auth-shell" id="main-content">
+    <section class="auth-art">
+      <div class="auth-art-content">
+        <h1>One Account. A Calmer, Safer Move.</h1>
+        <p>Save pickup locations, confirm verified crews and receive live SMS and dashboard updates from packing to unpacking.</p>
+        <picture>
+          <source srcset="../assets/images/photo-hero-how-it-works.webp" type="image/webp">
+          <img src="../assets/images/photo-hero-how-it-works.jpg" alt="MoveMate truck loaded and ready for relocation" width="1672" height="940">
+        </picture>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-top-bar">
+          <a class="link-arrow" href="../index.html" style="margin-bottom:0">
+            <span>←</span>
+            <span>Back to Home</span>
+          </a>
+        </div>
+        <span class="eyebrow">Quick Registration</span>
+        <h2>Create Your Account</h2>
+        <p>Your personalized MoveMate moving dashboard will be ready in seconds.</p>
+
+        <form data-auth-form="signup" novalidate>
+          <div class="field-grid">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" autocomplete="given-name" placeholder="Rahul" required minlength="2">
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" autocomplete="family-name" placeholder="Sharma" required minlength="2">
+              <span class="error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="signupEmail">Email Address</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="rahul@example.com" required>
+            </div>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="signupPhone">Phone Number</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.04 9.72a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92Z"/></svg>
+              <input id="signupPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" pattern="[0-9+() -]{10,}" required>
+            </div>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="signupPassword">Create Password</label>
+            <div class="password-input-wrap">
+              <input id="signupPassword" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required>
+              <button class="password-toggle-btn" type="button" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.86rem;cursor:pointer">
+            <input type="checkbox" required style="width:17px;height:17px;margin-top:2px;accent-color:var(--brand-ink)">
+            <span>I agree to MoveMate’s <a class="text-brand" href="terms.html"><strong>Terms of Service</strong></a> and <a class="text-brand" href="privacy.html"><strong>Privacy Policy</strong></a>.</span>
+          </label>
+
+          <button class="btn btn-primary full btn-lg" type="submit" style="margin-top:8px">
+            <span>Create Account &amp; Proceed</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account?
+          <a class="text-brand" href="signin.html"><strong>Sign in here</strong></a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/main.js?v=39"></script>
+  <script src="../assets/js/dashboard.js?v=23"></script>
+</body>
+</html>

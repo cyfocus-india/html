@@ -1,0 +1,22 @@
+NORTHSTAR TUTORING — FOR SCHOOL STUDENTS
+Mathematics — Quadratic Equations
+Class 10 | Tutor: Rohit Verma | 10 September 2026
+
+A quadratic equation has the form ax^2 + bx + c = 0, where a is not zero.
+The quadratic formula is x = (-b ± sqrt(b^2 - 4ac)) / (2a).
+The discriminant D = b^2 - 4ac tells us about real roots:
+D > 0: two distinct real roots; D = 0: repeated real root; D < 0: no real roots.
+
+Worked example: x^2 - 5x + 6 = 0
+Factor: (x - 2)(x - 3) = 0, so x = 2 or x = 3.
+
+Practice:
+1. Solve x^2 - 7x + 12 = 0.
+2. Solve 2x^2 - 8x = 0.
+3. Find the discriminant of x^2 + 4x + 4 = 0.
+4. A rectangle has width x and length x + 3. Its area is 40. Find x.
+
+Answers: 1. 3, 4. 2. 0, 4. 3. 0. 4. x = 5 (reject -8 as a length).
+Tip: Substitute each solution back into the original equation.
+
+Original sample learning material. For template demonstration.

@@ -1,0 +1,120 @@
+[dir="rtl"] body { text-align: right; }
+[dir="rtl"] .page-hero.scene-sprite::after { background: linear-gradient(270deg, rgba(255,250,248,.98) 0%, rgba(255,250,248,.82) 46%, transparent 70%); }
+[dir="rtl"] .hero-home { background-image: linear-gradient(270deg, #fff8f6 0%, rgba(255,248,246,0.98) 42%, rgba(255,248,246,0.88) 56%, rgba(255,248,246,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png')); background-position: left center; }
+[dir="rtl"] .main-nav, [dir="rtl"] .nav-actions, [dir="rtl"] .hero-actions,
+[dir="rtl"] .social-proof, [dir="rtl"] .newsletter-copy, [dir="rtl"] .bundle-hero-details,
+[dir="rtl"] .contact-method, [dir="rtl"] .footer-contact p { direction: rtl; }
+[dir="rtl"] .text-link svg, [dir="rtl"] .btn svg[data-lucide="arrow-right"], [dir="rtl"] .routine-step:not(:last-child)::after { transform: scaleX(-1); }
+[dir="rtl"] .ingredient-list::before { left: auto; right: 0; }
+[dir="rtl"] .ingredient-item::before { left: auto; right: -38px; }
+[dir="rtl"] .filter-sidebar { padding-inline-end: 0; padding-inline-start: 28px; border-inline-end: 0; border-inline-start: 1px solid var(--line); }
+[dir="rtl"] .card-cart { right: auto; left: 10px; }
+[dir="rtl"] .badge { left: auto; right: 10px; }
+[dir="rtl"] .save-badge { left: auto; right: 14px; }
+[dir="rtl"] .modal-close, [dir="rtl"] .password-toggle { right: auto; left: 16px; }
+[dir="rtl"] .password-wrap input { padding-inline-end: 14px; padding-inline-start: 48px; }
+[dir="rtl"] .back-to-top { right: auto; left: 22px; }
+[dir="rtl"] .result-row, [dir="rtl"] .quiz-option, [dir="rtl"] .faq-question { text-align: right; }
+[dir="rtl"] .drawer { right: auto; left: 0; transform: translateX(-105%); }
+[dir="rtl"] .drawer.open { transform: translateX(0) !important; }
+[dir="rtl"] .mobile-drawer-nav { left: auto; right: 0; transform: translateX(105%); }
+[dir="rtl"] .mobile-drawer-nav.open { transform: translateX(0) !important; }
+[dir="rtl"] .mobile-nav-header { direction: rtl; }
+[dir="rtl"] .mobile-group-title { text-align: right; }
+[dir="rtl"] .mobile-nav-links a { direction: rtl; text-align: right; }
+[dir="rtl"] .cart-count { right: auto; left: 1px; }
+[dir="rtl"] .search-result-card svg { transform: scaleX(-1); }
+[dir="rtl"] .dropdown-menu { left: auto; right: 50%; transform: translateX(50%) translateY(10px) scale(0.97); }
+[dir="rtl"] .nav-item.has-dropdown:hover .dropdown-menu, [dir="rtl"] .nav-item.has-dropdown:focus-within .dropdown-menu { transform: translateX(50%) translateY(0) scale(1); }
+[dir="rtl"] .dropdown-link { text-align: right; }
+[dir="rtl"] .header-signin-btn { margin-inline-start: 4px; }
+[dir="rtl"] .checkout-section-heading, [dir="rtl"] .payment-option, [dir="rtl"] .order-details-card { text-align: right; }
+[dir="rtl"] .checkout-items-preview { padding-inline-end: 0; padding-inline-start: 4px; }
+[dir="rtl"] .reset-step-pill { left: auto; right: 18px; }
+[dir="rtl"] .lounge-card-badge { right: auto; left: 26px; }
+[dir="rtl"][data-theme="dark"] .hero-home { background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.98) 42%, rgba(23,19,17,0.88) 56%, rgba(23,19,17,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png')); background-position: left center; }
+[dir="rtl"][data-theme="dark"] .hero-home-alt { background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.98) 42%, rgba(23,19,17,0.88) 56%, rgba(23,19,17,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png')); background-position: center left; }
+[dir="rtl"][data-theme="dark"] .page-hero.scene-sprite::after { background: linear-gradient(270deg, rgba(23,19,17,.98) 0%, rgba(23,19,17,.82) 46%, transparent 72%); }
+
+@media (max-width: 1100px) {
+  [dir="rtl"] .hero-home {
+    background-position: 5% center;
+    background-image: linear-gradient(270deg, #fff8f6 0%, rgba(255,248,246,0.98) 46%, rgba(255,248,246,0.90) 60%, rgba(255,248,246,0.28) 80%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"] .hero-home-alt {
+    background-position: 5% center;
+    background-image: linear-gradient(270deg, #fff8f6 0%, rgba(255,248,246,0.98) 46%, rgba(255,248,246,0.90) 60%, rgba(255,248,246,0.28) 80%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home {
+    background-position: 5% center;
+    background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.98) 46%, rgba(23,19,17,0.90) 60%, rgba(23,19,17,0.28) 80%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home-alt {
+    background-position: 5% center;
+    background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.98) 46%, rgba(23,19,17,0.90) 60%, rgba(23,19,17,0.28) 80%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+}
+
+@media (max-width: 860px) {
+  [dir="rtl"] .hero-home {
+    background-position: 0% center;
+    background-image: linear-gradient(270deg, #fff8f6 0%, rgba(255,248,246,0.99) 52%, rgba(255,248,246,0.92) 66%, rgba(255,248,246,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"] .hero-home-alt {
+    background-position: 0% center;
+    background-image: linear-gradient(270deg, #fff8f6 0%, rgba(255,248,246,0.99) 52%, rgba(255,248,246,0.92) 66%, rgba(255,248,246,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home {
+    background-position: 0% center;
+    background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.99) 52%, rgba(23,19,17,0.92) 66%, rgba(23,19,17,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home-alt {
+    background-position: 0% center;
+    background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.99) 52%, rgba(23,19,17,0.92) 66%, rgba(23,19,17,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+  [dir="rtl"] .filter-sidebar { left: auto; right: 0; transform: translateX(105%); }
+  [dir="rtl"] .filter-sidebar.open { transform: translateX(0); }
+}
+
+@media (max-width: 639px) {
+  [dir="rtl"] .hero-home {
+    background-position: 30% 8px; background-size: 85% auto; background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, #fff8f6 0%, rgba(255,248,246,0.99) 58%, rgba(255,248,246,0.92) 72%, rgba(255,248,246,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"] .hero-home-alt {
+    background-position: 35% 8px; background-size: cover; background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, #fff8f6 0%, rgba(255,248,246,0.99) 58%, rgba(255,248,246,0.92) 72%, rgba(255,248,246,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+  [dir="rtl"] .page-hero.scene-sprite::after { background: linear-gradient(0deg, rgba(255,250,248,.98) 0%, rgba(255,250,248,.85) 50%, transparent 82%); }
+  [dir="rtl"] .ingredient-item::before { right: -24px; }
+  [dir="rtl"][data-theme="dark"] .hero-home {
+    background-position: 30% 8px; background-size: 85% auto; background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, #171311 0%, rgba(23,19,17,0.99) 58%, rgba(23,19,17,0.92) 72%, rgba(23,19,17,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home-alt {
+    background-position: 35% 8px; background-size: cover; background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, #171311 0%, rgba(23,19,17,0.99) 58%, rgba(23,19,17,0.92) 72%, rgba(23,19,17,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+  [dir="rtl"][data-theme="dark"] .page-hero.scene-sprite::after { background: linear-gradient(0deg, rgba(23,19,17,.98) 0%, rgba(23,19,17,.84) 50%, transparent 82%); }
+}
+[dir="rtl"] .timeline-header { background: linear-gradient(to left, rgba(255, 245, 242, 0.6), rgba(255, 255, 255, 0.6)); }
+[dir="rtl"][data-theme="dark"] .timeline-header { background: linear-gradient(to left, rgba(46, 29, 27, 0.7), rgba(30, 23, 22, 0.7)); }
+[dir="rtl"] .timeline-panel { text-align: right; }
+[dir="rtl"] .panel-dermatologist-card { text-align: right; }
+[dir="rtl"] .quiz-copy { text-align: right; }
+[dir="rtl"] .quiz-feature-info { text-align: right; }
+
+/* 5 New Unique Sections RTL */
+[dir="rtl"] .synergy-card { text-align: right; }
+[dir="rtl"] .depth-card { text-align: right; }
+[dir="rtl"] .science-pill { text-align: right; }
+[dir="rtl"] .never-card { text-align: right; }
+[dir="rtl"] .never-items-list li { border-inline-start: 3px solid var(--coral); border-inline-end: 0; padding-inline-start: 14px; padding-inline-end: 0; }
+[dir="rtl"] .season-info-col { text-align: right; }
+[dir="rtl"] .season-hero-product-card { text-align: right; }
+[dir="rtl"] .season-metric-item { text-align: right; }
+[dir="rtl"] .barrier-assessment-box { text-align: right; }
+[dir="rtl"] .barrier-check-item { text-align: right; }
+[dir="rtl"] .sos-protocol-head { text-align: right; }
+[dir="rtl"] .sos-step-card { text-align: right; }
+[dir="rtl"] .sos-rules-box span { text-align: right; }

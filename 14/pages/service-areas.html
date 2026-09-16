@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoveMate serves homes and commercial clients across 1,000+ Indian cities and towns with seamless local and intercity connectivity.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Service Areas — MoveMate</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../assets/css/style.css?v=39">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=39">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=39">
+</head>
+<body>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Nationwide Network</span>
+          <h1>Moving You Everywhere Across India</h1>
+          <p class="hero-lead">From metro cities to tier-2 hubs and growing towns, our logistics network delivers safe, door-to-door relocation across every major Indian region.</p>
+          <div class="feature-quads">
+            <div class="feature-quad">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              </span>
+              <span><strong>Pan-India</strong><small>1,000+ Cities</small></span>
+            </div>
+            <div class="feature-quad">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span><strong>Verified Crews</strong><small>Direct network</small></span>
+            </div>
+            <div class="feature-quad">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </span>
+              <span><strong>Daily Routes</strong><small>Scheduled transit</small></span>
+            </div>
+            <div class="feature-quad">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.04 9.72a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92Z"/></svg>
+              </span>
+              <span><strong>24/7 Support</strong><small>Live tracking</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <picture>
+            <source srcset="../assets/images/photo-hero-service-areas.webp" type="image/webp">
+            <img src="../assets/images/photo-hero-service-areas.jpg" alt="A MoveMate long-distance container truck on an intercity highway route at sunrise" width="1500" height="1000" fetchpriority="high">
+          </picture>
+          <span class="hero-media-tag">40 hubs • 1,000+ cities served</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Map and City Browser -->
+    <section class="section-tight">
+      <div class="container coverage-layout reveal">
+        <div class="coverage-map">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+            <div>
+              <span class="eyebrow" style="margin-bottom:2px">Live GPS Fleet Network</span>
+              <h2 style="font-size:1.35rem;margin:0">Interactive Coverage Map</h2>
+            </div>
+            <span class="paid-pill" style="font-size:0.75rem">14 Regional Hubs Active</span>
+          </div>
+          <p style="font-size:0.88rem;margin:6px 0 10px;color:var(--text)">Click any hub marker or route below to inspect real-time fleet density, direct dispatch lines and local coverage radius.</p>
+          
+          <div class="map-toolbar">
+            <div class="tabs" style="margin:0;padding:0;border:0;gap:4px">
+              <button class="tab-btn active" type="button" data-map-filter="all" style="padding:4px 10px;font-size:0.78rem">All India</button>
+              <button class="tab-btn" type="button" data-map-filter="north" style="padding:4px 10px;font-size:0.78rem">North</button>
+              <button class="tab-btn" type="button" data-map-filter="west" style="padding:4px 10px;font-size:0.78rem">West</button>
+              <button class="tab-btn" type="button" data-map-filter="south" style="padding:4px 10px;font-size:0.78rem">South</button>
+              <button class="tab-btn" type="button" data-map-filter="east" style="padding:4px 10px;font-size:0.78rem">East</button>
+            </div>
+            <button class="btn btn-ghost btn-sm" data-map-reset type="button" style="padding:4px 10px;font-size:0.78rem">Reset View</button>
+          </div>
+
+          <!-- Live Leaflet Canvas -->
+          <div id="serviceAreaLiveMap" aria-label="Interactive Pan-India relocation coverage map"></div>
+
+          <div class="map-badge">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </span>
+            <span><strong>1,000+ Cities &amp; Towns</strong><br><small>Direct door-to-door network</small></span>
+          </div>
+        </div>
+
+        <div class="cities-panel">
+          <span class="eyebrow" style="margin-bottom:2px">City Directory</span>
+          <h3>Top Cities &amp; Regions We Serve</h3>
+          <p style="font-size:0.86rem;color:var(--text);margin-top:4px">Click any city name to fly the live map directly to that regional hub.</p>
+          
+          <!-- Live Instant Search Bar -->
+          <div class="city-search-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="citySearchInput" type="search" placeholder="Search any city (e.g. Bengaluru, Pune, Delhi)..." aria-label="Search city name">
+          </div>
+
+          <!-- Regional Tabs -->
+          <div class="tabs" role="tablist" aria-label="Filter cities by region">
+            <button class="tab-btn active" type="button" data-region="all">All Cities</button>
+            <button class="tab-btn" type="button" data-region="north">North India</button>
+            <button class="tab-btn" type="button" data-region="west">West India</button>
+            <button class="tab-btn" type="button" data-region="south">South India</button>
+            <button class="tab-btn" type="button" data-region="east">East India</button>
+          </div>
+
+          <!-- City List Columns -->
+          <div class="city-columns">
+            <ul data-city-region="north">
+              <li>Delhi NCR</li>
+              <li>Gurugram</li>
+              <li>Noida / Greater Noida</li>
+              <li>Ghaziabad</li>
+              <li>Faridabad</li>
+              <li>Chandigarh</li>
+              <li>Jaipur</li>
+              <li>Lucknow</li>
+              <li>Dehradun</li>
+              <li>Agra</li>
+            </ul>
+            <ul data-city-region="west">
+              <li>Mumbai</li>
+              <li>Pune</li>
+              <li>Thane</li>
+              <li>Navi Mumbai</li>
+              <li>Nagpur</li>
+              <li>Nashik</li>
+              <li>Ahmedabad</li>
+              <li>Surat</li>
+              <li>Vadodara</li>
+              <li>Goa</li>
+            </ul>
+            <ul data-city-region="south">
+              <li>Bengaluru</li>
+              <li>Hyderabad</li>
+              <li>Chennai</li>
+              <li>Coimbatore</li>
+              <li>Kochi</li>
+              <li>Madurai</li>
+              <li>Vijayawada</li>
+              <li>Visakhapatnam</li>
+              <li>Thiruvananthapuram</li>
+              <li>Mysuru</li>
+            </ul>
+            <ul data-city-region="east">
+              <li>Kolkata</li>
+              <li>Siliguri</li>
+              <li>Patna</li>
+              <li>Ranchi</li>
+              <li>Bhubaneswar</li>
+              <li>Guwahati</li>
+              <li>Agartala</li>
+              <li>Jamshedpur</li>
+              <li>Cuttack</li>
+              <li>Durgapur</li>
+            </ul>
+          </div>
+
+          <div class="city-help">
+            <div>
+              <strong>Can’t find your city or pincode?</strong><br>
+              <small>We connect remote and tier-3 towns. Ask our relocation desk for custom route feasibility.</small>
+            </div>
+            <a class="btn btn-primary btn-sm" href="contact.html">
+              <span>Check Availability</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Unique Section 1: Hyperlocal Pincode Feasibility Engine & 4 Strategic Regional Super-Hubs -->
+    <section class="section pincode-feasibility-section" id="pincodeFeasibility" aria-labelledby="feasibilityTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Instant Service Verification</span>
+          <h2 id="feasibilityTitle">Check Service Availability in Your Pincode</h2>
+          <p>Enter any 6-digit Indian postal pincode or neighborhood name to inspect same-day crew availability, nearest regional dispatch super-hub, and standard transit turnaround.</p>
+        </div>
+
+        <!-- Interactive Feasibility Search Engine -->
+        <div class="feasibility-card reveal">
+          <div class="feasibility-search-header">
+            <label for="pincodeSearchInput" class="feasibility-search-label">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.4 7.4 11.7a1 1 0 0 0 1.2 0c.4-.3 7.4-6.3 7.4-11.7a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+              </span>
+              <span><strong>Enter Indian Pincode or Locality</strong><small>Instant real-time coverage &amp; dispatch SLA lookup</small></span>
+            </label>
+            <div class="feasibility-input-group">
+              <input id="pincodeSearchInput" type="text" maxlength="25" placeholder="E.g. 560038, 400050, 122002, Indiranagar, Bandra..." autocomplete="off">
+              <button class="btn btn-primary" id="pincodeSearchBtn" type="button">
+                <span>Check Pincode</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Select Metro Chips -->
+          <div class="metro-chips-row">
+            <span class="chips-label">Quick check top metros:</span>
+            <div class="chips-list">
+              <button class="metro-chip" type="button" data-pincode="560038" data-area="Bengaluru (Indiranagar / East)">Bengaluru (560038)</button>
+              <button class="metro-chip" type="button" data-pincode="400050" data-area="Mumbai (Bandra West / MMR)">Mumbai (400050)</button>
+              <button class="metro-chip" type="button" data-pincode="122002" data-area="Gurugram (Cyber City / NCR)">Gurugram (122002)</button>
+              <button class="metro-chip" type="button" data-pincode="500081" data-area="Hyderabad (HITEC City / West)">Hyderabad (500081)</button>
+              <button class="metro-chip" type="button" data-pincode="600028" data-area="Chennai (R.A. Puram / Central)">Chennai (600028)</button>
+              <button class="metro-chip" type="button" data-pincode="411001" data-area="Pune (Shivajinagar / Central)">Pune (411001)</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Display Box -->
+          <div class="feasibility-result-box" id="feasibilityResultBox" aria-live="polite">
+            <div class="result-status-bar">
+              <span class="result-badge success" id="resultBadge">✓ Direct MoveMate Service Hub Active</span>
+              <span class="result-zone" id="resultZone">South India Primary Zone</span>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <small>Serving Regional Hub</small>
+                <strong id="resultHub">South Tech-Corridor Super-Hub (Bengaluru)</strong>
+              </div>
+              <div class="result-item">
+                <small>Crew Dispatch SLA</small>
+                <strong id="resultDispatch">&lt; 2 Hours for Same-Day Inspection</strong>
+              </div>
+              <div class="result-item">
+                <small>Gated Society Clearance</small>
+                <strong id="resultTownship">Pre-Authorized for 150+ Societies</strong>
+              </div>
+              <div class="result-item">
+                <small>Transit Fleet Availability</small>
+                <strong id="resultFleet">14 ft, 19 ft &amp; 32 ft Containers Ready</strong>
+              </div>
+            </div>
+            <div class="result-action-bar">
+              <span class="result-note" id="resultNote">Free home video survey available in your area today.</span>
+              <a class="btn btn-primary btn-sm" id="resultBookBtn" href="pricing.html?pickup=Indiranagar%2C%20Bengaluru&amp;moveType=local#calculator" data-quote-origin="Indiranagar, Bengaluru">
+                <span>Book Move in This Area</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Strategic Regional Super-Hubs Grid -->
+        <div class="hubs-grid reveal">
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="hub-region-tag">North Region</span>
+              <h4>Gurugram / NCR Super-Hub</h4>
+            </div>
+            <p class="hub-location">Sector 18 / NH-48 Industrial Corridor, Gurugram, Haryana</p>
+            <div class="hub-specs">
+              <div class="hub-spec-row">
+                <span>Facility Size</span>
+                <strong>45,000 sq.ft</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Fleet Capacity</span>
+                <strong>85+ Linehaul Trucks</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Serving Radius</span>
+                <strong>Delhi, Noida, Jaipur, Chandigarh</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Buffer Storage</span>
+                <strong>Climate-Controlled Bay</strong>
+              </div>
+            </div>
+            <div class="hub-card-footer">
+              <a class="btn btn-outline btn-sm full" href="pricing.html?pickup=Gurugram%20%2F%20Delhi%20NCR&amp;moveType=intercity#calculator">
+                <span>Book Move from NCR</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="hub-region-tag">West Region</span>
+              <h4>Bhiwandi / Mumbai Gateway</h4>
+            </div>
+            <p class="hub-location">Mankoli Logistics Hub, Bhiwandi-Thane Link Road, Maharashtra</p>
+            <div class="hub-specs">
+              <div class="hub-spec-row">
+                <span>Facility Size</span>
+                <strong>60,000 sq.ft</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Fleet Capacity</span>
+                <strong>110+ Container Trucks</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Serving Radius</span>
+                <strong>MMR, Pune, Nashik, Goa, Surat</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Specialization</span>
+                <strong>24/7 Highway Express Line</strong>
+              </div>
+            </div>
+            <div class="hub-card-footer">
+              <a class="btn btn-outline btn-sm full" href="pricing.html?pickup=Mumbai%2C%20Maharashtra&amp;moveType=intercity#calculator">
+                <span>Book Move from Mumbai</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card featured">
+            <div class="hub-ribbon">★ Primary Command Hub</div>
+            <div class="hub-card-header">
+              <span class="hub-region-tag prime">South Region</span>
+              <h4>Hosur Road Tech Super-Hub</h4>
+            </div>
+            <p class="hub-location">Bommasandra Industrial Zone, Hosur Rd, Bengaluru, Karnataka</p>
+            <div class="hub-specs">
+              <div class="hub-spec-row">
+                <span>Facility Size</span>
+                <strong>55,000 sq.ft</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Fleet Capacity</span>
+                <strong>120+ Active GPS Fleet</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Serving Radius</span>
+                <strong>Bengaluru, Hyderabad, Chennai, Kochi</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Specialization</span>
+                <strong>Basement Sprinter &amp; Villa Fleet</strong>
+              </div>
+            </div>
+            <div class="hub-card-footer">
+              <a class="btn btn-primary btn-sm full" href="pricing.html?pickup=Bengaluru%2C%20Karnataka&amp;moveType=local#calculator">
+                <span>Book Move from Bengaluru</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="hub-region-tag">East Region</span>
+              <h4>Dankuni / Kolkata Depot</h4>
+            </div>
+            <p class="hub-location">Delhi Road Expressway Junction, Dankuni, West Bengal</p>
+            <div class="hub-specs">
+              <div class="hub-spec-row">
+                <span>Facility Size</span>
+                <strong>35,000 sq.ft</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Fleet Capacity</span>
+                <strong>45+ Heavy Carriers</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Serving Radius</span>
+                <strong>Kolkata, Bhubaneswar, Ranchi, Patna</strong>
+              </div>
+              <div class="hub-spec-row">
+                <span>Specialization</span>
+                <strong>Weatherproof Rail/Road Dock</strong>
+              </div>
+            </div>
+            <div class="hub-card-footer">
+              <a class="btn btn-outline btn-sm full" href="pricing.html?pickup=Kolkata%2C%20West%20Bengal&amp;moveType=intercity#calculator">
+                <span>Book Move from Kolkata</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Unique Section 2: High-Rise & Gated Society Relocation Protocols -->
+    <section class="section society-clearance-section" id="societyClearance" aria-labelledby="societyClearanceTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">High-Rise &amp; Township Standards</span>
+          <h2 id="societyClearanceTitle">Pre-Approved Protocols for 2,500+ Indian Gated Communities</h2>
+          <p>Moving into a high-rise or gated township in India comes with strict association bylaws. MoveMate handles society permissions, basement vehicle clearances, and service lift protection so you never face gate rejections.</p>
+        </div>
+
+        <!-- 4 Operational Pillars Grid -->
+        <div class="pillars-grid reveal">
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 17v-4h10v4M7 7h10"/></svg>
+            </div>
+            <span class="pillar-step-badge">Pillar 01</span>
+            <h3>Basement Low-Clearance Dispatch</h3>
+            <p>Most luxury high-rises ban surface truck parking. Our 14 ft City Sprinters are built with a sub-2.4m chassis that comfortably enters underground basement parking ramps, parking directly at your lift core.</p>
+            <ul class="pillar-bullet-list">
+              <li>Fits under 2.4m basement sprinkler pipes</li>
+              <li>Zero parking obstruction for society residents</li>
+              <li>Eliminates 200m long-distance carry across podiums</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M5 7l7-5 7 5M5 17l7 5 7-5"/></svg>
+            </div>
+            <span class="pillar-step-badge">Pillar 02</span>
+            <h3>Quilted Lift Armor &amp; Floor Runners</h3>
+            <p>Society management committees charge steep penalties for scratched elevators or damaged marble. We line service elevators with heavy quilted canvas blankets and lay neoprene floor runners in lobbies.</p>
+            <ul class="pillar-bullet-list">
+              <li>Protects elevator mirror &amp; stainless-steel panels</li>
+              <li>Heavy-duty runner mats prevent floor scuffs</li>
+              <li>Corner edge guards for corridor doorway frames</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <span class="pillar-step-badge">Pillar 03</span>
+            <h3>Digital Gate Pass &amp; App Integration</h3>
+            <p>No waiting at security gates. 24 hours before moving day, MoveMate automatically generates verified driver KYC, crew government IDs, and vehicle insurance documents directly for your society security gate.</p>
+            <ul class="pillar-bullet-list">
+              <li>Direct integration with MyGate, ADDA &amp; NoBrokerHood</li>
+              <li>Police-verified crew Aadhaar KYC pre-uploaded</li>
+              <li>Society move-in NOC verification handled</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="pillar-step-badge">Pillar 04</span>
+            <h3>Bylaw &amp; Silent-Shift Compliance</h3>
+            <p>Indian residential welfare associations enforce strict shifting windows. MoveMate synchronizes teams to operate strictly within permitted hours, minimizing noise and removing all empty cartons before leaving.</p>
+            <ul class="pillar-bullet-list">
+              <li>100% adherence to 10 AM – 6 PM shifting bylaws</li>
+              <li>Zero noisy power drilling during restricted quiet hours</li>
+              <li>Complete carton breakdown &amp; corridor sweep-clean</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Township Pre-Authorization Strip -->
+        <div class="townships-strip reveal">
+          <div class="townships-label">
+            <strong>Pre-Authorized Township Clearances:</strong>
+            <span>Active MoveMate clearances across premier developments</span>
+          </div>
+          <div class="township-badges">
+            <span class="township-badge">DLF Phase 5 &amp; CyberCity (NCR)</span>
+            <span class="township-badge">Prestige Shantiniketan &amp; Lakeside (BLR)</span>
+            <span class="township-badge">Hiranandani Estate &amp; Gardens (MMR)</span>
+            <span class="township-badge">Sobha Dream Acres &amp; City (BLR/NCR)</span>
+            <span class="township-badge">Godrej Properties (Pan-India)</span>
+            <span class="township-badge">Lodha Palava &amp; The Park (MMR)</span>
+            <span class="township-badge">My Home Bhooja &amp; Avatar (HYD)</span>
+            <span class="township-badge">Hiranandani Parks (CHN)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-tight">
+      <div class="container cta-panel reveal">
+        <div>
+          <span class="eyebrow">Local &amp; Long Distance</span>
+          <h2>We’re Closer Than You Think!</h2>
+          <p>No matter where your journey starts or ends, we are ready to move you with care.</p>
+        </div>
+        <button class="btn btn-primary quote-open" type="button">
+          <span>Get a Free Quote</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../assets/js/main.js?v=39"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Talk to a Glowé skin expert or request a personalized skincare consultation.">
+  <title>Contact — Glowé</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body data-page="contact" data-depth="1">
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="page-hero section-soft">
+      <div class="container"><div class="page-hero-copy" data-reveal="left"><span class="eyebrow"><i data-lucide="flower-2"></i> We’re here for your skin</span><h1>Contact</h1><p class="lead">Questions, product guidance or a personal routine — our skin experts would love to help.</p></div></div>
+    </section>
+    <section class="container section contact-grid" id="consultation">
+      <aside data-reveal="left"><span class="eyebrow">Contact Glowé</span><h2>Real guidance,<br>from real people.</h2><p class="lead">Tell us what your skin is navigating. We’ll respond within one business day.</p><div class="contact-methods"><div class="contact-method"><span class="round-icon"><i data-lucide="mail"></i></span><div><h3>Email us</h3><p>hello@glowe.com</p></div></div><div class="contact-method"><span class="round-icon"><i data-lucide="phone"></i></span><div><h3>Call us</h3><p>+91 98765 43210</p></div></div><div class="contact-method"><span class="round-icon"><i data-lucide="clock-3"></i></span><div><h3>Expert hours</h3><p>Mon – Sat | 10 AM – 6 PM</p></div></div></div><div class="standards-card"><span class="eyebrow">Good to know</span><h3>Consultations are complimentary.</h3><p class="muted">We’ll never pressure you into a long routine. Expect thoughtful, practical suggestions built around your preferences.</p></div></aside>
+      <div class="contact-card" data-reveal="right"><span class="eyebrow"><i data-lucide="messages-square"></i> Personalized consultation</span><h2>Tell us about your skin.</h2><form data-validate data-success="Thank you — a Glowé skin expert will reply within one business day." novalidate>
+        <div class="form-grid"><div class="field"><label for="first-name">First name</label><input id="first-name" name="first-name" autocomplete="given-name" required></div><div class="field"><label for="last-name">Last name</label><input id="last-name" name="last-name" autocomplete="family-name" required></div><div class="field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="contact-phone">Phone number</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210"></div><div class="field"><label for="skin-type">Your skin type</label><select id="skin-type" name="skin-type" required><option value="">Choose one</option><option>Normal</option><option>Oily</option><option>Dry</option><option>Combination</option><option>Sensitive</option><option>Not sure yet</option></select></div><div class="field"><label for="concern">Primary concern</label><select id="concern" name="concern" required><option value="">Choose one</option><option>Acne & breakouts</option><option>Dryness & dehydration</option><option>Dullness & dark spots</option><option>Fine lines</option><option>Redness & sensitivity</option><option>Visible pores</option></select></div><div class="field full"><label for="routine">Current routine <span class="muted">(optional)</span></label><input id="routine" name="routine" placeholder="Cleanser, serum, moisturizer…"></div><div class="field full"><label for="message">How can we help?</label><textarea id="message" name="message" minlength="20" required placeholder="Share what your skin feels like, what you’ve tried, and what a great routine would look like for you."></textarea></div></div><label class="check-row"><input type="checkbox" required> I agree that Glowé may use this information to answer my enquiry. See our <a class="accent" href="privacy.html">Privacy Policy</a>.</label><button class="btn btn-coral" style="margin-top:22px" type="submit">Request My Consultation <i data-lucide="arrow-right"></i></button>
+      </form></div>
+    </section>
+    <section class="container section map-section" id="locations" data-reveal>
+      <div class="section-head" style="text-align:center;display:block">
+        <span class="eyebrow"><i data-lucide="map-pin"></i> Visit Our Flagship Studios</span>
+        <h2>Experience Glowé in Person</h2>
+        <p class="lead" style="margin: 0 auto; max-width: 640px;">Step in for complimentary skin barrier diagnostics, texture testing, and one-on-one routine consultations with our resident skin specialists.</p>
+      </div>
+
+      <div class="studio-selector-tabs" role="tablist" aria-label="Studio locations">
+        <button class="studio-tab active" type="button" data-studio="bengaluru">
+          <i data-lucide="map-pin"></i> Bengaluru Flagship
+        </button>
+        <button class="studio-tab" type="button" data-studio="mumbai">
+          <i data-lucide="map-pin"></i> Mumbai Studio
+        </button>
+        <button class="studio-tab" type="button" data-studio="delhi">
+          <i data-lucide="map-pin"></i> Delhi Experience Lounge
+        </button>
+      </div>
+
+      <div class="interactive-map-wrapper">
+        <div class="map-frame-container">
+          <iframe
+            id="live-map-iframe"
+            class="live-map-iframe"
+            title="Glowé Flagship Studio Interactive Map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=77.6330%2C12.9660%2C77.6530%2C12.9860&layer=mapnik&marker=12.9760%2C77.6430"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="studio-info-card" id="active-studio-card">
+          <div>
+            <span class="badge" id="studio-badge" style="position:static;display:inline-flex;margin-bottom:12px">Flagship Store</span>
+            <h3 id="studio-name">Glowé Flagship Studio & Skin Bar</h3>
+            <p class="studio-address" id="studio-address"><i data-lucide="map-pin"></i> <span>100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038</span></p>
+          </div>
+          
+          <div class="studio-meta-grid">
+            <div class="studio-meta-item">
+              <i data-lucide="clock"></i>
+              <div>
+                <strong>Studio Hours</strong>
+                <p id="studio-hours">Mon – Sat: 10 AM – 8 PM<br>Sunday: 11 AM – 6 PM</p>
+              </div>
+            </div>
+            <div class="studio-meta-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <strong>Direct Line</strong>
+                <p id="studio-phone">+91 98765 43210</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="studio-amenities">
+            <span><i data-lucide="sparkles"></i> Complimentary Diagnostic</span>
+            <span><i data-lucide="droplets"></i> Texture & Patch Bar</span>
+            <span><i data-lucide="shield-check"></i> Accessible Entrance</span>
+            <span><i data-lucide="car"></i> Valet Parking Available</span>
+          </div>
+
+          <div class="studio-actions">
+            <a id="studio-directions-link" class="btn btn-coral btn-sm" href="https://www.google.com/maps/search/?api=1&query=100+Feet+Road+Indiranagar+Bengaluru+560038" target="_blank" rel="noopener noreferrer">
+              Get Directions <i data-lucide="external-link"></i>
+            </a>
+            <a class="btn btn-outline btn-sm" href="#consultation">
+              Book In-Studio Visit <i data-lucide="arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container section" id="faq"><div class="section-head" data-reveal><h2>Frequently Asked Questions</h2></div><div class="faq-list" data-reveal>
+      <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">How quickly will a skin expert reply? <i data-lucide="plus"></i></button><div class="faq-answer"><p>Most enquiries receive a thoughtful response within one business day, Monday through Saturday.</p></div></article>
+      <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Do I need to know my skin type first? <i data-lucide="plus"></i></button><div class="faq-answer"><p>Not at all. Choose “Not sure yet” and describe how your skin feels; we’ll help you work it out.</p></div></article>
+      <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Can I ask about ingredient compatibility? <i data-lucide="plus"></i></button><div class="faq-answer"><p>Yes. Tell us which products or active ingredients you currently use so we can suggest a comfortable way to layer them.</p></div></article>
+      <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Is this medical advice? <i data-lucide="plus"></i></button><div class="faq-answer"><p>No. Our guidance is cosmetic and educational. Persistent or painful skin concerns should be discussed with a qualified dermatologist.</p></div></article>
+    </div></section>
+  </main>
+  <div data-site-footer></div>
+  <script src="../assets/js/lucide.min.js"></script><script src="../assets/js/main.js"></script>
+</body>
+</html>

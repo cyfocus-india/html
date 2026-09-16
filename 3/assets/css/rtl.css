@@ -1,0 +1,109 @@
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] .eyebrow::before { order: 2; }
+html[dir="rtl"] .desktop-nav a::after { transform-origin: right; }
+html[dir="rtl"] .hero-image-wrap { right: 1rem; left: 0; }
+html[dir="rtl"] .hero-stamp { right: auto; left: 0; }
+html[dir="rtl"] .hero-vertical { right: auto; left: 0.25rem; writing-mode: vertical-lr; }
+html[dir="rtl"] .occasion-card strong { right: 1.25rem; left: auto; }
+html[dir="rtl"] .occasion-card::before { right: auto; left: -40px; }
+html[dir="rtl"] .product-tag { right: .8rem; left: auto; }
+html[dir="rtl"] .image-card-label { right: auto; left: 1rem; }
+html[dir="rtl"] .page-hero::after { right: auto; left: -6%; }
+html[dir="rtl"] .step-card { padding-right: 5.4rem; padding-left: 1.5rem; }
+html[dir="rtl"] .step-card::before { right: 1.25rem; left: auto; }
+html[dir="rtl"] .zone-pin { right: 52%; left: auto; transform: translate(50%, -50%) rotate(-45deg); }
+html[dir="rtl"] .faq-button { text-align: right; }
+html[dir="rtl"] .faq-panel p { padding-right: 0; padding-left: 2rem; }
+html[dir="rtl"] .toast { right: auto; left: 1rem; }
+html[dir="rtl"] .editorial-hero-content { padding-right: max(1rem, calc((100% - 1180px) / 2)); padding-left: 0; }
+html[dir="rtl"] .edition-label { right: auto; left: 2rem; }
+
+html[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-105%);
+  border-left: 0;
+  border-right: 1px solid var(--border);
+  box-shadow: 10px 0 40px rgba(67, 17, 41, 0.18);
+}
+html[dir="rtl"] .cart-drawer.is-open {
+  transform: translateX(0);
+}
+html[dir="rtl"] .order-summary-box {
+  text-align: right;
+}
+html[dir="rtl"] .nav-dropdown-item {
+  text-align: right;
+}
+html[dir="rtl"] .mobile-menu-links > a,
+html[dir="rtl"] .mobile-dropdown-btn {
+  text-align: right;
+}
+html[dir="rtl"] .mobile-dropdown-menu {
+  padding-left: 0;
+  padding-right: 1.25rem;
+  border-left: 0;
+  border-right: 2px solid var(--border);
+}
+html[dir="rtl"] .mobile-dropdown-item {
+  text-align: right;
+}
+
+@media (max-width: 899px) {
+  html[dir="rtl"] .editorial-hero-content { padding-right: 1rem; }
+}
+
+html[dir="rtl"] .map-overlay-controls {
+  left: auto;
+  right: 1rem;
+}
+
+/* Breadcrumb separator stays LTR neutral */
+html[dir="rtl"] .breadcrumbs span {
+  unicode-bidi: embed;
+}
+
+/* Checkout modal alignment */
+html[dir="rtl"] .checkout-section-title {
+  direction: rtl;
+}
+html[dir="rtl"] .order-confirmation-view {
+  text-align: center;
+}
+
+/* CTA panel decorative shape */
+html[dir="rtl"] .cta-panel::before {
+  right: auto;
+  left: -110px;
+}
+
+/* Delivery banner decorative circle */
+html[dir="rtl"] .delivery-banner::after {
+  right: auto;
+  left: -8%;
+}
+
+/* Feature number alignment */
+html[dir="rtl"] .feature-list li {
+  grid-template-columns: 1fr 42px;
+}
+html[dir="rtl"] .feature-number {
+  order: 2;
+  text-align: left;
+}
+
+/* Cart note details */
+html[dir="rtl"] .cart-note-details summary {
+  direction: rtl;
+}
+
+/* Auth links */
+html[dir="rtl"] .auth-links {
+  text-align: center;
+}
+
+/* Marquee direction */
+html[dir="rtl"] .marquee-track,
+html[dir="rtl"] .announcement-track {
+  animation-direction: reverse;
+}

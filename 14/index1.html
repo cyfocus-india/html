@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoveMate Home 2 — Instant route cost calculator, transparent pricing tiers, and Pan-India home and office shifting services.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Home 2 — MoveMate</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=39">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=39">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=39">
+</head>
+<body>
+  <div data-site-header></div>
+  <main id="main-content">
+    
+    <!-- Hero 2 Section: Route Finder & Express Shifting -->
+    <section class="hero-home2" aria-label="MoveMate Express Relocation Finder">
+      <div class="container hero-home2-container">
+        <div class="hero-home2-grid">
+          <!-- Left: Copy + Calculator -->
+          <div class="hero-home2-content">
+            <div class="hero-badge-pill">
+              <span class="pulse-dot"></span>
+              <span>Live Fleet Active • 1,000+ Indian Cities</span>
+            </div>
+            <h1>Smart Moving Network Across 1,000+ Cities</h1>
+            <p class="hero-lead">Instant door-to-door route pricing, dedicated tamper-proof containers, and verified moving crews with zero transit breakage.</p>
+
+            <!-- Quick Service Mode Selector -->
+            <div class="service-mode-tabs" role="tablist" aria-label="Select Move Type">
+              <button class="mode-tab active" type="button" data-mode="2bhk" role="tab" aria-selected="true">
+                <svg viewBox="0 0 24 24" width="16" height="16"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Household</span>
+              </button>
+              <button class="mode-tab" type="button" data-mode="intercity" role="tab" aria-selected="false">
+                <svg viewBox="0 0 24 24" width="16" height="16"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <span>Intercity</span>
+              </button>
+              <button class="mode-tab" type="button" data-mode="office" role="tab" aria-selected="false">
+                <svg viewBox="0 0 24 24" width="16" height="16"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span>Commercial</span>
+              </button>
+            </div>
+
+            <!-- Route & Quote Calculator Panel -->
+            <form class="route-form-panel validate-form" data-success="Great! Your route estimate has been computed. Our moving manager will confirm vehicle dispatch with you shortly." novalidate>
+              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+                <span class="eyebrow" style="margin-bottom:0">Instant Route Finder</span>
+                <span class="paid-pill">✓ 100% Fixed Rates • GST Included</span>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="h2Pickup">Pickup City / Locality</label>
+                  <div class="input-wrap">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/></svg>
+                    <input id="h2Pickup" name="pickup" list="moveMateCitySuggestions" placeholder="E.g. Indiranagar, BLR" autocomplete="off" required minlength="2">
+                  </div>
+                  <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label for="h2Delivery">Destination City / Locality</label>
+                  <div class="input-wrap">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/></svg>
+                    <input id="h2Delivery" name="delivery" list="moveMateCitySuggestions" placeholder="E.g. Madhapur, HYD" autocomplete="off" required minlength="2">
+                  </div>
+                  <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label for="h2Size">Home / Space Size</label>
+                  <select id="h2Size" name="size" required>
+                    <option value="">Select Space Size</option>
+                    <option value="1bhk">1 BHK / Studio Flat</option>
+                    <option value="2bhk" selected>2 BHK Apartment</option>
+                    <option value="3bhk">3 BHK Family Home</option>
+                    <option value="4bhk">4+ BHK / Villa</option>
+                    <option value="office">Office / Commercial Space</option>
+                  </select>
+                  <span class="error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label for="h2Date">Preferred Move Date</label>
+                  <input id="h2Date" name="moveDate" type="date" required>
+                  <span class="error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <!-- Dynamic Live Route Computation Preview -->
+              <div class="route-live-preview" id="h2RoutePreview" style="display:none">
+                <div class="route-preview-details">
+                  <span class="eyebrow" id="h2PreviewType" style="margin-bottom:2px">Route Computed</span>
+                  <h4 id="h2PreviewTitle">Indiranagar, Bengaluru → Madhapur, Hyderabad</h4>
+                  <p style="margin:0;font-size:0.86rem;color:var(--text)" id="h2PreviewInfo">Distance: ~570 km • Dedicated Sealed Container • ETA: 24–36 Hours</p>
+                </div>
+                <div class="route-preview-price">
+                  <small style="color:var(--muted)">Estimated Price</small><br>
+                  <strong class="text-brand" style="font-size:1.35rem" id="h2PreviewPrice">₹14,500 – ₹18,000</strong>
+                </div>
+              </div>
+
+              <div class="route-form-footer">
+                <div class="route-form-badges">
+                  <small>✓ Free Transit Insurance</small>
+                  <small>✓ Dedicated Container</small>
+                  <small>✓ No Advance Penalty</small>
+                </div>
+                <button class="btn btn-primary btn-lg" type="submit">
+                  <span>Get Guaranteed Quote</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Visual Operational Showcase -->
+          <div class="hero-home2-visual">
+            <div class="hero2-media-frame">
+              <picture>
+                <source srcset="assets/images/photo-hero-home2.webp" type="image/webp">
+                <img src="assets/images/photo-hero-home2.jpg" alt="MoveMate certified crew loading 5-ply cartons into a sealed container truck with a hand truck and digital inventory checklist" width="1500" height="1000" fetchpriority="high">
+              </picture>
+              
+              <!-- Floating Live Telemetry Chip: Container GPS -->
+              <div class="hero2-chip chip-top">
+                <div class="chip-icon gps">
+                  <span class="pulse-dot"></span>
+                </div>
+                <div class="chip-body">
+                  <strong>Container #MM-4029 • En Route</strong>
+                  <small>BLR Hub → HYD Hub • Dedicated Seal</small>
+                </div>
+              </div>
+
+              <!-- Floating Live Telemetry Chip: Verified Crew -->
+              <div class="hero2-chip chip-bottom">
+                <div class="chip-icon crew">
+                  <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="chip-body">
+                  <div class="chip-title-row">
+                    <strong>3-Mover Pro Crew Assigned</strong>
+                    <span class="chip-badge">★ 4.9</span>
+                  </div>
+                  <small>5-Ply Wrap &amp; Digital Checklist Complete</small>
+                </div>
+              </div>
+
+              <!-- Badge Chip: Zero Breakage Guarantee -->
+              <div class="hero2-chip chip-guarantee">
+                <span class="chip-check">✓</span>
+                <span>₹1,00,000 Transit Protection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network Highlights Strip -->
+        <div class="hero2-stats-strip" aria-label="Network Highlights">
+          <div class="hero2-stat-item">
+            <span class="stat-num">1,000+</span>
+            <span class="stat-label">Cities Covered Across India</span>
+          </div>
+          <div class="hero2-stat-item">
+            <span class="stat-num">&lt; 60s</span>
+            <span class="stat-label">Instant Live Route Pricing</span>
+          </div>
+          <div class="hero2-stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Dedicated Sealed Fleet</span>
+          </div>
+          <div class="hero2-stat-item">
+            <span class="stat-num">Zero</span>
+            <span class="stat-label">Co-Loading or Hidden Tolls</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section 1: Popular Express Shifting Corridors & Real-Time Fare Matrix -->
+    <section class="section corridors-section" aria-labelledby="corridorsTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Direct Intercity Corridors</span>
+          <h2 id="corridorsTitle">Popular Moving Corridors &amp; Guaranteed Timelines</h2>
+          <p>Daily scheduled sealed container departures across India's highest-demand relocation routes with upfront fixed rates and live GPS milestones.</p>
+        </div>
+
+        <div class="corridor-grid reveal">
+          <!-- Corridor 1 -->
+          <article class="corridor-card">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Bengaluru</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Hyderabad</strong>
+              </div>
+              <span class="corridor-frequency-badge">4 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">BLR</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">HYD</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~570 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>24–36 Hrs</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>14–17 Ft Sealed</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹8,500*</strong>
+              </div>
+              <button class="btn btn-outline btn-sm route-select-btn" type="button" data-route-pickup="Indiranagar, Bengaluru" data-route-delivery="Madhapur, Hyderabad">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Corridor 2 -->
+          <article class="corridor-card featured-corridor">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Mumbai</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Delhi NCR</strong>
+              </div>
+              <span class="corridor-frequency-badge prime">6 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">BOM</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">DEL</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~1,420 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>48–60 Hrs</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>19–22 Ft Sealed</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹14,800*</strong>
+              </div>
+              <button class="btn btn-primary btn-sm route-select-btn" type="button" data-route-pickup="Andheri, Mumbai" data-route-delivery="Gurugram, Delhi NCR">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Corridor 3 -->
+          <article class="corridor-card">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Pune</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Bengaluru</strong>
+              </div>
+              <span class="corridor-frequency-badge">3 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">PNQ</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">BLR</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~840 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>30–42 Hrs</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>Dedicated Sealed</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹11,200*</strong>
+              </div>
+              <button class="btn btn-outline btn-sm route-select-btn" type="button" data-route-pickup="Kothrud, Pune" data-route-delivery="Whitefield, Bengaluru">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Corridor 4 -->
+          <article class="corridor-card">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Chennai</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Bengaluru</strong>
+              </div>
+              <span class="corridor-frequency-badge">5 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">MAA</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">BLR</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~350 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>Same Day / 18h</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>Express Container</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹6,800*</strong>
+              </div>
+              <button class="btn btn-outline btn-sm route-select-btn" type="button" data-route-pickup="Adyar, Chennai" data-route-delivery="Koramangala, Bengaluru">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Corridor 5 -->
+          <article class="corridor-card">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Delhi NCR</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Kolkata</strong>
+              </div>
+              <span class="corridor-frequency-badge">3 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">DEL</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">CCU</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~1,530 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>48–72 Hrs</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>Heavy Container</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹16,500*</strong>
+              </div>
+              <button class="btn btn-outline btn-sm route-select-btn" type="button" data-route-pickup="Noida, Delhi NCR" data-route-delivery="Salt Lake, Kolkata">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Corridor 6 -->
+          <article class="corridor-card">
+            <div class="corridor-card-header">
+              <div class="corridor-route-name">
+                <strong>Hyderabad</strong>
+                <span class="route-arrow">⇄</span>
+                <strong>Pune</strong>
+              </div>
+              <span class="corridor-frequency-badge">3 Trucks Daily</span>
+            </div>
+            <div class="corridor-route-track" aria-hidden="true">
+              <span class="route-pin start">HYD</span>
+              <span class="route-line-dashed"></span>
+              <span class="route-pin end">PNQ</span>
+            </div>
+            <div class="corridor-specs">
+              <div class="spec-col"><small>Distance</small><strong>~560 km</strong></div>
+              <div class="spec-col"><small>Transit ETA</small><strong>24–36 Hrs</strong></div>
+              <div class="spec-col"><small>Vehicle Type</small><strong>Dedicated Sealed</strong></div>
+            </div>
+            <div class="corridor-card-footer">
+              <div class="corridor-price">
+                <small>Starting from</small>
+                <strong>₹9,000*</strong>
+              </div>
+              <button class="btn btn-outline btn-sm route-select-btn" type="button" data-route-pickup="Gachibowli, Hyderabad" data-route-delivery="Baner, Pune">
+                <span>Auto-Fill Route</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="corridors-footer-bar reveal">
+          <div class="corridor-guarantees">
+            <span>✓ Private Tamper-Proof Seal</span>
+            <span>✓ Dedicated Direct Container</span>
+            <span>✓ Zero Transshipment Border Stops</span>
+            <span>✓ Live GPS Milestones</span>
+          </div>
+          <a class="link-arrow" href="pages/service-areas.html">
+            <span>Explore all 1,000+ connected Indian cities</span>
+            <span class="arrow-glyph">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section 2: 4-Pillar Zero-Damage Security Protocol & Logistics Hub -->
+    <section class="section security-protocol-section" aria-labelledby="protocolTitle">
+      <div class="container">
+        <div class="protocol-layout">
+          <!-- Left: 4 Pillars -->
+          <div class="protocol-content reveal">
+            <span class="eyebrow">Engineered Security Standard</span>
+            <h2 id="protocolTitle">The MoveMate 4-Pillar Zero-Damage Protocol</h2>
+            <p>Traditional movers cut corners with shared open trucks and recycled boxes. MoveMate operates an aerospace-inspired cargo protection protocol for zero breakage from doorstep to doorstep.</p>
+
+            <div class="protocol-list">
+              <div class="protocol-item">
+                <div class="protocol-num">01</div>
+                <div class="protocol-text">
+                  <h3>Tamper-Proof Barcode Security Seal</h3>
+                  <p>Every dedicated container is locked with a unique serialized security seal in your presence at pickup. The seal remains intact until verified and clipped open before your eyes at delivery.</p>
+                </div>
+              </div>
+
+              <div class="protocol-item">
+                <div class="protocol-num">02</div>
+                <div class="protocol-text">
+                  <h3>Engineered 5-Ply Armor Packaging</h3>
+                  <p>High-density bubble cushioning, corrugated edge bumpers, shrink-wrap moisture barriers, and custom wooden crating for 65"+ OLED TVs, mirrors, and glass dining tables.</p>
+                </div>
+              </div>
+
+              <div class="protocol-item">
+                <div class="protocol-num">03</div>
+                <div class="protocol-text">
+                  <h3>Strictly Dedicated Containerized Transit</h3>
+                  <p>Your household belongings never share space with commercial freight or strangers' items. No intermediate warehousing, zero offloading, and no transit mix-ups.</p>
+                </div>
+              </div>
+
+              <div class="protocol-item">
+                <div class="protocol-num">04</div>
+                <div class="protocol-text">
+                  <h3>Complimentary ₹1,00,000 Transit Cover</h3>
+                  <p>Every single booking includes comprehensive all-risk transit protection backed by instant 48-hour digital claim resolution directly to your bank account.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Logistics Hub & Warehouse Showcase -->
+          <div class="protocol-visual-wrap reveal">
+            <div class="protocol-media-frame">
+              <picture>
+                <source srcset="assets/images/photo-warehouse.webp" type="image/webp">
+                <img src="assets/images/photo-warehouse.jpg" alt="MoveMate regional fulfillment warehouse with organized pallets, high-bay racking and certified logistics personnel" width="1200" height="800" loading="lazy">
+              </picture>
+
+              <!-- Floating Live Quality Metric Chip -->
+              <div class="protocol-chip chip-top-badge">
+                <span class="badge-icon-check">✓</span>
+                <div>
+                  <strong>100% Quality Inspected</strong>
+                  <small>Zero Transit Breakage Record This Month</small>
+                </div>
+              </div>
+
+              <!-- Floating Hub Telemetry Card -->
+              <div class="protocol-chip chip-hub-card">
+                <div class="hub-header">
+                  <span class="pulse-dot"></span>
+                  <strong>Central Transit Hub</strong>
+                  <span class="paid-pill" style="font-size:0.7rem">24/7 Monitored</span>
+                </div>
+                <div class="hub-details">
+                  <div class="hub-detail-item"><small>CCTV Coverage</small><strong>100% Active</strong></div>
+                  <div class="hub-detail-item"><small>Pallet Security</small><strong>Sealed &amp; Logged</strong></div>
+                  <div class="hub-detail-item"><small>Barcode Verification</small><strong>Instant</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Shifting Pricing Tiers Comparison -->
+    <section class="section soft-blue">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Clear Shifting Estimates</span>
+          <h2>Transparent Rates by Home Size</h2>
+          <p>Choose your home size to see standard inclusions, crew allocation, and estimated pricing ranges.</p>
+        </div>
+
+        <div class="cost-grid reveal">
+          <article class="cost-card">
+            <span class="eyebrow" style="margin-bottom:4px">Compact Move</span>
+            <h3>1 BHK / Studio</h3>
+            <div class="cost-card-price">₹4,500 <small>– ₹7,500</small></div>
+            <p style="font-size:0.88rem;color:var(--text);margin-bottom:16px">Ideal for single professionals or small apartments with essential items.</p>
+            <ul class="check-list" style="font-size:0.86rem">
+              <li>2 Dedicated certified movers</li>
+              <li>Small covered moving vehicle</li>
+              <li>Complete 5-ply cartons &amp; tape</li>
+              <li>Basic furniture assembly</li>
+            </ul>
+            <a class="btn btn-outline full" href="pages/pricing.html?homeSize=studio&amp;moveType=local#calculator" style="margin-top:auto">
+              <span>Book 1 BHK Move</span>
+            </a>
+          </article>
+
+          <article class="cost-card featured">
+            <span class="cost-card-badge">★ MOST POPULAR</span>
+            <span class="eyebrow" style="margin-bottom:4px">Family Apartment</span>
+            <h3>2 BHK Standard</h3>
+            <div class="cost-card-price">₹8,500 <small>– ₹13,500</small></div>
+            <p style="font-size:0.88rem;color:var(--text);margin-bottom:16px">Our most booked plan for complete 2 BHK household furniture and appliances.</p>
+            <ul class="check-list" style="font-size:0.86rem">
+              <li>3 Dedicated certified movers</li>
+              <li>14-17 Ft closed container truck</li>
+              <li>Specialized fridge &amp; TV cushions</li>
+              <li>Free ₹50,000 transit cover</li>
+            </ul>
+            <a class="btn btn-primary full" href="pages/pricing.html?homeSize=2bhk&amp;moveType=local#calculator" style="margin-top:auto">
+              <span>Book 2 BHK Move</span>
+            </a>
+          </article>
+
+          <article class="cost-card">
+            <span class="eyebrow" style="margin-bottom:4px">Spacious Home</span>
+            <h3>3 BHK Large</h3>
+            <div class="cost-card-price">₹14,000 <small>– ₹22,000</small></div>
+            <p style="font-size:0.88rem;color:var(--text);margin-bottom:16px">Complete shifting for large families with delicate decor, dining and beds.</p>
+            <ul class="check-list" style="font-size:0.86rem">
+              <li>4-5 Dedicated movers + supervisor</li>
+              <li>19-22 Ft dedicated container</li>
+              <li>Full packing + unpack room setup</li>
+              <li>Full ₹1,00,000 transit cover</li>
+            </ul>
+            <a class="btn btn-outline full" href="pages/pricing.html?homeSize=3bhk&amp;moveType=local#calculator" style="margin-top:auto">
+              <span>Book 3 BHK Move</span>
+            </a>
+          </article>
+
+          <article class="cost-card">
+            <span class="eyebrow" style="margin-bottom:4px">Premium Shifting</span>
+            <h3>4+ BHK / Villa</h3>
+            <div class="cost-card-price">Custom <small>Survey</small></div>
+            <p style="font-size:0.88rem;color:var(--text);margin-bottom:16px">Bespoke relocation for bungalows, multi-level villas and luxury estates.</p>
+            <ul class="check-list" style="font-size:0.86rem">
+              <li>Dedicated senior relocation manager</li>
+              <li>Heavy equipment &amp; piano rigging</li>
+              <li>White-glove fragile unpacking</li>
+              <li>Custom crate carpentry</li>
+            </ul>
+            <a class="btn btn-outline full" href="pages/pricing.html?homeSize=4bhk&amp;moveType=intercity#calculator" style="margin-top:auto">
+              <span>Request Villa Survey</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Customer Experience Stories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Real Experiences</span>
+          <h2>What Families Say About MoveMate</h2>
+          <p>Read authentic relocation stories from families and businesses who moved with us across India.</p>
+        </div>
+
+        <div class="story-grid reveal">
+          <article class="story-card">
+            <div class="story-stars">★★★★★</div>
+            <p style="font-size:0.95rem;line-height:1.6;font-style:italic">“Moved our entire 2 BHK household from Bengaluru to Hyderabad in under 24 hours. The crew arrived with high-grade 5-ply cartons and not a single glassware item was scratched.”</p>
+            <div class="story-author">
+              <div class="story-avatar">AD</div>
+              <div>
+                <strong>Ananya Deshmukh</strong><br>
+                <small>Bengaluru → Hyderabad • 2 BHK</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <div class="story-stars">★★★★★</div>
+            <p style="font-size:0.95rem;line-height:1.6;font-style:italic">“What I loved most was the price transparency. The initial quote matched the final invoice to the exact rupee. Real-time driver updates kept my family relaxed throughout the transit.”</p>
+            <div class="story-author">
+              <div class="story-avatar">RM</div>
+              <div>
+                <strong>Rohit Malhotra</strong><br>
+                <small>Delhi NCR → Pune • 3 BHK</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <div class="story-stars">★★★★★</div>
+            <p style="font-size:0.95rem;line-height:1.6;font-style:italic">“Relocated our 28-member tech workspace over the weekend with zero Monday downtime. Server racks and monitor setups were packed and assembled with surgical precision.”</p>
+            <div class="story-author">
+              <div class="story-avatar">SN</div>
+              <div>
+                <strong>Siddharth Nair</strong><br>
+                <small>Mumbai → Chennai • Commercial Move</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="section-tight" style="background:var(--navy);color:#fff">
+      <div class="container impact-stats" style="color:#fff">
+        <div class="impact-stat">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <strong data-count="10" data-suffix="+">10+</strong>
+          <span>Years of moving excellence</span>
+        </div>
+        <div class="impact-stat">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </span>
+          <strong data-count="5000" data-suffix="+">5,000+</strong>
+          <span>Verified safe household moves</span>
+        </div>
+        <div class="impact-stat">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          </span>
+          <strong data-count="1000" data-suffix="+">1,000+</strong>
+          <span>Pan-India city coverage</span>
+        </div>
+        <div class="impact-stat">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </span>
+          <strong data-count="99" data-suffix="%">99%</strong>
+          <span>Punctual arrival rate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="section">
+      <div class="container cta-panel reveal">
+        <div>
+          <span class="eyebrow">Shift With Total Peace of Mind</span>
+          <h2>Ready To Book Your Upcoming Move?</h2>
+          <p>Get an instant transparent estimate or speak with an expert relocation advisor.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="pages/pricing.html">
+            <span>Try Price Calculator</span>
+          </a>
+          <button class="btn btn-primary quote-open" type="button">
+            <span>Get Free Quote</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="assets/js/main.js?v=39"></script>
+  <script src="assets/js/dashboard.js?v=35"></script>
+</body>
+</html>

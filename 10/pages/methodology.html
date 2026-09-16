@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="A practical learning methodology focused on real-world behavior change.">
+    <title>Methodology | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="../index.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="../index.html" class="dropdown-item">Home 1</a>
+              <a href="../index1.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="programs.html">Programs</a>
+          <a class="active" href="methodology.html">Methodology</a>
+          <a href="clients.html">Clients</a>
+          <a href="in-house-training.html">In-House Training</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span></button
+          ><a class="button button-sm" href="signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          ><button aria-label="Open navigation" type="button"
+            class="menu-button"
+            data-menu-button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Mobile navigation" class="mobile-menu glass" id="mobile-menu" data-mobile-menu>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+          </div>
+        </div>
+        <a href="programs.html">Programs</a>
+        <a class="active" href="methodology.html">Methodology</a>
+        <a href="clients.html">Clients</a>
+        <a href="in-house-training.html">In-House Training</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+        </div>
+        <a href="signin.html" class="mobile-login"><i data-lucide="user-round"></i> Sign In</a>
+      </nav>
+    </header>
+    <main id="main" class="inner-main">
+      <section class="page-hero section-shell reveal">
+        <p class="eyebrow"><span></span> Evidence-Based Corporate Pedagogy</p>
+        <h1>
+          Learning Designed for Behavior Change &<br >
+          <span class="gradient-text">Measurable ROI.</span>
+        </h1>
+        <p>
+          Our five-stage performance framework bridges the gap between classroom theory and real workplace execution through cognitive science, deliberate practice, and continuous application tracking.
+        </p>
+      </section>
+
+      <!-- 5-Stage Framework Overview & Signature Rotating Wheel -->
+      <section class="section-shell method-layout">
+        <div class="steps-list">
+          <article class="step-row reveal">
+            <span class="step-number">01</span>
+            <div>
+              <h3>01 / Assess & Diagnose</h3>
+              <p>
+                We map organizational goals, current skill gaps, and critical workplace friction points through stakeholder audits.
+              </p>
+            </div>
+          </article>
+          <article class="step-row reveal" data-delay="1">
+            <span class="step-number">02</span>
+            <div>
+              <h3>02 / Design & Contextualize</h3>
+              <p>
+                Curriculum is customized around your teams, real business scenarios, proprietary tools, and performance metrics.
+              </p>
+            </div>
+          </article>
+          <article class="step-row reveal" data-delay="2">
+            <span class="step-number">03</span>
+            <div>
+              <h3>03 / Deliver & Facilitate</h3>
+              <p>
+                Practitioner-led workshops prioritize active micro-simulations, peer problem solving, and immediate feedback.
+              </p>
+            </div>
+          </article>
+          <article class="step-row reveal">
+            <span class="step-number">04</span>
+            <div>
+              <h3>04 / Apply & Embed</h3>
+              <p>
+                Spaced reinforcement nudges, manager check-ins, and workplace capstone projects lock in durable habits.
+              </p>
+            </div>
+          </article>
+          <article class="step-row reveal" data-delay="1">
+            <span class="step-number">05</span>
+            <div>
+              <h3>05 / Measure & Scale</h3>
+              <p>
+                Continuous analytics track engagement, behavior transfer, and bottom-line business ROI via the HR portal.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="method-wheel reveal" aria-label="Interactive 5-stage methodology cycle">
+          <span class="wheel-label wl-1">ASSESS</span
+          ><span class="wheel-label wl-2">DESIGN</span
+          ><span class="wheel-label wl-3">DELIVER</span
+          ><span class="wheel-label wl-4">APPLY</span
+          ><span class="wheel-label wl-5">MEASURE</span>
+          <div class="wheel-center">
+            Learning that<br >moves people<br >forward
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Pedagogy Metrics -->
+      <section class="section-shell metrics-strip reveal">
+        <div class="metric">
+          <b>Outcome-Driven Learning</b
+          ><span>We do not just train. We systematically transform workplace performance.</span>
+        </div>
+        <div class="metric"><b>96%+</b><span>Learner CSAT rating</span></div>
+        <div class="metric"><b>92%+</b><span>Observed behavior transfer</span></div>
+        <div class="metric"><b>3.6x</b><span>Average measured ROI</span></div>
+      </section>
+
+      <!-- Stage-by-Stage Operational Deep Dive -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Implementation blueprint</p>
+            <h2>
+              The 5-stage framework in
+              <span class="gradient-text">operational detail.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="framework-stages">
+          <!-- Stage 01 -->
+          <article class="framework-card glass reveal">
+            <div class="framework-stage-meta">
+              <span class="framework-stage-badge"><i data-lucide="scan-line"></i> Stage 01</span>
+              <h3>Assess & Diagnose</h3>
+              <p>Every transformation begins with precision diagnosis to ensure training directly targets root-cause performance bottlenecks.</p>
+              <span class="framework-duration"><i data-lucide="clock"></i> Timeline: Weeks 1 – 2</span>
+            </div>
+            <div class="framework-stage-details">
+              <div class="framework-box">
+                <h4><i data-lucide="list-checks"></i> Core Activities</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> 360-degree competency audits and surveys</li>
+                  <li><i data-lucide="check"></i> Executive sponsor & manager alignment interviews</li>
+                  <li><i data-lucide="check"></i> Review of existing KPIs, toolchains, and workflows</li>
+                </ul>
+              </div>
+              <div class="framework-box">
+                <h4><i data-lucide="file-badge-2"></i> Key Deliverables</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Organizational Skill Gap Matrix & Heatmap</li>
+                  <li><i data-lucide="check"></i> Cohort Baseline Capability Diagnostic Report</li>
+                  <li><i data-lucide="check"></i> Agreed Success Metrics & Target ROI KPIs</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 02 -->
+          <article class="framework-card glass reveal" data-delay="1">
+            <div class="framework-stage-meta">
+              <span class="framework-stage-badge"><i data-lucide="pen-tool"></i> Stage 02</span>
+              <h3>Design & Contextualize</h3>
+              <p>Off-the-shelf training fails because it lacks business relevance. We tailor each program around your actual work materials.</p>
+              <span class="framework-duration"><i data-lucide="clock"></i> Timeline: Weeks 2 – 3</span>
+            </div>
+            <div class="framework-stage-details">
+              <div class="framework-box">
+                <h4><i data-lucide="list-checks"></i> Core Activities</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Co-creating realistic roleplay cases from real challenges</li>
+                  <li><i data-lucide="check"></i> Calibrating difficulty levels to participant seniority</li>
+                  <li><i data-lucide="check"></i> Designing interactive asynchronous pre-work modules</li>
+                </ul>
+              </div>
+              <div class="framework-box">
+                <h4><i data-lucide="file-badge-2"></i> Key Deliverables</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Bespoke Cohort Syllabus & Learning Journey Map</li>
+                  <li><i data-lucide="check"></i> Scenario Simulation Playbooks & Toolkits</li>
+                  <li><i data-lucide="check"></i> People Leader Coaching & Support Guide</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 03 -->
+          <article class="framework-card glass reveal" data-delay="2">
+            <div class="framework-stage-meta">
+              <span class="framework-stage-badge"><i data-lucide="presentation"></i> Stage 03</span>
+              <h3>Deliver & Facilitate</h3>
+              <p>Dynamic, practitioner-led sessions where lecture takes a back seat to experiential simulations and deliberate practice.</p>
+              <span class="framework-duration"><i data-lucide="clock"></i> Timeline: Weeks 3 – 6</span>
+            </div>
+            <div class="framework-stage-details">
+              <div class="framework-box">
+                <h4><i data-lucide="list-checks"></i> Core Activities</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Live scenario roleplays with real-time feedback</li>
+                  <li><i data-lucide="check"></i> Small-group breakout problem-solving sprints</li>
+                  <li><i data-lucide="check"></i> Individual reflection and personalized action planning</li>
+                </ul>
+              </div>
+              <div class="framework-box">
+                <h4><i data-lucide="file-badge-2"></i> Key Deliverables</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Live Session Attendance & Engagement Metrics</li>
+                  <li><i data-lucide="check"></i> Formative Diagnostic Quizzes & Self-Assessments</li>
+                  <li><i data-lucide="check"></i> Immediate Learner Reaction (Kirkpatrick Level 1)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 04 -->
+          <article class="framework-card glass reveal">
+            <div class="framework-stage-meta">
+              <span class="framework-stage-badge"><i data-lucide="refresh-cw"></i> Stage 04</span>
+              <h3>Apply & Embed</h3>
+              <p>True learning happens on the job. We support participants through structured workplace application projects and micro-nudges.</p>
+              <span class="framework-duration"><i data-lucide="clock"></i> Timeline: Weeks 6 – 12</span>
+            </div>
+            <div class="framework-stage-details">
+              <div class="framework-box">
+                <h4><i data-lucide="list-checks"></i> Core Activities</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Weekly spaced micro-challenges delivered via email/portal</li>
+                  <li><i data-lucide="check"></i> 1-on-1 or group coaching checkpoint sessions</li>
+                  <li><i data-lucide="check"></i> Manager-observation behavioral milestone reviews</li>
+                </ul>
+              </div>
+              <div class="framework-box">
+                <h4><i data-lucide="file-badge-2"></i> Key Deliverables</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Applied Workplace Capstone Deliverable</li>
+                  <li><i data-lucide="check"></i> 30-Day & 60-Day Habit Transfer Audits</li>
+                  <li><i data-lucide="check"></i> Verified Manager Behavioral Sign-Off (Level 3)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 05 -->
+          <article class="framework-card glass reveal" data-delay="1">
+            <div class="framework-stage-meta">
+              <span class="framework-stage-badge"><i data-lucide="chart-pie"></i> Stage 05</span>
+              <h3>Measure & Scale</h3>
+              <p>We provide enterprise people leaders with definitive data demonstrating program ROI, cohort growth, and behavioral shifts.</p>
+              <span class="framework-duration"><i data-lucide="clock"></i> Timeline: Post-Cohort / Quarterly</span>
+            </div>
+            <div class="framework-stage-details">
+              <div class="framework-box">
+                <h4><i data-lucide="list-checks"></i> Core Activities</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Aggregating completion, attendance, and exam data</li>
+                  <li><i data-lucide="check"></i> Business impact correlation against company OKRs</li>
+                  <li><i data-lucide="check"></i> Generating verified digital credentials with QR codes</li>
+                </ul>
+              </div>
+              <div class="framework-box">
+                <h4><i data-lucide="file-badge-2"></i> Key Deliverables</h4>
+                <ul class="framework-list">
+                  <li><i data-lucide="check"></i> Executive ROI & Capability Transformation Report</li>
+                  <li><i data-lucide="check"></i> Verifiable Digital Completion Certificates</li>
+                  <li><i data-lucide="check"></i> Continuous Upskilling Recommendations</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Cognitive Science & Pedagogical Foundations -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Adult learning science</p>
+            <h2>
+              The principles that power
+              <span class="gradient-text">lasting behavior change.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="pedagogy-grid">
+          <article class="pedagogy-card glass reveal">
+            <span class="program-icon blue"><i data-lucide="brain-circuit"></i></span>
+            <h3>70-20-10 Experiential Model</h3>
+            <p>Our curriculum allocates 70% of effort to on-the-job practice, 20% to peer collaboration and coaching, and 10% to formal structured frameworks.</p>
+            <span class="pedagogy-tag"><i data-lucide="check-circle-2"></i> Action-Oriented</span>
+          </article>
+
+          <article class="pedagogy-card glass reveal" data-delay="1">
+            <span class="program-icon blue"><i data-lucide="timer-reset"></i></span>
+            <h3>Spaced Reinforcement Nudges</h3>
+            <p>To combat the Ebbinghaus Forgetting Curve, learners receive targeted micro-challenges and reflection triggers over 90 days after workshop completion.</p>
+            <span class="pedagogy-tag"><i data-lucide="check-circle-2"></i> +84% Retention</span>
+          </article>
+
+          <article class="pedagogy-card glass reveal" data-delay="2">
+            <span class="program-icon blue"><i data-lucide="shield-alert"></i></span>
+            <h3>Psychological Safety & Simulations</h3>
+            <p>Workshops create safe sandbox environments where leaders and teams practice difficult conversations, fail without penalty, and calibrate tactics.</p>
+            <span class="pedagogy-tag"><i data-lucide="check-circle-2"></i> Real-World Fidelity</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Kirkpatrick 4-Level Evaluation Framework -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Rigorous evaluation</p>
+            <h2>
+              The Kirkpatrick 4-Level
+              <span class="gradient-text">measurement standard.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="kirkpatrick-grid">
+          <article class="level-card glass reveal">
+            <span class="level-badge">Level 01</span>
+            <h3>Reaction & Engagement</h3>
+            <p>Immediate participant feedback on session relevance, facilitator clarity, and actionable usefulness.</p>
+            <div class="level-metric">
+              <b>96.4%</b>
+              <span>Learners rate 5/5 relevance</span>
+            </div>
+          </article>
+
+          <article class="level-card glass reveal" data-delay="1">
+            <span class="level-badge">Level 02</span>
+            <h3>Knowledge Acquisition</h3>
+            <p>Objective measurement of skill absorption and conceptual mastery through pre- and post-testing.</p>
+            <div class="level-metric">
+              <b>+44%</b>
+              <span>Average diagnostic score increase</span>
+            </div>
+          </article>
+
+          <article class="level-card glass reveal" data-delay="2">
+            <span class="level-badge">Level 03</span>
+            <h3>Behavioral Application</h3>
+            <p>Demonstrated transfer of habits in actual workplace interactions, validated by manager observation.</p>
+            <div class="level-metric">
+              <b>92%</b>
+              <span>Managers confirm behavioral shift</span>
+            </div>
+          </article>
+
+          <article class="level-card glass reveal" data-delay="3">
+            <span class="level-badge">Level 04</span>
+            <h3>Organizational Results</h3>
+            <p>Direct correlation between cohort learning and key business metrics like velocity, quota, and retention.</p>
+            <div class="level-metric">
+              <b>3.6x</b>
+              <span>Average proven program ROI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Interactive Capability Diagnostic Walkthrough -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Interactive diagnostic walkthrough</p>
+            <h2>
+              How we diagnose capability in
+              <span class="gradient-text">your organization.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="diagnostic-shell glass reveal">
+          <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic domain tabs">
+            <button type="button" class="diagnostic-tab-btn active" data-diag-tab="leadership" role="tab" aria-selected="true">
+              <i data-lucide="users"></i> Leadership & Management
+            </button>
+            <button type="button" class="diagnostic-tab-btn" data-diag-tab="commercial" role="tab" aria-selected="false">
+              <i data-lucide="chart-spline"></i> Commercial & Sales Velocity
+            </button>
+            <button type="button" class="diagnostic-tab-btn" data-diag-tab="digital" role="tab" aria-selected="false">
+              <i data-lucide="cpu"></i> Digital & Workflow Automation
+            </button>
+          </div>
+
+          <!-- Tab Pane 1: Leadership -->
+          <div class="diagnostic-view" data-diag-view="leadership">
+            <div class="diagnostic-details">
+              <span class="framework-stage-badge"><i data-lucide="target"></i> Focus Area</span>
+              <h3>Transforming Individual Contributors into High-Trust Leaders</h3>
+              <p>
+                We evaluate psychological safety indicators, delegation friction, cross-functional collaboration, and 1-on-1 feedback cadence across your people management roster.
+              </p>
+              <ul class="framework-list">
+                <li><i data-lucide="check"></i> <b>Pre-Audit:</b> 15-minute leadership behavioral inventory</li>
+                <li><i data-lucide="check"></i> <b>Core Module:</b> Coaching through high-stakes uncertainty</li>
+                <li><i data-lucide="check"></i> <b>Outcome:</b> +38% increase in team retention and engagement</li>
+              </ul>
+            </div>
+            <div class="diagnostic-visual-card">
+              <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--navy); display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="radar"></i> Leadership Competency Scorecard
+              </h4>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Active Listening & Feedback</span><span>88% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 88%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Strategic Conflict Resolution</span><span>92% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 92%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Execution Accountability</span><span>85% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 85%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Pane 2: Commercial -->
+          <div class="diagnostic-view" data-diag-view="commercial" hidden>
+            <div class="diagnostic-details">
+              <span class="framework-stage-badge"><i data-lucide="target"></i> Focus Area</span>
+              <h3>Shortening Enterprise Sales Cycles & Expanding Deal Value</h3>
+              <p>
+                We audit discovery questioning depth, multi-stakeholder mapping, value-based negotiation rigor, and competitive objection handling across customer-facing teams.
+              </p>
+              <ul class="framework-list">
+                <li><i data-lucide="check"></i> <b>Pre-Audit:</b> Pipeline win/loss ratio analysis</li>
+                <li><i data-lucide="check"></i> <b>Core Module:</b> Consultative executive discovery & closing</li>
+                <li><i data-lucide="check"></i> <b>Outcome:</b> 24% reduction in enterprise sales cycle length</li>
+              </ul>
+            </div>
+            <div class="diagnostic-visual-card">
+              <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--navy); display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="radar"></i> Commercial Capability Scorecard
+              </h4>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Executive Discovery & Value Framing</span><span>91% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 91%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Objection Mitigation</span><span>87% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 87%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Contract Negotiation</span><span>94% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 94%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Pane 3: Digital & AI -->
+          <div class="diagnostic-view" data-diag-view="digital" hidden>
+            <div class="diagnostic-details">
+              <span class="framework-stage-badge"><i data-lucide="target"></i> Focus Area</span>
+              <h3>Accelerating Digital Fluency, Analytics & Workflow Automation</h3>
+              <p>
+                We evaluate recurring operational bottlenecks, manual spreadsheet redundancies, predictive analytics literacy, and practical AI tool integration across core business units.
+              </p>
+              <ul class="framework-list">
+                <li><i data-lucide="check"></i> <b>Pre-Audit:</b> Departmental manual hours & tooling inventory</li>
+                <li><i data-lucide="check"></i> <b>Core Module:</b> Automated data pipelines & AI prompts</li>
+                <li><i data-lucide="check"></i> <b>Outcome:</b> 420+ manual hours saved per team monthly</li>
+              </ul>
+            </div>
+            <div class="diagnostic-visual-card">
+              <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--navy); display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="radar"></i> Technical Fluency Scorecard
+              </h4>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Workflow Automation</span><span>95% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 95%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Predictive Dashboard Analytics</span><span>89% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 89%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px;">
+                    <span>Generative AI Implementation</span><span>92% Mastery</span>
+                  </div>
+                  <div style="height: 8px; background: rgba(7, 91, 234, 0.12); border-radius: 4px; overflow: hidden;">
+                    <div style="height: 100%; width: 92%; background: var(--blue); border-radius: 4px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enterprise Delivery Modalities -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Flexible deployment models</p>
+            <h2>
+              Engineered for global teams, hybrid offices, and
+              <span class="gradient-text">executive offsites.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="modalities-grid">
+          <article class="modality-card glass reveal">
+            <span class="program-icon blue"><i data-lucide="video"></i></span>
+            <h3>Synchronous Virtual Studios</h3>
+            <p>Interactive virtual classroom cohorts with live break-out rooms, digital whiteboarding, and real-time scenario simulation.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Interactive Live</span>
+              <span class="modality-pill">Global Attendance</span>
+              <span class="modality-pill">On-Demand Recordings</span>
+            </div>
+          </article>
+
+          <article class="modality-card glass reveal" data-delay="1">
+            <span class="program-icon blue"><i data-lucide="building"></i></span>
+            <h3>Executive Training Centers</h3>
+            <p>High-touch on-campus masterclasses hosted in our technology-equipped facilities with catered working sessions and executive peer networking.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Bangalore & Mumbai</span>
+              <span class="modality-pill">Immersive Roleplay</span>
+              <span class="modality-pill">Executive Retreats</span>
+            </div>
+          </article>
+
+          <article class="modality-card glass reveal" data-delay="2">
+            <span class="program-icon blue"><i data-lucide="layers"></i></span>
+            <h3>Bespoke Corporate Academies</h3>
+            <p>Multi-month enterprise learning programs co-designed with your leadership team, aligned with internal performance reviews, and tracked in your HR portal.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Custom Curricula</span>
+              <span class="modality-pill">SCORM / LMS Integration</span>
+              <span class="modality-pill">Dedicated Facilitator</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Methodology FAQs -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Clarifications</p>
+            <h2>
+              Frequently asked questions about our
+              <span class="gradient-text">pedagogy and approach.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="faq-accordion reveal">
+          <details class="faq-item" open>
+            <summary class="faq-summary">
+              <span>How does Elevate Learning differ from standard e-learning or webinar providers?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Standard e-learning suffers from an average 85% drop-off rate because it is passive and disconnected from real work. Our methodology pairs live practitioner facilitation with customized workplace simulations, 90-day retention nudges, and Kirkpatrick Level 3/4 ROI measurement tracked directly through your HR portal.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>How much customization is included in an enterprise program?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Every program goes through Stage 01 (Assess) and Stage 02 (Design). We weave your organization's specific terminology, customer challenges, software tools, and communication policies into every workshop exercise so learning looks and feels identical to actual work.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Can we export completion records and attendance to our company LMS?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Yes. Our learning management system is fully SCORM 1.2/2004 and xAPI compliant. HR administrators can download automated CSV reports, sync via webhooks, or embed module tracking into Workday, Cornerstone, SAP SuccessFactors, and custom internal portals.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>How are trainers and facilitators selected for our specific cohort?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              We match facilitators based on specific industry sector, operational domain experience, and participant seniority. All our facilitators have at least 12 years of executive leadership experience and undergo rigorous facilitation training.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Action CTA -->
+      <section class="section-shell">
+        <div class="cta-panel glass reveal">
+          <div>
+            <h3>Ready to put this methodology to work for your team?</h3>
+            <p>Schedule a 30-minute capability discovery call with our learning design team.</p>
+          </div>
+          <a class="button" href="contact.html"
+            >Schedule discovery call <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b
+                ><small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn individual capability
+              into measurable organizational performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+            <a href="programs.html">Programs</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="about.html">About Us</a>
+            <a href="clients.html">Clients</a>
+            <a href="contact.html">Contact</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

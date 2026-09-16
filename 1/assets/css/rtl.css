@@ -1,0 +1,112 @@
+/* Oven & Bloom — right-to-left support */
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .site-nav a::after,
+html[dir="rtl"] .eyebrow::before {
+  transform-origin: right center;
+}
+
+html[dir="rtl"] .text-link:hover i {
+  transform: translateX(-5px) rotate(180deg);
+}
+
+html[dir="rtl"] .text-link i,
+html[dir="rtl"] .round-arrow i,
+html[dir="rtl"] .carousel-controls i,
+html[dir="rtl"] .btn i.ph-arrow-right,
+html[dir="rtl"] .btn i.ph-arrow-up-right {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .btn:hover i.ph-arrow-right,
+html[dir="rtl"] .btn:hover i.ph-arrow-up-right {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+html[dir="rtl"] .hero__art {
+  transform: rotate(-4deg);
+}
+
+html[dir="rtl"] .testimonial-portraits img:first-child {
+  transform: translateY(-6px) rotate(3deg);
+}
+
+html[dir="rtl"] .testimonial-portraits img:last-child {
+  transform: translateY(6px) rotate(-3deg);
+}
+
+@media (max-width: 800px) {
+  html[dir="rtl"] .testimonial-portraits img:first-child {
+    transform: translateY(-3px) rotate(2.5deg);
+  }
+
+  html[dir="rtl"] .testimonial-portraits img:last-child {
+    transform: translateY(3px) rotate(-2.5deg);
+  }
+}
+
+@media (max-width: 480px) {
+  html[dir="rtl"] .testimonial-portraits img:first-child {
+    transform: translateY(-2px) rotate(2deg);
+  }
+
+  html[dir="rtl"] .testimonial-portraits img:last-child {
+    transform: translateY(2px) rotate(-2deg);
+  }
+}
+
+/* Maintain valid standard format for phone, email, and numbers in RTL */
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] input[type="number"],
+html[dir="rtl"] input[inputmode="numeric"] {
+  direction: ltr;
+  text-align: right;
+}
+
+html[dir="rtl"] .field select {
+  background-position: left 1rem center;
+  padding-right: 1rem;
+  padding-left: 2.75rem;
+}
+
+@media (max-width: 1100px) {
+  html[dir="rtl"] .site-nav {
+    text-align: right;
+  }
+}
+
+html[dir="rtl"] .cake-modal__close {
+  inset-inline-end: auto;
+  inset-inline-start: 1rem;
+}
+
+html[dir="rtl"] .cake-modal__badge {
+  inset-inline-start: auto;
+  inset-inline-end: 1.15rem;
+}
+
+html[dir="rtl"] .nav-dropdown__trigger::after {
+  transform-origin: right center;
+}
+
+html[dir="rtl"] .nav-dropdown__menu {
+  text-align: right;
+}
+
+@media (min-width: 1101px) {
+  html[dir="rtl"] .nav-dropdown__item:hover,
+  html[dir="rtl"] .nav-dropdown__item:focus-visible {
+    transform: translateX(-3px);
+  }
+}
+
+@media (max-width: 1100px) {
+  html[dir="rtl"] .nav-dropdown__item {
+    text-align: right;
+    align-items: flex-start !important;
+  }
+}

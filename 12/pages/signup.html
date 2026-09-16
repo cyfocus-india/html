@@ -1,0 +1,42 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Create an ExamSuccess student account and begin personalized competitive exam preparation."><title>Sign Up — ExamSuccess</title><link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"><script defer src="../assets/js/main.js"></script></head><body data-page="signup"><a class="skip-link" href="#main">Skip to registration</a>
+<header class="site-header auth-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="header-brand-group">
+      <a class="brand" href="../index.html" aria-label="ExamSuccess home">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#logo"></use></svg></span>
+        <span class="brand-text"><span class="brand-name">ExamSuccess</span><span class="brand-tag">Your Success, Our Mission</span></span>
+      </a>
+    </div>
+    <div class="header-actions auth-header-actions">
+      <button class="icon-btn rtl-toggle-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="Toggle RTL layout">
+        <svg class="icon" aria-hidden="true"><use href="#rtl-icon"></use></svg>
+        <span class="dir-indicator">LTR</span>
+      </button>
+      <button class="icon-btn theme-toggle-btn" id="themeToggle" aria-label="Switch color theme" title="Switch color theme">
+        <svg class="icon" aria-hidden="true"><use href="#moon"></use></svg>
+      </button>
+      <a href="../index.html" class="btn btn-outline btn-sm back-btn" style="display:inline-flex;align-items:center;gap:6px">
+        <svg class="icon" style="transform:rotate(180deg)"><use href="#arrow"></use></svg> <span class="back-text">Back to Home</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="auth-page" id="main"><div class="auth-shell">
+  <section class="auth-visual"><span class="eyebrow" style="color:#9bc8ff">Start today</span><h1>Build a plan around your goal.</h1><p>Choose your exam, practise with real patterns and use every report to prepare more intelligently.</p><div class="stat-strip" style="margin-top:30px;background:rgba(0,0,0,.15)"><div class="stat-grid" style="grid-template-columns:1fr"><div class="stat"><svg class="icon"><use href="#users"></use></svg><span><b>2,50,000+</b>Active learners</span></div><div class="stat"><svg class="icon"><use href="#award"></use></svg><span><b>95%</b>Student satisfaction</span></div></div></div></section>
+  <section class="auth-form"><h1>Sign Up</h1><p>Set up your free learner profile in under a minute.</p><form class="form-grid" data-validate data-redirect="dashboard.html" novalidate>
+    <div class="form-row"><label for="signupName">Full name</label><input class="field" id="signupName" autocomplete="name" required><p class="field-error" data-error-for="signupName"></p></div>
+    <div class="form-row"><label for="signupEmail">Email address</label><input class="field" id="signupEmail" type="email" autocomplete="email" required><p class="field-error" data-error-for="signupEmail"></p></div>
+    <div class="form-row"><label for="signupPhone">Phone number</label><input class="field" id="signupPhone" type="tel" autocomplete="tel" required><p class="field-error" data-error-for="signupPhone"></p></div>
+    <div class="form-row"><label for="signupExam">Target exam</label><select class="field" id="signupExam" required><option value="">Choose an exam</option><option>Banking</option><option>SSC</option><option>Railways</option><option>Engineering Entrance</option><option>Teaching</option><option>Defence</option></select><p class="field-error" data-error-for="signupExam"></p></div>
+    <div class="form-row"><label for="signupPassword">Create password</label><div class="password-wrap"><input class="field" id="signupPassword" type="password" autocomplete="new-password" minlength="8" required><button class="icon-btn password-toggle" type="button" data-password-toggle="signupPassword" aria-label="Show password"><svg class="icon"><use href="#eye"></use></svg></button></div>
+    <div class="strength-meter"><div class="strength-bar"></div></div>
+    <div class="strength-text" id="strengthText">Password must be at least 8 characters</div>
+    <p class="field-error" data-error-for="signupPassword"></p></div>
+    <div class="form-row"><label for="signupConfirm">Confirm password</label><input class="field" id="signupConfirm" type="password" autocomplete="new-password" data-match="signupPassword" required><p class="field-error" data-error-for="signupConfirm"></p></div>
+    <label class="check-row" for="termsAgree"><input type="checkbox" id="termsAgree" required> I agree to the <a class="card-link" href="terms.html" style="margin:0">Terms</a> and <a class="card-link" href="privacy.html" style="margin:0">Privacy Policy</a>.</label><button class="btn btn-primary" type="submit">Create Free Account <svg class="icon"><use href="#arrow"></use></svg></button><p style="text-align:center">Already registered? <a class="card-link" href="signin.html" style="display:inline-flex;margin:0">Sign in</a></p>
+  </form></section>
+</div></main>
+<footer class="auth-footer">
+  <p style="margin:0">© 2026 ExamSuccess EdTech. All rights reserved. <a href="privacy.html" style="color:inherit;text-decoration:underline;margin-left:8px">Privacy Policy</a> · <a href="terms.html" style="color:inherit;text-decoration:underline;margin-left:4px">Terms of Service</a></p>
+</footer>
+</body></html>

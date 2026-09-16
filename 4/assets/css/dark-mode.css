@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Wag & Whisker — Dark mode
+   Applied when <html data-theme="dark"> (set by the toggle / saved choice)
+   or, before JS runs, when the OS prefers dark and no choice is saved.
+   Only tokens change here; components inherit them from style.css.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #121a1c;
+  --bg-alt: #172225;
+  --surface: #1b2528;
+  --surface-2: #1f2a2d;
+  --surface-sunk: #243236;
+  --text: #e8eeec;
+  --text-muted: #a9bab8;
+  --text-soft: #8ea2a0;
+  --heading: #f6f9f8;
+  --primary: #5cc8c0;
+  --primary-hover: #7fd8d1;
+  --on-primary: #0b1416;
+  --accent: #ffa45c;
+  --accent-hover: #ffb87c;
+  --on-accent: #1a1208;
+  --accent-text: #ffb27a;
+  --link: #7fd8d1;
+  --border: #2d3c40;
+  --border-strong: #3d5055;
+  --focus: #ffa45c;
+  --focus-halo: rgba(92, 200, 192, 0.35);
+  --success: #5fd08f;
+  --success-bg: rgba(95, 208, 143, 0.14);
+  --danger: #ff8a80;
+  --danger-bg: rgba(255, 138, 128, 0.12);
+  --warning: #f5c35b;
+  --warning-bg: rgba(245, 195, 91, 0.13);
+  --overlay: rgba(4, 8, 9, 0.7);
+  --teal-100: rgba(92, 200, 192, 0.14);
+
+  --dogs-bg: rgba(255, 164, 92, 0.14);   --dogs-ink: #ffb983;
+  --cats-bg: rgba(178, 150, 240, 0.16);  --cats-ink: #c9b5ff;
+  --birds-bg: rgba(245, 205, 70, 0.14);  --birds-ink: #f3d36b;
+  --fish-bg: rgba(90, 200, 225, 0.14);   --fish-ink: #86dcf0;
+  --small-bg: rgba(130, 200, 115, 0.15); --small-ink: #a6dd98;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 26px -10px rgba(0, 0, 0, 0.6), 0 3px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 26px 50px -18px rgba(0, 0, 0, 0.75), 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Pre-JS fallback: follow the OS unless the user explicitly chose light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --bg: #121a1c; --bg-alt: #172225; --surface: #1b2528; --surface-2: #1f2a2d; --surface-sunk: #243236;
+    --text: #e8eeec; --text-muted: #a9bab8; --text-soft: #8ea2a0; --heading: #f6f9f8;
+    --primary: #5cc8c0; --primary-hover: #7fd8d1; --on-primary: #0b1416;
+    --accent: #ffa45c; --accent-hover: #ffb87c; --on-accent: #1a1208; --accent-text: #ffb27a;
+    --link: #7fd8d1; --border: #2d3c40; --border-strong: #3d5055; --focus: #ffa45c;
+  }
+}
+
+/* Component adjustments ------------------------------------------------- */
+[data-theme="dark"] .topbar { background: #0b1214; }
+[data-theme="dark"] .site-footer,
+[data-theme="dark"] .site-footer .wave { background-color: transparent; }
+[data-theme="dark"] .site-footer { background: #0c1416; }
+[data-theme="dark"] .site-footer .wave { color: #0c1416; }
+
+[data-theme="dark"] .section--teal,
+[data-theme="dark"] .hero-2 { background: #0f3a3a; }
+[data-theme="dark"] .section--teal .btn-light,
+[data-theme="dark"] .hero-2 .btn-light { --btn-bg: #f6f9f8; --btn-fg: #0a4242; }
+
+[data-theme="dark"] .newsletter { background: #2a1d12; color: var(--text); border: 1px solid #4a3220; }
+[data-theme="dark"] .newsletter h2 { color: #ffd2ad; }
+[data-theme="dark"] .newsletter p { color: #e8d4c3; }
+[data-theme="dark"] .newsletter__form .input { background: var(--surface-2); color: var(--text); border-color: var(--border); }
+[data-theme="dark"] .newsletter__form .field-error { color: var(--danger); }
+[data-theme="dark"] .newsletter .btn-primary { --btn-bg: var(--accent); --btn-fg: var(--on-accent); }
+[data-theme="dark"] .newsletter__paw { color: var(--accent); }
+
+[data-theme="dark"] .hero__blob { opacity: 0.55; }
+[data-theme="dark"] .sticker--pick { background: var(--surface-sunk); color: var(--accent-text); }
+[data-theme="dark"] .sticker--new { background: var(--primary); color: var(--on-primary); }
+[data-theme="dark"] .pet-tile__arrow { color: #121a1c; }
+[data-theme="dark"] .calculator__result { background: #0f3a3a; }
+[data-theme="dark"] .countdown__unit { background: #0f3a3a; }
+[data-theme="dark"] .appt__date { background: var(--accent); color: var(--on-accent); }
+[data-theme="dark"] .toast { background: #f1f5f4; color: #121a1c; }
+[data-theme="dark"] .toast .icon, [data-theme="dark"] .toast a { color: #b4531a; }
+[data-theme="dark"] .tooltip { background: #f1f5f4; color: #121a1c; }
+[data-theme="dark"] .tooltip::after { border-top-color: #f1f5f4; }
+[data-theme="dark"] .hours-table tr.is-today th,
+[data-theme="dark"] .hours-table tr.is-today td { color: var(--primary); }
+[data-theme="dark"] .status--processing { color: var(--primary); }
+[data-theme="dark"] .brand-spotlight__logo { background: #f8f3ea; }
+[data-theme="dark"] .select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a9bab8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] .field.is-valid::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235fd08f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] .brand-chip,
+[data-theme="dark"] .brand-card__logo { background: #f8f3ea; border-color: transparent; }
+[data-theme="dark"] .map-card img,
+[data-theme="dark"] .status-page__art { filter: brightness(0.92) saturate(0.95); }
+[data-theme="dark"] img { filter: brightness(0.94); }
+[data-theme="dark"] .brand-chip img,
+[data-theme="dark"] .brand-card__logo img,
+[data-theme="dark"] .brand-spotlight__logo img { filter: none; }
+[data-theme="dark"] .scroll-progress { background: linear-gradient(90deg, var(--accent), var(--primary)); }
+[data-theme="dark"] ::selection { background: var(--primary); color: #0b1416; }

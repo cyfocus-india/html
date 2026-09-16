@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Play Zone</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260912">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Floating Theme and Direction Controls -->
+  <div class="auth-top-controls" aria-label="Page display settings">
+    <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode" title="Toggle Dark / Light Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <div class="dir-toggle-pill" role="group" aria-label="Direction Switcher (LTR / RTL)">
+      <button type="button" class="dir-btn active" data-dir="ltr" title="Left to Right Layout">LTR</button>
+      <button type="button" class="dir-btn" data-dir="rtl" title="Right to Left Layout">RTL</button>
+    </div>
+  </div>
+
+  <main id="main-content" style="padding: 5rem 0; display: flex; align-items: center; justify-content: center; flex-grow: 1; text-align: center;">
+    <div class="container" style="max-width: 600px;">
+      <!-- Brand Logo -->
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <a href="../index.html" class="brand-logo" style="display: inline-flex;" title="Back to Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+            <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+          </div>
+        </a>
+      </div>
+      <div style="position: relative; display: inline-block; margin-bottom: 2rem;">
+        <div style="font-size: 7rem; font-weight: 900; font-family: var(--font-heading); color: var(--primary-blue); line-height: 1; letter-spacing: -0.04em;">
+          4<span style="color: var(--accent-red);">0</span><span style="color: var(--accent-yellow);">4</span>
+        </div>
+        <div class="error-teddy" style="font-size: 3rem; position: absolute; bottom: 0; right: -25px; animation: bounce 1.5s infinite alternate;" aria-hidden="true">
+          🧸
+        </div>
+      </div>
+
+      <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 1rem; text-transform: uppercase;">
+        WHOOPS! THIS TOY IS OFF THE PLAY MAT!
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--neutral-600); margin-bottom: 2rem; line-height: 1.6;">
+        The page you are looking for might have slid down the wrong tube or has been safely packed away by our play marshals.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="../index.html" class="btn btn-primary-red btn-lg">
+          <i class="fas fa-home"></i> Back to Safety (Home 1)
+        </a>
+        <a href="play-zones.html" class="btn btn-outline-blue btn-lg">
+          Explore Play Zones
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px) rotate(10deg); }
+    }
+  </style>
+  <script src="../assets/js/main.js?v=20260912"></script>
+</body>
+</html>

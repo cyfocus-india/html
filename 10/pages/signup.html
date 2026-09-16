@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Create an Elevate Learning HR manager portal account.">
+    <title>Sign Up | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-story">
+        <a class="brand" href="../index.html"
+          ><span class="brand-mark"><i data-lucide="book-open-check"></i></span
+          ><span
+            ><b>Elevate Learning</b
+            ><small>Corporate Training Center</small></span
+          ></a
+        >
+        <div class="auth-story-copy reveal">
+          <p class="eyebrow"><span></span> Create your workspace</p>
+          <h1>Make learning visible.</h1>
+          <p>
+            Bring enrollments, attendance, modules, certificates and upcoming
+            cohorts into one organized view.
+          </p>
+          <ul class="auth-benefits">
+            <li>
+              <i data-lucide="circle-check-big"></i> One dashboard for every
+              cohort
+            </li>
+            <li><i data-lucide="circle-check-big"></i> Role-based reporting</li>
+            <li>
+              <i data-lucide="circle-check-big"></i> Accessible from any device
+            </li>
+          </ul>
+        </div>
+        <div class="auth-quote">
+          <p>Secure, fast and designed for busy people teams.</p>
+        </div>
+      </section>
+      <section class="auth-content">
+        <div class="auth-top-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span>
+          </button>
+        </div>
+        <div class="auth-card glass reveal">
+          <span class="program-icon blue"><i data-lucide="user-plus"></i></span>
+          <h2>Create HR account</h2>
+          <p>Set up your organization’s learning workspace.</p>
+          <form
+            class="auth-form"
+            data-validate
+            data-success-target="signin.html"
+            novalidate
+          >
+            <div class="field">
+              <label for="name">Full name</label>
+              <div class="input-wrap">
+                <i data-lucide="user"></i
+                ><input type="text"
+                  id="name"
+                  name="fullName"
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  required
+                  aria-describedby="name-error">
+              </div>
+              <span class="error" id="name-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="company">Organization</label>
+              <div class="input-wrap">
+                <i data-lucide="building-2"></i
+                ><input type="text"
+                  id="company"
+                  name="organization"
+                  autocomplete="organization"
+                  placeholder="Company name"
+                  required
+                  aria-describedby="company-error">
+              </div>
+              <span class="error" id="company-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="signup-email">Work email</label>
+              <div class="input-wrap">
+                <i data-lucide="mail"></i
+                ><input
+                  id="signup-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                  aria-describedby="signup-email-error">
+              </div>
+              <span class="error" id="signup-email-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="new-password">Create password</label>
+              <div class="input-wrap">
+                <i data-lucide="lock-keyhole"></i
+                ><input
+                  id="new-password"
+                  name="password"
+                  type="password"
+                  data-password-strength
+                  data-minlength="8"
+                  autocomplete="new-password"
+                  placeholder="Minimum 8 characters"
+                  required
+                  aria-describedby="new-password-error"><button
+                  class="password-toggle"
+                  type="button"
+                  data-password-toggle="#new-password"
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+              <div class="password-meter"><span></span></div>
+              <span class="error" id="new-password-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label class="check-label"
+                ><input type="checkbox" name="terms" required aria-describedby="terms-error"> I agree to the
+                <a href="terms.html">terms</a> and
+                <a href="privacy.html">privacy policy</a>.</label
+              >
+              <span class="error" id="terms-error" role="alert"></span>
+            </div>
+            <button class="button" type="submit">
+              Create account <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+          <p class="auth-switch">
+            Already registered? <a href="signin.html">Sign in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/forms.js"></script>
+  </body>
+</html>

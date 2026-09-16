@@ -1,0 +1,153 @@
+/* Right-To-Left (RTL) Layout System */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .brand {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .nav-actions {
+  margin-left: 0;
+  margin-right: 28px;
+}
+
+html[dir="rtl"] .hero-image-wrap {
+  transform: perspective(1200px) rotateY(1.8deg);
+}
+
+html[dir="rtl"] .hero-image-wrap:hover {
+  transform: perspective(1200px) rotateY(0) translateY(-4px);
+}
+
+html[dir="rtl"] .floating-card-top {
+  left: auto;
+  right: -36px;
+}
+
+html[dir="rtl"] .floating-card-bottom {
+  right: auto;
+  left: -24px;
+}
+
+html[dir="rtl"] .floating-card > svg {
+  margin-left: 0;
+  margin-right: 6px;
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .avatar-stack {
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+html[dir="rtl"] .avatar-stack span {
+  margin-left: 0;
+  margin-right: -10px;
+}
+
+html[dir="rtl"] .outcome-bar article:not(:last-child):after {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .eyebrow span {
+  background: linear-gradient(-90deg, var(--blue), var(--cyan));
+}
+
+html[dir="rtl"] .button:hover svg {
+  transform: translateX(-2px);
+}
+
+html[dir="rtl"] .text-link:hover svg,
+html[dir="rtl"] .program-card a:hover svg {
+  transform: translate(-3px, -3px);
+}
+
+html[dir="rtl"] .dropdown-item:hover,
+html[dir="rtl"] .dropdown-item.active {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .mobile-dropdown-menu {
+  padding-left: 0;
+  padding-right: 14px;
+}
+
+html[dir="rtl"] .mobile-menu a:hover,
+html[dir="rtl"] .mobile-menu a.active,
+html[dir="rtl"] .mobile-dropdown-toggle:hover,
+html[dir="rtl"] .mobile-dropdown-toggle.active {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .skip-link {
+  left: auto;
+  right: 1rem;
+}
+
+@media (max-width: 680px) {
+  html[dir="rtl"] .nav-actions {
+    margin-right: auto;
+  }
+  html[dir="rtl"] .floating-card-top {
+    right: 8px;
+    left: auto;
+  }
+  html[dir="rtl"] .floating-card-bottom {
+    left: 8px;
+    right: auto;
+  }
+}
+
+/* Dashboard RTL Mirroring */
+html[dir="rtl"] .dash-sidebar {
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+html[dir="rtl"] .dash-top-actions {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .notifications-dropdown {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .notify-item.unread::before {
+  left: auto;
+  right: 6px;
+}
+
+html[dir="rtl"] .filters-row .button {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .employee-table th,
+html[dir="rtl"] .employee-table td {
+  text-align: right;
+}
+
+html[dir="rtl"] .sidebar-toggle {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+html[dir="rtl"] .explore-program-btn:hover {
+  transform: translateX(-3px);
+}
+
+html[dir="rtl"] .program-modal-close-btn {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .venue-actions .button svg {
+  transform: scaleX(-1);
+}
+
+

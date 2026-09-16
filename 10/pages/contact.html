@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Talk to an Elevate Learning corporate training advisor.">
+    <title>Contact | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="../index.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="../index.html" class="dropdown-item">Home 1</a>
+              <a href="../index1.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="programs.html">Programs</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="clients.html">Clients</a>
+          <a href="in-house-training.html">In-House Training</a>
+          <a href="about.html">About Us</a>
+          <a class="active" href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span></button
+          ><a class="button button-sm" href="signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          ><button aria-label="Open navigation" type="button"
+            class="menu-button"
+            data-menu-button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Mobile navigation" class="mobile-menu glass" id="mobile-menu" data-mobile-menu>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+          </div>
+        </div>
+        <a href="programs.html">Programs</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="clients.html">Clients</a>
+        <a href="in-house-training.html">In-House Training</a>
+        <a href="about.html">About Us</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+        </div>
+        <a href="signin.html" class="mobile-login"><i data-lucide="user-round"></i> Sign In</a>
+      </nav>
+    </header>
+    <main id="main" class="inner-main">
+      <section class="page-hero section-shell reveal">
+        <p class="eyebrow"><span></span> Start a conversation</p>
+        <h1>
+          Let’s build skills that
+          <span class="gradient-text">make a difference.</span>
+        </h1>
+        <p>
+          Tell us what your people and business need. A learning advisor will
+          get back to you within one working day.
+        </p>
+      </section>
+      <section class="section-shell contact-grid">
+        <aside class="contact-list" aria-label="Contact options">
+          <article class="contact-item glass reveal">
+            <span class="feature-icon"><i data-lucide="mail"></i></span>
+            <div><b>Email us</b><span>hello@elevatelearning.example</span></div>
+          </article>
+          <article class="contact-item glass reveal" data-delay="1">
+            <span class="feature-icon"><i data-lucide="phone"></i></span>
+            <div><b>Call our team</b><span>+91 80 5555 0142</span></div>
+          </article>
+          <article class="contact-item glass reveal" data-delay="2">
+            <span class="feature-icon"><i data-lucide="clock-3"></i></span>
+            <div><b>Response time</b><span>Within one working day</span></div>
+          </article>
+          <article class="contact-item glass reveal">
+            <span class="feature-icon"><i data-lucide="map-pin"></i></span>
+            <div>
+              <b>Training reach</b
+              ><span>India and global virtual delivery</span>
+            </div>
+          </article>
+        </aside>
+        <article class="content-card glass reveal">
+          <h2>Tell us about your goals</h2>
+          <form class="form-grid" data-validate novalidate>
+            <div class="field">
+              <label for="contact-name">Name</label
+              ><input type="text"
+                id="contact-name"
+                name="name"
+                autocomplete="name"
+                required
+                placeholder="Your full name"
+                aria-describedby="contact-name-error"><span class="error" id="contact-name-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="contact-email">Work email</label
+              ><input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="you@company.com"
+                aria-describedby="contact-email-error"><span class="error" id="contact-email-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="contact-org">Organization</label
+              ><input type="text"
+                id="contact-org"
+                name="organization"
+                autocomplete="organization"
+                required
+                placeholder="Company name"
+                aria-describedby="contact-org-error"><span class="error" id="contact-org-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="contact-team">Team size</label
+              ><select id="contact-team" name="teamSize" required aria-describedby="contact-team-error">
+                <option value="">Select team size</option>
+                <option>1–25 learners</option>
+                <option>26–100 learners</option>
+                <option>101–500 learners</option>
+                <option>500+ learners</option></select
+              ><span class="error" id="contact-team-error" role="alert"></span>
+            </div>
+            <div class="field full">
+              <label for="contact-need">What would you like to improve?</label
+              ><textarea
+                id="contact-need"
+                name="goals"
+                required
+                placeholder="Share the capability, audience and outcome you have in mind."
+                aria-describedby="contact-need-error"
+              ></textarea
+              ><span class="error" id="contact-need-error" role="alert"></span>
+            </div>
+            <div class="field full">
+              <button class="button" type="submit">
+                Send enquiry <i data-lucide="send"></i>
+              </button>
+              <div class="form-success" role="status">
+                Thanks—your enquiry is ready. Our learning team will be in touch
+                shortly.
+              </div>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Live Interactive Map Section -->
+      <section class="section-shell map-section-wrapper reveal">
+        <div class="section-heading" style="margin-bottom: 24px">
+          <div>
+            <p class="eyebrow"><span></span> Executive Campuses & Training Hubs</p>
+            <h2>
+              Find an executive learning center
+              <span class="gradient-text">near your team.</span>
+            </h2>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--muted); max-width: 480px; margin: 0">
+            High-tech corporate training suites, live broadcast studios, and breakout innovation labs in key metropolitan business hubs.
+          </p>
+        </div>
+
+        <div class="map-interactive-container glass">
+          <div class="map-viewport-wrapper">
+            <div class="map-floating-controls" role="group" aria-label="Select Training Hub">
+              <button type="button" class="map-campus-pill active" data-campus="blr">
+                <i data-lucide="building-2"></i> Bengaluru HQ
+              </button>
+              <button type="button" class="map-campus-pill" data-campus="mum">
+                <i data-lucide="building-2"></i> Mumbai BKC
+              </button>
+              <button type="button" class="map-campus-pill" data-campus="del">
+                <i data-lucide="building-2"></i> Delhi NCR
+              </button>
+              <button type="button" class="map-campus-pill" data-campus="hyd">
+                <i data-lucide="building-2"></i> Hyderabad
+              </button>
+            </div>
+            <div id="training-centers-map" role="region" aria-label="Interactive Map of Corporate Training Hubs"></div>
+          </div>
+          <aside class="map-venue-details" id="venue-details-card">
+            <div>
+              <span class="venue-badge" id="venue-badge">
+                <i data-lucide="map-pin"></i> Global Headquarters
+              </span>
+              <h3 class="venue-name" id="venue-name">Bengaluru Executive Campus</h3>
+              <p class="venue-address" id="venue-address">
+                100ft Road, Indiranagar Tech Corridor, Bengaluru, Karnataka 560038
+              </p>
+              <div class="venue-specs-list">
+                <div class="venue-spec-item">
+                  <i data-lucide="phone"></i>
+                  <span id="venue-phone">+91 80 5555 0142 (Direct Board)</span>
+                </div>
+                <div class="venue-spec-item">
+                  <i data-lucide="clock"></i>
+                  <span id="venue-hours">Mon – Fri: 8:30 AM – 7:30 PM IST</span>
+                </div>
+                <div class="venue-spec-item">
+                  <i data-lucide="users"></i>
+                  <span id="venue-capacity">Capacity: 4 Executive Auditoriums · 12 Labs</span>
+                </div>
+                <div class="venue-spec-item">
+                  <i data-lucide="car"></i>
+                  <span id="venue-parking">Indiranagar Metro (250m) · Dedicated Valet Parking</span>
+                </div>
+              </div>
+            </div>
+            <div class="venue-actions">
+              <a href="https://maps.google.com/?q=12.9716,77.5946" target="_blank" rel="noopener" class="button button-sm" id="venue-directions-btn">
+                <i data-lucide="navigation"></i> Get Directions
+              </a>
+              <button type="button" class="button button-sm button-ghost" data-schedule-tour>
+                <i data-lucide="calendar"></i> Book Campus Tour
+              </button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b
+                ><small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn capability into
+              measurable performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+            <a href="programs.html">Programs</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="about.html">About Us</a>
+            <a href="clients.html">Clients</a>
+            <a href="contact.html">Contact</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/forms.js"></script>
+  </body>
+</html>

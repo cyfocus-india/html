@@ -1,0 +1,84 @@
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .skip-link {
+  right: 0.75rem;
+  left: auto;
+}
+
+html[dir="rtl"] .hero::before {
+  background:
+    linear-gradient(270deg, rgba(7, 8, 8, 0.96) 0%, rgba(7, 8, 8, 0.75) 43%, rgba(7, 8, 8, 0.15) 78%),
+    linear-gradient(0deg, rgba(7, 8, 8, 0.8) 0%, transparent 45%);
+}
+
+html[dir="rtl"] .hero-media {
+  object-position: 39% center;
+  transform: scaleX(-1) scale(1.03);
+}
+
+html[dir="rtl"] .text-link svg,
+html[dir="rtl"] [data-lucide="arrow-right"] {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .text-link:hover svg {
+  transform: scaleX(-1) translateX(0.25rem);
+}
+
+html[dir="rtl"] .price-table th,
+html[dir="rtl"] .price-table td {
+  text-align: right;
+}
+
+html[dir="rtl"] .estimate-result {
+  border-right: 4px solid var(--accent);
+  border-left: 0;
+}
+
+html[dir="rtl"] .timeline::before {
+  right: 1.1rem;
+  left: auto;
+}
+
+html[dir="rtl"] .timeline-item {
+  padding: 0.3rem 3.5rem 1.2rem 0;
+}
+
+html[dir="rtl"] .timeline-item::before {
+  right: 0.7rem;
+  left: auto;
+}
+
+html[dir="rtl"] .page-hero .ghost-word {
+  right: auto;
+  left: -0.04em;
+}
+
+html[dir="rtl"] .scroll-cue {
+  right: auto;
+  left: 1.25rem;
+}
+
+@media (max-width: 639px) {
+  html[dir="rtl"] .hero::before {
+    background: linear-gradient(0deg, rgba(7, 8, 8, 0.96) 0%, rgba(7, 8, 8, 0.62) 72%, rgba(7, 8, 8, 0.25) 100%);
+  }
+}
+
+html[dir="rtl"] .dropdown-toggle {
+  text-align: right;
+}
+
+html[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 1023px) {
+  html[dir="rtl"] .dropdown-menu {
+    padding: 0.35rem 1rem 0.35rem 0;
+  }
+}
+

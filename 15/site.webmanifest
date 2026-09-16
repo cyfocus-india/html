@@ -1,0 +1,19 @@
+{
+  "name": "SolarNest — Rooftop Solar Systems",
+  "short_name": "SolarNest",
+  "icons": [
+    {
+      "src": "assets/images/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2f9631",
+  "background_color": "#0D1B2A",
+  "display": "standalone"
+}

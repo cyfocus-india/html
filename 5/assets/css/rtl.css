@@ -1,0 +1,2 @@
+[dir="rtl"] .lucide-arrow-right,[dir="rtl"] .lucide-arrow-up-right,[dir="rtl"] .lucide-chevron-right,[dir="rtl"] .lucide-arrow-left,[dir="rtl"] .lucide-chevron-left{transform:scaleX(-1)}[dir="rtl"] .hero-visual{direction:ltr}[dir="rtl"] .brand small{letter-spacing:.15em}[dir="rtl"] .select-arrow{transform:scaleX(-1)}[dir="rtl"] .timeline{border-inline-start:2px solid var(--line);border-left:0}[dir="rtl"] .toast{right:auto;left:24px}[dir="rtl"] .dashboard-nav .active{border-inline-start:3px solid var(--blue)}
+[dir="rtl"] .campus-map-badge .button{margin-inline-start:auto}

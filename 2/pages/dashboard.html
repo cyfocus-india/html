@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DriveWay student dashboard for booking lessons, tracking progress, viewing feedback, and managing your driving course.">
+  <meta name="theme-color" content="#08263f">
+  <title>Dashboard | DriveWay</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="../assets/js/dashboard.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <div class="dashboard-shell">
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Student dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="DriveWay home">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="gauge"></i></span>
+        <span><span class="brand-word">Drive<span class="accent">Way</span></span><span class="brand-sub">DRIVING SCHOOL</span></span>
+      </a>
+      <nav class="dash-nav" id="dash-nav">
+        <a class="active" href="#overview" data-tab="overview"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+        <a href="#booking" data-tab="booking"><i data-lucide="calendar-days"></i> Book a Lesson</a>
+        <a href="#lessons" data-tab="lessons"><i data-lucide="calendar-check"></i> My Lessons</a>
+        <a href="#progress" data-tab="progress"><i data-lucide="clock-3"></i> Progress</a>
+        <a href="#feedback" data-tab="feedback"><i data-lucide="message-square-text"></i> Feedback</a>
+        <a href="#documents" data-tab="documents"><i data-lucide="file-text"></i> Documents</a>
+        <a href="#profile" data-tab="profile"><i data-lucide="user-round"></i> My Profile</a>
+        <a href="#payments" data-tab="payments"><i data-lucide="credit-card"></i> Payments</a>
+        <a href="#notifications" data-tab="notifications"><i data-lucide="bell"></i> Notifications <span class="nav-badge" id="dash-badge">3</span></a>
+        <a href="#logout" data-tab="logout"><i data-lucide="log-out"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="dash-main" id="dashboard-content">
+      <header class="dash-topbar">
+        <button class="sidebar-toggle" type="button" id="sidebar-toggle" aria-label="Toggle dashboard menu" aria-controls="dash-sidebar" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <a class="brand dash-mobile-brand" href="../index.html"><span class="brand-word">Drive<span class="accent">Way</span></span></a>
+        
+        <div class="dash-topbar-right">
+          <!-- Dark / Light Theme Toggle -->
+          <button class="icon-button topbar-tool-btn" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- RTL / LTR Direction Toggle -->
+          <button class="icon-button topbar-tool-btn rtl-btn" id="rtl-toggle" type="button" aria-label="Toggle layout direction (RTL/LTR)" title="Toggle layout direction">
+            <span class="rtl-badge">RTL</span>
+          </button>
+
+          <!-- Notification Bell -->
+          <button class="notification" id="top-notification-btn" type="button" data-tab="notifications" aria-label="View notifications">
+            <i data-lucide="bell"></i><span id="top-badge">3</span>
+          </button>
+          
+          <!-- User Profile Dropdown Pill -->
+          <div class="user-profile-menu" id="user-profile-menu">
+            <button class="user-profile-btn" id="user-profile-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+              <div class="avatar" aria-hidden="true">PS</div>
+              <div class="user-copy" style="text-align: left;">
+                <strong>Priya Sharma</strong><span>Student ID: DWSTU12345</span>
+              </div>
+              <i class="chevron-icon" data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="user-profile-dropdown" id="user-profile-dropdown" role="menu">
+              <div class="user-dropdown-header">
+                <strong>Priya Sharma</strong>
+                <span>Student ID: DWSTU12345 • Active</span>
+              </div>
+              <button class="user-dropdown-item" type="button" data-tab="profile" role="menuitem">
+                <i data-lucide="user-round"></i> My Profile &amp; Settings
+              </button>
+              <button class="user-dropdown-item" type="button" data-tab="lessons" role="menuitem">
+                <i data-lucide="calendar-check"></i> My Booked Lessons
+              </button>
+              <button class="user-dropdown-item" type="button" data-tab="documents" role="menuitem">
+                <i data-lucide="file-text"></i> Documents &amp; License
+              </button>
+              <button class="user-dropdown-item" type="button" data-tab="payments" role="menuitem">
+                <i data-lucide="credit-card"></i> Fee Invoices &amp; Payments
+              </button>
+              <button class="user-dropdown-item" type="button" data-tab="notifications" role="menuitem">
+                <i data-lucide="bell"></i> Notifications (3)
+              </button>
+              <div style="border-top:1px solid #edf2f7; margin:6px 0;"></div>
+              <button class="user-dropdown-item danger" type="button" data-tab="logout" role="menuitem">
+                <i data-lucide="log-out"></i> Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- ================= TAB 1: OVERVIEW ================= -->
+        <section class="dash-view active" id="view-overview" data-view="overview">
+          <div class="dash-welcome">
+            <div>
+              <h1 id="welcome-heading">Welcome back, Priya! 👋</h1>
+              <p>You have completed 45% of your Four-Wheeler course. Keep driving!</p>
+            </div>
+            <div class="next-lesson">
+              <i data-lucide="calendar-days"></i>
+              <div><small>Next Lesson</small><strong>Tomorrow, 10:00 AM</strong></div>
+              <div class="avatar rajesh" aria-hidden="true">RK</div>
+              <div class="instructor"><small>Instructor</small><strong>Rajesh Kumar</strong></div>
+            </div>
+          </div>
+
+          <div class="metric-cards">
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="clock-3"></i></div>
+              <div class="metric-info"><strong>18 / 40 hrs</strong><span>Completed Training</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon orange"><i data-lucide="hourglass"></i></div>
+              <div class="metric-info"><strong>22 hrs</strong><span>Remaining Practice</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon green"><i data-lucide="calendar-check"></i></div>
+              <div class="metric-info"><strong>18 Lessons</strong><span>Attended Successfully</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon purple"><i data-lucide="trophy"></i></div>
+              <div class="metric-info"><strong>78% Score</strong><span>Test Readiness</span></div>
+            </div>
+          </div>
+
+          <div class="dash-grid">
+            <section class="dash-card" id="quick-booking" aria-labelledby="booking-heading">
+              <div class="card-heading-row">
+                <h2 id="booking-heading">Quick Lesson Booking</h2>
+                <button class="btn" type="button" data-tab="booking">Full Calendar</button>
+              </div>
+              <p class="subtext">Select your preferred date, time and instructor.</p>
+              <div class="booking-fields">
+                <div class="field"><label for="lesson-date-overview">Select Date</label><input id="lesson-date-overview" type="date" value="2026-09-02"></div>
+                <div class="field"><label for="lesson-time-overview">Select Time</label><select id="lesson-time-overview"><option>10:00 AM</option><option>11:00 AM</option><option>02:00 PM</option><option>04:00 PM</option></select></div>
+                <div class="field"><label for="lesson-instructor-overview">Select Instructor</label><select id="lesson-instructor-overview"><option>Rajesh Kumar (4.9 ★)</option><option>Anita Rao (4.8 ★)</option><option>Vikram Singh (4.9 ★)</option></select></div>
+              </div>
+              <div class="slot-heading">Available Slots</div>
+              <div class="slot-date"><span>‹</span><span>Wednesday, September 2, 2026</span><span>›</span></div>
+              <div class="slot-grid" aria-label="Available lesson times">
+                <button class="time-slot" type="button" data-time="08:00 AM">08:00 AM</button>
+                <button class="time-slot" type="button" data-time="09:00 AM">09:00 AM</button>
+                <button class="time-slot active" type="button" data-time="10:00 AM">10:00 AM</button>
+                <button class="time-slot" type="button" data-time="11:00 AM">11:00 AM</button>
+                <button class="time-slot" type="button" data-time="01:00 PM">01:00 PM</button>
+                <button class="time-slot" type="button" data-time="02:00 PM">02:00 PM</button>
+                <button class="time-slot" type="button" data-time="03:00 PM">03:00 PM</button>
+                <button class="time-slot" type="button" data-time="04:00 PM">04:00 PM</button>
+              </div>
+              <div class="booking-footer">
+                <span id="booking-status-overview" role="status">Selected 10:00 AM.</span>
+                <button class="btn btn-navy" id="book-slot-overview" type="button">Book Selected Slot</button>
+              </div>
+            </section>
+
+            <section class="dash-card" id="progress-summary" aria-labelledby="progress-heading">
+              <div class="card-heading-row">
+                <h2 id="progress-heading">Progress Overview</h2>
+                <button class="btn" type="button" data-tab="progress">Full Matrix</button>
+              </div>
+              <p class="subtext">Track your completed hours against the required minimum.</p>
+              <div class="progress-layout">
+                <div class="progress-ring" role="img" aria-label="18 of 40 lesson hours completed, 45 percent">
+                  <div><strong>18 / 40</strong><span>Hours Completed</span></div>
+                </div>
+                <div class="progress-meta">
+                  <div class="progress-line"><span class="progress-dot"></span><div><span>Completed Hours</span><strong>18h 00m</strong></div></div>
+                  <div class="progress-line"><span class="progress-dot blue"></span><div><span>Remaining Hours</span><strong>22h 00m</strong></div></div>
+                  <div class="minimum"><i data-lucide="trophy"></i><div><span>Minimum Required</span><strong>40 Hours</strong></div></div>
+                </div>
+              </div>
+              <div class="progress-note"><i data-lucide="circle-check"></i> Great job! You're making steady progress toward your driving license.</div>
+            </section>
+
+            <section class="dash-card" id="feedback-summary" aria-labelledby="feedback-heading">
+              <div class="card-heading-row">
+                <h2 id="feedback-heading">Recent Instructor Feedback</h2>
+                <button class="btn" type="button" data-tab="feedback">View All</button>
+              </div>
+              <article class="feedback-item">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div>
+                  <div class="feedback-meta"><span>Aug 26, 2026</span><span>•</span><span>10:00 AM – 11:00 AM</span></div>
+                  <div>Instructor: <strong>Rajesh Kumar</strong></div>
+                  <p>Good control on clutch and braking. Improved steering control on turns. Practice lane changes more for better confidence.</p>
+                </div>
+                <span class="status-complete">Completed</span>
+              </article>
+              <article class="feedback-item">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div>
+                  <div class="feedback-meta"><span>Aug 22, 2026</span><span>•</span><span>09:00 AM – 10:00 AM</span></div>
+                  <div>Instructor: <strong>Rajesh Kumar</strong></div>
+                  <p>Excellent progress! Parking and reverse driving techniques are much better. Keep it up!</p>
+                </div>
+                <span class="status-complete">Completed</span>
+              </article>
+            </section>
+
+            <section class="dash-card" id="report-summary" aria-labelledby="report-heading">
+              <div class="card-heading-row">
+                <h2 id="report-heading">Progress Summary Report</h2>
+                <button class="btn" type="button" data-tab="documents">All Docs</button>
+              </div>
+              <p class="subtext">Download your official verified lesson progress sheet.</p>
+              <div class="report-preview">
+                <div class="report-brand">◉ Drive<span>Way</span><small>DRIVING SCHOOL</small></div>
+                <h3>Lesson Progress Summary</h3>
+                <div class="report-details">
+                  <span>Student Name</span><span>: Priya Sharma</span>
+                  <span>Student ID</span><span>: DWSTU12345</span>
+                  <span>License Type</span><span>: Four Wheeler License</span>
+                  <span>Report Date</span><span>: Aug 28, 2026</span>
+                </div>
+                <div class="report-stats">
+                  <div class="report-stat"><strong>18h 00m</strong><span>Completed Hours</span></div>
+                  <div class="report-stat"><strong>22h 00m</strong><span>Remaining Hours</span></div>
+                  <div class="report-stat"><strong>40h 00m</strong><span>Minimum Required</span></div>
+                  <div class="report-stat"><strong>45%</strong><span>Progress</span></div>
+                </div>
+              </div>
+              <button class="btn download-report" id="download-report" type="button"><i data-lucide="download"></i> Download Report (PDF)</button>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= TAB 2: BOOK A LESSON ================= -->
+        <section class="dash-view" id="view-booking" data-view="booking">
+          <div class="view-header">
+            <div>
+              <h1>Schedule a Driving Lesson</h1>
+              <p>Choose your training topic, instructor, vehicle type, and preferred slot.</p>
+            </div>
+            <button class="btn btn-outline" type="button" data-tab="lessons"><i data-lucide="calendar-check"></i> View Booked Lessons</button>
+          </div>
+
+          <div class="dash-grid">
+            <section class="dash-card" style="grid-column: 1 / -1">
+              <h2>Lesson Details &amp; Slot Selection</h2>
+              <p class="subtext">Complete the booking form to reserve your practical in-car session.</p>
+              <form id="full-booking-form">
+                <div class="booking-fields" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
+                  <div class="field">
+                    <label for="book-course">Course / Category</label>
+                    <select id="book-course">
+                      <option>Four Wheeler (Car) - Manual</option>
+                      <option>Four Wheeler (Car) - Automatic</option>
+                      <option>Two Wheeler (Motorcycle/Scooter)</option>
+                      <option>Refresher Coaching</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="book-instructor">Preferred Instructor</label>
+                    <select id="book-instructor">
+                      <option value="Rajesh Kumar">Rajesh Kumar (12 yrs exp - 4.9 ★)</option>
+                      <option value="Anita Rao">Anita Rao (9 yrs exp - 4.8 ★)</option>
+                      <option value="Vikram Singh">Vikram Singh (8 yrs exp - 4.9 ★)</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="book-location">Pickup Location</label>
+                    <select id="book-location">
+                      <option>Main Training Center (123 Drive Way)</option>
+                      <option>Metro Station Gate 2</option>
+                      <option>Home Pickup (+ ₹150)</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="book-date">Select Date</label>
+                    <input id="book-date" type="date" value="2026-09-02">
+                  </div>
+                </div>
+
+                <div class="slot-heading" style="margin-top: 10px">Available Time Slots</div>
+                <div class="slot-grid" id="full-booking-slots" style="grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); margin-bottom: 20px;">
+                  <button class="time-slot" type="button" data-time="07:00 AM">07:00 AM</button>
+                  <button class="time-slot" type="button" data-time="08:00 AM">08:00 AM</button>
+                  <button class="time-slot" type="button" data-time="09:00 AM">09:00 AM</button>
+                  <button class="time-slot active" type="button" data-time="10:00 AM">10:00 AM</button>
+                  <button class="time-slot" type="button" data-time="11:00 AM">11:00 AM</button>
+                  <button class="time-slot" type="button" data-time="02:00 PM">02:00 PM</button>
+                  <button class="time-slot" type="button" data-time="03:00 PM">03:00 PM</button>
+                  <button class="time-slot" type="button" data-time="04:00 PM">04:00 PM</button>
+                  <button class="time-slot" type="button" data-time="05:00 PM">05:00 PM</button>
+                  <button class="time-slot" type="button" data-time="06:00 PM">06:00 PM</button>
+                </div>
+
+                <div class="field">
+                  <label for="book-notes">Special Focus Notes (Optional)</label>
+                  <input id="book-notes" placeholder="e.g. Would like to practice parallel parking and hill start today" style="width:100%;min-height:40px;padding:8px 12px;border:1px solid #cbd4dd;border-radius:7px;">
+                </div>
+
+                <div class="booking-footer" style="margin-top: 20px">
+                  <span id="full-booking-status" style="margin-right: auto; color: #0b7944; font-weight: 600;">Selected: 10:00 AM on Sep 2, 2026 with Rajesh Kumar.</span>
+                  <button class="btn btn-navy" id="full-book-btn" type="button" style="min-height: 42px; padding: 0 24px;">Confirm &amp; Book Lesson</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= TAB 3: MY LESSONS ================= -->
+        <section class="dash-view" id="view-lessons" data-view="lessons">
+          <div class="view-header">
+            <div>
+              <h1>My Driving Lessons</h1>
+              <p>Track your scheduled sessions, view completed driving logs, and manage bookings.</p>
+            </div>
+            <div class="filter-group" id="lesson-filter-group">
+              <button class="filter-btn active" type="button" data-filter="all">All Lessons (20)</button>
+              <button class="filter-btn" type="button" data-filter="upcoming">Upcoming (2)</button>
+              <button class="filter-btn" type="button" data-filter="completed">Completed (18)</button>
+            </div>
+          </div>
+
+          <div class="lesson-list" id="lesson-items-container">
+            <!-- Upcoming Lesson 1 -->
+            <article class="lesson-card" data-status="upcoming">
+              <div class="lesson-time-box">
+                <strong>10:00 AM</strong>
+                <small>Tomorrow</small>
+              </div>
+              <div class="lesson-detail">
+                <h3>Lesson #19: Parallel Parking &amp; Bay Reversing</h3>
+                <p><i data-lucide="map-pin" style="width:12px;height:12px;display:inline"></i> Main Training Track • Swift Dual-Control (Manual)</p>
+              </div>
+              <div class="lesson-instructor">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div><strong>Rajesh Kumar</strong><small>Certified Coach</small></div>
+              </div>
+              <div><span class="status-complete" style="color:#063fb0;background:#eef4fd;border-color:#d4e4fa">Confirmed</span></div>
+              <div class="lesson-actions">
+                <button class="btn btn-outline reschedule-btn" type="button">Reschedule</button>
+                <button class="btn cancel-btn" type="button" style="color:#cc2f28;border-color:#ecc9c7">Cancel</button>
+              </div>
+            </article>
+
+            <!-- Upcoming Lesson 2 -->
+            <article class="lesson-card" data-status="upcoming">
+              <div class="lesson-time-box">
+                <strong>09:00 AM</strong>
+                <small>Sep 5, 2026</small>
+              </div>
+              <div class="lesson-detail">
+                <h3>Lesson #20: Highway Merging &amp; Lane Changes</h3>
+                <p><i data-lucide="map-pin" style="width:12px;height:12px;display:inline"></i> Outer Ring Road • Swift Dual-Control (Manual)</p>
+              </div>
+              <div class="lesson-instructor">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div><strong>Rajesh Kumar</strong><small>Certified Coach</small></div>
+              </div>
+              <div><span class="status-complete" style="color:#063fb0;background:#eef4fd;border-color:#d4e4fa">Confirmed</span></div>
+              <div class="lesson-actions">
+                <button class="btn btn-outline reschedule-btn" type="button">Reschedule</button>
+                <button class="btn cancel-btn" type="button" style="color:#cc2f28;border-color:#ecc9c7">Cancel</button>
+              </div>
+            </article>
+
+            <!-- Completed Lesson 18 -->
+            <article class="lesson-card" data-status="completed">
+              <div class="lesson-time-box lesson-time-completed">
+                <strong>10:00 AM</strong>
+                <small>Aug 26, 2026</small>
+              </div>
+              <div class="lesson-detail">
+                <h3>Lesson #18: Clutch Control &amp; Stop-and-Go Traffic</h3>
+                <p><i data-lucide="check-circle" style="width:12px;height:12px;display:inline;color:#16804a"></i> 1 Hour Completed • Score: 4.8 / 5</p>
+              </div>
+              <div class="lesson-instructor">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div><strong>Rajesh Kumar</strong><small>Feedback Added</small></div>
+              </div>
+              <div><span class="status-complete">Completed</span></div>
+              <div class="lesson-actions">
+                <button class="btn btn-outline view-feedback-btn" type="button" data-tab="feedback">View Feedback</button>
+              </div>
+            </article>
+
+            <!-- Completed Lesson 17 -->
+            <article class="lesson-card" data-status="completed">
+              <div class="lesson-time-box lesson-time-completed">
+                <strong>09:00 AM</strong>
+                <small>Aug 22, 2026</small>
+              </div>
+              <div class="lesson-detail">
+                <h3>Lesson #17: 3-Point Turn &amp; Kerbside Parking</h3>
+                <p><i data-lucide="check-circle" style="width:12px;height:12px;display:inline;color:#16804a"></i> 1 Hour Completed • Score: 4.7 / 5</p>
+              </div>
+              <div class="lesson-instructor">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div><strong>Rajesh Kumar</strong><small>Feedback Added</small></div>
+              </div>
+              <div><span class="status-complete">Completed</span></div>
+              <div class="lesson-actions">
+                <button class="btn btn-outline view-feedback-btn" type="button" data-tab="feedback">View Feedback</button>
+              </div>
+            </article>
+
+            <!-- Completed Lesson 16 -->
+            <article class="lesson-card" data-status="completed">
+              <div class="lesson-time-box lesson-time-completed">
+                <strong>04:00 PM</strong>
+                <small>Aug 19, 2026</small>
+              </div>
+              <div class="lesson-detail">
+                <h3>Lesson #16: City Driving &amp; Pedestrian Crossings</h3>
+                <p><i data-lucide="check-circle" style="width:12px;height:12px;display:inline;color:#16804a"></i> 1 Hour Completed • Score: 4.5 / 5</p>
+              </div>
+              <div class="lesson-instructor">
+                <div class="avatar rajesh" aria-hidden="true">RK</div>
+                <div><strong>Rajesh Kumar</strong><small>Feedback Added</small></div>
+              </div>
+              <div><span class="status-complete">Completed</span></div>
+              <div class="lesson-actions">
+                <button class="btn btn-outline view-feedback-btn" type="button" data-tab="feedback">View Feedback</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================= TAB 4: PROGRESS ================= -->
+        <section class="dash-view" id="view-progress" data-view="progress">
+          <div class="view-header">
+            <div>
+              <h1>Training Progress &amp; Skill Mastery</h1>
+              <p>Detailed evaluation of your practical driving competencies and test readiness.</p>
+            </div>
+            <button class="btn btn-navy" type="button" id="download-report-2"><i data-lucide="download"></i> Export Progress PDF</button>
+          </div>
+
+          <div class="dash-grid" style="margin-bottom: 22px">
+            <section class="dash-card">
+              <h2>Mandatory Training Hours</h2>
+              <p class="subtext">18 of 40 completed training hours logged.</p>
+              <div class="progress-layout">
+                <div class="progress-ring" role="img" aria-label="18 of 40 lesson hours completed, 45 percent">
+                  <div><strong>45%</strong><span>Overall Progress</span></div>
+                </div>
+                <div class="progress-meta">
+                  <div class="progress-line"><span class="progress-dot"></span><div><span>Completed Practical Hours</span><strong>18h 00m (18 Lessons)</strong></div></div>
+                  <div class="progress-line"><span class="progress-dot blue"></span><div><span>Remaining Requirement</span><strong>22h 00m</strong></div></div>
+                  <div class="minimum"><i data-lucide="check-check"></i><div><span>Test Eligibility Threshold</span><strong>40 Hours</strong></div></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="dash-card">
+              <h2>Milestone Road Map</h2>
+              <p class="subtext">Your 4-phase learning milestones.</p>
+              <div style="display:grid;gap:14px;margin-top:16px;">
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#eef7f0;border-radius:8px;border:1px solid #d3ebd7">
+                  <i data-lucide="check-circle-2" style="color:#16804a"></i>
+                  <div style="flex:1"><strong>Phase 1: Basic Controls &amp; Cockpit Drill</strong><small style="display:block;color:#55677c">Completed (Lessons 1–5)</small></div>
+                  <span class="status-complete">Passed</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#eef4fd;border-radius:8px;border:1px solid #d4e4fa">
+                  <i data-lucide="loader" style="color:#063fb0"></i>
+                  <div style="flex:1"><strong>Phase 2: Traffic &amp; Road Maneuvers</strong><small style="display:block;color:#55677c">In Progress (Lessons 6–20)</small></div>
+                  <span class="status-complete" style="color:#063fb0;background:#eef4fd;border-color:#d4e4fa">Active (85%)</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#f8fafc;border-radius:8px;border:1px solid #e1e7ec">
+                  <i data-lucide="circle" style="color:#a4b3c4"></i>
+                  <div style="flex:1"><strong>Phase 3: Highway, Speed &amp; Night Drive</strong><small style="display:block;color:#55677c">Upcoming (Lessons 21–32)</small></div>
+                  <span style="font-size:11px;color:#708499">Locked</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#f8fafc;border-radius:8px;border:1px solid #e1e7ec">
+                  <i data-lucide="trophy" style="color:#a4b3c4"></i>
+                  <div style="flex:1"><strong>Phase 4: RTO Mock Driving Test</strong><small style="display:block;color:#55677c">Final Step (Lessons 33–40)</small></div>
+                  <span style="font-size:11px;color:#708499">Scheduled</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <h2 style="margin: 0 0 14px; font-size: 18px;">Driving Competency &amp; Skill Matrix</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-head"><strong>1. Cockpit Drill &amp; Pre-Drive Checks</strong><span class="tag">Mastered (100%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 100%"></div></div>
+              <div class="skill-foot"><span>Mirror setup, seatbelt, starting drill</span><span>Grade: 5.0 / 5</span></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><strong>2. Smooth Clutch &amp; Gear Shifting</strong><span class="tag">Advanced (90%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              <div class="skill-foot"><span>Biting point control &amp; smooth downshifting</span><span>Grade: 4.8 / 5</span></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><strong>3. Steering &amp; Road Positioning</strong><span class="tag">Advanced (85%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 85%"></div></div>
+              <div class="skill-foot"><span>Pull-push technique &amp; central lane hold</span><span>Grade: 4.7 / 5</span></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><strong>4. Hill Start &amp; Handbrake Control</strong><span class="tag">Proficient (80%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 80%"></div></div>
+              <div class="skill-foot"><span>Incline stops with zero rollback</span><span>Grade: 4.6 / 5</span></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><strong>5. Parallel &amp; Bay Parking</strong><span class="tag" style="background:#fff4e6;color:#d95b00">In Progress (70%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 70%; background: linear-gradient(90deg, #ff902d, #ff601e)"></div></div>
+              <div class="skill-foot"><span>Reference point aligning &amp; reverse curb clearance</span><span>Grade: 4.2 / 5</span></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><strong>6. Roundabouts &amp; Complex Junctions</strong><span class="tag" style="background:#fff4e6;color:#d95b00">In Progress (65%)</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width: 65%; background: linear-gradient(90deg, #ff902d, #ff601e)"></div></div>
+              <div class="skill-foot"><span>Lane choices, priority rules &amp; exit signaling</span><span>Grade: 4.0 / 5</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB 5: FEEDBACK ================= -->
+        <section class="dash-view" id="view-feedback" data-view="feedback">
+          <div class="view-header">
+            <div>
+              <h1>Instructor Feedback &amp; Lesson Notes</h1>
+              <p>Read detailed performance evaluations and advice provided after each practical lesson.</p>
+            </div>
+            <div class="filter-group" id="coach-filter-group">
+              <button class="filter-btn active" type="button" data-coach-filter="all">All Coaches</button>
+              <button class="filter-btn" type="button" data-coach-filter="rajesh">Rajesh Kumar (17)</button>
+              <button class="filter-btn" type="button" data-coach-filter="anita">Anita Rao (1)</button>
+            </div>
+          </div>
+
+          <div class="feedback-layout-grid">
+            <div class="feedback-cards-list" id="feedback-cards-container">
+              <article class="dash-card feedback-coach-card" data-coach="rajesh">
+                <div class="card-heading-row">
+                  <div>
+                    <h3 style="margin:0;font-size:15px">Lesson #18: Clutch Control &amp; Traffic Starts</h3>
+                    <small style="color:#55677c">Wednesday, Aug 26, 2026 • 10:00 AM – 11:00 AM</small>
+                  </div>
+                  <span class="tag">Rating: 4.8 / 5</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
+                  <div class="avatar rajesh" aria-hidden="true">RK</div>
+                  <div><strong>Rajesh Kumar</strong><small style="display:block;color:#55677c">Lead Instructor</small></div>
+                </div>
+                <p style="margin:0 0 12px;color:#2f435c;line-height:1.5;">“Good control on clutch and braking. Improved steering control on sharp turns. Practice lane changes more often with earlier mirror checks for better confidence.”</p>
+                <div style="display:grid;gap:6px;font-size:11px;background:#f8fafc;padding:10px 14px;border-radius:7px;">
+                  <div><strong style="color:#16804a">✓ Key Strength:</strong> Smooth deceleration and gentle braking at pedestrian crossings.</div>
+                  <div><strong style="color:#f4512a">▲ Focus Area:</strong> Remember blind-spot head check before moving right.</div>
+                </div>
+              </article>
+
+              <article class="dash-card feedback-coach-card" data-coach="rajesh">
+                <div class="card-heading-row">
+                  <div>
+                    <h3 style="margin:0;font-size:15px">Lesson #17: 3-Point Turn &amp; Bay Parking</h3>
+                    <small style="color:#55677c">Saturday, Aug 22, 2026 • 09:00 AM – 10:00 AM</small>
+                  </div>
+                  <span class="tag">Rating: 4.7 / 5</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
+                  <div class="avatar rajesh" aria-hidden="true">RK</div>
+                  <div><strong>Rajesh Kumar</strong><small style="display:block;color:#55677c">Lead Instructor</small></div>
+                </div>
+                <p style="margin:0 0 12px;color:#2f435c;line-height:1.5;">“Excellent progress! Parking and reverse driving techniques are much better. Keep reversing at a crawl speed with full clutch control.”</p>
+              </article>
+
+              <article class="dash-card feedback-coach-card" data-coach="anita">
+                <div class="card-heading-row">
+                  <div>
+                    <h3 style="margin:0;font-size:15px">Lesson #12: Cross-Training Balance &amp; Speed Control</h3>
+                    <small style="color:#55677c">Saturday, Aug 08, 2026 • 07:30 AM – 08:30 AM</small>
+                  </div>
+                  <span class="tag" style="background:#eef4fd;color:#075cb3">Special Session</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
+                  <div class="avatar" style="background:#ec4899;color:#fff" aria-hidden="true">AR</div>
+                  <div><strong>Anita Rao</strong><small style="display:block;color:#55677c">Senior Rider Safety Coach</small></div>
+                </div>
+                <p style="margin:0 0 12px;color:#2f435c;line-height:1.5;">“Very good spatial awareness and equilibrium during low-speed obstacle turns. Throttle feathering was clean and confident throughout.”</p>
+                <div style="display:grid;gap:6px;font-size:11px;background:#f8fafc;padding:10px 14px;border-radius:7px;">
+                  <div><strong style="color:#16804a">✓ Key Strength:</strong> Smooth throttle progression and firm footing.</div>
+                </div>
+              </article>
+
+              <article class="dash-card feedback-coach-card" data-coach="rajesh">
+                <div class="card-heading-row">
+                  <div>
+                    <h3 style="margin:0;font-size:15px">Lesson #16: Road Awareness &amp; Junctions</h3>
+                    <small style="color:#55677c">Wednesday, Aug 19, 2026 • 04:00 PM – 05:00 PM</small>
+                  </div>
+                  <span class="tag">Rating: 4.5 / 5</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
+                  <div class="avatar rajesh" aria-hidden="true">RK</div>
+                  <div><strong>Rajesh Kumar</strong><small style="display:block;color:#55677c">Lead Instructor</small></div>
+                </div>
+                <p style="margin:0 0 12px;color:#2f435c;line-height:1.5;">“Good start on main road driving. Work on the Mirror-Signal-Manoeuvre routine prior to lane shifts.”</p>
+              </article>
+            </div>
+
+            <!-- Student Note to Instructor -->
+            <section class="dash-card ask-instructor-card">
+              <div class="ask-instructor-header">
+                <h2>Ask Your Instructor</h2>
+                <p class="subtext">Send a note or question to Rajesh Kumar before your next lesson.</p>
+              </div>
+              <form id="instructor-note-form" class="instructor-note-form">
+                <div class="field">
+                  <label for="instructor-select-msg">To Instructor</label>
+                  <input id="instructor-select-msg" class="instructor-readonly-input" value="Rajesh Kumar" readonly>
+                </div>
+                <div class="field">
+                  <label for="msg-subject">Lesson Topic / Subject</label>
+                  <input id="msg-subject" placeholder="e.g. Question about parallel parking markers" required>
+                </div>
+                <div class="field">
+                  <label for="msg-body">Your Message</label>
+                  <textarea id="msg-body" placeholder="Describe any questions, concerns or areas you want to practice in tomorrow's lesson..." rows="4" required></textarea>
+                </div>
+                <button class="btn btn-primary btn-submit-note" type="submit">
+                  <i data-lucide="send"></i> <span>Send Message to Instructor</span>
+                </button>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= TAB 6: DOCUMENTS ================= -->
+        <section class="dash-view" id="view-documents" data-view="documents">
+          <div class="view-header">
+            <div>
+              <h1>Student Documents &amp; Certificates</h1>
+              <p>View, verify, and download your driving licenses, enrollment receipts, and logbooks.</p>
+            </div>
+            <button class="btn btn-navy" type="button" id="upload-doc-btn"><i data-lucide="upload"></i> Upload Document</button>
+          </div>
+
+          <div class="dash-card" style="margin-bottom: 20px;">
+            <div class="card-heading-row">
+              <h2>Official Progress Summary Sheet</h2>
+              <button class="btn btn-primary" id="download-report-3" type="button"><i data-lucide="download"></i> Download PDF</button>
+            </div>
+            <div class="report-preview" style="margin-top: 14px">
+              <div class="report-brand">◉ Drive<span>Way</span><small>DRIVING SCHOOL</small></div>
+              <h3>Official Student Training Record</h3>
+              <div class="report-details">
+                <span>Student Name</span><span>: Priya Sharma</span>
+                <span>Student ID</span><span>: DWSTU12345</span>
+                <span>Learner License</span><span>: LLD-2026-98124</span>
+                <span>Course Type</span><span>: Four Wheeler (Manual)</span>
+              </div>
+              <div class="report-stats">
+                <div class="report-stat"><strong>18h 00m</strong><span>Completed Hours</span></div>
+                <div class="report-stat"><strong>22h 00m</strong><span>Remaining Hours</span></div>
+                <div class="report-stat"><strong>40h 00m</strong><span>Total Required</span></div>
+                <div class="report-stat"><strong>Verified</strong><span>Instructor Stamp</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-card">
+              <div class="doc-info-wrap">
+                <div class="doc-icon"><i data-lucide="id-card"></i></div>
+                <div class="doc-info">
+                  <strong>Learner's Driving License (LL)</strong>
+                  <span>LLD-2026-98124 • Valid till Feb 2027</span>
+                </div>
+              </div>
+              <span class="status-complete">Verified ✅</span>
+            </div>
+
+            <div class="doc-card">
+              <div class="doc-info-wrap">
+                <div class="doc-icon"><i data-lucide="file-check"></i></div>
+                <div class="doc-info">
+                  <strong>Medical Fitness Certificate (Form 1A)</strong>
+                  <span>Approved by Registered Practitioner</span>
+                </div>
+              </div>
+              <span class="status-complete">Approved ✅</span>
+            </div>
+
+            <div class="doc-card">
+              <div class="doc-info-wrap">
+                <div class="doc-icon"><i data-lucide="receipt"></i></div>
+                <div class="doc-info">
+                  <strong>Course Fee Invoice (#DW-9842)</strong>
+                  <span>₹8,000 Paid • Official Tax Invoice</span>
+                </div>
+              </div>
+              <button class="btn btn-outline" id="btn-invoice-pdf-doc" type="button" style="padding:4px 10px;font-size:11px" data-open-invoice="DW-9842"><i data-lucide="download"></i> PDF</button>
+            </div>
+
+            <div class="doc-card">
+              <div class="doc-info-wrap">
+                <div class="doc-icon"><i data-lucide="clipboard-list"></i></div>
+                <div class="doc-info">
+                  <strong>Practical Driving Logbook</strong>
+                  <span>18 Sessions recorded &amp; signed</span>
+                </div>
+              </div>
+              <button class="btn btn-outline" id="btn-view-logbook" type="button" style="padding:4px 10px;font-size:11px"><i data-lucide="eye"></i> View</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB 7: MY PROFILE ================= -->
+        <section class="dash-view" id="view-profile" data-view="profile">
+          <div class="view-header">
+            <div>
+              <h1>Student Profile &amp; Settings</h1>
+              <p>Manage your contact information, license preferences, and login credentials.</p>
+            </div>
+          </div>
+
+          <div class="profile-shell">
+            <div class="profile-card">
+              <div class="avatar" style="width:84px;height:84px;margin:0 auto 12px;font-size:26px;">PS</div>
+              <h2>Priya Sharma</h2>
+              <p>Student ID: <strong>DWSTU12345</strong></p>
+              <div style="text-align:left;display:grid;gap:8px;font-size:12px;border-top:1px solid #edf1f5;padding-top:14px;">
+                <div><span style="color:#55677c">Course:</span> <strong>Four Wheeler (Manual)</strong></div>
+                <div><span style="color:#55677c">Enrolled:</span> <strong>Aug 01, 2026</strong></div>
+                <div><span style="color:#55677c">Assigned Coach:</span> <strong>Rajesh Kumar</strong></div>
+                <div><span style="color:#55677c">Status:</span> <span class="tag">Active Learner</span></div>
+              </div>
+            </div>
+
+            <div style="display:grid;gap:20px;">
+              <section class="profile-form-card">
+                <h2>Personal &amp; Contact Details</h2>
+                <form id="profile-edit-form">
+                  <div class="profile-row">
+                    <div class="field">
+                      <label for="prof-fullname">Full Name</label>
+                      <input id="prof-fullname" value="Priya Sharma" required>
+                    </div>
+                    <div class="field">
+                      <label for="prof-email">Email Address</label>
+                      <input id="prof-email" type="email" value="priya@example.com" required>
+                    </div>
+                  </div>
+                  <div class="profile-row">
+                    <div class="field">
+                      <label for="prof-phone">Phone Number</label>
+                      <input id="prof-phone" type="tel" value="+91 98765 43210" required>
+                    </div>
+                    <div class="field">
+                      <label for="prof-dob">Date of Birth</label>
+                      <input id="prof-dob" type="date" value="2002-05-14">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="prof-address">Residential Address</label>
+                    <input id="prof-address" value="42 Palm Grove, Green Glen Layout, Bangalore - 560103">
+                  </div>
+                  <div class="profile-row">
+                    <div class="field">
+                      <label for="prof-emergency">Emergency Contact</label>
+                      <input id="prof-emergency" value="Ramesh Sharma (Father) - +91 98765 00001">
+                    </div>
+                    <div class="field">
+                      <label for="prof-blood">Blood Group</label>
+                      <select id="prof-blood">
+                        <option selected>O+</option>
+                        <option>A+</option>
+                        <option>B+</option>
+                        <option>AB+</option>
+                        <option>O-</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="submit" style="margin-top:10px;">Save Profile Changes</button>
+                </form>
+              </section>
+
+              <section class="profile-form-card">
+                <h2>Security &amp; Password</h2>
+                <form id="password-change-form">
+                  <div class="profile-row">
+                    <div class="field">
+                      <label for="current-pass">Current Password</label>
+                      <input id="current-pass" type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="field">
+                      <label for="new-pass">New Password</label>
+                      <input id="new-pass" type="password" placeholder="Minimum 8 characters" required>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline" type="submit">Update Password</button>
+                </form>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB 8: PAYMENTS ================= -->
+        <section class="dash-view" id="view-payments" data-view="payments">
+          <div class="view-header">
+            <div>
+              <h1>Course Fees &amp; Payments</h1>
+              <p>Track your package payment schedule, invoices, and remaining installment balance.</p>
+            </div>
+          </div>
+
+          <div class="metric-cards">
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="wallet"></i></div>
+              <div class="metric-info"><strong>₹12,500</strong><span>Total Package Fee</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon green"><i data-lucide="badge-check"></i></div>
+              <div class="metric-info"><strong>₹8,000</strong><span>Paid to Date</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon orange"><i data-lucide="alert-circle"></i></div>
+              <div class="metric-info"><strong>₹4,500</strong><span>Remaining Balance</span></div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon purple"><i data-lucide="calendar"></i></div>
+              <div class="metric-info"><strong>Sep 10, 2026</strong><span>Next Due Date</span></div>
+            </div>
+          </div>
+
+          <div class="dash-banner pay-banner">
+            <div>
+              <strong style="font-size:15px;display:block">Pending Installment: ₹4,500</strong>
+              <p>Includes Final 10 Practical Hours, Track Certification, and RTO Test Slot Booking.</p>
+            </div>
+            <button class="btn" id="pay-now-btn" type="button">Pay ₹4,500 Now</button>
+          </div>
+
+          <h2 style="margin: 0 0 14px; font-size: 18px;">Payment &amp; Transaction History</h2>
+          <div class="table-card">
+            <table class="dash-table" aria-label="Payment Transactions">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Transaction ID</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Method</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aug 15, 2026</td>
+                  <td><strong>TXN-984210</strong></td>
+                  <td>2nd Course Installment (10 Hours)</td>
+                  <td><strong>₹4,000</strong></td>
+                  <td>UPI (Google Pay)</td>
+                  <td><span class="status-complete">Paid ✅</span></td>
+                  <td><button class="btn btn-outline btn-txn-pdf" type="button" style="padding:3px 8px;font-size:10px" data-txn="TXN-984210" data-amount="₹4,000" data-desc="2nd Course Installment (10 Hours)" data-date="Aug 15, 2026" data-method="UPI (Google Pay)"><i data-lucide="download"></i> PDF</button></td>
+                </tr>
+                <tr>
+                  <td>Aug 01, 2026</td>
+                  <td><strong>TXN-981045</strong></td>
+                  <td>Initial Course Enrollment &amp; LL Registration</td>
+                  <td><strong>₹4,000</strong></td>
+                  <td>Net Banking (HDFC)</td>
+                  <td><span class="status-complete">Paid ✅</span></td>
+                  <td><button class="btn btn-outline btn-txn-pdf" type="button" style="padding:3px 8px;font-size:10px" data-txn="TXN-981045" data-amount="₹4,000" data-desc="Initial Course Enrollment &amp; LL Registration" data-date="Aug 01, 2026" data-method="Net Banking (HDFC)"><i data-lucide="download"></i> PDF</button></td>
+                </tr>
+                <tr id="pending-txn-row" style="background:#fffcf9">
+                  <td id="pending-txn-date">Sep 10, 2026</td>
+                  <td id="pending-txn-id"><strong>TXN-PENDING</strong></td>
+                  <td>Final Installment &amp; RTO Test Booking</td>
+                  <td><strong>₹4,500</strong></td>
+                  <td id="pending-txn-method">Pending</td>
+                  <td id="pending-txn-status"><span class="status-complete" style="color:#d95b00;background:#fff4e6;border-color:#fedbb7">Due Soon</span></td>
+                  <td id="pending-txn-action"><button class="btn btn-navy pay-now-table" id="table-pay-pending-btn" type="button" style="padding:3px 10px;font-size:10px">Pay Now</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ================= TAB 9: NOTIFICATIONS ================= -->
+        <section class="dash-view" id="view-notifications" data-view="notifications">
+          <div class="view-header">
+            <div>
+              <h1>Notifications &amp; Alerts</h1>
+              <p>Stay updated on lesson schedules, instructor feedback, and payment status.</p>
+            </div>
+            <div style="display:flex;gap:10px;">
+              <button class="btn btn-outline" id="mark-all-read-btn" type="button"><i data-lucide="check-check"></i> Mark All as Read</button>
+            </div>
+          </div>
+
+          <div class="notif-list" id="notif-container">
+            <article class="notif-card unread">
+              <div class="notif-icon-wrap"><i data-lucide="calendar"></i></div>
+              <div class="notif-body">
+                <strong>Upcoming Lesson Reminder</strong>
+                <p>You have Lesson #19 scheduled for tomorrow at 10:00 AM with Instructor Rajesh Kumar. Please carry your Learner's License.</p>
+                <small>2 hours ago • Lesson Alert</small>
+              </div>
+              <div class="notif-dot"></div>
+            </article>
+
+            <article class="notif-card unread">
+              <div class="notif-icon-wrap"><i data-lucide="message-square"></i></div>
+              <div class="notif-body">
+                <strong>New Feedback Added by Rajesh Kumar</strong>
+                <p>Feedback for Lesson #18 (Aug 26) is available: “Good control on clutch and braking. Improved steering control.”</p>
+                <small>2 days ago • Instructor Feedback</small>
+              </div>
+              <div class="notif-dot"></div>
+            </article>
+
+            <article class="notif-card unread">
+              <div class="notif-icon-wrap"><i data-lucide="receipt"></i></div>
+              <div class="notif-body">
+                <strong>Payment Receipt Available</strong>
+                <p>Your payment of ₹4,000 (TXN-984210) was verified. Download your receipt in the Documents section.</p>
+                <small>1 week ago • Billing</small>
+              </div>
+              <div class="notif-dot"></div>
+            </article>
+
+            <article class="notif-card">
+              <div class="notif-icon-wrap" style="background:#f0f5fa;color:#4a5c70"><i data-lucide="trophy"></i></div>
+              <div class="notif-body">
+                <strong>Milestone Reached: 45% Complete!</strong>
+                <p>Congratulations! You have completed 18 mandatory hours. Your test eligibility progress is advancing well.</p>
+                <small>2 weeks ago • Course Milestone</small>
+              </div>
+            </article>
+
+            <article class="notif-card">
+              <div class="notif-icon-wrap" style="background:#f0f5fa;color:#4a5c70"><i data-lucide="car"></i></div>
+              <div class="notif-body">
+                <strong>Welcome to DriveWay Driving School</strong>
+                <p>Your enrollment in Four Wheeler License Training is confirmed. Instructor Rajesh Kumar is assigned to your course.</p>
+                <small>4 weeks ago • Account</small>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Official Tax Invoice Modal -->
+  <div class="modal" id="invoice-modal" role="dialog" aria-modal="true" aria-labelledby="invoice-modal-title" aria-hidden="true">
+    <div class="modal-card" style="max-width: 650px; padding: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 id="invoice-modal-title" style="margin: 0; font-size: 18px; display: flex; align-items: center; gap: 8px;">
+          <i data-lucide="receipt" style="color: #075cb3;"></i> Official Tax Invoice
+        </h2>
+        <button class="modal-close-btn" id="close-invoice-modal-btn" type="button" aria-label="Close modal"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="invoice-sheet" id="invoice-printable-area">
+        <div class="invoice-header">
+          <div>
+            <div class="invoice-brand">Drive<span>Way</span></div>
+            <small style="color: #55677c; display: block; font-size: 11px;">Certified Driving School &amp; Training Academy</small>
+            <small style="color: #55677c; display: block; font-size: 10px;">GSTIN: 29AABCD1234E1Z5 • Govt RTO Reg: KA-01-DS-2024</small>
+          </div>
+          <div style="text-align: right;">
+            <span class="tag" style="background: #10b981; color: #fff; font-size: 11px; font-weight: 700;">PAID IN FULL</span>
+            <strong style="display: block; margin-top: 6px; font-size: 13px;" id="inv-modal-number">Invoice #DW-9842</strong>
+            <small style="color: #55677c; font-size: 11px;" id="inv-modal-date">Date: Aug 15, 2026</small>
+          </div>
+        </div>
+
+        <div class="invoice-meta-grid">
+          <div>
+            <span style="color: #55677c; font-size: 11px; display: block;">Billed To:</span>
+            <strong style="font-size: 13px;">Priya Sharma</strong>
+            <span style="display: block; font-size: 11px; color: #55677c;">Student ID: DWSTU12345</span>
+            <span style="display: block; font-size: 11px; color: #55677c;">Phone: +91 98765 43210</span>
+          </div>
+          <div>
+            <span style="color: #55677c; font-size: 11px; display: block;">Course Details:</span>
+            <strong style="font-size: 13px;">Four-Wheeler License (Manual)</strong>
+            <span style="display: block; font-size: 11px; color: #55677c;">Assigned Coach: Rajesh Kumar</span>
+            <span style="display: block; font-size: 11px; color: #55677c;">Payment Mode: <span id="inv-modal-method">UPI / Net Banking</span></span>
+          </div>
+        </div>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Item Description</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="inv-modal-items">
+            <tr>
+              <td>Initial Admission &amp; Learner License Filing</td>
+              <td>1</td>
+              <td>₹4,000</td>
+              <td>₹4,000</td>
+            </tr>
+            <tr>
+              <td>2nd Installment: 10 In-Car Practical Lessons (Swift Dual-Control)</td>
+              <td>10 Hrs</td>
+              <td>₹400 / hr</td>
+              <td>₹4,000</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3" style="text-align: right;">Total Amount Paid:</td>
+              <td style="color: #075cb3;" id="inv-modal-total">₹8,000</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p style="margin: 0; font-size: 10px; color: #55677c; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 8px;">
+          This is a computer-generated tax receipt and requires no physical signature.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px;">
+        <button class="btn btn-outline" id="print-invoice-btn" type="button"><i data-lucide="printer"></i> Print / Save PDF</button>
+        <button class="btn btn-navy" id="close-invoice-btn" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practical Driving Logbook Modal -->
+  <div class="modal" id="logbook-modal" role="dialog" aria-modal="true" aria-labelledby="logbook-modal-title" aria-hidden="true">
+    <div class="modal-card" style="max-width: 760px; padding: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+        <div>
+          <h2 id="logbook-modal-title" style="margin: 0; font-size: 18px; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="clipboard-list" style="color: #075cb3;"></i> Official Practical Driving Logbook
+          </h2>
+          <small style="color: #55677c;">Student: <strong>Priya Sharma</strong> • 18 Verified Training Sessions Signed</small>
+        </div>
+        <button class="modal-close-btn" id="close-logbook-modal-btn" type="button" aria-label="Close modal"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="logbook-table-wrap">
+        <table class="dash-table" style="font-size: 11.5px;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Duration</th>
+              <th>Practical Topic / Route</th>
+              <th>Vehicle</th>
+              <th>Instructor</th>
+              <th>Verification Stamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>18</strong></td>
+              <td>Aug 26, 2026</td>
+              <td>1 Hour</td>
+              <td>Clutch Control &amp; Traffic Starts (MG Road)</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>17</strong></td>
+              <td>Aug 22, 2026</td>
+              <td>1 Hour</td>
+              <td>3-Point Turn &amp; Bay Parking (Track 2)</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>16</strong></td>
+              <td>Aug 19, 2026</td>
+              <td>1 Hour</td>
+              <td>Road Awareness &amp; Junctions (Ring Road)</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>15</strong></td>
+              <td>Aug 16, 2026</td>
+              <td>1 Hour</td>
+              <td>Hill Start &amp; Handbrake Balancing (Ramp A)</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>14</strong></td>
+              <td>Aug 13, 2026</td>
+              <td>1 Hour</td>
+              <td>Parallel Parking &amp; Curb Alignment</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>13</strong></td>
+              <td>Aug 10, 2026</td>
+              <td>1 Hour</td>
+              <td>Roundabout Priority &amp; Multi-Lane Navigation</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>12</strong></td>
+              <td>Aug 08, 2026</td>
+              <td>1 Hour</td>
+              <td>Cross-Training Balance &amp; Speed Control</td>
+              <td>Activa / Bike</td>
+              <td>Anita Rao</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>11</strong></td>
+              <td>Aug 05, 2026</td>
+              <td>1 Hour</td>
+              <td>Night Vision &amp; Low-Beam Highway Drive</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Signed</span></td>
+            </tr>
+            <tr>
+              <td><strong>1-10</strong></td>
+              <td>Aug 01 - 04</td>
+              <td>10 Hours</td>
+              <td>Foundational Cockpit Drills, Steering &amp; Gear Progression</td>
+              <td>Swift (Manual)</td>
+              <td>Rajesh Kumar</td>
+              <td><span class="logbook-stamp"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> Verified</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px;">
+        <button class="btn btn-outline" id="print-logbook-btn" type="button"><i data-lucide="printer"></i> Print Logbook</button>
+        <button class="btn btn-navy" id="close-logbook-btn" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Payment Gateway Modal -->
+  <div class="modal" id="payment-gateway-modal" role="dialog" aria-modal="true" aria-labelledby="pay-modal-title" aria-hidden="true">
+    <div class="modal-card" style="max-width: 480px; padding: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+        <h2 id="pay-modal-title" style="margin: 0; font-size: 18px; display: flex; align-items: center; gap: 8px;">
+          <i data-lucide="lock" style="color: #10b981;"></i> Secure Payment Checkout
+        </h2>
+        <button class="modal-close-btn" id="close-pay-modal-btn" type="button" aria-label="Close modal"><i data-lucide="x"></i></button>
+      </div>
+
+      <div style="background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #1e3a8a; font-size: 12px;">Pending 3rd Installment:</span>
+          <strong style="color: #1e3a8a; font-size: 18px;" id="pay-modal-amount">₹4,500</strong>
+        </div>
+        <small style="color: #3b82f6; font-size: 11px; display: block; margin-top: 2px;">Includes RTO Test Slot Booking &amp; Final 10 Road Hours</small>
+      </div>
+
+      <label style="font-weight: 700; font-size: 12px; display: block; margin-bottom: 4px;">Choose Payment Mode</label>
+      <div class="pay-methods-grid">
+        <div class="pay-method-card active" data-method="upi">
+          <i data-lucide="smartphone" style="width:20px;height:20px;color:#075cb3"></i>
+          <strong>UPI / QR</strong>
+        </div>
+        <div class="pay-method-card" data-method="card">
+          <i data-lucide="credit-card" style="width:20px;height:20px;color:#075cb3"></i>
+          <strong>Debit / Card</strong>
+        </div>
+        <div class="pay-method-card" data-method="netbanking">
+          <i data-lucide="building" style="width:20px;height:20px;color:#075cb3"></i>
+          <strong>Net Banking</strong>
+        </div>
+      </div>
+
+      <form id="gateway-payment-form" style="margin-top: 14px;">
+        <div id="upi-input-group" class="field">
+          <label for="upi-id-input">Enter UPI ID / VPA</label>
+          <input id="upi-id-input" placeholder="e.g. priya@okhdfcbank" value="priyasharma@okhdfcbank" required>
+        </div>
+
+        <div id="card-input-group" style="display: none;">
+          <div class="field">
+            <label for="card-num-input">Card Number</label>
+            <input id="card-num-input" placeholder="4111 2222 3333 4444" maxlength="19">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="field">
+              <label for="card-exp-input">Expiry (MM/YY)</label>
+              <input id="card-exp-input" placeholder="08/29" maxlength="5">
+            </div>
+            <div class="field">
+              <label for="card-cvv-input">CVV</label>
+              <input id="card-cvv-input" placeholder="•••" type="password" maxlength="4">
+            </div>
+          </div>
+        </div>
+
+        <div id="netbank-input-group" class="field" style="display: none;">
+          <label for="bank-select-input">Select Your Bank</label>
+          <select id="bank-select-input">
+            <option value="HDFC Bank">HDFC Bank</option>
+            <option value="ICICI Bank">ICICI Bank</option>
+            <option value="State Bank of India">State Bank of India (SBI)</option>
+            <option value="Axis Bank">Axis Bank</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" id="confirm-pay-btn" type="submit" style="width: 100%; justify-content: center; padding: 12px; font-size: 14px; margin-top: 10px;">
+          Pay ₹4,500 Securely <i data-lucide="shield-check"></i>
+        </button>
+        <p style="margin: 8px 0 0; text-align: center; font-size: 10px; color: #55677c;">
+          🔒 256-Bit SSL Encrypted &amp; PCI-DSS Level 1 Certified
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Logout Confirmation Modal -->
+  <div class="modal" id="logout-modal" role="dialog" aria-modal="true" aria-labelledby="logout-modal-title" aria-hidden="true">
+    <div class="modal-card logout-card">
+      <div class="logout-icon-wrap">
+        <i data-lucide="log-out"></i>
+      </div>
+      <h2 id="logout-modal-title">Sign Out of Student Portal?</h2>
+      <p>Are you sure you want to end your dashboard session?</p>
+      <div class="btn-group">
+        <button class="btn btn-outline" id="cancel-logout-btn" type="button">Cancel</button>
+        <a class="btn btn-primary" href="signin.html" style="background:#dc2626;border-color:#dc2626;color:#fff;">Sign Out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Dashboard Toast Notification -->
+  <div class="dash-toast" id="dash-toast" role="status" aria-live="polite">
+    <i data-lucide="check-circle-2"></i>
+    <span id="toast-message">Action completed successfully!</span>
+  </div>
+</body>
+</html>

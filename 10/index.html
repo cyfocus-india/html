@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Practical corporate training programs that turn capability into measurable performance.">
+    <meta name="theme-color" content="#075bea">
+    <title>Home 1 | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="index.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="index.html" class="dropdown-item active">Home 1</a>
+              <a href="index1.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="pages/programs.html">Programs</a>
+          <a href="pages/methodology.html">Methodology</a>
+          <a href="pages/clients.html">Clients</a>
+          <a href="pages/in-house-training.html">In-House Training</a>
+          <a href="pages/about.html">About Us</a>
+          <a href="pages/contact.html">Contact</a>
+          <a href="pages/dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="pages/privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="pages/terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="pages/coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="pages/404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="icon-button"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i>
+          </button>
+          <button
+            class="icon-button rtl-toggle-btn"
+            type="button"
+            data-rtl-toggle
+            aria-label="Switch to RTL layout"
+          >
+            <span class="rtl-text" data-rtl-text>RTL</span>
+          </button>
+          <a class="button button-sm" href="pages/signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          >
+          <button
+            class="menu-button"
+            type="button"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open navigation"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="mobile-menu glass"
+        id="mobile-menu"
+        data-mobile-menu
+        aria-label="Mobile navigation"
+      >
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle active" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="active">Home 1</a>
+            <a href="index1.html">Home 2</a>
+          </div>
+        </div>
+        <a href="pages/programs.html">Programs</a>
+        <a href="pages/methodology.html">Methodology</a>
+        <a href="pages/clients.html">Clients</a>
+        <a href="pages/in-house-training.html">In-House Training</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="pages/privacy.html">Privacy Policy</a>
+            <a href="pages/terms.html">Terms of Use</a>
+            <a href="pages/coming-soon.html">Coming Soon</a>
+            <a href="pages/404.html">404</a>
+          </div>
+        </div>
+        <a href="pages/signin.html" class="mobile-login"><i data-lucide="user-round"></i> Sign In</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Skills that move business forward</p>
+          <h1>
+            Building Skills.<br >Driving
+            <span class="gradient-text">Growth.</span>
+          </h1>
+          <p class="hero-lead">
+            Give your people practical capabilities they can use now—through
+            expert-led programs built around real business outcomes.
+          </p>
+          <div class="button-row">
+            <a class="button button-lg" href="pages/programs.html"
+              >Explore programs <i data-lucide="arrow-up-right"></i
+            ></a>
+            <a
+              class="button button-lg button-ghost"
+              href="pages/in-house-training.html"
+              >In-house training <i data-lucide="building-2"></i
+            ></a>
+          </div>
+          <div class="trust-row" role="group" aria-label="Training outcomes">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>AN</span><span>RM</span><span>SK</span>
+            </div>
+            <div>
+              <b>4.9/5 learner rating</b
+              ><span>Across 500+ programs delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-delay="1">
+          <div class="hero-image-wrap glass">
+            <picture
+              ><source
+                srcset="assets/images/training-hero.webp"
+                type="image/webp">
+              <img
+              src="assets/images/training-hero.jpg"
+                alt="Corporate trainer presenting to a group of business professionals"
+                width="1594"
+                height="987"></picture>
+            <div class="floating-card floating-card-top glass">
+              <span class="mini-icon blue"
+                ><i data-lucide="trending-up"></i
+              ></span>
+              <div><b>92%</b><small>Skill application</small></div>
+            </div>
+            <div class="floating-card floating-card-bottom glass">
+              <span class="status-dot"></span>
+              <div><b>Next cohort</b><small>Applications open</small></div>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="outcome-bar section-shell reveal"
+        aria-label="Why teams choose us"
+      >
+        <article>
+          <span class="feature-icon"><i data-lucide="badge-check"></i></span>
+          <div>
+            <b>Industry expert trainers</b
+            ><small>Learn from practitioners</small>
+          </div>
+        </article>
+        <article>
+          <span class="feature-icon"><i data-lucide="sparkles"></i></span>
+          <div>
+            <b>Practice-first learning</b
+            ><small>Scenarios, workshops, simulations</small>
+          </div>
+        </article>
+        <article>
+          <span class="feature-icon"
+            ><i data-lucide="chart-no-axes-combined"></i
+          ></span>
+          <div>
+            <b>Measurable impact</b><small>Progress you can prove</small>
+          </div>
+        </article>
+        <article>
+          <span class="feature-icon"><i data-lucide="blocks"></i></span>
+          <div>
+            <b>Flexible delivery</b><small>Classroom, virtual or blended</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-shell section-pad program-preview">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Flagship programs</p>
+            <h2>
+              Capability, designed around
+              <span class="gradient-text">your goals.</span>
+            </h2>
+          </div>
+          <a class="text-link" href="pages/programs.html"
+            >View all programs <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+        <div class="program-grid">
+          <article class="program-card glass reveal">
+            <span class="program-icon blue"
+              ><i data-lucide="messages-square"></i
+            ></span>
+            <p>01 / Communication</p>
+            <h3>Communicate with clarity and influence.</h3>
+            <button type="button" class="explore-program-btn" data-explore-program="communication" aria-label="Explore Communication program details"
+              >Explore program <i data-lucide="arrow-up-right"></i
+            ></button>
+          </article>
+          <article class="program-card glass reveal" data-delay="1">
+            <span class="program-icon blue"
+              ><i data-lucide="users-round"></i
+            ></span>
+            <p>02 / Leadership</p>
+            <h3>Lead teams that perform and adapt.</h3>
+            <button type="button" class="explore-program-btn" data-explore-program="leadership" aria-label="Explore Leadership program details"
+              >Explore program <i data-lucide="arrow-up-right"></i
+            ></button>
+          </article>
+          <article class="program-card glass reveal" data-delay="2">
+            <span class="program-icon blue"
+              ><i data-lucide="chart-spline"></i
+            ></span>
+            <p>03 / Sales</p>
+            <h3>Turn insight into customer growth.</h3>
+            <button type="button" class="explore-program-btn" data-explore-program="sales" aria-label="Explore Sales program details"
+              >Explore program <i data-lucide="arrow-up-right"></i
+            ></button>
+          </article>
+          <article class="program-card glass reveal" data-delay="3">
+            <span class="program-icon blue"
+              ><i data-lucide="code-xml"></i
+            ></span>
+            <p>04 / Technical</p>
+            <h3>Build future-ready digital fluency.</h3>
+            <button type="button" class="explore-program-btn" data-explore-program="technical" aria-label="Explore Technical program details"
+              >Explore program <i data-lucide="arrow-up-right"></i
+            ></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Upcoming Cohorts Schedule Table -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Live cohort calendar</p>
+            <h2>
+              Upcoming training cohorts &
+              <span class="gradient-text">seat availability.</span>
+            </h2>
+          </div>
+          <a class="text-link" href="pages/signin.html"
+            >Manage cohort enrollments <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+        <div class="cohort-table-wrap glass reveal">
+          <table class="cohort-table" aria-label="Upcoming cohort dates and formats">
+            <thead>
+              <tr>
+                <th>Program</th>
+                <th>Target Audience</th>
+                <th>Delivery Format</th>
+                <th>Next Cohort Dates</th>
+                <th>Seat Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Leadership Essentials</b></td>
+                <td>New & Mid-Level Managers</td>
+                <td>Blended (Virtual + Workshop)</td>
+                <td>Oct 14 – Nov 04, 2026</td>
+                <td><span class="status-badge filling"><i data-lucide="clock"></i> 4 Seats Left</span></td>
+                <td><a class="text-link" href="pages/programs.html#leadership">View Syllabus <i data-lucide="arrow-up-right"></i></a></td>
+              </tr>
+              <tr>
+                <td><b>Strategic Communication</b></td>
+                <td>Cross-Functional Leads</td>
+                <td>Interactive Virtual Studio</td>
+                <td>Oct 20 – Nov 10, 2026</td>
+                <td><span class="status-badge open"><i data-lucide="check-circle-2"></i> Open</span></td>
+                <td><a class="text-link" href="pages/programs.html#communication">View Syllabus <i data-lucide="arrow-up-right"></i></a></td>
+              </tr>
+              <tr>
+                <td><b>Commercial Sales Velocity</b></td>
+                <td>Enterprise Account Executives</td>
+                <td>On-Site Executive Immersion</td>
+                <td>Nov 03 – Nov 17, 2026</td>
+                <td><span class="status-badge open"><i data-lucide="check-circle-2"></i> Open</span></td>
+                <td><a class="text-link" href="pages/programs.html#sales">View Syllabus <i data-lucide="arrow-up-right"></i></a></td>
+              </tr>
+              <tr>
+                <td><b>Data Analysis & AI Fluency</b></td>
+                <td>Analysts & Operational Teams</td>
+                <td>Hands-On Virtual Lab</td>
+                <td>Nov 12 – Dec 03, 2026</td>
+                <td><span class="status-badge filling"><i data-lucide="clock"></i> 2 Seats Left</span></td>
+                <td><a class="text-link" href="pages/programs.html#technical">View Syllabus <i data-lucide="arrow-up-right"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Enterprise Learning Architecture & Split Preview -->
+      <section class="section-shell split-section">
+        <article class="content-card glass reveal">
+          <p class="eyebrow"><span></span> Enterprise workforce readiness</p>
+          <h2>Turn training investment into measurable business capability.</h2>
+          <p>
+            Unlike static video courses, Elevate Learning pairs active scenario-based workshops with dedicated post-training application nudges to ensure 92%+ workplace transfer.
+          </p>
+          <div class="button-row">
+            <a class="button" href="pages/signin.html"
+              >Access HR portal <i data-lucide="layout-dashboard"></i
+            ></a>
+            <a class="button button-ghost" href="pages/methodology.html"
+              >Explore methodology <i data-lucide="compass"></i
+            ></a>
+          </div>
+        </article>
+        <article class="choose-panel glass reveal" data-delay="1">
+          <h3>Built for enterprise governance</h3>
+          <ul>
+            <li>
+              <i data-lucide="circle-check"></i> Role-based competency tracking and reporting
+            </li>
+            <li>
+              <i data-lucide="circle-check"></i> Real-time attendance, module completion & assessments
+            </li>
+            <li>
+              <i data-lucide="circle-check"></i> Digital tamper-proof certificates with QR validation
+            </li>
+            <li>
+              <i data-lucide="circle-check"></i> Enterprise LMS integration (SCORM / xAPI compliant)
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Enterprise Client Testimonials & Impact -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Client outcomes</p>
+            <h2>
+              Proven impact across
+              <span class="gradient-text">industry leaders.</span>
+            </h2>
+          </div>
+          <a class="text-link" href="pages/clients.html"
+            >View all client stories <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+        <div class="case-study-grid">
+          <article class="case-study-card glass reveal">
+            <div class="case-study-header">
+              <span class="case-client-tag">Northstar</span>
+              <span class="case-industry-tag">Financial Tech</span>
+            </div>
+            <h3>Manager Coaching & Retention Sprint</h3>
+            <p>Trained 140 emerging engineering and product managers in feedback loops and high-pressure team communication.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>+38%</b>
+                <span>Team velocity score</span>
+              </div>
+              <div class="case-metric-box">
+                <b>96%</b>
+                <span>Program completion</span>
+              </div>
+            </div>
+          </article>
+          <article class="case-study-card glass reveal" data-delay="1">
+            <div class="case-study-header">
+              <span class="case-client-tag">INFYNEX</span>
+              <span class="case-industry-tag">Global Logistics</span>
+            </div>
+            <h3>Commercial Deal Acceleration</h3>
+            <p>Equipped 85 global account executives with consultative negotiation frameworks and objection handling tactics.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>24%</b>
+                <span>Shorter sales cycle</span>
+              </div>
+              <div class="case-metric-box">
+                <b>3.8x</b>
+                <span>First-year ROI</span>
+              </div>
+            </div>
+          </article>
+          <article class="case-study-card glass reveal" data-delay="2">
+            <div class="case-study-header">
+              <span class="case-client-tag">AxisPoint</span>
+              <span class="case-industry-tag">Enterprise SaaS</span>
+            </div>
+            <h3>Data Fluency & Automation Academy</h3>
+            <p>Upskilled 220 operations specialists from manual reporting to automated predictive dashboards.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>420h</b>
+                <span>Saved per team/mo</span>
+              </div>
+              <div class="case-metric-box">
+                <b>94%</b>
+                <span>On-the-job adoption</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-panel glass reveal">
+          <div>
+            <h3>Need a customized learning track for your teams?</h3>
+            <p>
+              We design bespoke academies aligned with your OKRs, internal tech stacks, and team schedules.
+            </p>
+          </div>
+          <a class="button" href="pages/in-house-training.html"
+            >Explore in-house training <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b
+                ><small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn individual capability
+              into measurable organizational performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="index.html">Home 1</a>
+            <a href="index1.html">Home 2</a>
+            <a href="pages/programs.html">Programs</a>
+            <a href="pages/methodology.html">Methodology</a>
+            <a href="pages/in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/clients.html">Clients</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="pages/coming-soon.html">Coming Soon</a>
+            <a href="pages/404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="pages/dashboard.html">Dashboard</a>
+            <a href="pages/signin.html">Sign In</a>
+            <a href="pages/signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="pages/privacy.html">Privacy Policy</a>
+            <a href="pages/terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

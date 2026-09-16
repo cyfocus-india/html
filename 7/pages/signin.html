@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your PLAY ZONE Parent Portal to manage play session bookings, memberships, and birthday party reservations.">
+  <title>Sign In - Play Zone</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260912">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260912">
+</head>
+<body style="background-color: var(--bg-surface-alt); min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Floating Theme and Direction Controls -->
+  <div class="auth-top-controls" aria-label="Page display settings">
+    <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode" title="Toggle Dark / Light Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <div class="dir-toggle-pill" role="group" aria-label="Direction Switcher (LTR / RTL)">
+      <button type="button" class="dir-btn active" data-dir="ltr" title="Left to Right Layout">LTR</button>
+      <button type="button" class="dir-btn" data-dir="rtl" title="Right to Left Layout">RTL</button>
+    </div>
+  </div>
+
+  <!-- Login Main Container -->
+  <main id="main-content" style="padding: 3rem 0; display: flex; align-items: center; justify-content: center; flex-grow: 1;">
+    <div class="container" style="max-width: 460px;">
+      <!-- Brand Logo -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <a href="../index.html" class="brand-logo" style="display: inline-flex;" title="Back to Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+            <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+          </div>
+        </a>
+      </div>
+      <div class="portal-form-box" style="position: relative; overflow: hidden;">
+        <!-- Top decorative geometric banner -->
+        <div style="display: flex; gap: 6px; margin-bottom: 1.5rem;" aria-hidden="true">
+          <div style="width: 28px; height: 8px; background: var(--primary-blue); border-radius: 4px;"></div>
+          <div style="width: 18px; height: 8px; background: var(--accent-yellow); border-radius: 4px;"></div>
+          <div style="width: 18px; height: 8px; background: var(--accent-red); border-radius: 4px;"></div>
+        </div>
+
+        <h1 style="font-size: 1.75rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.5rem;">
+          SIGN IN
+        </h1>
+        <p style="font-size: 0.85rem; color: var(--neutral-500); margin-bottom: 1.75rem;">
+          Sign in to check slot availability, book play passes, and manage your family memberships.
+        </p>
+
+        <form action="dashboard.html" method="GET" data-validate="true">
+          <div class="form-group">
+            <label for="login-email" class="form-label">Email Address</label>
+            <input type="email" id="login-email" class="form-control" placeholder="parent@example.com" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password" class="form-label">Password</label>
+            <div class="password-input-group">
+              <input type="password" id="login-password" class="form-control" placeholder="••••••••" required minlength="6">
+              <button type="button" class="toggle-pwd-btn" aria-label="Toggle password visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+          </div>
+
+          <div class="form-utilities">
+            <label style="display: flex; align-items: center; gap: 0.55rem; cursor: pointer; font-size: 0.88rem;">
+              <input type="checkbox" name="remember" checked style="accent-color: var(--primary-blue); flex-shrink: 0; width: 17px; height: 17px; cursor: pointer;">
+              <span>Remember me</span>
+            </label>
+            <a href="#forgot-password-modal" class="form-link forgot-pwd-link" data-modal-target="forgot-password-modal" data-action="forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary-blue btn-block btn-lg">
+            <i class="fas fa-sign-in-alt"></i> SIGN IN
+          </button>
+
+          <div class="portal-switch-prompt">
+            Don't have an account yet? <a href="signup.html">SIGN UP</a>
+          </div>
+        </form>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="../index.html" class="form-link" style="color: var(--neutral-500); font-size: 0.85rem;">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgot-password-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-forgot-title">
+    <div class="modal-dialog" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 id="modal-forgot-title" class="modal-title" style="display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fas fa-key" style="color: var(--primary-blue);"></i> Reset Password
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" style="padding: 1.75rem;">
+        <div id="forgot-form-view">
+          <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1.5rem; line-height: 1.5;">
+            Enter the email address associated with your PLAY ZONE Parent Portal account. We'll send you a password reset link.
+          </p>
+
+          <form id="forgot-password-form" novalidate>
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="forgot-email" class="form-label">Email Address</label>
+              <input type="email" id="forgot-email" class="form-control" placeholder="parent@example.com" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+              <button type="button" class="btn btn-outline-blue btn-sm" onclick="window.closeModal('forgot-password-modal');">Cancel</button>
+              <button type="submit" id="forgot-submit-btn" class="btn btn-primary-blue btn-sm">
+                <i class="fas fa-paper-plane"></i> Send Reset Link
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="forgot-success-view" style="display: none; text-align: center; padding: 1rem 0;">
+          <div style="width: 56px; height: 56px; background-color: rgba(34, 197, 94, 0.15); color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-heading);">
+            Reset Link Sent!
+          </h4>
+          <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1.5rem; line-height: 1.5;">
+            We have sent password reset instructions to <strong id="forgot-sent-email" style="color: var(--primary-blue);"></strong>. Please check your inbox.
+          </p>
+          <button type="button" class="btn btn-primary-blue btn-block" onclick="window.closeModal('forgot-password-modal');">
+            Back to Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js?v=20260912"></script>
+</body>
+</html>

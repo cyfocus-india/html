@@ -1,0 +1,458 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f7efec;
+  --muted: #c5b7b1;
+  --paper: #171311;
+  --paper-2: #1f1917;
+  --surface: #211a18;
+  --blush: #342321;
+  --blush-2: #53302e;
+  --coral: #f08b8e;
+  --coral-dark: #ffaaa9;
+  --sage: #a9be7d;
+  --gold: #f0b04a;
+  --line: #403430;
+  --shadow: 0 18px 50px rgba(0,0,0,.38);
+  --shadow-sm: 0 8px 24px rgba(0,0,0,.28);
+  --shadow-lg: 0 30px 80px rgba(0,0,0,.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    color-scheme: dark;
+    --ink: #f7efec;
+    --muted: #c5b7b1;
+    --paper: #171311;
+    --paper-2: #1f1917;
+    --surface: #211a18;
+    --blush: #342321;
+    --blush-2: #53302e;
+    --coral: #f08b8e;
+    --coral-dark: #ffaaa9;
+    --sage: #a9be7d;
+    --gold: #f0b04a;
+    --line: #403430;
+    --shadow: 0 18px 50px rgba(0,0,0,.38);
+    --shadow-sm: 0 8px 24px rgba(0,0,0,.28);
+    --shadow-lg: 0 30px 80px rgba(0,0,0,.5);
+  }
+}
+
+html[data-theme="dark"] .shipping-bar,
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .newsletter,
+html[data-theme="dark"] .help-banner,
+html[data-theme="dark"] .section-soft,
+html[data-theme="dark"] .trust-strip,
+html[data-theme="dark"] .service-strip,
+html[data-theme="dark"] .quiz-banner,
+html[data-theme="dark"] .standards-card {
+  background: linear-gradient(135deg, #241a18, #2d1d1c);
+}
+html[data-theme="dark"] .shipping-bar { color: var(--ink); }
+html[data-theme="dark"] .site-header { background: rgba(23,19,17,.98); border-bottom-color: var(--line); }
+html[data-theme="dark"] .site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.45); }
+html[data-theme="dark"] .hero-home {
+  background-color: #171311;
+  background-image: linear-gradient(90deg, #171311 0%, rgba(23,19,17,0.98) 42%, rgba(23,19,17,0.88) 56%, rgba(23,19,17,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  background-size: cover; background-position: right center;
+  background-blend-mode: normal;
+}
+html[data-theme="dark"] .hero-home-alt {
+  background-color: #171311;
+  background-image: linear-gradient(90deg, #171311 0%, rgba(23,19,17,0.98) 42%, rgba(23,19,17,0.88) 56%, rgba(23,19,17,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  background-size: cover;
+  background-position: center right;
+}
+[dir="rtl"][data-theme="dark"] .hero-home-alt {
+  background-image: linear-gradient(270deg, #171311 0%, rgba(23,19,17,0.98) 42%, rgba(23,19,17,0.88) 56%, rgba(23,19,17,0.22) 75%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  background-position: center left;
+}
+html[data-theme="dark"] .auth-art { background-blend-mode: multiply, normal; }
+html[data-theme="dark"] .page-hero.scene-sprite::after { background: linear-gradient(90deg, rgba(23,19,17,.98) 0%, rgba(23,19,17,.82) 46%, transparent 72%); }
+[dir="rtl"][data-theme="dark"] .page-hero.scene-sprite::after { background: linear-gradient(270deg, rgba(23,19,17,.98) 0%, rgba(23,19,17,.82) 46%, transparent 72%); }
+html[data-theme="dark"] .honest-banner { background: linear-gradient(105deg, #211b18, #2c211e); }
+html[data-theme="dark"] .result-row { background: rgba(35,26,23,.82); }
+html[data-theme="dark"] .result-row:hover { background: var(--blush); }
+html[data-theme="dark"] .product-photo,
+html[data-theme="dark"] .bundle-photo,
+html[data-theme="dark"] .ingredient-sprite,
+html[data-theme="dark"] .model-sprite,
+html[data-theme="dark"] .scene-sprite,
+html[data-theme="dark"] .cart-item-photo,
+html[data-theme="dark"] .search-result-photo { filter: brightness(.88) saturate(.92); }
+html[data-theme="dark"] .avatar-stack span { border-color: #211a18; }
+html[data-theme="dark"] .btn { background: #f6efec; color: #181311; border-color: transparent; }
+html[data-theme="dark"] .btn:hover { background: #ffffff; color: #181311; }
+html[data-theme="dark"] .btn-coral,
+html[data-theme="dark"] .btn.btn-coral { background: linear-gradient(135deg, #f08b8e, #d65d66) !important; color: #ffffff !important; border-color: transparent !important; }
+html[data-theme="dark"] .btn-coral:hover,
+html[data-theme="dark"] .btn.btn-coral:hover { background: linear-gradient(135deg, #ff9ea1, #de646c) !important; color: #ffffff !important; box-shadow: 0 12px 30px rgba(240,139,142,.35) !important; }
+html[data-theme="dark"] .btn-soft,
+html[data-theme="dark"] .btn.btn-soft { background: var(--blush) !important; color: var(--coral-dark) !important; border-color: rgba(240,139,142,.25) !important; }
+html[data-theme="dark"] .btn-soft:hover,
+html[data-theme="dark"] .btn.btn-soft:hover { background: var(--blush-2) !important; color: #ffc9c8 !important; border-color: var(--coral) !important; }
+html[data-theme="dark"] .btn-outline,
+html[data-theme="dark"] .btn.btn-outline { background: transparent !important; color: var(--ink) !important; border-color: var(--line) !important; }
+html[data-theme="dark"] .btn-outline:hover,
+html[data-theme="dark"] .btn.btn-outline:hover { background: var(--blush) !important; color: var(--coral-dark) !important; border-color: var(--coral) !important; }
+html[data-theme="dark"] .icon-btn:hover { background: var(--blush); color: var(--coral-dark); }
+html[data-theme="dark"] .cart-count { border-color: #211a18; color: #fff; }
+html[data-theme="dark"] .badge { background: rgba(33,26,24,.92); color: var(--ink); border: 1px solid var(--line); }
+html[data-theme="dark"] .card-cart { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+html[data-theme="dark"] .card-cart:hover { background: var(--coral); color: #fff; border-color: var(--coral); }
+html[data-theme="dark"] .round-icon { background: rgba(52,35,33,.8); }
+html[data-theme="dark"] .shipping-progress-bar { background: rgba(52,35,33,.9); }
+html[data-theme="dark"] .cart-qty-stepper { background: var(--paper); }
+html[data-theme="dark"] .search-result-card { background: var(--paper); }
+html[data-theme="dark"] .toast { background: #f6efec; color: #181311; }
+html[data-theme="dark"] .toast svg { color: var(--coral-dark); }
+
+html[data-theme="dark"] .brand-emblem-bg { fill: #2c211d; stroke: #45342e; }
+html[data-theme="dark"] .brand-title { color: #fdf5f2; }
+html[data-theme="dark"] .brand-tag { color: #9ab473; }
+html[data-theme="dark"] .rating {
+  background: rgba(217, 154, 52, 0.2);
+  border-color: rgba(217, 154, 52, 0.45);
+  color: #ffdf9e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+html[data-theme="dark"] .rating svg { fill: #ffb834; stroke: #ffb834; }
+html[data-theme="dark"] .bundle-photo { background-color: #261d1a; }
+html[data-theme="dark"] .socials .icon-btn {
+  background: #251d1a;
+  border-color: #3b2c27;
+  color: #eee4e0;
+}
+html[data-theme="dark"] .socials .icon-btn:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #ffffff;
+}
+html[data-theme="dark"] .contact-util-icon {
+  background: #342420;
+  color: #ff8b8e;
+}
+
+html[data-theme="dark"] .dropdown-menu { background: rgba(33,26,24,.96); border-color: rgba(64,52,48,.9); box-shadow: 0 20px 48px rgba(0,0,0,.45); }
+html[data-theme="dark"] .dropdown-link { color: var(--ink) !important; }
+html[data-theme="dark"] .dropdown-link:hover, html[data-theme="dark"] .dropdown-link.active { background: var(--blush) !important; color: var(--coral-dark) !important; }
+html[data-theme="dark"] .dir-toggle-btn { background: var(--surface); border-color: var(--line); color: var(--ink); }
+html[data-theme="dark"] .dir-toggle-btn:hover { background: var(--blush); border-color: var(--coral); color: var(--coral-dark); }
+html[data-theme="dark"] .header-signin-btn { background: linear-gradient(135deg, #f08b8e, #d65d66) !important; color: #fff !important; }
+html[data-theme="dark"] .header-signin-btn:hover { background: linear-gradient(135deg, #ff9ca0, #e06c74) !important; color: #fff !important; }
+html[data-theme="dark"] .filter-tab,
+html[data-theme="dark"] .ingredients-filter-tab,
+html[data-theme="dark"] .routine-tabs button { background: var(--surface); color: var(--muted); border-color: var(--line); }
+html[data-theme="dark"] .filter-tab:hover:not(.active),
+html[data-theme="dark"] .ingredients-filter-tab:hover:not(.active),
+html[data-theme="dark"] .routine-tabs button:hover:not(.active) { background: var(--blush); color: var(--coral-dark); border-color: var(--coral); }
+html[data-theme="dark"] .filter-tab.active,
+html[data-theme="dark"] .ingredients-filter-tab.active,
+html[data-theme="dark"] .routine-tabs button.active { background: var(--coral) !important; color: #ffffff !important; border-color: var(--coral) !important; box-shadow: 0 4px 14px rgba(235,115,120,.32); }
+html[data-theme="dark"] .pagination button { background: var(--surface); color: var(--ink); border-color: var(--line); }
+html[data-theme="dark"] .pagination button:hover:not([disabled]),
+html[data-theme="dark"] .pagination button.active { background: var(--coral) !important; color: #ffffff !important; border-color: var(--coral) !important; }
+html[data-theme="dark"] .trending-tag { background: var(--paper); color: var(--ink); border-color: var(--line); }
+html[data-theme="dark"] .trending-tag:hover { background: var(--coral); color: #ffffff; border-color: var(--coral); }
+html[data-theme="dark"] .quiz-option { background: var(--surface); color: var(--ink); border-color: var(--line); }
+html[data-theme="dark"] .quiz-option:hover,
+html[data-theme="dark"] .quiz-option.selected { background: var(--blush); color: var(--ink); border-color: var(--coral); }
+html[data-theme="dark"] .routine-preview-item { background: var(--paper); border-color: var(--line); color: var(--ink); }
+html[data-theme="dark"] .routine-preview-item:hover { background: var(--blush); border-color: var(--coral); }
+html[data-theme="dark"] .checkout-sidebar-summary,
+html[data-theme="dark"] .order-details-card { background: var(--paper); border-color: var(--line); }
+html[data-theme="dark"] .payment-option { background: var(--paper); border-color: var(--line); }
+html[data-theme="dark"] .payment-option:hover,
+html[data-theme="dark"] .payment-option.selected { background: var(--blush); border-color: var(--coral); }
+html[data-theme="dark"] .checkout-item-thumb { background-color: var(--paper); }
+html[data-theme="dark"] .studio-tab { background: var(--surface); color: var(--muted); border-color: var(--line); }
+html[data-theme="dark"] .studio-tab:hover { background: var(--blush); color: var(--coral-dark); border-color: var(--coral); }
+html[data-theme="dark"] .studio-tab.active { background: var(--coral) !important; color: #ffffff !important; border-color: var(--coral) !important; }
+html[data-theme="dark"] .interactive-map-wrapper { background: var(--surface); border-color: var(--line); }
+html[data-theme="dark"] .map-frame-container { background: #1a1614; }
+html[data-theme="dark"] .live-map-iframe { filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+html[data-theme="dark"] .studio-info-card { background: var(--surface); }
+
+/* Home 2 Unique Sections Dark Mode */
+html[data-theme="dark"] .stat-pill {
+  background: rgba(35, 26, 23, 0.85);
+  border-color: rgba(240, 139, 142, 0.25);
+  color: #efe4e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+html[data-theme="dark"] .stat-pill strong {
+  color: #f08b8e;
+}
+html[data-theme="dark"] .apothecary-card,
+html[data-theme="dark"] .reset-step-card,
+html[data-theme="dark"] .story-card,
+html[data-theme="dark"] .lounge-card {
+  background: #211a18;
+  border-color: var(--line);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+html[data-theme="dark"] .apothecary-card:hover,
+html[data-theme="dark"] .reset-step-card:hover,
+html[data-theme="dark"] .story-card:hover,
+html[data-theme="dark"] .lounge-card:hover {
+  border-color: rgba(240, 139, 142, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+html[data-theme="dark"] .apothecary-badge,
+html[data-theme="dark"] .reset-step-pill,
+html[data-theme="dark"] .lounge-card-badge {
+  background: #2e1d1b;
+  color: #f08b8e;
+  border-color: rgba(240, 139, 142, 0.3);
+}
+html[data-theme="dark"] .apothecary-target {
+  color: #f08b8e;
+}
+html[data-theme="dark"] .home2-routine-matrix {
+  background: #1a1513;
+}
+html[data-theme="dark"] .reset-bundle-banner {
+  background: linear-gradient(135deg, #261d1b, #221816);
+  border-color: rgba(240, 139, 142, 0.25);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .reset-bundle-price .new-price {
+  color: #f08b8e;
+}
+html[data-theme="dark"] .story-avatar {
+  background: #2e1d1b;
+  color: #f08b8e;
+  border-color: rgba(240, 139, 142, 0.3);
+}
+html[data-theme="dark"] .story-time {
+  background: rgba(169, 190, 125, 0.15);
+  color: #b7ce89;
+}
+html[data-theme="dark"] .story-routine-tag {
+  background: rgba(240, 139, 142, 0.12);
+  color: #f08b8e;
+}
+html[data-theme="dark"] .stories-trust-banner {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .trust-stat strong {
+  color: #f08b8e;
+}
+html[data-theme="dark"] .lounge-card {
+  background: linear-gradient(135deg, #211a18, #1d1615);
+  border-color: var(--line);
+}
+
+@media (max-width: 860px) {
+  html[data-theme="dark"] .hero-home {
+    background-position: 100% center;
+    background-image: linear-gradient(90deg, #171311 0%, rgba(23,19,17,0.99) 52%, rgba(23,19,17,0.92) 66%, rgba(23,19,17,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+  }
+  html[data-theme="dark"] .hero-home-alt {
+    background-position: 100% center;
+    background-image: linear-gradient(90deg, #171311 0%, rgba(23,19,17,0.99) 52%, rgba(23,19,17,0.92) 66%, rgba(23,19,17,0.25) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+  }
+}
+
+@media (max-width: 639px) {
+  html[data-theme="dark"] .page-hero.scene-sprite::after { background: linear-gradient(0deg, rgba(23,19,17,.98) 0%, rgba(23,19,17,.84) 50%, transparent 82%); }
+  html[data-theme="dark"] .hero-home {
+    background-color: #171311;
+    background-image: linear-gradient(0deg, #171311 0%, rgba(23,19,17,0.99) 58%, rgba(23,19,17,0.92) 72%, rgba(23,19,17,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero.webp') type('image/webp'), url('../images/glowe-hero.png') type('image/png'));
+    background-position: 70% 8px; background-size: 85% auto; background-repeat: no-repeat;
+  }
+  html[data-theme="dark"] .hero-home-alt {
+    background-color: #171311;
+    background-image: linear-gradient(0deg, #171311 0%, rgba(23,19,17,0.99) 58%, rgba(23,19,17,0.92) 72%, rgba(23,19,17,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+    background-position: 65% 8px; background-size: cover; background-repeat: no-repeat;
+  }
+  [dir="rtl"][data-theme="dark"] .hero-home-alt {
+    background-image: linear-gradient(0deg, #171311 0%, rgba(23,19,17,0.99) 58%, rgba(23,19,17,0.92) 72%, rgba(23,19,17,0.30) 86%, transparent 100%), image-set(url('../images/glowe-hero-2.jpg') type('image/jpeg'), url('../images/glowe-hero-2.png') type('image/png'));
+    background-position: 35% 8px;
+  }
+}
+
+html[data-theme="dark"] .standalone-utility-bar {
+  background: rgba(33, 26, 24, 0.88);
+  border-color: var(--line);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Clinical Section & Quiz Banner Dark Mode */
+html[data-theme="dark"] .metric-card {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .metric-icon-wrap {
+  background: rgba(235, 114, 98, 0.15);
+}
+html[data-theme="dark"] .metric-tag {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.25);
+}
+html[data-theme="dark"] .clinical-timeline-box {
+  background: #1e1716;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .timeline-header {
+  background: linear-gradient(to right, rgba(46, 29, 27, 0.7), rgba(30, 23, 22, 0.7));
+  border-color: var(--line);
+}
+html[data-theme="dark"] .timeline-tab {
+  background: #261d1b;
+  border-color: var(--line);
+  color: var(--muted);
+}
+html[data-theme="dark"] .timeline-tab:hover {
+  border-color: var(--coral);
+  color: var(--ink);
+}
+html[data-theme="dark"] .timeline-tab.active {
+  background: var(--coral);
+  color: #ffffff;
+  border-color: var(--coral);
+}
+html[data-theme="dark"] .panel-dermatologist-card {
+  background: #281e1c;
+  border-color: rgba(235, 114, 98, 0.25);
+}
+html[data-theme="dark"] .clinical-cert-strip {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .cert-divider {
+  background: var(--line);
+}
+html[data-theme="dark"] .quiz-banner {
+  background: linear-gradient(135deg, #241a18 0%, #2d1d1c 50%, #1f1716 100%);
+  border-color: rgba(235, 114, 98, 0.22);
+}
+html[data-theme="dark"] .quiz-feature-card {
+  background: rgba(36, 26, 24, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+html[data-theme="dark"] .quiz-feature-card .round-icon {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--coral);
+}
+
+/* 5 New Unique Sections Dark Mode */
+html[data-theme="dark"] .synergy-card {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .synergy-card:hover {
+  border-color: rgba(235, 114, 98, 0.4);
+}
+html[data-theme="dark"] .synergy-active-pill {
+  background: #1a1514;
+  border-color: var(--line);
+  color: var(--ink);
+}
+html[data-theme="dark"] .synergy-time-pill {
+  background: #261d1b;
+  border-color: var(--line);
+  color: var(--muted);
+}
+html[data-theme="dark"] .synergy-power {
+  background: rgba(46, 125, 50, 0.25);
+  color: #81c784;
+  border-color: rgba(46, 125, 50, 0.4);
+}
+html[data-theme="dark"] .synergy-caution {
+  background: rgba(217, 119, 6, 0.25);
+  color: #ffb74d;
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
+html[data-theme="dark"] .depth-card {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .depth-tag {
+  background: #1a1514;
+  border-color: var(--line);
+  color: var(--muted);
+}
+html[data-theme="dark"] .science-commitments-strip {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .science-pill .round-icon {
+  background: #2c201d;
+  border-color: var(--line);
+  color: var(--coral);
+}
+
+html[data-theme="dark"] .never-card {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .never-icon {
+  background: #2c201d;
+  color: var(--coral);
+}
+
+html[data-theme="dark"] .season-card-main {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .season-metrics-bar {
+  background: #1a1514;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .season-metric-item {
+  border-color: var(--line);
+}
+html[data-theme="dark"] .season-hero-product-card {
+  background: #1a1514;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .season-product-thumb {
+  background-color: #261d1a;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .barrier-assessment-box {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .barrier-status-indicator {
+  background: #1a1514;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .barrier-check-item {
+  background: #1a1514;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .barrier-check-item:hover {
+  border-color: var(--coral);
+}
+html[data-theme="dark"] .barrier-check-item.checked {
+  background: rgba(240, 139, 142, 0.14);
+  border-color: var(--coral);
+}
+html[data-theme="dark"] .barrier-check-custom {
+  background: #261d1b;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .barrier-check-item.checked .barrier-check-custom {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+}
+html[data-theme="dark"] .sos-protocol-head .round-icon {
+  background: #2c201d;
+  color: var(--coral);
+}
+html[data-theme="dark"] .sos-step-card {
+  background: #211a18;
+  border-color: var(--line);
+}
+html[data-theme="dark"] .sos-rules-box {
+  border-color: var(--line);
+}

@@ -1,0 +1,60 @@
+/* Paper Worlds — composition rules for the September 2026 artwork. */
+.hero__media::after { display: none; }
+.hero__grid .hero__media {
+  align-self: center;
+  width: 100%;
+  min-height: 0;
+  margin-inline: 0;
+  aspect-ratio: 3 / 2;
+}
+.hero__grid .hero__media img {
+  width: 100%;
+  height: 100%;
+  transform: none;
+}
+.home-alt-hero__grid .hero__media {
+  align-self: center;
+  width: 100%;
+  min-height: 0;
+  margin-inline: 0;
+  aspect-ratio: 16 / 11;
+}
+.home-alt-hero__grid .hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+.hero__media--wide {
+  min-height: 0;
+  aspect-ratio: 21 / 9;
+}
+.hero__media--wide img { object-position: center 54%; }
+.feature-media img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.page-hero__media img { aspect-ratio: 3 / 2; }
+.page-hero__media--square img { aspect-ratio: 1; }
+[data-theme="dark"] img[src*="/paper-worlds/"] { filter: none; }
+.event-row__thumb img[src*="/cocoa-grove"] {
+  object-fit: contain;
+  background: #e66b4b;
+}
+.image-callout img[src*="/community-table"],
+.event-hero img[src*="/community-table"] { object-position: 65% center; }
+.value-card__media img[src*="/game-curator"] { object-position: center 42%; }
+@media (max-width: 639px) {
+  .hero__media--wide { aspect-ratio: 3 / 2; }
+  .home-alt-hero__grid .hero__media { aspect-ratio: 16 / 10; }
+  .hero__index {
+    inset-inline: 0.8rem;
+    bottom: 0.8rem;
+    max-width: calc(100% - 1.6rem);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.56rem;
+  }
+  .hero__seal { top: 0.75rem; inset-inline-end: 0.75rem; }
+  .image-callout img[src*="/community-table"],
+  .event-hero img[src*="/community-table"] { object-position: 68% center; }
+}
