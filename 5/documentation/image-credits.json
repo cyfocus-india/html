@@ -1,0 +1,173 @@
+{
+  "source": "Pexels",
+  "license": "Pexels License - free for commercial use, no attribution required",
+  "license_url": "https://www.pexels.com/license/",
+  "note": "Each entry maps a local file in assets/images to the Pexels photo it was made from.",
+  "photos": [
+    {
+      "file": "assets/images/subject-maths.webp",
+      "pexels_id": 6256066,
+      "page": "https://www.pexels.com/photo/6256066/"
+    },
+    {
+      "file": "assets/images/subject-science.webp",
+      "pexels_id": 9629709,
+      "page": "https://www.pexels.com/photo/9629709/"
+    },
+    {
+      "file": "assets/images/subject-english.webp",
+      "pexels_id": 5676740,
+      "page": "https://www.pexels.com/photo/5676740/"
+    },
+    {
+      "file": "assets/images/subject-social.webp",
+      "pexels_id": 8926405,
+      "page": "https://www.pexels.com/photo/8926405/"
+    },
+    {
+      "file": "assets/images/step-assess.webp",
+      "pexels_id": 5311406,
+      "page": "https://www.pexels.com/photo/5311406/"
+    },
+    {
+      "file": "assets/images/step-plan.webp",
+      "pexels_id": 6172482,
+      "page": "https://www.pexels.com/photo/6172482/"
+    },
+    {
+      "file": "assets/images/step-class.webp",
+      "pexels_id": 8423042,
+      "page": "https://www.pexels.com/photo/8423042/"
+    },
+    {
+      "file": "assets/images/step-review.webp",
+      "pexels_id": 7128661,
+      "page": "https://www.pexels.com/photo/7128661/"
+    },
+    {
+      "file": "assets/images/mode-online.webp",
+      "pexels_id": 7283623,
+      "page": "https://www.pexels.com/photo/7283623/"
+    },
+    {
+      "file": "assets/images/mode-centre.webp",
+      "pexels_id": 5212345,
+      "page": "https://www.pexels.com/photo/5212345/"
+    },
+    {
+      "file": "assets/images/class-primary.webp",
+      "pexels_id": 31864415,
+      "page": "https://www.pexels.com/photo/31864415/"
+    },
+    {
+      "file": "assets/images/class-middle.webp",
+      "pexels_id": 18012459,
+      "page": "https://www.pexels.com/photo/18012459/"
+    },
+    {
+      "file": "assets/images/class-secondary.webp",
+      "pexels_id": 8199651,
+      "page": "https://www.pexels.com/photo/8199651/"
+    },
+    {
+      "file": "assets/images/class-senior.webp",
+      "pexels_id": 9489771,
+      "page": "https://www.pexels.com/photo/9489771/"
+    },
+    {
+      "file": "assets/images/campus-batch.webp",
+      "pexels_id": 5905458,
+      "page": "https://www.pexels.com/photo/5905458/"
+    },
+    {
+      "file": "assets/images/campus-library.webp",
+      "pexels_id": 9572477,
+      "page": "https://www.pexels.com/photo/9572477/"
+    },
+    {
+      "file": "assets/images/campus-safe.webp",
+      "pexels_id": 6809658,
+      "page": "https://www.pexels.com/photo/6809658/"
+    },
+    {
+      "file": "assets/images/parent-meeting.webp",
+      "pexels_id": 8117476,
+      "page": "https://www.pexels.com/photo/8117476/"
+    },
+    {
+      "file": "assets/images/helpline.webp",
+      "pexels_id": 7658323,
+      "page": "https://www.pexels.com/photo/7658323/"
+    },
+    {
+      "file": "assets/images/enquiry-desk.webp",
+      "pexels_id": 8867631,
+      "page": "https://www.pexels.com/photo/8867631/"
+    },
+    {
+      "file": "assets/images/peer-circle.webp",
+      "pexels_id": 8423410,
+      "page": "https://www.pexels.com/photo/8423410/"
+    },
+    {
+      "file": "assets/images/doubt-counter.webp",
+      "pexels_id": 8617736,
+      "page": "https://www.pexels.com/photo/8617736/"
+    },
+    {
+      "file": "assets/images/concept-wall.webp",
+      "pexels_id": 6238068,
+      "page": "https://www.pexels.com/photo/6238068/"
+    },
+    {
+      "file": "assets/images/study-planner.webp",
+      "pexels_id": 5190599,
+      "page": "https://www.pexels.com/photo/5190599/"
+    },
+    {
+      "file": "assets/images/exam-hall.webp",
+      "pexels_id": 6683887,
+      "page": "https://www.pexels.com/photo/6683887/"
+    },
+    {
+      "file": "assets/images/kids-hands.webp",
+      "pexels_id": 8617938,
+      "page": "https://www.pexels.com/photo/8617938/"
+    },
+    {
+      "file": "assets/images/tutor-board.webp",
+      "pexels_id": 5905923,
+      "page": "https://www.pexels.com/photo/5905923/"
+    },
+    {
+      "file": "assets/images/warm-support.webp",
+      "pexels_id": 7692564,
+      "page": "https://www.pexels.com/photo/7692564/"
+    },
+    {
+      "file": "assets/images/curiosity.webp",
+      "pexels_id": 6437813,
+      "page": "https://www.pexels.com/photo/6437813/"
+    },
+    {
+      "file": "assets/images/report-card.webp",
+      "pexels_id": 6684373,
+      "page": "https://www.pexels.com/photo/6684373/"
+    },
+    {
+      "file": "assets/images/counselling.webp",
+      "pexels_id": 12903171,
+      "page": "https://www.pexels.com/photo/12903171/"
+    },
+    {
+      "file": "assets/images/confident-hand.webp",
+      "pexels_id": 8423453,
+      "page": "https://www.pexels.com/photo/8423453/"
+    },
+    {
+      "file": "assets/images/reading-class.webp",
+      "pexels_id": 7396399,
+      "page": "https://www.pexels.com/photo/7396399/"
+    }
+  ]
+}

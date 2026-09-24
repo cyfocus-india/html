@@ -1,0 +1,298 @@
+/* ==========================================================================
+   Refinements & Precision Layout Polish
+   ========================================================================== */
+
+/* Maintain crisp text rendering and solid contrast */
+body {
+  text-rendering: optimizeLegibility;
+}
+
+/* Avatar stack visuals */
+.avatar-stack span {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-stack span:nth-child(1) { background-image: url("../images/carewell-caregiver.png"); background-size: 175%; background-position: 50% 24%; color: transparent; }
+.avatar-stack span:nth-child(2) { background-image: url("../images/carewell-hero.png"); background-size: 255%; background-position: 28% 22%; color: transparent; }
+.avatar-stack span:nth-child(3) { background-image: url("../images/carewell-hero.png"); background-size: 245%; background-position: 80% 25%; color: transparent; }
+.avatar-stack span:nth-child(4) { background-image: url("../images/carewell-caregiver.png"); background-size: 190%; background-position: 52% 30%; color: transparent; }
+
+/* Focus states for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Card hover and elevation refinements */
+.detail-card, .service-card, .price-card, .stat-card, .value-card, .testimonial-card {
+  will-change: transform, box-shadow;
+}
+
+/* Image containment */
+.hero-photo-wrap img, .caregiver-photo img, .inner-photo img, .alt-image img, .content-visual img {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Universal High-Contrast & Text Legibility System (Light & Dark Theme)
+   Fixes washed out text, low-opacity numbers, and white-on-white buttons
+   ========================================================================== */
+
+/* 1. Primary CTA Button inside Consultation CTA Banners (White Button + Navy Text) */
+.consultation-cta-actions .button-primary {
+  background: #ffffff !important;
+  color: #0a1c4a !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.consultation-cta-actions .button-primary:hover {
+  background: #eaf3ff !important;
+  color: #124bb8 !important;
+}
+
+.consultation-cta-actions .button-primary svg,
+.consultation-cta-actions .button-primary span {
+  color: #0a1c4a !important;
+  fill: currentColor !important;
+}
+
+.consultation-cta-actions .button-primary:hover svg,
+.consultation-cta-actions .button-primary:hover span {
+  color: #124bb8 !important;
+  fill: currentColor !important;
+}
+
+/* Secondary CTA Button inside Consultation CTA Banners (Crisp Ghost Pill + White Text) */
+.consultation-cta-actions .button-secondary,
+.consultation-cta-banner .button-secondary,
+.consultation-cta-banner a.button-secondary {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  font-weight: 600 !important;
+}
+
+.consultation-cta-actions .button-secondary:hover,
+.consultation-cta-banner .button-secondary:hover,
+.consultation-cta-banner a.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Badges and Kickers inside dark banners */
+.consultation-cta-banner .subpage-kicker,
+.consultation-cta-banner .cta-kicker,
+.consultation-cta-banner .eyebrow,
+.consultation-cta-banner [class*="kicker"],
+.consultation-cta-banner [class*="badge"] {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.priority-card.glass-dark strong,
+.priority-card.glass-dark span,
+.priority-card.glass-dark small {
+  color: #ffffff !important;
+}
+
+.priority-card.glass-dark strong b {
+  color: #dceaff !important;
+}
+
+.priority-card.glass-dark small {
+  color: #eaf3ff !important;
+}
+
+/* 2. Process Step Numbers (Home 1 & Subpages) */
+.open-process-step-num {
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  color: #124bb8 !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 8px !important;
+}
+
+/* 3. Universal High-Contrast Teal Text Elements (Light Theme) */
+.specialty-tag.teal,
+.care-tier-badge.teal,
+.acuity-pill.mod,
+.caregiver-verified-tag,
+.pod-tier-badge.teal,
+.pod-role-subtitle.teal,
+.pod-status-pill.teal,
+.table-check.teal,
+.case-study-badge.teal,
+.case-study-verification,
+.patient-avatar-badge.teal,
+.block-kicker.teal,
+.care-tier-clinician.teal,
+.pathway-acuity-badge.teal,
+.pathway-clinician-tag.teal,
+.service-clinician-kicker,
+.open-roadmap-step:nth-child(even) .open-roadmap-phase-pill,
+.onboarding-step-card .step-num-badge.teal,
+.timeline-time-badge.teal,
+.pricing-triage-pill .pill-link,
+.vetting-badge-step.teal,
+.continuum-step-badge.teal,
+.continuum-step-badge.teal .step-num,
+.continuum-timeline-tag.teal,
+.continuum-status-pill.teal,
+.continuum-metric-item .metric-val.teal,
+.pod-metric-item .metric-val.teal,
+.outcomes-stat-item .stat-value.teal,
+.metric-big.teal,
+.pathway-benchmark-pill.teal .benchmark-val,
+.matrix-num {
+  color: #065f54 !important;
+  font-weight: 700;
+}
+
+/* 4. Universal High-Contrast Blue Badges, Eyebrows & Action Triggers (Light Theme) */
+.specialty-tag:not(.teal),
+.service-trigger-btn,
+.subpage-kicker,
+.pricing-header-center .subpage-kicker,
+.pricing-scroll-hint,
+.pathway-acuity-badge.blue,
+.acuity-pill.high,
+.footer-badge,
+.coordination-badge,
+.pod-cta-badge,
+.cta-kicker,
+.open-roadmap-phase-pill:not(.teal),
+.onboarding-step-card .step-num-badge:not(.teal),
+.vetting-badge-step:not(.teal),
+.continuum-step-badge:not(.teal) .step-num,
+.step-num-badge:not(.teal) {
+  color: #124bb8 !important;
+  font-weight: 700;
+}
+
+/* 5. Star Ratings High Visibility (Light Theme) */
+.stars {
+  color: #b45309 !important;
+}
+
+/* 6. Open Service Badges (Photo Overlay) */
+.open-service-badge.blue {
+  background: rgba(18, 75, 184, 0.94) !important;
+  color: #ffffff !important;
+}
+
+.open-service-badge.teal {
+  background: rgba(8, 99, 88, 0.94) !important;
+  color: #ffffff !important;
+}
+
+/* 7. Highlights, Triggers & Footer Links Contrast */
+.open-service-highlights li {
+  color: #263852 !important;
+}
+
+.open-service-actions .service-popover-trigger {
+  color: #124bb8 !important;
+  font-weight: 700 !important;
+}
+
+.footer-bottom {
+  color: #344866 !important;
+}
+
+.footer-bottom a {
+  color: #263852 !important;
+  font-weight: 600 !important;
+}
+
+.footer-bottom a:hover {
+  color: #124bb8 !important;
+}
+
+/* 8. Input Placeholder Contrast */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #526b8d !important;
+  opacity: 1 !important;
+}
+
+/* 9. Dark Mode Contrast Overrides (Preserves Crisp Dark Theme) */
+html[data-theme="dark"] .specialty-tag.teal,
+html[data-theme="dark"] .care-tier-badge.teal,
+html[data-theme="dark"] .acuity-pill.mod,
+html[data-theme="dark"] .caregiver-verified-tag,
+html[data-theme="dark"] .pod-tier-badge.teal,
+html[data-theme="dark"] .pod-role-subtitle.teal,
+html[data-theme="dark"] .pod-status-pill.teal,
+html[data-theme="dark"] .table-check.teal,
+html[data-theme="dark"] .case-study-badge.teal,
+html[data-theme="dark"] .case-study-verification,
+html[data-theme="dark"] .patient-avatar-badge.teal,
+html[data-theme="dark"] .block-kicker.teal,
+html[data-theme="dark"] .care-tier-clinician.teal,
+html[data-theme="dark"] .pathway-acuity-badge.teal,
+html[data-theme="dark"] .pathway-clinician-tag.teal,
+html[data-theme="dark"] .service-clinician-kicker,
+html[data-theme="dark"] .open-roadmap-step:nth-child(even) .open-roadmap-phase-pill,
+html[data-theme="dark"] .onboarding-step-card .step-num-badge.teal,
+html[data-theme="dark"] .timeline-time-badge.teal,
+html[data-theme="dark"] .pricing-triage-pill .pill-link,
+html[data-theme="dark"] .vetting-badge-step.teal,
+html[data-theme="dark"] .continuum-step-badge.teal,
+html[data-theme="dark"] .continuum-step-badge.teal .step-num,
+html[data-theme="dark"] .matrix-num {
+  color: #2dd4bf !important;
+}
+
+html[data-theme="dark"] .specialty-tag:not(.teal),
+html[data-theme="dark"] .service-trigger-btn,
+html[data-theme="dark"] .subpage-kicker,
+html[data-theme="dark"] .pricing-header-center .subpage-kicker,
+html[data-theme="dark"] .pricing-scroll-hint,
+html[data-theme="dark"] .pathway-acuity-badge.blue,
+html[data-theme="dark"] .acuity-pill.high,
+html[data-theme="dark"] .footer-badge,
+html[data-theme="dark"] .coordination-badge,
+html[data-theme="dark"] .pod-cta-badge,
+html[data-theme="dark"] .cta-kicker,
+html[data-theme="dark"] .open-roadmap-phase-pill:not(.teal),
+html[data-theme="dark"] .onboarding-step-card .step-num-badge:not(.teal),
+html[data-theme="dark"] .vetting-badge-step:not(.teal),
+html[data-theme="dark"] .step-num-badge:not(.teal),
+html[data-theme="dark"] .open-process-step-num {
+  color: #93c5fd !important;
+}
+
+html[data-theme="dark"] .stars {
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .consultation-cta-actions .button-primary {
+  background: #ffffff !important;
+  color: #0a1c4a !important;
+}
+
+html[data-theme="dark"] .consultation-cta-actions .button-primary svg,
+html[data-theme="dark"] .consultation-cta-actions .button-primary span {
+  color: #0a1c4a !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder,
+html[data-theme="dark"] select::placeholder {
+  color: #94a3b8 !important;
+}

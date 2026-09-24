@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your free PLAY ZONE Parent Account. Register child profiles, sign the digital safety waiver, and start booking play sessions.">
+  <title>Sign Up - Play Zone</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260924c">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260924c">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260924c">
+</head>
+<body style="background-color: var(--bg-surface-alt); min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Floating Theme and Direction Controls -->
+  <div class="auth-top-controls" aria-label="Page display settings">
+    <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode" title="Toggle Dark / Light Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button type="button" class="icon-control-btn dir-toggle-btn" aria-label="Toggle Direction (LTR / RTL)" title="Switch to RTL Layout">
+      <i class="fas fa-right-left"></i>
+    </button>
+  </div>
+
+  <!-- Signup Main Container -->
+  <main id="main-content" style="padding: 3.5rem 0; display: flex; align-items: center; justify-content: center; flex-grow: 1;">
+    <div class="container" style="max-width: 580px;">
+      <!-- Brand Logo -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <a href="../index.html" class="brand-logo" style="display: inline-flex;" title="Back to Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+            <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+          </div>
+        </a>
+      </div>
+      <div class="portal-form-box">
+        <div style="display: flex; gap: 6px; margin-bottom: 1.5rem;" aria-hidden="true">
+          <div style="width: 28px; height: 8px; background: var(--accent-red); border-radius: 4px;"></div>
+          <div style="width: 18px; height: 8px; background: var(--accent-yellow); border-radius: 4px;"></div>
+          <div style="width: 18px; height: 8px; background: var(--primary-blue); border-radius: 4px;"></div>
+        </div>
+
+        <h1 style="font-size: 1.75rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.5rem;">
+          SIGN UP
+        </h1>
+        <p style="font-size: 0.85rem; color: var(--neutral-500); margin-bottom: 2rem;">
+          Create your parent profile to manage bookings, track children's playtime, and receive instant QR passes.
+        </p>
+
+        <form action="dashboard.html" method="GET" data-validate="true">
+          <!-- Parent Info -->
+          <div class="form-row-two-col">
+            <div class="form-group">
+              <label for="signup-parent-name" class="form-label">Parent / Guardian Full Name</label>
+              <input type="text" id="signup-parent-name" class="form-control" placeholder="e.g. Jessica Miller" required>
+              <div class="invalid-feedback">Please provide your full name.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="signup-phone" class="form-control" placeholder="+91 98765 43210" required>
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email" class="form-label">Email Address</label>
+            <input type="email" id="signup-email" class="form-control" placeholder="parent@example.com" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <!-- Child Info Section -->
+          <div style="background-color: var(--bg-surface-alt); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-heading);"><i class="fas fa-child" style="color: var(--primary-blue);"></i> First Child Information</h4>
+            <div class="form-row-two-col">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="signup-child-name" class="form-label">Child Name</label>
+                <input type="text" id="signup-child-name" class="form-control" placeholder="e.g. Liam Miller" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="signup-child-dob" class="form-label">Date of Birth</label>
+                <input type="date" id="signup-child-dob" class="form-control" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-row-two-col">
+            <div class="form-group">
+              <label for="signup-password" class="form-label">Password</label>
+              <div class="password-input-group">
+                <input type="password" id="signup-password" class="form-control" placeholder="••••••••" required minlength="6">
+                <button type="button" class="toggle-pwd-btn" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">At least 6 characters required.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+              <div class="password-input-group">
+                <input type="password" id="signup-confirm-password" class="form-control" placeholder="••••••••" required minlength="6">
+                <button type="button" class="toggle-pwd-btn" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Passwords must match.</div>
+            </div>
+          </div>
+
+          <!-- Digital Waiver Check -->
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.65rem; cursor: pointer; font-size: 0.85rem; line-height: 1.45;">
+              <input type="checkbox" required style="margin-top: 2px; accent-color: var(--primary-blue); flex-shrink: 0; width: 17px; height: 17px; cursor: pointer;">
+              <span>I agree to the <a href="terms.html" class="form-link" target="_blank">Play Area Rules</a> and digitally sign the <a href="safety-standards.html" class="form-link" target="_blank">Liability Safety Waiver</a> on behalf of my family.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary-blue btn-block btn-lg">
+            <i class="fas fa-user-plus"></i> CREATE ACCOUNT
+          </button>
+
+          <div class="portal-switch-prompt">
+            Already registered? <a href="signin.html">SIGN IN</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js?v=20260924c"></script>
+</body>
+</html>

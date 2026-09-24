@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Communication, leadership, sales, technical and behavioral corporate training programs.">
+    <title>Programs | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="../index.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="../index.html" class="dropdown-item">Home 1</a>
+              <a href="../index1.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a class="active" href="programs.html">Programs</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="clients.html">Clients</a>
+          <a href="in-house-training.html">In-House Training</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button"
+            class="icon-button rtl-toggle-btn"
+            data-rtl-toggle
+            aria-label="Switch to RTL layout"
+          >
+            <span class="rtl-text" data-rtl-text>RTL</span></button
+          ><a class="button button-sm" href="signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          ><button type="button"
+            class="menu-button"
+            data-menu-button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open navigation"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Mobile navigation" class="mobile-menu glass" id="mobile-menu" data-mobile-menu>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+          </div>
+        </div>
+        <a class="active" href="programs.html">Programs</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="clients.html">Clients</a>
+        <a href="in-house-training.html">In-House Training</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="inner-main">
+      <section class="page-hero section-shell reveal">
+        <p class="eyebrow"><span></span> Learn what matters</p>
+        <h1>
+          Programs built for <span class="gradient-text">real work.</span>
+        </h1>
+        <p>
+          Practical, expert-led learning journeys that build durable skills,
+          boost performance and accelerate growth.
+        </p>
+      </section>
+      <section class="section-shell programs-center-section">
+        <div class="tab-bar reveal" role="group" aria-label="Filter programs">
+          <button type="button" class="tab-button active" data-filter="all">
+            All programs <span class="filter-count">5</span></button
+          ><button type="button" class="tab-button" data-filter="leadership">
+            Leadership <span class="filter-count">1</span></button
+          ><button type="button" class="tab-button" data-filter="communication">
+            Communication <span class="filter-count">1</span></button
+          ><button type="button" class="tab-button" data-filter="sales">
+            Sales <span class="filter-count">1</span></button
+          ><button type="button" class="tab-button" data-filter="technical">
+            Technical & AI <span class="filter-count">1</span></button
+          ><button type="button" class="tab-button" data-filter="behavioral">
+            Behavioral <span class="filter-count">1</span></button>
+        </div>
+
+        <!-- Varied Modern Program Layouts -->
+        <div class="programs-varied-container" data-filter-grid>
+
+          <!-- 01 / Leadership - Wide Horizontal Card -->
+          <article
+            class="program-horizontal-card glass reveal"
+            id="leadership"
+            data-category="leadership"
+          >
+            <div class="program-card-media">
+              <picture>
+                <source srcset="../assets/images/program-leadership.webp" type="image/webp">
+                <img
+                  src="../assets/images/program-leadership.jpg"
+                  alt="Executive leadership training workshop in modern boardroom"
+                  width="688"
+                  height="384"
+                  loading="lazy">
+              </picture>
+              <div class="program-media-overlay">
+                <span class="program-media-badge"><i data-lucide="award"></i> Flagship Executive Track</span>
+                <div class="program-media-stats">
+                  <span class="program-stat-pill"><i data-lucide="clock"></i> 6 Weeks (12 Labs)</span>
+                  <span class="program-stat-pill"><i data-lucide="video"></i> Executive & Virtual</span>
+                </div>
+              </div>
+            </div>
+            <div class="program-card-content">
+              <span class="program-card-eyebrow"><i data-lucide="users-round"></i> 01 / Executive Leadership</span>
+              <h2 class="program-card-title">Executive Leadership & Strategic Management</h2>
+              <p class="program-card-desc">
+                Equip modern managers and directors with high-performance coaching frameworks, psychological safety practices, and agile change leadership systems that scale across teams.
+              </p>
+              <div class="program-curriculum-chips">
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Team Architecture</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Adaptive Change</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> 1-on-1 Mentorship</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> 360 Feedback Loops</span>
+              </div>
+              <div class="program-card-footer">
+                <div class="program-faculty-snippet">
+                  <div class="program-faculty-avatar">EV</div>
+                  <div class="program-faculty-meta">
+                    <b>Dr. Elena Vance</b>
+                    <small>Director of Leadership Institute</small>
+                  </div>
+                </div>
+                <div class="program-action-buttons">
+                  <button type="button" class="explore-program-btn" data-explore-program="leadership" aria-label="Explore Leadership program syllabus">
+                    <span>Explore Full Syllabus</span> <i data-lucide="arrow-up-right"></i>
+                  </button>
+                  <a href="contact.html?program=leadership" class="button button-sm button-ghost">Enquire for Team</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 / Communication - Horizontal Reversed Split Card -->
+          <article
+            class="program-horizontal-card reverse glass reveal"
+            id="communication"
+            data-category="communication"
+          >
+            <div class="program-card-media">
+              <picture>
+                <source srcset="../assets/images/program-communication.webp" type="image/webp">
+                <img
+                  src="../assets/images/program-communication.jpg"
+                  alt="Business communication and executive presentation skills seminar"
+                  width="688"
+                  height="384"
+                  loading="lazy">
+              </picture>
+              <div class="program-media-overlay">
+                <span class="program-media-badge"><i data-lucide="mic"></i> Boardroom Influence Track</span>
+                <div class="program-media-stats">
+                  <span class="program-stat-pill"><i data-lucide="clock"></i> 4 Weeks (8 Labs)</span>
+                  <span class="program-stat-pill"><i data-lucide="video"></i> Hybrid Studios</span>
+                </div>
+              </div>
+            </div>
+            <div class="program-card-content">
+              <span class="program-card-eyebrow"><i data-lucide="messages-square"></i> 02 / Strategic Communication</span>
+              <h2 class="program-card-title">Strategic Business Communication & Influence</h2>
+              <p class="program-card-desc">
+                Master executive narrative structuring, high-stakes boardroom delivery, and cross-functional alignment techniques that turn complex technical proposals into funded business initiatives.
+              </p>
+              <div class="program-curriculum-chips">
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Pyramid Principle Narrative</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Boardroom Delivery</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Multi-Stakeholder Alignment</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Executive Memos</span>
+              </div>
+              <div class="program-card-footer">
+                <div class="program-faculty-snippet">
+                  <div class="program-faculty-avatar">SC</div>
+                  <div class="program-faculty-meta">
+                    <b>Sophia Chen</b>
+                    <small>VP of Corporate Communications</small>
+                  </div>
+                </div>
+                <div class="program-action-buttons">
+                  <button type="button" class="explore-program-btn" data-explore-program="communication" aria-label="Explore Communication program syllabus">
+                    <span>Explore Full Syllabus</span> <i data-lucide="arrow-up-right"></i>
+                  </button>
+                  <a href="contact.html?program=communication" class="button button-sm button-ghost">Enquire for Team</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 & 04 Bento Row: Sales & Technical -->
+          <div class="programs-bento-row">
+            <!-- 03 / Sales Bento Card -->
+            <article
+              class="program-bento-card glass reveal"
+              id="sales"
+              data-category="sales"
+            >
+              <div class="program-bento-media">
+                <picture>
+                  <source srcset="../assets/images/program-sales.webp" type="image/webp">
+                  <img
+                    src="../assets/images/program-sales.jpg"
+                    alt="B2B enterprise sales and commercial negotiation workshop"
+                    width="688"
+                    height="384"
+                    loading="lazy">
+                </picture>
+                <div class="program-media-overlay">
+                  <span class="program-media-badge"><i data-lucide="chart-spline"></i> Commercial Velocity</span>
+                  <div class="program-media-stats">
+                    <span class="program-stat-pill"><i data-lucide="clock"></i> 5 Weeks (10 Sprints)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="program-bento-body">
+                <span class="program-card-eyebrow"><i data-lucide="chart-spline"></i> 03 / Commercial Sales</span>
+                <h2 class="program-card-title">Enterprise B2B Sales & Commercial Negotiation</h2>
+                <p class="program-card-desc">
+                  Accelerate enterprise deal velocity, multi-threaded consensus building, and price defense in high-stakes negotiations to protect gross margins.
+                </p>
+                <div class="program-curriculum-chips">
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Diagnostic Selling</span>
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Margin Defense</span>
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Pipeline Velocity</span>
+                </div>
+                <div class="program-card-footer">
+                  <div class="program-faculty-snippet">
+                    <div class="program-faculty-avatar">MB</div>
+                    <div class="program-faculty-meta">
+                      <b>Marcus Brody</b>
+                      <small>Former Global VP Sales</small>
+                    </div>
+                  </div>
+                  <div class="program-action-buttons">
+                    <button type="button" class="explore-program-btn" data-explore-program="sales" aria-label="Explore Sales program syllabus">
+                      <span>Explore Syllabus</span> <i data-lucide="arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 04 / Technical Bento Card -->
+            <article
+              class="program-bento-card glass reveal"
+              id="technical"
+              data-category="technical"
+            >
+              <div class="program-bento-media">
+                <picture>
+                  <source srcset="../assets/images/program-technical.webp" type="image/webp">
+                  <img
+                    src="../assets/images/program-technical.jpg"
+                    alt="Corporate AI fluency and technical upskilling lab"
+                    width="688"
+                    height="384"
+                    loading="lazy">
+                </picture>
+                <div class="program-media-overlay">
+                  <span class="program-media-badge"><i data-lucide="code-xml"></i> AI & Data Academy</span>
+                  <div class="program-media-stats">
+                    <span class="program-stat-pill"><i data-lucide="clock"></i> 4 Weeks (8 Labs)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="program-bento-body">
+                <span class="program-card-eyebrow"><i data-lucide="code-xml"></i> 04 / AI & Data Fluency</span>
+                <h2 class="program-card-title">Enterprise AI Fluency & Digital Automation</h2>
+                <p class="program-card-desc">
+                  Empower non-technical and operational business units with Generative AI workflows, modern low-code automation, and predictive data modeling.
+                </p>
+                <div class="program-curriculum-chips">
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> GenAI Automations</span>
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Data Modeling</span>
+                  <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Low-Code Pipelines</span>
+                </div>
+                <div class="program-card-footer">
+                  <div class="program-faculty-snippet">
+                    <div class="program-faculty-avatar">VM</div>
+                    <div class="program-faculty-meta">
+                      <b>Vikram Malhotra</b>
+                      <small>Lead AI Architect & Fellow</small>
+                    </div>
+                  </div>
+                  <div class="program-action-buttons">
+                    <button type="button" class="explore-program-btn" data-explore-program="technical" aria-label="Explore Technical program syllabus">
+                      <span>Explore Syllabus</span> <i data-lucide="arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 05 / Behavioral - Full-Width Interactive Card -->
+          <article
+            class="program-horizontal-card glass reveal"
+            id="behavioral"
+            data-category="behavioral"
+          >
+            <div class="program-card-media">
+              <picture>
+                <source srcset="../assets/images/program-behavioral.webp" type="image/webp">
+                <img
+                  src="../assets/images/program-behavioral.jpg"
+                  alt="Team agility, resilience, and collaborative problem solving workshop"
+                  width="688"
+                  height="384"
+                  loading="lazy">
+              </picture>
+              <div class="program-media-overlay">
+                <span class="program-media-badge"><i data-lucide="brain-circuit"></i> Human Performance Track</span>
+                <div class="program-media-stats">
+                  <span class="program-stat-pill"><i data-lucide="clock"></i> 3 Weeks (6 Labs)</span>
+                  <span class="program-stat-pill"><i data-lucide="video"></i> Micro-Workshops</span>
+                </div>
+              </div>
+            </div>
+            <div class="program-card-content">
+              <span class="program-card-eyebrow"><i data-lucide="brain-circuit"></i> 05 / Behavioral Mastery</span>
+              <h2 class="program-card-title">Behavioral Agility & Workplace Resilience</h2>
+              <p class="program-card-desc">
+                Develop cognitive agility, emotional regulation, high-leverage time prioritization, and hypothesis-driven problem-solving habits that eliminate operational burnout and team friction.
+              </p>
+              <div class="program-curriculum-chips">
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Cognitive Agility Framework</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Eisenhower Priority Matrix</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Root-Cause 5-Whys</span>
+                <span class="curriculum-chip"><i data-lucide="check-circle-2"></i> Workplace Emotional Intelligence</span>
+              </div>
+              <div class="program-card-footer">
+                <div class="program-faculty-snippet">
+                  <div class="program-faculty-avatar">AT</div>
+                  <div class="program-faculty-meta">
+                    <b>Dr. Aris Thorne</b>
+                    <small>Organizational Psychologist</small>
+                  </div>
+                </div>
+                <div class="program-action-buttons">
+                  <button type="button" class="explore-program-btn" data-explore-program="behavioral" aria-label="Explore Behavioral program syllabus">
+                    <span>Explore Full Syllabus</span> <i data-lucide="arrow-up-right"></i>
+                  </button>
+                  <a href="contact.html?program=behavioral" class="button button-sm button-ghost">Enquire for Team</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Program Comparison Matrix Spec Table -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Program Curriculum Matrix</p>
+            <h2>At-a-Glance Program Comparison</h2>
+          </div>
+          <p>Compare instructional depth, delivery formats, practice intensity, and credentials across our flagship academies.</p>
+        </div>
+
+        <div class="comparison-table-wrap glass">
+          <table class="program-compare-table" aria-label="Program comparison table">
+            <thead>
+              <tr>
+                <th>Training Academy</th>
+                <th>Target Audience</th>
+                <th>Duration & Labs</th>
+                <th>Practice Ratio</th>
+                <th>Delivery Modality</th>
+                <th>Credential</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="compare-program-cell">
+                    <span class="mini-icon blue"><i data-lucide="users-round"></i></span>
+                    <div>
+                      <b>Executive Leadership</b>
+                      <small>Strategic Management</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Directors, Senior Managers & Leads</td>
+                <td>6 Weeks (12 Labs)</td>
+                <td><span class="badge-tag blue">80% Interactive</span></td>
+                <td>Executive Suite & Live Virtual</td>
+                <td><span class="badge-tag green"><i data-lucide="shield-check"></i> Exec Fellow</span></td>
+                <td>
+                  <button type="button" class="explore-program-btn" data-explore-program="leadership">
+                    Syllabus <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="compare-program-cell">
+                    <span class="mini-icon blue"><i data-lucide="messages-square"></i></span>
+                    <div>
+                      <b>Strategic Communication</b>
+                      <small>Boardroom Influence</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Managers, Cross-Functional Leads</td>
+                <td>4 Weeks (8 Labs)</td>
+                <td><span class="badge-tag blue">85% Interactive</span></td>
+                <td>Hybrid Virtual Studio & Lab</td>
+                <td><span class="badge-tag green"><i data-lucide="shield-check"></i> Influence Cert</span></td>
+                <td>
+                  <button type="button" class="explore-program-btn" data-explore-program="communication">
+                    Syllabus <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="compare-program-cell">
+                    <span class="mini-icon blue"><i data-lucide="chart-spline"></i></span>
+                    <div>
+                      <b>Enterprise B2B Sales</b>
+                      <small>Commercial Negotiation</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Account Execs, Sales Directors</td>
+                <td>5 Weeks (10 Sprints)</td>
+                <td><span class="badge-tag blue">75% Interactive</span></td>
+                <td>Live Deal Labs & Coaching</td>
+                <td><span class="badge-tag green"><i data-lucide="shield-check"></i> Deal Master</span></td>
+                <td>
+                  <button type="button" class="explore-program-btn" data-explore-program="sales">
+                    Syllabus <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="compare-program-cell">
+                    <span class="mini-icon blue"><i data-lucide="code-xml"></i></span>
+                    <div>
+                      <b>AI Fluency & Technical</b>
+                      <small>Digital Automation</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Ops, Analysts, Product, Tech</td>
+                <td>4 Weeks (8 Labs)</td>
+                <td><span class="badge-tag blue">85% Interactive</span></td>
+                <td>Hands-On Cloud Sandboxes</td>
+                <td><span class="badge-tag violet"><i data-lucide="shield-check"></i> AI Fluency</span></td>
+                <td>
+                  <button type="button" class="explore-program-btn" data-explore-program="technical">
+                    Syllabus <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="compare-program-cell">
+                    <span class="mini-icon blue"><i data-lucide="brain-circuit"></i></span>
+                    <div>
+                      <b>Behavioral Mastery</b>
+                      <small>Team Agility & Resilience</small>
+                    </div>
+                  </div>
+                </td>
+                <td>High-Impact Enterprise Teams</td>
+                <td>3 Weeks (6 Labs)</td>
+                <td><span class="badge-tag blue">80% Interactive</span></td>
+                <td>Live Virtual & Micro-Workshops</td>
+                <td><span class="badge-tag green"><i data-lucide="shield-check"></i> Resilience Cert</span></td>
+                <td>
+                  <button type="button" class="explore-program-btn" data-explore-program="behavioral">
+                    Syllabus <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Unique Section 1: Structured Capability Progression Tracks -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Capability Progression</p>
+            <h2>Structured Tracks from Foundation to Executive Mastery</h2>
+          </div>
+          <p>
+            Select clear multi-stage learning roadmaps designed for specific career stages and organizational impact levels.
+          </p>
+        </div>
+        <div class="learning-paths-grid">
+          <div class="learning-path-card glass reveal">
+            <span class="track-badge"><i data-lucide="sparkles"></i> 0 – 2 Years Exp</span>
+            <h3>Foundational Practitioner</h3>
+            <p class="track-desc">Essential workplace execution habits, business communication, and cross-functional agility.</p>
+            <div class="track-specs">
+              <span><i data-lucide="calendar"></i> 4–6 Weeks</span>
+              <span><i data-lucide="clock"></i> 24 Hours</span>
+            </div>
+            <ul>
+              <li>High-Impact Business Communication</li>
+              <li>Professional Presence & Etiquette</li>
+              <li>Structured Problem-Solving Basics</li>
+              <li>Collaborative Tools & Workflows</li>
+            </ul>
+            <span class="milestone-badge"><i data-lucide="award"></i> Certified Associate Credential</span>
+          </div>
+
+          <div class="learning-path-card glass reveal">
+            <span class="track-badge" style="background: rgba(29, 199, 238, 0.1); color: var(--teal);"><i data-lucide="zap"></i> 3 – 6 Years Exp</span>
+            <h3>Accelerated Specialist</h3>
+            <p class="track-desc">Advanced analytical thinking, consultative selling, and strategic cross-team stakeholder influence.</p>
+            <div class="track-specs">
+              <span><i data-lucide="calendar"></i> 8–10 Weeks</span>
+              <span><i data-lucide="clock"></i> 40 Hours</span>
+            </div>
+            <ul>
+              <li>Data-Driven Decision Frameworks</li>
+              <li>Strategic Influence & Stakeholders</li>
+              <li>High-Conversion Consultative Sales</li>
+              <li>Project Leadership & Team Velocity</li>
+            </ul>
+            <span class="milestone-badge"><i data-lucide="award"></i> Certified Professional Credential</span>
+          </div>
+
+          <div class="learning-path-card glass reveal">
+            <span class="track-badge" style="background: rgba(14, 165, 233, 0.1); color: #0284c7;"><i data-lucide="crown"></i> 7+ Years Exp</span>
+            <h3>Executive Leadership</h3>
+            <p class="track-desc">Enterprise culture architecture, strategic negotiations, executive mentoring, and business change.</p>
+            <div class="track-specs">
+              <span><i data-lucide="calendar"></i> 12 Weeks</span>
+              <span><i data-lucide="clock"></i> 56 Hours</span>
+            </div>
+            <ul>
+              <li>Strategic Enterprise Vision Alignment</li>
+              <li>High-Stakes Multi-Party Negotiations</li>
+              <li>Coaching for High-Output Teams</li>
+              <li>Leading Organizational Evolution</li>
+            </ul>
+            <span class="milestone-badge"><i data-lucide="award"></i> Executive Fellow Credential</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Section 2: Flexible Delivery Modalities Comparison -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Delivery Architecture</p>
+            <h2>Tailored Modalities for Every Team Dynamic</h2>
+          </div>
+          <p>
+            Whether your workforce is fully remote, on-site, or hybrid, our delivery formats guarantee identical learning engagement.
+          </p>
+        </div>
+        <div class="modalities-compare-grid">
+          <div class="modality-compare-card glass reveal">
+            <div class="modality-icon-circle">
+              <i data-lucide="monitor-play"></i>
+            </div>
+            <h3>Virtual Live Immersion</h3>
+            <p>100% live interactive cohort sprints led by senior practitioners with digital sandbox exercises.</p>
+            <ul class="modality-highlights">
+              <li><i data-lucide="check"></i> Interactive breakout room simulations</li>
+              <li><i data-lucide="check"></i> Live Q&A and immediate peer critique</li>
+              <li><i data-lucide="check"></i> On-demand HD cohort recordings</li>
+            </ul>
+          </div>
+
+          <div class="modality-compare-card glass reveal">
+            <div class="modality-icon-circle">
+              <i data-lucide="building-2"></i>
+            </div>
+            <h3>Executive Campus Intensives</h3>
+            <p>Immersive in-person masterclasses at our state-of-the-art tech suites in BLR, MUM, DEL, and HYD.</p>
+            <ul class="modality-highlights">
+              <li><i data-lucide="check"></i> Dedicated hardware labs & audio pods</li>
+              <li><i data-lucide="check"></i> Face-to-face cross-industry networking</li>
+              <li><i data-lucide="check"></i> Executive dining & roundtables</li>
+            </ul>
+          </div>
+
+          <div class="modality-compare-card glass reveal">
+            <div class="modality-icon-circle">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3>Blended Hybrid Journey</h3>
+            <p>The optimal blend of self-directed micro-modules, applied on-the-job tasks, and live mentor coaching.</p>
+            <ul class="modality-highlights">
+              <li><i data-lucide="check"></i> Flexible 15-min daily micro-lessons</li>
+              <li><i data-lucide="check"></i> Weekly live strategic calibration</li>
+              <li><i data-lucide="check"></i> 1-on-1 workplace application review</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Section 3: Enterprise Corporate Enrollment & Advisory Support -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Corporate Readiness</p>
+            <h2>End-to-End Enterprise Deployment Support</h2>
+          </div>
+          <p>
+            We manage the organizational heavy lifting from diagnostic benchmarking to LMS integration and executive reporting.
+          </p>
+        </div>
+        <div class="enrollment-support-grid">
+          <div class="support-pillar-card glass reveal">
+            <span class="support-num">Pillar 01</span>
+            <h3>Diagnostic Skills Gap Audit</h3>
+            <p>We assess baseline competency across your teams to tailor syllabus depth, prerequisites, and learning velocity before day one.</p>
+          </div>
+          <div class="support-pillar-card glass reveal">
+            <span class="support-num">Pillar 02</span>
+            <h3>Turnkey LMS Integration</h3>
+            <p>Instant compatibility with Cornerstone, Workday, SAP SuccessFactors, and modern LXP tools via SCORM 1.2/2004 and xAPI webhooks.</p>
+          </div>
+          <div class="support-pillar-card glass reveal">
+            <span class="support-num">Pillar 03</span>
+            <h3>Executive ROI Intelligence</h3>
+            <p>Real-time manager visibility into cohort attendance, capability retention tests, and Kirkpatrick Level 4 business impact indicators.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Section 4: 4-Stage Learner Experience & Certification Pathway -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Learner Journey</p>
+            <h2>From Enrollment to Verified Enterprise Credential</h2>
+          </div>
+          <p>
+            Every cohort follows a structured, milestone-driven pathway engineered to guarantee workplace adoption.
+          </p>
+        </div>
+        <div class="learner-pathway-grid">
+          <div class="pathway-step-card glass reveal">
+            <span class="pathway-step-badge">Stage 01</span>
+            <div class="pathway-step-icon"><i data-lucide="scan-line"></i></div>
+            <h3>Diagnostic Benchmark</h3>
+            <p>Pre-program skill self-assessment and manager rubric to establish clear baseline competency scores.</p>
+          </div>
+          <div class="pathway-step-card glass reveal" data-delay="1">
+            <span class="pathway-step-badge">Stage 02</span>
+            <div class="pathway-step-icon"><i data-lucide="messages-square"></i></div>
+            <h3>Active Simulation Sprints</h3>
+            <p>Live practitioner-led workshop sprints with recorded video feedback and sandbox scenario drills.</p>
+          </div>
+          <div class="pathway-step-card glass reveal" data-delay="2">
+            <span class="pathway-step-badge">Stage 03</span>
+            <div class="pathway-step-icon"><i data-lucide="presentation"></i></div>
+            <h3>Capstone Defense</h3>
+            <p>Learners apply frameworks directly to a live workplace challenge and present to senior faculty mentors.</p>
+          </div>
+          <div class="pathway-step-card glass reveal" data-delay="3">
+            <span class="pathway-step-badge">Stage 04</span>
+            <div class="pathway-step-icon"><i data-lucide="badge-check"></i></div>
+            <h3>Digital Credential</h3>
+            <p>Graduates earn an independently verifiable digital credential with UUID validation and LinkedIn sharing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Section 5: Program Enrollment & Logistics FAQ -->
+      <section class="section-shell programs-center-section reveal" style="margin-top: 36px;">
+        <div class="section-heading text-center">
+          <div>
+            <p class="eyebrow" style="justify-content: center;"><span></span> Clarifications & Logistics</p>
+            <h2>Frequently Asked Questions About Our Programs</h2>
+          </div>
+          <p>
+            Quick answers to key operational, scheduling, and credential questions asked by learners and L&D managers.
+          </p>
+        </div>
+        <div class="program-faq-accordion">
+          <details class="faq-item glass reveal">
+            <summary class="faq-summary">
+              <span>How are live cohort sessions scheduled for distributed global teams?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              We offer dual timezone scheduling tracks (APAC/EMEA and EMEA/Americas). All live sessions are recorded in high-definition and accompanied by interactive sandbox catch-up exercises for learners with unexpected client obligations.
+            </div>
+          </details>
+          <details class="faq-item glass reveal" data-delay="1">
+            <summary class="faq-summary">
+              <span>Do our employees earn Continuing Education Units (CEU) or CPE credits?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Yes. All Elevate Learning programs are aligned with ANSI/IACET Continuing Education Unit standards. Certified graduates receive official transcripts denoting completed instructional contact hours and CEUs.
+            </div>
+          </details>
+          <details class="faq-item glass reveal" data-delay="2">
+            <summary class="faq-summary">
+              <span>Can managers monitor cohort attendance and assessment scores in real time?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Authorized HR managers and department leads receive dedicated dashboard access with live metrics tracking individual attendance, module quiz completion, capstone status, and weekly practice application data.
+            </div>
+          </details>
+          <details class="faq-item glass reveal" data-delay="3">
+            <summary class="faq-summary">
+              <span>What is the prerequisite criteria for specialized vs foundational programs?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Foundational programs have zero technical prerequisites. For intermediate and executive tracks, a complimentary 15-minute diagnostic self-audit helps determine whether the learner will get maximum value from the cohort depth.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Consultation CTA Panel -->
+      <section class="section-shell" style="margin-top: 36px;">
+        <div class="cta-panel glass reveal">
+          <div>
+            <h3>Can’t find exactly what you need?</h3>
+            <p>
+              We’ll shape a program around your business context and capability
+              gaps.
+            </p>
+          </div>
+          <a class="button" href="contact.html"
+            >Talk to a learning advisor <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b
+                ><small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn individual capability
+              into measurable organizational performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+            <a href="programs.html">Programs</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="about.html">About Us</a>
+            <a href="clients.html">Clients</a>
+            <a href="contact.html">Contact</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      document.querySelectorAll("[data-filter]").forEach((b) =>
+        b.addEventListener("click", () => {
+          document
+            .querySelectorAll("[data-filter]")
+            .forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          document
+            .querySelectorAll("[data-category]")
+            .forEach(
+              (c) =>
+                (c.hidden =
+                  b.dataset.filter !== "all" &&
+                  !c.dataset.category.split(" ").includes(b.dataset.filter)),
+            );
+          document.querySelectorAll(".programs-bento-row").forEach((row) => {
+            const children = Array.from(row.querySelectorAll("[data-category]"));
+            const allHidden = children.length > 0 && children.every((ch) => ch.hidden);
+            row.style.display = allHidden ? "none" : "";
+          });
+        }),
+      );
+    </script>
+  </body>
+</html>

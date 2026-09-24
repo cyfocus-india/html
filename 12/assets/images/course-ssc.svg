@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sscGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="60%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="softGlowSsc" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="260" rx="14" fill="url(#sscGrad)"/>
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1.5">
+    <circle cx="100" cy="130" r="80" fill="none"/>
+    <circle cx="300" cy="130" r="140" fill="none"/>
+    <circle cx="500" cy="130" r="90" fill="none"/>
+  </g>
+  <circle cx="480" cy="120" r="90" fill="#34d399" opacity="0.25" filter="url(#softGlowSsc)"/>
+  <rect x="44" y="32" width="110" height="26" rx="13" fill="rgba(255,255,255,0.16)"/>
+  <text x="58" y="49" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em">STAFF SELECTION</text>
+  <text x="44" y="98" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">SSC CGL, CHSL, MTS &amp; CPO</text>
+  <text x="44" y="124" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">Tier 1 + Tier 2 Speed Batch, 15 Years PYQ Solved</text>
+  <g transform="translate(44, 160)">
+    <rect width="124" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="14" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Tier 1 &amp; Tier 2</text>
+    <rect x="136" width="138" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="150" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">30,000+ Enrolled</text>
+  </g>
+  <!-- Right Side Graphic: Emblem / Checklist & Timer Motif -->
+  <g transform="translate(430, 48)">
+    <circle cx="60" cy="75" r="60" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <!-- Document with Checkmarks -->
+    <rect x="25" y="30" width="70" height="90" rx="8" fill="#ffffff" opacity="0.95"/>
+    <rect x="36" y="46" width="48" height="6" rx="2" fill="#047857"/>
+    <rect x="36" y="60" width="34" height="4" rx="2" fill="#9ca3af"/>
+    <rect x="36" y="72" width="42" height="4" rx="2" fill="#9ca3af"/>
+    <rect x="36" y="84" width="30" height="4" rx="2" fill="#9ca3af"/>
+    <!-- Star & Seal -->
+    <circle cx="82" cy="102" r="16" fill="#f59e0b"/>
+    <path d="M82 92 L85 99 L92 100 L87 105 L88 112 L82 108 L76 112 L77 105 L72 100 L79 99 Z" fill="#ffffff"/>
+  </g>
+</svg>

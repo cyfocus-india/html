@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Wag & Whisker — Right-to-left support
+   Layout already uses CSS logical properties (inline-start / inline-end),
+   so this file only mirrors the things logical properties can't:
+   directional icons, transforms, animations and background positions.
+   Activated by <html dir="rtl"> (RTL toggle in the header).
+   ========================================================================== */
+
+[dir="rtl"] body { font-family: var(--font-body), "Segoe UI", Tahoma, "Noto Sans Arabic", "Noto Sans Hebrew", sans-serif; }
+
+/* Mirror directional icons */
+[dir="rtl"] .icon--dir,
+[dir="rtl"] .icon--nudge,
+[dir="rtl"] .read-more .icon,
+[dir="rtl"] .pet-tile__arrow .icon,
+[dir="rtl"] .breadcrumb .icon { transform: scaleX(-1); }
+[dir="rtl"] .btn:hover .icon--nudge { transform: scaleX(-1) translateX(4px); }
+[dir="rtl"] .post-card:hover .read-more .icon { transform: scaleX(-1) translateX(4px); }
+[dir="rtl"] .pet-tile:hover .pet-tile__arrow { transform: rotate(45deg) scale(1.1); }
+
+/* Dropdown centring */
+[dir="rtl"] .dropdown { transform: translate(50%, 10px) scale(0.98); }
+[dir="rtl"] .dropdown.is-open { transform: translate(50%, 0) scale(1); }
+[dir="rtl"] .dropdown a:hover,
+[dir="rtl"] .dropdown a[aria-current="page"] { transform: translateX(-3px); }
+
+/* Off-canvas panels slide from the opposite edge */
+[dir="rtl"] .drawer { transform: translateX(105%); }
+[dir="rtl"] .drawer--end { transform: translateX(-105%); }
+[dir="rtl"] .drawer.is-open { transform: none; }
+
+/* Progress + underline origins */
+[dir="rtl"] .scroll-progress { transform-origin: right; background: linear-gradient(270deg, var(--accent), var(--tangerine-400), var(--primary)); }
+[dir="rtl"] .highlight::after { transform-origin: right center; }
+
+/* Marquee travels the other way */
+[dir="rtl"] .marquee__track { animation-name: marquee-rtl; }
+@keyframes marquee-rtl { to { transform: translateX(calc(50% + var(--sp-5) / 2)); } }
+
+/* Sliders / scrollers: JS reads dir and flips translate sign */
+[dir="rtl"] .scroller__nav .icon { transform: scaleX(-1); }
+[dir="rtl"] .slider__controls .icon { transform: scaleX(-1); }
+
+/* Form controls */
+[dir="rtl"] .select { background-position: left 0.9rem center; }
+[dir="rtl"] .tooltip::after { inset-inline-end: 22px; }
+[dir="rtl"] .product-card__quick { transform: translateX(-10px); }
+[dir="rtl"] .product-card:hover .product-card__quick,
+[dir="rtl"] .product-card:focus-within .product-card__quick { transform: none; }
+[dir="rtl"] .site-footer ul a:hover { padding-inline-start: 4px; }
+[dir="rtl"] .tier:hover { transform: translateX(-6px); }
+[dir="rtl"] .prose blockquote { border-radius: var(--r-md) 0 0 var(--r-md); }
+
+/* Decorative tilts mirror */
+[dir="rtl"] .sticker { transform: rotate(4deg); }
+[dir="rtl"] .media-stack__note { transform: rotate(3deg); }
+[dir="rtl"] .step::before { transform: rotate(6deg); }
+[dir="rtl"] .card--hover:hover { transform: translateY(-6px) rotate(0.4deg); }
+[dir="rtl"] .pet-tile:hover { transform: translateY(-8px) rotate(1deg); }
+
+/* Sale stickers are forced LTR (so "-15%" reads correctly); pin their
+   position physically because logical offsets follow the element's own direction */
+[dir="rtl"] .product-card .sticker--sale,
+[dir="rtl"] .gallery__main .sticker--sale { left: auto; right: 10px; }
+[dir="rtl"] .deal__media .sticker--sale { left: auto; right: 16px; }
+[dir="rtl"] .package--featured .sticker--sale { right: auto; left: 20px; }
+
+/* Centred fixed elements */
+[dir="rtl"] .toast-region { transform: translateX(50%); }
+
+/* Numbers, phone numbers, prices and codes stay LTR inside RTL text */
+[dir="rtl"] .sticker--sale,
+[dir="rtl"] .rating span[aria-hidden="true"],
+[dir="rtl"] .price,
+[dir="rtl"] .ltr,
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] .countdown { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .price { display: inline-block; }
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"] { text-align: right; }

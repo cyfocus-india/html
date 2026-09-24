@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a DriveWay student account.">
+  <meta name="theme-color" content="#08263f">
+  <title>Sign Up | DriveWay</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="../assets/js/main.js" defer></script>
+</head>
+<body class="auth-page">
+  <main id="main-content" class="auth-wrapper">
+    <div class="utility-standalone-top-bar">
+      <div class="utility-top-bar-inner">
+        <a class="brand" href="../index.html" aria-label="DriveWay home">
+          <span class="brand-mark" aria-hidden="true"><i data-lucide="gauge"></i></span>
+          <span><span class="brand-word">Drive<span class="accent">Way</span></span><span class="brand-sub">DRIVING SCHOOL</span></span>
+        </a>
+        <div class="utility-top-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><i data-lucide="moon"></i></button>
+          <button class="icon-button rtl-btn" id="rtl-toggle" type="button" aria-label="Toggle layout direction (RTL/LTR)" title="Toggle layout direction"><span class="rtl-badge">RTL</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-body-container">
+      <div class="auth-card-container">
+        <section class="form-shell" aria-labelledby="signup-title">
+          <span class="tag"><i data-lucide="user-plus"></i> Student Portal</span>
+          <h1 id="signup-title">Create Account</h1>
+          <p>Set up your student profile to start your driving journey.</p>
+          <div class="form-message" role="status"></div>
+          <form class="validate-form" novalidate data-success="Account created. Taking you to sign in…" data-redirect="signin.html">
+            <div class="form-row">
+              <div class="field">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="firstName" autocomplete="given-name" placeholder="First name" required>
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="lastName" autocomplete="family-name" placeholder="Last name" required>
+                <div class="field-error"></div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="signup-email">Email address</label>
+              <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+              <div class="field-error"></div>
+            </div>
+            <div class="field">
+              <label for="signup-phone">Phone number</label>
+              <input id="signup-phone" name="phone" type="tel" pattern="[0-9+ ()-]{8,}" autocomplete="tel" placeholder="+91 98765 43210" required>
+              <div class="field-error"></div>
+            </div>
+            <div class="field">
+              <label for="course-interest">Interested Course</label>
+              <select id="course-interest" name="courseInterest">
+                <option value="four-wheeler">Four-Wheeler Car Driving (Automatic / Manual)</option>
+                <option value="two-wheeler">Two-Wheeler Motorcycle / Scooter</option>
+                <option value="commercial">Commercial Heavy Vehicle Training</option>
+                <option value="defensive">Defensive &amp; Refresher Driving</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="signup-password">Create password</label>
+              <input id="signup-password" name="password" type="password" minlength="6" autocomplete="new-password" placeholder="At least 6 characters" required>
+              <div class="field-error"></div>
+            </div>
+            <div class="field" style="margin-bottom: 20px;">
+              <label style="display: flex; align-items: flex-start; gap: 8px; font-weight: normal; cursor: pointer; font-size: 13px; color: var(--muted);">
+                <input type="checkbox" id="agree-terms" name="agreeTerms" required style="width: 16px; min-height: 16px; margin-top: 3px;">
+                <span>I agree to the <a href="terms.html" class="accent-link" target="_blank" style="color:var(--orange);font-weight:700">Terms of Service</a> and <a href="privacy.html" class="accent-link" target="_blank" style="color:var(--orange);font-weight:700">Privacy Policy</a></span>
+              </label>
+              <div class="field-error"></div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Create Account <i data-lucide="arrow-right"></i></button>
+          </form>
+          <div class="auth-card-footer" style="margin-top: 20px; text-align: center; font-size: 13.5px; color: var(--muted);">
+            Already registered? <a href="signin.html" class="accent-link" style="color:var(--orange);font-weight:700">Sign in here</a>
+          </div>
+        </section>
+
+        <div class="auth-trust-badges">
+          <span class="auth-trust-item"><i data-lucide="shield-check"></i> Govt. Approved Curriculum</span>
+          <span class="auth-trust-item"><i data-lucide="award"></i> Certified 1-on-1 Instructors</span>
+          <span class="auth-trust-item"><i data-lucide="calendar"></i> Flexible Scheduling</span>
+        </div>
+        <p class="auth-help-text">Need assistance? <a href="contact.html">Contact Student Support</a> or call <strong>+91 98765 43210</strong></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

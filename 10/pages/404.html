@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>404 | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <main
+      id="main"
+      class="section-shell"
+      style="
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      "
+    >
+      <section class="content-card glass reveal" style="max-width: 680px; width: 100%; position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <a class="brand" href="../index.html" aria-label="Elevate Learning home">
+            <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+            <span><b>Elevate Learning</b><small>Corporate Training Center</small></span>
+          </a>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch color theme">
+              <i data-lucide="moon-star"></i>
+            </button>
+            <button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+              <span class="rtl-text" data-rtl-text>RTL</span>
+            </button>
+          </div>
+        </div>
+        <span class="program-icon blue" style="margin-inline: auto"
+          ><i data-lucide="compass"></i
+        ></span>
+        <p class="eyebrow" style="justify-content: center">
+          <span></span> Error 404
+        </p>
+        <h1 style="font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.2; margin: 16px 0 14px;">
+          This page took a <span class="gradient-text">learning detour.</span>
+        </h1>
+        <p style="color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 520px; margin-inline: auto; margin-bottom: 28px;">
+          The page you’re looking for may have moved. Let’s get you back to the
+          programs that matter.
+        </p>
+        <div class="button-row" style="justify-content: center">
+          <a class="button" href="../index.html">Back to home</a
+          ><a class="button button-ghost" href="programs.html"
+            >Browse programs</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

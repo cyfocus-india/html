@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PLAY ZONE Interactive - Check real-time slot availability, explore the adventure map, view today's activity schedule, and book kids play passes.">
+  <title>Play Zone — Interactive Booking & Adventure Map</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=20260924c">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=20260924c">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=20260924c">
+
+  <style>
+    /* Home 2 Unique Interactive Components */
+    .hero-alt-search {
+      background: linear-gradient(135deg, rgba(13, 91, 225, 0.04) 0%, rgba(245, 179, 0, 0.06) 100%);
+      padding: 4rem 0 4.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Home 2 Hero Grid */
+    .home2-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .home2-hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .home2-hero-content .section-tag {
+      margin-bottom: 1.25rem;
+    }
+
+    .home2-hero-content h1 {
+      font-size: clamp(2.2rem, 3.8vw, 3.35rem);
+      font-weight: 900;
+      line-height: 1.12;
+      margin: 0 0 1.25rem 0;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--text-heading);
+    }
+
+    .home2-hero-content .lead-copy {
+      font-size: 1.08rem;
+      line-height: 1.65;
+      color: var(--text-body);
+      margin: 0 0 1.75rem 0;
+      max-width: 540px;
+    }
+
+    .home2-hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .home2-trust-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color-subtle);
+      width: 100%;
+    }
+
+    .home2-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-body);
+    }
+
+    .home2-trust-item i {
+      font-size: 1rem;
+    }
+
+    /* Home 2 Hero Media */
+    .home2-hero-media {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home2-hero-frame {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.16), 0 0 0 1px var(--border-color);
+      background-color: var(--bg-surface);
+      aspect-ratio: 4 / 3;
+    }
+
+    .home2-hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .home2-hero-media:hover .home2-hero-frame img {
+      transform: scale(1.04);
+    }
+
+    /* Floating Badges */
+    .home2-badge-float {
+      position: absolute;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      z-index: 4;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease;
+    }
+
+    .home2-badge-float:hover {
+      transform: translateY(-3px);
+    }
+
+    .home2-badge-top {
+      top: -15px;
+      right: 15px;
+    }
+
+    .home2-badge-bottom {
+      bottom: -18px;
+      left: 15px;
+    }
+
+    .home2-badge-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .home2-badge-text strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1.2;
+    }
+
+    .home2-badge-text span {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .home2-pulse-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      display: inline-block;
+      position: relative;
+      margin-right: 0.35rem;
+    }
+
+    .home2-pulse-dot::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background-color: inherit;
+      animation: home2Pulse 1.8s infinite ease-out;
+    }
+
+    @keyframes home2Pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.5); opacity: 0; }
+    }
+
+    /* Decorative Bauhaus Backing Shapes */
+    .home2-shape-backdrop {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 160px;
+      height: 160px;
+      background-color: var(--accent-yellow);
+      border-radius: 50%;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    .home2-shape-accent {
+      position: absolute;
+      bottom: -25px;
+      left: -20px;
+      width: 120px;
+      height: 120px;
+      background-color: var(--primary-blue);
+      border-radius: 24px;
+      z-index: 0;
+      opacity: 0.15;
+    }
+
+    @media (max-width: 991px) {
+      .home2-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .home2-hero-content {
+        align-items: center;
+        text-align: center;
+      }
+      .home2-hero-content .lead-copy {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .home2-hero-ctas {
+        justify-content: center;
+      }
+      .home2-trust-row {
+        justify-content: center;
+      }
+      .home2-badge-top {
+        top: 10px;
+        right: 10px;
+      }
+      .home2-badge-bottom {
+        bottom: 10px;
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .home2-hero-ctas {
+        flex-direction: column;
+        width: 100%;
+      }
+      .home2-hero-ctas .btn {
+        width: 100%;
+      }
+      .home2-badge-float {
+        padding: 0.5rem 0.75rem;
+        gap: 0.5rem;
+      }
+      .home2-badge-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+      }
+    }
+
+    .intro-subhead {
+      text-align: center;
+      max-width: 700px;
+      margin: 3rem auto 2rem auto;
+    }
+
+    .intro-subhead h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro-subhead p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Booking band — visually separated from the introduction above it */
+    .booking-band {
+      background-color: var(--bg-surface-alt);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 3.5rem 0 4rem 0;
+    }
+
+    .booking-band-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .booking-band-head h2 {
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0.25rem 0 0.75rem 0;
+    }
+
+    .booking-band-head p {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text-body);
+      margin: 0;
+    }
+
+    .booking-band-note {
+      margin: 1.5rem auto 0 auto;
+      max-width: 760px;
+      text-align: center;
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .booking-band-note i {
+      color: var(--primary-blue);
+      margin-right: 0.3rem;
+    }
+
+    .slot-checker-bar {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow-xl);
+      border: 1.5px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr 1fr auto;
+      gap: 1.25rem;
+      align-items: flex-end;
+      margin-top: 2.5rem;
+    }
+
+    .adventure-map-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .adventure-spot-card {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      border: 2px solid var(--border-color-subtle);
+      transition: all var(--transition-bounce);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .adventure-spot-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .adventure-spot-card.active-spot {
+      border-color: var(--accent-red);
+      background-color: var(--primary-blue-subtle);
+    }
+
+    .spot-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .schedule-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .schedule-card {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      border-left: 5px solid var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-fast);
+    }
+
+    .schedule-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .gallery-filter-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill-btn {
+      padding: 0.65rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.88rem;
+      background-color: var(--bg-surface-alt);
+      border: 1px solid var(--border-color);
+      color: var(--text-body);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .filter-pill-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      background-color: var(--bg-surface);
+      transform: translateY(-1px);
+    }
+
+    .filter-pill-btn.active {
+      background-color: var(--primary-blue) !important;
+      color: #ffffff !important;
+      border-color: var(--primary-blue) !important;
+      box-shadow: 0 4px 14px rgba(13, 91, 225, 0.32);
+      transform: translateY(-1px);
+    }
+
+    .gallery-mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      min-height: 260px;
+    }
+
+    .gallery-tile-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 260px;
+      background-color: var(--neutral-100);
+      box-shadow: var(--shadow-sm);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .gallery-tile-item.is-hidden {
+      display: none !important;
+    }
+
+    .gallery-tile-item.is-animating-in {
+      animation: galleryFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes galleryFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.93);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .gallery-tile-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-tile-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-tile-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 15, 30, 0.94) 0%, rgba(15, 23, 42, 0.65) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: #FFFFFF;
+      opacity: 0;
+      transition: opacity var(--transition-base);
+      z-index: 2;
+    }
+
+    .gallery-tile-overlay h4 {
+      color: #FFFFFF !important;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin: 0 0 0.35rem 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+    }
+
+    .gallery-tile-overlay p {
+      color: rgba(255, 255, 255, 0.95) !important;
+      font-size: 0.85rem;
+      line-height: 1.45;
+      margin: 0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    }
+
+    .gallery-tile-item:hover .gallery-tile-overlay {
+      opacity: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .slot-checker-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+      .adventure-map-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .schedule-timeline {
+        grid-template-columns: 1fr;
+      }
+      .gallery-mosaic-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slot-checker-bar {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+      }
+
+      .intro-headline {
+        text-align: left;
+      }
+
+      .intro-subhead {
+        text-align: left;
+        margin-top: 2.25rem;
+      }
+
+      .adventure-map-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-mosaic-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Play Zone Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line">
+              <span>PLAY</span>
+              <span class="logo-sq-blue" aria-hidden="true"></span>
+            </div>
+            <div class="logo-line">
+              <span>ZONE</span>
+              <span class="logo-tri-yellow" aria-hidden="true"></span>
+              <span class="logo-dot-red" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu" role="menubar">
+          <li class="nav-item nav-dropdown" role="none">
+            <a href="index.html" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="index.html" class="nav-dropdown-link" role="menuitem">Home 1</a>
+              <a href="index1.html" class="nav-dropdown-link" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item" role="none"><a href="pages/about.html" class="nav-link" role="menuitem">About Us</a></li>
+          <li class="nav-item" role="none"><a href="pages/play-zones.html" class="nav-link" role="menuitem">Play Zones</a></li>
+          <li class="nav-item" role="none"><a href="pages/birthday-parties.html" class="nav-link" role="menuitem">Birthday Parties</a></li>
+          <li class="nav-item" role="none"><a href="pages/membership-plans.html" class="nav-link" role="menuitem">Membership Plans</a></li>
+          <li class="nav-item" role="none"><a href="pages/safety-standards.html" class="nav-link" role="menuitem">Safety Standards</a></li>
+          <li class="nav-item" role="none"><a href="pages/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+          <li class="nav-item" role="none"><a href="pages/dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+          <li class="nav-item nav-dropdown" role="none">
+            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Pages <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+            </a>
+            <div class="nav-dropdown-menu dropdown-align-right" role="menu">
+              <a href="pages/coming-soon.html" class="nav-dropdown-link" role="menuitem">Coming Soon</a>
+              <a href="pages/404.html" class="nav-dropdown-link" role="menuitem">404</a>
+              <a href="pages/privacy.html" class="nav-dropdown-link" role="menuitem">Privacy Policy</a>
+              <a href="pages/terms.html" class="nav-dropdown-link" role="menuitem">Terms &amp; Conditions</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="header-actions">
+          <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button type="button" class="icon-control-btn dir-toggle-btn" aria-label="Toggle Direction (LTR / RTL)" title="Switch to RTL Layout">
+            <i class="fas fa-right-left"></i>
+          </button>
+          <a href="pages/signin.html" class="btn btn-primary-blue btn-sm">SIGN IN</a>
+          <button type="button" class="mobile-nav-btn" aria-label="Open Navigation Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-symbol-block">
+            <div class="logo-line">
+              <span>PLAY</span>
+              <span class="logo-sq-blue"></span>
+            </div>
+            <div class="logo-line">
+              <span>ZONE</span>
+              <span class="logo-tri-yellow"></span>
+              <span class="logo-dot-red"></span>
+            </div>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close Menu" style="font-size: 1.5rem; color: var(--text-heading);">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-links">
+        <a href="index.html">Home 1</a>
+        <a href="index1.html" class="active">Home 2</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/play-zones.html">Play Zones</a>
+        <a href="pages/birthday-parties.html">Birthday Parties</a>
+        <a href="pages/membership-plans.html">Membership Plans</a>
+        <a href="pages/safety-standards.html">Safety Standards</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/dashboard.html">Dashboard</a>
+        <a href="pages/coming-soon.html">Coming Soon</a>
+        <a href="pages/404.html">404</a>
+        <a href="pages/privacy.html">Privacy Policy</a>
+        <a href="pages/terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="pages/signin.html" class="btn btn-primary-blue btn-block">SIGN IN</a>
+      <a href="pages/signup.html" class="btn btn-outline-red btn-block">SIGN UP</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- 1. Hero Section: Home 2 Adventure Introduction -->
+    <section class="hero-alt-search" aria-labelledby="home2-heading">
+      <div class="container">
+        <!-- Hero Grid: Content + Media -->
+        <div class="home2-hero-grid">
+          <!-- Left Column: Content & CTAs -->
+          <div class="home2-hero-content">
+            <span class="section-tag"><i class="fas fa-shapes" aria-hidden="true"></i> Kids Play Zone &amp; Indoor Adventure Arena</span>
+            <h1 id="home2-heading">
+              A 15,000 sq.ft Indoor Play Area Built For <span style="color: var(--primary-blue);">Ages 0 – 12</span>
+            </h1>
+            <p class="lead-copy">
+              PLAY ZONE is an all-weather climate-controlled indoor playground where children climb, slide, build and
+              race safely all year round. Featuring four age-segregated gated zones, twelve permanent attractions, certified play
+              coaches, and a parents' café with free Wi-Fi.
+            </p>
+
+            <div class="home2-hero-ctas">
+              <a href="#booking-band" class="btn btn-primary-blue btn-lg">
+                <i class="fas fa-ticket-alt" aria-hidden="true"></i> BOOK A SESSION
+              </a>
+              <a href="#zones-fit" class="btn btn-outline-blue btn-lg">
+                <i class="fas fa-compass" aria-hidden="true"></i> EXPLORE 4 ZONES
+              </a>
+            </div>
+
+            <div class="home2-trust-row">
+              <div class="home2-trust-item">
+                <i class="fas fa-shield-halved" style="color: var(--accent-green);" aria-hidden="true"></i>
+                <span>BIS 15877 Certified</span>
+              </div>
+              <div class="home2-trust-item">
+                <i class="fas fa-sparkles" style="color: var(--accent-yellow-text);" aria-hidden="true"></i>
+                <span>UV-C Clean Daily</span>
+              </div>
+              <div class="home2-trust-item">
+                <i class="fas fa-user-check" style="color: var(--primary-blue);" aria-hidden="true"></i>
+                <span>1 Adult Free per Child</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Hero Media with Floating Badges -->
+          <div class="home2-hero-media">
+            <!-- Decorative Backing Shapes -->
+            <div class="home2-shape-backdrop" aria-hidden="true"></div>
+            <div class="home2-shape-accent" aria-hidden="true"></div>
+
+            <!-- Main Image Frame -->
+            <div class="home2-hero-frame">
+              <img src="assets/images/hero-home2.jpg" alt="Children playing happily across the multi-level indoor playground, slides, obstacle bridges and ball pit inside Play Zone" width="800" height="600" fetchpriority="high">
+            </div>
+
+            <!-- Floating Badge Top: Rating -->
+            <div class="home2-badge-float home2-badge-top" aria-hidden="true">
+              <div class="home2-badge-icon tone-yellow">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="home2-badge-text">
+                <strong>4.9 / 5.0 Rating</strong>
+                <span>Over 25,000+ Happy Families</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom: Live Status -->
+            <div class="home2-badge-float home2-badge-bottom">
+              <div class="home2-badge-icon tone-green">
+                <i class="fas fa-door-open"></i>
+              </div>
+              <div class="home2-badge-text">
+                <strong><span class="home2-pulse-dot"></span> Arena Open Today</strong>
+                <span>9:30 AM – 8:00 PM &bull; Live Slots</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-strip">
+          <div>
+            <span class="fact-label">Play Arena</span>
+            <span class="fact-value">15,000 sq.ft</span>
+          </div>
+          <div>
+            <span class="fact-label">Age Zones</span>
+            <span class="fact-value">4 gated zones</span>
+          </div>
+          <div>
+            <span class="fact-label">Attractions</span>
+            <span class="fact-value">12 permanent</span>
+          </div>
+          <div>
+            <span class="fact-label">Open Daily</span>
+            <span class="fact-value">9:30 AM – 8:00 PM</span>
+          </div>
+          <div>
+            <span class="fact-label">Adult Entry</span>
+            <span class="fact-value">1 free per child</span>
+          </div>
+        </div>
+
+        <!-- Unique Interactive Child Age & Zone Matcher -->
+        <div class="zone-matcher-section" id="zones-fit">
+          <div class="section-header" style="margin-bottom: 2.25rem;">
+            <span class="section-tag"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Interactive Zone Matcher</span>
+            <h2 class="section-title">FIND YOUR CHILD'S PERFECT PLAY ARENA</h2>
+            <p class="section-subtitle">
+              Four developmentally engineered zones with age-restricted access. Select your child's age group below to preview their dedicated playground, coach ratios, and developmental benefits.
+            </p>
+          </div>
+
+          <!-- Interactive Age Selector Tabs -->
+          <div class="matcher-tabs" role="tablist" aria-label="Age Zone Selection">
+            <button type="button" class="matcher-tab-btn active" role="tab" aria-selected="true" aria-controls="zone-panel-baby" id="tab-baby" data-zone="baby">
+              <span class="tab-age-pill tone-yellow">0 – 2 Years</span>
+              <span class="tab-title">Baby Zone</span>
+              <span class="tab-sub">Sensory Oasis</span>
+            </button>
+
+            <button type="button" class="matcher-tab-btn" role="tab" aria-selected="false" aria-controls="zone-panel-explorer" id="tab-explorer" data-zone="explorer">
+              <span class="tab-age-pill tone-blue">3 – 5 Years</span>
+              <span class="tab-title">Explorer Zone</span>
+              <span class="tab-sub">Imagination Town</span>
+            </button>
+
+            <button type="button" class="matcher-tab-btn" role="tab" aria-selected="false" aria-controls="zone-panel-adventure" id="tab-adventure" data-zone="adventure">
+              <span class="tab-age-pill tone-red">6 – 8 Years</span>
+              <span class="tab-title">Adventure Zone</span>
+              <span class="tab-sub">Ninja Cruise</span>
+            </button>
+
+            <button type="button" class="matcher-tab-btn" role="tab" aria-selected="false" aria-controls="zone-panel-challenge" id="tab-challenge" data-zone="challenge">
+              <span class="tab-age-pill tone-green">9 – 12 Years</span>
+              <span class="tab-title">Challenge Zone</span>
+              <span class="tab-sub">Sky Arena</span>
+            </button>
+          </div>
+
+          <!-- Tab Panels Container -->
+          <div class="matcher-panels">
+            <!-- Panel 1: Baby Zone -->
+            <div class="matcher-panel active" id="zone-panel-baby" role="tabpanel" aria-labelledby="tab-baby">
+              <div class="matcher-showcase-grid">
+                <div class="matcher-info">
+                  <div class="matcher-headline">
+                    <span class="badge badge-yellow">AGES 0 – 2 YEARS</span>
+                    <h3>Baby Zone — Sensory Oasis</h3>
+                    <p>A calm, fully-padded sanctuary designed for crawlers, cruisers, and early walkers. Sits at ground height with self-closing security gates that keep older kids out, giving toddlers a gentle space to explore safely.</p>
+                  </div>
+
+                  <div class="matcher-milestones">
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-yellow"><i class="fas fa-hand-sparkles" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Sensory Discovery</strong>
+                        <span>Textured crawl mats, acoustic panels &amp; bubble tubes</span>
+                      </div>
+                    </div>
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-blue"><i class="fas fa-shapes" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Early Balance &amp; Steps</strong>
+                        <span>Gentle foam steps, mini arches &amp; soft crawl tunnel</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="matcher-specs-strip">
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Length</span>
+                      <span class="spec-val">90 Minutes</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Coach Ratio</span>
+                      <span class="spec-val">1 Coach : 6 Kids</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Pass</span>
+                      <span class="spec-val text-primary" style="color: var(--primary-blue);">$15 / child</span>
+                    </div>
+                  </div>
+
+                  <div class="matcher-actions">
+                    <button type="button" class="btn btn-primary-blue book-zone-btn" data-zone-select="baby">
+                      <i class="fas fa-ticket-alt" aria-hidden="true"></i> BOOK BABY SESSION ($15)
+                    </button>
+                    <a href="pages/play-zones.html#baby-zone" class="btn btn-outline-blue">
+                      <i class="fas fa-circle-info" aria-hidden="true"></i> ZONE DETAILS
+                    </a>
+                  </div>
+                </div>
+
+                <div class="matcher-visual">
+                  <div class="matcher-img-card">
+                    <img src="assets/images/baby-zone.jpg" alt="Toddler smiling on padded mat in Baby Zone with colorful sensory balls" loading="lazy" width="600" height="450">
+                    <div class="matcher-badge-float">
+                      <i class="fas fa-shield-cat" style="color: var(--accent-yellow);" aria-hidden="true"></i>
+                      <span>Gated Infant Sanctuary</span>
+                    </div>
+                  </div>
+                  <div class="matcher-chips-wrap">
+                    <span class="chip"><i class="fas fa-circle" aria-hidden="true"></i> Shallow ball pool</span>
+                    <span class="chip"><i class="fas fa-music" aria-hidden="true"></i> Musical touch wall</span>
+                    <span class="chip"><i class="fas fa-cubes" aria-hidden="true"></i> Soft foam steps</span>
+                    <span class="chip"><i class="fas fa-soap" aria-hidden="true"></i> UV-C sanitized daily</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Explorer Zone -->
+            <div class="matcher-panel" id="zone-panel-explorer" role="tabpanel" aria-labelledby="tab-explorer" hidden>
+              <div class="matcher-showcase-grid">
+                <div class="matcher-info">
+                  <div class="matcher-headline">
+                    <span class="badge badge-blue">AGES 3 – 5 YEARS</span>
+                    <h3>Explorer Zone — Imagination Town</h3>
+                    <p>A miniature high street where preschoolers build motor coordination and social play. Kids run the pretend supermarket, drive the fire engine, and race friends down the twin wave slide under close supervision.</p>
+                  </div>
+
+                  <div class="matcher-milestones">
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-blue"><i class="fas fa-store" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Creative Social Play</strong>
+                        <span>Mini grocery, fire station, vet clinic &amp; costume wardrobes</span>
+                      </div>
+                    </div>
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-yellow"><i class="fas fa-cubes-stacked" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Spatial Construction</strong>
+                        <span>Giant foam architectural building bricks &amp; arches</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="matcher-specs-strip">
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Length</span>
+                      <span class="spec-val">90 Minutes</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Coach Ratio</span>
+                      <span class="spec-val">1 Coach : 6 Kids</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Pass</span>
+                      <span class="spec-val text-primary" style="color: var(--primary-blue);">$18 / child</span>
+                    </div>
+                  </div>
+
+                  <div class="matcher-actions">
+                    <button type="button" class="btn btn-primary-blue book-zone-btn" data-zone-select="explorer">
+                      <i class="fas fa-ticket-alt" aria-hidden="true"></i> BOOK EXPLORER SESSION ($18)
+                    </button>
+                    <a href="pages/play-zones.html#explorer-zone" class="btn btn-outline-blue">
+                      <i class="fas fa-circle-info" aria-hidden="true"></i> ZONE DETAILS
+                    </a>
+                  </div>
+                </div>
+
+                <div class="matcher-visual">
+                  <div class="matcher-img-card">
+                    <img src="assets/images/explorer-zone.jpg" alt="Preschooler stacking foam building bricks in front of pretend play town" loading="lazy" width="600" height="450">
+                    <div class="matcher-badge-float">
+                      <i class="fas fa-users" style="color: var(--primary-blue);" aria-hidden="true"></i>
+                      <span>Role-Play &amp; Team Building</span>
+                    </div>
+                  </div>
+                  <div class="matcher-chips-wrap">
+                    <span class="chip"><i class="fas fa-store" aria-hidden="true"></i> Role-play market</span>
+                    <span class="chip"><i class="fas fa-shapes" aria-hidden="true"></i> Foam brick build</span>
+                    <span class="chip"><i class="fas fa-water" aria-hidden="true"></i> Double wave slide</span>
+                    <span class="chip"><i class="fas fa-truck-medical" aria-hidden="true"></i> Fire &amp; vet station</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Adventure Zone -->
+            <div class="matcher-panel" id="zone-panel-adventure" role="tabpanel" aria-labelledby="tab-adventure" hidden>
+              <div class="matcher-showcase-grid">
+                <div class="matcher-info">
+                  <div class="matcher-headline">
+                    <span class="badge badge-red">AGES 6 – 8 YEARS</span>
+                    <h3>Adventure Zone — Ninja Cruise</h3>
+                    <p>A dynamic high-action arena built for energetic primary schoolers. Features three levels of ninja obstacles, a 14-foot traverse climbing wall, suspended rope crossings, and a 20-foot spiral drop slide landing into soft foam pits.</p>
+                  </div>
+
+                  <div class="matcher-milestones">
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-red"><i class="fas fa-mountain" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Climbing &amp; Grip Strength</strong>
+                        <span>Traverse bouldering wall over 12-inch shock-absorbing crash mats</span>
+                      </div>
+                    </div>
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-yellow"><i class="fas fa-bridge" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Balance &amp; Coordination</strong>
+                        <span>Suspended rope bridges, wobble planks &amp; monkey bars</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="matcher-specs-strip">
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Length</span>
+                      <span class="spec-val">2 Full Hours</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Marshal Ratio</span>
+                      <span class="spec-val">1 Marshal : 8 Kids</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Pass</span>
+                      <span class="spec-val text-primary" style="color: var(--primary-blue);">$20 / child</span>
+                    </div>
+                  </div>
+
+                  <div class="matcher-actions">
+                    <button type="button" class="btn btn-primary-blue book-zone-btn" data-zone-select="adventure">
+                      <i class="fas fa-ticket-alt" aria-hidden="true"></i> BOOK ADVENTURE SESSION ($20)
+                    </button>
+                    <a href="pages/play-zones.html#adventure-zone" class="btn btn-outline-blue">
+                      <i class="fas fa-circle-info" aria-hidden="true"></i> ZONE DETAILS
+                    </a>
+                  </div>
+                </div>
+
+                <div class="matcher-visual">
+                  <div class="matcher-img-card">
+                    <img src="assets/images/adventure-zone.jpg" alt="Girl climbing traverse bouldering wall over blue safety crash mat" loading="lazy" width="600" height="450">
+                    <div class="matcher-badge-float">
+                      <i class="fas fa-person-running" style="color: var(--accent-red);" aria-hidden="true"></i>
+                      <span>High-Energy Ninja Action</span>
+                    </div>
+                  </div>
+                  <div class="matcher-chips-wrap">
+                    <span class="chip"><i class="fas fa-mountain" aria-hidden="true"></i> Bouldering wall</span>
+                    <span class="chip"><i class="fas fa-bridge" aria-hidden="true"></i> Rope bridges</span>
+                    <span class="chip"><i class="fas fa-bolt" aria-hidden="true"></i> Spiral drop slide</span>
+                    <span class="chip"><i class="fas fa-futbol" aria-hidden="true"></i> Mini sports court</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Challenge Zone -->
+            <div class="matcher-panel" id="zone-panel-challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
+              <div class="matcher-showcase-grid">
+                <div class="matcher-info">
+                  <div class="matcher-headline">
+                    <span class="badge badge-green">AGES 9 – 12 YEARS</span>
+                    <h3>Challenge Zone — Sky Arena</h3>
+                    <p>Engineered for pre-teens craving real physical challenge and electronic competition. Electronic light-gate sprints with real-time leaderboards, spider-web climbing towers, and interactive digital wall targets.</p>
+                  </div>
+
+                  <div class="matcher-milestones">
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-green"><i class="fas fa-stopwatch" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Speed &amp; Agility Testing</strong>
+                        <span>Electronic timing gates, sprint heats &amp; live leaderboard</span>
+                      </div>
+                    </div>
+                    <div class="milestone-item">
+                      <div class="milestone-icon tone-purple"><i class="fas fa-gamepad" aria-hidden="true"></i></div>
+                      <div>
+                        <strong>Interactive Digital Games</strong>
+                        <span>Projection wall targets, reaction light grids &amp; air hockey</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="matcher-specs-strip">
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Length</span>
+                      <span class="spec-val">2 Full Hours</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Marshal Ratio</span>
+                      <span class="spec-val">1 Marshal : 8 Kids</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-lbl">Session Pass</span>
+                      <span class="spec-val text-primary" style="color: var(--primary-blue);">$22 / child</span>
+                    </div>
+                  </div>
+
+                  <div class="matcher-actions">
+                    <button type="button" class="btn btn-primary-blue book-zone-btn" data-zone-select="challenge">
+                      <i class="fas fa-ticket-alt" aria-hidden="true"></i> BOOK CHALLENGE SESSION ($22)
+                    </button>
+                    <a href="pages/play-zones.html#challenge-zone" class="btn btn-outline-blue">
+                      <i class="fas fa-circle-info" aria-hidden="true"></i> ZONE DETAILS
+                    </a>
+                  </div>
+                </div>
+
+                <div class="matcher-visual">
+                  <div class="matcher-img-card">
+                    <img src="assets/images/challenge-zone.jpg" alt="Boy crossing suspended obstacle run in Challenge Zone Sky Arena" loading="lazy" width="600" height="450">
+                    <div class="matcher-badge-float">
+                      <i class="fas fa-bolt" style="color: var(--accent-green);" aria-hidden="true"></i>
+                      <span>Live Electronic Leaderboard</span>
+                    </div>
+                  </div>
+                  <div class="matcher-chips-wrap">
+                    <span class="chip"><i class="fas fa-stopwatch" aria-hidden="true"></i> Timed ninja run</span>
+                    <span class="chip"><i class="fas fa-spider" aria-hidden="true"></i> Spider web tower</span>
+                    <span class="chip"><i class="fas fa-gamepad" aria-hidden="true"></i> Target arcade</span>
+                    <span class="chip"><i class="fas fa-trophy" aria-hidden="true"></i> Head-to-head heats</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Venue Perks Strip -->
+          <div class="matcher-perks-strip">
+            <div class="perk-card">
+              <div class="perk-icon"><i class="fas fa-shield-halved" style="color: var(--accent-green);"></i></div>
+              <div>
+                <strong>Gated Age Separation</strong>
+                <p>Self-closing gates keep toddlers safe from high-speed pre-teen play.</p>
+              </div>
+            </div>
+            <div class="perk-card">
+              <div class="perk-icon"><i class="fas fa-spray-can-sparkles" style="color: var(--primary-blue);"></i></div>
+              <div>
+                <strong>UV-C Multi-Stage Hygiene</strong>
+                <p>Automated ball cleaning &amp; steam sanitized play surfaces daily.</p>
+              </div>
+            </div>
+            <div class="perk-card">
+              <div class="perk-icon"><i class="fas fa-mug-hot" style="color: var(--accent-yellow-text);"></i></div>
+              <div>
+                <strong>Parents' Lounge &amp; Café</strong>
+                <p>Artisan barista coffee, ergonomic work seating &amp; free fast Wi-Fi.</p>
+              </div>
+            </div>
+            <div class="perk-card">
+              <div class="perk-icon"><i class="fas fa-qrcode" style="color: var(--accent-red);"></i></div>
+              <div>
+                <strong>Fast-Track QR Entry</strong>
+                <p>Pre-book online, bypass the line &amp; head straight to play.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Booking: now that visitors know what is inside, let them reserve -->
+    <section class="booking-band" id="booking-band" aria-labelledby="book-heading">
+      <div class="container">
+        <div class="booking-band-head">
+          <span class="section-tag"><i class="fas fa-bolt"></i> Real-Time Slot Booking</span>
+          <h2 id="book-heading">READY TO BOOK? CHECK LIVE AVAILABILITY</h2>
+          <p>
+            Pick a date, match your child's age group and see exactly how many places are left in that
+            session. Pre-booked families skip the entry queue and get an instant QR fast pass.
+          </p>
+        </div>
+
+        <!-- Interactive Slot Quick Checker Bar -->
+        <form class="slot-checker-bar" action="pages/dashboard.html" method="GET">
+          <div class="form-group" style="margin-bottom: 0; text-align: left;">
+            <label for="home-quick-date" class="form-label"><i class="fas fa-calendar-alt" style="color: var(--primary-blue);"></i> Visit Date</label>
+            <input type="date" id="home-quick-date" name="date" class="form-control" required value="2026-08-29">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0; text-align: left;">
+            <label for="home-quick-zone" class="form-label"><i class="fas fa-child" style="color: var(--accent-yellow);"></i> Age Zone</label>
+            <select id="home-quick-zone" name="zone" class="form-control">
+              <option value="baby">Baby Zone (0 - 2 Years)</option>
+              <option value="explorer" selected>Explorer Zone (3 - 5 Years)</option>
+              <option value="adventure">Adventure Zone (6 - 8 Years)</option>
+              <option value="challenge">Challenge Zone (9 - 12 Years)</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0; text-align: left;">
+            <label for="home-quick-kids" class="form-label"><i class="fas fa-users" style="color: var(--accent-red);"></i> Number of Kids</label>
+            <select id="home-quick-kids" name="kids" class="form-control">
+              <option value="1">1 Child ($18)</option>
+              <option value="2">2 Children ($36)</option>
+              <option value="3">3 Children ($54)</option>
+              <option value="4+">4+ Children (Group)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary-blue" style="height: 48px;">
+            <i class="fas fa-search"></i> CHECK SLOTS
+          </button>
+        </form>
+
+        <p class="booking-band-note">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          Grip socks are required on the play mats and can be added at checkout for $3.50.
+          Planning a birthday? <a href="pages/birthday-parties.html" class="form-link">See party packages</a>
+          or <a href="pages/membership-plans.html" class="form-link">compare monthly memberships</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Arena Blueprint & Facility Walkthrough Explorer -->
+    <section class="section-padding arena-blueprint-section" id="facility-walkthrough" aria-labelledby="blueprint-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-compass-drafting" aria-hidden="true"></i> Interactive Facility Blueprint</span>
+          <h2 id="blueprint-heading" class="section-title">THE 15,000 SQ.FT ARENA EXPLORER</h2>
+          <p class="section-subtitle">
+            Click any numbered hotspot pin on our architectural floorplan or select an area below to preview real photography, safety engineering, coach ratios, and parents' cafe sightlines.
+          </p>
+        </div>
+
+        <!-- Main Explorer Grid: Blueprint Canvas + Dynamic Inspector -->
+        <div class="blueprint-explorer-grid">
+          <!-- Left: Architectural Blueprint Canvas -->
+          <div class="blueprint-canvas-card">
+            <div class="blueprint-top-bar">
+              <div class="blueprint-meta">
+                <span class="blueprint-scale-pill"><i class="fas fa-ruler-combined" aria-hidden="true"></i> Scale 1:100 • 15,000 SQ.FT</span>
+                <span class="blueprint-live-status"><span class="live-dot-pulse"></span> 42% Capacity • Low Queue Window</span>
+              </div>
+              <div class="blueprint-view-hint">
+                <i class="fas fa-hand-pointer" aria-hidden="true"></i> Click any pin to inspect
+              </div>
+            </div>
+
+            <!-- Blueprint Map Canvas with Hotspot Pins -->
+            <div class="blueprint-canvas-wrapper" id="blueprint-canvas">
+              <!-- Facility Architectural 3D Arena Map -->
+              <picture>
+                <source srcset="assets/images/facility-blueprint-map.webp" type="image/webp">
+                <img src="assets/images/facility-blueprint-map.jpg" alt="Interactive Play Zone 3D Architectural Arena Floorplan and Facility Map" class="blueprint-img" width="1264" height="848" loading="lazy">
+              </picture>
+
+              <!-- Interactive Hotspot Zones (clickable map areas) -->
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="1" style="top: 8%; left: 6%; width: 32%; height: 38%;" role="button" tabindex="0" aria-label="Inspect Baby Sensory Oasis (0-2 Years)"></div>
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="2" style="top: 28%; left: 34%; width: 33%; height: 26%;" role="button" tabindex="0" aria-label="Inspect Explorer Town (3-5 Years)"></div>
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="6" style="top: 8%; left: 52%; width: 44%; height: 42%;" role="button" tabindex="0" aria-label="Inspect VIP Party Suites"></div>
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="3" style="top: 44%; left: 4%; width: 34%; height: 52%;" role="button" tabindex="0" aria-label="Inspect Ninja Adventure (6-8 Years)"></div>
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="4" style="top: 50%; left: 36%; width: 32%; height: 46%;" role="button" tabindex="0" aria-label="Inspect Challenge Arena &amp; Slides (9-12 Years)"></div>
+              <div class="bp-svg-zone bp-zone-hotspot" data-spot="5" style="top: 52%; left: 68%; width: 28%; height: 44%;" role="button" tabindex="0" aria-label="Inspect Parents Mezzanine Cafe"></div>
+
+              <!-- Interactive Hotspot Pins Overlaid onto the Canvas -->
+              <!-- Pin 1: Baby Sensory -->
+              <button type="button" class="blueprint-pin pin-yellow active" style="top: 30%; left: 22%;" data-spot="1" aria-label="Inspect Baby Sensory Oasis (0-2 Years)">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-shapes" aria-hidden="true"></i></span>
+                <span class="pin-label">01: Baby Sensory</span>
+              </button>
+
+              <!-- Pin 2: Explorer Town -->
+              <button type="button" class="blueprint-pin pin-blue" style="top: 42%; left: 50%;" data-spot="2" aria-label="Inspect Explorer Town (3-5 Years)">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+                <span class="pin-label">02: Explorer Town</span>
+              </button>
+
+              <!-- Pin 6: Party Suites -->
+              <button type="button" class="blueprint-pin pin-purple" style="top: 30%; left: 76%;" data-spot="6" aria-label="Inspect VIP Party Suites">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-cake-candles" aria-hidden="true"></i></span>
+                <span class="pin-label">06: Party Suites</span>
+              </button>
+
+              <!-- Pin 3: Ninja Adventure -->
+              <button type="button" class="blueprint-pin pin-red" style="top: 72%; left: 21%;" data-spot="3" aria-label="Inspect Ninja Bouldering (6-8 Years)">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-mountain" aria-hidden="true"></i></span>
+                <span class="pin-label">03: Ninja Adventure</span>
+              </button>
+
+              <!-- Pin 4: Challenge Arena -->
+              <button type="button" class="blueprint-pin pin-cyan" style="top: 74%; left: 52%;" data-spot="4" aria-label="Inspect Challenge Arena &amp; Slides (9-12 Years)">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-trophy" aria-hidden="true"></i></span>
+                <span class="pin-label">04: Challenge Arena</span>
+              </button>
+
+              <!-- Pin 5: Parents Lounge Cafe -->
+              <button type="button" class="blueprint-pin pin-green" style="top: 76%; left: 83%;" data-spot="5" aria-label="Inspect Parents Mezzanine Cafe">
+                <span class="pulse-wave"></span>
+                <span class="pin-badge"><i class="fas fa-mug-hot" aria-hidden="true"></i></span>
+                <span class="pin-label">05: Parents' Café</span>
+              </button>
+            </div>
+
+            <!-- Blueprint Quick-Select Carousel Bar (touch-friendly) -->
+            <div class="blueprint-quick-tabs" role="tablist" aria-label="Quick area picker">
+              <button type="button" class="bp-quick-chip active" data-spot="1"><span class="chip-num">01</span> Baby Zone (0–2y)</button>
+              <button type="button" class="bp-quick-chip" data-spot="2"><span class="chip-num">02</span> Explorer Town (3–5y)</button>
+              <button type="button" class="bp-quick-chip" data-spot="3"><span class="chip-num">03</span> Ninja Course (6–8y)</button>
+              <button type="button" class="bp-quick-chip" data-spot="4"><span class="chip-num">04</span> Slide Tower (9–12y)</button>
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Area Inspector Card -->
+          <div class="blueprint-inspector-card" id="blueprint-inspector">
+            <!-- Panel 1: Baby Sensory Oasis -->
+            <div class="inspector-panel active" id="spot-panel-1" data-category="early">
+              <div class="inspector-media-box">
+                <img src="assets/images/attraction-sensory-garden.jpg" alt="Soft sensory garden with tactile walls and soft crawl mats" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill yellow"><i class="fas fa-shield-heart" aria-hidden="true"></i> Area 01 • Ground Floor • 0–2 Years</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> 100% Gated Safe Toddler Oasis</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-yellow">Ages 0 – 2 Years</span>
+                  <h3 class="inspector-title">Soft Sensory Garden &amp; Baby Ball Pool</h3>
+                </div>
+                <p class="inspector-desc">
+                  An acoustically softened, ultra-padded developmental oasis built exclusively for crawlers and early steps. Includes gentle musical touch walls, non-toxic baby ball pools, and textured crawling mats.
+                </p>
+
+                <!-- Spec Grid -->
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-ruler-vertical" aria-hidden="true"></i> Height / Age</span>
+                    <span class="spec-v">Ages 0–2 • Under 90cm</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-layer-group" aria-hidden="true"></i> Cushioning</span>
+                    <span class="spec-v">75mm Triple Bio-Foam</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-user-shield" aria-hidden="true"></i> Staff Ratio</span>
+                    <span class="spec-v">1:3 Dedicated Coaches</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-eye" aria-hidden="true"></i> Parent Seating</span>
+                    <span class="spec-v">Inside Perimeter Benches</span>
+                  </div>
+                </div>
+
+                <!-- Chips -->
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Antibacterial Ball Pit</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Sound-Dampened Quiet Zone</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Anti-Slip Grip Socks Required</span>
+                </div>
+
+                <!-- Action Strip -->
+                <div class="inspector-actions">
+                  <button type="button" class="btn btn-primary bp-book-btn" data-zone-select="baby">
+                    <i class="fas fa-ticket" aria-hidden="true"></i> Book Baby Zone Session
+                  </button>
+                  <a href="pages/play-zones.html#baby-zone" class="btn btn-secondary">
+                    Full Zone Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Explorer Town -->
+            <div class="inspector-panel" id="spot-panel-2" data-category="early" hidden>
+              <div class="inspector-media-box">
+                <img src="assets/images/attraction-roleplay-town.jpg" alt="Pretend high street miniature grocery and fire station" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill blue"><i class="fas fa-shapes" aria-hidden="true"></i> Area 02 • Ground Floor • 3–5 Years</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> Direct Sightline From Parents' Mezzanine</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-blue">Ages 3 – 5 Years</span>
+                  <h3 class="inspector-title">Explorer Castle &amp; Role-Play Town</h3>
+                </div>
+                <p class="inspector-desc">
+                  An imaginative mini-city with kid-sized grocery stores, firefighter stations, and foam building blocks flanked by gentle dual spiral slides for early balance confidence.
+                </p>
+
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-ruler-vertical" aria-hidden="true"></i> Height / Age</span>
+                    <span class="spec-v">Ages 3–5 • 90–115cm</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-layer-group" aria-hidden="true"></i> Floor Padding</span>
+                    <span class="spec-v">50mm Seamless Turf</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-user-shield" aria-hidden="true"></i> Staff Ratio</span>
+                    <span class="spec-v">1:5 Activity Guides</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-eye" aria-hidden="true"></i> Parent View</span>
+                    <span class="spec-v">Direct Sightline from Café</span>
+                  </div>
+                </div>
+
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Pretend High Street</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Dual Low Spiral Slides</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Oversized Foam Building Blocks</span>
+                </div>
+
+                <div class="inspector-actions">
+                  <button type="button" class="btn btn-primary bp-book-btn" data-zone-select="explorer">
+                    <i class="fas fa-ticket" aria-hidden="true"></i> Book Explorer Session
+                  </button>
+                  <a href="pages/play-zones.html#explorer-zone" class="btn btn-secondary">
+                    Full Zone Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Ninja Adventure -->
+            <div class="inspector-panel" id="spot-panel-3" data-category="adventure" hidden>
+              <div class="inspector-media-box">
+                <img src="assets/images/attraction-climb-ninja.jpg" alt="Traverse climbing wall and suspended net bridges" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill red"><i class="fas fa-mountain" aria-hidden="true"></i> Area 03 • Multi-Tier • 6–8 Years</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> 100% Impact Harness &amp; Foam Crash Pit</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-red">Ages 6 – 8 Years</span>
+                  <h3 class="inspector-title">Ninja Bouldering &amp; Sky Net Bridges</h3>
+                </div>
+                <p class="inspector-desc">
+                  Multi-level athletic obstacle labyrinth featuring horizontal traverse climbing walls, suspended swinging cargo nets, wobble balance beams, and deep foam landing pits.
+                </p>
+
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-ruler-vertical" aria-hidden="true"></i> Height / Age</span>
+                    <span class="spec-v">Ages 6–8 • 110–135cm</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-layer-group" aria-hidden="true"></i> Fall Cushioning</span>
+                    <span class="spec-v">Deep Foam Safety Pits</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-user-shield" aria-hidden="true"></i> Staff Ratio</span>
+                    <span class="spec-v">1:6 Ninja Marshals</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-eye" aria-hidden="true"></i> Visibility</span>
+                    <span class="spec-v">360° Perimeter View</span>
+                  </div>
+                </div>
+
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Horizontal Bouldering Wall</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Suspended Web Walk</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Triple-Tested Fall Safety</span>
+                </div>
+
+                <div class="inspector-actions">
+                  <button type="button" class="btn btn-primary bp-book-btn" data-zone-select="adventure">
+                    <i class="fas fa-ticket" aria-hidden="true"></i> Book Adventure Session
+                  </button>
+                  <a href="pages/play-zones.html#adventure-zone" class="btn btn-secondary">
+                    Full Zone Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Challenge Arena -->
+            <div class="inspector-panel" id="spot-panel-4" data-category="adventure" hidden>
+              <div class="inspector-media-box">
+                <img src="assets/images/attraction-slide-tower.jpg" alt="Clear acrylic tube slide tower and sprint lanes" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill cyan"><i class="fas fa-trophy" aria-hidden="true"></i> Area 04 • High Tier • 9–12 Years</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> Air-Braked Deceleration Flumes</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-green">Ages 9 – 12 Years</span>
+                  <h3 class="inspector-title">Sky High Slide Tower &amp; Timed Agility</h3>
+                </div>
+                <p class="inspector-desc">
+                  The crowning multi-deck adrenaline tower! Features enclosed translucent speed tubes, spider web vertical drop climbs, and glowing RFID sprint lanes with live leaderboard scoreboards.
+                </p>
+
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-ruler-vertical" aria-hidden="true"></i> Height / Age</span>
+                    <span class="spec-v">Ages 9–12 • 120–160cm</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-layer-group" aria-hidden="true"></i> Speed Braking</span>
+                    <span class="spec-v">Padded Run-Out Lanes</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-user-shield" aria-hidden="true"></i> Staff Ratio</span>
+                    <span class="spec-v">1:8 Arena Referees</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-eye" aria-hidden="true"></i> Live Scoring</span>
+                    <span class="spec-v">LED Leaderboards</span>
+                  </div>
+                </div>
+
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Clear Acrylic Spiral Tube</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> RFID Electronic Timing Gates</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> High-Speed Thrill</span>
+                </div>
+
+                <div class="inspector-actions">
+                  <button type="button" class="btn btn-primary bp-book-btn" data-zone-select="challenge">
+                    <i class="fas fa-ticket" aria-hidden="true"></i> Book Challenge Session
+                  </button>
+                  <a href="pages/play-zones.html#challenge-zone" class="btn btn-secondary">
+                    Full Zone Details &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 5: Parents Mezzanine Cafe -->
+            <div class="inspector-panel" id="spot-panel-5" data-category="amenities" hidden>
+              <div class="inspector-media-box">
+                <img src="assets/images/parents-lounge-cafe.jpg" alt="Parents relaxing with coffee in elevated mezzanine lounge overlooking arena" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill green"><i class="fas fa-mug-hot" aria-hidden="true"></i> Area 05 • Elevated Mezzanine • Parents</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> 1 Free Adult Admission per Child</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-green">Parent Comfort Lounge</span>
+                  <h3 class="inspector-title">Parents' Mezzanine Café &amp; Work Haven</h3>
+                </div>
+                <p class="inspector-desc">
+                  Relax in comfort while maintaining uninterrupted 360° sightlines over all play zones. Enjoy barista-pulled specialty espresso, fresh healthy pastries, ergonomic work desks, and blazing fast Wi-Fi.
+                </p>
+
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-users" aria-hidden="true"></i> Admission</span>
+                    <span class="spec-v">1 Adult Free per Child</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-wifi" aria-hidden="true"></i> Connectivity</span>
+                    <span class="spec-v">High-Speed Wi-Fi &amp; USB</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-volume-xmark" aria-hidden="true"></i> Acoustics</span>
+                    <span class="spec-v">Sound-Dampened Glass</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-video" aria-hidden="true"></i> Live Video</span>
+                    <span class="spec-v">Overhead CCTV Screens</span>
+                  </div>
+                </div>
+
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Specialty Espresso Bar</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Ergonomic Laptop Desks</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Comfortable Armchair Seating</span>
+                </div>
+
+                <div class="inspector-actions">
+                  <a href="#booking-band" class="btn btn-primary">
+                    <i class="fas fa-ticket" aria-hidden="true"></i> Reserve Family Admission
+                  </a>
+                  <a href="pages/contact.html" class="btn btn-secondary">
+                    View Visiting &amp; Café Info &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 6: Party Suites -->
+            <div class="inspector-panel" id="spot-panel-6" data-category="amenities" hidden>
+              <div class="inspector-media-box">
+                <img src="assets/images/party-suite-cosmic.jpg" alt="Decorated private birthday party suite with cosmic lighting" class="inspector-img" loading="lazy">
+                <div class="inspector-badge-top"><span class="badge-pill purple"><i class="fas fa-cake-candles" aria-hidden="true"></i> Area 06 • Private Suites • Celebrations</span></div>
+                <div class="inspector-badge-bottom"><span><i class="fas fa-circle-check" aria-hidden="true"></i> Dedicated Party Host Included</span></div>
+              </div>
+              <div class="inspector-content">
+                <div class="inspector-header">
+                  <span class="badge badge-purple" style="background: rgba(168, 85, 247, 0.15); color: #7E22CE;">VIP Party Suites</span>
+                  <h3 class="inspector-title">4 Themed Private Celebration Suites</h3>
+                </div>
+                <p class="inspector-desc">
+                  Celebrate stress-free in our themed VIP party suites! Every party booking includes full setup, personalized birthday lighting, Bluetooth sound, hot food catering, and priority entry to the arena.
+                </p>
+
+                <div class="inspector-specs-grid">
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-people-group" aria-hidden="true"></i> Capacity</span>
+                    <span class="spec-v">Up to 35 Guests</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-music" aria-hidden="true"></i> Technology</span>
+                    <span class="spec-v">Surround Sound &amp; LED</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-broom" aria-hidden="true"></i> Clean-up</span>
+                    <span class="spec-v">100% Handled by Us</span>
+                  </div>
+                  <div class="spec-tile">
+                    <span class="spec-k"><i class="fas fa-bell-concierge" aria-hidden="true"></i> Host Service</span>
+                    <span class="spec-v">Dedicated Party Host</span>
+                  </div>
+                </div>
+
+                <div class="inspector-tags">
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Cosmic &amp; Safari Themes</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Cake Cutting Setup</span>
+                  <span class="tag-chip"><i class="fas fa-check" aria-hidden="true"></i> Hot &amp; Fresh Buffet Options</span>
+                </div>
+
+                <div class="inspector-actions">
+                  <a href="pages/birthday-parties.html" class="btn btn-primary" style="background-color: #7E22CE; border-color: #7E22CE;">
+                    <i class="fas fa-gift" aria-hidden="true"></i> Explore Birthday Packages
+                  </a>
+                  <a href="pages/birthday-parties.html#party-calculator" class="btn btn-secondary" style="color: #7E22CE; border-color: #7E22CE;">
+                    Calculate Party Cost &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facility Engineering & Safety Standards Strip -->
+        <div class="blueprint-engineering-strip">
+          <div class="eng-card">
+            <div class="eng-icon"><i class="fas fa-vector-square" style="color: var(--primary-blue);" aria-hidden="true"></i></div>
+            <div class="eng-text">
+              <strong>Zero Blind-Spot Engineering</strong>
+              <p>Continuous curved geometry ensures parents can see their kids from the café perimeter.</p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon"><i class="fas fa-shield-halved" style="color: var(--accent-red);" aria-hidden="true"></i></div>
+            <div class="eng-text">
+              <strong>BIS-15877 Impact Cushioning</strong>
+              <p>Medical-grade high-density bio-foam covers all play surfaces and structural pillars.</p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon"><i class="fas fa-wind" style="color: #0EA5E9;" aria-hidden="true"></i></div>
+            <div class="eng-text">
+              <strong>Medical UV-C Air Filtration</strong>
+              <p>Hospital-standard HVAC air exchange cycles fresh sanitized air every 7.5 minutes.</p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon"><i class="fas fa-user-nurse" style="color: var(--accent-green);" aria-hidden="true"></i></div>
+            <div class="eng-text">
+              <strong>Pediatric First-Aid Certified</strong>
+              <p>Floor marshals and referees are fully certified in pediatric CPR and rapid response.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Today At Play Zone Schedule -->
+    <section class="section-padding" style="background-color: var(--bg-surface-alt);" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-clock"></i> Daily Activity Lineup</span>
+          <h2 id="schedule-heading" class="section-title">TODAY'S WORKSHOPS &amp; EVENTS</h2>
+          <p class="section-subtitle">All general entry passes include free access to our coach-led sensory hours and interactive group games.</p>
+        </div>
+
+        <div class="schedule-timeline">
+          <div class="schedule-card">
+            <span class="badge badge-yellow" style="margin-bottom: 0.75rem;">10:30 AM – 11:30 AM</span>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Toddler Sensory Rhythm &amp; Music</h3>
+            <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+              Interactive tambourines, ribbon dances, and bubble storms for ages 0-3 with parents.
+            </p>
+            <div style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fas fa-map-marker-alt"></i> Baby Zone Sensory Pavilion</div>
+          </div>
+
+          <div class="schedule-card" style="border-left-color: var(--accent-red);">
+            <span class="badge badge-red" style="margin-bottom: 0.75rem;">02:00 PM – 03:00 PM</span>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Superhero Agility Obstacle Race</h3>
+            <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+              Coach-led timed balance course with medals and sticker rewards for young ninja champions.
+            </p>
+            <div style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fas fa-map-marker-alt"></i> Adventure Arena Zone</div>
+          </div>
+
+          <div class="schedule-card" style="border-left-color: var(--accent-green);">
+            <span class="badge badge-green" style="margin-bottom: 0.75rem;">05:30 PM – 06:30 PM</span>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Glow-in-the-Dark Dance Party</h3>
+            <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+              Neon wristbands, family music, and safe foam canon celebration for all ages.
+            </p>
+            <div style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fas fa-map-marker-alt"></i> Central Plaza Stage</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Play Area Photo Gallery -->
+    <section class="section-padding" style="background-color: var(--bg-surface);" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visual Tour</span>
+          <h2 id="gallery-heading" class="section-title">SEE THE EXCITEMENT IN ACTION</h2>
+          <p class="section-subtitle">Take a peek inside our climate-controlled, sparkling clean 15,000 sq.ft facility.</p>
+        </div>
+
+        <div class="gallery-filter-nav" role="tablist" aria-label="Photo Gallery Categories">
+          <button type="button" class="filter-pill-btn active" data-filter="all" role="tab" aria-selected="true">All Areas</button>
+          <button type="button" class="filter-pill-btn" data-filter="baby" role="tab" aria-selected="false">Baby &amp; Toddler</button>
+          <button type="button" class="filter-pill-btn" data-filter="climbing" role="tab" aria-selected="false">Climbing Walls</button>
+          <button type="button" class="filter-pill-btn" data-filter="party" role="tab" aria-selected="false">Party Rooms</button>
+        </div>
+
+        <div class="gallery-mosaic-grid">
+          <!-- Item 1: Giant Slide (Climbing Walls) -->
+          <div class="gallery-tile-item" data-category="climbing">
+            <img src="assets/images/hero-boy-slide.jpg" alt="Yellow giant indoor slide" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Turbo Spiral Slide</h4>
+              <p style="font-size: 0.8rem;">Clean, frictionless slide with soft impact landing mat</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Ball Pit (Baby & Toddler) -->
+          <div class="gallery-tile-item" data-category="baby">
+            <img src="assets/images/ballpit-slide.jpg" alt="Clean colorful ball pit" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Mega Ball Pit</h4>
+              <p style="font-size: 0.8rem;">Over 50,000 sanitized antibacterial play balls</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Climbing Wall (Climbing Walls) -->
+          <div class="gallery-tile-item" data-category="climbing">
+            <img src="assets/images/adventure-zone.jpg" alt="Indoor climbing wall" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Traverse Climbing Rock</h4>
+              <p style="font-size: 0.8rem;">12-foot wall with ergonomic safety grips</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Baby Play (Baby & Toddler) -->
+          <div class="gallery-tile-item" data-category="baby">
+            <img src="assets/images/baby-zone.jpg" alt="Baby zone soft sensory mats" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Sensory Infant Zone</h4>
+              <p style="font-size: 0.8rem;">Quiet, gated soft area reserved for infants under 2</p>
+            </div>
+          </div>
+
+          <!-- Item 5: Explorer Blocks (Baby & Toddler) -->
+          <div class="gallery-tile-item" data-category="baby">
+            <img src="assets/images/explorer-zone.jpg" alt="Building blocks play space" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Architect Foam Blocks</h4>
+              <p style="font-size: 0.8rem;">Creative building and spatial reasoning toys</p>
+            </div>
+          </div>
+
+          <!-- Item 6: Ninja Ropes (Climbing Walls) -->
+          <div class="gallery-tile-item" data-category="climbing">
+            <img src="assets/images/challenge-zone.jpg" alt="Ninja agility rope obstacle" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Ninja Rope Skyway</h4>
+              <p style="font-size: 0.8rem;">Challenging balance courses for junior athletes</p>
+            </div>
+          </div>
+
+          <!-- Item 7: Cosmic Space Party Suite (Party Rooms) -->
+          <div class="gallery-tile-item" data-category="party">
+            <img src="assets/images/party-suite-cosmic.jpg" alt="Cosmic Space Party Suite" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Cosmic Space Party Suite</h4>
+              <p style="font-size: 0.8rem;">Glow neon projections, party captain &amp; sound</p>
+            </div>
+          </div>
+
+          <!-- Item 8: Royal Celebration Suite (Party Rooms) -->
+          <div class="gallery-tile-item" data-category="party">
+            <img src="assets/images/party-suite-royal.jpg" alt="Royal Castle Celebration Lounge" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Royal Castle Celebration Suite</h4>
+              <p style="font-size: 0.8rem;">Crown throne setup, balloon arch &amp; tea party decor</p>
+            </div>
+          </div>
+
+          <!-- Item 9: Super Play Birthday Suite (Party Rooms) -->
+          <div class="gallery-tile-item" data-category="party">
+            <img src="assets/images/party-suite-super.jpg" alt="Super Play Birthday Suite" loading="lazy">
+            <div class="gallery-tile-overlay">
+              <h4>Super Play Birthday Suite</h4>
+              <p style="font-size: 0.8rem;">Spacious party suite with custom cake &amp; dining tables</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Parent Reviews & Testimonials -->
+    <section class="section-padding" style="background-color: var(--primary-blue-subtle);" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Loved By Over 25,000 Families</span>
+          <h2 id="reviews-heading" class="section-title">WHAT HAPPY PARENTS SAY</h2>
+        </div>
+
+        <div class="testimonials-three-grid">
+          <div class="dash-card">
+            <div style="color: var(--accent-yellow); margin-bottom: 0.75rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--neutral-700); margin-bottom: 1.5rem; line-height: 1.6;">
+              "Hands down the cleanest play area in the city. The staff actually watch the kids and enforce socks rules. Booking through the online portal took 30 seconds!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #CBD5E1; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #1F2937;">MP</div>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.1rem;">Meera Patel</h4>
+                <span style="font-size: 0.75rem; color: var(--neutral-500);">Mom to Aarav (4y) &amp; Ananya (7y)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div style="color: var(--accent-yellow); margin-bottom: 0.75rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--neutral-700); margin-bottom: 1.5rem; line-height: 1.6;">
+              "We hosted our son's 5th birthday here. The party coordinator handled the cake, pizza, decor, and games. Zero stress for us parents. Highly recommend!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #FDE68A; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #1F2937;">DK</div>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.1rem;">David Kaplan</h4>
+                <span style="font-size: 0.75rem; color: var(--neutral-500);">Dad to Oliver (5y)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div style="color: var(--accent-yellow); margin-bottom: 0.75rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--neutral-700); margin-bottom: 1.5rem; line-height: 1.6;">
+              "The monthly Gold pass has paid for itself three times over. Having high speed Wi-Fi and good coffee while my daughter safely burns off energy is invaluable."
+            </p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #FECDD3; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #1F2937;">SL</div>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.1rem;">Sarah Lawson</h4>
+                <span style="font-size: 0.75rem; color: var(--neutral-500);">Mom to Maya (3y)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Call to Action Banner -->
+    <section style="background: linear-gradient(135deg, var(--accent-red), #C52020); color: var(--white); padding: 4.5rem 0; text-align: center;">
+      <div class="container">
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; color: var(--white);">
+          READY FOR NON-STOP PLAYTIME?
+        </h2>
+        <p style="font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2.5rem auto;">
+          Book your session online now to skip the entry line and receive complimentary locker access.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+          <a href="pages/dashboard.html#booking-tab" class="btn btn-primary-blue btn-lg">RESERVE SLOTS NOW</a>
+          <a href="pages/contact.html" class="btn" style="background: #FFFFFF; color: #111827; font-weight: 800;">GET DIRECTIONS</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand & Details -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-symbol-block">
+              <div class="logo-line">
+                <span>PLAY</span>
+                <span class="logo-sq-blue"></span>
+              </div>
+              <div class="logo-line">
+                <span>ZONE</span>
+                <span class="logo-tri-yellow"></span>
+                <span class="logo-dot-red"></span>
+              </div>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1.25rem; line-height: 1.6;">
+            Bauhaus-inspired indoor play wonderland &amp; family activity center designed for children ages 0 to 12. Safe, hygienic, and certified.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle fb" aria-label="Play Zone on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle ig" aria-label="Play Zone on Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle yt" aria-label="Play Zone on YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore & Play -->
+        <div class="footer-col">
+          <h4>EXPLORE &amp; PLAY</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+            <li><a href="pages/play-zones.html">Play Zones</a></li>
+            <li><a href="pages/birthday-parties.html">Birthday Parties</a></li>
+            <li><a href="pages/membership-plans.html">Membership Plans</a></li>
+            <li><a href="pages/safety-standards.html">Safety Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Parent Portal -->
+        <div class="footer-col">
+          <h4>PARENT PORTAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="pages/dashboard.html">Parent Dashboard</a></li>
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company & Legal -->
+        <div class="footer-col">
+          <h4>COMPANY &amp; LEGAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+            <li><a href="pages/404.html">404</a></li>
+            <li><a href="pages/privacy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Details -->
+        <div class="footer-col">
+          <h4>GET IN TOUCH</h4>
+          <ul class="footer-contact-details">
+            <li><i class="fas fa-phone-alt"></i> <span>+91 1234 567 890</span></li>
+            <li><i class="fas fa-envelope"></i> <span>hello@playzone.com</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span>123 Play Street, Fun City, 560001</span></li>
+            <li><i class="fas fa-clock"></i> <span>Mon – Sun: 9:00 AM – 8:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sub-bar">
+        <div>&copy; 2026 Play Zone. All rights reserved.</div>
+        <div class="footer-sub-links">
+          <a href="pages/privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="pages/terms.html">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="pages/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=20260924c"></script>
+</body>
+</html>

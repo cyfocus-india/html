@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="About Elevate Learning and our approach to practical corporate capability.">
+    <title>About Us | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one"></div>
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="../index.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="../index.html" class="dropdown-item">Home 1</a>
+              <a href="../index1.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="programs.html">Programs</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="clients.html">Clients</a>
+          <a href="in-house-training.html">In-House Training</a>
+          <a class="active" href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span></button
+          ><a class="button button-sm" href="signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          ><button aria-label="Open navigation" type="button"
+            class="menu-button"
+            data-menu-button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Mobile navigation" class="mobile-menu glass" id="mobile-menu" data-mobile-menu>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+          </div>
+        </div>
+        <a href="programs.html">Programs</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="clients.html">Clients</a>
+        <a href="in-house-training.html">In-House Training</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="inner-main">
+      <section class="page-hero section-shell reveal">
+        <p class="eyebrow"><span></span> Why we exist</p>
+        <h1>
+          Learning should change
+          <span class="gradient-text">what happens next.</span>
+        </h1>
+        <p>
+          We help organizations turn development investment into practical
+          capability, better decisions and stronger performance.
+        </p>
+      </section>
+      <section class="section-shell split-section">
+        <article class="content-card glass reveal">
+          <h2>Built around the work</h2>
+          <p>
+            Our programs begin with real moments: a manager coaching through
+            uncertainty, a seller shaping value, a team communicating under
+            pressure, or a professional using data to make a decision. Learning
+            becomes useful when it looks and feels like the work itself.
+          </p>
+          <p>
+            That principle guides our facilitators, program design, practice
+            activities and measurement approach.
+          </p>
+        </article>
+        <article class="content-card glass reveal" data-delay="1">
+          <h2>Our commitments</h2>
+          <div class="steps-list">
+            <div class="step-row">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Relevant</h3>
+                <p>Every session connects to an observable workplace need.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Human</h3>
+                <p>Learning feels inclusive, respectful and energizing.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Measurable</h3>
+                <p>Progress is visible to learners and people leaders.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="section-shell metrics-strip reveal">
+        <div class="metric">
+          <b>Capability at scale</b
+          ><span
+            >Experienced facilitators, flexible formats and a clear operating
+            model.</span
+          >
+        </div>
+        <div class="metric"><b>500+</b><span>Programs delivered</span></div>
+        <div class="metric"><b>200+</b><span>Learning partners</span></div>
+        <div class="metric">
+          <b>25+</b><span>Years combined expertise</span>
+        </div>
+      </section>
+
+      <!-- Unique Section 1: Guiding Pedagogical Philosophy -->
+      <section class="section-shell reveal" style="margin-top: 36px;">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> How we design</p>
+            <h2>
+              Our guiding philosophy for
+              <span class="gradient-text">high-retention capability.</span>
+            </h2>
+          </div>
+          <p style="color: var(--muted); font-size: 0.9rem; max-width: 480px; margin: 0;">
+            Three core pedagogical pillars engineered into every cohort journey to convert insight into durable instinct.
+          </p>
+        </div>
+        <div class="values-pillars-grid">
+          <article class="value-pillar-card glass reveal">
+            <div class="value-icon">
+              <i data-lucide="brain"></i>
+            </div>
+            <h3>Evidence-Based Cognitive Science</h3>
+            <p>We leverage retrieval practice, spaced repetition, and cognitive load calibration so complex conceptual material is retained well beyond the training room.</p>
+          </article>
+
+          <article class="value-pillar-card glass reveal" data-delay="1">
+            <div class="value-icon">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <h3>Frontline Workplace Fidelity</h3>
+            <p>Every roleplay simulation, negotiation drill, and case study is grounded in real corporate friction points, actual team dilemmas, and genuine market constraints.</p>
+          </article>
+
+          <article class="value-pillar-card glass reveal" data-delay="2">
+            <div class="value-icon">
+              <i data-lucide="line-chart"></i>
+            </div>
+            <h3>Measurable Behavioral ROI</h3>
+            <p>We believe learning isn't validated by attendance hours. We measure verified on-the-job habit change and managerial execution velocity through Kirkpatrick Level 4 rigor.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Leadership Team Section -->
+      <section class="section-shell" style="margin-top: 36px;">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Leadership & faculty</p>
+            <h2>
+              Practitioners shaping the future of
+              <span class="gradient-text">enterprise learning.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="leadership-grid">
+          <article class="leader-card glass reveal">
+            <div class="leader-avatar">AK</div>
+            <h3>Ananya Kapoor</h3>
+            <span class="leader-role">Managing Director & Co-Founder</span>
+            <p class="leader-bio">Former VP of Organizational Development at Global Tech. Over 18 years designing capability frameworks for Fortune 500 enterprises.</p>
+          </article>
+          <article class="leader-card glass reveal" data-delay="1">
+            <div class="leader-avatar">RM</div>
+            <h3>Rajiv Menon</h3>
+            <span class="leader-role">Chief Learning Officer</span>
+            <p class="leader-bio">Specialist in cognitive learning science and simulation-based pedagogy. Led workforce upskilling transformations across 40+ countries.</p>
+          </article>
+          <article class="leader-card glass reveal" data-delay="2">
+            <div class="leader-avatar">SK</div>
+            <h3>Sunita Krishnan</h3>
+            <span class="leader-role">Head of Enterprise Practice</span>
+            <p class="leader-bio">Executive coach and commercial strategist. Vetted faculty mentor for over 150 corporate leadership cohorts.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Campus & Learning Center Network -->
+      <section class="section-shell" style="margin-top: 36px;">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Infrastructure & Reach</p>
+            <h2>
+              Executive learning centers &
+              <span class="gradient-text">global virtual studios.</span>
+            </h2>
+          </div>
+          <a class="text-link" href="contact.html"
+            >View all campuses <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+        <div class="modalities-grid">
+          <article class="modality-card glass reveal">
+            <span class="program-icon blue"><i data-lucide="building-2"></i></span>
+            <h3>Bangalore Innovation Campus</h3>
+            <p>Our flagship 12,000 sq.ft facility featuring modern simulation labs, amphitheater presentation halls, and executive breakout lounges.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Indiranagar</span>
+              <span class="modality-pill">Lab Classrooms</span>
+            </div>
+          </article>
+          <article class="modality-card glass reveal" data-delay="1">
+            <span class="program-icon blue"><i data-lucide="building-2"></i></span>
+            <h3>Mumbai Executive Center</h3>
+            <p>Located in BKC, equipped with hybrid streaming suites and boardroom simulation environments for senior leadership cohorts.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">BKC Commercial Hub</span>
+              <span class="modality-pill">Boardroom Labs</span>
+            </div>
+          </article>
+          <article class="modality-card glass reveal" data-delay="2">
+            <span class="program-icon blue"><i data-lucide="video"></i></span>
+            <h3>Global Virtual Studio Hub</h3>
+            <p>High-definition broadcast studios delivering live synchronous workshops with interactive polling and digital whiteboards worldwide.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Ultra-HD Audio/Video</span>
+              <span class="modality-pill">Global Synchronous</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Unique Section 2: Accreditations & Global Corporate Standards -->
+      <section class="section-shell reveal" style="margin-top: 36px;">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Global Benchmarks</p>
+            <h2>
+              Accreditations, standards &
+              <span class="gradient-text">enterprise rigor.</span>
+            </h2>
+          </div>
+          <p style="color: var(--muted); font-size: 0.9rem; max-width: 480px; margin: 0;">
+            Our programs comply with international adult learning governance, data protection, and LMS interoperability specifications.
+          </p>
+        </div>
+        <div class="accreditations-grid">
+          <article class="accreditation-card glass reveal">
+            <div class="accreditation-badge-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3>ANSI / IACET Aligned</h3>
+            <p>Standardized Continuing Education Units (CEU) recognized by multinational corporate HR bodies.</p>
+          </article>
+
+          <article class="accreditation-card glass reveal" data-delay="1">
+            <div class="accreditation-badge-icon">
+              <i data-lucide="bar-chart-2"></i>
+            </div>
+            <h3>Kirkpatrick Partner</h3>
+            <p>Certified evaluation methodologies measuring behavioral habit transfer and organizational ROI.</p>
+          </article>
+
+          <article class="accreditation-card glass reveal" data-delay="2">
+            <div class="accreditation-badge-icon">
+              <i data-lucide="database"></i>
+            </div>
+            <h3>SCORM & xAPI Native</h3>
+            <p>Full conformance with modern corporate LMS tracking, telemetry, and automated gradebook sync.</p>
+          </article>
+
+          <article class="accreditation-card glass reveal" data-delay="3">
+            <div class="accreditation-badge-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3>ISO 27001 & GDPR</h3>
+            <p>Enterprise-grade learner data protection, encrypted telemetry, and strict corporate confidentiality.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b
+                ><small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn capability into
+              measurable performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="../index.html">Home 1</a>
+            <a href="../index1.html">Home 2</a>
+            <a href="programs.html">Programs</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="about.html">About Us</a>
+            <a href="clients.html">Clients</a>
+            <a href="contact.html">Contact</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

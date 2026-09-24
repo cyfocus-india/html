@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Glowé">
+  <rect width="64" height="64" rx="18" fill="#f8ddda"/>
+  <path d="M42 14c-7 0-12 4-13 11 7 1 13-3 13-11Z" fill="#7a9155"/>
+  <path d="M30 26c2-5 5-8 11-11" fill="none" stroke="#6c7f4c" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#151311">G</text>
+</svg>

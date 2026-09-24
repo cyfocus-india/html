@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A curious cat peeking out of a gift box">
+<style>.peek{animation:peek 3.6s ease-in-out infinite}@keyframes peek{0%,100%{transform:translateY(8px)}40%,70%{transform:translateY(-6px)}}
+.spark{transform-box:fill-box;transform-origin:center;animation:tw 2.2s ease-in-out infinite}.spark.b{animation-delay:.7s}.spark.c{animation-delay:1.4s}
+@keyframes tw{0%,100%{transform:scale(.6);opacity:.4}50%{transform:scale(1.1);opacity:1}}
+.z{animation:bob 2.6s ease-in-out infinite}@keyframes bob{50%{transform:translate(4px,-8px)}}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<circle cx="240" cy="185" r="150" fill="#F4E3C8" fill-opacity=".7"/>
+<ellipse cx="240" cy="326" rx="170" ry="14" fill="#0F5C5C" fill-opacity=".14"/>
+<g class="peek">
+<path d="M178 140l10-46 34 30z" fill="#8C96A3"/><path d="M302 140l-10-46-34 30z" fill="#8C96A3"/>
+<path d="M186 132l6-26 18 17z" fill="#F4B6C2"/><path d="M294 132l-6-26-18 17z" fill="#F4B6C2"/>
+<ellipse cx="240" cy="168" rx="70" ry="58" fill="#8C96A3"/>
+<path d="M226 118q14-8 28 0" fill="none" stroke="#6B7684" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="214" cy="166" rx="10" ry="13" fill="#1F2A2E"/><ellipse cx="266" cy="166" rx="10" ry="13" fill="#1F2A2E"/>
+<circle cx="217" cy="161" r="3.4" fill="#fff"/><circle cx="269" cy="161" r="3.4" fill="#fff"/>
+<path d="M234 186h12l-6 7z" fill="#F08BA0"/>
+<path d="M240 193q-6 8-13 3M240 193q6 8 13 3" fill="none" stroke="#1F2A2E" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M196 186l-34-6M196 194l-32 4M284 186l34-6M284 194l32 4" stroke="#1F2A2E" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="200" cy="214" rx="17" ry="11" fill="#8C96A3"/><ellipse cx="280" cy="214" rx="17" ry="11" fill="#8C96A3"/>
+</g>
+<rect x="140" y="212" width="200" height="112" rx="14" fill="#0F5C5C"/>
+<rect x="128" y="200" width="224" height="30" rx="10" fill="#137070"/>
+<rect x="226" y="200" width="28" height="124" fill="#F28C38"/>
+<ellipse cx="200" cy="214" rx="17" ry="11" fill="#8C96A3"/><ellipse cx="280" cy="214" rx="17" ry="11" fill="#8C96A3"/>
+<path d="M192 214v6M200 214v7M208 214v6M272 214v6M280 214v7M288 214v6" stroke="#6B7684" stroke-width="2" stroke-linecap="round"/>
+<g transform="translate(190 288) rotate(0) scale(1.3)" fill="#FFF8EF" fill-opacity="0.35"><ellipse cx="-7" cy="-7" rx="3" ry="4"/><ellipse cx="-2.3" cy="-11" rx="3" ry="4"/><ellipse cx="3.3" cy="-11" rx="3" ry="4"/><ellipse cx="8" cy="-7" rx="3" ry="4"/><path d="M.5-4c-4 0-8 4-9 7.5-.8 3 1.5 5.3 4.2 4.8 1.9-.4 3-1.2 4.8-1.2s2.9.8 4.8 1.2c2.7.5 5-1.8 4.2-4.8C8.5 0 4.5-4 .5-4z"/></g><g transform="translate(292 286) rotate(0) scale(1.3)" fill="#FFF8EF" fill-opacity="0.35"><ellipse cx="-7" cy="-7" rx="3" ry="4"/><ellipse cx="-2.3" cy="-11" rx="3" ry="4"/><ellipse cx="3.3" cy="-11" rx="3" ry="4"/><ellipse cx="8" cy="-7" rx="3" ry="4"/><path d="M.5-4c-4 0-8 4-9 7.5-.8 3 1.5 5.3 4.2 4.8 1.9-.4 3-1.2 4.8-1.2s2.9.8 4.8 1.2c2.7.5 5-1.8 4.2-4.8C8.5 0 4.5-4 .5-4z"/></g>
+<path class="spark" d="M96 118l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#F28C38"/>
+<path class="spark b" d="M392 170l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#0F5C5C"/>
+<path class="spark c" d="M120 250l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#0F5C5C"/>
+<g class="z" fill="#0F5C5C" fill-opacity=".6"><path d="M325.1 92.3Q324 92.3 323.2 91.5Q322.4 90.7 322.4 89.5Q322.4 89 322.6 88.5Q322.8 88 323.2 87.6L329 82.5H325.8Q325.1 82.5 324.5 82.3Q323.9 82.2 323.4 81.7Q323 81.1 323 79.7Q323 78.4 323.4 77.8Q323.9 77.3 324.5 77.2Q325.1 77 325.8 77H334.9Q336 77 336.8 77.8Q337.6 78.6 337.6 79.7Q337.6 80.3 337.4 80.8Q337.1 81.3 336.8 81.7L331.2 86.8H335.2Q335.9 86.8 336.5 86.9Q337.1 87 337.5 87.6Q337.9 88.2 337.9 89.6Q337.9 90.9 337.5 91.5Q337.1 92.1 336.5 92.2Q335.9 92.3 335.2 92.3Z"/><path d="M348.3 66.2Q347.5 66.2 346.9 65.6Q346.3 65 346.3 64.2Q346.3 63.8 346.5 63.4Q346.6 63.1 346.9 62.8L351.1 59H348.8Q348.3 59 347.8 58.9Q347.4 58.8 347.1 58.4Q346.7 58 346.7 57Q346.7 56 347.1 55.6Q347.4 55.2 347.8 55.1Q348.3 55 348.8 55H355.4Q356.3 55 356.8 55.6Q357.4 56.2 357.4 57Q357.4 57.4 357.3 57.8Q357.1 58.2 356.8 58.4L352.7 62.2H355.7Q356.2 62.2 356.7 62.3Q357.1 62.4 357.4 62.8Q357.7 63.2 357.7 64.2Q357.7 65.2 357.4 65.6Q357.1 66 356.6 66.1Q356.2 66.2 355.7 66.2Z"/></g>
+</svg>

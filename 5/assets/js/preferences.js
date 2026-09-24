@@ -1,0 +1,1 @@
+try{let t=localStorage.getItem('bm-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;document.documentElement.dir=localStorage.getItem('bm-direction')||'ltr'}catch(e){}

@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ExamSuccess student dashboard for mock tests, score reports, topic performance, study resources and class schedules.">
+  <title>Dashboard — ExamSuccess</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/dashboard.js"></script>
+</head>
+<body class="dashboard-body" data-page="dashboard">
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+  <div data-site-header></div>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Student dashboard navigation">
+      <!-- Top header bar of options sidebar with the 3 lines hamburger toggle -->
+      <div class="dash-sidebar-header">
+        <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle sidebar width" title="Toggle Navigation Sidebar">
+          <svg class="icon"><use href="#menu"></use></svg>
+        </button>
+        <span class="dash-sidebar-title">Portal Menu</span>
+      </div>
+
+      <nav class="dash-nav-list" role="tablist" aria-label="Student portal navigation">
+        <a class="dash-link active" href="#overview" data-view="overview" role="tab" aria-selected="true" title="Dashboard Overview">
+          <svg class="icon"><use href="#home"></use></svg>
+          <span class="dash-link-text">Dashboard Overview</span>
+        </a>
+        <a class="dash-link" href="#tests" data-view="tests" role="tab" aria-selected="false" title="Tests &amp; Mocks">
+          <svg class="icon"><use href="#clipboard"></use></svg>
+          <span class="dash-link-text">Tests &amp; Mocks</span>
+        </a>
+        <a class="dash-link" href="#analytics" data-view="analytics" role="tab" aria-selected="false" title="Performance Analytics">
+          <svg class="icon"><use href="#chart"></use></svg>
+          <span class="dash-link-text">Performance Analytics</span>
+        </a>
+        <a class="dash-link" href="#library" data-view="library" role="tab" aria-selected="false" title="Study Library">
+          <svg class="icon"><use href="#book"></use></svg>
+          <span class="dash-link-text">Study Library</span>
+        </a>
+        <a class="dash-link" href="#schedule" data-view="schedule" role="tab" aria-selected="false" title="Live &amp; Schedule">
+          <svg class="icon"><use href="#calendar"></use></svg>
+          <span class="dash-link-text">Live &amp; Schedule</span>
+        </a>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <div class="dash-user-badge" title="Ankit Dwivedi (SBI PO &amp; SSC CGL)">
+          <div class="dash-avatar">AD</div>
+          <div class="dash-user-meta">
+            <strong>Ankit Dwivedi</strong>
+            <small>SBI PO &amp; SSC CGL</small>
+          </div>
+        </div>
+        <button class="dash-logout-btn" id="logoutBtn" title="Sign Out" aria-label="Sign Out">
+          <svg class="icon"><use href="#logout"></use></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="dash-backdrop" id="dashBackdrop"></div>
+
+    <main class="dashboard-main" id="main">
+      <div class="container">
+        <!-- ================= VIEW 1: DASHBOARD OVERVIEW ================= -->
+        <div class="dash-view" id="view-overview">
+          <!-- Welcome banner -->
+          <div class="dashboard-welcome" id="overview" data-reveal>
+            <div>
+              <h1>Welcome back, Ankit!</h1>
+              <p>Target: <strong>SBI PO &amp; SSC CGL 2026</strong> · Current Ranking: <strong>Top 4.8%</strong> across India</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" id="dashToggle" data-dash-toggle aria-label="Open student navigation menu" aria-expanded="false"><svg class="icon"><use href="#menu"></use></svg>Portal Menu</button>
+              <button class="btn btn-outline btn-sm" id="viewEnrolledBtn"><svg class="icon"><use href="#book"></use></svg>My Batches &amp; Tracks</button>
+            </div>
+          </div>
+
+          <!-- Metric summary stats -->
+          <section class="summary-grid" aria-label="Performance summary">
+            <article class="card summary-card" style="--tone:#0b5de7" data-reveal>
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Tests Attempted</span>
+                  <strong class="summary-value">24</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#clipboard"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>This Month</span><b>12</b></div>
+                <div><span>All Time</span><b>96</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#16a34a" data-reveal>
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Average Score</span>
+                  <strong class="summary-value">72.45%</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#chart"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>This Month</span><b>68.12%</b></div>
+                <div><span>All Time</span><b>71.32%</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#6d36d9" data-reveal>
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Highest Score</span>
+                  <strong class="summary-value">92.50%</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#award"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>Exam</span><b>Mock - 15</b></div>
+                <div><span>Date</span><b>18 May 2025</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#f07b00" data-reveal>
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Total Study Time</span>
+                  <strong class="summary-value">48h 30m</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#clock"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>This Month</span><b>21h 15m</b></div>
+                <div><span>All Time</span><b>198h 40m</b></div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Main dashboard content grid -->
+          <div class="dashboard-grid">
+            
+            <!-- 1. Quick Test Launcher -->
+            <section class="card dash-card" id="quick-test" data-reveal>
+              <div class="dash-card-head">
+                <div>
+                  <h2>Quick Test Simulator</h2>
+                  <p class="dash-card-subtitle">Timed CBT practice drills with instant scoring</p>
+                </div>
+              </div>
+              <div class="quick-actions">
+                <button class="quick-action" data-start-test="Subject-wise Practice Test">
+                  <span class="trust-icon"><svg class="icon"><use href="#file"></use></svg></span>
+                  <span><b>Subject-wise Test</b><span>Quantitative, Reasoning or English</span></span>
+                </button>
+                <button class="quick-action" data-start-test="Full Length All-India Mock">
+                  <span class="trust-icon" style="color:var(--green);background:#e7f7eb"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                  <span><b>Full Length Mock</b><span>Full 100-mark All-India CBT simulation</span></span>
+                </button>
+                <button class="quick-action" data-start-test="Speed Sprint &amp; PYQ Drill">
+                  <span class="trust-icon" style="color:var(--orange);background:#fff7ed"><svg class="icon"><use href="#target"></use></svg></span>
+                  <span><b>Speed &amp; PYQ Drill</b><span>20-min rapid sectional challenge</span></span>
+                </button>
+              </div>
+              <button class="btn btn-primary btn-sm" id="viewAllTestsBtn" style="margin-top:auto;width:100%"><svg class="icon"><use href="#clipboard"></use></svg> View All Test Series (18)</button>
+            </section>
+
+            <!-- 2. Score Summary & Donut -->
+            <section class="card dash-card" id="score-summary" data-reveal>
+              <div class="dash-card-head">
+                <div>
+                  <h2>Score Summary</h2>
+                  <p class="dash-card-subtitle">Overall performance distribution (May 2025)</p>
+                </div>
+              </div>
+              <div class="score-content">
+                <div style="display:flex;align-items:center;justify-content:space-around;gap:16px;flex-wrap:wrap">
+                  <div class="donut" aria-label="68.1 percent correct, 26.1 percent incorrect, 5.8 percent unattempted"></div>
+                  <div class="legend" style="display:grid;gap:10px;min-width:175px">
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#16a34a"></span><span>Correct Answers</span><b>256 (68.1%)</b></div>
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#ef2b36"></span><span>Incorrect Answers</span><b>98 (26.1%)</b></div>
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#b8bdc8"></span><span>Unattempted</span><b>22 (5.8%)</b></div>
+                  </div>
+                </div>
+                <div class="score-kpi-grid">
+                  <div class="score-kpi"><strong>376</strong><span>Questions</span></div>
+                  <div class="score-kpi"><strong>72.4%</strong><span>Accuracy</span></div>
+                  <div class="score-kpi"><strong>42s</strong><span>Avg / Q</span></div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm" id="viewDetailedReportsBtn" style="margin-top:auto;width:100%"><svg class="icon"><use href="#chart"></use></svg> View Diagnostic Reports</button>
+            </section>
+
+            <!-- 3. Recent Tests History -->
+            <section class="card dash-card" id="recent-tests" data-reveal>
+              <div class="dash-card-head">
+                <div>
+                  <h2>Recent Tests History</h2>
+                  <p class="dash-card-subtitle">Latest 8 recorded CBT mock attempts</p>
+                </div>
+                <button class="card-link" id="toggleAllRecentBtn" style="margin:0;border:none;background:none;cursor:pointer;white-space:nowrap">View All (8)</button>
+              </div>
+              <div class="recent-list" id="recentTestsContainer" style="display:flex;flex-direction:column;justify-content:space-between;flex:1">
+                <div class="recent-row">
+                  <span class="mini-icon"><svg class="icon"><use href="#file"></use></svg></span>
+                  <span><b>Full Length Mock - 24</b><small>18 May · Score: 78.50/100 · AIR 142</small></span>
+                  <button class="review-test-btn" data-review-test="Full Length Mock - 24">Review</button>
+                </div>
+                <div class="recent-row">
+                  <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                  <span><b>Quantitative Speed Drill</b><small>17 May · Score: 68.00/100 · AIR 318</small></span>
+                  <button class="review-test-btn" data-review-test="Quantitative Speed Drill">Review</button>
+                </div>
+                <div class="recent-row">
+                  <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#book"></use></svg></span>
+                  <span><b>English Grammar Sectional</b><small>16 May · Score: 72.00/100 · AIR 204</small></span>
+                  <button class="review-test-btn" data-review-test="English Grammar Sectional">Review</button>
+                </div>
+                <div class="recent-row">
+                  <span class="mini-icon" style="--tone:#f07b00"><svg class="icon"><use href="#help"></use></svg></span>
+                  <span><b>Reasoning Puzzles Mini Mock</b><small>15 May · Score: 64.00/100 · AIR 412</small></span>
+                  <button class="review-test-btn" data-review-test="Reasoning Mini Mock">Review</button>
+                </div>
+                <!-- Hidden extra recent tests toggled on demand -->
+                <div class="extra-recent-tests" id="extraRecentTests" style="display:none">
+                  <div class="recent-row">
+                    <span class="mini-icon" style="--tone:#0b5de7"><svg class="icon"><use href="#file"></use></svg></span>
+                    <span><b>Full Length Mock - 23</b><small>12 May · Score: 76.00/100 · AIR 189</small></span>
+                    <button class="review-test-btn" data-review-test="Full Length Mock - 23">Review</button>
+                  </div>
+                  <div class="recent-row">
+                    <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                    <span><b>General Awareness &amp; Static GK</b><small>10 May · Score: 82.50/100 · AIR 98</small></span>
+                    <button class="review-test-btn" data-review-test="GA Static GK Drill">Review</button>
+                  </div>
+                  <div class="recent-row">
+                    <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#book"></use></svg></span>
+                    <span><b>Banking Awareness Specialist Test</b><small>08 May · Score: 70.00/100 · AIR 255</small></span>
+                    <button class="review-test-btn" data-review-test="Banking Awareness Test">Review</button>
+                  </div>
+                  <div class="recent-row">
+                    <span class="mini-icon" style="--tone:#ef2b36"><svg class="icon"><use href="#file"></use></svg></span>
+                    <span><b>Data Interpretation Challenge</b><small>05 May · Score: 59.00/100 · AIR 520</small></span>
+                    <button class="review-test-btn" data-review-test="DI Challenge">Review</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+        <!-- ================= VIEW 2: TESTS & MOCKS ================= -->
+        <div class="dash-view" id="view-tests" style="display:none">
+          <div class="dash-view-header">
+            <div>
+              <h1>Tests &amp; Mocks Hub</h1>
+              <p>Practice topic-wise drills, full 100-mark All-India CBT mock tests, and review past exam keys.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" data-dash-toggle aria-label="Open student navigation menu" aria-expanded="false"><svg class="icon"><use href="#menu"></use></svg>Portal Menu</button>
+              <button class="btn btn-primary btn-sm" id="viewAllTestsBtn2"><svg class="icon"><use href="#clipboard"></use></svg> All 18 Test Series</button>
+            </div>
+          </div>
+
+          <div class="dashboard-grid dashboard-grid-2col" style="margin-bottom: 24px;">
+            <!-- Quick Test Launcher in Tests View -->
+            <section class="card dash-card">
+              <div class="dash-card-head">
+                <h2>Quick Practice Drills</h2>
+                <span class="muted" style="font-size:.78rem">Timed CBT Simulator</span>
+              </div>
+              <div class="quick-actions">
+                <button class="quick-action" data-start-test="Subject-wise Practice Test">
+                  <span class="trust-icon" style="--tone:var(--blue-600)"><svg class="icon"><use href="#file"></use></svg></span>
+                  <span><b>Subject-wise Test</b><span>Quantitative, Reasoning, English or GA</span></span>
+                </button>
+                <button class="quick-action" data-start-test="Full Length All-India Mock">
+                  <span class="trust-icon" style="--tone:var(--green);color:var(--green)"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                  <span><b>Full Length Mock</b><span>Full 100-mark All-India CBT simulation</span></span>
+                </button>
+                <button class="quick-action" data-start-test="Speed Sprint &amp; PYQ Drill">
+                  <span class="trust-icon" style="--tone:var(--orange);color:var(--orange)"><svg class="icon"><use href="#target"></use></svg></span>
+                  <span><b>Speed Sprint &amp; PYQ Drill</b><span>20-minute rapid-fire sectional challenge</span></span>
+                </button>
+              </div>
+            </section>
+
+            <!-- Test Performance Summary in Tests View -->
+            <section class="card dash-card">
+              <div class="dash-card-head">
+                <h2>Mock Test Stats</h2>
+                <span class="muted" style="font-size:.78rem">All-India Benchmarks</span>
+              </div>
+              <div class="score-kpi-grid" style="grid-template-columns:repeat(2, 1fr);gap:14px;flex:1">
+                <div class="score-kpi" style="padding:16px 12px"><strong>24</strong><span style="font-size:.75rem">Completed Tests</span></div>
+                <div class="score-kpi" style="padding:16px 12px"><strong>92.50%</strong><span style="font-size:.75rem">Personal Best</span></div>
+                <div class="score-kpi" style="padding:16px 12px"><strong>AIR #142</strong><span style="font-size:.75rem">Current Ranking</span></div>
+                <div class="score-kpi" style="padding:16px 12px"><strong>72.45%</strong><span style="font-size:.75rem">Average Score</span></div>
+              </div>
+              <button class="btn btn-outline btn-sm" id="viewDetailedReportsFromTests" style="margin-top:16px;width:100%"><svg class="icon"><use href="#chart"></use></svg> View Detailed Performance Analytics</button>
+            </section>
+          </div>
+
+          <!-- All Available Test Series Cards -->
+          <section class="card dash-card" style="margin-bottom: 24px;">
+            <div class="dash-card-head">
+              <h2>All Available Test Series (18 Available)</h2>
+              <span class="muted" style="font-size:.78rem">Filtered by All-India CBT Standard</span>
+            </div>
+            <div class="test-catalog-grid">
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#e0ecff;color:var(--blue-700)">Banking</span>
+                  <span style="color:var(--green);font-weight:750;font-size:.75rem">Free Tier</span>
+                </div>
+                <h3>SBI PO Prelims All-India Mock 2026</h3>
+                <p>Full 100-mark CBT simulation with latest pattern puzzles and DI caselets.</p>
+                <div class="test-catalog-meta"><span>100 Qs</span><span>60 Mins</span><span>Hindi &amp; English</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="SBI PO Prelims All-India Mock 2026" style="margin-top:auto">Start Mock Test</button>
+              </div>
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#fef3c7;color:#92400e">SSC</span>
+                  <span style="color:var(--green);font-weight:750;font-size:.75rem">Free Tier</span>
+                </div>
+                <h3>SSC CGL Tier-1 Full Mock 2026</h3>
+                <p>Comprehensive CBT mock with Reasoning, GA, Quant &amp; English Comprehension.</p>
+                <div class="test-catalog-meta"><span>100 Qs</span><span>60 Mins</span><span>Bilingual</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="SSC CGL Tier-1 Full Mock 2026" style="margin-top:auto">Start Mock Test</button>
+              </div>
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#dcfce7;color:#166534">Railways</span>
+                  <span style="color:var(--blue-700);font-weight:750;font-size:.75rem">Pro Mock</span>
+                </div>
+                <h3>RRB NTPC CBT-1 Mega Challenge</h3>
+                <p>General Awareness, Mathematics, and General Intelligence with negative marking.</p>
+                <div class="test-catalog-meta"><span>100 Qs</span><span>90 Mins</span><span>Bilingual</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="RRB NTPC CBT-1 Mega Challenge" style="margin-top:auto">Start Mock Test</button>
+              </div>
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#f3e8ff;color:#6b21a8">Sectional Drill</span>
+                  <span style="color:var(--green);font-weight:750;font-size:.75rem">Free Tier</span>
+                </div>
+                <h3>Quantitative Aptitude Speed Drill</h3>
+                <p>High-speed arithmetic, approximation, number series, and data interpretation.</p>
+                <div class="test-catalog-meta"><span>35 Qs</span><span>20 Mins</span><span>Target 30+</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="Quantitative Aptitude Speed Drill" style="margin-top:auto">Start Mock Test</button>
+              </div>
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#f3e8ff;color:#6b21a8">Sectional Drill</span>
+                  <span style="color:var(--green);font-weight:750;font-size:.75rem">Free Tier</span>
+                </div>
+                <h3>Reasoning Ability Puzzles &amp; Seating</h3>
+                <p>Floor puzzles, parallel rows, circular arrangement, and syllogism drills.</p>
+                <div class="test-catalog-meta"><span>35 Qs</span><span>20 Mins</span><span>Advanced</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="Reasoning Puzzles Mini Mock" style="margin-top:auto">Start Mock Test</button>
+              </div>
+              <div class="test-catalog-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span class="badge" style="background:#fee2e2;color:#991b1b">Defence</span>
+                  <span style="color:var(--blue-700);font-weight:750;font-size:.75rem">Pro Mock</span>
+                </div>
+                <h3>CDS / NDA Mathematics &amp; GAT Mock</h3>
+                <p>Comprehensive standard test for defence exam aspirants with complete solutions.</p>
+                <div class="test-catalog-meta"><span>120 Qs</span><span>120 Mins</span><span>UPSC Pattern</span></div>
+                <button class="btn btn-primary btn-sm" data-start-test="CDS / NDA Mathematics Mock" style="margin-top:auto">Start Mock Test</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Full Recent Tests History Table in Tests View -->
+          <section class="card dash-card">
+            <div class="dash-card-head">
+              <h2>Recent Tests History &amp; Scorecards</h2>
+              <span class="muted" style="font-size:.78rem">All 8 Recorded Mock Tests</span>
+            </div>
+            <div class="recent-list" style="display:flex;flex-direction:column;gap:4px">
+              <div class="recent-row">
+                <span class="mini-icon"><svg class="icon"><use href="#file"></use></svg></span>
+                <span><b>Full Length Mock - 24</b><small>18 May · Score: 78.50/100 · AIR 142</small></span>
+                <button class="review-test-btn" data-review-test="Full Length Mock - 24">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                <span><b>Quantitative Speed Drill</b><small>17 May · Score: 68.00/100 · AIR 318</small></span>
+                <button class="review-test-btn" data-review-test="Quantitative Speed Drill">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#book"></use></svg></span>
+                <span><b>English Grammar Sectional</b><small>16 May · Score: 72.00/100 · AIR 204</small></span>
+                <button class="review-test-btn" data-review-test="English Grammar Sectional">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#f07b00"><svg class="icon"><use href="#help"></use></svg></span>
+                <span><b>Reasoning Puzzles Mini Mock</b><small>15 May · Score: 64.00/100 · AIR 412</small></span>
+                <button class="review-test-btn" data-review-test="Reasoning Mini Mock">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#0b5de7"><svg class="icon"><use href="#file"></use></svg></span>
+                <span><b>Full Length Mock - 23</b><small>12 May · Score: 76.00/100 · AIR 189</small></span>
+                <button class="review-test-btn" data-review-test="Full Length Mock - 23">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                <span><b>General Awareness &amp; Static GK</b><small>10 May · Score: 82.50/100 · AIR 98</small></span>
+                <button class="review-test-btn" data-review-test="GA Static GK Drill">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#book"></use></svg></span>
+                <span><b>Banking Awareness Specialist Test</b><small>08 May · Score: 70.00/100 · AIR 255</small></span>
+                <button class="review-test-btn" data-review-test="Banking Awareness Test">Review Scorecard</button>
+              </div>
+              <div class="recent-row">
+                <span class="mini-icon" style="--tone:#ef2b36"><svg class="icon"><use href="#file"></use></svg></span>
+                <span><b>Data Interpretation Challenge</b><small>05 May · Score: 59.00/100 · AIR 520</small></span>
+                <button class="review-test-btn" data-review-test="DI Challenge">Review Scorecard</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= VIEW 3: PERFORMANCE ANALYTICS ================= -->
+        <div class="dash-view" id="view-analytics" style="display:none">
+          <div class="dash-view-header">
+            <div>
+              <h1>Performance Analytics &amp; Diagnostic Insights</h1>
+              <p>Comprehensive AI-powered performance diagnostics, topic accuracy rates, and weak area mitigation.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" data-dash-toggle aria-label="Open student navigation menu" aria-expanded="false"><svg class="icon"><use href="#menu"></use></svg>Portal Menu</button>
+              <button class="btn btn-primary btn-sm" id="viewDetailedReportsBtn2"><svg class="icon"><use href="#chart"></use></svg> Open Diagnostic Audit</button>
+            </div>
+          </div>
+
+          <!-- Top Analytics Stats -->
+          <section class="summary-grid" style="margin-bottom: 20px;">
+            <article class="card summary-card" style="--tone:#0b5de7">
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Total Questions Attempted</span>
+                  <strong class="summary-value">376</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#clipboard"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>Correct</span><b>256</b></div>
+                <div><span>Accuracy</span><b>72.4%</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#16a34a">
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">National Percentile</span>
+                  <strong class="summary-value">95.20%</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#chart"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>Current Rank</span><b>#142</b></div>
+                <div><span>Out of</span><b>28,400</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#6d36d9">
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Strongest Section</span>
+                  <strong class="summary-value" style="font-size:1.45rem">Reasoning</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#award"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>Accuracy</span><b>84.20%</b></div>
+                <div><span>Avg Speed</span><b>38s/Q</b></div>
+              </div>
+            </article>
+            <article class="card summary-card" style="--tone:#ef2b36">
+              <div class="summary-card-top">
+                <div class="summary-card-info">
+                  <span class="summary-label">Negative Marks Incurred</span>
+                  <strong class="summary-value">-14.50</strong>
+                </div>
+                <span class="summary-icon"><svg class="icon"><use href="#clock"></use></svg></span>
+              </div>
+              <div class="summary-foot">
+                <div><span>Wrong Guesses</span><b>38</b></div>
+                <div><span>Lost Rank</span><b>~45</b></div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Analytics Row 1: Score Summary Donut + Weak Areas -->
+          <div class="dashboard-grid dashboard-grid-2col" style="margin-bottom: 24px;">
+            
+            <!-- Score Summary & Donut -->
+            <section class="card dash-card">
+              <div class="dash-card-head">
+                <h2>Score Summary &amp; Attempt Split</h2>
+                <span class="muted" style="font-size:.78rem;font-weight:700">May 2025</span>
+              </div>
+              <div class="score-content">
+                <div style="display:flex;align-items:center;justify-content:space-around;gap:16px;flex-wrap:wrap">
+                  <div class="donut" aria-label="68.1 percent correct, 26.1 percent incorrect, 5.8 percent unattempted"></div>
+                  <div class="legend" style="display:grid;gap:10px;min-width:175px">
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#16a34a"></span><span>Correct Answers</span><b>256 (68.1%)</b></div>
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#ef2b36"></span><span>Incorrect Answers</span><b>98 (26.1%)</b></div>
+                    <div class="legend-row"><span class="legend-dot" style="--tone:#b8bdc8"></span><span>Unattempted</span><b>22 (5.8%)</b></div>
+                  </div>
+                </div>
+                <div class="score-kpi-grid">
+                  <div class="score-kpi"><strong>376</strong><span>Questions</span></div>
+                  <div class="score-kpi"><strong>72.4%</strong><span>Accuracy</span></div>
+                  <div class="score-kpi"><strong>42s</strong><span>Avg / Q</span></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Identified Weak Areas Section -->
+            <section class="card dash-card" id="weak-areas">
+              <div class="dash-card-head">
+                <h2>Identified Weak Areas</h2>
+                <span class="muted" style="font-size:.75rem">AI Diagnostic</span>
+              </div>
+              <div class="weak-list">
+                <div class="weak-item" data-tip="Geometry: Practice circle chord theorems and similarity ratios twice weekly.">
+                  <span><strong>Geometry</strong> · Area, Circles &amp; Polygons</span>
+                  <span class="badge-low">52% Accuracy</span>
+                </div>
+                <div class="weak-item" data-tip="Modern Math: Permutation, Combination and Probability standard forms.">
+                  <span><strong>Modern Math</strong> · P&amp;C and Probability</span>
+                  <span class="badge-low">48% Accuracy</span>
+                </div>
+                <div class="weak-item" data-tip="Data Interpretation: Master caselet comprehension and percentage calculation shortcuts.">
+                  <span><strong>Data Interpretation</strong> · Missing Tables</span>
+                  <span class="badge-low">54% Accuracy</span>
+                </div>
+                <div class="weak-item" data-tip="Reading Comprehension: Focus on author tone and inferential questions.">
+                  <span><strong>Reading Comprehension</strong> · Tone Identification</span>
+                  <span class="badge-low">58% Accuracy</span>
+                </div>
+              </div>
+              <button class="card-link" id="practiceWeakAreasBtn" style="justify-content:center;display:flex;width:100%;border:none;background:none;cursor:pointer;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)">
+                Practice Recommended Weak Area Drills <svg class="icon"><use href="#arrow"></use></svg>
+              </button>
+            </section>
+
+          </div>
+
+          <!-- Full Topic Performance Analysis Table -->
+          <section class="card dash-card" id="topic-performance">
+            <div class="dash-card-head">
+              <h2>Topic Performance Analysis</h2>
+              <span class="muted" style="font-size:.75rem">Accuracy &amp; Mastery Rate</span>
+            </div>
+            <div style="overflow-x:auto">
+              <table class="performance-table">
+                <thead>
+                  <tr><th>Topic</th><th>Tests</th><th>Avg. Score</th><th>Accuracy</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Arithmetic</strong></td>
+                    <td>6</td>
+                    <td>78.45%</td>
+                    <td><div class="progress"><span style="--w:78%;--tone:#16a34a"></span></div></td>
+                    <td><button class="btn btn-ghost btn-sm" data-start-test="Arithmetic Drill" style="padding:2px 8px;font-size:.72rem">Drill</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Algebra</strong></td>
+                    <td>5</td>
+                    <td>65.20%</td>
+                    <td><div class="progress"><span style="--w:65%;--tone:#f07b00"></span></div></td>
+                    <td><button class="btn btn-ghost btn-sm" data-start-test="Algebra Drill" style="padding:2px 8px;font-size:.72rem">Drill</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Geometry</strong></td>
+                    <td>4</td>
+                    <td>52.10%</td>
+                    <td><div class="progress"><span style="--w:52%;--tone:#ef2b36"></span></div></td>
+                    <td><button class="btn btn-ghost btn-sm" data-start-test="Geometry Drill" style="padding:2px 8px;font-size:.72rem">Drill</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Number System</strong></td>
+                    <td>4</td>
+                    <td>81.30%</td>
+                    <td><div class="progress"><span style="--w:81%;--tone:#16a34a"></span></div></td>
+                    <td><button class="btn btn-ghost btn-sm" data-start-test="Number System Drill" style="padding:2px 8px;font-size:.72rem">Drill</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Modern Math</strong></td>
+                    <td>3</td>
+                    <td>47.60%</td>
+                    <td><div class="progress"><span style="--w:48%;--tone:#ef2b36"></span></div></td>
+                    <td><button class="btn btn-ghost btn-sm" data-start-test="Modern Math Drill" style="padding:2px 8px;font-size:.72rem">Drill</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= VIEW 4: STUDY LIBRARY ================= -->
+        <div class="dash-view" id="view-library" style="display:none">
+          <div class="dash-view-header">
+            <div>
+              <h1>Study Library &amp; Revision Vault</h1>
+              <p>Download subject revision handbooks, solved previous year question papers, and save personal notes.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" data-dash-toggle aria-label="Open student navigation menu" aria-expanded="false"><svg class="icon"><use href="#menu"></use></svg>Portal Menu</button>
+              <button class="btn btn-outline btn-sm" id="addNoteBtn2">+ Add Quick Note</button>
+            </div>
+          </div>
+
+          <!-- Study Materials Downloads -->
+          <section class="card dash-card" id="materials" style="margin-bottom: 24px;">
+            <div class="dash-card-head">
+              <h2>Study Materials &amp; Previous Year Papers</h2>
+              <span class="muted" style="font-size:.78rem">Instant High-Speed Downloads</span>
+            </div>
+            <div class="materials-grid">
+              <button class="material" data-download="Quantitative Aptitude">
+                <span class="mini-icon" style="--tone:#ef2b36"><svg class="icon"><use href="#file"></use></svg></span>
+                <b>Quantitative Aptitude</b>
+                <small>12 revision modules</small>
+                <span class="material-download-btn"><svg class="icon" style="width:15px;height:15px"><use href="#download"></use></svg> Download PDF</span>
+              </button>
+              <button class="material" data-download="Reasoning Ability">
+                <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                <b>Reasoning Ability</b>
+                <small>8 puzzle blueprints</small>
+                <span class="material-download-btn"><svg class="icon" style="width:15px;height:15px"><use href="#download"></use></svg> Download PDF</span>
+              </button>
+              <button class="material" data-download="English Language">
+                <span class="mini-icon"><svg class="icon"><use href="#book"></use></svg></span>
+                <b>English Language</b>
+                <small>10 golden rule sets</small>
+                <span class="material-download-btn"><svg class="icon" style="width:15px;height:15px"><use href="#download"></use></svg> Download PDF</span>
+              </button>
+              <button class="material" data-download="General Awareness">
+                <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#target"></use></svg></span>
+                <b>General Awareness</b>
+                <small>15 static GK modules</small>
+                <span class="material-download-btn"><svg class="icon" style="width:15px;height:15px"><use href="#download"></use></svg> Download PDF</span>
+              </button>
+              <button class="material" data-download="Previous Year Papers">
+                <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#file"></use></svg></span>
+                <b>Previous Year Papers</b>
+                <small>24 solved papers (2019-25)</small>
+                <span class="material-download-btn"><svg class="icon" style="width:15px;height:15px"><use href="#download"></use></svg> Download PDF</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- Bookmarks & Personal Notes -->
+          <section class="card dash-card" id="bookmarks-section">
+            <div class="dash-card-head">
+              <h2>Saved Bookmarks &amp; Revision Formulas</h2>
+              <button class="btn btn-outline btn-sm" id="addNoteBtn">+ Add Quick Note</button>
+            </div>
+            <div id="bookmarksList">
+              <div class="bookmark-card">
+                <div>
+                  <b>Compound vs Simple Interest Difference Theorem</b>
+                  <small>For 2 years: Diff = P × (R/100)² · For 3 years: Diff = P × (R/100)² × [(300+R)/100]</small>
+                </div>
+                <div style="display:flex;gap:8px">
+                  <button class="btn btn-ghost btn-sm" data-copy-note="Compound Interest 2-Year &amp; 3-Year Diff Formula">Copy</button>
+                  <button class="btn btn-outline btn-sm" data-remove-bookmark>Remove</button>
+                </div>
+              </div>
+              <div class="bookmark-card">
+                <div>
+                  <b>Syllogism: 'Only a few A are B' Rule</b>
+                  <small>Means: Some A are B AND Some A are not B. All A can NEVER be B.</small>
+                </div>
+                <div style="display:flex;gap:8px">
+                  <button class="btn btn-ghost btn-sm" data-copy-note="Only a few A are B: Some A are B AND Some A are not B">Copy</button>
+                  <button class="btn btn-outline btn-sm" data-remove-bookmark>Remove</button>
+                </div>
+              </div>
+              <div class="bookmark-card">
+                <div>
+                  <b>Speed Conversion Shortcut</b>
+                  <small>1 km/h = 5/18 m/s · 1 m/s = 18/5 km/h. Useful for train and platform length calculations.</small>
+                </div>
+                <div style="display:flex;gap:8px">
+                  <button class="btn btn-ghost btn-sm" data-copy-note="1 km/h = 5/18 m/s; 1 m/s = 18/5 km/h">Copy</button>
+                  <button class="btn btn-outline btn-sm" data-remove-bookmark>Remove</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= VIEW 5: LIVE & SCHEDULE ================= -->
+        <div class="dash-view" id="view-schedule" style="display:none">
+          <div class="dash-view-header">
+            <div>
+              <h1>Live Classroom &amp; Examination Timetable</h1>
+              <p>Join interactive live lectures, doubt-solving sessions, and track competitive exam dates.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" data-dash-toggle aria-label="Open student navigation menu" aria-expanded="false"><svg class="icon"><use href="#menu"></use></svg>Portal Menu</button>
+              <button class="btn btn-primary btn-sm" id="viewCalendarBtn"><svg class="icon"><use href="#calendar"></use></svg> Full Interactive Calendar</button>
+            </div>
+          </div>
+
+          <!-- Upcoming Classes & Schedule -->
+          <section class="card dash-card" id="upcoming" style="margin-bottom: 24px;">
+            <div class="dash-card-head">
+              <h2>Today's Live Classes &amp; Scheduled Mocks</h2>
+              <span class="muted" style="font-size:.78rem">Live Interactive Stream</span>
+            </div>
+            <div class="schedule-list">
+              <div class="schedule-row">
+                <span class="mini-icon"><svg class="icon"><use href="#video"></use></svg></span>
+                <span><b>Live Class — Arithmetic Speed Drills</b><small>Rahul Sir · Today · 7:00 PM IST</small></span>
+                <button class="btn btn-primary btn-sm" data-join-live="Arithmetic Speed Drills" data-educator="Rahul Sir">Join Live</button>
+              </div>
+              <div class="schedule-row">
+                <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                <span><b>Full Length All-India Mock - 25</b><small>20 May · 10:00 AM · 100 Marks</small></span>
+                <button class="btn btn-outline btn-sm" data-start-test="Full Length All-India Mock - 25">Start Test</button>
+              </div>
+              <div class="schedule-row">
+                <span class="mini-icon"><svg class="icon"><use href="#video"></use></svg></span>
+                <span><b>Live Class — High-Level Reasoning Puzzles</b><small>Neha Ma’am · 21 May · 8:30 PM</small></span>
+                <button class="btn btn-primary btn-sm" data-join-live="High-Level Reasoning Puzzles" data-educator="Neha Ma’am">Join Live</button>
+              </div>
+              <div class="schedule-row">
+                <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#clipboard"></use></svg></span>
+                <span><b>Full Length All-India Mock - 26</b><small>25 May · 10:00 AM · All Streams</small></span>
+                <button class="btn btn-outline btn-sm" data-start-test="Full Length All-India Mock - 26">Start Test</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- National Exam Target Timetable -->
+          <section class="card dash-card">
+            <div class="dash-card-head">
+              <h2>Target Competitive Examinations 2026</h2>
+              <span class="muted" style="font-size:.78rem">Official Government Notifications</span>
+            </div>
+            <div class="schedule-list">
+              <div class="schedule-row">
+                <span class="mini-icon" style="--tone:#0b5de7"><svg class="icon"><use href="#calendar"></use></svg></span>
+                <span><b>SBI PO Prelims Examination 2026</b><small>Exam Date: 15 October 2026 · Admit Card: 01 October 2026</small></span>
+                <span class="badge" style="background:#e0ecff;color:var(--blue-700);padding:6px 12px;border-radius:6px;font-weight:700">Target Exam</span>
+              </div>
+              <div class="schedule-row">
+                <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#calendar"></use></svg></span>
+                <span><b>SSC CGL Tier-1 Examination 2026</b><small>Exam Date: 28 October 2026 · Notification Active</small></span>
+                <span class="badge" style="background:#dcfce7;color:#166534;padding:6px 12px;border-radius:6px;font-weight:700">Enrolled</span>
+              </div>
+              <div class="schedule-row">
+                <span class="mini-icon" style="--tone:#f07b00"><svg class="icon"><use href="#calendar"></use></svg></span>
+                <span><b>RRB NTPC Stage-1 CBT 2026</b><small>Exam Date: 12 November 2026 · 75 Days Preparation Window</small></span>
+                <span class="badge" style="background:#fef3c7;color:#92400e;padding:6px 12px;border-radius:6px;font-weight:700">Application Open</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Dashboard App Footer -->
+        <footer class="dashboard-footer">
+          <div class="dash-footer-inner">
+            <span>© 2026 ExamSuccess EduTech · Student Learning Portal. All rights reserved.</span>
+            <div class="dash-footer-links">
+              <a href="../pages/contact.html">Help Center</a>
+              <a href="../pages/privacy.html">Privacy Policy</a>
+              <a href="../pages/terms.html">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Test Instructions / Confirmation Modal -->
+  <div class="modal" id="testModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="test-title">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h2 id="test-title" data-test-title>Start Test</h2>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p>You are about to launch a timed CBT test simulator. Progress is tracked and evaluated in real time.</p>
+      <ul>
+        <li>Questions: 25 objective multiple-choice items</li>
+        <li>Duration: 30 minutes with live countdown timer</li>
+        <li>Marking Scheme: +1.0 for correct, -0.25 negative marking for incorrect</li>
+        <li>Instant diagnostic score report generated upon submission</li>
+      </ul>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="confirmTest">Start Test Now</button>
+        <button class="btn btn-outline" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Detailed Diagnostic Reports Modal -->
+  <div class="modal" id="reportsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="reports-title">
+    <div class="modal-panel modal-panel-lg">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="trust-icon" style="width:36px;height:36px;flex-shrink:0"><svg class="icon"><use href="#chart"></use></svg></span>
+          <h2 id="reports-title" style="margin:0;font-size:1.2rem">Detailed Diagnostic Performance Audit</h2>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted)">In-depth statistical audit of your mock tests across 4 core subjects.</p>
+      
+      <div class="modal-grid-2" style="margin:16px 0">
+        <div class="modal-stat-box">
+          <strong>95.2 Percentile</strong>
+          <span>All-India Rank: #142 of 28,400</span>
+        </div>
+        <div class="modal-stat-box">
+          <strong>-14.5 Marks</strong>
+          <span>Lost to Negative Marking (38 incorrect guesses)</span>
+        </div>
+        <div class="modal-stat-box">
+          <strong>46 sec / Q</strong>
+          <span>Average Question Answering Speed (Target: 45s)</span>
+        </div>
+        <div class="modal-stat-box">
+          <strong>84.2%</strong>
+          <span>High-Yield Subject Accuracy (Reasoning Puzzles)</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:1rem;margin:16px 0 8px">Subject-wise Accuracy &amp; Time Efficiency</h3>
+      <div style="overflow-x:auto">
+        <table class="performance-table">
+          <thead><tr><th>Subject</th><th>Accuracy</th><th>Time Spent</th><th>Benchmark</th></tr></thead>
+          <tbody>
+            <tr><td>Quantitative Aptitude</td><td><span style="color:#16a34a;font-weight:700">78.5%</span></td><td>34 mins</td><td>Good (Top 8%)</td></tr>
+            <tr><td>Reasoning Ability</td><td><span style="color:#16a34a;font-weight:700">84.2%</span></td><td>28 mins</td><td>Excellent (Top 4%)</td></tr>
+            <tr><td>English Language</td><td><span style="color:#f59e0b;font-weight:700">65.0%</span></td><td>18 mins</td><td>Moderate (Needs Vocab Drill)</td></tr>
+            <tr><td>General Awareness</td><td><span style="color:#ef4444;font-weight:700">54.2%</span></td><td>12 mins</td><td>Action Required (Review PYQs)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hero-actions" style="margin-top:20px">
+        <button class="btn btn-primary" data-start-test="Remedial Diagnostic Drill">Take Remedial Diagnostic Mock</button>
+        <button class="btn btn-outline" data-modal-close>Close Report</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Test Series Catalog Modal -->
+  <div class="modal" id="allTestsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="all-tests-title">
+    <div class="modal-panel modal-panel-lg">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="trust-icon" style="width:36px;height:36px;flex-shrink:0"><svg class="icon"><use href="#clipboard"></use></svg></span>
+          <h2 id="all-tests-title" style="margin:0;font-size:1.2rem">All-India Test Series &amp; Sectional Mocks</h2>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted)">Choose any timed test below to begin practicing immediately.</p>
+      
+      <div class="schedule-list" style="margin:16px 0">
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#0b5de7"><svg class="icon"><use href="#clipboard"></use></svg></span>
+          <span><b>SBI PO Prelims All-India Live Mock - 25</b><small>100 Questions · 60 Mins · Latest 2026 Pattern</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="SBI PO All-India Live Mock - 25">Start Now</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#file"></use></svg></span>
+          <span><b>SSC CGL Tier-1 Full Length Simulation - 18</b><small>100 Questions · 60 Mins · Real CBT UI</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="SSC CGL Tier-1 Mock - 18">Start Now</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#ef4444"><svg class="icon"><use href="#target"></use></svg></span>
+          <span><b>Quantitative Aptitude Speed &amp; Accuracy Drill</b><small>25 Questions · 20 Mins · High Yield Formulas</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="Quantitative Speed Drill">Start Now</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#book"></use></svg></span>
+          <span><b>Reasoning Puzzles &amp; Seating Arrangement Lab</b><small>25 Questions · 25 Mins · Moderate to Difficult</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="Reasoning Puzzles Lab">Start Now</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#f59e0b"><svg class="icon"><use href="#train"></use></svg></span>
+          <span><b>RRB NTPC CBT-1 Stage 1 Practice Test</b><small>100 Questions · 90 Mins · General Science &amp; Math</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="RRB NTPC CBT-1 Practice">Start Now</button>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-outline" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weekly Timetable / Exam Calendar Modal -->
+  <div class="modal" id="calendarModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="calendar-title">
+    <div class="modal-panel modal-panel-lg">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="trust-icon" style="width:36px;height:36px;flex-shrink:0"><svg class="icon"><use href="#calendar"></use></svg></span>
+          <h2 id="calendar-title" style="margin:0;font-size:1.2rem">7-Day Live Classes &amp; Mock Exam Schedule</h2>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted)">Interactive timetable for live streaming batches, mentor doubt sessions, and all-India test dates.</p>
+
+      <div style="overflow-x:auto;margin:16px 0">
+        <table class="performance-table">
+          <thead><tr><th>Day &amp; Time</th><th>Session / Subject</th><th>Educator</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Monday 7:00 PM</strong></td><td>Arithmetic Speed Drills</td><td>Rahul Sir</td><td><button class="btn btn-primary btn-sm" data-join-live="Arithmetic Speed Drills" data-educator="Rahul Sir">Join Live</button></td></tr>
+            <tr><td><strong>Tuesday 10:00 AM</strong></td><td>Full Length All-India Mock 25</td><td>CBT Portal</td><td><button class="btn btn-outline btn-sm" data-start-test="Full Length Mock 25">Take Test</button></td></tr>
+            <tr><td><strong>Wednesday 8:30 PM</strong></td><td>Reasoning High-Level Puzzles</td><td>Neha Ma’am</td><td><button class="btn btn-primary btn-sm" data-join-live="Reasoning Puzzles" data-educator="Neha Ma’am">Join Live</button></td></tr>
+            <tr><td><strong>Thursday 6:30 PM</strong></td><td>English Grammar 100 Golden Rules</td><td>DU Alumna</td><td><button class="btn btn-primary btn-sm" data-join-live="English Grammar Rules" data-educator="DU Alumna">Join Live</button></td></tr>
+            <tr><td><strong>Friday 7:00 PM</strong></td><td>Monthly Current Affairs Capsule</td><td>Vivek Pandey</td><td><button class="btn btn-primary btn-sm" data-join-live="Current Affairs Capsule" data-educator="Vivek Pandey">Join Live</button></td></tr>
+            <tr><td><strong>Saturday 11:00 AM</strong></td><td>Exam Strategy &amp; Speed Technique Session</td><td>Senior Faculty Panel</td><td><button class="btn btn-primary btn-sm" data-join-live="Exam Strategy Workshop" data-educator="Senior Faculty">Join Live</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-outline" data-modal-close>Close Schedule</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enrolled Batches Modal -->
+  <div class="modal" id="enrolledModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="enrolled-title">
+    <div class="modal-panel modal-panel-lg">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="trust-icon" style="width:36px;height:36px;flex-shrink:0"><svg class="icon"><use href="#book"></use></svg></span>
+          <h2 id="enrolled-title" style="margin:0;font-size:1.2rem">My Enrolled Exam Batches &amp; Tracks</h2>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted)">Active courses and study tracks associated with your account.</p>
+
+      <div class="schedule-list" style="margin:16px 0">
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#bank"></use></svg></span>
+          <span><b>SBI PO &amp; Clerk 2026 Achiever Batch</b><small>74% Syllabus Completed · Next Live: Today 7:00 PM</small></span>
+          <button class="btn btn-primary btn-sm" data-join-live="SBI PO Achievers Live" data-educator="Rahul Sir">Resume Study</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#users"></use></svg></span>
+          <span><b>SSC CGL Super 30 Foundation Track</b><small>62% Syllabus Completed · 18 Mocks Remaining</small></span>
+          <button class="btn btn-primary btn-sm" data-start-test="SSC CGL Foundation Mock">Practice Mocks</button>
+        </div>
+        <div class="schedule-row">
+          <span class="mini-icon" style="--tone:#ef4444"><svg class="icon"><use href="#train"></use></svg></span>
+          <span><b>Railways RRB NTPC Stage 1 &amp; 2 Booster</b><small>88% Syllabus Completed · All PYQs Solved</small></span>
+          <button class="btn btn-outline btn-sm" data-download="Previous Year Papers">Download PYQs</button>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-outline" data-modal-close>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Study Materials Library Modal -->
+  <div class="modal" id="allMaterialsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="all-materials-title">
+    <div class="modal-panel modal-panel-lg">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="trust-icon" style="width:36px;height:36px;flex-shrink:0"><svg class="icon"><use href="#download"></use></svg></span>
+          <h2 id="all-materials-title" style="margin:0;font-size:1.2rem">Complete Study Repository &amp; PDF Library</h2>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted)">Download authentic handwritten notes, formula cheat sheets, and solved question sets.</p>
+
+      <div class="materials-grid" style="margin:16px 0">
+        <button class="material" data-download="Quantitative Aptitude">
+          <span class="mini-icon" style="--tone:#ef2b36"><svg class="icon"><use href="#file"></use></svg></span>
+          <span><b>Quantitative Aptitude</b><small>Complete Formula Capsule (TXT)</small></span>
+          <svg class="icon" style="margin-left:auto;color:var(--blue-700)"><use href="#download"></use></svg>
+        </button>
+        <button class="material" data-download="Reasoning Ability">
+          <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#clipboard"></use></svg></span>
+          <span><b>Reasoning Ability</b><small>Syllogism &amp; Puzzles (TXT)</small></span>
+          <svg class="icon" style="margin-left:auto;color:var(--blue-700)"><use href="#download"></use></svg>
+        </button>
+        <button class="material" data-download="English Language">
+          <span class="mini-icon"><svg class="icon"><use href="#book"></use></svg></span>
+          <span><b>English Language</b><small>100 Grammar Rules (TXT)</small></span>
+          <svg class="icon" style="margin-left:auto;color:var(--blue-700)"><use href="#download"></use></svg>
+        </button>
+        <button class="material" data-download="General Awareness">
+          <span class="mini-icon" style="--tone:#6d36d9"><svg class="icon"><use href="#target"></use></svg></span>
+          <span><b>General Awareness</b><small>Static GK &amp; Economy (TXT)</small></span>
+          <svg class="icon" style="margin-left:auto;color:var(--blue-700)"><use href="#download"></use></svg>
+        </button>
+        <button class="material" data-download="Previous Year Papers">
+          <span class="mini-icon" style="--tone:#16a34a"><svg class="icon"><use href="#file"></use></svg></span>
+          <span><b>Previous Year Papers</b><small>2019-2025 Solved (TXT)</small></span>
+          <svg class="icon" style="margin-left:auto;color:var(--blue-700)"><use href="#download"></use></svg>
+        </button>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-outline" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Personal Quick Note Modal -->
+  <div class="modal" id="noteModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="note-title">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <h2 id="note-title" style="margin:0 0 4px">Add Personal Quick Note</h2>
+          <p class="dash-card-subtitle" style="margin:0">Save formulas, shortcuts, and key exam concepts to your revision vault</p>
+        </div>
+        <button class="modal-close-corner" data-modal-close aria-label="Close" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+      </div>
+      <form id="addNoteForm" style="display:flex;flex-direction:column;gap:14px;margin:16px 0">
+        <div>
+          <label for="noteSubject" style="display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--ink)">Subject / Category</label>
+          <select id="noteSubject" class="form-control" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:.85rem;background:var(--surface);color:var(--ink)">
+            <option value="Quantitative Aptitude">Quantitative Aptitude (Maths)</option>
+            <option value="Reasoning Ability">Reasoning Ability &amp; Puzzles</option>
+            <option value="English Language">English Language &amp; Grammar</option>
+            <option value="General Awareness">General Awareness &amp; Current Affairs</option>
+            <option value="Banking &amp; Financial Awareness">Banking &amp; Financial Awareness</option>
+            <option value="Exam Strategy">General Exam Strategy</option>
+          </select>
+        </div>
+        <div>
+          <label for="noteTextInput" style="display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--ink)">Note, Formula or Shortcut</label>
+          <textarea id="noteTextInput" rows="4" required placeholder="e.g. CI - SI difference for 2 years = P × (R/100)²" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:.85rem;font-family:inherit;resize:vertical;background:var(--surface);color:var(--ink)"></textarea>
+        </div>
+        <div class="modal-actions" style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
+          <button type="button" class="btn btn-outline" data-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary"><svg class="icon"><use href="#clipboard"></use></svg> Save Note</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

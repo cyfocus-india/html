@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Elevate Learning HR manager training dashboard.">
+    <title>Dashboard | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="dashboard-body">
+    <a class="skip-link" href="#dashboard-main">Skip to dashboard</a>
+    <div class="dashboard-shell">
+      <aside class="dash-sidebar" data-sidebar aria-label="Dashboard navigation">
+        <a class="brand" href="../index.html" aria-label="Return to website home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b><small>HR Manager Portal</small></span
+          >
+        </a>
+        <nav class="sidebar-nav" aria-label="Dashboard">
+          <a class="active" href="#overview" data-dash-nav="overview">
+            <i data-lucide="layout-dashboard"></i> Overview
+          </a>
+          <a href="#enroll" data-dash-nav="enroll">
+            <i data-lucide="user-plus"></i> Enroll employees
+          </a>
+          <a href="#my-enrollments" data-dash-nav="my-enrollments">
+            <i data-lucide="users"></i> My enrollments
+          </a>
+          <a href="#attendance" data-dash-nav="attendance">
+            <i data-lucide="calendar-check-2"></i> Attendance
+          </a>
+          <a href="#module-progress" data-dash-nav="module-progress">
+            <i data-lucide="chart-no-axes-combined"></i> Module progress
+          </a>
+          <a href="#certificates" data-dash-nav="certificates">
+            <i data-lucide="badge-check"></i> Certificates
+          </a>
+          <a href="#reports" data-dash-nav="reports">
+            <i data-lucide="file-chart-column"></i> Reports
+          </a>
+          <a href="#calendar" data-dash-nav="calendar">
+            <i data-lucide="calendar-days"></i> Calendar
+          </a>
+          <a href="#programs" data-dash-nav="programs">
+            <i data-lucide="blocks"></i> Programs
+          </a>
+          <a href="#settings" data-dash-nav="settings">
+            <i data-lucide="settings-2"></i> Settings
+          </a>
+          <a href="../index.html" class="sidebar-logout-link" data-logout aria-label="Sign out of HR Portal">
+            <i data-lucide="log-out"></i> Logout
+          </a>
+        </nav>
+      </aside>
+      <main class="dash-main" id="dashboard-main">
+        <header class="dash-topbar">
+          <button type="button"
+            class="icon-button sidebar-toggle"
+            data-sidebar-toggle
+            aria-label="Open sidebar"
+          >
+            <i data-lucide="panel-left"></i>
+          </button>
+          <div class="dash-welcome">
+            <h1 data-view-title>Welcome back, Ananya 👋</h1>
+            <p data-view-subtitle>Here’s what’s happening across your training programs.</p>
+          </div>
+          <div class="dash-top-actions">
+            <div class="notify-wrap" data-notify-wrap>
+              <button type="button"
+                class="icon-button notification-btn"
+                aria-label="5 notifications"
+                data-notify-btn
+                aria-expanded="false"
+                aria-haspopup="true"
+                title="View notifications"
+              >
+                <i data-lucide="bell"></i>
+                <span class="notify-badge" data-notify-badge>5</span>
+              </button>
+              <div class="notifications-dropdown glass" data-notify-dropdown role="menu" aria-label="Notifications panel">
+                <div class="notify-head">
+                  <div class="notify-title-row">
+                    <h3>Notifications</h3>
+                    <span class="notify-unread-pill" data-notify-unread-text>5 Unread</span>
+                  </div>
+                  <div class="notify-actions-row">
+                    <button type="button" class="notify-btn-text" data-mark-all-read>Mark all as read</button>
+                    <button type="button" class="notify-btn-text" data-clear-notifications>Clear all</button>
+                  </div>
+                </div>
+                <div class="notify-list" data-notify-items>
+                  <div class="notify-item unread" data-notify-id="1" data-target-view="certificates">
+                    <div class="notify-icon-box success"><i data-lucide="award"></i></div>
+                    <div class="notify-content">
+                      <p><b>Neha Verma</b> completed <i>Leadership Essentials</i> with Distinction (100%).</p>
+                      <time>5m ago</time>
+                    </div>
+                    <button type="button" class="notify-dismiss-btn" data-dismiss-notify aria-label="Dismiss notification"><i data-lucide="x"></i></button>
+                  </div>
+                  <div class="notify-item unread" data-notify-id="2" data-target-view="enroll">
+                    <div class="notify-icon-box info"><i data-lucide="user-plus"></i></div>
+                    <div class="notify-content">
+                      <p><b>Vikram Malhotra</b> requested enrollment in <i>AI & Automation</i> track.</p>
+                      <time>22m ago</time>
+                    </div>
+                    <button type="button" class="notify-dismiss-btn" data-dismiss-notify aria-label="Dismiss notification"><i data-lucide="x"></i></button>
+                  </div>
+                  <div class="notify-item unread" data-notify-id="3" data-target-view="attendance">
+                    <div class="notify-icon-box warning"><i data-lucide="alert-triangle"></i></div>
+                    <div class="notify-content">
+                      <p>Attendance alert: <b>Priya Nair</b> is at <b>50%</b> in <i>Advanced Excel</i>.</p>
+                      <time>1h ago</time>
+                    </div>
+                    <button type="button" class="notify-dismiss-btn" data-dismiss-notify aria-label="Dismiss notification"><i data-lucide="x"></i></button>
+                  </div>
+                  <div class="notify-item unread" data-notify-id="4" data-target-view="calendar">
+                    <div class="notify-icon-box primary"><i data-lucide="calendar"></i></div>
+                    <div class="notify-content">
+                      <p>Upcoming cohort <b>Sep 02 – Sep 13</b> begins tomorrow at 9:00 AM.</p>
+                      <time>3h ago</time>
+                    </div>
+                    <button type="button" class="notify-dismiss-btn" data-dismiss-notify aria-label="Dismiss notification"><i data-lucide="x"></i></button>
+                  </div>
+                  <div class="notify-item unread" data-notify-id="5" data-target-view="certificates">
+                    <div class="notify-icon-box success"><i data-lucide="badge-check"></i></div>
+                    <div class="notify-content">
+                      <p>Official Certificate <b>ELV-730194</b> generated for <b>Karan Singh</b>.</p>
+                      <time>5h ago</time>
+                    </div>
+                    <button type="button" class="notify-dismiss-btn" data-dismiss-notify aria-label="Dismiss notification"><i data-lucide="x"></i></button>
+                  </div>
+                </div>
+                <div class="notify-footer">
+                  <button type="button" class="notify-footer-link" data-switch-to-view="settings">
+                    <i data-lucide="settings-2"></i> Notification Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button type="button"
+              class="icon-button"
+              data-theme-toggle
+              aria-label="Switch theme"
+              title="Toggle theme"
+            >
+              <i data-lucide="moon-star"></i>
+            </button>
+            <button type="button"
+              class="icon-button rtl-toggle-btn"
+              data-rtl-toggle
+              aria-label="Switch to RTL layout"
+              title="Toggle layout direction"
+            >
+              <span class="rtl-text" data-rtl-text>RTL</span>
+            </button>
+            <a href="../index.html" class="button button-sm button-ghost logout-btn" data-logout title="Sign out of HR Portal" aria-label="Sign out">
+              <i data-lucide="log-out"></i><span>Logout</span>
+            </a>
+          </div>
+        </header>
+        <div class="dash-content">
+          <!-- 1. VIEW: OVERVIEW -->
+          <div class="dash-view active" data-dash-view="overview">
+            <section class="filters-row" aria-label="Training filters">
+              <div class="filter-group">
+                <label for="batch-filter">Batch</label>
+                <select id="batch-filter" data-dashboard-filter>
+                  <option value="all">All batches</option>
+                  <option>Sep 02 – Sep 13</option>
+                  <option>Sep 16 – Sep 27</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="date-filter">Date</label>
+                <select id="date-filter" data-dashboard-filter>
+                  <option>This month</option>
+                  <option>This week</option>
+                  <option>Last 30 days</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="dept-filter">Department</label>
+                <select id="dept-filter" data-dashboard-filter>
+                  <option value="all">All departments</option>
+                  <option value="People">People</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Technology">Technology</option>
+                </select>
+              </div>
+              <button type="button" class="button button-sm" data-download-report>
+                <i data-lucide="download"></i> Download report
+              </button>
+            </section>
+            <section class="stat-grid" aria-label="Enrollment summary">
+              <article class="stat-card glass">
+                <span class="stat-icon blue"><i data-lucide="users"></i></span>
+                <div>
+                  <p>Total enrollments</p>
+                  <strong data-enrollment-count>248</strong>
+                  <span class="trend up">↑ 12% from last month</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon green"><i data-lucide="calendar-check"></i></span>
+                <div>
+                  <p>Completed</p>
+                  <strong data-completed-count>112</strong>
+                  <span class="trend up">↑ 18% from last month</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon orange"><i data-lucide="history"></i></span>
+                <div>
+                  <p>In progress</p>
+                  <strong data-inprogress-count>98</strong>
+                  <span class="trend up">↑ 8% from last month</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon red"><i data-lucide="calendar-x"></i></span>
+                <div>
+                  <p>Not started</p>
+                  <strong data-notstarted-count>38</strong>
+                  <span class="trend down">↓ 5% from last month</span>
+                </div>
+              </article>
+            </section>
+            <!-- Overview Main Employee Table Panel (Full Width - One Line Layout) -->
+            <section class="overview-table-section">
+              <article class="dashboard-panel glass" id="enrollments">
+                <div class="panel-head">
+                  <h2>Employee progress overview</h2>
+                  <div class="dashboard-actions">
+                    <input type="search" id="employee-search" class="dashboard-search" placeholder="Search employees..." aria-label="Search employees">
+                    <button type="button" class="button button-sm" data-open-enroll>
+                      <i data-lucide="user-plus"></i><span>Enroll employee</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-scroll">
+                  <table class="employee-table">
+                    <thead>
+                      <tr>
+                        <th>Employee</th>
+                        <th>Program</th>
+                        <th>Department</th>
+                        <th>Attendance</th>
+                        <th>Progress</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody data-employee-rows>
+                      <tr data-department="People" data-status="in-progress">
+                        <td>
+                          <div class="employee-cell">
+                            <span class="employee-avatar">AS</span>
+                            <div><b>Aarav Sharma</b><small>aarav@company.com</small></div>
+                          </div>
+                        </td>
+                        <td>Effective Communication</td>
+                        <td>People</td>
+                        <td>90%</td>
+                        <td>
+                          <div class="progress-line">
+                            <span class="progress-track"><span style="width: 75%"></span></span><b>75%</b>
+                          </div>
+                        </td>
+                        <td><span class="status-pill in-progress">In progress</span></td>
+                        <td>
+                          <button type="button"
+                            class="button button-xs button-ghost"
+                            data-certificate
+                            data-name="Aarav Sharma"
+                            data-program="Effective Communication"
+                          >
+                            <i data-lucide="award"></i> Certificate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr data-department="Technology" data-status="completed">
+                        <td>
+                          <div class="employee-cell">
+                            <span class="employee-avatar">NV</span>
+                            <div><b>Neha Verma</b><small>neha@company.com</small></div>
+                          </div>
+                        </td>
+                        <td>Leadership Essentials</td>
+                        <td>Technology</td>
+                        <td>100%</td>
+                        <td>
+                          <div class="progress-line">
+                            <span class="progress-track"><span style="width: 100%; background: #17a269"></span></span><b>100%</b>
+                          </div>
+                        </td>
+                        <td><span class="status-pill completed">Completed</span></td>
+                        <td>
+                          <button type="button"
+                            class="button button-xs button-ghost"
+                            data-certificate
+                            data-name="Neha Verma"
+                            data-program="Leadership Essentials"
+                          >
+                            <i data-lucide="download"></i> Certificate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr data-department="Sales" data-status="in-progress">
+                        <td>
+                          <div class="employee-cell">
+                            <span class="employee-avatar">RM</span>
+                            <div><b>Rohan Mehta</b><small>rohan@company.com</small></div>
+                          </div>
+                        </td>
+                        <td>Sales Excellence</td>
+                        <td>Sales</td>
+                        <td>80%</td>
+                        <td>
+                          <div class="progress-line">
+                            <span class="progress-track"><span style="width: 60%; background: #ff8730"></span></span><b>60%</b>
+                          </div>
+                        </td>
+                        <td><span class="status-pill in-progress">In progress</span></td>
+                        <td>
+                          <button type="button"
+                            class="button button-xs button-ghost"
+                            data-certificate
+                            data-name="Rohan Mehta"
+                            data-program="Sales Excellence"
+                          >
+                            <i data-lucide="award"></i> Certificate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr data-department="People" data-status="not-started">
+                        <td>
+                          <div class="employee-cell">
+                            <span class="employee-avatar">PN</span>
+                            <div><b>Priya Nair</b><small>priya@company.com</small></div>
+                          </div>
+                        </td>
+                        <td>Advanced Excel</td>
+                        <td>People</td>
+                        <td>50%</td>
+                        <td>
+                          <div class="progress-line">
+                            <span class="progress-track"><span style="width: 30%; background: #e83d51"></span></span><b>30%</b>
+                          </div>
+                        </td>
+                        <td><span class="status-pill not-started">Not started</span></td>
+                        <td>
+                          <button type="button"
+                            class="button button-xs button-ghost"
+                            data-certificate
+                            data-name="Priya Nair"
+                            data-program="Advanced Excel"
+                          >
+                            <i data-lucide="award"></i> Certificate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr data-department="Technology" data-status="completed">
+                        <td>
+                          <div class="employee-cell">
+                            <span class="employee-avatar">KS</span>
+                            <div><b>Karan Singh</b><small>karan@company.com</small></div>
+                          </div>
+                        </td>
+                        <td>Communication Mastery</td>
+                        <td>Technology</td>
+                        <td>100%</td>
+                        <td>
+                          <div class="progress-line">
+                            <span class="progress-track"><span style="width: 100%; background: #17a269"></span></span><b>100%</b>
+                          </div>
+                        </td>
+                        <td><span class="status-pill completed">Completed</span></td>
+                        <td>
+                          <button type="button"
+                            class="button button-xs button-ghost"
+                            data-certificate
+                            data-name="Karan Singh"
+                            data-program="Communication Mastery"
+                          >
+                            <i data-lucide="download"></i> Certificate
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+            </section>
+
+            <!-- Overview Bottom Analytics & Calendar Widgets Grid -->
+            <section class="overview-widgets-grid">
+              <article class="dashboard-panel glass" id="calendar">
+                <div class="panel-head">
+                  <h2>Training calendar</h2>
+                  <button type="button" class="text-button" data-switch-to-view="calendar">View full</button>
+                </div>
+                <div class="panel-body">
+                  <div class="calendar-nav-toolbar" style="margin-bottom:16px; justify-content:space-between;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                      <button type="button" class="calendar-nav-arrow" data-calendar-prev aria-label="Previous month">
+                        <i data-lucide="chevron-left"></i>
+                      </button>
+                      <b data-calendar-label>September 2026</b>
+                      <button type="button" class="calendar-nav-arrow" data-calendar-next aria-label="Next month">
+                        <i data-lucide="chevron-right"></i>
+                      </button>
+                    </div>
+                    <button type="button" class="calendar-today-btn" data-calendar-today title="Jump to current month">Today</button>
+                  </div>
+                  <div class="calendar-grid" data-calendar-grid>
+                    <span class="day-name">Sun</span><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span>
+                    <span class="muted-day">30</span><span class="muted-day">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    <span>6</span><span>7</span><span class="available" data-seat="12 seats available">8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                    <span>13</span><span>14</span><span>15</span><span class="limited" data-seat="3 seats left">16</span><span>17</span><span>18</span><span>19</span>
+                    <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="full" data-seat="Batch full">25</span><span>26</span>
+                    <span>27</span><span>28</span><span>29</span><span>30</span><span class="muted-day">1</span><span class="muted-day">2</span><span class="muted-day">3</span>
+                  </div>
+                  <div class="calendar-legend">
+                    <span><i class="legend-dot green"></i>Available</span>
+                    <span><i class="legend-dot orange"></i>Few seats</span>
+                    <span><i class="legend-dot red"></i>Full</span>
+                  </div>
+                </div>
+              </article>
+              <article class="dashboard-panel glass">
+                <div class="panel-head"><h2>Program enrollment</h2></div>
+                <div class="panel-body donut-wrap">
+                  <div class="donut">
+                    <div class="donut-center"><b>248</b><span>Total</span></div>
+                  </div>
+                  <div class="chart-legend">
+                    <span><em><i style="background: #075bea"></i>Communication</em><b>72</b></span>
+                    <span><em><i style="background: #20a86a"></i>Leadership</em><b>56</b></span>
+                    <span><em><i style="background: #ff8a30"></i>Sales</em><b>48</b></span>
+                    <span><em><i style="background: #7959de"></i>Technical</em><b>44</b></span>
+                    <span><em><i style="background: #17adc3"></i>Other</em><b>28</b></span>
+                  </div>
+                </div>
+              </article>
+              <article class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Attendance trend</h2>
+                  <select class="dashboard-search select-sm" data-attendance-period aria-label="Chart period">
+                    <option value="week">This week</option>
+                    <option value="month">This month</option>
+                  </select>
+                </div>
+                <div class="panel-body attendance-trend-body">
+                  <div class="attendance-stat-badge">
+                    <span class="avg-label">Avg Rate:</span>
+                    <strong class="avg-val" data-attendance-avg>88.4%</strong>
+                    <span class="trend up">↑ 4.2%</span>
+                  </div>
+                  <canvas
+                    role="img"
+                    class="chart-canvas"
+                    data-attendance-chart
+                    aria-label="Attendance trend chart"
+                  ></canvas>
+                </div>
+              </article>
+              <article class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Top programs</h2>
+                  <button type="button" class="text-button" data-switch-to-view="programs">View all</button>
+                </div>
+                <div class="panel-body mini-bars">
+                  <div class="mini-bar-row">
+                    <div><span>Leadership Essentials</span><b>85%</b></div>
+                    <span class="progress-track"><span style="width: 85%; background: #20a86a"></span></span>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div><span>Effective Communication</span><b>75%</b></div>
+                    <span class="progress-track"><span style="width: 75%"></span></span>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div><span>Advanced Excel</span><b>60%</b></div>
+                    <span class="progress-track"><span style="width: 60%; background: #ff8a30"></span></span>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div><span>Sales Excellence</span><b>50%</b></div>
+                    <span class="progress-track"><span style="width: 50%; background: #7959de"></span></span>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div><span>Communication Mastery</span><b>45%</b></div>
+                    <span class="progress-track"><span style="width: 45%; background: #17adc3"></span></span>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+
+          <!-- 2. VIEW: ENROLL EMPLOYEES -->
+          <div class="dash-view" data-dash-view="enroll">
+            <div class="view-header-strip">
+              <div>
+                <h2>Enroll Employees</h2>
+                <p>Register single team members, assign learning tracks, or bulk upload CSV rosters.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm button-ghost" data-download-template>
+                  <i data-lucide="file-spreadsheet"></i> Download CSV Template
+                </button>
+              </div>
+            </div>
+            <div class="enroll-grid-layout">
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2><i data-lucide="user-plus" class="panel-icon-inline"></i> Single Employee Registration</h2>
+                </div>
+                <form class="form-grid enroll-direct-form" data-enroll-direct-form novalidate>
+                  <div class="field">
+                    <label for="direct-name">Full Name *</label>
+                    <input type="text" id="direct-name" required placeholder="e.g. Vikram Malhotra">
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field">
+                    <label for="direct-email">Work Email *</label>
+                    <input type="email" id="direct-email" required placeholder="e.g. vikram.m@company.com">
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field">
+                    <label for="direct-program">Select Program Track *</label>
+                    <select id="direct-program" required>
+                      <option value="">Choose program</option>
+                      <option>Leadership Essentials</option>
+                      <option>Effective Communication</option>
+                      <option>Sales Excellence</option>
+                      <option>Advanced Excel</option>
+                      <option>AI & Automation for Leaders</option>
+                      <option>Cybersecurity & Compliance</option>
+                    </select>
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field">
+                    <label for="direct-dept">Department *</label>
+                    <select id="direct-dept" required>
+                      <option value="">Choose department</option>
+                      <option>People</option>
+                      <option>Sales</option>
+                      <option>Technology</option>
+                      <option>Finance</option>
+                    </select>
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field">
+                    <label for="direct-batch">Cohort Batch *</label>
+                    <select id="direct-batch" required>
+                      <option>Sep 02 – Sep 13 (Weekday Morning)</option>
+                      <option>Sep 16 – Sep 27 (Weekday Evening)</option>
+                      <option>Oct 05 – Oct 16 (Weekend Intensive)</option>
+                    </select>
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field">
+                    <label for="direct-mode">Training Modality *</label>
+                    <select id="direct-mode" required>
+                      <option>Live Virtual (Zoom / Teams)</option>
+                      <option>Onsite Classroom</option>
+                      <option>Hybrid (Mixed Sessions)</option>
+                    </select>
+                    <span class="error" role="alert"></span>
+                  </div>
+                  <div class="field full">
+                    <label class="checkbox-label">
+                      <input type="checkbox" checked id="direct-notify">
+                      <span>Send automated calendar invite and syllabus kit to employee</span>
+                    </label>
+                  </div>
+                  <div class="field full">
+                    <button class="button" type="submit">
+                      <i data-lucide="user-check"></i> Complete Enrollment
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="enroll-sidebar-stack">
+                <div class="dashboard-panel glass">
+                  <div class="panel-head">
+                    <h2><i data-lucide="upload-cloud" class="panel-icon-inline"></i> Bulk Roster Import</h2>
+                  </div>
+                  <div class="panel-body">
+                    <div class="dropzone-box" data-dropzone>
+                      <i data-lucide="file-up" class="dropzone-icon"></i>
+                      <b>Drag & drop employee roster (.csv, .xlsx)</b>
+                      <span>or browse from your local computer</span>
+                      <input type="file" id="bulk-file" accept=".csv,.xlsx" style="display:none">
+                      <button type="button" class="button button-sm button-ghost" onclick="document.getElementById('bulk-file').click()">
+                        Select File
+                      </button>
+                    </div>
+                    <div class="dropzone-note">
+                      <small><i data-lucide="info"></i> Standard template supports columns: Name, Email, Department, Program, Batch.</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard-panel glass">
+                  <div class="panel-head">
+                    <h2><i data-lucide="sparkles" class="panel-icon-inline"></i> Cohort Seat Capacity</h2>
+                  </div>
+                  <div class="panel-body compact-list">
+                    <div class="capacity-row">
+                      <div><b>Sep 02 – Sep 13 Batch</b><small>Effective Communication</small></div>
+                      <span class="capacity-badge available">12 Seats Open</span>
+                    </div>
+                    <div class="capacity-row">
+                      <div><b>Sep 16 – Sep 27 Batch</b><small>Leadership Essentials</small></div>
+                      <span class="capacity-badge limited">3 Seats Left</span>
+                    </div>
+                    <div class="capacity-row">
+                      <div><b>Oct 05 – Oct 16 Batch</b><small>Sales Excellence</small></div>
+                      <span class="capacity-badge available">20 Seats Open</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. VIEW: MY ENROLLMENTS -->
+          <div class="dash-view" data-dash-view="my-enrollments">
+            <div class="view-header-strip">
+              <div>
+                <h2>My Enrollments</h2>
+                <p>View and manage all active company employees currently enrolled across cohorts.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm button-ghost" data-download-report>
+                  <i data-lucide="download"></i> Export Roster (CSV)
+                </button>
+                <button type="button" class="button button-sm" data-open-enroll>
+                  <i data-lucide="user-plus"></i> New Enrollment
+                </button>
+              </div>
+            </div>
+            <div class="dashboard-panel glass">
+              <div class="panel-toolbar">
+                <div class="filter-pills" data-roster-filter-pills>
+                  <button type="button" class="pill active" data-filter-status="all">All (248)</button>
+                  <button type="button" class="pill" data-filter-status="in-progress">In Progress (98)</button>
+                  <button type="button" class="pill" data-filter-status="completed">Completed (112)</button>
+                  <button type="button" class="pill" data-filter-status="not-started">Not Started (38)</button>
+                </div>
+                <div class="toolbar-search">
+                  <input type="search" id="roster-search" class="dashboard-search" placeholder="Filter roster by name, track, or dept...">
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="employee-table roster-table">
+                  <thead>
+                    <tr>
+                      <th>Employee</th>
+                      <th>Program Track</th>
+                      <th>Department</th>
+                      <th>Cohort Batch</th>
+                      <th>Attendance</th>
+                      <th>Progress</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody data-roster-rows>
+                    <tr data-department="People" data-status="in-progress">
+                      <td>
+                        <div class="employee-cell">
+                          <span class="employee-avatar">AS</span>
+                          <div><b>Aarav Sharma</b><small>aarav@company.com</small></div>
+                        </div>
+                      </td>
+                      <td>Effective Communication</td>
+                      <td>People</td>
+                      <td>Sep 02 – Sep 13</td>
+                      <td>90%</td>
+                      <td>
+                        <div class="progress-line">
+                          <span class="progress-track"><span style="width: 75%"></span></span><b>75%</b>
+                        </div>
+                      </td>
+                      <td><span class="status-pill in-progress">In progress</span></td>
+                      <td>
+                        <button type="button" class="button button-xs button-ghost" data-certificate data-name="Aarav Sharma" data-program="Effective Communication">
+                          <i data-lucide="award"></i> Certificate
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-department="Technology" data-status="completed">
+                      <td>
+                        <div class="employee-cell">
+                          <span class="employee-avatar">NV</span>
+                          <div><b>Neha Verma</b><small>neha@company.com</small></div>
+                        </div>
+                      </td>
+                      <td>Leadership Essentials</td>
+                      <td>Technology</td>
+                      <td>Aug 10 – Aug 22</td>
+                      <td>100%</td>
+                      <td>
+                        <div class="progress-line">
+                          <span class="progress-track"><span style="width: 100%; background: #17a269"></span></span><b>100%</b>
+                        </div>
+                      </td>
+                      <td><span class="status-pill completed">Completed</span></td>
+                      <td>
+                        <button type="button" class="button button-xs button-ghost" data-certificate data-name="Neha Verma" data-program="Leadership Essentials">
+                          <i data-lucide="download"></i> Certificate
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-department="Sales" data-status="in-progress">
+                      <td>
+                        <div class="employee-cell">
+                          <span class="employee-avatar">RM</span>
+                          <div><b>Rohan Mehta</b><small>rohan@company.com</small></div>
+                        </div>
+                      </td>
+                      <td>Sales Excellence</td>
+                      <td>Sales</td>
+                      <td>Sep 16 – Sep 27</td>
+                      <td>80%</td>
+                      <td>
+                        <div class="progress-line">
+                          <span class="progress-track"><span style="width: 60%; background: #ff8730"></span></span><b>60%</b>
+                        </div>
+                      </td>
+                      <td><span class="status-pill in-progress">In progress</span></td>
+                      <td>
+                        <button type="button" class="button button-xs button-ghost" data-certificate data-name="Rohan Mehta" data-program="Sales Excellence">
+                          <i data-lucide="award"></i> Certificate
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-department="People" data-status="not-started">
+                      <td>
+                        <div class="employee-cell">
+                          <span class="employee-avatar">PN</span>
+                          <div><b>Priya Nair</b><small>priya@company.com</small></div>
+                        </div>
+                      </td>
+                      <td>Advanced Excel</td>
+                      <td>People</td>
+                      <td>Oct 05 – Oct 16</td>
+                      <td>50%</td>
+                      <td>
+                        <div class="progress-line">
+                          <span class="progress-track"><span style="width: 30%; background: #e83d51"></span></span><b>30%</b>
+                        </div>
+                      </td>
+                      <td><span class="status-pill not-started">Not started</span></td>
+                      <td>
+                        <button type="button" class="button button-xs button-ghost" data-certificate data-name="Priya Nair" data-program="Advanced Excel">
+                          <i data-lucide="award"></i> Certificate
+                        </button>
+                      </td>
+                    </tr>
+                    <tr data-department="Technology" data-status="completed">
+                      <td>
+                        <div class="employee-cell">
+                          <span class="employee-avatar">KS</span>
+                          <div><b>Karan Singh</b><small>karan@company.com</small></div>
+                        </div>
+                      </td>
+                      <td>Communication Mastery</td>
+                      <td>Technology</td>
+                      <td>Aug 01 – Aug 14</td>
+                      <td>100%</td>
+                      <td>
+                        <div class="progress-line">
+                          <span class="progress-track"><span style="width: 100%; background: #17a269"></span></span><b>100%</b>
+                        </div>
+                      </td>
+                      <td><span class="status-pill completed">Completed</span></td>
+                      <td>
+                        <button type="button" class="button button-xs button-ghost" data-certificate data-name="Karan Singh" data-program="Communication Mastery">
+                          <i data-lucide="download"></i> Certificate
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. VIEW: ATTENDANCE -->
+          <div class="dash-view" data-dash-view="attendance">
+            <div class="view-header-strip">
+              <div>
+                <h2>Attendance Tracking & Session Logs</h2>
+                <p>Live check-in rates, attendance compliance, and active participation logs.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm button-ghost" data-export-attendance>
+                  <i data-lucide="file-spreadsheet"></i> Export Attendance Sheet (CSV)
+                </button>
+              </div>
+            </div>
+            <section class="stat-grid">
+              <article class="stat-card glass">
+                <span class="stat-icon blue"><i data-lucide="users-round"></i></span>
+                <div>
+                  <p>Average Attendance</p>
+                  <strong>88.4%</strong>
+                  <span class="trend up">↑ 4.2% this quarter</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon green"><i data-lucide="shield-check"></i></span>
+                <div>
+                  <p>100% Attendance Learners</p>
+                  <strong>64%</strong>
+                  <span class="trend up">158 Employees</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon orange"><i data-lucide="clock"></i></span>
+                <div>
+                  <p>Sessions Conducted</p>
+                  <strong>24 / 30</strong>
+                  <span class="trend">80% of schedule</span>
+                </div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon red"><i data-lucide="alert-triangle"></i></span>
+                <div>
+                  <p>At-Risk Attendance</p>
+                  <strong>8</strong>
+                  <span class="trend down">&lt; 75% threshold</span>
+                </div>
+              </article>
+            </section>
+            <div class="dashboard-panel glass">
+              <div class="panel-head">
+                <h2>Session-by-Session Check-in Status</h2>
+                <div class="dashboard-actions">
+                  <select id="attendance-batch-filter" class="dashboard-search">
+                    <option value="all">All Cohort Batches</option>
+                    <option>Sep 02 – Sep 13</option>
+                    <option>Sep 16 – Sep 27</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="employee-table attendance-table">
+                  <thead>
+                    <tr>
+                      <th>Learner</th>
+                      <th>Cohort Program</th>
+                      <th>Total Sessions</th>
+                      <th>Attended</th>
+                      <th>Rate</th>
+                      <th>Latest Session</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="employee-cell"><span class="employee-avatar">AS</span><b>Aarav Sharma</b></div></td>
+                      <td>Effective Communication</td>
+                      <td>10</td>
+                      <td>9</td>
+                      <td><b>90%</b></td>
+                      <td><span class="checkin-badge present"><i data-lucide="check"></i> Present</span></td>
+                      <td><button type="button" class="button button-xs button-ghost" data-toggle-checkin>Toggle Status</button></td>
+                    </tr>
+                    <tr>
+                      <td><div class="employee-cell"><span class="employee-avatar">NV</span><b>Neha Verma</b></div></td>
+                      <td>Leadership Essentials</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td><b style="color:#17a269">100%</b></td>
+                      <td><span class="checkin-badge present"><i data-lucide="check"></i> Present</span></td>
+                      <td><button type="button" class="button button-xs button-ghost" data-toggle-checkin>Toggle Status</button></td>
+                    </tr>
+                    <tr>
+                      <td><div class="employee-cell"><span class="employee-avatar">RM</span><b>Rohan Mehta</b></div></td>
+                      <td>Sales Excellence</td>
+                      <td>10</td>
+                      <td>8</td>
+                      <td><b>80%</b></td>
+                      <td><span class="checkin-badge late"><i data-lucide="clock"></i> Late (15m)</span></td>
+                      <td><button type="button" class="button button-xs button-ghost" data-toggle-checkin>Toggle Status</button></td>
+                    </tr>
+                    <tr>
+                      <td><div class="employee-cell"><span class="employee-avatar">PN</span><b>Priya Nair</b></div></td>
+                      <td>Advanced Excel</td>
+                      <td>8</td>
+                      <td>4</td>
+                      <td><b style="color:#e83d51">50%</b></td>
+                      <td><span class="checkin-badge absent"><i data-lucide="x"></i> Absent</span></td>
+                      <td><button type="button" class="button button-xs button-ghost" data-toggle-checkin>Toggle Status</button></td>
+                    </tr>
+                    <tr>
+                      <td><div class="employee-cell"><span class="employee-avatar">KS</span><b>Karan Singh</b></div></td>
+                      <td>Communication Mastery</td>
+                      <td>10</td>
+                      <td>10</td>
+                      <td><b style="color:#17a269">100%</b></td>
+                      <td><span class="checkin-badge present"><i data-lucide="check"></i> Present</span></td>
+                      <td><button type="button" class="button button-xs button-ghost" data-toggle-checkin>Toggle Status</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. VIEW: MODULE PROGRESS -->
+          <div class="dash-view" data-dash-view="module-progress">
+            <div class="view-header-strip">
+              <div>
+                <h2>Module & Competency Progression</h2>
+                <p>Track syllabus milestone completion, quiz scores, and practical assessments.</p>
+              </div>
+              <div class="header-actions">
+                <select class="dashboard-search" id="module-program-select">
+                  <option>Leadership Essentials Track</option>
+                  <option>Effective Communication Track</option>
+                  <option>Sales Excellence Track</option>
+                  <option>Advanced Excel & PowerBI Track</option>
+                </select>
+              </div>
+            </div>
+            <div class="module-cards-grid">
+              <div class="dashboard-panel glass module-card">
+                <div class="module-num">01</div>
+                <div class="module-content">
+                  <span class="status-pill completed">Completed</span>
+                  <h3>Foundations & Strategic Mindset</h3>
+                  <p>Core leadership paradigms, active listening, and team alignment models.</p>
+                  <div class="module-stats">
+                    <div><b>100%</b><small>Completion</small></div>
+                    <div><b>94.2%</b><small>Quiz Avg</small></div>
+                    <div><b>12 hrs</b><small>Time Spent</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass module-card">
+                <div class="module-num">02</div>
+                <div class="module-content">
+                  <span class="status-pill in-progress">In Progress</span>
+                  <h3>Conflict Resolution & Decision Frameworks</h3>
+                  <p>Navigating cross-functional tensions and executing high-stakes trade-offs.</p>
+                  <div class="module-stats">
+                    <div><b>84.0%</b><small>Completion</small></div>
+                    <div><b>88.5%</b><small>Quiz Avg</small></div>
+                    <div><b>16 hrs</b><small>Time Spent</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass module-card">
+                <div class="module-num">03</div>
+                <div class="module-content">
+                  <span class="status-pill in-progress">In Progress</span>
+                  <h3>Executive Presence & Stakeholder Influence</h3>
+                  <p>Boardroom presentation drills, narrative structuring, and persuasion.</p>
+                  <div class="module-stats">
+                    <div><b>65.0%</b><small>Completion</small></div>
+                    <div><b>79.0%</b><small>Quiz Avg</small></div>
+                    <div><b>10 hrs</b><small>Time Spent</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass module-card">
+                <div class="module-num">04</div>
+                <div class="module-content">
+                  <span class="status-pill not-started">Upcoming</span>
+                  <h3>Capstone Project & Practical Review</h3>
+                  <p>Real-world organizational case study defended before faculty panel.</p>
+                  <div class="module-stats">
+                    <div><b>35.0%</b><small>Enrolled</small></div>
+                    <div><b>—</b><small>Quiz Avg</small></div>
+                    <div><b>8 hrs</b><small>Target</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. VIEW: CERTIFICATES -->
+          <div class="dash-view" data-dash-view="certificates">
+            <div class="view-header-strip">
+              <div>
+                <h2>Certificates & Credentials Hub</h2>
+                <p>Generate, verify, preview, and download official verifiable completion certificates.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm" data-batch-certificates>
+                  <i data-lucide="layers"></i> Batch Issue Certificates
+                </button>
+              </div>
+            </div>
+            <section class="stat-grid">
+              <article class="stat-card glass">
+                <span class="stat-icon green"><i data-lucide="award"></i></span>
+                <div><p>Certificates Issued</p><strong>112</strong><span class="trend up">Verified & Valid</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon blue"><i data-lucide="clock"></i></span>
+                <div><p>Pending Verification</p><strong>14</strong><span class="trend">Awaiting Capstone</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon orange"><i data-lucide="book-check"></i></span>
+                <div><p>Accredited Learning Hours</p><strong>1,480 hrs</strong><span class="trend up">Recorded</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon red"><i data-lucide="badge-percent"></i></span>
+                <div><p>Average Final Score</p><strong>91.5%</strong><span class="trend up">Distinction</span></div>
+              </article>
+            </section>
+            <div class="certificates-grid">
+              <div class="dashboard-panel glass cert-card">
+                <div class="cert-card-icon"><i data-lucide="award"></i></div>
+                <div class="cert-card-body">
+                  <span class="cert-id-badge">ID: ELV-849102</span>
+                  <h3>Neha Verma</h3>
+                  <p>Leadership Essentials Program</p>
+                  <small>Issued: August 2026 • Verified Distinction</small>
+                  <div class="cert-actions">
+                    <button type="button" class="button button-sm button-ghost" data-certificate data-name="Neha Verma" data-program="Leadership Essentials">
+                      <i data-lucide="download"></i> Download Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass cert-card">
+                <div class="cert-card-icon"><i data-lucide="award"></i></div>
+                <div class="cert-card-body">
+                  <span class="cert-id-badge">ID: ELV-730194</span>
+                  <h3>Karan Singh</h3>
+                  <p>Communication Mastery</p>
+                  <small>Issued: August 2026 • Verified Merit</small>
+                  <div class="cert-actions">
+                    <button type="button" class="button button-sm button-ghost" data-certificate data-name="Karan Singh" data-program="Communication Mastery">
+                      <i data-lucide="download"></i> Download Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass cert-card">
+                <div class="cert-card-icon"><i data-lucide="award"></i></div>
+                <div class="cert-card-body">
+                  <span class="cert-id-badge">ID: ELV-918230</span>
+                  <h3>Aarav Sharma</h3>
+                  <p>Effective Communication Track</p>
+                  <small>Estimated: September 2026 • Module 4 In Progress</small>
+                  <div class="cert-actions">
+                    <button type="button" class="button button-sm button-ghost" data-certificate data-name="Aarav Sharma" data-program="Effective Communication">
+                      <i data-lucide="eye"></i> Preview Draft Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass cert-card">
+                <div class="cert-card-icon"><i data-lucide="award"></i></div>
+                <div class="cert-card-body">
+                  <span class="cert-id-badge">ID: ELV-602914</span>
+                  <h3>Rohan Mehta</h3>
+                  <p>Sales Excellence & Negotiation</p>
+                  <small>Estimated: September 2026 • Module 3 Active</small>
+                  <div class="cert-actions">
+                    <button type="button" class="button button-sm button-ghost" data-certificate data-name="Rohan Mehta" data-program="Sales Excellence">
+                      <i data-lucide="eye"></i> Preview Draft Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. VIEW: REPORTS -->
+          <div class="dash-view" data-dash-view="reports">
+            <div class="view-header-strip">
+              <div>
+                <h2>Executive Analytics & ROI Reports</h2>
+                <p>Departmental learning hours, assessment benchmarks, and audit export tools.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm" data-download-report>
+                  <i data-lucide="download"></i> Export Executive Summary (CSV)
+                </button>
+              </div>
+            </div>
+            <section class="stat-grid">
+              <article class="stat-card glass">
+                <span class="stat-icon blue"><i data-lucide="clock-4"></i></span>
+                <div><p>Total Learning Hours</p><strong>3,840 hrs</strong><span class="trend up">Avg 15.5h / employee</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon green"><i data-lucide="trending-up"></i></span>
+                <div><p>Skill Uplift Index</p><strong>+38%</strong><span class="trend up">Post-test validation</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon orange"><i data-lucide="smile"></i></span>
+                <div><p>Learner Satisfaction (CSAT)</p><strong>4.9 / 5.0</strong><span class="trend up">98% positive</span></div>
+              </article>
+              <article class="stat-card glass">
+                <span class="stat-icon red"><i data-lucide="badge-dollar-sign"></i></span>
+                <div><p>Training ROI Multiplier</p><strong>4.2x</strong><span class="trend up">Calculated impact</span></div>
+              </article>
+            </section>
+            <div class="reports-grid-layout">
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Departmental Learning Hours Breakdown</h2>
+                </div>
+                <div class="panel-body">
+                  <div class="dept-bar-list">
+                    <div class="dept-bar-item">
+                      <div class="dept-meta"><b>Technology & Engineering</b><span>1,450 hrs (38%)</span></div>
+                      <span class="progress-track"><span style="width: 78%; background: #075bea"></span></span>
+                    </div>
+                    <div class="dept-bar-item">
+                      <div class="dept-meta"><b>People & Human Resources</b><span>1,120 hrs (29%)</span></div>
+                      <span class="progress-track"><span style="width: 62%; background: #20a86a"></span></span>
+                    </div>
+                    <div class="dept-bar-item">
+                      <div class="dept-meta"><b>Sales & Commercial</b><span>980 hrs (25%)</span></div>
+                      <span class="progress-track"><span style="width: 52%; background: #ff8730"></span></span>
+                    </div>
+                    <div class="dept-bar-item">
+                      <div class="dept-meta"><b>Finance & Operations</b><span>290 hrs (8%)</span></div>
+                      <span class="progress-track"><span style="width: 22%; background: #7959de"></span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Downloadable Audit Packages</h2>
+                </div>
+                <div class="panel-body report-download-list">
+                  <div class="report-file-item">
+                    <i data-lucide="file-text" class="file-icon"></i>
+                    <div>
+                      <b>Q3 2026 Full Executive Learning Audit</b>
+                      <small>Includes attendance, quiz scores, and certificate logs (CSV / PDF)</small>
+                    </div>
+                    <button type="button" class="button button-xs button-ghost" data-download-report>Download</button>
+                  </div>
+                  <div class="report-file-item">
+                    <i data-lucide="file-spreadsheet" class="file-icon"></i>
+                    <div>
+                      <b>Compliance & Mandatory Attendance Sheet</b>
+                      <small>Audited roster compliant with corporate training standards</small>
+                    </div>
+                    <button type="button" class="button button-xs button-ghost" data-download-report>Download</button>
+                  </div>
+                  <div class="report-file-item">
+                    <i data-lucide="file-pie-chart" class="file-icon"></i>
+                    <div>
+                      <b>Skill Gap & Post-Training Competency Matrix</b>
+                      <small>Comparative assessment before and after cohort delivery</small>
+                    </div>
+                    <button type="button" class="button button-xs button-ghost" data-download-report>Download</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. VIEW: CALENDAR -->
+          <div class="dash-view" data-dash-view="calendar">
+            <div class="view-header-strip">
+              <div>
+                <h2>Enterprise Training Calendar</h2>
+                <p>Complete schedule of upcoming cohort bootcamps, workshops, and faculty sessions.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm button-ghost" data-ical-export>
+                  <i data-lucide="calendar-plus"></i> Sync to Outlook / Google
+                </button>
+                <button type="button" class="button button-sm" data-open-enroll>
+                  <i data-lucide="calendar-plus"></i> Book Cohort Session
+                </button>
+              </div>
+            </div>
+            <div class="calendar-page-layout">
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Training Schedule</h2>
+                  <div class="calendar-nav-toolbar">
+                    <button type="button" class="calendar-nav-arrow" data-calendar-prev aria-label="Previous month"><i data-lucide="chevron-left"></i></button>
+                    <b data-calendar-label-full>September 2026</b>
+                    <button type="button" class="calendar-nav-arrow" data-calendar-next aria-label="Next month"><i data-lucide="chevron-right"></i></button>
+                    <button type="button" class="calendar-today-btn" data-calendar-today title="Jump to current month">Today</button>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="calendar-grid full-calendar" data-calendar-grid-full>
+                    <span class="day-name">Sun</span><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span>
+                    <span class="muted-day">30</span><span class="muted-day">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    <span>6</span><span>7</span><span class="available" data-seat="12 seats available">8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                    <span>13</span><span>14</span><span>15</span><span class="limited" data-seat="3 seats left">16</span><span>17</span><span>18</span><span>19</span>
+                    <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="full" data-seat="Batch full">25</span><span>26</span>
+                    <span>27</span><span>28</span><span>29</span><span>30</span><span class="muted-day">1</span><span class="muted-day">2</span><span class="muted-day">3</span>
+                  </div>
+                  <div class="calendar-legend" style="margin-top:20px">
+                    <span><i class="legend-dot green"></i> Available Seats</span>
+                    <span><i class="legend-dot orange"></i> Few Seats Left</span>
+                    <span><i class="legend-dot red"></i> Full Cohort</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2>Scheduled Cohort Sessions</h2>
+                </div>
+                <div class="panel-body session-schedule-list" data-session-schedule-list>
+                  <div class="session-schedule-item">
+                    <div class="session-date-badge">
+                      <span>SEP</span><b>08</b>
+                    </div>
+                    <div class="session-details">
+                      <b>Leadership Essentials — Session 3</b>
+                      <small><i data-lucide="user"></i> Dr. Elena Vance • 9:00 AM – 1:00 PM • Hybrid Hall A</small>
+                      <span class="capacity-badge available">12 Seats Open</span>
+                    </div>
+                  </div>
+                  <div class="session-schedule-item">
+                    <div class="session-date-badge">
+                      <span>SEP</span><b>16</b>
+                    </div>
+                    <div class="session-details">
+                      <b>Sales Negotiation & Pitch Workshop</b>
+                      <small><i data-lucide="user"></i> Marcus Brody • 2:00 PM – 5:00 PM • Virtual Live</small>
+                      <span class="capacity-badge limited">3 Seats Left</span>
+                    </div>
+                  </div>
+                  <div class="session-schedule-item">
+                    <div class="session-date-badge">
+                      <span>SEP</span><b>25</b>
+                    </div>
+                    <div class="session-details">
+                      <b>Effective Communication Final Capstone</b>
+                      <small><i data-lucide="user"></i> Sophia Chen • 10:00 AM – 4:00 PM • Main Auditorium</small>
+                      <span class="capacity-badge full">Batch Full</span>
+                    </div>
+                  </div>
+                  <div class="session-schedule-item">
+                    <div class="session-date-badge">
+                      <span>OCT</span><b>02</b>
+                    </div>
+                    <div class="session-details">
+                      <b>AI & Automation for Business Leaders</b>
+                      <small><i data-lucide="user"></i> Dr. Elena Vance • 9:30 AM – 12:30 PM • Live Virtual</small>
+                      <span class="capacity-badge available">18 Seats Open</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. VIEW: PROGRAMS -->
+          <div class="dash-view" data-dash-view="programs">
+            <div class="view-header-strip">
+              <div>
+                <h2>Corporate Training Programs Catalog</h2>
+                <p>Enterprise curriculums, assigned faculty, duration, and active batch capacity.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm" data-open-enroll>
+                  <i data-lucide="user-plus"></i> Enroll Learners
+                </button>
+              </div>
+            </div>
+            <div class="programs-catalog-grid">
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon blue"><i data-lucide="award"></i></div>
+                <h3>Leadership Essentials</h3>
+                <p>Strategic decision making, executive presence, and high-performance team coaching.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 6 Weeks</span>
+                  <span><i data-lucide="users"></i> 56 Enrolled</span>
+                  <span><i data-lucide="star"></i> 4.9 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon green"><i data-lucide="message-square-more"></i></div>
+                <h3>Effective Communication</h3>
+                <p>Boardroom presentations, influential storytelling, and cross-functional negotiation.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 4 Weeks</span>
+                  <span><i data-lucide="users"></i> 72 Enrolled</span>
+                  <span><i data-lucide="star"></i> 4.8 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon orange"><i data-lucide="trending-up"></i></div>
+                <h3>Sales Excellence & Negotiation</h3>
+                <p>Consultative B2B selling, pipeline acceleration, and enterprise account management.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 5 Weeks</span>
+                  <span><i data-lucide="users"></i> 48 Enrolled</span>
+                  <span><i data-lucide="star"></i> 4.9 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon blue"><i data-lucide="file-spreadsheet"></i></div>
+                <h3>Advanced Excel & Financial Modeling</h3>
+                <p>Data visualization, advanced macros, forecasting models, and PowerBI pipelines.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 3 Weeks</span>
+                  <span><i data-lucide="users"></i> 30 Enrolled</span>
+                  <span><i data-lucide="star"></i> 4.7 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon green"><i data-lucide="cpu"></i></div>
+                <h3>AI & Automation for Business</h3>
+                <p>Generative AI workflows, prompt strategy, process automation, and ethical governance.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 4 Weeks</span>
+                  <span><i data-lucide="users"></i> 42 Enrolled</span>
+                  <span><i data-lucide="star"></i> 5.0 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+              <div class="dashboard-panel glass program-catalog-card">
+                <div class="program-icon red"><i data-lucide="shield-alert"></i></div>
+                <h3>Cybersecurity & Compliance</h3>
+                <p>Phishing prevention, data privacy regulations (GDPR/HIPAA), and security culture.</p>
+                <div class="program-meta-strip">
+                  <span><i data-lucide="clock"></i> 2 Weeks</span>
+                  <span><i data-lucide="users"></i> 25 Enrolled</span>
+                  <span><i data-lucide="star"></i> 4.8 Rating</span>
+                </div>
+                <div class="program-actions">
+                  <button type="button" class="button button-sm button-ghost" data-open-enroll>Enroll Cohort</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. VIEW: SETTINGS -->
+          <div class="dash-view" data-dash-view="settings">
+            <div class="view-header-strip">
+              <div>
+                <h2>HR Workspace & System Settings</h2>
+                <p>Manage organizational preferences, notification triggers, and team role permissions.</p>
+              </div>
+              <div class="header-actions">
+                <button type="button" class="button button-sm" data-save-settings>
+                  <i data-lucide="save"></i> Save Changes
+                </button>
+              </div>
+            </div>
+            <div class="settings-grid-layout">
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2><i data-lucide="building" class="panel-icon-inline"></i> Organization Profile</h2>
+                </div>
+                <form class="form-grid settings-form" data-settings-form>
+                  <div class="field">
+                    <label for="org-name">Company Name</label>
+                    <input type="text" id="org-name" value="Acme Global Corporation">
+                  </div>
+                  <div class="field">
+                    <label for="org-manager">HR Admin Name</label>
+                    <input type="text" id="org-manager" value="Ananya Mukherjee">
+                  </div>
+                  <div class="field">
+                    <label for="org-email">Work Email</label>
+                    <input type="email" id="org-email" value="ananya.m@acmeglobal.com">
+                  </div>
+                  <div class="field">
+                    <label for="org-subdomain">Portal Domain</label>
+                    <input type="text" id="org-subdomain" value="acme.elevatelearning.com" readonly>
+                  </div>
+                  <div class="field full">
+                    <button type="submit" class="button button-sm">Update Profile</button>
+                  </div>
+                </form>
+              </div>
+              <div class="dashboard-panel glass">
+                <div class="panel-head">
+                  <h2><i data-lucide="bell" class="panel-icon-inline"></i> Automated Notification Rules</h2>
+                </div>
+                <div class="panel-body settings-toggle-list">
+                  <label class="toggle-setting-row">
+                    <div>
+                      <b>Enrollment Confirmation Email</b>
+                      <small>Notify learner and department head immediately upon cohort registration</small>
+                    </div>
+                    <input type="checkbox" checked class="switch-input">
+                  </label>
+                  <label class="toggle-setting-row">
+                    <div>
+                      <b>Weekly Attendance Summary Digest</b>
+                      <small>Send consolidated PDF report every Monday at 9:00 AM</small>
+                    </div>
+                    <input type="checkbox" checked class="switch-input">
+                  </label>
+                  <label class="toggle-setting-row">
+                    <div>
+                      <b>Auto-Certificate Issuance</b>
+                      <small>Automatically email verified credential once learner completes 100%</small>
+                    </div>
+                    <input type="checkbox" checked class="switch-input">
+                  </label>
+                  <label class="toggle-setting-row">
+                    <div>
+                      <b>Low Attendance Warning (&lt; 75%)</b>
+                      <small>Trigger early alert when attendance falls below minimum certification criteria</small>
+                    </div>
+                    <input type="checkbox" checked class="switch-input">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div
+      class="modal-backdrop"
+      data-enroll-modal
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="enroll-title"
+    >
+      <div class="modal glass">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow"><span></span> New enrollment</p>
+            <h2 id="enroll-title">Enroll an employee</h2>
+          </div>
+          <button type="button"
+            class="modal-close"
+            data-close-enroll
+            aria-label="Close dialog"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <form class="form-grid" data-enroll-form novalidate>
+          <div class="field">
+            <label for="employee-name">Employee name</label
+            ><input type="text" id="employee-name" required placeholder="Full name"><span
+              class="error"
+              role="alert"
+            ></span>
+          </div>
+          <div class="field">
+            <label for="employee-email">Work email</label
+            ><input
+              id="employee-email"
+              type="email"
+              required
+              placeholder="name@company.com"><span class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="employee-program">Program</label
+            ><select id="employee-program" required>
+              <option value="">Select a program</option>
+              <option>Effective Communication</option>
+              <option>Leadership Essentials</option>
+              <option>Sales Excellence</option>
+              <option>Advanced Excel</option></select
+            ><span class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="employee-department">Department</label
+            ><select id="employee-department" required>
+              <option value="">Select department</option>
+              <option>People</option>
+              <option>Sales</option>
+              <option>Technology</option></select
+            ><span class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="employee-batch">Batch</label
+            ><select id="employee-batch" required>
+              <option>Sep 02 – Sep 13</option>
+              <option>Sep 16 – Sep 27</option></select
+            ><span class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="employee-date">Start date</label
+            ><input id="employee-date" type="date" required><span
+              class="error"
+              role="alert"
+            ></span>
+          </div>
+          <div class="field full">
+            <button class="button" type="submit">
+              Confirm enrollment <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Interactive Calendar Session Detail & Booking Modal -->
+    <div
+      class="modal-backdrop"
+      data-calendar-modal
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="calendar-modal-title"
+    >
+      <div class="modal glass">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow"><span></span> Session Schedule</p>
+            <h2 id="calendar-modal-title" data-calendar-modal-date>September 08, 2026</h2>
+          </div>
+          <button type="button"
+            class="modal-close"
+            data-close-calendar-modal
+            aria-label="Close dialog"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="calendar-modal-body" data-calendar-modal-content>
+          <!-- Dynamically injected via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" data-toast role="status"></div>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

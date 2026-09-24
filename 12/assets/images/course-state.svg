@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="55%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="softGlowState" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="260" rx="14" fill="url(#stateGrad)"/>
+  <circle cx="480" cy="120" r="90" fill="#34d399" opacity="0.3" filter="url(#softGlowState)"/>
+  <rect x="44" y="32" width="168" height="26" rx="13" fill="rgba(255,255,255,0.16)"/>
+  <text x="58" y="49" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em">STATE PSC &amp; POLICE</text>
+  <text x="44" y="98" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">State Civil Services &amp; SI</text>
+  <text x="44" y="124" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">UPPSC, BPSC, MPPSC, RAS &amp; State Police Sub-Inspector Tracks</text>
+  <g transform="translate(44, 160)">
+    <rect width="112" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="14" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Prelims + Mains</text>
+    <rect x="124" width="138" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="138" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">22,000+ Enrolled</text>
+  </g>
+  <!-- Right Side Graphic: Administrative Pillar Motif -->
+  <g transform="translate(425, 48)">
+    <circle cx="65" cy="72" r="62" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <rect x="35" y="120" width="60" height="8" rx="2" fill="#ffffff"/>
+    <rect x="42" y="55" width="8" height="65" fill="#ffffff" opacity="0.9"/>
+    <rect x="61" y="55" width="8" height="65" fill="#ffffff" opacity="0.9"/>
+    <rect x="80" y="55" width="8" height="65" fill="#ffffff" opacity="0.9"/>
+    <polygon points="65,30 35,50 95,50" fill="#ffffff"/>
+    <circle cx="65" cy="42" r="4" fill="#f59e0b"/>
+  </g>
+</svg>

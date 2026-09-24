@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="engGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="55%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <filter id="softGlowEng" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="260" rx="14" fill="url(#engGrad)"/>
+  <!-- Blueprint Grid -->
+  <g opacity="0.08" stroke="#818cf8" stroke-width="1.5">
+    <line x1="0" y1="50" x2="600" y2="50"/>
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="100" y1="0" x2="100" y2="260"/>
+    <line x1="200" y1="0" x2="200" y2="260"/>
+    <line x1="300" y1="0" x2="300" y2="260"/>
+    <line x1="400" y1="0" x2="400" y2="260"/>
+    <line x1="500" y1="0" x2="500" y2="260"/>
+  </g>
+  <circle cx="480" cy="125" r="90" fill="#6366f1" opacity="0.3" filter="url(#softGlowEng)"/>
+  <rect x="44" y="32" width="160" height="26" rx="13" fill="rgba(255,255,255,0.16)"/>
+  <text x="58" y="49" fill="#c7d2fe" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em">ENGINEERING ENTRANCE</text>
+  <text x="44" y="98" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">JEE Main, Advanced &amp; GATE</text>
+  <text x="44" y="124" fill="#e0e7ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">Physics, Chemistry, Advanced Mathematics &amp; State CETs</text>
+  <g transform="translate(44, 160)">
+    <rect width="128" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="14" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Concept Drills</text>
+    <rect x="140" width="138" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="154" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">20,000+ Enrolled</text>
+  </g>
+  <!-- Right Side Graphic: Atom Orbit & Drafting Compass Motif -->
+  <g transform="translate(425, 48)">
+    <circle cx="65" cy="75" r="62" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <!-- Atom nucleus and orbits -->
+    <ellipse cx="65" cy="75" rx="46" ry="18" fill="none" stroke="#a5b4fc" stroke-width="2" transform="rotate(-30 65 75)"/>
+    <ellipse cx="65" cy="75" rx="46" ry="18" fill="none" stroke="#a5b4fc" stroke-width="2" transform="rotate(30 65 75)"/>
+    <circle cx="65" cy="75" r="10" fill="#38bdf8"/>
+    <!-- Particle dots -->
+    <circle cx="34" cy="55" r="4" fill="#f43f5e"/>
+    <circle cx="96" cy="95" r="4" fill="#facc15"/>
+    <circle cx="36" cy="98" r="4" fill="#4ade80"/>
+  </g>
+</svg>

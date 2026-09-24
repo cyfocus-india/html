@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#092868"/>
+      <stop offset="60%" stop-color="#1248a8"/>
+      <stop offset="100%" stop-color="#1d66db"/>
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="260" rx="14" fill="url(#bankGrad)"/>
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1.5">
+    <line x1="0" y1="40" x2="600" y2="40"/>
+    <line x1="0" y1="90" x2="600" y2="90"/>
+    <line x1="0" y1="140" x2="600" y2="140"/>
+    <line x1="0" y1="190" x2="600" y2="190"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="80" y1="0" x2="80" y2="260"/>
+    <line x1="180" y1="0" x2="180" y2="260"/>
+    <line x1="280" y1="0" x2="280" y2="260"/>
+    <line x1="380" y1="0" x2="380" y2="260"/>
+    <line x1="480" y1="0" x2="480" y2="260"/>
+  </g>
+  <!-- Background Glow -->
+  <circle cx="480" cy="130" r="100" fill="#3b82f6" opacity="0.25" filter="url(#softGlow)"/>
+  <!-- Left Side Badges & Text -->
+  <rect x="44" y="32" width="136" height="26" rx="13" fill="rgba(255,255,255,0.16)"/>
+  <text x="58" y="49" fill="#93c5fd" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em">BANKING &amp; FINANCE</text>
+  <text x="44" y="98" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">IBPS, SBI &amp; RBI Grade B</text>
+  <text x="44" y="124" fill="#bfdbfe" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">Prelims, Mains, Descriptive English &amp; Interview Prep</text>
+  <g transform="translate(44, 160)">
+    <rect width="112" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="14" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">120+ Mocks</text>
+    <rect x="124" width="128" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="138" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">35,000+ Enrolled</text>
+  </g>
+  <!-- Right Side Graphic: Bank Column & Chart Motif -->
+  <g transform="translate(420, 45)">
+    <!-- Shield / Vault Circle -->
+    <circle cx="70" cy="80" r="64" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <!-- Growth Bars -->
+    <rect x="25" y="90" width="14" height="40" rx="3" fill="rgba(255,255,255,0.4)"/>
+    <rect x="45" y="70" width="14" height="60" rx="3" fill="rgba(255,255,255,0.6)"/>
+    <rect x="65" y="50" width="14" height="80" rx="3" fill="#60a5fa"/>
+    <rect x="85" y="30" width="14" height="100" rx="3" fill="url(#accentGold)"/>
+    <!-- Upward Trend Line -->
+    <path d="M15 110 L45 80 L75 55 L105 20" fill="none" stroke="#fef08a" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="105" cy="20" r="5" fill="#fef08a"/>
+    <!-- Bank Facade Motif -->
+    <path d="M40 148 L70 134 L100 148 Z" fill="#ffffff" opacity="0.85"/>
+    <rect x="46" y="150" width="48" height="4" rx="1" fill="#ffffff" opacity="0.85"/>
+  </g>
+</svg>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Workforce capability center and skill development platform for enterprise teams.">
+    <title>Home 2 - Skill Development Center | Elevate Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("elevate-theme") ||
+          (matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        if (theme) document.documentElement.dataset.theme = theme;
+        const dir = localStorage.getItem("elevate-dir");
+        if (dir) document.documentElement.dir = dir;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header" data-header>
+      <div class="nav-shell glass">
+        <a class="brand" href="index1.html" aria-label="Elevate Learning home">
+          <span class="brand-mark"><i data-lucide="book-open-check"></i></span>
+          <span
+            ><b>Elevate Learning</b>
+            <small>Corporate Training Center</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+              Home <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="index.html" class="dropdown-item">Home 1</a>
+              <a href="index1.html" class="dropdown-item active">Home 2</a>
+            </div>
+          </div>
+          <a href="pages/programs.html">Programs</a>
+          <a href="pages/methodology.html">Methodology</a>
+          <a href="pages/clients.html">Clients</a>
+          <a href="pages/in-house-training.html">In-House Training</a>
+          <a href="pages/about.html">About Us</a>
+          <a href="pages/contact.html">Contact</a>
+          <a href="pages/dashboard.html">Dashboard</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Pages <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu glass">
+              <a href="pages/privacy.html" class="dropdown-item">Privacy Policy</a>
+              <a href="pages/terms.html" class="dropdown-item">Terms of Use</a>
+              <a href="pages/coming-soon.html" class="dropdown-item">Coming Soon</a>
+              <a href="pages/404.html" class="dropdown-item">404</a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button type="button"
+            class="icon-button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+          >
+            <i data-lucide="moon-star"></i></button
+          ><button type="button" class="icon-button rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text" data-rtl-text>RTL</span></button
+          ><a class="button button-sm" href="pages/signin.html"
+            ><i data-lucide="user-round"></i><span>Sign In</span></a
+          ><button aria-label="Open navigation" type="button"
+            class="menu-button"
+            data-menu-button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Mobile navigation" class="mobile-menu glass" id="mobile-menu" data-mobile-menu>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle active" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html">Home 1</a>
+            <a href="index1.html" class="active">Home 2</a>
+          </div>
+        </div>
+        <a href="pages/programs.html">Programs</a>
+        <a href="pages/methodology.html">Methodology</a>
+        <a href="pages/clients.html">Clients</a>
+        <a href="pages/in-house-training.html">In-House Training</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/dashboard.html">Dashboard</a>
+        <div class="mobile-nav-item">
+          <button type="button" class="mobile-dropdown-toggle" data-mobile-dropdown-toggle aria-expanded="false">
+            <span>Pages</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="pages/privacy.html">Privacy Policy</a>
+            <a href="pages/terms.html">Terms of Use</a>
+            <a href="pages/coming-soon.html">Coming Soon</a>
+            <a href="pages/404.html">404</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- Distinct Hero Section: Executive Capability Bento Hero -->
+      <section class="hero-matrix section-shell">
+        <div class="matrix-header reveal">
+          <p class="eyebrow"><span></span> Enterprise Workforce Capability Architecture</p>
+          <h1>
+            Architecting Workforce Capability.<br >
+            <span class="gradient-text">Accelerating Execution.</span>
+          </h1>
+          <p class="hero-lead">
+            Elevate Learning bridges the gap between organizational strategy and frontline performance through precision diagnostics, role-based competency tracks, and verified on-the-job application.
+          </p>
+          <div class="button-row">
+            <a class="button button-lg" href="pages/contact.html"
+              >Request capability audit <i data-lucide="arrow-right"></i
+            ></a>
+            <a class="button button-lg button-ghost" href="pages/methodology.html"
+              >Explore methodology <i data-lucide="compass"></i
+            ></a>
+          </div>
+          <div class="matrix-proof">
+            <i data-lucide="shield-check"></i>
+            <span>Trusted learning architecture across 250+ enterprise organizations</span>
+          </div>
+        </div>
+
+        <!-- Executive Workforce Capability Media Showcase -->
+        <div class="matrix-visual reveal" data-delay="1">
+          <div class="matrix-image-wrap glass">
+            <picture>
+              <source srcset="assets/images/hero-matrix.webp" type="image/webp">
+              <img
+                src="assets/images/hero-matrix.jpg"
+                alt="Executive corporate capability development workshop in modern enterprise boardroom"
+                width="1376"
+                height="768"
+                loading="eager"
+                fetchpriority="high"
+                class="matrix-hero-img">
+            </picture>
+            <div class="matrix-badge matrix-badge-top glass">
+              <span class="status-dot"></span>
+              <div>
+                <b>Live Executive Command Session</b>
+                <small>Global Cross-Functional Leadership</small>
+              </div>
+            </div>
+            <div class="matrix-badge matrix-badge-bottom glass">
+              <span class="mini-icon blue"><i data-lucide="award"></i></span>
+              <div>
+                <b>Capability Roadmap Calibrated</b>
+                <small>Tier-1 Enterprise Architecture</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="matrix-bento reveal" data-delay="2">
+          <article class="bento-card glass">
+            <span class="bento-card-badge"><i data-lucide="scan-line"></i> 01 / Diagnostic</span>
+            <h3>Precision Competency Mapping</h3>
+            <p>We audit baseline capabilities, role benchmarks, and team bottlenecks before curriculum design begins.</p>
+            <ul class="bento-list">
+              <li><i data-lucide="check-circle-2"></i> Role-based diagnostic assessments</li>
+              <li><i data-lucide="check-circle-2"></i> Skill delta gap analysis</li>
+              <li><i data-lucide="check-circle-2"></i> Executive sponsor alignment</li>
+            </ul>
+            <div class="bento-metric-row">
+              <span class="bento-metric-val">94%</span>
+              <span class="bento-metric-lbl">Diagnostic benchmark accuracy</span>
+            </div>
+          </article>
+
+          <article class="bento-card glass">
+            <span class="bento-card-badge"><i data-lucide="layers"></i> 02 / Architecture</span>
+            <h3>Role-Based Agile Pathways</h3>
+            <p>Active, scenario-driven learning journeys engineered around specific workplace friction points.</p>
+            <ul class="bento-list">
+              <li><i data-lucide="check-circle-2"></i> Emerging leads & people managers</li>
+              <li><i data-lucide="check-circle-2"></i> Enterprise commercial velocity</li>
+              <li><i data-lucide="check-circle-2"></i> Data, AI & digital fluency</li>
+            </ul>
+            <div class="bento-metric-row">
+              <span class="bento-metric-val">3 Tiers</span>
+              <span class="bento-metric-lbl">Calibrated organizational levels</span>
+            </div>
+          </article>
+
+          <article class="bento-card glass">
+            <span class="bento-card-badge"><i data-lucide="award"></i> 03 / Transfer</span>
+            <h3>Verified Behavioral Shift</h3>
+            <p>Spaced reinforcement, real scenario deliverables, and manager scorecards ensure lasting habits.</p>
+            <ul class="bento-list">
+              <li><i data-lucide="check-circle-2"></i> 90-day retention nudges</li>
+              <li><i data-lucide="check-circle-2"></i> Kirkpatrick Level 4 business ROI</li>
+              <li><i data-lucide="check-circle-2"></i> Tamper-proof digital certificates</li>
+            </ul>
+            <div class="bento-metric-row">
+              <span class="bento-metric-val">92%</span>
+              <span class="bento-metric-lbl">Documented workplace transfer</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- The Capability Gap We Solve -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Strategic alignment</p>
+            <h2>
+              The difference between attendance and
+              <span class="gradient-text">actual performance.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="split-section">
+          <article class="content-card glass reveal">
+            <p class="eyebrow" style="color: var(--muted);"><span></span> Conventional Training</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--navy);">Why traditional L&D investments stall:</h3>
+            <ul class="framework-list" style="gap: 14px;">
+              <li><i data-lucide="circle-dashed"></i> Generic, one-size-fits-all slide lectures with passive listening</li>
+              <li><i data-lucide="circle-dashed"></i> 80%+ knowledge decay within 30 days due to lack of reinforcement</li>
+              <li><i data-lucide="circle-dashed"></i> Disconnected from actual business KPIs, team workflows, and tools</li>
+              <li><i data-lucide="circle-dashed"></i> Zero post-training governance, manager involvement, or ROI proof</li>
+            </ul>
+          </article>
+          <article class="choose-panel glass reveal" data-delay="1">
+            <p class="eyebrow"><span></span> The Elevate Capability Model</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--navy);">How our programs create durable change:</h3>
+            <ul class="framework-list" style="gap: 14px;">
+              <li><i data-lucide="circle-check"></i> Practice-first micro-simulations built on real enterprise work problems</li>
+              <li><i data-lucide="circle-check"></i> 70-20-10 adult learning framework with deliberate spaced nudges</li>
+              <li><i data-lucide="circle-check"></i> Real-time HR portal tracking cohort attendance, progress, and mastery</li>
+              <li><i data-lucide="circle-check"></i> Kirkpatrick Level 3 & 4 evaluation measuring observable behavior shifts</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Enterprise Architecture & Governance Ecosystem (Unique Section) -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Enterprise Governance & Ecosystem</p>
+            <h2>
+              Enterprise-grade infrastructure designed for
+              <span class="gradient-text">modern people leaders.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="ecosystem-grid">
+          <article class="ecosystem-card glass reveal">
+            <span class="ecosystem-badge"><i data-lucide="layers"></i> 01 / Architecture</span>
+            <h3>Role-Based Competency Architecture</h3>
+            <p>Custom capability tracks calibrated to your organizational career ladders, leveling guides, and strategic OKRs.</p>
+            <div class="ecosystem-footer">
+              <span class="ecosystem-metric-tag"><i data-lucide="check-circle-2"></i> Role-Calibrated</span>
+            </div>
+          </article>
+
+          <article class="ecosystem-card glass reveal" data-delay="1">
+            <span class="ecosystem-badge"><i data-lucide="cpu"></i> 02 / Integration</span>
+            <h3>Seamless LMS & HRIS Integration</h3>
+            <p>Plug-and-play SCORM 1.2/2004, xAPI, and REST APIs to sync attendance and completions with Workday, SAP, or Cornerstone.</p>
+            <div class="ecosystem-footer">
+              <span class="ecosystem-metric-tag"><i data-lucide="check-circle-2"></i> SCORM / xAPI / SSO</span>
+            </div>
+          </article>
+
+          <article class="ecosystem-card glass reveal" data-delay="2">
+            <span class="ecosystem-badge"><i data-lucide="shield-check"></i> 03 / Validation</span>
+            <h3>Tamper-Proof Digital Credentials</h3>
+            <p>Cryptographic QR validation and verifiable digital certificates with 1-click LinkedIn badges and employee compliance logs.</p>
+            <div class="ecosystem-footer">
+              <span class="ecosystem-metric-tag"><i data-lucide="check-circle-2"></i> QR Verified</span>
+            </div>
+          </article>
+
+          <article class="ecosystem-card glass reveal" data-delay="3">
+            <span class="ecosystem-badge"><i data-lucide="line-chart"></i> 04 / Accountability</span>
+            <h3>Kirkpatrick Level 4 Business ROI</h3>
+            <p>Direct correlation of cohort outcomes with departmental KPIs—team velocity, deal close rates, and employee retention.</p>
+            <div class="ecosystem-footer">
+              <span class="ecosystem-metric-tag"><i data-lucide="check-circle-2"></i> 3.8x Avg ROI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3-Tier Enterprise Role Journeys -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Progression architecture</p>
+            <h2>
+              Targeted pathways for every
+              <span class="gradient-text">career milestone.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="case-study-grid">
+          <article class="case-study-card glass reveal">
+            <div class="case-study-header">
+              <span class="case-client-tag">Level 01</span>
+              <span class="case-industry-tag">Execution Tier</span>
+            </div>
+            <h3>Individual Contributors & Emerging Talent</h3>
+            <p>Empower specialists with clear communication, structured problem solving, project governance, and personal productivity rhythms.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>4-Week</b>
+                <span>Intensive sprint</span>
+              </div>
+              <div class="case-metric-box">
+                <b>+32%</b>
+                <span>Task efficiency</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study-card glass reveal" data-delay="1">
+            <div class="case-study-header">
+              <span class="case-client-tag">Level 02</span>
+              <span class="case-industry-tag">Management Tier</span>
+            </div>
+            <h3>People Managers & Team Leads</h3>
+            <p>Transform technical experts into high-trust people leaders capable of coaching under pressure, driving accountability, and navigating change.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>6-Week</b>
+                <span>Blended cohort</span>
+              </div>
+              <div class="case-metric-box">
+                <b>96%</b>
+                <span>Retention rate</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study-card glass reveal" data-delay="2">
+            <div class="case-study-header">
+              <span class="case-client-tag">Level 03</span>
+              <span class="case-industry-tag">Executive Tier</span>
+            </div>
+            <h3>Business Unit Leaders & Executives</h3>
+            <p>Equip senior executives with strategic narrative design, enterprise negotiation acumen, and digital transformation governance.</p>
+            <div class="case-metrics-deck">
+              <div class="case-metric-box">
+                <b>Executive</b>
+                <span>Offsite & 1-on-1</span>
+              </div>
+              <div class="case-metric-box">
+                <b>3.8x</b>
+                <span>Measurable ROI</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Multi-Modal Delivery Formats -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Flexible deployment</p>
+            <h2>
+              Designed for distributed, hybrid, and
+              <span class="gradient-text">on-campus teams.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="modalities-grid">
+          <article class="modality-card glass reveal">
+            <span class="program-icon blue"><i data-lucide="video"></i></span>
+            <h3>Interactive Virtual Studios</h3>
+            <p>Live, synchronous facilitator-led sessions with breakout rooms, live whiteboard simulations, and real-time polling.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Global reach</span>
+              <span class="modality-pill">20–25 per cohort</span>
+              <span class="modality-pill">Recorded replays</span>
+            </div>
+          </article>
+          <article class="modality-card glass reveal" data-delay="1">
+            <span class="program-icon blue"><i data-lucide="building"></i></span>
+            <h3>Executive Training Centers</h3>
+            <p>Full-day immersive masterclasses hosted across our premium training facilities with catered working lunches and networking.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Bangalore, Mumbai, Delhi</span>
+              <span class="modality-pill">Hands-on roleplay</span>
+            </div>
+          </article>
+          <article class="modality-card glass reveal" data-delay="2">
+            <span class="program-icon blue"><i data-lucide="blend"></i></span>
+            <h3>Custom In-House Academies</h3>
+            <p>Bespoke programs co-designed with your internal leaders, delivered on your schedule, and integrated into your corporate LMS.</p>
+            <div class="modality-meta">
+              <span class="modality-pill">Bespoke case studies</span>
+              <span class="modality-pill">SCORM / xAPI export</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- L&D Leader FAQ Accordion -->
+      <section class="section-shell section-pad">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Common questions</p>
+            <h2>
+              Frequently asked questions by
+              <span class="gradient-text">L&D leaders.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="faq-accordion reveal">
+          <details class="faq-item" open>
+            <summary class="faq-summary">
+              <span>How does Elevate Learning measure actual on-the-job capability transfer?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              We employ the Kirkpatrick 4-Level Evaluation Model. Beyond immediate learner reaction surveys, we implement post-training micro-projects, manager observation scorecards at 30 and 60 days, and correlate completion data with your team's departmental KPIs.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Can programs be integrated with our existing LMS and HR portal?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Yes. Our learning management infrastructure supports standard SCORM 1.2/2004 and xAPI integrations, and our HR portal provides secure CSV, REST API, and single sign-on (SSO) options to sync attendance and certifications seamlessly.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>What is the typical time commitment required from our employees?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              Our enterprise cohorts are calibrated for busy professionals: typically two 90-minute live interactive sessions per week over 3 to 4 weeks, paired with 20 minutes of weekly asynchronous micro-practice directly tied to their daily workflow.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Who facilitates the programs and what are their qualifications?</span>
+              <i data-lucide="chevron-down"></i>
+            </summary>
+            <div class="faq-answer">
+              All Elevate Learning facilitators are vetted practitioners with a minimum of 12 years of real-world operational leadership in top-tier organizations. They bring practical field insight, not theoretical academic lectures.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Strategic Consultation CTA -->
+      <section class="section-shell">
+        <div class="cta-panel glass reveal">
+          <div>
+            <h3>Ready to architect a capability roadmap for your workforce?</h3>
+            <p>Schedule a 30-minute discovery consultation with an Elevate Learning practice lead.</p>
+          </div>
+          <a class="button" href="pages/contact.html"
+            >Schedule consultation <i data-lucide="arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html"
+              ><span class="brand-mark"
+                ><i data-lucide="book-open-check"></i></span
+              ><span
+                ><b>Elevate Learning</b>
+                <small>Corporate Training Center</small></span
+              ></a
+            >
+            <p>
+              Practical learning experiences that turn individual capability
+              into measurable organizational performance.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigation</h3>
+            <a href="index.html">Home 1</a>
+            <a href="index1.html">Home 2</a>
+            <a href="pages/programs.html">Programs</a>
+            <a href="pages/methodology.html">Methodology</a>
+            <a href="pages/in-house-training.html">In-House Training</a>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/clients.html">Clients</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="pages/coming-soon.html">Coming Soon</a>
+            <a href="pages/404.html">404</a>
+          </div>
+          <div class="footer-col">
+            <h3>HR Portal</h3>
+            <a href="pages/dashboard.html">Dashboard</a>
+            <a href="pages/signin.html">Sign In</a>
+            <a href="pages/signup.html">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="pages/privacy.html">Privacy Policy</a>
+            <a href="pages/terms.html">Terms of Use</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Elevate Learning. All rights reserved.</span>
+          <span>Designed for learning that lasts.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

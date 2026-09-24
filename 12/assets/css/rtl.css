@@ -1,0 +1,208 @@
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] .header-inner,
+html[dir="rtl"] .exam-card-top,
+html[dir="rtl"] .trust-item,
+html[dir="rtl"] .ribbon-item,
+html[dir="rtl"] .stat,
+html[dir="rtl"] .contact-detail,
+html[dir="rtl"] .material,
+html[dir="rtl"] .quick-action,
+html[dir="rtl"] .faculty-modal-head { flex-direction: row-reverse; }
+html[dir="rtl"] .search-box .icon { right: 12px; left: auto; }
+html[dir="rtl"] .search-box input { padding-right: 38px; padding-left: 12px; }
+html[dir="rtl"] .course-card-footer .btn { margin-left: 0; margin-right: auto; }
+html[dir="rtl"] .course-meta div + div { padding-right: 14px; padding-left: 0; border-right: 1px solid var(--line); border-left: 0; }
+html[dir="rtl"] .popular-label { right: auto; left: 18px; }
+@media (min-width: 760px) and (max-width: 980px) {
+  html[dir="rtl"] .popular-label { right: auto; left: 10px; }
+}
+html[dir="rtl"] .summary-card .summary-icon { right: auto; left: 16px; }
+html[dir="rtl"] .mobile-drawer,
+html[dir="rtl"] .nav:not(.desktop-nav) { inset: 0 auto 0 0; border-left: 0; border-right: 1px solid var(--line); transform: translateX(-100%); }
+html[dir="rtl"] .mobile-drawer.open,
+html[dir="rtl"] .nav:not(.desktop-nav).open { transform: translateX(0); }
+html[dir="rtl"] .dashboard-sidebar { right: 0; left: auto; border-right: 0; border-left: 1px solid var(--line); transform: translateX(100%); }
+html[dir="rtl"] .dashboard-sidebar.open { transform: translateX(0); }
+html[dir="rtl"] .performance-table th,
+html[dir="rtl"] .performance-table td,
+html[dir="rtl"] .compare-table th,
+html[dir="rtl"] .compare-table td:first-child,
+html[dir="rtl"] .faq-question { text-align: right; }
+html[dir="rtl"] .progress span { transform-origin: right; }
+html[dir="rtl"] .password-wrap .field { padding-right: 13px; padding-left: 45px; }
+html[dir="rtl"] .password-toggle { right: auto; left: 3px; }
+html[dir="rtl"] .live-indicator { left: auto; right: 12px; }
+html[dir="rtl"] .live-viewers { right: auto; left: 12px; }
+html[dir="rtl"] .toast { right: auto; left: 18px; border-left: 0; border-right: 4px solid var(--blue-600); }
+html[dir="rtl"] .dropdown-caret { margin-left: 0; margin-right: 6px; }
+html[dir="rtl"] .dropdown-menu.dropdown-menu-end { right: auto; left: 0; }
+html[dir="rtl"] .dropdown-link:hover, html[dir="rtl"] .dropdown-link.active { transform: translateX(-3px); }
+html[dir="rtl"] .card-link .icon { transform: scaleX(-1); }
+html[dir="rtl"] .card-link:hover .icon { transform: scaleX(-1) translateX(4px); }
+html[dir="rtl"] .hero-float { right: auto; left: 5%; }
+@media (max-width: 759px) {
+  html[dir="rtl"] .hero-float { right: auto; left: 10px; }
+}
+html[dir="rtl"] .modal-head { flex-direction: row-reverse; }
+/* Stat strip is two columns at every width below 1024px */
+html[dir="rtl"] .stat:nth-child(odd) { border-right: 0; border-left: 1px solid rgba(255,255,255,.2); }
+html[dir="rtl"] .stat:last-child:nth-child(odd) { border-left: 0; }
+@media (min-width: 1024px) {
+  html[dir="rtl"] .dashboard-sidebar { transform: none; }
+  html[dir="rtl"] .dashboard-main { margin-right: 250px; margin-left: 0; }
+  html[dir="rtl"].dashboard-body .site-footer { margin-right: 250px; margin-left: 0; }
+  html[dir="rtl"] .stat { border-right: 0 !important; border-left: 1px solid rgba(255,255,255,.2) !important; }
+  html[dir="rtl"] .stat:last-child { border-left: 0 !important; }
+}
+@media (max-width: 1023px) {
+  html[dir="rtl"] .dashboard-sidebar:not(.open) { right: -320px; }
+}
+@media (min-width: 1120px) {
+  html[dir="rtl"] .desktop-nav { inset: auto; border: 0; transform: none; }
+  html[dir="rtl"] .mobile-drawer { display: none !important; }
+}
+
+html[dir="rtl"] .auth-header {
+  flex-direction: row;
+}
+html[dir="rtl"] .auth-header-actions {
+  flex-direction: row;
+}
+html[dir="rtl"] .auth-header .back-btn svg {
+  transform: rotate(0deg) !important;
+}
+html[dir="rtl"] .auth-shell {
+  direction: rtl;
+}
+html[dir="rtl"] .auth-visual {
+  text-align: right;
+}
+html[dir="rtl"] .auth-form {
+  text-align: right;
+}
+html[dir="rtl"] .check-row {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .masterclass-card {
+  text-align: right;
+}
+html[dir="rtl"] .masterclass-educator {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .masterclass-footer {
+  flex-direction: row;
+}
+html[dir="rtl"] .doubt-engine-banner,
+html[dir="rtl"] .doubt-engine-left {
+  text-align: center;
+}
+html[dir="rtl"] .doubt-stats-row {
+  flex-direction: row;
+  justify-content: center;
+}
+
+html[dir="rtl"] .prep-pillar-card {
+  text-align: right;
+}
+html[dir="rtl"] .strategy-calculator-head {
+  text-align: right;
+}
+html[dir="rtl"] .strategy-advice-box {
+  border-left: 0;
+  border-right: 3px solid #38bdf8;
+  text-align: right;
+}
+html[dir="rtl"] .calc-output-actions .btn .icon {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .drill-opt-btn {
+  text-align: right;
+}
+html[dir="rtl"] .ca-card-head,
+html[dir="rtl"] .ca-item,
+html[dir="rtl"] .radar-card {
+  text-align: right;
+}
+html[dir="rtl"] .countdown-badge {
+  padding-right: 0;
+  padding-left: 10px;
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+html[dir="rtl"] .radar-link .icon {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .radar-link:hover .icon {
+  transform: scaleX(-1) translateX(-3px);
+}
+
+/* Faculty Page Pedagogy & Mentorship Booking */
+html[dir="rtl"] .pedagogy-pillar-item,
+html[dir="rtl"] .mentor-booking-card {
+  text-align: right;
+}
+html[dir="rtl"] .slot-chip-group {
+  justify-content: flex-start;
+}
+
+/* Results Page Cutoff Analyzer & Transformations */
+html[dir="rtl"] .cutoff-explorer-card,
+html[dir="rtl"] .score-evaluator-card,
+html[dir="rtl"] .transformation-card,
+html[dir="rtl"] .registry-shell {
+  text-align: right;
+}
+html[dir="rtl"] .registry-search-wrap .search-icon {
+  left: auto;
+  right: 12px;
+}
+html[dir="rtl"] .registry-search-wrap .field {
+  padding-left: 12px;
+  padding-right: 36px;
+}
+html[dir="rtl"] .benchmark-label-row {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .benchmark-fill {
+  left: auto;
+  right: 0;
+}
+html[dir="rtl"] .class-card-header {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .header-actions .header-login-btn {
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+/* RTL: Milestones, Helpdesks, Weightage Matrix, and Infographic Vault */
+html[dir="rtl"] .timeline-track {
+  background: linear-gradient(270deg, #93c5fd 0%, #3b82f6 50%, #2563eb 100%);
+}
+html[dir="rtl"] .timeline-card,
+html[dir="rtl"] .helpdesk-card,
+html[dir="rtl"] .vault-card {
+  text-align: right;
+}
+html[dir="rtl"] .timeline-tag {
+  align-self: flex-start;
+}
+html[dir="rtl"] .helpdesk-header,
+html[dir="rtl"] .vault-card-header {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .weightage-table {
+  text-align: right;
+}
+
+html[dir="rtl"] .cat-card-tag { left: auto; right: 14px; }
+html[dir="rtl"] .hero-score-badge { left: auto; right: 24px; }
+html[dir="rtl"] .page-hero-visual { margin-left: 0; margin-right: auto; }
+html[dir="rtl"] .story-rank-badge { right: auto; left: -6px; }
+html[dir="rtl"] .batch-card-top,
+html[dir="rtl"] .cat-card-footer,
+html[dir="rtl"] .batch-card-footer { flex-direction: row-reverse; }
+
+

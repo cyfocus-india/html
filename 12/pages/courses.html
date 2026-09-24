@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore ExamSuccess competitive exam courses for banking, SSC, railways, engineering, teaching, state and defence exams.">
+  <title>Courses — ExamSuccess</title><link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"><script defer src="../assets/js/main.js"></script>
+</head>
+<body data-page="courses"><a class="skip-link" href="#main">Skip to content</a><div data-site-header></div>
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-copy" data-reveal>
+        <span class="eyebrow" style="color:var(--blue-700);background:var(--blue-50);border-color:var(--blue-200);display:inline-flex;align-items:center;gap:6px">
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--blue-600)"></span>
+          2026–27 Academic Programs
+        </span>
+        <h1>Competitive Exam Courses</h1>
+        <p>Choose your target examination and begin your structured journey with daily live interactive lectures, TCS iON pattern test series, 15-year solved question banks, and dedicated ranker mentorship.</p>
+        <div class="benefit-mini-grid" style="margin-top:20px">
+          <div class="benefit-mini"><span class="trust-icon"><svg class="icon"><use href="#file"></use></svg></span>200+ Batches</div>
+          <div class="benefit-mini"><span class="trust-icon"><svg class="icon"><use href="#users"></use></svg></span>2,50,000+ Enrolled</div>
+          <div class="benefit-mini"><span class="trust-icon"><svg class="icon"><use href="#award"></use></svg></span>500+ Faculty</div>
+          <div class="benefit-mini"><span class="trust-icon"><svg class="icon"><use href="#target"></use></svg></span>95% Pass Rate</div>
+        </div>
+      </div>
+      <div class="page-hero-visual" data-reveal>
+        <picture>
+          <source srcset="../assets/images/heroes/hero-courses.webp" type="image/webp">
+          <img src="../assets/images/heroes/hero-courses.jpg" width="900" height="600" alt="Online Competitive Exam Courses and Live Learning Platform" fetchpriority="high">
+        </picture>
+        <div class="page-hero-badge">
+          <svg class="icon" style="color:var(--blue-600);width:20px;height:20px"><use href="#book"></use></svg>
+          <span><strong>Bilingual Live Classes</strong> + Full Test Series Included</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-sm"><div class="container catalog-layout">
+    <div class="mobile-filter-bar">
+      <button class="btn btn-outline btn-sm" id="mobileFilterToggle" type="button">
+        <svg class="icon" aria-hidden="true"><use href="#search"></use></svg>
+        Filter Exams &amp; Subjects
+      </button>
+      <span class="mobile-course-count" id="courseCountDisplay">Showing 8 Courses</span>
+    </div>
+
+    <aside class="card filter-panel" aria-label="Course filters" data-reveal>
+      <h2>Find Your Course</h2>
+      <div class="search-box">
+        <svg class="icon" aria-hidden="true"><use href="#search"></use></svg>
+        <input id="courseSearch" type="search" placeholder="Search exams (e.g. SBI PO, CGL)..." aria-label="Search courses">
+      </div>
+      <h2 style="margin-top:20px">Exam Category</h2>
+      <ul class="filter-list">
+        <li><button class="filter-chip active" data-course-filter="all"><svg class="icon"><use href="#book"></use></svg>All Courses</button></li>
+        <li><button class="filter-chip" data-course-filter="banking"><svg class="icon"><use href="#bank"></use></svg>Banking Exams</button></li>
+        <li><button class="filter-chip" data-course-filter="ssc"><svg class="icon"><use href="#users"></use></svg>SSC Exams</button></li>
+        <li><button class="filter-chip" data-course-filter="railways"><svg class="icon"><use href="#train"></use></svg>Railways Exams</button></li>
+        <li><button class="filter-chip" data-course-filter="engineering"><svg class="icon"><use href="#gear"></use></svg>Engineering Entrance</button></li>
+        <li><button class="filter-chip" data-course-filter="teaching"><svg class="icon"><use href="#cap"></use></svg>Teaching Exams</button></li>
+        <li><button class="filter-chip" data-course-filter="state"><svg class="icon"><use href="#location"></use></svg>State PSC &amp; Police</button></li>
+        <li><button class="filter-chip" data-course-filter="defence"><svg class="icon"><use href="#shield"></use></svg>Defence Exams</button></li>
+      </ul>
+      <h2>Course Format</h2>
+      <label class="check-row" for="filterTypeLive"><input type="checkbox" id="filterTypeLive" data-type-filter="live"> Live Classes</label>
+      <label class="check-row" for="filterTypeRecorded"><input type="checkbox" id="filterTypeRecorded" data-type-filter="recorded"> Recorded Video Library</label>
+      <label class="check-row" for="filterTypeTest"><input type="checkbox" id="filterTypeTest" data-type-filter="test"> Full Mock Test Series</label>
+      <label class="check-row" for="filterTypeEbook"><input type="checkbox" id="filterTypeEbook" data-type-filter="ebook"> E-books &amp; PDF Notes</label>
+      <h2 style="margin-top:18px">Instruction Language</h2>
+      <label class="check-row" for="filterLangEnglish"><input type="checkbox" id="filterLangEnglish" data-lang-filter="english"> English Medium</label>
+      <label class="check-row" for="filterLangHinglish"><input type="checkbox" id="filterLangHinglish" data-lang-filter="hinglish"> Hinglish (Bilingual)</label>
+      <label class="check-row" for="filterLangHindi"><input type="checkbox" id="filterLangHindi" data-lang-filter="hindi"> Hindi Medium</label>
+      <button class="btn btn-outline btn-sm" id="clearFilters" style="width:100%;margin-top:14px">Reset All Filters</button>
+    </aside>
+
+    <div class="catalog-main" data-course-catalog>
+      <div class="catalog-top" data-reveal>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-course-filter="all">All Programs</button>
+          <button class="tab" data-course-filter="banking">Banking</button>
+          <button class="tab" data-course-filter="ssc">SSC</button>
+          <button class="tab" data-course-filter="railways">Railways</button>
+          <button class="tab" data-course-filter="engineering">Engineering</button>
+          <button class="tab" data-course-filter="teaching">Teaching</button>
+          <button class="tab" data-course-filter="state">State PSC</button>
+          <button class="tab" data-course-filter="defence">Defence</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <span id="desktopCourseCount" style="font-size:.82rem;font-weight:700;color:var(--muted);white-space:nowrap">8 Programs</span>
+          <select class="sort-select" aria-label="Sort courses">
+            <option value="popularity">Sort: Most Popular</option>
+            <option value="students">Sort: Highest Enrolled</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="course-card-grid">
+        <article class="card course-detail-card" id="banking" data-course data-category="banking" data-students="35000" data-price="2999" data-type="live,recorded,test" data-lang="hinglish,english" style="--tone:#159447" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-banking.webp" type="image/webp">
+              <img src="../assets/images/courses/course-banking.jpg" width="1200" height="520" alt="Banking Exams Master Track" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#bank"></use></svg></span>
+            <div>
+              <h3>Banking Exams Master Track</h3>
+              <p>IBPS PO/Clerk, SBI PO/Clerk, RBI Grade B, NABARD</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">Daily Live 7:00 PM</span>
+            <span class="course-badge">120+ Mocks</span>
+            <span class="course-badge">Prelims + Mains</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>IBPS PO &amp; Clerk (Prelims + Mains)</li>
+            <li><svg class="icon"><use href="#check"></use></svg>SBI PO &amp; Junior Associates Target Batch</li>
+            <li><svg class="icon"><use href="#check"></use></svg>RBI Grade B Phase 1 &amp; Phase 2 ESI/FM</li>
+            <li><svg class="icon"><use href="#check"></use></svg>NABARD Grade A Economic &amp; Social Issues</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>120+</strong><span>Courses</span></div>
+              <div><strong>35,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="banking">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" id="ssc" data-course data-category="ssc" data-students="30000" data-price="2499" data-type="live,recorded,test" data-lang="hinglish,hindi,english" style="--tone:#6237cd" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-ssc.webp" type="image/webp">
+              <img src="../assets/images/courses/course-ssc.jpg" width="1200" height="520" alt="SSC Comprehensive Foundation" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#users"></use></svg></span>
+            <div>
+              <h3>SSC Comprehensive Foundation</h3>
+              <p>CGL, CHSL, MTS, CPO, GD Constable</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">Tier 1 &amp; Tier 2</span>
+            <span class="course-badge">15 Yrs PYQ Solved</span>
+            <span class="course-badge">Weekly All-India Tests</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>SSC CGL Tier 1 + Tier 2 Complete Syllabus</li>
+            <li><svg class="icon"><use href="#check"></use></svg>SSC CHSL 10+2 Dedicated Speed Batch</li>
+            <li><svg class="icon"><use href="#check"></use></svg>SSC MTS &amp; Havaldar General Studies Focus</li>
+            <li><svg class="icon"><use href="#check"></use></svg>SSC GD Constable Math &amp; Reasoning Drills</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>100+</strong><span>Courses</span></div>
+              <div><strong>30,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="ssc">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" id="railways" data-course data-category="railways" data-students="25000" data-price="1999" data-type="live,recorded,test,ebook" data-lang="hinglish,hindi" style="--tone:#ef233c" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-railways.webp" type="image/webp">
+              <img src="../assets/images/courses/course-railways.jpg" width="1200" height="520" alt="Railways RRB Super Batch" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#train"></use></svg></span>
+            <div>
+              <h3>Railways RRB Super Batch</h3>
+              <p>RRB NTPC, Group D, ALP, Technician, RRB JE</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">CBT-1 + CBT-2</span>
+            <span class="course-badge">NCERT Science</span>
+            <span class="course-badge">Bi-lingual Notes</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>RRB NTPC Graduate &amp; Under-Graduate Posts</li>
+            <li><svg class="icon"><use href="#check"></use></svg>RRB Group D General Science Mastery</li>
+            <li><svg class="icon"><use href="#check"></use></svg>RRB ALP (Assistant Loco Pilot) Technical</li>
+            <li><svg class="icon"><use href="#check"></use></svg>RRB JE Junior Engineer Stage 1 &amp; 2</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>80+</strong><span>Courses</span></div>
+              <div><strong>25,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="railways">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" id="engineering" data-course data-category="engineering" data-students="20000" data-price="3999" data-type="live,recorded,test" data-lang="english,hinglish" style="--tone:#1764e8" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-engineering.webp" type="image/webp">
+              <img src="../assets/images/courses/course-engineering.jpg" width="1200" height="520" alt="Engineering Entrance &amp; GATE" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#gear"></use></svg></span>
+            <div>
+              <h3>Engineering Entrance &amp; GATE</h3>
+              <p>JEE Main, JEE Advanced, GATE, State CETs</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">IITian Faculty</span>
+            <span class="course-badge">Numerical Practice</span>
+            <span class="course-badge">Formula Handbook</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>JEE Main Target 2026 Physics &amp; Chemistry</li>
+            <li><svg class="icon"><use href="#check"></use></svg>JEE Advanced Advanced Problem Solving</li>
+            <li><svg class="icon"><use href="#check"></use></svg>GATE Engineering Mathematics &amp; Aptitude</li>
+            <li><svg class="icon"><use href="#check"></use></svg>State Engineering CETs (MHT-CET, KCET, WBJEE)</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>70+</strong><span>Courses</span></div>
+              <div><strong>20,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="engineering">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" id="teaching" data-course data-category="teaching" data-students="15000" data-price="1999" data-type="recorded,live,test" data-lang="hinglish,hindi" style="--tone:#d97706" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-teaching.webp" type="image/webp">
+              <img src="../assets/images/courses/course-teaching.jpg" width="1200" height="520" alt="Teaching Eligibility &amp; Recruitment" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#cap"></use></svg></span>
+            <div>
+              <h3>Teaching Eligibility &amp; Recruitment</h3>
+              <p>CTET, State TETs, KVS, NVS, DSSSB</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">Child Pedagogy</span>
+            <span class="course-badge">Paper 1 &amp; 2</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>CTET Paper I &amp; Paper II Comprehensive</li>
+            <li><svg class="icon"><use href="#check"></use></svg>UP TET &amp; Super TET Special Batch</li>
+            <li><svg class="icon"><use href="#check"></use></svg>KVS PRT, TGT &amp; PGT Recruitment</li>
+            <li><svg class="icon"><use href="#check"></use></svg>DSSSB Teacher Selection Exam Prep</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>60+</strong><span>Courses</span></div>
+              <div><strong>15,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="teaching">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" data-course data-category="state" data-students="18000" data-price="2299" data-type="recorded,test,ebook" data-lang="hindi,hinglish" style="--tone:#009f9a" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-state.webp" type="image/webp">
+              <img src="../assets/images/courses/course-state.jpg" width="1200" height="520" alt="State PSC &amp; Police Exams" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#location"></use></svg></span>
+            <div>
+              <h3>State PSC &amp; Police Exams</h3>
+              <p>UPPSC, BPSC, MPPSC, Police SI &amp; Constable</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">State GK Special</span>
+            <span class="course-badge">Daily Current Affairs</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>UPPSC &amp; BPSC Prelims General Studies</li>
+            <li><svg class="icon"><use href="#check"></use></svg>MPPSC Prelims &amp; Mains Module</li>
+            <li><svg class="icon"><use href="#check"></use></svg>State Police Sub-Inspector (SI) Batch</li>
+            <li><svg class="icon"><use href="#check"></use></svg>Patwari &amp; Revenue Officer Preparation</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>90+</strong><span>Courses</span></div>
+              <div><strong>18,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="state">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" id="defence" data-course data-category="defence" data-students="10000" data-price="2699" data-type="live,recorded,test" data-lang="english,hinglish" style="--tone:#587522" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-defence.webp" type="image/webp">
+              <img src="../assets/images/courses/course-defence.jpg" width="1200" height="520" alt="Defence &amp; Armed Forces" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#shield"></use></svg></span>
+            <div>
+              <h3>Defence &amp; Armed Forces</h3>
+              <p>NDA, CDS, AFCAT, CAPF Assistant Commandant</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">SSB Interview Prep</span>
+            <span class="course-badge">Written Exam Mastery</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>NDA &amp; NA Written Examination Batch</li>
+            <li><svg class="icon"><use href="#check"></use></svg>CDS Combined Defence Services Written</li>
+            <li><svg class="icon"><use href="#check"></use></svg>AFCAT Air Force Common Admission Test</li>
+            <li><svg class="icon"><use href="#check"></use></svg>CAPF AC Paper 1 &amp; Paper 2 Descriptive</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>50+</strong><span>Courses</span></div>
+              <div><strong>10,000+</strong><span>Aspirants</span></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-open-syllabus="defence">Explore Syllabus</button>
+              <a class="btn btn-primary btn-sm" href="signin.html">Enroll Now <svg class="icon"><use href="#arrow"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card course-detail-card" data-course data-category="banking" data-students="40000" data-price="799" data-type="test" data-lang="english,hinglish,hindi" style="--tone:#325ee7" data-reveal>
+          <div class="course-card-image">
+            <picture>
+              <source srcset="../assets/images/courses/course-testpass.webp" type="image/webp">
+              <img src="../assets/images/courses/course-testpass.jpg" width="1200" height="520" alt="All-India Test Pass (500+ Mocks)" loading="lazy">
+            </picture>
+          </div>
+          <div class="exam-card-top">
+            <span class="exam-icon"><svg class="icon"><use href="#clipboard"></use></svg></span>
+            <div>
+              <h3>All-India Test Pass (500+ Mocks)</h3>
+              <p>Sectional, Chapter &amp; Full Length Mocks with AIR</p>
+            </div>
+          </div>
+          <div class="course-badge-row">
+            <span class="course-badge highlight">Real Exam Interface</span>
+            <span class="course-badge">Detailed Solutions</span>
+          </div>
+          <ul class="course-list">
+            <li><svg class="icon"><use href="#check"></use></svg>500+ Full-Length Mock Tests for Banking &amp; SSC</li>
+            <li><svg class="icon"><use href="#check"></use></svg>Sectional Speed &amp; Accuracy Drills</li>
+            <li><svg class="icon"><use href="#check"></use></svg>10 Years Solved Previous Year Question Papers</li>
+            <li><svg class="icon"><use href="#check"></use></svg>All-India Rank, Percentile &amp; Weakness Analytics</li>
+          </ul>
+          <div class="course-card-footer">
+            <div class="course-meta">
+              <div><strong>500+</strong><span>Mock Tests</span></div>
+              <div><strong>40,000+</strong><span>Aspirants</span></div>
+            </div>
+            <a class="btn btn-primary btn-sm" href="fees.html">Get Test Pass <svg class="icon"><use href="#arrow"></use></svg></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="finder-banner" data-reveal>
+        <div>
+          <h3>Not Sure Which Exam or Batch to Choose?</h3>
+          <p>Answer 2 quick questions to get personalized course recommendations and scholarship eligibility.</p>
+        </div>
+        <button class="btn btn-primary" data-modal-open="finderModal">Take Course Finder Quiz <svg class="icon"><use href="#arrow"></use></svg></button>
+      </div>
+    </div>
+  </div></section>
+</main><div data-site-footer></div>
+<div class="modal" id="finderModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="finder-title">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <h2 id="finder-title">Course Recommendation Quiz</h2>
+      <button class="icon-btn" data-modal-close aria-label="Close"><svg class="icon"><use href="#close"></use></svg></button>
+    </div>
+    <form class="form-grid" data-validate data-success="Your course recommendations are ready!">
+      <div class="form-row">
+        <label for="goal">What is your target competitive exam?</label>
+        <select class="field" id="goal" required>
+          <option value="">Choose an exam stream</option>
+          <option value="Banking">Banking (IBPS PO, SBI PO, RBI)</option>
+          <option value="SSC">SSC (CGL, CHSL, MTS)</option>
+          <option value="Railways">Railways (RRB NTPC, Group D, ALP)</option>
+          <option value="Engineering">Engineering (JEE Main, GATE)</option>
+        </select>
+        <p class="field-error" data-error-for="goal"></p>
+      </div>
+      <div class="form-row">
+        <label for="timeline">When is your exam planned?</label>
+        <select class="field" id="timeline" required>
+          <option value="">Choose preparation timeline</option>
+          <option value="3 Months">Under 3 months (Crash Course &amp; Mocks)</option>
+          <option value="6 Months">3–6 months (Foundation + Practice)</option>
+          <option value="12 Months">6–12 months (Comprehensive Masterclass)</option>
+        </select>
+        <p class="field-error" data-error-for="timeline"></p>
+      </div>
+      <button class="btn btn-primary" type="submit">Show Personalized Plan</button>
+      <p class="form-status" data-form-status hidden></p>
+    </form>
+  </div>
+</div>
+</body></html>

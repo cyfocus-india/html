@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Journal | Oven &amp; Bloom</title>
+    <meta
+      name="description"
+      content="Recipes, baking guides, and notes from the Oven &amp; Bloom bakery in Bengaluru."
+    />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist:wght@400;500;600;700&display=swap"
+    />
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-loader" aria-hidden="true">
+      <span class="loader-mark"><i class="ph ph-cake"></i></span>
+    </div>
+    <header class="site-header" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="../index.html"
+          ><span class="brand-mark"><i class="ph ph-cake"></i></span
+          ><span>Oven &amp; Bloom</span></a
+        >
+                        <nav class="site-nav" data-nav aria-label="Primary navigation">
+          <div class="nav-dropdown" data-nav-dropdown>
+            <button
+              class="nav-dropdown__trigger"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Home menu"
+            >
+              <span>Home</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="nav-dropdown__menu" role="menu">
+              <a
+                href="../index.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Home 1</span>
+              </a>
+              <a
+                href="../index1.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Home 2</span>
+              </a>
+            </div>
+          </div>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Cakes</a>
+          <a href="custom-orders.html">Custom Orders</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="delivery.html">Delivery</a>
+          <div class="nav-dropdown" data-nav-dropdown>
+            <button
+              class="nav-dropdown__trigger"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Pages menu" aria-current="page"
+            >
+              <span>Pages</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="nav-dropdown__menu" role="menu">
+              <a
+                href="services.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Services</span>
+              </a>
+              <a
+                href="blog.html"
+                class="nav-dropdown__item"
+                role="menuitem" aria-current="page"
+              >
+                <span class="nav-dropdown__title">Journal</span>
+              </a>
+              <a
+                href="coming-soon.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Coming Soon</span>
+              </a>
+              <a
+                href="404.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">404</span>
+              </a>
+              <a
+                href="privacy.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Privacy Policy</span>
+              </a>
+              <a
+                href="terms.html"
+                class="nav-dropdown__item"
+                role="menuitem"
+              >
+                <span class="nav-dropdown__title">Terms &amp; Conditions</span>
+              </a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <div class="site-nav__cta">
+            <a class="btn btn--primary" href="products.html">Order Cake</a>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="icon-btn"
+            type="button"
+            data-direction-toggle
+            aria-label="Switch to Right-to-Left layout (RTL)"
+            aria-pressed="false"
+          >
+            <span class="dir-badge" aria-hidden="true">RTL</span>
+          </button>
+          <button
+            class="icon-btn"
+            type="button"
+            data-theme-toggle
+            aria-label="Use dark theme"
+            aria-pressed="false"
+          >
+            <i class="ph ph-moon" aria-hidden="true"></i>
+          </button>
+          <a class="btn btn--primary nav-cta" href="products.html">Order Cake</a>
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="ph ph-list" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero page-hero--image" aria-labelledby="journal-title">
+        <img
+          class="page-hero__bg"
+          src="https://images.unsplash.com/photo-1631891348440-9baa256187c5?auto=format&amp;fit=crop&amp;w=2000&amp;q=82"
+          width="1800"
+          height="1000"
+          alt="Slice of celebration cake served with tea beside an open journal"
+        fetchpriority="high"
+          loading="eager"
+        />
+        <div class="container">
+          <div class="page-hero__content">
+            <span class="eyebrow" data-hero-reveal>Journal</span>
+            <h1 class="page-hero__title" id="journal-title" data-hero-reveal>
+              Journal
+            </h1>
+            <p class="page-hero__lead" data-hero-reveal>
+              Flavour ideas, celebration guidance, and small stories from behind
+              the bakery door.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section section--paper">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Freshly written</span>
+              <h2>What we are thinking about.</h2>
+            </div>
+          </div>
+          <div class="journal-grid">
+            <article class="journal-card" data-journal="strawberries">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="strawberries" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Strawberries and cream cake"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>The brief season for strawberries</h2>
+                <p>
+                  Why the sweetest local fruit changes the way we build a layer
+                  cake.
+                </p>
+                <span class="text-link"
+                  >Read the note <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+            <article class="journal-card" data-journal="cake-tasting">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="cake-tasting" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1542691457-cbe4df041eb2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Wedding cake tasting plates"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>How to plan a cake tasting</h2>
+                <p>
+                  Six useful questions and one permission: you do not have to
+                  choose vanilla.
+                </p>
+                <span class="text-link"
+                  >Read the guide <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+            <article class="journal-card" data-journal="colour-palette">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="colour-palette" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Colourful seasonal dessert"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>A colour palette you can taste</h2>
+                <p>
+                  Connecting flowers, fruit, and frosting without making
+                  everything match.
+                </p>
+                <span class="text-link"
+                  >Read the note <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+            <article class="journal-card" data-journal="slow-dough">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="slow-dough" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Baker kneading dough"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>What slow dough gives back</h2>
+                <p>
+                  The quiet overnight work behind the first buttery layers of
+                  morning.
+                </p>
+                <span class="text-link"
+                  >Read the story <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+            <article class="journal-card" data-journal="childs-sketch">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="childs-sketch" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Child's colourful birthday cake"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>Turning a child's sketch into cake</h2>
+                <p>
+                  Keeping the charming wobble while making the whole thing stand
+                  up.
+                </p>
+                <span class="text-link"
+                  >Read the story <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+            <article class="journal-card" data-journal="office-gift">
+              <a href="#journal-detail-modal" class="journal-card__link" data-journal-trigger="office-gift" aria-haspopup="dialog"
+                ><div class="journal-card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    width="900"
+                    height="680"
+                    alt="Pastries packed in a gift box"
+                    loading="lazy"
+                  />
+                </div>
+                <h2>The generous office gift</h2>
+                <p>
+                  How to send something personal when the list has two hundred
+                  names.
+                </p>
+                <span class="text-link"
+                  >Read the guide <i class="ph ph-arrow-right"></i></span
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="big-cta">
+        <div class="container">
+          <h2>Prefer cake to reading?</h2>
+          <p>That is entirely reasonable. The counter changes every morning.</p>
+          <a class="btn btn--light" href="products.html"
+            >See today's favourites</a
+          >
+        </div>
+      </section>
+
+      <!-- Journal Article Detail Modal -->
+      <dialog
+        id="journal-detail-modal"
+        class="journal-modal cake-modal"
+        aria-labelledby="modal-journal-title"
+        aria-modal="true"
+      >
+        <div class="journal-modal__container cake-modal__container">
+          <button
+            class="cake-modal__close"
+            type="button"
+            data-journal-modal-close
+            aria-label="Close article"
+          >
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+          <div class="journal-modal__media" data-journal-modal-media></div>
+          <div class="journal-modal__body">
+            <div class="journal-modal__header">
+              <div class="cake-modal__tags" data-journal-modal-tags></div>
+              <h2
+                id="modal-journal-title"
+                class="journal-modal__title"
+                data-journal-modal-title
+              >
+                Article Title
+              </h2>
+              <div class="journal-modal__byline">
+                <span class="journal-modal__author" data-journal-modal-author
+                  ><i class="ph ph-user" aria-hidden="true"></i> Author</span
+                >
+                <span class="journal-modal__dot">·</span>
+                <span class="journal-modal__date" data-journal-modal-date
+                  ><i class="ph ph-calendar-blank" aria-hidden="true"></i>
+                  Date</span
+                >
+                <span class="journal-modal__dot">·</span>
+                <span
+                  class="journal-modal__readtime"
+                  data-journal-modal-readtime
+                  ><i class="ph ph-clock" aria-hidden="true"></i> 4 min
+                  read</span
+                >
+              </div>
+            </div>
+            <p class="journal-modal__lead" data-journal-modal-lead>
+              Article lead description.
+            </p>
+            <div
+              class="journal-modal__content"
+              data-journal-modal-content
+            ></div>
+            <div class="journal-modal__footer">
+              <div
+                class="journal-modal__tags-wrap"
+                data-journal-modal-bottom-tags
+              ></div>
+              <div class="journal-modal__cta-row">
+                <a
+                  class="btn btn--primary"
+                  href="products.html"
+                  data-journal-modal-cta
+                >
+                  Explore seasonal cakes
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </main>
+        <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html"
+              ><span class="brand-mark"
+                ><i class="ph ph-cake" aria-hidden="true"></i></span
+              ><span>Oven &amp; Bloom</span></a
+            >
+            <p>
+              A neighbourhood bakery and cake studio for warm mornings, generous
+              tables, and memorable celebrations in Bengaluru.
+            </p>
+            <form
+              class="newsletter-form"
+              action="#"
+              method="post"
+              data-integration="newsletter-placeholder"
+              data-validate
+              novalidate
+            >
+              <div class="newsletter-form__bar">
+                <label class="visually-hidden" for="footer-email"
+                  >Email address</label
+                >
+                <input
+                  id="footer-email"
+                  type="email"
+                  name="EMAIL"
+                  placeholder="Fresh notes to your inbox"
+                  required
+                />
+                <button class="btn btn--light" type="submit">Join us</button>
+              </div>
+              <span class="form-status" role="alert" aria-live="polite" data-success-msg="Welcome to the list. Your first sweet note is on its way."
+                ></span
+              >
+            </form>
+          </div>
+          <div class="footer-column">
+            <h2>Main Pages</h2>
+            <div class="footer-links">
+              <a href="../index.html">Home 1</a>
+              <a href="../index1.html">Home 2</a>
+              <a href="products.html">Cakes</a>
+              <a href="custom-orders.html">Custom Orders</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="delivery.html">Delivery</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h2>About &amp; Info</h2>
+            <div class="footer-links">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="blog.html">Journal</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; More</h2>
+            <div class="footer-links">
+              <a href="coming-soon.html">Coming Soon</a>
+              <a href="404.html">404</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year></span> Oven &amp; Bloom. Baked with care.</span>
+          <div class="social-links">
+            <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
+              ><i class="ph ph-instagram-logo" aria-hidden="true"></i></a
+            ><a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"
+              ><i class="ph ph-pinterest-logo" aria-hidden="true"></i></a
+            ><a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"
+              ><i class="ph ph-whatsapp-logo" aria-hidden="true"></i></a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="teachGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="55%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="softGlowTeach" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="260" rx="14" fill="url(#teachGrad)"/>
+  <circle cx="480" cy="120" r="90" fill="#a78bfa" opacity="0.3" filter="url(#softGlowTeach)"/>
+  <rect x="44" y="32" width="148" height="26" rx="13" fill="rgba(255,255,255,0.16)"/>
+  <text x="58" y="49" fill="#ddd6fe" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em">TEACHING &amp; EDUCATION</text>
+  <text x="44" y="98" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">CTET, State TETs &amp; UGC NET</text>
+  <text x="44" y="124" fill="#ede9fe" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">Child Development &amp; Pedagogy, Paper 1 &amp; 2 Specialization</text>
+  <g transform="translate(44, 160)">
+    <rect width="112" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="14" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Paper 1 &amp; 2</text>
+    <rect x="124" width="138" height="32" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="138" y="21" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">18,000+ Enrolled</text>
+  </g>
+  <!-- Right Side Graphic: Mortarboard & Open Pedagogy Book -->
+  <g transform="translate(425, 50)">
+    <circle cx="65" cy="70" r="62" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <!-- Mortarboard Cap -->
+    <polygon points="65,36 108,52 65,68 22,52" fill="#ffffff"/>
+    <path d="M42 63 L42 84 Q65 96 88 84 L88 63" fill="#ffffff" opacity="0.9"/>
+    <!-- Tassel -->
+    <path d="M100 55 L108 75 L104 88" fill="none" stroke="#fde047" stroke-width="2.5"/>
+    <circle cx="104" cy="90" r="3.5" fill="#fde047"/>
+    <!-- Book Base -->
+    <path d="M35 110 Q65 104 95 110 L95 125 Q65 119 35 125 Z" fill="#ffffff" opacity="0.8"/>
+  </g>
+</svg>

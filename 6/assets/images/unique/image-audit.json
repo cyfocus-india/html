@@ -1,0 +1,89 @@
+{
+  "pages": 14,
+  "photo_placements": 50,
+  "distinct_photo_files": 50,
+  "distinct_photo_hashes": 50,
+  "distinct_heroes": 14,
+  "duplicates": {},
+  "errors": [],
+  "page_details": [
+    {
+      "page": "index.html",
+      "photo_count": 7,
+      "hero": "assets/images/mechanic-inspection.webp"
+    },
+    {
+      "page": "index1.html",
+      "photo_count": 10,
+      "hero": "assets/images/engine-diagnostics.webp"
+    },
+    {
+      "page": "pages/404.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-404.webp"
+    },
+    {
+      "page": "pages/about.html",
+      "photo_count": 7,
+      "hero": "../assets/images/hero-workshop.webp"
+    },
+    {
+      "page": "pages/brands.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-brands.webp"
+    },
+    {
+      "page": "pages/coming-soon.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-coming-soon.webp"
+    },
+    {
+      "page": "pages/contact.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-contact.webp"
+    },
+    {
+      "page": "pages/pricing.html",
+      "photo_count": 5,
+      "hero": "../assets/images/unique/hero-pricing.webp"
+    },
+    {
+      "page": "pages/privacy.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-privacy.webp"
+    },
+    {
+      "page": "pages/reviews.html",
+      "photo_count": 2,
+      "hero": "../assets/images/unique/hero-reviews.webp"
+    },
+    {
+      "page": "pages/services.html",
+      "photo_count": 11,
+      "hero": "../assets/images/unique/hero-services.webp"
+    },
+    {
+      "page": "pages/signin.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-signin.webp"
+    },
+    {
+      "page": "pages/signup.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-signup.webp"
+    },
+    {
+      "page": "pages/terms.html",
+      "photo_count": 1,
+      "hero": "../assets/images/unique/hero-terms.webp"
+    }
+  ],
+  "browser_checks": {
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "pages_checked_at_each_width": 14,
+    "horizontal_overflow_pages": [],
+    "non_centered_content_heading_pages": [],
+    "failed_hero_images_on_mobile": []
+  }
+}

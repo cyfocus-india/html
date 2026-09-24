@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CareWell provides compassionate home nursing and patient care, right where you feel most comfortable."
+    />
+    <title>Home 1 — CareWell</title>
+    <link rel="icon" href="assets/images/carewell-favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/refinement.css" />
+    <link rel="stylesheet" href="assets/css/enhancements.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z" /></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /><path d="M8.5 12h2l1-2.3 2 4.6 1.1-2.3h1.9" /></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" /></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8zM9 8V5a3 3 0 0 1 6 0v3M12 11v6M9 14h6" /></symbol>
+      <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="14" cy="4" r="2" /><path d="m10 21 2-6-3-3 2-5 4 3 3 1M14 12l-2 3 5 6M8 8 5 12" /></symbol>
+      <symbol id="i-bandage" viewBox="0 0 24 24"><path d="m8.5 3.5 12 12a3.54 3.54 0 0 1-5 5l-12-12a3.54 3.54 0 0 1 5-5z" /><path d="m14 9-5 5M9.5 7.5h.01M16.5 14.5h.01" /></symbol>
+      <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5-7-7a4.95 4.95 0 0 1 7-7l7 7a4.95 4.95 0 0 1-7 7zM7 17l10-10" /></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z" /><circle cx="12" cy="10" r="2" /></symbol>
+      <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0M18 19c0 2-2 3-5 3M4 14v4a2 2 0 0 0 2 2h1v-8H6a2 2 0 0 0-2 2zM20 14v4a2 2 0 0 1-2 2h-1v-8h1a2 2 0 0 1 2 2z" /></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7zM22 2 11 13" /></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+    </svg>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="nav-shell glass">
+        <a class="brand" href="#home" aria-label="CareWell home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 42 38" role="img" aria-label="CareWell heart mark">
+              <path d="M21 35C14 29 3 21 3 11.6 3 4.2 12.3.2 18 6.8L21 10l3-3.2C29.7.2 39 4.2 39 11.6 39 21 28 29 21 35Z" />
+              <path class="brand-line" d="M12.5 12c3-3.3 6.2-.8 6.2 2.1 0 4.4-1.6 7.7 2.3 12.2 3.8-4.4 2.2-7.8 2.2-12.2 0-3 3.3-5.4 6.3-2.1" />
+              <circle class="brand-dot" cx="21" cy="9" r="2.3" />
+            </svg>
+          </span>
+          <span><strong>CareWell</strong><small>HOME NURSING</small></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link page-link" href="pages/services.html">Services</a>
+          <a class="nav-link page-link" href="pages/caregivers.html">Caregivers</a>
+          <a class="nav-link page-link" href="pages/pricing.html">Pricing</a>
+          <a class="nav-link page-link" href="pages/contact.html">Contact</a>
+        </nav>
+
+        <span class="phone-pill" aria-hidden="true"></span>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg class="menu-icon"><use href="#i-menu" /></svg>
+          <svg class="close-icon"><use href="#i-close" /></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav glass" aria-label="Mobile navigation"></nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero section-anchor" id="home">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span></span>Trusted care, where you belong</span>
+          <h1>Compassionate Care.<br /><em>Right at Home.</em></h1>
+          <p>Professional home nursing and patient care services that prioritize your health, comfort, and peace of mind.</p>
+          <div class="hero-actions">
+            <a class="button button-primary page-link" href="pages/caregivers.html">Book a Caregiver <svg><use href="#i-arrow" /></svg></a>
+            <a class="button button-secondary page-link" href="pages/services.html">Our Services <span class="play">›</span></a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-chip"><svg><use href="#i-shield" /></svg><span>Background<br />Verified</span></div>
+            <div class="trust-chip"><svg><use href="#i-heart" /></svg><span>CPR<br />Certified</span></div>
+            <div class="trust-chip"><svg><use href="#i-shield" /></svg><span>HIPAA<br />Compliant</span></div>
+            <div class="trust-chip"><svg><use href="#i-bag" /></svg><span>Fully<br />Insured</span></div>
+          </div>
+          <div class="rating-card glass-soft">
+            <div class="avatar-stack" aria-hidden="true"><span>AM</span><span>JL</span><span>RS</span><span>NK</span></div>
+            <div><strong>4.9/5</strong><small>★★★★★ &nbsp; Trusted by 1,200+ families</small></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-1" data-parallax="0.025">
+          <div class="decor-ring" aria-hidden="true"></div>
+          <div class="hero-photo-wrap">
+            <img src="assets/images/carewell-hero.png" alt="A home nurse sharing a warm moment with an elderly patient" />
+            <div class="support-card glass-soft"><strong>24/7</strong><span>Care Support</span><small>We're here when<br />you need us most.</small></div>
+            <div class="priority-card glass-dark">
+              <span class="priority-icon"><svg><use href="#i-heart" /></svg></span>
+              <span><strong>Your Health. <b>Our Priority.</b></strong><small>Safe. Professional. Compassionate.</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Urgent Clinical Care Triage Bar -->
+      <section class="urgent-triage-strip reveal" aria-label="Urgent Home Care Support">
+        <div class="urgent-triage-info">
+          <div class="urgent-triage-icon">
+            <svg><use href="#i-phone" /></svg>
+          </div>
+          <div class="urgent-triage-text">
+            <strong>Need Immediate Home Nursing Support?</strong>
+            <span>Urgent hospital discharge assistance and same-week caregiver matching available 24/7.</span>
+          </div>
+        </div>
+        <div class="urgent-triage-actions">
+          <a class="urgent-phone-link" href="tel:+18005552273">
+            <svg><use href="#i-phone" /></svg> (800) 555-CARE
+          </a>
+          <a class="button button-primary button-small page-link" href="pages/contact.html?type=immediate-discharge">
+            Book Urgent Assessment <svg><use href="#i-arrow" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Available Home Care Services (Open Layout Showcase) -->
+      <section class="open-section reveal section-anchor" id="services">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Clinical &amp; Daily Support</span>
+            <h2>Available Home Care Services</h2>
+            <p>Physician-coordinated nursing, post-surgical recovery, mobility rehab, and heartfelt companion care—tailored to your exact home health needs.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/services.html">
+              View All 7 Services <svg><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Open 6-Card Services Gallery -->
+        <div class="open-services-gallery">
+          <!-- Service 1: Post-Surgical Recovery -->
+          <article class="open-service-card" data-service="post-surgery">
+            <div class="open-service-media">
+              <img src="assets/images/service-post-surgery.jpg" alt="Clinical post-operative care and surgical wound monitoring" loading="lazy" />
+              <span class="open-service-badge blue">Acute Surgical Care</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-shield" /></svg>
+                <span>Supervising BSN, RN Oversight</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Post-Surgical Nursing Care</h3>
+              <p class="open-service-desc">Intensive transitional nursing designed to prevent complications, manage surgical drains, and safely eliminate readmission risks.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Sterile incision checks &amp; drain quantification</li>
+                <li><svg><use href="#i-check" /></svg> Multimodal pain protocol &amp; IV infusion tracking</li>
+                <li><svg><use href="#i-check" /></svg> Direct surgeon daily communication logs</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Post-Surgical%20Nursing%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="post-surgery" aria-label="View post surgical protocol">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Elderly Companion & Personal Care -->
+          <article class="open-service-card" data-service="elderly-companion">
+            <div class="open-service-media">
+              <img src="assets/images/service-companion.jpg" alt="Warm companion caregiver having a pleasant chat with an elderly client" loading="lazy" />
+              <span class="open-service-badge teal">Daily Living &amp; Comfort</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-users" /></svg>
+                <span>Certified Nursing Assistant (CNA)</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Elderly Companion &amp; Personal Care</h3>
+              <p class="open-service-desc">Attentive, respectful assistance with personal hygiene routines, nutritious meals, and heartwarming daily socialization at home.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Dignified bathing, grooming &amp; transfer assistance</li>
+                <li><svg><use href="#i-check" /></svg> Wholesome dietary cooking &amp; hydration timing</li>
+                <li><svg><use href="#i-check" /></svg> Engaging conversation, hobby walks &amp; errands</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Elderly%20Companion%20%26%20Personal%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="elderly-companion" aria-label="View companion care details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Physiotherapy Assistance -->
+          <article class="open-service-card" data-service="physiotherapy">
+            <div class="open-service-media">
+              <img src="assets/images/service-physiotherapy.jpg" alt="Physical therapist assisting elderly patient with safe balance exercise" loading="lazy" />
+              <span class="open-service-badge blue">Rehab &amp; Mobility</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-walk" /></svg>
+                <span>Licensed DPT / PTA Directed</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Physiotherapy &amp; Mobility Rehab</h3>
+              <p class="open-service-desc">Targeted therapeutic exercise and gait retraining to rebuild musculoskeletal strength, improve balance, and protect against household falls.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Surgeon-aligned joint &amp; muscle rehab exercises</li>
+                <li><svg><use href="#i-check" /></svg> Safe walker, wheelchair &amp; bed transfer training</li>
+                <li><svg><use href="#i-check" /></svg> Home safety audit &amp; hazard prevention</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Physiotherapy%20%26%20Mobility%20Rehab">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="physiotherapy" aria-label="View physiotherapy protocol">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Advanced Wound Dressing -->
+          <article class="open-service-card" data-service="wound-dressing">
+            <div class="open-service-media">
+              <img src="assets/images/service-wound-dressing.jpg" alt="Certified nurse applying sterile dressing to wound" loading="lazy" />
+              <span class="open-service-badge teal">Sterile Clinical Care</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-bandage" /></svg>
+                <span>Certified Wound Nurse (CWON/RN)</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Advanced Sterile Wound Care</h3>
+              <p class="open-service-desc">Certified clinical wound management following strict aseptic protocols for surgical incisions, pressure ulcers, and diabetic lesions.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Sterile irrigation, packing &amp; dressing changes</li>
+                <li><svg><use href="#i-check" /></svg> Negative pressure therapy (Wound VAC) supervision</li>
+                <li><svg><use href="#i-check" /></svg> Photographic healing &amp; tissue staging logs</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Advanced%20Sterile%20Wound%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="wound-dressing" aria-label="View wound dressing protocol">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Medication Management & Vitals -->
+          <article class="open-service-card" data-service="medication-management">
+            <div class="open-service-media">
+              <img src="assets/images/service-medication.jpg" alt="Nurse organizing prescriptions and taking blood pressure reading" loading="lazy" />
+              <span class="open-service-badge blue">Pharmacy &amp; Telemetry</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-pill" /></svg>
+                <span>Licensed Practical Nurse (LPN/RN)</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Medication Administration &amp; Vitals</h3>
+              <p class="open-service-desc">Comprehensive pharmaceutical compliance, dosage organization, and round-the-clock biometric vitals logging for family assurance.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Multi-prescription timing &amp; refill coordination</li>
+                <li><svg><use href="#i-check" /></svg> Daily blood pressure, glucose &amp; SpO2 telemetry</li>
+                <li><svg><use href="#i-check" /></svg> Immediate physician escalation for abnormal vitals</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Medication%20Administration%20%26%20Vitals">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="medication-management" aria-label="View medication management details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: 24/7 Live-In Care -->
+          <article class="open-service-card" data-service="live-in-care">
+            <div class="open-service-media">
+              <img src="assets/images/service-livein.jpg" alt="Caregiver providing continuous 24/7 home living assistance" loading="lazy" />
+              <span class="open-service-badge teal">Continuous 24/7 Support</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-clock" /></svg>
+                <span>Dedicated Caregiver Rotation</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>24/7 Respite &amp; Continuous Live-In Care</h3>
+              <p class="open-service-desc">Round-the-clock peace of mind with continuous bedside supervision, overnight vigilance, and compassionate respite for family caregivers.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> 24-hour attentive presence &amp; nighttime safety</li>
+                <li><svg><use href="#i-check" /></svg> Routine assistance with transfers, hygiene &amp; meals</li>
+                <li><svg><use href="#i-check" /></svg> Seamless rotation with no interruption in care</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=24/7%20Respite%20%26%20Continuous%20Live-In%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="live-in-care" aria-label="View 24/7 care protocol">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Hospital-to-Home Clinical Recovery Continuum (Open Roadmap Architecture) -->
+      <section class="open-section reveal section-anchor" id="clinical-pathway">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Clinical Transition Care Pathway</span>
+            <h2>Hospital-to-Home Recovery Continuum</h2>
+            <p>A physician-coordinated clinical model ensuring safe discharge, intensive post-acute stabilization, and progressive rehabilitation at home.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/contact.html?type=discharge-assessment">
+              Schedule Bedside Assessment <svg><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Open 4-Phase Roadmap -->
+        <div class="open-roadmap">
+          <div class="open-roadmap-track" aria-hidden="true"></div>
+          <div class="open-roadmap-grid">
+            <!-- Phase 1: Pre-Discharge Bedside Consultation -->
+            <article class="open-roadmap-step">
+              <div class="open-roadmap-step-header">
+                <div class="open-roadmap-badge">01</div>
+                <span class="open-roadmap-phase-pill">Hospital</span>
+              </div>
+              <div class="open-roadmap-timing">48 Hours Pre-Discharge</div>
+              <h3>Bedside Consultation &amp; Care Planning</h3>
+              <p>Our Clinical Nurse Supervisor coordinates directly with hospital discharge teams to audit surgical orders and tailor an individualized recovery plan.</p>
+              <ul class="open-roadmap-checklist">
+                <li><svg><use href="#i-check" /></svg> Surgical order &amp; medication chart review</li>
+                <li><svg><use href="#i-check" /></svg> Medical equipment (DME) staging checklist</li>
+                <li><svg><use href="#i-check" /></svg> Family bedside transition briefing</li>
+              </ul>
+            </article>
+
+            <!-- Phase 2: In-Home Medical & Safety Staging -->
+            <article class="open-roadmap-step">
+              <div class="open-roadmap-step-header">
+                <div class="open-roadmap-badge">02</div>
+                <span class="open-roadmap-phase-pill">Transfer Day</span>
+              </div>
+              <div class="open-roadmap-timing">Hour 0 – Patient Arrival</div>
+              <h3>In-Home Medical &amp; Safety Staging</h3>
+              <p>Before the patient arrives, our team sanitizes the care suite, prepares hospital-grade bedding, and connects vital monitoring telemetry equipment.</p>
+              <ul class="open-roadmap-checklist">
+                <li><svg><use href="#i-check" /></svg> Sterile dressing &amp; sharps waste station setup</li>
+                <li><svg><use href="#i-check" /></svg> Zero-fall environmental clearance check</li>
+                <li><svg><use href="#i-check" /></svg> 24/7 Coordinator emergency line activation</li>
+              </ul>
+            </article>
+
+            <!-- Phase 3: 72-Hour Intensive Stabilization -->
+            <article class="open-roadmap-step">
+              <div class="open-roadmap-step-header">
+                <div class="open-roadmap-badge">03</div>
+                <span class="open-roadmap-phase-pill">Acute Phase</span>
+              </div>
+              <div class="open-roadmap-timing">First 72 Hours Post-Op</div>
+              <h3>72-Hour Intensive RN Stabilization</h3>
+              <p>The highest readmission risk window. Dedicated Registered Nurses manage surgical drains, titration schedules, wound asepsis, and biometric telemetry.</p>
+              <ul class="open-roadmap-checklist">
+                <li><svg><use href="#i-check" /></svg> Continuous vitals telemetry (BP, SpO2, Temp)</li>
+                <li><svg><use href="#i-check" /></svg> Drain output monitoring &amp; sterile dressing</li>
+                <li><svg><use href="#i-check" /></svg> Direct daily surgeon status reports</li>
+              </ul>
+            </article>
+
+            <!-- Phase 4: Targeted Rehabilitation -->
+            <article class="open-roadmap-step">
+              <div class="open-roadmap-step-header">
+                <div class="open-roadmap-badge">04</div>
+                <span class="open-roadmap-phase-pill">Restorative</span>
+              </div>
+              <div class="open-roadmap-timing">Weeks 2 to 6+</div>
+              <h3>Targeted Rehabilitation &amp; Autonomy</h3>
+              <p>Transitioning from acute bedside care into active independence. Licensed therapists guide progressive mobility exercises, safe transfers, and daily self-care.</p>
+              <ul class="open-roadmap-checklist">
+                <li><svg><use href="#i-check" /></svg> Surgeon-directed gait &amp; balance retraining</li>
+                <li><svg><use href="#i-check" /></svg> Daily living independence coaching</li>
+                <li><svg><use href="#i-check" /></svg> Family step-down home care guidance</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <!-- Open Clinical Outcomes Strip (Unboxed Trust Metric Infographic) -->
+        <div class="open-outcomes-strip">
+          <div class="open-outcome-item">
+            <div class="open-outcome-val"><strong class="count" data-target="1.8" data-prefix="&lt; " data-suffix="%">&lt; 1.8%</strong></div>
+            <div class="open-outcome-label">30-Day Hospital Readmission Rate</div>
+            <div class="open-outcome-bench">vs. 15.2% National Acute Hospital Average</div>
+          </div>
+          <div class="open-outcome-item">
+            <div class="open-outcome-val teal"><strong class="count" data-target="100" data-suffix="%">100%</strong></div>
+            <div class="open-outcome-label">Physician Protocol Adherence</div>
+            <div class="open-outcome-bench">Audited by Board-Certified RN Supervisors</div>
+          </div>
+          <div class="open-outcome-item">
+            <div class="open-outcome-val"><strong class="count" data-target="15" data-suffix=" min">15 min</strong></div>
+            <div class="open-outcome-label">Clinical Coordinator Rapid Response</div>
+            <div class="open-outcome-bench">Direct 24/7 on-call triage line</div>
+          </div>
+          <div class="open-outcome-item">
+            <div class="open-outcome-val teal"><strong class="count" data-target="99.4" data-suffix="%">99.4%</strong></div>
+            <div class="open-outcome-label">Patient Recovery Satisfaction</div>
+            <div class="open-outcome-bench">Independently verified family feedback</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet Our Caregivers (Open Split Showcase) -->
+      <section class="open-section reveal section-anchor" id="caregivers">
+        <div class="open-caregiver-showcase">
+          <div class="open-caregiver-info">
+            <span class="eyebrow"><span></span>People You Can Trust</span>
+            <h3>100% Verified, Screened Caregivers</h3>
+            <p>Every CareWell nurse and caregiver is carefully selected, credentialed, and supervised by Senior Registered Nurses. We believe that clinical excellence and warm compassion go hand in hand.</p>
+            <div class="open-caregiver-specs">
+              <div class="open-spec-pill">
+                <svg><use href="#i-shield" /></svg>
+                <span>Registered Nurses (RN &amp; BSN)</span>
+              </div>
+              <div class="open-spec-pill">
+                <svg><use href="#i-heart" /></svg>
+                <span>Licensed Practical Nurses (LPN)</span>
+              </div>
+              <div class="open-spec-pill">
+                <svg><use href="#i-users" /></svg>
+                <span>Certified Nursing Aides (CNA)</span>
+              </div>
+              <div class="open-spec-pill">
+                <svg><use href="#i-check" /></svg>
+                <span>DOJ &amp; FBI Fingerprinted</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <a class="button button-primary page-link" href="pages/caregivers.html">
+                Meet All Specialists <svg><use href="#i-arrow" /></svg>
+              </a>
+              <a class="button button-secondary page-link" href="pages/contact.html">
+                Request Caregiver Match
+              </a>
+            </div>
+          </div>
+          <div class="open-caregiver-visual">
+            <img src="assets/images/carewell-caregiver.png" alt="A qualified and compassionate CareWell Registered Nurse" loading="lazy" />
+            <div class="open-caregiver-float-badge">
+              <div>
+                <strong>Over 200+ Licensed Caregivers</strong>
+                <small>Average 10+ Years of Clinical Experience</small>
+              </div>
+              <span style="font-weight: 800; color: var(--primary); font-size: 16px;">★ 4.98</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How Care Starts at Home (Open 4-Step Process Flow) -->
+      <section class="open-section reveal section-anchor" id="process">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Simple 4-Step Journey</span>
+            <h2>How Care Starts at Home</h2>
+            <p>From initial clinical consultation to personalized daily support, we make starting home care seamless and stress-free.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/pricing.html">
+              View Pricing &amp; Plans <svg><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+        <div class="open-process-grid">
+          <article class="open-process-item">
+            <div class="open-process-step-num">01</div>
+            <div class="open-process-icon-wrap"><svg><use href="#i-phone" /></svg></div>
+            <h3>Free Consultation</h3>
+            <p>We speak with you and your family to understand clinical needs, daily routines, and attending doctor orders.</p>
+          </article>
+          <article class="open-process-item">
+            <div class="open-process-step-num">02</div>
+            <div class="open-process-icon-wrap"><svg><use href="#i-bag" /></svg></div>
+            <h3>Custom Care Plan</h3>
+            <p>Our clinical nurse supervisors develop an individualized care protocol tailored to your recovery goals and schedule.</p>
+          </article>
+          <article class="open-process-item">
+            <div class="open-process-step-num">03</div>
+            <div class="open-process-icon-wrap"><svg><use href="#i-users" /></svg></div>
+            <h3>Caregiver Matching</h3>
+            <p>We match you with a vetted, licensed nurse or aide whose clinical expertise and personality fit your home environment.</p>
+          </article>
+          <article class="open-process-item">
+            <div class="open-process-step-num">04</div>
+            <div class="open-process-icon-wrap"><svg><use href="#i-heart" /></svg></div>
+            <h3>Ongoing Support</h3>
+            <p>Care begins with regular supervision visits, transparent digital vitals notes, and continuous 24/7 coordinator communication.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Purposeful High-Converting Consultation Banner -->
+      <section class="reveal">
+        <div class="consultation-cta-banner">
+          <div>
+            <h3>Ready to discuss care for yourself or a loved one?</h3>
+            <p>Our clinical care coordinators are available 24/7 to answer questions, audit hospital orders, and schedule a prompt in-home assessment.</p>
+          </div>
+          <div class="consultation-cta-actions">
+            <a class="button button-primary page-link" href="pages/contact.html">
+              Schedule Free Assessment <svg><use href="#i-arrow" /></svg>
+            </a>
+            <a class="button button-secondary page-link" href="pages/pricing.html">
+              Explore Care Pricing
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>© <span id="year"></span> CareWell Home Nursing. Compassion at every step.</p><a href="#top">Back to top ↑</a></footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

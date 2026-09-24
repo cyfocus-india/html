@@ -1,0 +1,70 @@
+/* Photography — composition rules for the board game photo set in assets/images/photos/. */
+.hero__media::after { display: none; }
+.hero__grid .hero__media {
+  align-self: center;
+  width: 100%;
+  min-height: 0;
+  margin-inline: 0;
+  aspect-ratio: 3 / 2;
+}
+.hero__grid .hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+.home-alt-hero__grid .hero__media {
+  align-self: center;
+  width: 100%;
+  min-height: 0;
+  margin-inline: 0;
+  aspect-ratio: 16 / 11;
+}
+.home-alt-hero__grid .hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: none;
+}
+.hero__media--wide {
+  min-height: 0;
+  aspect-ratio: 21 / 9;
+}
+.hero__media--wide img { object-position: center 54%; }
+
+/* Photos fill their frame; the old artwork was letterboxed with `contain`. */
+.feature-media img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.page-hero__media img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.page-hero__media--square img { aspect-ratio: 1; }
+
+/* Keep faces and focal points in frame when portrait photos are cropped wide. */
+.page-hero__media img[src*="/products-hero-collection"] { object-position: center 55%; }
+.page-hero__media img[src*="/recs-curator"] { object-position: center 30%; }
+.category-card__media img[src*="/category-family"] { object-position: center 30%; }
+.category-card__media img[src*="/category-strategy"] { object-position: center 55%; }
+.value-card__media img[src*="/home2-warmly-social"] { object-position: center 40%; }
+.image-callout img[src*="/community-game-night"],
+.event-hero img[src*="/events-hero-game-night"] { object-position: 60% center; }
+
+/* Photography reads heavy under the dark theme's dimming filter; soften it. */
+[data-theme="dark"] img[src*="/photos/"] { filter: brightness(0.92) saturate(0.95); }
+
+@media (max-width: 639px) {
+  .hero__media--wide { aspect-ratio: 3 / 2; }
+  .home-alt-hero__grid .hero__media { aspect-ratio: 16 / 10; }
+  .hero__index {
+    inset-inline: 0.8rem;
+    bottom: 0.8rem;
+    max-width: calc(100% - 1.6rem);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.56rem;
+  }
+  .hero__seal { top: 0.75rem; inset-inline-end: 0.75rem; }
+}

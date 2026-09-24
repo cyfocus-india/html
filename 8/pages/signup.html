@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a demonstration Meeple &amp; Marrow account for wishlists and event preferences.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Sign Up | Meeple &amp; Marrow</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260924c-photos">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260924c-photos">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260924c-photos">
+  <link rel="stylesheet" href="../assets/css/imagery.css?v=20260924c-photos">
+  <script defer src="../assets/js/main.js?v=20260924c-photos"></script>
+</head>
+<body data-root=".." data-page="signup">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header with Common Size and Alignment across All Pages -->
+  <header class="site-header auth-standalone-header" data-header>
+    <nav class="nav-shell auth-standalone-nav" aria-label="Account navigation">
+      <a class="brand" href="../index.html" aria-label="Meeple and Marrow home">
+        <span class="brand__mark" aria-hidden="true"><img src="../assets/images/brand/brand-mark.svg" alt="" width="38" height="38"></span>
+        <span>Meeple <span aria-hidden="true">&amp;</span><br>Marrow</span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-direction-toggle aria-label="Switch text direction" title="Switch text direction"></button>
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme" title="Toggle color theme"></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="auth-shell">
+    <section class="auth-card" aria-labelledby="signup-title" data-reveal="scale">
+      <span class="eyebrow">Join the community</span>
+      <h1 id="signup-title">Save a seat.</h1>
+      <p>Create a demo profile for board game wishlists and event updates. No values leave your browser.</p>
+      <form class="form-grid" data-validate data-success="Demo profile created! Welcome to Meeple & Marrow." novalidate>
+        <div class="field">
+          <label for="signup-name">Your name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Asha Rao" minlength="2" required aria-describedby="signup-name-error">
+          <p class="field-error" id="signup-name-error"></p>
+        </div>
+        <div class="field">
+          <label for="signup-email">Email address</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="signup-email-error">
+          <p class="field-error" id="signup-email-error"></p>
+        </div>
+        <div class="field">
+          <label for="signup-password">Password</label>
+          <div class="field--password">
+            <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="signup-password-error signup-password-note">
+            <button class="password-toggle" type="button" data-toggle-password aria-label="Show password"><span data-icon="eye"></span></button>
+          </div>
+          <p class="field-note" id="signup-password-note">Use at least eight characters.</p>
+          <p class="field-error" id="signup-password-error"></p>
+        </div>
+        <div class="field">
+          <label class="field-checkbox">
+            <input type="checkbox" name="terms" required aria-describedby="terms-error">
+            <span>I agree to the <a class="text-link" href="terms.html" target="_blank" style="display:inline; text-transform:none; font-size:0.82rem; font-weight:600;">terms</a> &amp; <a class="text-link" href="privacy.html" target="_blank" style="display:inline; text-transform:none; font-size:0.82rem; font-weight:600;">privacy policy</a></span>
+          </label>
+          <p class="field-error" id="terms-error"></p>
+        </div>
+        <button class="btn btn--full" type="submit"><span>Create demo account</span><span data-icon="arrow-right"></span></button>
+      </form>
+      <p class="auth-switch">Already joined? <a class="text-link" href="signin.html"><span>Sign in</span></a></p>
+    </section>
+  </main>
+
+  <!-- Clean Standalone Footer (No global footer as requested) -->
+  <footer class="auth-standalone-footer">
+    <span>© Meeple &amp; Marrow · Bengaluru Tabletop Hobby Shop</span>
+  </footer>
+</body>
+</html>

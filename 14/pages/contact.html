@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact MoveMate for instant moving estimates, active booking tracking support, corporate relocation queries and 24/7 help. Find our offices across India on the map.">
+  <meta name="theme-color" content="#075fd7">
+  <title>Contact — MoveMate</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../assets/css/style.css?v=40">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=40">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=40">
+</head>
+<body>
+  <div data-site-header></div>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">24/7 Dedicated Assistance</span>
+          <h1>We’re Here to Help You Move</h1>
+          <p class="hero-lead">Questions about a quote, custom packing, route scheduling or an active shipment? Our relocation desk answers in under 30 minutes, every day of the year.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+919876543210">
+              <span>Call +91 98765 43210</span>
+            </a>
+            <a class="btn btn-outline" href="#message">
+              <span>Send a Message</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </span>
+              <span><strong>Under 30 minutes</strong><small>Average first response</small></span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/></svg>
+              </span>
+              <span><strong>4 regional offices</strong><small>North, west, south and east</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <picture>
+            <source srcset="../assets/images/photo-hero-contact.webp" type="image/webp">
+            <img src="../assets/images/photo-hero-contact.jpg" alt="A MoveMate support advisor taking a customer call at the relocation desk" width="1500" height="1000" fetchpriority="high">
+          </picture>
+          <span class="hero-media-tag">Support desk open • 24 hours a day</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section" id="message">
+      <div class="container contact-grid">
+        <aside class="contact-info">
+          <div class="contact-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.04 9.72a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92Z"/></svg>
+            </span>
+            <div class="contact-item-content">
+              <h3>Call Our Helpline</h3>
+              <a class="text-brand" href="tel:+919876543210">+91 98765 43210</a>
+              <small>Available 24 hours a day, 7 days a week</small>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <div class="contact-item-content">
+              <h3>Email Support</h3>
+              <a class="text-brand" href="mailto:care@movemate.example">care@movemate.example</a>
+              <small>Average response time under 30 minutes</small>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/></svg>
+            </span>
+            <div class="contact-item-content">
+              <h3>Corporate Headquarters</h3>
+              <p>MoveMate House, Sector 44<br>Gurugram, Haryana 122003, India</p>
+            </div>
+          </div>
+
+          <div class="contact-help-banner">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span class="paid-pill" style="font-size:0.75rem;padding:3px 8px">Live Support Desk</span>
+              <strong style="color:var(--ink);font-size:0.86rem">24/7 Shifting Helpline</strong>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text);margin:0;line-height:1.45">Need immediate schedule confirmation or cargo insurance guidance? Our relocation advisors respond promptly.</p>
+          </div>
+        </aside>
+
+        <!-- Message Form -->
+        <form class="form-panel validate-form" data-success="Thank you! Your message has been received. Our moving manager will reach out to you within 30 minutes." novalidate>
+          <h2 style="font-size:1.85rem;margin-bottom:16px">Send Us a Direct Message</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="contactName">Full Name</label>
+              <input id="contactName" name="name" placeholder="E.g. Rahul Sharma" required minlength="2">
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="contactPhone">Phone Number</label>
+              <input id="contactPhone" name="phone" type="tel" placeholder="+91 98765 43210" pattern="[0-9+() -]{10,}" required>
+              <span class="error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email Address</label>
+            <input id="contactEmail" name="email" type="email" placeholder="rahul@example.com" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="contactTopic">Inquiry Category</label>
+            <select id="contactTopic" name="topic" required>
+              <option value="">Select a topic</option>
+              <option value="quote">New Moving Quote / Survey Request</option>
+              <option value="booking">Active Booking Status</option>
+              <option value="coverage">Service Area &amp; Route Feasibility</option>
+              <option value="corporate">Corporate / Office Relocation</option>
+              <option value="billing">Invoice &amp; Payment Support</option>
+              <option value="other">General Question</option>
+            </select>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" name="message" placeholder="Provide details about your move, pickup & delivery locations, preferred dates, or questions..." minlength="10" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit" style="margin-top:8px">
+            <span>Send Message</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Office locator map -->
+    <section class="section-tight" id="offices" aria-labelledby="officesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Find Us</span>
+          <h2 id="officesTitle">Our Offices Across India</h2>
+          <p>Four regional operations centres coordinate every MoveMate crew, vehicle and route. Select a branch to locate it on the map.</p>
+        </div>
+
+        <div class="map-section reveal">
+          <div class="map-layout">
+            <div class="map-aside">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+                <div>
+                  <span class="eyebrow" style="margin-bottom:2px">Branch Directory</span>
+                  <h3 style="font-size:1.2rem;margin:0">Visit a MoveMate Office</h3>
+                </div>
+                <button class="btn btn-ghost btn-sm" data-office-reset type="button">Reset Map</button>
+              </div>
+              <p style="font-size:0.86rem;color:var(--text);margin:8px 0 0">Walk-ins are welcome during working hours. For a home survey, book a slot on the helpline instead.</p>
+
+              <div class="office-list">
+                <button class="office-card active" data-office="gurugram" type="button">
+                  <span class="office-tag">Head Office</span>
+                  <strong>Gurugram — Corporate HQ</strong>
+                  <address>MoveMate House, Sector 44, Gurugram, Haryana 122003<br>Mon–Sat, 9:00 AM – 8:00 PM</address>
+                </button>
+
+                <button class="office-card" data-office="mumbai" type="button">
+                  <span class="office-tag">West India</span>
+                  <strong>Mumbai — Western Operations</strong>
+                  <address>Central Logistics Park, Andheri East, Mumbai 400059<br>Mon–Sat, 9:00 AM – 8:00 PM</address>
+                </button>
+
+                <button class="office-card" data-office="bengaluru" type="button">
+                  <span class="office-tag">South India</span>
+                  <strong>Bengaluru — Southern Operations</strong>
+                  <address>Whitefield Industrial Zone, Bengaluru 560066<br>Mon–Sat, 9:00 AM – 8:00 PM</address>
+                </button>
+
+                <button class="office-card" data-office="kolkata" type="button">
+                  <span class="office-tag">East India</span>
+                  <strong>Kolkata — Eastern Operations</strong>
+                  <address>Taratala Transport Depot, Kolkata 700088<br>Mon–Sat, 9:30 AM – 7:30 PM</address>
+                </button>
+              </div>
+            </div>
+
+            <div id="contactLiveMap" role="application" aria-label="Map showing MoveMate office locations across India"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about MoveMate’s pricing, packing procedures and transit policies.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How far in advance should I book my move?</span>
+              <span class="faq-icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-a">
+              <div>
+                <p>We recommend booking 3 to 7 days in advance for local household shifting, and 7 to 14 days in advance for intercity relocations. However, if you need urgent or next-day shifting, our dynamic dispatch can often accommodate you subject to crew availability.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Are packing materials included in the quoted price?</span>
+              <span class="faq-icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-a">
+              <div>
+                <p>Yes! When you choose our full packing service, all necessary 5-ply cartons, bubble wrap, corrugated sheets, stretch film, heavy-duty tape and furniture blankets are 100% included with no unexpected add-on costs.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How does live tracking work during transit?</span>
+              <span class="faq-icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-a">
+              <div>
+                <p>All MoveMate long-distance container trucks are equipped with GPS tracking. Once your items are loaded and sealed, you receive live checkpoint SMS updates and can log into your MoveMate Customer Dashboard to see real-time route progress and driver contact info.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Are my household items insured against damages?</span>
+              <span class="faq-icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-a">
+              <div>
+                <p>Yes. We offer comprehensive Transit Insurance covering unforeseen accidents, theft, or transit damage from pickup to delivery. High-value goods (like artwork, pianos, or high-end electronics) can also receive tailored individual valuation coverage.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What items should I carry personally during shifting?</span>
+              <span class="faq-icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-a">
+              <div>
+                <p>For your safety and privacy, we advise clients to personally transport essential documents (passports, property deeds), cash, jewelry, laptops, expensive personal gadgets, and critical daily medicines.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../assets/js/main.js?v=40"></script>
+</body>
+</html>

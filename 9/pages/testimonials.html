@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Read verified patient recovery journeys, clinical case studies, and reviews from CareWell families." />
+    <title>Testimonials &amp; Case Studies — CareWell</title>
+    <link rel="icon" href="../assets/images/carewell-favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <link rel="stylesheet" href="../assets/css/refinement.css" />
+    <link rel="stylesheet" href="../assets/css/enhancements.css" />
+  </head>
+  <body class="inner-body">
+    <svg class="svg-sprite" style="display:none" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12h2l1-2.3 2 4.6 1.1-2.3h1.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-bandage" viewBox="0 0 24 24"><path d="m8.5 3.5 12 12a3.54 3.54 0 0 1-5 5l-12-12a3.54 3.54 0 0 1 5-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m14 9-5 5M9.5 7.5h.01M16.5 14.5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    </svg>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="nav-shell glass">
+        <a class="brand page-link" href="../index.html" aria-label="CareWell home">
+          <span class="brand-mark"><svg viewBox="0 0 42 38"><path d="M21 35C14 29 3 21 3 11.6 3 4.2 12.3.2 18 6.8L21 10l3-3.2C29.7.2 39 4.2 39 11.6 39 21 28 29 21 35Z"/><path class="brand-line" d="M12.5 12c3-3.3 6.2-.8 6.2 2.1 0 4.4-1.6 7.7 2.3 12.2 3.8-4.4 2.2-7.8 2.2-12.2 0-3 3.3-5.4 6.3-2.1"/><circle class="brand-dot" cx="21" cy="9" r="2.3"/></svg></span>
+          <span><strong>CareWell</strong><small>HOME NURSING</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation"></nav>
+        <a class="phone-pill" href="#">Contact</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg class="menu-icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="close-icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav glass" aria-label="Mobile navigation"></nav>
+    </header>
+
+    <main class="content-main">
+      <!-- Family Testimonials Grid Section -->
+      <section class="content-shell glass">
+        <div class="content-heading reveal">
+          <span class="eyebrow"><span></span>Family Reflections</span>
+          <h1 class="page-title">Client Testimonials</h1>
+          <p>Real experiences from families who invited CareWell clinicians into their homes for compassionate healing.</p>
+        </div>
+
+        <div class="testimonial-grid reveal reveal-delay-1">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“Mum feels like herself again.”</h3>
+            <p>Our caregiver understood Mum's routines immediately. She is patient, cheerful, and keeps us updated after every visit. The change in Mum's confidence has been wonderful.</p>
+            <div class="testimonial-person">
+              <span>AM</span>
+              <div>
+                <strong>Amelia M.</strong>
+                <small>Daughter of a companion-care client</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“Professional from day one.”</h3>
+            <p>CareWell arranged post-surgery support quickly. The nurse was calm, prepared, and worked closely with our discharge instructions. Recovery felt much less overwhelming.</p>
+            <div class="testimonial-person">
+              <span>JL</span>
+              <div>
+                <strong>James L.</strong>
+                <small>Post-surgery care client</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“We finally have peace of mind.”</h3>
+            <p>Knowing Dad's medications and meals are handled properly has lifted a huge weight. The coordinator is responsive and the care notes are clear and helpful.</p>
+            <div class="testimonial-person">
+              <span>RS</span>
+              <div>
+                <strong>Rachel S.</strong>
+                <small>Daughter of an ongoing-care client</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“Kindness in every detail.”</h3>
+            <p>The team supported my husband with dignity through a difficult time. They noticed the small things that made him comfortable and never made us feel rushed.</p>
+            <div class="testimonial-person">
+              <span>NK</span>
+              <div>
+                <strong>Nina K.</strong>
+                <small>Family care partner</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“The perfect caregiver match.”</h3>
+            <p>They took time to learn about our language, schedule, and personality preferences. The match has been excellent and care has remained consistent.</p>
+            <div class="testimonial-person">
+              <span>DP</span>
+              <div>
+                <strong>Daniel P.</strong>
+                <small>Son of a home-care client</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <h3>“Flexible when our needs changed.”</h3>
+            <p>We started with three visits a week and increased support after a hospital stay. CareWell adapted the plan without stress or confusing fees.</p>
+            <div class="testimonial-person">
+              <span>SW</span>
+              <div>
+                <strong>Sofia W.</strong>
+                <small>Family care coordinator</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- UNIQUE SECTION: Verified Patient Recovery Journeys & Clinical Case Studies -->
+      <section class="content-shell case-studies-section glass reveal section-anchor" id="clinical-case-studies">
+        <div class="content-heading center">
+          <span class="eyebrow"><span></span>Documented Clinical Outcomes</span>
+          <h2 class="section-title">Verified Patient Recovery Journeys &amp; Case Studies</h2>
+          <p class="section-lead">Beyond words of appreciation, CareWell tracks longitudinal clinical markers. Here are three documented cases demonstrating how hospital-grade home care accelerated recovery, preserved dignity, and prevented emergency re-hospitalization.</p>
+        </div>
+
+        <div class="case-studies-grid">
+          <!-- Case Study 01: Orthopedic Hip Fracture Rehabilitation -->
+          <article class="case-study-card study-blue">
+            <div class="case-study-header">
+              <div class="case-study-meta-top">
+                <span class="case-study-badge">Orthopedic Rehabilitation</span>
+                <span class="case-study-verification"><svg><use href="#i-check" /></svg>Verified Hospital Discharge</span>
+              </div>
+              <div class="case-study-patient">
+                <span class="patient-avatar-badge blue">RK</span>
+                <div class="patient-info">
+                  <h3>Robert K., Age 78</h3>
+                  <span class="patient-condition">Subcapital Femoral Fracture Repair</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-body">
+              <div class="clinical-block challenge">
+                <span class="block-kicker">Clinical Challenge</span>
+                <p>Severe post-operative fall anxiety, 18-inch surgical incision line care, and restricted weight-bearing mobility following emergency hip hemiarthroplasty.</p>
+              </div>
+
+              <div class="clinical-block strategy">
+                <span class="block-kicker">CareWell Clinical Intervention</span>
+                <p>Daily DPT gait retraining, DVT sequential compression monitoring, sterile wound dressing changes, and in-home physical hazard mitigation.</p>
+              </div>
+
+              <!-- Outcome Box -->
+              <div class="case-study-outcome-box blue">
+                <div class="outcome-metric">
+                  <span class="metric-big">0%</span>
+                  <span class="metric-caption">30-Day Hospital Readmissions</span>
+                </div>
+                <div class="outcome-metric">
+                  <span class="metric-big">Day 21</span>
+                  <span class="metric-caption">Unassisted Walker Independence (5 Days Ahead)</span>
+                </div>
+              </div>
+
+              <!-- Assigned Care Pod -->
+              <div class="case-study-pod">
+                <span class="pod-label">Assigned Care Pod:</span>
+                <span class="pod-members"><strong>Dr. Elena Rostova, DPT</strong> &amp; <strong>Evelyn Vance, RN</strong></span>
+              </div>
+
+              <!-- Family Quote -->
+              <blockquote class="case-study-quote">
+                <p>“The physical therapist and RN coordinated with Dad's orthopedic surgeon every Friday. We avoided inpatient rehab and Dad healed in his own favorite armchair.”</p>
+                <cite>— David K., Son &amp; Family Care Partner</cite>
+              </blockquote>
+            </div>
+          </article>
+
+          <!-- Case Study 02: Stage II Vascular Dementia & Sundowning -->
+          <article class="case-study-card study-teal">
+            <div class="case-study-header">
+              <div class="case-study-meta-top">
+                <span class="case-study-badge teal">Memory Care &amp; Daily Living</span>
+                <span class="case-study-verification"><svg><use href="#i-check" /></svg>Verified Neurology Plan</span>
+              </div>
+              <div class="case-study-patient">
+                <span class="patient-avatar-badge teal">MH</span>
+                <div class="patient-info">
+                  <h3>Margaret H., Age 82</h3>
+                  <span class="patient-condition">Stage II Vascular Dementia &amp; Sundowning</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-body">
+              <div class="clinical-block challenge">
+                <span class="block-kicker teal">Clinical Challenge</span>
+                <p>Severe late-afternoon cognitive agitation (sundowning), chronic nutrition/hydration refusal, and imminent daughter caregiver burnout.</p>
+              </div>
+
+              <div class="clinical-block strategy">
+                <span class="block-kicker teal">CareWell Clinical Intervention</span>
+                <p>CDP-led sensory music validation therapy, circadian lighting regulation, structured 2-hour hydration prompts, and predictable daily routine mapping.</p>
+              </div>
+
+              <!-- Outcome Box -->
+              <div class="case-study-outcome-box teal">
+                <div class="outcome-metric">
+                  <span class="metric-big teal">74%</span>
+                  <span class="metric-caption">Reduction in Evening Agitation</span>
+                </div>
+                <div class="outcome-metric">
+                  <span class="metric-big teal">8 Hrs</span>
+                  <span class="metric-caption">Uninterrupted Nighttime Sleep Restored</span>
+                </div>
+              </div>
+
+              <!-- Assigned Care Pod -->
+              <div class="case-study-pod">
+                <span class="pod-label">Assigned Care Pod:</span>
+                <span class="pod-members"><strong>Priya Sharma, CNA, CDP</strong> &amp; <strong>Marcus Chen, LPN</strong></span>
+              </div>
+
+              <!-- Family Quote -->
+              <blockquote class="case-study-quote">
+                <p>“CareWell gave us our mother back. Priya understood her rhythms and treated her with deep reverence and calm humor. Our home has peace again.”</p>
+                <cite>— Catherine H., Daughter</cite>
+              </blockquote>
+            </div>
+          </article>
+
+          <!-- Case Study 03: Diabetic Neuropathic Wound Healing -->
+          <article class="case-study-card study-blue">
+            <div class="case-study-header">
+              <div class="case-study-meta-top">
+                <span class="case-study-badge">Wound VAC &amp; Telemetry</span>
+                <span class="case-study-verification"><svg><use href="#i-check" /></svg>Verified Clinical Telemetry</span>
+              </div>
+              <div class="case-study-patient">
+                <span class="patient-avatar-badge blue">AT</span>
+                <div class="patient-info">
+                  <h3>Arthur T., Age 71</h3>
+                  <span class="patient-condition">Diabetic Plantar Neuropathic Ulcer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-body">
+              <div class="clinical-block challenge">
+                <span class="block-kicker">Clinical Challenge</span>
+                <p>Stage 3 plantar neuropathic ulcer with delayed granulation, elevated blood glucose fluctuations, and acute risk of systemic sepsis and amputation.</p>
+              </div>
+
+              <div class="clinical-block strategy">
+                <span class="block-kicker">CareWell Clinical Intervention</span>
+                <p>Aseptic negative-pressure wound therapy (Wound VAC) 3x/week, real-time digital glucometry telemetry syncing, and high-protein tissue healing nutrition plan.</p>
+              </div>
+
+              <!-- Outcome Box -->
+              <div class="case-study-outcome-box blue">
+                <div class="outcome-metric">
+                  <span class="metric-big">100%</span>
+                  <span class="metric-caption">Wound Granulation &amp; Closure in 8 Weeks</span>
+                </div>
+                <div class="outcome-metric">
+                  <span class="metric-big">0</span>
+                  <span class="metric-caption">Secondary In-Hospital Admissions</span>
+                </div>
+              </div>
+
+              <!-- Assigned Care Pod -->
+              <div class="case-study-pod">
+                <span class="pod-label">Assigned Care Pod:</span>
+                <span class="pod-members"><strong>Sarah Jenkins, BSN, RN, CWON</strong> &amp; <strong>David Sterling, RN</strong></span>
+              </div>
+
+              <!-- Family Quote -->
+              <blockquote class="case-study-quote">
+                <p>“Having a certified wound nurse come to our living room with hospital-grade equipment saved my husband's leg and saved our family's sanity.”</p>
+                <cite>— Linda T., Wife &amp; Primary Care Partner</cite>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+
+        <!-- Clinical Quality Benchmark Bar -->
+        <div class="outcomes-metric-bar glass">
+          <div class="outcomes-stat-item">
+            <span class="stat-value blue">99.4%</span>
+            <span class="stat-label">Press Ganey Dignity Rating</span>
+            <span class="stat-bench">Top 1% across private nursing</span>
+          </div>
+          <div class="outcomes-divider"></div>
+          <div class="outcomes-stat-item">
+            <span class="stat-value teal">&lt; 1.8%</span>
+            <span class="stat-label">30-Day Readmission Rate</span>
+            <span class="stat-bench">vs. 15.2% national acute avg</span>
+          </div>
+          <div class="outcomes-divider"></div>
+          <div class="outcomes-stat-item">
+            <span class="stat-value blue">100%</span>
+            <span class="stat-label">Background-Audited Staff</span>
+            <span class="stat-bench">10-point clinical vetting</span>
+          </div>
+          <div class="outcomes-divider"></div>
+          <div class="outcomes-stat-item">
+            <span class="stat-value teal">15 Min</span>
+            <span class="stat-label">Escalation Response</span>
+            <span class="stat-bench">24/7 RN on-call desk</span>
+          </div>
+        </div>
+
+        <!-- Share Experience Action Strip -->
+        <div class="case-study-cta-strip glass">
+          <div class="cta-strip-text">
+            <span class="cta-kicker">Family Trust &amp; Consultation</span>
+            <h3>Looking for similar outcomes for your family member?</h3>
+            <p>Consult with our clinical care coordinators to review physician orders, develop a personalized care continuum, and review pricing.</p>
+          </div>
+          <div class="cta-strip-actions">
+            <a class="button button-primary page-link" href="contact.html">Request Care Consultation <span>→</span></a>
+            <a class="button button-secondary page-link" href="pricing.html">Compare Care Pricing</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Standard Support Section -->
+      <section class="support-section glass reveal">
+        <div class="support-heading">
+          <span>Our standard</span>
+          <h2>Care families recommend</h2>
+          <p>Reliable arrival times, respectful support, strong communication, and practical help—consistently.</p>
+        </div>
+        <div class="feature-row">
+          <article><strong>4.9/5</strong><span>Average family rating</span></article>
+          <article><strong>96%</strong><span>Would recommend CareWell</span></article>
+          <article><strong>1,200+</strong><span>Families supported</span></article>
+          <article><strong>24/7</strong><span>Responsive care line</span></article>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Sign in to your ExamSuccess student account to access tests, reports, classes and study resources."><title>Sign In — ExamSuccess</title><link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"><script defer src="../assets/js/main.js"></script></head><body data-page="signin"><a class="skip-link" href="#main">Skip to sign in</a>
+<header class="site-header auth-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="header-brand-group">
+      <a class="brand" href="../index.html" aria-label="ExamSuccess home">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#logo"></use></svg></span>
+        <span class="brand-text"><span class="brand-name">ExamSuccess</span><span class="brand-tag">Your Success, Our Mission</span></span>
+      </a>
+    </div>
+    <div class="header-actions auth-header-actions">
+      <button class="icon-btn rtl-toggle-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="Toggle RTL layout">
+        <span class="dir-indicator">RTL</span>
+      </button>
+      <button class="icon-btn theme-toggle-btn" id="themeToggle" aria-label="Switch color theme" title="Switch color theme">
+        <svg class="icon" aria-hidden="true"><use href="#moon"></use></svg>
+      </button>
+      <a href="../index.html" class="btn btn-outline btn-sm back-btn" aria-label="Back to Home" style="display:inline-flex;align-items:center;gap:6px">
+        <svg class="icon" style="transform:rotate(180deg)"><use href="#arrow"></use></svg> <span class="back-text">Back to Home</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="auth-page" id="main"><div class="auth-shell">
+  <section class="auth-visual"><span class="eyebrow" style="color:#9bc8ff">Welcome back</span><h1>Your preparation continues here.</h1><p>Access personalized tests, detailed score reports, saved materials and your complete class schedule.</p><div class="trust-row" style="grid-template-columns:1fr"><div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#chart"></use></svg></span><span><strong style="color:#fff">Track real progress</strong><small style="color:#b9cceb">Every test turns into a clear next step.</small></span></div><div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#shield"></use></svg></span><span><strong style="color:#fff">Secure student access</strong><small style="color:#b9cceb">Your account and learning data stay protected.</small></span></div></div></section>
+  <section class="auth-form"><h1>Sign In</h1><p>Enter any valid demo details to open the dashboard.</p><form class="form-grid" data-validate data-redirect="dashboard.html" novalidate>
+    <div class="form-row"><label for="loginEmail">Email address</label><input class="field" id="loginEmail" type="email" autocomplete="email" required placeholder="student@example.com"><p class="field-error" data-error-for="loginEmail"></p></div>
+    <div class="form-row">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <label for="loginPassword">Password</label>
+        <button class="card-link" type="button" data-modal-open="forgotPasswordModal" style="background:none;border:none;padding:0;font-size:0.84rem;font-weight:600;cursor:pointer;font-family:inherit">Forgot password?</button>
+      </div>
+      <div class="password-wrap"><input class="field" id="loginPassword" type="password" autocomplete="current-password" minlength="6" required><button class="icon-btn password-toggle" type="button" data-password-toggle="loginPassword" aria-label="Show password"><svg class="icon"><use href="#eye"></use></svg></button></div><p class="field-error" data-error-for="loginPassword"></p>
+    </div>
+    <label class="check-row" for="rememberMe"><input type="checkbox" id="rememberMe"> Remember me on this device</label><button class="btn btn-primary" type="submit">Login to Dashboard <svg class="icon"><use href="#arrow"></use></svg></button><p style="text-align:center">New to ExamSuccess? <a class="card-link" href="signup.html" style="display:inline-flex;margin:0">Create an account</a></p>
+  </form></section>
+</div></main>
+
+<div class="modal" id="forgotPasswordModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="forgotPasswordTitle">
+  <div class="modal-panel" style="max-width:480px">
+    <div class="modal-head">
+      <h2 id="forgotPasswordTitle">Reset Password</h2>
+      <button class="modal-close-corner" data-modal-close aria-label="Close modal" title="Close"><svg class="icon"><use href="#close"></use></svg></button>
+    </div>
+    <p class="muted" style="margin-bottom:18px;font-size:0.9rem">Enter your registered email address and we will send you password reset instructions along with a secure link.</p>
+    <form class="form-grid" id="forgotPasswordForm" data-validate data-success="Password reset link sent! Please check your email inbox." novalidate>
+      <div class="form-row">
+        <label for="resetEmail">Registered Email address</label>
+        <input class="field" id="resetEmail" type="email" autocomplete="email" required placeholder="student@example.com">
+        <p class="field-error" data-error-for="resetEmail"></p>
+      </div>
+      <div class="form-status" data-form-status hidden></div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-outline btn-sm" type="button" data-modal-close>Cancel</button>
+        <button class="btn btn-primary btn-sm" type="submit" id="sendResetBtn">Send Reset Link <svg class="icon"><use href="#arrow"></use></svg></button>
+      </div>
+    </form>
+  </div>
+</div>
+<footer class="auth-footer">
+  <p style="margin:0">© 2026 ExamSuccess EdTech. All rights reserved. <a href="privacy.html" style="color:inherit;text-decoration:underline;margin-left:8px">Privacy Policy</a> · <a href="terms.html" style="color:inherit;text-decoration:underline;margin-left:4px">Terms of Service</a></p>
+</footer>
+</body></html>

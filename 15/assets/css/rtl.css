@@ -1,0 +1,31 @@
+html[dir="rtl"] { direction: rtl; }
+html[dir="rtl"] .brand-mark, html[dir="rtl"] .icon-orb, html[dir="rtl"] [data-lucide] { transform:scaleX(-1); }
+html[dir="rtl"] .btn:hover svg { transform:translateX(-4px) scaleX(-1); }
+html[dir="rtl"] .footer-col a:hover { transform:translateX(-3px); }
+html[dir="rtl"] .faq-answer p { padding:0 0 20px 46px; }
+html[dir="rtl"] .capacity-badge, html[dir="rtl"] .location-badge { left:auto; right:12px; }
+html[dir="rtl"] .product-card.popular::before { left:auto; right:0; border-radius:0 0 0 10px; }
+html[dir="rtl"] .newsletter input { border-radius:0 8px 8px 0; }
+html[dir="rtl"] .newsletter button { border-radius:8px 0 0 8px; }
+html[dir="rtl"] .hero-art {
+  inset:0 auto 0 0;
+  transform:scaleX(-1) scale(1.04);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, transparent 6%, rgba(0,0,0,0.25) 24%, rgba(0,0,0,0.85) 55%, #000 78%);
+  mask-image: linear-gradient(to left, transparent 0%, transparent 6%, rgba(0,0,0,0.25) 24%, rgba(0,0,0,0.85) 55%, #000 78%);
+}
+html[dir="rtl"] .hero-gradient { background:linear-gradient(270deg, #ffffff 0%, #ffffff 32%, rgba(255,255,255,0.95) 44%, rgba(255,255,255,0.7) 58%, rgba(255,255,255,0.15) 78%, transparent 100%); }
+html[dir="rtl"][data-theme="dark"] .hero-art {
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, transparent 8%, rgba(0,0,0,0.2) 22%, rgba(0,0,0,0.65) 48%, rgba(0,0,0,0.95) 75%, #000 90%);
+  mask-image: linear-gradient(to left, transparent 0%, transparent 8%, rgba(0,0,0,0.2) 22%, rgba(0,0,0,0.65) 48%, rgba(0,0,0,0.95) 75%, #000 90%);
+}
+html[dir="rtl"][data-theme="dark"] .hero-gradient { background:linear-gradient(270deg, #0e1a2a 0%, #0e1a2a 28%, rgba(14,26,42,0.97) 42%, rgba(14,26,42,0.72) 58%, rgba(14,26,42,0.2) 80%, transparent 100%); }
+html[dir="rtl"] .dropdown-menu { inset-inline-start: auto; inset-inline-end: 0; }
+html[dir="rtl"] .dropdown-item:hover, html[dir="rtl"] .dropdown-item:focus { transform: translateX(-4px); }
+html[dir="rtl"] .process-card::after { content: "←"; right: auto; left: -17px; }
+html[dir="rtl"] .project-selects select { padding: 9px 14px 9px 36px; background-position: left 14px center; }
+html[dir="rtl"] .map-info-card { left: auto; right: 24px; }
+html[dir="rtl"] .project-modal-close { right: auto; left: 16px; }
+html[dir="rtl"] .project-modal-hero-info { left: auto; right: 24px; text-align: right; }
+html[dir="rtl"] .modal-spec-card li strong { text-align: left; }
+html[dir="rtl"] .project-modal-story { border-inline-start: 4px solid var(--green); border-inline-end: 0; }
+@media(max-width:860px){html[dir="rtl"] .hero-art{transform:scaleX(-1)}html[dir="rtl"] .hero-gradient,html[dir="rtl"][data-theme="dark"] .hero-gradient{background:linear-gradient(180deg,var(--paper) 0%,transparent 43%,var(--paper) 92%)}html[dir="rtl"] .dropdown-menu{margin-inline-start:0;margin-inline-end:14px;padding:2px 8px 2px 0}html[dir="rtl"] .map-info-card{left:auto;right:16px}html[dir="rtl"] .project-modal-hero-info{left:auto;right:16px}}

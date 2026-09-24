@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Transparent approximate motorcycle service pricing and a simple working estimate calculator from Ironlane Moto Works."><meta name="theme-color" content="#111211"><title>Pricing | Ironlane Moto Works</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('ironlane-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dir=localStorage.getItem('ironlane-direction')||'ltr';</script>
+  <link rel="stylesheet" href="../assets/css/style.css?v=1.0.2"><link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.0.1"><link rel="stylesheet" href="../assets/css/rtl.css?v=1.0.0">
+  <link rel="stylesheet" href="../assets/css/visual-updates.css?v=1.3.1">
+</head><body data-root="../" data-page="pricing">
+  <div data-site-header></div><main id="main-content">
+    <header class="page-hero page-hero-visual">
+      <div class="container hero-split-inner">
+        <div class="hero-text-content reveal">
+          <span class="eyebrow"><i data-lucide="calculator" aria-hidden="true"></i> Transparent Workshop Rates</span>
+          <h1>Clear Ranges. <span class="accent">No Workshop Fog.</span></h1>
+          <p>Explore fixed labour tiers and standard service estimates. Every quote is confirmed after physical bay inspection—no mystery charges and no spanners turned without your approval.</p>
+          <div class="button-row">
+            <a class="btn" href="contact.html#book">Book a Service <i data-lucide="calendar-check" aria-hidden="true"></i></a>
+            <a class="btn btn-outline" href="#service-packages">Explore Packages</a>
+          </div>
+          <div class="hero-badges-strip">
+            <span class="hero-badge-pill"><i data-lucide="check-circle" aria-hidden="true"></i> Pre-Approved Estimates</span>
+            <span class="hero-badge-pill"><i data-lucide="shield-check" aria-hidden="true"></i> 90-Day Assurance</span>
+            <span class="hero-badge-pill"><i data-lucide="receipt" aria-hidden="true"></i> Zero Hidden Markups</span>
+          </div>
+        </div>
+        <div class="hero-compact-visual reveal">
+          <img src="../assets/images/unique/hero-pricing.webp" width="1200" height="750" alt="Service estimate, calculator and maintenance parts arranged on a workshop bench" fetchpriority="high">
+          <div class="hero-compact-badge"><i data-lucide="check" aria-hidden="true"></i> Transparent Workshop Billing</div>
+        </div>
+      </div>
+    </header>
+    <section class="section"><div class="container estimate-layout">
+      <div class="reveal"><span class="section-kicker">Approximate costs</span><h2>Service <span class="accent">estimate.</span></h2><div class="price-preview"><table class="price-table">
+        <caption class="sr-only">Approximate motorcycle service costs in Indian rupees</caption><thead><tr><th scope="col">Service</th><th scope="col">What it covers</th><th scope="col">Approx. cost</th></tr></thead><tbody>
+          <tr><td>Routine servicing</td><td>General check-up, bolt tightening, chain check, lubrication and basic adjustments.</td><td>₹800–₹1,200</td></tr>
+          <tr><td>Oil change</td><td>Engine oil and filter replacement with warm level and leak check.</td><td>₹400–₹800</td></tr>
+          <tr><td>Tyre replacement</td><td>Removal, fitting, balancing and installation of one tyre.</td><td>₹1,200–₹2,500</td></tr>
+          <tr><td>Brake servicing</td><td>Pad cleaning or replacement, fluid check and system inspection.</td><td>₹600–₹1,000</td></tr>
+          <tr><td>Chain adjustment</td><td>Tension, alignment, cleaning and lubrication.</td><td>₹300–₹600</td></tr>
+          <tr><td>Battery replacement</td><td>Battery health test and replacement with a suitable unit.</td><td>₹1,000–₹2,500</td></tr>
+          <tr><td>Engine diagnostics</td><td>Scan and mechanical checks to trace faults and warning lights.</td><td>₹500–₹1,200</td></tr>
+        </tbody></table></div><p class="form-note">Prices are demonstration ranges and may vary by motorcycle model, parts choice, taxes and the work discovered during inspection.</p></div>
+      <aside class="calculator reveal" aria-labelledby="calculator-title"><img class="calculator-photo" src="../assets/images/unique/pricing-inspection.webp" width="1200" height="800" alt="Inspecting under-seat components before preparing a service estimate" loading="lazy" decoding="async" data-image="pricing-inspection" srcset="../assets/images/unique/pricing-inspection-640.webp 640w, ../assets/images/unique/pricing-inspection.webp 1200w" sizes="(max-width: 767px) calc(100vw - 32px), 600px"><span class="section-kicker">Quick calculator</span><h3 id="calculator-title">Get a working range</h3><form data-estimate-form>
+        <div class="field"><label for="estimate-service">Service</label><select id="estimate-service" name="service"><option value="routine">Routine servicing</option><option value="oil">Oil change</option><option value="tyre">Tyre replacement</option><option value="brake">Brake servicing</option><option value="chain">Chain adjustment</option><option value="battery">Battery replacement</option><option value="diagnostics">Engine diagnostics</option></select></div>
+        <div class="field" style="margin-top:1rem"><label for="estimate-bike">Motorcycle type</label><select id="estimate-bike" name="bike"><option value="commuter">Commuter / scooter</option><option value="mid">Mid-capacity road bike</option><option value="premium">Premium / performance</option></select></div>
+        <div class="estimate-result" data-estimate-result aria-live="polite"></div>
+        <a class="btn" style="margin-top:1rem;width:100%" href="contact.html#book">Book a Service</a>
+      </form></aside>
+    </div></section>
+
+    <section class="section section-dark tiered-pricing-section" id="service-packages" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Transparent packages</span>
+          <h2 id="packages-title">Fixed tiers. <span class="accent">Zero surprises.</span></h2>
+          <p class="section-intro">Choose a fixed-labour workshop package designed for daily commuters, scheduled 6-month maintenance, or long-haul expedition preparation. All replacement parts and fluids are pre-approved before fitting.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="tier-card reveal">
+            <div class="tier-header">
+              <h3>Essential Care</h3>
+              <p class="tier-target">Daily commuters, scooters &amp; quick interim 3,000 km check-ins.</p>
+            </div>
+            <div class="tier-price-row">
+              <span class="tier-price">₹799</span>
+              <span class="tier-sub">+ fluids &amp; consumables</span>
+            </div>
+            <div class="tier-meta-row">
+              <i data-lucide="timer" aria-hidden="true"></i>
+              <span>60–90 min turnaround</span>
+            </div>
+            <ul class="tier-features" aria-label="Essential Care package features">
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Warm engine oil drain &amp; filter replacement</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Drive chain degrease, tension &amp; wax</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Brake pad thickness &amp; disc condition inspection</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Battery resting voltage &amp; terminal check</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Tyre pressure &amp; tread depth assessment</span></li>
+              <li class="dimmed"><i data-lucide="minus" aria-hidden="true"></i><span>Caliper slider pin ultrasonic cleaning</span></li>
+              <li class="dimmed"><i data-lucide="minus" aria-hidden="true"></i><span>Digital OBD-II electronic scan &amp; report</span></li>
+              <li class="dimmed"><i data-lucide="minus" aria-hidden="true"></i><span>Hydraulic brake fluid pressure bleed</span></li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html?service=essential#book">Book Essential</a>
+          </article>
+
+          <article class="tier-card featured reveal">
+            <span class="tag tag-popular tier-badge-top">Most popular · Recommended</span>
+            <div class="tier-header">
+              <h3>Master 42-Point Care</h3>
+              <p class="tier-target">Comprehensive 6-month / annual scheduled care for commuter and performance bikes.</p>
+            </div>
+            <div class="tier-price-row">
+              <span class="tier-price">₹1,499</span>
+              <span class="tier-sub">+ fluids &amp; consumables</span>
+            </div>
+            <div class="tier-meta-row">
+              <i data-lucide="timer" aria-hidden="true"></i>
+              <span>2.5–3.5 hours turnaround</span>
+            </div>
+            <ul class="tier-features" aria-label="Master 42-Point Care package features">
+              <li><i data-lucide="check" aria-hidden="true"></i><span><strong>Everything in Essential Care</strong></span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Full 42-point multi-system inspection &amp; checklist</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Air filter cleaning &amp; spark plug electrode gap check</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Caliper degreasing &amp; ultrasonic slider pin lube</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Steering headstock &amp; swingarm pivot play check</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>OBD-II scanner fault check &amp; sensor diagnostic</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Technician road verification &amp; 90-day assurance</span></li>
+              <li class="dimmed"><i data-lucide="minus" aria-hidden="true"></i><span>Hydraulic brake fluid pressure bleed</span></li>
+            </ul>
+            <a class="btn" href="contact.html?service=master#book">Book Master Care</a>
+          </article>
+
+          <article class="tier-card reveal">
+            <div class="tier-header">
+              <h3>Tour &amp; Track Overhaul</h3>
+              <p class="tier-target">Pre-tour long distance rides, track days, or bikes returning from storage.</p>
+            </div>
+            <div class="tier-price-row">
+              <span class="tier-price">₹2,799</span>
+              <span class="tier-sub">+ fluids &amp; consumables</span>
+            </div>
+            <div class="tier-meta-row">
+              <i data-lucide="timer" aria-hidden="true"></i>
+              <span>Full-day slot (drop by 10 AM)</span>
+            </div>
+            <ul class="tier-features" aria-label="Tour & Track Overhaul package features">
+              <li><i data-lucide="check" aria-hidden="true"></i><span><strong>Everything in Master Care</strong></span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Complete hydraulic brake fluid flush &amp; bubble-free bleed</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Fork stanchion seal &amp; damping rebound inspection</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Clutch &amp; throttle cable lubricated &amp; free-play tuned</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>150A carbon-pile battery load &amp; stator output test</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Chassis &amp; subframe bolt torque re-specification</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>Extended 5 km road check &amp; pre-tour spare kit list</span></li>
+              <li><i data-lucide="check" aria-hidden="true"></i><span>90-day priority re-inspection guarantee</span></li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html?service=tour#book">Book Tour Overhaul</a>
+          </article>
+        </div>
+
+        <div class="pricing-faq-wrapper reveal">
+          <div class="faq-header">
+            <span class="section-kicker">Honest billing promise</span>
+            <h3>Frequently asked questions about workshop pricing</h3>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>What happens if additional worn parts are found during service?</span>
+                <i class="faq-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+              </summary>
+              <div class="faq-content">
+                <p>We strictly never fit new parts or bill extra work without your written approval. Our mechanic photographs the worn component and sends a clear WhatsApp estimate with options before any replacement happens.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Can I bring my own engine oil, filters, or brake pads?</span>
+                <i class="faq-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+              </summary>
+              <div class="faq-content">
+                <p>Yes. If you prefer a specific brand of sealed, manufacturer-grade engine oil or performance brake pads, we gladly perform labour-only installation charged at our standard hourly rates without any extra markup.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Are workshop cleaning consumables included in package rates?</span>
+                <i class="faq-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+              </summary>
+              <div class="faq-content">
+                <p>Yes. Solvent cleaners, degreasers, copper crush washers, and high-cling chain wax used during standard servicing are already bundled into our tiered rates—no surprise &ldquo;miscellaneous workshop supplies&rdquo; line items.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>What warranty is included with workshop repairs?</span>
+                <i class="faq-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+              </summary>
+              <div class="faq-content">
+                <p>Eligible mechanical and maintenance work carries our 90-day Ironlane Workmanship Assurance. If an adjusted or repaired component requires re-inspection within 90 days, we check and adjust it free of charge.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">What changes a quote</span>
+          <h2>The Bike Decides More Than the <span class="accent">Price List.</span></h2>
+          <p class="section-intro">Every machine arrives with distinct engineering and wear histories. Transparent assessments ensure fair labour quotes tailored specifically to your motorcycle.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card service-card image-service-card reveal">
+            <img class="service-photo" src="../assets/images/unique/pricing-model-access.webp" width="1200" height="800" alt="Motorcycle with side fairing removed for access to the engine" loading="lazy" decoding="async" data-image="pricing-model-access" srcset="../assets/images/unique/pricing-model-access-640.webp 640w, ../assets/images/unique/pricing-model-access.webp 1200w" sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, 420px">
+            <div class="image-card-body">
+              <h3>Model &amp; Access</h3>
+              <p>Fairing removal, engine layout, and manufacturer procedures determine workshop bay time.</p>
+            </div>
+          </article>
+          <article class="card service-card image-service-card reveal">
+            <img class="service-photo" src="../assets/images/unique/pricing-parts-choice.webp" width="1200" height="800" alt="Motorcycle filters, spark plugs and brake pads prepared for parts selection" loading="lazy" decoding="async" data-image="pricing-parts-choice" srcset="../assets/images/unique/pricing-parts-choice-640.webp 640w, ../assets/images/unique/pricing-parts-choice.webp 1200w" sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, 420px">
+            <div class="image-card-body">
+              <h3>Parts Choice</h3>
+              <p>Select from OEM-certified spares, factory fluids, or premium aftermarket performance grades.</p>
+            </div>
+          </article>
+          <article class="card service-card image-service-card reveal">
+            <img class="service-photo" src="../assets/images/unique/pricing-condition-found.webp" width="1200" height="800" alt="Measuring motorcycle tyre wear during a condition assessment" loading="lazy" decoding="async" data-image="pricing-condition-found" srcset="../assets/images/unique/pricing-condition-found-640.webp 640w, ../assets/images/unique/pricing-condition-found.webp 1200w" sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, 420px">
+            <div class="image-card-body">
+              <h3>Condition Found</h3>
+              <p>Under-seat wear or chain stretch is photographed and sent for approval before extra work begins.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band"><div class="container cta-inner reveal"><div><span class="section-kicker">Fair work, agreed first</span><h2>Approve the scope before the spanners turn.</h2></div><a class="btn" href="contact.html#book">Book a Service <i data-lucide="calendar-check" aria-hidden="true"></i></a></div></section>
+  </main><div data-site-footer></div><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="../assets/js/main.js?v=1.3.0" defer></script>
+</body></html>

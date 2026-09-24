@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Book a free residential solar site assessment and find SolarNest experience centers near you."><title>Contact &amp; Free Site Assessment — SolarNest</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</head><body data-page="contact"><div id="site-header"></div><main id="main-content">
+  <section class="utility-hero"><div class="container"><span class="eyebrow">Your solar journey starts with a conversation</span><h1>Let’s Plan a <span class="accent">Brighter Rooftop.</span> <span class="leaf">●</span></h1><p>Tell us about your home and electricity use. A SolarNest advisor will help identify the next practical step.</p></div></section>
+  <section class="section" id="booking" aria-labelledby="contact-title"><div class="container"><div class="contact-shell reveal">
+    <aside class="contact-info"><span class="eyebrow">SolarNest support</span><h2>Get in Touch</h2><p class="muted">Speak with a real solar advisor—no pressure, no confusing jargon.</p><ul class="contact-list"><li><i data-lucide="phone"></i><span><strong>Call us</strong><br>+91 98765 43210</span></li><li><i data-lucide="mail"></i><span><strong>Email</strong><br>hello@solarnest.in</span></li><li><i data-lucide="clock-3"></i><span><strong>Working hours</strong><br>Mon–Sat, 9:00 AM–6:00 PM</span></li><li><i data-lucide="map-pin"></i><span><strong>Headquarters</strong><br>123 Green Energy Street<br>Bengaluru 560001</span></li></ul><div class="socials"><a href="https://facebook.com/solarnest" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="https://instagram.com/solarnest" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="https://youtube.com/@solarnest" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube"></i></a><a href="https://linkedin.com/company/solarnest" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></aside>
+    <div class="booking-form"><span class="eyebrow">Free, no-obligation visit</span><h2 id="contact-title">Book Your Site Assessment</h2><p class="muted">Required fields are marked by their labels and validated before submission.</p><div class="form-success" role="status">Thank you! We’ve received your assessment request. Our advisor will call you shortly.</div><form class="validated-form form-grid" novalidate>
+      <div class="field"><label for="contact-name">Full name</label><input id="contact-name" name="name" autocomplete="name" required placeholder="Enter your name"><div class="field-error"></div></div>
+      <div class="field"><label for="contact-phone">Phone number</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91 98765 43210"><div class="field-error"></div></div>
+      <div class="field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><div class="field-error"></div></div>
+      <div class="field"><label for="contact-city">City / location</label><input id="contact-city" name="city" autocomplete="address-level2" required placeholder="Your city"><div class="field-error"></div></div>
+      <div class="field"><label for="contact-property">Property type</label><select id="contact-property" name="property" required><option value="">Select property type</option><option>Independent house</option><option>Villa</option><option>Apartment association</option><option>Small office</option></select><div class="field-error"></div></div>
+      <div class="field"><label for="contact-bill">Average monthly bill (₹)</label><input id="contact-bill" name="bill" type="number" min="500" required placeholder="e.g. 5000"><div class="field-error"></div></div>
+      <div class="field"><label for="contact-date">Preferred date</label><input id="contact-date" name="date" type="date" required><div class="field-error"></div></div>
+      <div class="field"><label for="contact-time">Preferred time</label><select id="contact-time" name="time" required><option value="">Select a time</option><option>9:00 AM – 12:00 PM</option><option>12:00 PM – 3:00 PM</option><option>3:00 PM – 6:00 PM</option></select><div class="field-error"></div></div>
+      <div class="field span-2"><label for="contact-note">Anything we should know? <span class="muted">Optional</span></label><textarea id="contact-note" name="note" placeholder="Roof type, shade, existing backup, or any questions"></textarea><div class="field-error"></div></div>
+      <button class="btn span-2" type="submit"><i data-lucide="calendar-check"></i> Book My Free Assessment <i data-lucide="arrow-right"></i></button>
+    </form></div>
+    <div class="engineer-wrap"><img src="../assets/images/engineer.png" alt="SolarNest engineer ready to help"></div>
+  </div></div></section>
+
+  <!-- Live Interactive Map Section -->
+  <section class="section surface" aria-labelledby="map-heading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Find Our Experience Centers</span>
+        <h2 id="map-heading">Visit SolarNest Near You <span class="leaf">●</span></h2>
+        <p>Explore our regional offices and experience centers across India. Select a location to view details and get live directions.</p>
+      </div>
+
+      <div class="map-wrapper card reveal">
+        <div class="map-toolbar">
+          <div class="map-tabs" role="tablist" aria-label="Select office location">
+            <button class="map-tab active" data-map-location="bengaluru" role="tab" aria-selected="true"><i data-lucide="map-pin"></i> Bengaluru (HQ)</button>
+            <button class="map-tab" data-map-location="pune" role="tab" aria-selected="false"><i data-lucide="map-pin"></i> Pune</button>
+            <button class="map-tab" data-map-location="hyderabad" role="tab" aria-selected="false"><i data-lucide="map-pin"></i> Hyderabad</button>
+            <button class="map-tab" data-map-location="chennai" role="tab" aria-selected="false"><i data-lucide="map-pin"></i> Chennai</button>
+          </div>
+        </div>
+
+        <div class="map-canvas-container">
+          <div id="contact-map" class="contact-map" aria-label="Interactive map of SolarNest offices"></div>
+          <div class="map-info-card" id="map-info-card">
+            <div class="map-info-header">
+              <span class="status-badge"><span class="status-dot"></span> Open Today</span>
+              <h3 id="map-office-name">Bengaluru Headquarters</h3>
+            </div>
+            <div class="map-info-details">
+              <div class="info-row">
+                <i data-lucide="map-pin"></i>
+                <span id="map-office-address">123 Green Energy Street, MG Road, Bengaluru 560001</span>
+              </div>
+              <div class="info-row">
+                <i data-lucide="clock-3"></i>
+                <span id="map-office-hours">Mon–Sat, 9:00 AM – 6:00 PM</span>
+              </div>
+              <div class="info-row">
+                <i data-lucide="phone"></i>
+                <a id="map-office-phone" href="tel:+919876543210">+91 98765 43210</a>
+              </div>
+            </div>
+            <div class="map-info-actions">
+              <a id="map-directions-btn" href="https://maps.google.com/?q=12.9716,77.5946" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                <i data-lucide="navigation"></i> Get Directions
+              </a>
+              <a href="#booking" class="btn btn-sm btn-outline">
+                <i data-lucide="calendar"></i> Book Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm"><div class="container"><div class="grid-3 stagger"><article class="card feature-card"><span class="icon-orb"><i data-lucide="phone-call"></i></span><h3>1. Quick introduction</h3><p>We confirm your location, basic energy use and preferred visit time.</p></article><article class="card feature-card"><span class="icon-orb"><i data-lucide="scan-search"></i></span><h3>2. On-site assessment</h3><p>An engineer examines the roof, shade, meter and safe equipment location.</p></article><article class="card feature-card"><span class="icon-orb"><i data-lucide="file-check-2"></i></span><h3>3. Clear proposal</h3><p>You receive a system recommendation, generation estimate and transparent quote.</p></article></div></div></section>
+</main><div id="site-footer"></div></body></html>

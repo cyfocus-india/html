@@ -1,0 +1,21 @@
+NORTHSTAR TUTORING — FOR SCHOOL STUDENTS
+Mathematics — Triangles Practice
+Class 10 | Tutor: Rohit Verma | 5 September 2026
+
+Two triangles are similar when their corresponding angles are equal and corresponding sides are proportional.
+Similarity criteria include AA, SSS and SAS (with the included angle equal).
+For similar triangles, the ratio of areas equals the square of the ratio of corresponding sides.
+
+Practice:
+1. Similar triangles have corresponding sides in the ratio 2:3. Find their area ratio.
+2. A right triangle has legs 6 cm and 8 cm. Find its hypotenuse.
+3. A triangle with sides 3, 4 and 5 cm is similar to one whose shortest side is 9 cm. Find its other sides.
+4. State what information is needed to apply SAS similarity.
+
+Answers:
+1. 4:9. 2. 10 cm. 3. 12 cm and 15 cm.
+4. Two pairs of corresponding sides are proportional and their included angles are equal.
+
+Always label corresponding vertices in the same order.
+
+Original sample learning material. For template demonstration.

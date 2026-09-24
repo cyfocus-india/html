@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="h2HeroCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1e42"/>
+      <stop offset="60%" stop-color="#0f2b60"/>
+      <stop offset="100%" stop-color="#143e8d"/>
+    </linearGradient>
+    <linearGradient id="liveBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="h2Glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="rgba(3,18,54,0.4)"/>
+    </filter>
+  </defs>
+
+  <!-- Main Showcase Container with Glow -->
+  <g filter="url(#h2Glow)">
+    <rect x="20" y="20" width="600" height="440" rx="20" fill="url(#h2HeroCardBg)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Top Window Controls & Live Pill -->
+  <g transform="translate(48, 48)">
+    <circle cx="0" cy="0" r="5" fill="#f87171"/>
+    <circle cx="16" cy="0" r="5" fill="#facc15"/>
+    <circle cx="32" cy="0" r="5" fill="#4ade80"/>
+    
+    <g transform="translate(420, -12)">
+      <rect width="96" height="24" rx="12" fill="url(#liveBadgeGrad)"/>
+      <circle cx="14" cy="12" r="4" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="16" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">LIVE NOW</text>
+    </g>
+  </g>
+
+  <!-- Live Video / Class Screen Frame -->
+  <g transform="translate(48, 76)">
+    <rect width="544" height="210" rx="14" fill="#040e24" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    
+    <!-- Video Content / Classroom Representation -->
+    <rect x="24" y="24" width="220" height="24" rx="6" fill="rgba(255,255,255,0.12)"/>
+    <text x="36" y="40" fill="#93c5fd" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="750">IBPS &amp; SBI PO MASTERCLASS</text>
+    
+    <text x="24" y="80" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">Advanced Data Interpretation &amp; Speed Math</text>
+    <text x="24" y="104" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Instructor: Rohit Mehta (Ex-SBI PO Trainer · 12+ Yrs Exp)</text>
+    
+    <!-- Live Wave / Metric -->
+    <g transform="translate(24, 130)">
+      <rect width="140" height="46" rx="8" fill="rgba(255,255,255,0.08)"/>
+      <text x="14" y="22" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Active Learners</text>
+      <text x="14" y="38" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">4,280 Online</text>
+      
+      <g transform="translate(152, 0)">
+        <rect width="140" height="46" rx="8" fill="rgba(255,255,255,0.08)"/>
+        <text x="14" y="22" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Session Rating</text>
+        <text x="14" y="38" fill="#facc15" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">★ 4.95 / 5.0</text>
+      </g>
+    </g>
+
+    <!-- Play / Live Stream Visual Graphic -->
+    <g transform="translate(430, 95)">
+      <circle cx="36" cy="36" r="36" fill="#2563eb" filter="drop-shadow(0 4px 12px rgba(37,99,235,0.5))"/>
+      <polygon points="30,22 50,36 30,50" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Bottom Diagnostic / Achievement Cards -->
+  <g transform="translate(48, 306)">
+    <!-- Card 1: All India Mock CBT -->
+    <rect width="260" height="120" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="36" cy="36" r="16" fill="#059669"/>
+    <path d="M30 36 L34 40 L43 31" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+    <text x="62" y="32" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">All-India CBT Test #24</text>
+    <text x="62" y="48" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11">Completed · Rank: AIR 142</text>
+    <rect x="20" y="70" width="220" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+    <rect x="20" y="70" width="185" height="6" rx="3" fill="#10b981"/>
+    <text x="20" y="96" fill="#bfdbfe" font-family="system-ui, -apple-system, sans-serif" font-size="11">Accuracy: <tspan fill="#ffffff" font-weight="750">92.5%</tspan> · Speed: <tspan fill="#ffffff" font-weight="750">42s/Q</tspan></text>
+
+    <!-- Card 2: Upcoming Schedule & Daily Quiz -->
+    <g transform="translate(284, 0)">
+      <rect width="260" height="120" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <circle cx="36" cy="36" r="16" fill="#d97706"/>
+      <path d="M36 26 V36 L43 40" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+      <text x="62" y="32" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">Next Batch Commencing</text>
+      <text x="62" y="48" fill="#fde68a" font-family="system-ui, -apple-system, sans-serif" font-size="11">Monday 7:00 PM · Limited Seats</text>
+      
+      <rect x="20" y="68" width="220" height="34" rx="6" fill="#2563eb"/>
+      <text x="130" y="89" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="750">Join Free Live Demo Session →</text>
+    </g>
+  </g>
+</svg>

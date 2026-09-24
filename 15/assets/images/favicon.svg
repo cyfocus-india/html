@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SolarNest">
+  <defs>
+    <linearGradient id="sn-sun-fav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFBD22"/>
+      <stop offset="100%" stop-color="#FF7A00"/>
+    </linearGradient>
+    <linearGradient id="sn-panel-fav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E78C2"/>
+      <stop offset="100%" stop-color="#0E4273"/>
+    </linearGradient>
+    <linearGradient id="sn-leaf-fav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55D85C"/>
+      <stop offset="100%" stop-color="#248A3D"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="16" fill="#0D1B2A"/>
+  <!-- Sun & Rays -->
+  <circle cx="32" cy="22" r="11" fill="url(#sn-sun-fav)" filter="url(#glow)"/>
+  <g stroke="#FFBD22" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+    <line x1="32" y1="5" x2="32" y2="9"/>
+    <line x1="32" y1="35" x2="32" y2="39"/>
+    <line x1="15" y1="22" x2="19" y2="22"/>
+    <line x1="45" y1="22" x2="49" y2="22"/>
+    <line x1="20" y1="10" x2="23" y2="13"/>
+    <line x1="41" y1="31" x2="44" y2="34"/>
+    <line x1="44" y1="10" x2="41" y2="13"/>
+    <line x1="23" y1="31" x2="20" y2="34"/>
+  </g>
+  <!-- Rooftop Solar Photovoltaic Structure -->
+  <path d="M10 50 L32 30 L54 50 L46 51 L32 37 L18 51 Z" fill="url(#sn-panel-fav)"/>
+  <path d="M22 41 L42 41 M26 36 L38 36 M32 31 L32 46" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+  <!-- Nest Eco Leaf Curve -->
+  <path d="M8 52 C 14 57, 24 59, 34 56 C 45 53, 53 43, 55 33 C 55 42, 48 54, 35 58 C 24 60.5, 13 58, 8 52 Z" fill="url(#sn-leaf-fav)"/>
+</svg>

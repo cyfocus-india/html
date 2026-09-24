@@ -1,0 +1,177 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Estimate monthly and annual rooftop solar savings with the interactive SolarNest calculator."><title>Solar Savings Calculator — SolarNest</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="../assets/js/main.js" defer></script>
+</head><body data-page="calculator"><div id="site-header"></div><main id="main-content">
+  <section class="hero page-hero"><img class="hero-art" src="../assets/images/hero-calculator.png" alt="Solar home with a green calculator and coin stacks"><div class="hero-gradient"></div><div class="container"><div class="hero-copy"><span class="eyebrow">Know before you invest</span><h1>Solar Savings<br><span class="accent">Calculator.</span> <i data-lucide="calculator"></i></h1><p>Enter a few details to estimate monthly bill reduction, annual savings and likely payback.</p><div class="hero-metrics"><div class="hero-metric"><strong>Up to 80%</strong><span>potential bill reduction</span></div><div class="hero-metric"><strong>Clean</strong><span>renewable energy</span></div><div class="hero-metric"><strong>Guided</strong><span>subsidy support</span></div></div></div></div></section>
+  <section class="section" aria-labelledby="calculator-title"><div class="container">
+    <div class="section-heading reveal"><span class="eyebrow">Your estimate</span><h2 id="calculator-title">Turn Your Bill Into a Solar Plan</h2><p>Adjust the inputs and the estimate updates instantly.</p></div>
+    <div class="calculator-shell reveal">
+      <form class="calc-form" id="savings-calculator" novalidate>
+        <h3 class="step-title"><span class="step-number">1</span>Enter Your Details</h3>
+        <div class="field"><label for="monthlyBill">Monthly electricity bill (₹)</label><input id="monthlyBill" name="monthlyBill" type="number" min="500" max="500000" value="5000" required><div class="field-error"></div></div>
+        <div class="field"><label for="usage">Average daily usage (units)</label><input id="usage" name="usage" type="number" min="1" max="2500" value="21" required><div class="field-error"></div></div>
+        <div class="field"><label for="tariff">Electricity tariff (₹ per unit)</label><input id="tariff" name="tariff" type="number" min="3" max="20" step=".5" value="8" required><div class="field-error"></div></div>
+        <div class="field"><label for="systemSize">System size (kW) <span>1–20 kW</span></label><div class="range-wrap"><button type="button" data-size-minus aria-label="Decrease system size">−</button><output data-size-output for="systemSize">3</output><button type="button" data-size-plus aria-label="Increase system size">+</button></div><input id="systemSize" name="systemSize" type="hidden" value="3"></div>
+        <div class="field"><label for="roofType">Roof type</label><select id="roofType" name="roofType"><option>RCC flat roof</option><option>Tiled roof</option><option>Metal sheet roof</option></select></div>
+        <div class="field"><label for="location">Location</label><select id="location" name="location"><option>Bengaluru, Karnataka</option><option>Pune, Maharashtra</option><option>Hyderabad, Telangana</option><option>Chennai, Tamil Nadu</option><option>Ahmedabad, Gujarat</option><option>Other Indian City</option></select></div>
+        <button class="btn" type="submit" style="width:100%">Calculate Savings <i data-lucide="calculator"></i></button>
+        <p class="muted" style="font-size:.69rem"><i data-lucide="lightbulb"></i> Not sure about your exact details? <a class="kicker" href="contact.html#booking">Book a free site assessment</a>.</p>
+      </form>
+      <div class="calc-results" data-results tabindex="-1" aria-live="polite">
+        <h3 class="step-title"><span class="step-number">2</span>Your Savings Estimate</h3>
+        <div class="result-hero"><span class="result-label">Estimated monthly savings</span><strong class="result-value" data-monthly-saving>₹3,024</strong><span class="muted">Real Indian Solar benchmark</span><span class="result-coin"></span></div>
+        <div class="results-grid"><div class="result-tile"><span>Estimated annual savings</span><strong data-annual-saving>₹36,288</strong></div><div class="result-tile"><span>Payback period</span><strong data-payback>2.8 Years</strong></div><div class="result-tile"><span>System size</span><strong data-system-output>3 kW</strong></div><div class="result-tile"><span>CO₂ reduction</span><strong data-carbon>3.8 Tons/Year</strong></div></div>
+        <div class="savings-note"><span class="icon-orb"><i data-lucide="zap"></i></span><span>You can eliminate up to <strong>95% of grid charges</strong> with net metering.</span></div>
+
+        <!-- Indian Solar Norms & Calculation Assumptions Note Box -->
+        <div class="calc-assumptions-box">
+          <h4><i data-lucide="info"></i> Indian Solar Standards &amp; Calculation Assumptions</h4>
+          <div class="calc-assumptions-grid">
+            <div class="assumption-item"><strong>Daily Solar Generation:</strong> Sized at ~4.2 kWh/day per kWp (approx. 126 units/kW/month in Indian sunlight conditions).</div>
+            <div class="assumption-item"><strong>Net Metering Offset:</strong> Offsets up to 95% of energy charges. Remaining ~5% accounts for DISCOM fixed meter load tariffs.</div>
+            <div class="assumption-item"><strong>Surplus Grid Export:</strong> Excess generation fed back into grid is credited at state DISCOM solar rate (~₹3.50/unit APPC).</div>
+            <div class="assumption-item"><strong>PM Surya Ghar Subsidy:</strong> Central subsidy of ₹30,000 (1 kW), ₹60,000 (2 kW), and ₹78,000 (3–10 kW) is factored into net payback.</div>
+          </div>
+          <div class="subsidy-badge-pill"><i data-lucide="check-circle-2"></i> PM Surya Ghar: Muft Bijli Yojana Central Subsidy Verified</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+  <section class="section surface" aria-labelledby="chart-title"><div class="container"><div class="card chart-card reveal"><div class="grid-2"><div><span class="eyebrow">Long-term value</span><h2 id="chart-title" style="margin:0">Your Savings Over 25 Years</h2><p class="muted">Grey shows an illustrative rising grid bill; green shows your lower net cost after solar generation.</p></div><div class="results-grid"><div class="result-tile"><span>Illustrative lifetime savings</span><strong data-lifetime>₹8,61,840</strong></div><div class="result-tile"><span>Electricity units generated</span><strong data-units>1,04,328 Units</strong></div></div></div><div class="chart-wrap" data-savings-chart role="img" aria-label="Twenty-five-year illustrative bill comparison chart"></div><div style="display:flex;gap:20px;justify-content:center;margin-top:14px;font-size:.69rem"><span><i style="display:inline-block;width:11px;height:11px;background:#bdc5ce;border-radius:3px"></i> Bill without solar</span><span><i style="display:inline-block;width:11px;height:11px;background:#2f9631;border-radius:3px"></i> Net bill with solar</span></div></div></div></section>
+
+  <!-- Unique Section: PM Surya Ghar Subsidy Breakdown & Positive Cash-Flow Green EMI Blueprint -->
+  <section class="section" id="subsidy-financing" aria-labelledby="subsidy-heading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Financial Payback &amp; Support</span>
+        <h2 id="subsidy-heading">Government Subsidy &amp; <span class="accent">Green EMI Financing</span> <span class="leaf">●</span></h2>
+        <p>Claim up to ₹78,000 Direct Benefit Transfer (DBT) directly into your bank account under PM Surya Ghar Muft Bijli Yojana, paired with low-interest clean energy loans.</p>
+      </div>
+
+      <!-- Subsidy Tiers 3-Column Grid -->
+      <div class="grid-3 stagger subsidy-tiers-grid" style="margin-bottom: 30px;" role="radiogroup" aria-label="Solar capacity options">
+        <article class="card subsidy-tier-card" data-subsidy-tier="1kw" role="radio" aria-checked="false" tabindex="0">
+          <div class="tier-card-header">
+            <span class="subsidy-tier-badge">Entry Level</span>
+            <span class="tier-status-pill"><i data-lucide="circle"></i> Click to select</span>
+          </div>
+          <h3>1 kW Rooftop System</h3>
+          <div class="subsidy-amount-box">
+            <strong>₹30,000</strong>
+            <span>Direct Central DBT Subsidy</span>
+          </div>
+          <div class="tier-size-selector fixed-tier" aria-label="1 kW System Capacity">
+            <span class="tier-size-label">System Size:</span>
+            <div class="tier-size-grid single">
+              <span class="tier-fixed-pill">1 kW Standard</span>
+            </div>
+          </div>
+          <ul class="subsidy-checklist">
+            <li><i data-lucide="check"></i> 100% credited into bank account</li>
+            <li><i data-lucide="check"></i> Suitable for 1 BHK / ~120 units/mo</li>
+            <li><i data-lucide="check"></i> Requires ~90 sq. ft. shade-free roof</li>
+          </ul>
+          <button type="button" class="tier-select-btn" data-select-tier="1kw" aria-label="Select 1 kW Rooftop Option"><i data-lucide="check-circle-2"></i> Select 1 kW</button>
+        </article>
+
+        <article class="card subsidy-tier-card selected highlight" data-subsidy-tier="2kw" role="radio" aria-checked="true" tabindex="0">
+          <div class="tier-card-header">
+            <span class="subsidy-tier-badge popular-badge">Most Popular</span>
+            <span class="tier-status-pill active"><i data-lucide="check-circle-2"></i> Selected Option</span>
+          </div>
+          <h3>2 kW Rooftop System</h3>
+          <div class="subsidy-amount-box">
+            <strong>₹60,000</strong>
+            <span>Direct Central DBT Subsidy</span>
+          </div>
+          <div class="tier-size-selector fixed-tier" aria-label="2 kW System Capacity">
+            <span class="tier-size-label">System Size:</span>
+            <div class="tier-size-grid single">
+              <span class="tier-fixed-pill">2 kW Standard</span>
+            </div>
+          </div>
+          <ul class="subsidy-checklist">
+            <li><i data-lucide="check"></i> 100% credited into bank account</li>
+            <li><i data-lucide="check"></i> Ideal for 2 BHK running refrigerator &amp; mixer</li>
+            <li><i data-lucide="check"></i> Generates ~240 units/mo (~₹1,800 savings)</li>
+          </ul>
+          <button type="button" class="tier-select-btn" data-select-tier="2kw" aria-label="2 kW Option Selected"><i data-lucide="check-circle-2"></i> Selected 2 kW</button>
+        </article>
+
+        <article class="card subsidy-tier-card" data-subsidy-tier="3kw" role="radio" aria-checked="false" tabindex="0">
+          <div class="tier-card-header">
+            <span class="subsidy-tier-badge">Maximum Allowance</span>
+            <span class="tier-status-pill"><i data-lucide="circle"></i> Click to select</span>
+          </div>
+          <h3>3 kW to 10 kW Systems</h3>
+          <div class="subsidy-amount-box">
+            <strong>₹78,000</strong>
+            <span>Maximum Central DBT Subsidy</span>
+          </div>
+          <div class="tier-size-selector" aria-label="Choose 3 kW to 10 kW capacity option">
+            <span class="tier-size-label">Select Size:</span>
+            <div class="tier-size-grid">
+              <button type="button" class="tier-size-pill active" data-sub-size="3kw">3 kW</button>
+              <button type="button" class="tier-size-pill" data-sub-size="5kw">5 kW</button>
+              <button type="button" class="tier-size-pill" data-sub-size="10kw">10 kW</button>
+            </div>
+          </div>
+          <ul class="subsidy-checklist">
+            <li><i data-lucide="check"></i> Capped maximum residential DBT</li>
+            <li><i data-lucide="check"></i> High generation covers ACs &amp; EV wallbox</li>
+            <li><i data-lucide="check"></i> Rapid 3.5-year simple investment payback</li>
+          </ul>
+          <button type="button" class="tier-select-btn" data-select-tier="3kw" aria-label="Select 3 kW to 10 kW Option"><i data-lucide="check-circle-2"></i> Select 3–10 kW</button>
+        </article>
+      </div>
+
+      <!-- Positive Cash-Flow EMI Comparison Card -->
+      <div class="card cashflow-card reveal" style="padding: 30px; border: 1.5px solid rgba(47,150,49,0.3); border-radius: var(--radius); background: linear-gradient(145deg, var(--paper), var(--green-soft));">
+        <div style="max-width: 680px; margin: 0 auto; text-align: center; margin-bottom: 24px;">
+          <span class="eyebrow" style="color: var(--green);">Cash-Flow Positive From Day 1</span>
+          <h3 data-cashflow-title style="margin: 6px 0 10px; font-size: 1.35rem;">Your 2 kW Monthly Electricity Savings Exceed The Loan EMI</h3>
+          <p class="muted" data-cashflow-desc style="font-size: 0.88rem; margin: 0;">With approved nationalized bank green loans at ~7.00% p.a., you never pay out of pocket. Your utility bill savings fund the installation.</p>
+        </div>
+
+        <div class="cashflow-comparison-grid" style="margin-bottom: 24px;">
+          <div class="cashflow-tile" style="padding: 18px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); text-align: center;">
+            <span style="font-size: 0.78rem; color: var(--ink-soft); display: block; margin-bottom: 4px;">Current Monthly Grid Bill</span>
+            <strong data-cashflow-bill style="font-size: 1.4rem; color: #d03030;">~₹2,700 / mo</strong>
+            <small data-cashflow-bill-note style="display: block; font-size: 0.72rem; color: var(--ink-soft); margin-top: 4px;">Typical 2 BHK bill, rising tariff</small>
+          </div>
+          <div class="cashflow-tile" style="padding: 18px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); text-align: center;">
+            <span data-cashflow-emi-label style="font-size: 0.78rem; color: var(--ink-soft); display: block; margin-bottom: 4px;">5-Yr Green Loan EMI (2 kW)</span>
+            <strong data-cashflow-emi style="font-size: 1.4rem; color: var(--ink);">~₹1,450 / mo</strong>
+            <small data-cashflow-emi-note style="display: block; font-size: 0.72rem; color: var(--ink-soft); margin-top: 4px;">Fixed 60 months @ 7.00% p.a., then ₹0</small>
+          </div>
+          <div class="cashflow-tile" style="padding: 18px; border-radius: 12px; background: rgba(47,150,49,0.12); border: 1.5px solid var(--green); text-align: center;">
+            <span style="font-size: 0.78rem; color: var(--green-dark); display: block; font-weight: 700; margin-bottom: 4px;">Net In-Pocket Surplus</span>
+            <strong data-cashflow-surplus style="font-size: 1.4rem; color: var(--green);">+₹1,250 / mo</strong>
+            <small data-cashflow-surplus-note style="display: block; font-size: 0.72rem; color: var(--green-dark); margin-top: 4px;">Net profit into your pocket from Month 1</small>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 16px; border-top: 1px solid var(--line);">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);">Financing Partners:</span>
+            <button type="button" class="partner-pill active" data-partner="sbi" aria-pressed="true"><i data-lucide="shield-check"></i> SBI Surya Ghar (7.00%)</button>
+            <button type="button" class="partner-pill" data-partner="canara" aria-pressed="false"><i data-lucide="landmark"></i> Canara Bank Green (7.00%)</button>
+            <button type="button" class="partner-pill" data-partner="hdfc" aria-pressed="false"><i data-lucide="zap"></i> HDFC Clean Energy (7.25%)</button>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <a class="btn btn-sm" data-cashflow-cta href="contact.html?system=2kw&subject=subsidy#booking"><i data-lucide="file-check"></i> Check 2 kW Subsidy Eligibility</a>
+          </div>
+          <div class="partner-note-text" data-partner-note style="font-size: 0.76rem; color: var(--ink-soft); width: 100%; margin-top: 4px;"><i data-lucide="info" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"></i> <strong>SBI Surya Ghar:</strong> Collateral-free concessional green loan at 7.00% p.a., up to 10-year flexible tenure with direct PM Surya Ghar portal disbursal.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm"><div class="container"><div class="soft-band reveal"><div class="soft-band-inner"><div><h2>Get an Accurate Savings Plan for Your Home</h2><p>A SolarNest engineer can analyse your roof, bill history and local conditions.</p></div><a class="btn" href="contact.html#booking"><i data-lucide="calendar-check"></i> Book Free Site Assessment</a></div></div><p class="muted" style="font-size:.68rem">* All results are broad estimates, not guarantees. Actual savings depend on usage, tariff, shading, installation quality, system performance and applicable policy.</p></div></section>
+</main><div id="site-footer"></div></body></html>

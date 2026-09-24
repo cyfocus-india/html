@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#661f3f"><meta name="description" content="Sign in to your Rosewood Florals account."><title>Sign In — Rosewood Florals</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"><link rel="stylesheet" href="../assets/css/floral.css?v=layout-20260923-1"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="../assets/js/main.js?v=layout-20260923-1" defer></script>
+</head>
+<body data-root=".." data-page="signin">
+  <header class="standalone-nav" aria-label="Site preferences">
+    <div class="container standalone-nav-shell">
+      <a class="brand" href="../index.html" aria-label="Rosewood Florals home"><strong>Rosewood</strong><small>Florals</small></a>
+      <div class="standalone-nav-actions">
+        <button class="dir-toggle" type="button" data-rtl-toggle aria-label="Switch text direction">
+          <span class="dir-opt" data-dir="ltr">LTR</span>
+          <span class="dir-opt" data-dir="rtl">RTL</span>
+        </button>
+        <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch theme">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="auth-page floral-auth">
+    <div class="container auth-layout">
+      <figure class="auth-photo"><img src="../assets/images/signin-hero.webp" alt="Delicate blush pink ranunculus and soft seasonal flowers arranged in natural light" width="1536" height="1024" fetchpriority="high"><figcaption>Good to have you back.</figcaption></figure>
+      <section class="auth-card" data-reveal>
+        <div id="signin-panel" class="auth-panel">
+          <p class="eyebrow">Sign In</p>
+          <h1>Your flowers,<br><span class="display-italic">all in one place.</span></h1>
+          <form data-validate data-success="Demo sign-in complete.">
+            <div class="form-grid">
+              <div class="field"><label for="signin-email">Email address</label><input id="signin-email" name="email" type="email" autocomplete="email" required><p class="error-message" aria-live="polite"></p></div>
+              <div class="field">
+                <div class="field-header"><label for="signin-password">Password</label><button type="button" class="auth-forgot-link" data-forgot-toggle aria-expanded="false" aria-controls="forgot-panel">Forgot password?</button></div>
+                <input id="signin-password" name="password" type="password" autocomplete="current-password" minlength="8" required><p class="error-message" aria-live="polite"></p>
+              </div>
+              <button class="btn btn-primary" type="submit">Sign In</button>
+              <p class="form-success" role="status">You’re signed in to this front-end demo.</p>
+            </div>
+          </form>
+          <p class="auth-links">New to Rosewood? <a href="signup.html">Sign Up</a></p>
+        </div>
+        <div id="forgot-panel" class="auth-panel" hidden>
+          <p class="eyebrow">Reset Password</p>
+          <h2>Forgotten your<br><span class="display-italic">password?</span></h2>
+          <p class="lead" style="font-size:0.95rem;margin-bottom:1.5rem;">Enter your account email and we’ll send you instructions to reset your password.</p>
+          <form data-validate data-success="Password reset instructions sent to your email.">
+            <div class="form-grid">
+              <div class="field"><label for="forgot-email">Email address</label><input id="forgot-email" name="email" type="email" autocomplete="email" required><p class="error-message" aria-live="polite"></p></div>
+              <button class="btn btn-primary" type="submit">Send Reset Link</button>
+              <button type="button" class="btn btn-ghost" data-back-to-signin style="margin-top:0.5rem;">← Back to Sign In</button>
+              <p class="form-success" role="status">Check your inbox for password reset instructions.</p>
+            </div>
+          </form>
+          <p class="auth-links">Remember your password? <button type="button" class="auth-forgot-link" data-back-to-signin>Sign in</button></p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

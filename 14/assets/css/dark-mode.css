@@ -1,0 +1,956 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+  /* Lighten the accent used as text. --brand itself is left alone so button
+     fills and map pins keep their saturated blue under white text. */
+  --brand-ink: #6cb4ff;
+  --ink: #f0f6fc;
+  --text: #c2d1e4;
+  --muted: #8b9eb5;
+  --line: #1e3550;
+  --line-light: #162a42;
+  --surface: #0a1f36;
+  --surface-2: #07172a;
+  --surface-3: #0f2844;
+  --surface-card: #0d2238;
+  --bg: #061628;
+  --text-muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent-light: #2c2010;
+  --accent-ink: #fbbf24;
+  --navy: #030d1a;
+  --navy-light: #081d33;
+  --brand-3: #13345a;
+  --brand-light: #0d2a4a;
+  --radius-md: 16px;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.28);
+  --shadow: 0 14px 38px rgba(0, 0, 0, 0.38);
+  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.48);
+  --shadow-brand: 0 12px 28px rgba(7, 95, 215, 0.35);
+}
+
+html[data-theme="dark"] body {
+  background: #061628;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(8, 26, 46, 0.92);
+  border-bottom-color: rgba(30, 53, 80, 0.9);
+}
+
+html[data-theme="dark"] .site-header.scrolled {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .hero::before,
+html[data-theme="dark"] .subhero,
+html[data-theme="dark"] .process-hero,
+html[data-theme="dark"] .areas-hero,
+html[data-theme="dark"] .hero-home2,
+html[data-theme="dark"] .soft-blue {
+  background: radial-gradient(circle at 75% 15%, #153c66 0%, transparent 40%), linear-gradient(135deg, #061628 0%, #0a213a 100%);
+}
+
+html[data-theme="dark"] .hero-media,
+html[data-theme="dark"] .subhero-art,
+html[data-theme="dark"] .media-frame,
+html[data-theme="dark"] .process-visual {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .hero-media-tag {
+  background: rgba(9, 30, 52, 0.92);
+  color: #eaf3ff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .hero-badge-pill {
+  background: #113357;
+  border-color: #1d4b7c;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .service-mode-tabs {
+  background: rgba(10, 31, 54, 0.85);
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .mode-tab {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .mode-tab:hover {
+  background: rgba(19, 52, 90, 0.65);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .mode-tab.active {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .hero2-chip {
+  background: #0a213a;
+  border-color: #1e3a5a;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .hero2-chip.chip-guarantee {
+  background: rgba(4, 15, 28, 0.92);
+}
+
+html[data-theme="dark"] .chip-icon.gps {
+  background: #0d2f1f;
+}
+
+html[data-theme="dark"] .chip-icon.crew {
+  background: #113459;
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .hero2-stats-strip {
+  background: #0a213a;
+  border-color: #1e3a5a;
+}
+
+html[data-theme="dark"] .trust-pill {
+  background: #113357;
+  border-color: #1d4b7c;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .btn-outline {
+  background: #0a223c;
+  border-color: #23476d;
+  color: #e6f0fa;
+}
+
+html[data-theme="dark"] .btn-outline:hover {
+  background: #113459;
+  border-color: var(--brand-2);
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .icon-btn {
+  background: #0b223c;
+  border-color: #1e3a5a;
+  color: #e6f0fa;
+}
+
+html[data-theme="dark"] .icon-btn:hover {
+  background: #12365c;
+  border-color: var(--brand-2);
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .dropdown-menu {
+  background: #091e34;
+  border-color: var(--line);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .dropdown-link {
+  color: #e6f0fa;
+}
+
+html[data-theme="dark"] .dropdown-link:hover,
+html[data-theme="dark"] .dropdown-link.active {
+  background: #113459;
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .service-card:nth-child(n),
+html[data-theme="dark"] .cost-card,
+html[data-theme="dark"] .story-card,
+html[data-theme="dark"] .route-form-panel,
+html[data-theme="dark"] .journey-panel,
+html[data-theme="dark"] .cta-panel,
+html[data-theme="dark"] .coverage-map,
+html[data-theme="dark"] .support-card,
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .form-panel,
+html[data-theme="dark"] .price-panel,
+html[data-theme="dark"] .track-panel,
+html[data-theme="dark"] .invoice-summary,
+html[data-theme="dark"] .contact-item,
+html[data-theme="dark"] .process-card,
+html[data-theme="dark"] .checklist-card,
+html[data-theme="dark"] .compare-table-wrap,
+html[data-theme="dark"] .service-modal,
+html[data-theme="dark"] .faq-item {
+  background: linear-gradient(150deg, #0b233e 0%, #081a2e 100%);
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .compare-table th {
+  background: #091e34;
+  color: #fff;
+}
+
+html[data-theme="dark"] .compare-table th.highlight-col {
+  background: #113459;
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .compare-table td.highlight-col {
+  background: rgba(7, 95, 215, 0.1);
+}
+
+html[data-theme="dark"] .tip-box {
+  background: #2b2308;
+  border-color: #5c470a;
+  color: #ffd875;
+}
+
+html[data-theme="dark"] .cost-card.featured {
+  background: linear-gradient(150deg, #113258 0%, #0b233e 100%);
+  border-color: var(--brand-2);
+}
+
+html[data-theme="dark"] .service-modal-visual {
+  background: rgba(5, 17, 31, 0.7);
+  border-color: rgba(30, 53, 80, 0.6);
+}
+
+html[data-theme="dark"] .service-modal-info-box {
+  background: #091e34;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .service-modal-price-bar {
+  background: #0f2d4e;
+  border-color: #1a426e;
+}
+
+
+html[data-theme="dark"] .service-visual {
+  background: rgba(5, 17, 31, 0.6);
+  border-color: rgba(30, 53, 80, 0.6);
+}
+
+html[data-theme="dark"] .choice-body {
+  background: #091e34;
+  border-color: var(--line);
+  color: #e6f0fa;
+}
+
+html[data-theme="dark"] .choice-card:hover .choice-body {
+  border-color: #3b82f6;
+}
+
+html[data-theme="dark"] .choice-card input:checked + .choice-body,
+html[data-theme="dark"] .extra-check:has(input:checked) {
+  background: #11365e;
+  border-color: var(--brand-2);
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .home-icon {
+  background: #102e50;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .extra-check {
+  background: #091e34;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .price-hero {
+  background: linear-gradient(135deg, #0e2d4e 0%, #091e34 100%);
+  border-color: #1e456f;
+}
+
+html[data-theme="dark"] .route-line,
+html[data-theme="dark"] .transit-banner,
+html[data-theme="dark"] .city-help {
+  background: #0d2948;
+  border-color: #1c426b;
+}
+
+html[data-theme="dark"] .benefit-item {
+  background: #0a213a;
+}
+
+html[data-theme="dark"] .field input,
+html[data-theme="dark"] .field select,
+html[data-theme="dark"] .field textarea,
+html[data-theme="dark"] .city-search-wrap input {
+  color: var(--ink);
+  background: #07192c;
+  border-color: #1f3d5e;
+}
+
+html[data-theme="dark"] .field input:focus,
+html[data-theme="dark"] .field select:focus,
+html[data-theme="dark"] .field textarea:focus,
+html[data-theme="dark"] .city-search-wrap input:focus {
+  border-color: var(--brand-2);
+  box-shadow: 0 0 0 3.5px rgba(15, 120, 239, 0.22);
+}
+
+/* The brand blue used for field icons in light mode is far too dark to read
+   against a dark input, so lift it to the light-blue accent. */
+html[data-theme="dark"] .input-wrap svg,
+html[data-theme="dark"] .city-search-wrap svg,
+html[data-theme="dark"] .route-form-panel .input-wrap svg {
+  color: #6cb4ff;
+}
+
+html[data-theme="dark"] .input-wrap:focus-within svg,
+html[data-theme="dark"] .city-search-wrap:focus-within svg {
+  color: #9bcfff;
+}
+
+html[data-theme="dark"] .field input::placeholder,
+html[data-theme="dark"] .field textarea::placeholder {
+  color: #7b8fa8;
+}
+
+html[data-theme="dark"] .india-map path {
+  fill: #0c233c;
+  stroke: #1f4268;
+}
+
+html[data-theme="dark"] .map-badge {
+  background: #091e34;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .tab-btn {
+  color: #c2d1e4;
+}
+
+html[data-theme="dark"] .tab-btn:hover {
+  background: #113459;
+  color: #7bbaff;
+}
+
+html[data-theme="dark"] .tab-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+html[data-theme="dark"] .process-visual,
+html[data-theme="dark"] .ui-mini {
+  background: #081d33;
+  border-color: #1b3858;
+}
+
+html[data-theme="dark"] .ui-line {
+  background: #163250;
+}
+
+html[data-theme="dark"] .ui-line.blue {
+  background: #256bb8;
+}
+
+html[data-theme="dark"] .quote-modal {
+  background: #0a2038;
+}
+
+html[data-theme="dark"] .dashboard-body {
+  background: #051424;
+}
+
+html[data-theme="dark"] .dashboard-topbar,
+html[data-theme="dark"] .dashboard-sidebar {
+  background: #081c32;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .auth-panel {
+  background: #071a2e;
+}
+
+html[data-theme="dark"] .feature-icon {
+  border-color: #1b3d62;
+  background: linear-gradient(135deg, #0e2d4e 0%, #091e34 100%);
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .timeline-step.pending .timeline-dot {
+  background: #152d47;
+  color: #7a93b0;
+  box-shadow: 0 0 0 6px rgba(10, 31, 54, 0.7);
+}
+
+html[data-theme="dark"] .main-nav {
+  background: #091e34;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] #serviceAreaLiveMap,
+html[data-theme="dark"] #contactLiveMap {
+  background: #091e34;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+html[data-theme="dark"] .leaflet-popup-content-wrapper,
+html[data-theme="dark"] .leaflet-popup-tip {
+  background: #081d33;
+  color: #e5f0fc;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--line);
+}
+
+html[data-theme="dark"] .map-hub-popup h4 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .map-hub-popup .hub-stat {
+  color: #bcd5ec;
+}
+
+html[data-theme="dark"] .route-live-preview {
+  background: #092038;
+  border-color: #19406b;
+}
+
+html[data-theme="dark"] .route-preview-details h4 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .feature-quad {
+  background: rgba(10, 30, 52, 0.7);
+  border-color: rgba(30, 55, 84, 0.8);
+}
+
+html[data-theme="dark"] .feature-quad .feature-icon {
+  background: rgba(7, 95, 215, 0.2);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+}
+
+html[data-theme="dark"] .feature-quad strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .feature-quad small {
+  color: #a0bede;
+}
+
+html[data-theme="dark"] .contact-help-banner {
+  background: #092038;
+  border-color: #19406b;
+}
+
+html[data-theme="dark"] .estimate-bar {
+  background: rgba(10, 30, 52, 0.85);
+  border-color: rgba(30, 55, 84, 0.85);
+}
+
+html[data-theme="dark"] .estimate-bar .field label {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .estimate-bar .field label small {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .estimate-bar .field input,
+html[data-theme="dark"] .estimate-bar .field select {
+  background: #061527;
+  border-color: #1e3a5f;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .estimate-bar .field input:focus,
+html[data-theme="dark"] .estimate-bar .field select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+html[data-theme="dark"] .booking-meta-grid {
+  background: #091e34;
+  border: 1px solid var(--line);
+}
+
+/* Status panel with a hard-coded pale green background. */
+html[data-theme="dark"] .payment-success {
+  background: rgba(34, 170, 91, 0.14);
+  border-color: rgba(34, 170, 91, 0.4);
+  color: #6ee7a8;
+}
+
+html[data-theme="dark"] .payment-success small,
+html[data-theme="dark"] .payment-success strong {
+  color: #6ee7a8;
+}
+
+/* Chips floating over photographs keep their light plate in dark mode, so their
+   text must stay dark rather than inheriting the light theme colour. */
+html[data-theme="dark"] .service-visual-tag,
+html[data-theme="dark"] .split-badge {
+  background: rgba(9, 30, 52, 0.92);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .split-badge small {
+  color: #a9c1dc;
+}
+
+/* Saved Addresses — the default card hard-coded a near-white gradient, so in
+   dark mode its light body text became unreadable on a light panel. It now
+   uses the same dark surface as its siblings, with the brand border kept to
+   mark it as the default. */
+html[data-theme="dark"] .address-card {
+  background: linear-gradient(150deg, #0b233e 0%, #081a2e 100%);
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .address-card.default {
+  background: linear-gradient(150deg, #10315a 0%, #0a2340 100%);
+  border-color: var(--brand-2);
+}
+
+html[data-theme="dark"] .address-card h3,
+html[data-theme="dark"] .address-card strong {
+  color: #f3f8ff;
+}
+
+html[data-theme="dark"] .address-card p,
+html[data-theme="dark"] .address-card address {
+  color: #c2d1e4;
+}
+
+/* Status chips on the address cards carry inline light backgrounds; force a
+   dark-surface treatment so their dark inline text can never sit on dark. */
+html[data-theme="dark"] .address-card .paid-pill {
+  background: rgba(56, 189, 248, 0.16) !important;
+  color: #7fd0ff !important;
+  border: 1px solid rgba(56, 189, 248, 0.34);
+}
+
+/* Home 2 New Sections: Corridors & Zero-Damage Security Protocol */
+html[data-theme="dark"] .corridors-section {
+  background: #061628;
+}
+
+html[data-theme="dark"] .corridor-card {
+  background: #0a1f36;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .corridor-card.featured-corridor {
+  background: linear-gradient(180deg, #0e294b 0%, #0a1f36 100%);
+  border-color: #245285;
+}
+
+html[data-theme="dark"] .corridor-frequency-badge {
+  background: #113357;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .corridor-frequency-badge.prime {
+  background: #092c1b;
+  color: #5ee09d;
+  border-color: #175435;
+}
+
+html[data-theme="dark"] .corridor-route-track {
+  background: #07172a;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .route-pin {
+  background: #0a1f36;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .route-pin.start {
+  color: #72b6ff;
+  border-color: #1d4b7c;
+}
+
+html[data-theme="dark"] .route-pin.end {
+  color: #5ee09d;
+  border-color: #175435;
+}
+
+html[data-theme="dark"] .corridors-footer-bar {
+  background: #09213a;
+  border-color: #1a426f;
+}
+
+html[data-theme="dark"] .corridor-guarantees {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .security-protocol-section {
+  background: #07192c;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .protocol-item {
+  background: #0a1f36;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .protocol-num {
+  background: #0d2847;
+  border-color: #1d4673;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .protocol-media-frame {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .protocol-chip {
+  background: rgba(10, 31, 54, 0.94);
+  border-color: #1e3a5a;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Home 1 New Section: Interactive Move Size & Box Estimator */
+html[data-theme="dark"] .move-planner-section {
+  background: #061628;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .planner-tab {
+  background: #0a1f36;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .planner-tab:hover {
+  border-color: #245285;
+}
+
+html[data-theme="dark"] .planner-tab.active {
+  background: #0e294b;
+  border-color: var(--brand);
+}
+
+html[data-theme="dark"] .planner-tab-title {
+  color: #f0f6fc;
+}
+
+html[data-theme="dark"] .planner-tab.active .planner-tab-title {
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .planner-panel {
+  background: #0a1f36;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .planner-badge {
+  background: #113357;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .planner-main-heading {
+  color: #f0f6fc;
+}
+
+html[data-theme="dark"] .planner-metric-item {
+  background: #07172a;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .planner-metric-item .metric-icon {
+  background: #113459;
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .planner-inclusions h4 {
+  color: #f0f6fc;
+}
+
+html[data-theme="dark"] .planner-guarantee-note {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .planner-media-frame {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .planner-chip {
+  background: rgba(10, 31, 54, 0.94);
+  border-color: #1e3a5a;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .fleet-showcase-section {
+  background: #061628;
+}
+
+html[data-theme="dark"] .fleet-tab {
+  background: #081d33;
+  border-color: var(--line);
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fleet-tab:hover {
+  background: #102e50;
+  color: #72b6ff;
+  border-color: #2563eb;
+}
+
+html[data-theme="dark"] .fleet-tab.active {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .fleet-card {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .fleet-card.featured {
+  background: linear-gradient(180deg, rgba(7, 95, 215, 0.12) 0%, #081d33 30%);
+  border-color: #2563eb;
+}
+
+html[data-theme="dark"] .fleet-visual-box {
+  background: #061628;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .fleet-card-body h3 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .fleet-spec-row strong {
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .fleet-price-lead strong {
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .fleet-type-badge {
+  background: rgba(7, 95, 215, 0.2);
+  color: #72b6ff;
+  border-color: rgba(7, 95, 215, 0.35);
+}
+
+html[data-theme="dark"] .fleet-type-badge.prime {
+  background: rgba(7, 95, 215, 0.35);
+  color: #93c5fd;
+  border-color: #3b82f6;
+}
+
+html[data-theme="dark"] .fleet-match-pill {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fleet-desc {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fleet-spec-row span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fleet-price-lead small {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fleet-guarantees-strip {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .fleet-guarantee-item strong {
+  color: #ffffff;
+}
+
+/* Pricing Page: Relocation Tiers & Zero-Hidden-Fee Shield (Dark Mode) */
+html[data-theme="dark"] .pricing-tiers-section {
+  background: #061628;
+}
+
+html[data-theme="dark"] .tier-card {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .tier-card.featured {
+  background: linear-gradient(180deg, rgba(7, 95, 215, 0.12) 0%, #081d33 30%);
+  border-color: #2563eb;
+}
+
+html[data-theme="dark"] .tier-title {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .tier-price strong {
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .tier-feature-heading {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .tier-features-list li {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .fee-shield-block {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .fee-shield-head h3 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .fee-shield-table th {
+  background: #061628;
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .fee-shield-table th.competitor-col {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+html[data-theme="dark"] .fee-shield-table th.movemate-col {
+  background: rgba(7, 95, 215, 0.15);
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .fee-shield-table td.competitor-cell {
+  background: rgba(239, 68, 68, 0.05);
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .fee-shield-table td.movemate-cell {
+  background: rgba(7, 95, 215, 0.06);
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .price-pledge-strip {
+  background: #061628;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .pledge-item strong {
+  color: #ffffff;
+}
+
+/* Service Areas: Pincode Feasibility & Hubs (Dark Mode) */
+html[data-theme="dark"] .pincode-feasibility-section {
+  background: #061628;
+}
+
+html[data-theme="dark"] .feasibility-card {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .feasibility-search-label strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .feasibility-input-group input {
+  background: #061628;
+  border-color: var(--line);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .metro-chip {
+  background: #061628;
+  border-color: var(--line);
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .metro-chip:hover {
+  background: #102e50;
+  color: #72b6ff;
+  border-color: #2563eb;
+}
+
+html[data-theme="dark"] .metro-chip.active {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .feasibility-result-box {
+  background: #061628;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .result-item strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .result-note {
+  color: #72b6ff;
+}
+
+html[data-theme="dark"] .hub-card {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .hub-card.featured {
+  background: linear-gradient(180deg, rgba(7, 95, 215, 0.12) 0%, #081d33 30%);
+  border-color: #2563eb;
+}
+
+html[data-theme="dark"] .hub-card-header h4 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .hub-spec-row strong {
+  color: #e2e8f0;
+}
+
+/* Service Areas: Society Clearance (Dark Mode) */
+html[data-theme="dark"] .society-clearance-section {
+  background: #07192c;
+}
+
+html[data-theme="dark"] .pillar-card {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .pillar-card h3 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .pillar-icon-box {
+  background: #102e50;
+}
+
+html[data-theme="dark"] .pillar-bullet-list li {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .townships-strip {
+  background: #081d33;
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .townships-label strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .township-badge {
+  background: #061628;
+  border-color: var(--line);
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .township-badge:hover {
+  background: #102e50;
+  border-color: #2563eb;
+  color: #72b6ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+  }
+}

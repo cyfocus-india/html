@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="brandBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a5963"/>
+      <stop offset="100%" stop-color="#0c3239"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffea9e"/>
+      <stop offset="45%" stop-color="#f5c364"/>
+      <stop offset="100%" stop-color="#cb811b"/>
+    </linearGradient>
+    <linearGradient id="dieIvory" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff3df"/>
+    </linearGradient>
+    <linearGradient id="dieRust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0775f"/>
+      <stop offset="100%" stop-color="#be3d24"/>
+    </linearGradient>
+    <filter id="tokenShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.3" flood-color="#05181c" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Heritage Teal Badge Tile -->
+  <rect width="64" height="64" rx="16" fill="url(#brandBg)"/>
+  <!-- Gold Inset Hairline Frame -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="#f5c364" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- Tabletop Board Game Track Geometry -->
+  <path d="M32 7.5 L56.5 32 L32 56.5 L7.5 32 Z" fill="none" stroke="#f5c364" stroke-opacity="0.13" stroke-width="1" stroke-dasharray="3.5 2.5"/>
+
+  <!-- Secondary Board Game Die: Terracotta D6 angled at +16deg -->
+  <g transform="translate(18, 19) rotate(16)" filter="url(#tokenShadow)">
+    <rect x="-8.5" y="-8.5" width="17" height="17" rx="3.6" fill="url(#dieRust)"/>
+    <rect x="-8.5" y="-8.5" width="17" height="17" rx="3.6" fill="none" stroke="#ffb5a6" stroke-width="0.6" stroke-opacity="0.45"/>
+    <!-- 3 Diagonal Pips -->
+    <circle cx="-4" cy="-4" r="1.45" fill="#fffbf0"/>
+    <circle cx="0" cy="0" r="1.45" fill="#fffbf0"/>
+    <circle cx="4" cy="4" r="1.45" fill="#fffbf0"/>
+  </g>
+
+  <!-- Primary Board Game Die: Chunky Warm Ivory D6 angled at -10deg -->
+  <g transform="translate(20, 39) rotate(-10)" filter="url(#tokenShadow)">
+    <!-- 3D Bevel Base -->
+    <rect x="-10.5" y="-9.3" width="21" height="21" rx="4.5" fill="#d7cbba"/>
+    <!-- Face -->
+    <rect x="-10.5" y="-10.5" width="21" height="21" rx="4.5" fill="url(#dieIvory)"/>
+    <rect x="-10.5" y="-10.5" width="21" height="21" rx="4.5" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.9"/>
+    <!-- 5 Crisp Terracotta Pips -->
+    <circle cx="-5" cy="-5" r="1.7" fill="#bf3e26"/>
+    <circle cx="5" cy="-5" r="1.7" fill="#bf3e26"/>
+    <circle cx="0" cy="0" r="1.7" fill="#bf3e26"/>
+    <circle cx="-5" cy="5" r="1.7" fill="#bf3e26"/>
+    <circle cx="5" cy="5" r="1.7" fill="#bf3e26"/>
+  </g>
+
+  <!-- Golden Wooden Meeple Token standing proudly on the right -->
+  <g filter="url(#tokenShadow)">
+    <path transform="translate(42, 35) scale(0.68) translate(-32, -32)" 
+      d="M 32 8.3 C 28.6 8.3 25.8 11.1 25.8 14.5 C 25.8 17.2 27.5 19.5 29.8 20.4 C 24.5 21.8 17.5 25.5 12.5 29 C 10.2 30.6 10 33.8 12.2 35.6 C 14.4 37.4 17.4 36.2 21.6 33.2 C 21.2 36.8 20.5 41 19.5 45.2 C 18.2 50.5 15.5 53.5 14.8 55.2 C 14.4 56.1 15 56.8 16 56.8 L 26.2 56.8 C 27.6 56.8 28.2 55.5 28.2 53.5 C 28.2 49 29.8 43 32 43 C 34.2 43 35.8 49 35.8 53.5 C 35.8 55.5 36.4 56.8 37.8 56.8 L 48 56.8 C 49 56.8 49.6 56.1 49.2 55.2 C 48.5 53.5 45.8 50.5 44.5 45.2 C 43.5 41 42.8 36.8 42.4 33.2 C 46.6 36.2 49.6 37.4 51.8 35.6 C 54 33.8 53.8 30.6 51.5 29 C 46.5 25.5 39.5 21.8 34.2 20.4 C 36.5 19.5 38.2 17.2 38.2 14.5 C 38.2 11.1 35.4 8.3 32 8.3 Z" 
+      fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Sparkle of Play (Top Right) -->
+  <path d="M51 8.5 L52.3 12 L56 13 L52.3 14 L51 17.5 L49.7 14 L46 13 L49.7 12 Z" fill="#f5c364"/>
+  <circle cx="51" cy="13" r="0.9" fill="#fffef8"/>
+</svg>

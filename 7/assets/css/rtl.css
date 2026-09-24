@@ -1,0 +1,414 @@
+/* ==========================================================================
+   PLAY ZONE - RTL (Right-to-Left) Stylesheet (assets/css/rtl.css)
+   Activated when <html dir="rtl"> is present
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* Nav & Dropdowns */
+[dir="rtl"] .nav-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .nav-dropdown-link {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-link.active::after {
+  left: auto;
+  right: 0;
+}
+
+/* Hero Section */
+[dir="rtl"] .ref-geo-circle-blue {
+  left: auto;
+  right: -85px;
+}
+
+[dir="rtl"] .ref-geo-square-yellow {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .ref-geo-fan-red {
+  right: auto;
+  left: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 220px;
+}
+
+[dir="rtl"] .ref-geo-orb-yellow {
+  right: auto;
+  left: 4%;
+}
+
+[dir="rtl"] .ref-arch-wedge-blue {
+  left: auto;
+  right: 2%;
+  border-left: none;
+  border-right: 95px solid var(--primary-blue);
+}
+
+/* Arrows flip */
+[dir="rtl"] .zone-direct-arrow i,
+[dir="rtl"] .footer-nav-list a:hover {
+  transform: translateX(-6px);
+}
+
+[dir="rtl"] .fa-arrow-right::before {
+  content: "\f060"; /* FontAwesome fa-arrow-left */
+}
+
+[dir="rtl"] .fa-chevron-right::before {
+  content: "\f053"; /* FontAwesome fa-chevron-left */
+}
+
+/* Form Controls & Feedback */
+[dir="rtl"] .password-toggle-btn,
+[dir="rtl"] .toggle-pwd-btn {
+  right: auto;
+  left: 12px;
+}
+
+[dir="rtl"] .form-control.is-invalid {
+  background-position: left 0.75rem center;
+}
+
+/* Promo Cards */
+[dir="rtl"] .bday-decor-arch-red {
+  left: auto;
+  right: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 75px;
+}
+
+[dir="rtl"] .bday-decor-quarter-yellow {
+  left: auto;
+  right: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 85px;
+}
+
+[dir="rtl"] .bday-decor-dots {
+  right: auto;
+  left: 2rem;
+}
+
+[dir="rtl"] .promo-graphic-art {
+  right: auto;
+  left: 2rem;
+}
+
+/* Safety Section */
+[dir="rtl"] .safety-mosaic-art {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Parents Portal */
+[dir="rtl"] .portal-geometric-decor {
+  left: auto;
+  right: 1.75rem;
+}
+
+/* Footer */
+[dir="rtl"] .footer-contact-details li i {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+/* Tables & Dashboard */
+[dir="rtl"] .data-table {
+  text-align: right;
+}
+
+[dir="rtl"] .toast {
+  border-left: none;
+  border-right: 5px solid var(--primary-blue);
+  animation: slideInToastRTL 0.3s ease-out;
+}
+
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 24px;
+}
+
+@keyframes slideInToastRTL {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Drawer */
+[dir="rtl"] .mobile-nav-drawer {
+  right: auto;
+  left: -320px;
+  transition: left var(--transition-base);
+}
+
+[dir="rtl"] .mobile-nav-drawer.active {
+  left: 0;
+  right: auto;
+}
+
+@media (max-width: 640px) {
+  [dir="rtl"] .digital-sig-box > div:last-child {
+    text-align: right !important;
+  }
+}
+
+/* Live Interactive Contact Map RTL */
+[dir="rtl"] .map-floating-card {
+  left: auto;
+  right: clamp(1rem, 4vw, 3.5rem);
+}
+
+[dir="rtl"] .map-card-note {
+  border-left: none;
+  border-right: 3px solid var(--accent-yellow);
+  padding-left: 0;
+  padding-right: 0.65rem;
+}
+
+/* Back to Top RTL */
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 2rem;
+}
+
+@media (max-width: 640px) {
+  [dir="rtl"] .back-to-top-btn {
+    right: auto;
+    left: 1.25rem;
+  }
+}
+
+/* FAQ Accordion RTL */
+[dir="rtl"] .faq-question-btn {
+  text-align: right;
+}
+
+[dir="rtl"] .table-scroll-hint {
+  justify-content: flex-start;
+}
+
+/* Safety Checklist RTL Alignment */
+[dir="rtl"] .safety-checklist-yellow li,
+[dir="rtl"] .promo-feature-checklist li {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+[dir="rtl"] .safety-checklist-yellow {
+  align-items: flex-end;
+}
+
+/* Form Labels RTL */
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+[dir="rtl"] .form-utilities {
+  flex-direction: row-reverse;
+}
+
+/* Booking Summary RTL */
+[dir="rtl"] .summary-line-item,
+[dir="rtl"] .summary-total-line {
+  flex-direction: row-reverse;
+}
+
+/* Hero CTA RTL */
+[dir="rtl"] .ref-hero-cta-group {
+  flex-direction: row-reverse;
+}
+
+/* Highlight Box RTL */
+[dir="rtl"] .highlight-box {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Zone Tile Body RTL */
+[dir="rtl"] .zone-tile-body {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .zone-tile:hover .zone-direct-arrow {
+  transform: translateX(-8px);
+}
+
+/* Promo Checklist RTL */
+[dir="rtl"] .check-dot,
+[dir="rtl"] .check-yellow-disc {
+  order: 1;
+}
+
+/* Footer Contact RTL */
+[dir="rtl"] .footer-contact-details li {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Dashboard Header RTL */
+[dir="rtl"] .user-welcome-info {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .stat-pill {
+  align-items: flex-start;
+}
+
+/* Portal Service Items RTL */
+[dir="rtl"] .portal-service-item {
+  text-align: right;
+}
+
+/* Mobile Drawer RTL Close Button */
+[dir="rtl"] .mobile-drawer-header {
+  flex-direction: row-reverse;
+}
+
+/* Section Header RTL */
+[dir="rtl"] .section-header {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Content Presentation Kit — RTL mirroring
+   -------------------------------------------------------------------------- */
+
+/* Decorative brand square behind an editorial image */
+[dir="rtl"] .editorial-media::before {
+  left: auto;
+  right: -18px;
+}
+
+/* Per-session value line on a membership card */
+[dir="rtl"] .plan-card-value {
+  border-left: none;
+  border-right: 3px solid var(--accent-yellow);
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+}
+
+/* About page origin-story card accent edge */
+[dir="rtl"] .about-story-grid .dash-card[style*="border-left"] {
+  border-left: none !important;
+  border-right: 6px solid var(--primary-blue);
+}
+
+/* Home 2 Hero Section RTL */
+[dir="rtl"] .home2-hero-content {
+  text-align: right;
+  align-items: flex-start;
+}
+
+[dir="rtl"] .home2-badge-top {
+  right: auto;
+  left: 15px;
+}
+
+[dir="rtl"] .home2-badge-bottom {
+  left: auto;
+  right: 15px;
+}
+
+[dir="rtl"] .home2-pulse-dot {
+  margin-right: 0;
+  margin-left: 0.35rem;
+}
+
+@media (max-width: 991px) {
+  [dir="rtl"] .home2-hero-content {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Zone Matcher RTL */
+[dir="rtl"] .matcher-tab-btn {
+  text-align: right;
+  align-items: flex-start;
+}
+
+[dir="rtl"] .matcher-badge-float {
+  left: auto;
+  right: 15px;
+}
+
+/* Arena Blueprint Explorer RTL */
+[dir="rtl"] .blueprint-pin {
+  transform: translate(50%, -50%);
+}
+
+[dir="rtl"] .blueprint-pin:hover,
+[dir="rtl"] .blueprint-pin.active {
+  transform: translate(50%, -50%) scale(1.15);
+}
+
+[dir="rtl"] .inspector-badge-top {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .eng-card {
+  text-align: right;
+}
+
+/* Standalone Auth, Coming Soon, and 404 Pages RTL */
+[dir="rtl"] .auth-top-controls {
+  right: auto;
+  left: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  [dir="rtl"] .auth-top-controls {
+    right: auto;
+    left: 0.75rem;
+  }
+}
+
+[dir="rtl"] .portal-form-box {
+  text-align: right;
+}
+
+[dir="rtl"] .portal-form-box .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .portal-form-box .form-label {
+  text-align: right;
+  display: block;
+}
+
+[dir="rtl"] .form-utilities {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+[dir="rtl"] .fa-arrow-left::before {
+  content: "\f061"; /* FontAwesome fa-arrow-right */
+}
+
+[dir="rtl"] .error-teddy {
+  right: auto !important;
+  left: -25px !important;
+}
+
+
+
+

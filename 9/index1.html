@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareWell Senior Living & Family Care Hub — Thoughtful companion care, daily living assistance, and peace of mind for families." />
+    <title>Home 2 — Senior Living &amp; Family Care Hub — CareWell</title>
+    <link rel="icon" href="assets/images/carewell-favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/refinement.css" />
+    <link rel="stylesheet" href="assets/css/enhancements.css" />
+  </head>
+  <body class="inner-body">
+    <svg class="svg-sprite" style="display:none" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12h2l1-2.3 2 4.6 1.1-2.3h1.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8zM9 8V5a3 3 0 0 1 6 0v3M12 11v6M9 14h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="14" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 21 2-6-3-3 2-5 4 3 3 1M14 12l-2 3 5 6M8 8 5 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-bandage" viewBox="0 0 24 24"><path d="m8.5 3.5 12 12a3.54 3.54 0 0 1-5 5l-12-12a3.54 3.54 0 0 1 5-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m14 9-5 5M9.5 7.5h.01M16.5 14.5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5-7-7a4.95 4.95 0 0 1 7-7l7 7a4.95 4.95 0 0 1-7 7zM7 17l10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    </svg>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="nav-shell glass">
+        <a class="brand page-link" href="index.html" aria-label="CareWell home">
+          <span class="brand-mark"><svg viewBox="0 0 42 38"><path d="M21 35C14 29 3 21 3 11.6 3 4.2 12.3.2 18 6.8L21 10l3-3.2C29.7.2 39 4.2 39 11.6 39 21 28 29 21 35Z"/><path class="brand-line" d="M12.5 12c3-3.3 6.2-.8 6.2 2.1 0 4.4-1.6 7.7 2.3 12.2 3.8-4.4 2.2-7.8 2.2-12.2 0-3 3.3-5.4 6.3-2.1"/><circle class="brand-dot" cx="21" cy="9" r="2.3"/></svg></span>
+          <span><strong>CareWell</strong><small>HOME NURSING</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation"></nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg class="menu-icon"><use href="#i-menu"/></svg>
+          <svg class="close-icon"><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav glass" aria-label="Mobile navigation"></nav>
+    </header>
+
+    <main class="home2-main">
+      <!-- Asymmetrical Split Hero Section (Open Frame with Purposeful Booking Card) -->
+      <section class="home2-open-hero reveal">
+        <div class="home2-open-hero-media">
+          <img src="assets/images/home2-hero.jpg" alt="A smiling senior couple enjoying tea and fruit on their sunny patio with their caring nurse" />
+          <div class="home2-photo-pill">
+            <span class="home2-pill-star">★</span>
+            <strong>4.9/5</strong>
+            <span>Verified Family Rating</span>
+          </div>
+        </div>
+
+        <div class="home2-booking-card-purposeful">
+          <span class="eyebrow"><span></span>Home 2 — Senior Living &amp; Family Care Hub</span>
+          <h1 style="font-size: clamp(26px, 3vw, 40px); line-height: 1.25; margin: 10px 0 12px;">
+            Dignified Living.<br /><em>In the Comfort of Home.</em>
+          </h1>
+          <p style="font-size: 14px; color: var(--card-text); line-height: 1.6; margin-bottom: 18px;">
+            Whether your loved one needs joyful daily companionship, nutrition help, mobility walks, or clinical nursing, our vetted caregivers provide family-level care.
+          </p>
+
+          <!-- Direct In-Hero Consultation Form -->
+          <form class="field-stack home2-hero-form" id="home2-hero-form">
+            <label class="home2-form-label">What type of care are you looking for?
+              <select name="careType" id="home2-care-type" class="home2-select" required>
+                <option value="Daily Living & Companion Care">Daily Living &amp; Companion Care</option>
+                <option value="Post-Surgical Nursing & Recovery">Post-Surgical Nursing &amp; Recovery</option>
+                <option value="Physiotherapy & Mobility Rehabilitation">Physiotherapy &amp; Mobility Rehabilitation</option>
+                <option value="Advanced Sterile Wound Care">Advanced Sterile Wound Care</option>
+                <option value="Medication Administration & Vitals">Medication Administration &amp; Vitals</option>
+                <option value="Specialized Dementia & Memory Support">Specialized Dementia &amp; Memory Support</option>
+                <option value="24/7 Respite & Continuous Live-In Care">24/7 Respite &amp; Continuous Live-In Care</option>
+                <option value="Palliative & Hospice Comfort Care">Palliative &amp; Hospice Comfort Care</option>
+                <option value="Hospital-to-Home Transitional Care">Hospital-to-Home Transitional Care</option>
+              </select>
+            </label>
+
+            <div class="home2-form-name-phone-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px;">
+              <input type="text" name="userName" id="home2-user-name" placeholder="Your Name" required class="home2-input" />
+              <input type="tel" name="userPhone" id="home2-user-phone" placeholder="Phone Number" required class="home2-input" />
+            </div>
+
+            <button class="button button-primary" type="submit" id="home2-submit-btn" style="width: 100%; margin-top: 8px; justify-content: center;">
+              Schedule Free In-Home Assessment <span>→</span>
+            </button>
+          </form>
+
+          <!-- Booked Confirmation State (Shown after scheduling instead of redirecting) -->
+          <div class="home2-booked-card" id="home2-booked-message" style="display: none;" role="status" aria-live="polite">
+            <div class="booked-head">
+              <div class="booked-icon">
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
+              </div>
+              <div>
+                <h3 class="booked-title">Assessment Booked Successfully!</h3>
+                <p class="booked-subtitle">Your free in-home assessment request has been confirmed.</p>
+              </div>
+            </div>
+
+            <div class="booked-details-list">
+              <div class="booked-details-row">
+                <span>Selected Care:</span>
+                <strong id="booked-care-type">Daily Living &amp; Companion Care</strong>
+              </div>
+              <div class="booked-details-row">
+                <span>Client Name:</span>
+                <strong id="booked-contact-name">Valued Family</strong>
+              </div>
+              <div class="booked-details-row">
+                <span>Contact Phone:</span>
+                <strong id="booked-contact-phone">—</strong>
+              </div>
+              <div class="booked-details-row">
+                <span>Status:</span>
+                <span class="booked-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24"><use href="#i-check"/></svg>
+                  Nurse Coordinator Assigned
+                </span>
+              </div>
+            </div>
+
+            <p class="booked-note">
+              Thank you, <strong id="booked-salutation-name"></strong>! Our clinical coordinator will call <strong id="booked-phone-call">your number</strong> within <strong>2 business hours</strong> to confirm your schedule and tailor your loved one's care plan.
+            </p>
+
+            <div class="booked-actions">
+              <button type="button" class="button button-ghost" id="home2-rebook-btn" style="padding: 10px 18px; font-size: 13px;">
+                Book Another Assessment
+              </button>
+              <a href="tel:+18005552273" class="button button-primary" style="padding: 10px 18px; font-size: 13px;">
+                Call (800) 555-CARE
+              </a>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: center; margin-top: 16px; font-size: 12px; color: var(--muted); flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" fill="var(--secondary)"><use href="#i-check"/></svg> No commitment required</span>
+            <span style="display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" fill="var(--secondary)"><use href="#i-check"/></svg> Same-week matching</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Urgent Care Triage Bar for Home 2 -->
+      <section class="urgent-triage-strip reveal" aria-label="Urgent Home Care Support">
+        <div class="urgent-triage-info">
+          <div class="urgent-triage-icon">
+            <svg><use href="#i-phone" /></svg>
+          </div>
+          <div class="urgent-triage-text">
+            <strong>Looking for Immediate or Urgent Caregiver Placement?</strong>
+            <span>Direct nurse phone intake and rapid 24-48 hour caregiver assignments for families.</span>
+          </div>
+        </div>
+        <div class="urgent-triage-actions">
+          <a class="urgent-phone-link" href="tel:+18005552273">
+            <svg><use href="#i-phone" /></svg> (800) 555-CARE
+          </a>
+          <a class="button button-primary button-small page-link" href="pages/contact.html">
+            Contact Coordinator <svg><use href="#i-arrow" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Comprehensive Open Care Services Gallery -->
+      <section class="open-section reveal" id="care-services">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Comprehensive Care Directory</span>
+            <h2>Thoughtful In-Home Care Services</h2>
+            <p>From joyful daily living assistance to specialized clinical nursing, our vetted caregivers bring warmth, safety, and hospital-grade standards directly to your home.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/services.html">
+              Explore All Services <svg><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="open-services-gallery">
+          <!-- Service 1: Companion Care -->
+          <article class="open-service-card" data-service="elderly-companion">
+            <div class="open-service-media">
+              <img src="assets/images/service-companion.jpg" alt="Companion caregiver providing friendly conversation and tea" loading="lazy" />
+              <span class="open-service-badge teal">Daily Living &amp; Joy</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-users" /></svg>
+                <span>Certified Nursing Assistant (CNA)</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Heartfelt Companionship &amp; Daily Living</h3>
+              <p class="open-service-desc">Genuine social connection, pleasant neighborhood walks, storytelling, nutritious meals, and dignified personal care routines.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Bathing, grooming &amp; dressing assistance</li>
+                <li><svg><use href="#i-check" /></svg> Dietary meal preparation &amp; hydration tracking</li>
+                <li><svg><use href="#i-check" /></svg> Cognitive puzzles, reading &amp; social outings</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Daily%20Living%20%26%20Companion%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="elderly-companion" aria-label="View companion care details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Post-Surgical Recovery -->
+          <article class="open-service-card" data-service="post-surgery">
+            <div class="open-service-media">
+              <img src="assets/images/service-post-surgery.jpg" alt="Home nurse checking patient recovery and vital signs" loading="lazy" />
+              <span class="open-service-badge blue">Surgical Recovery</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-shield" /></svg>
+                <span>Supervising BSN, RN</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Post-Surgical Nursing Care</h3>
+              <p class="open-service-desc">Transitional clinical nursing to prevent complications, monitor incisions, manage pain protocols, and prevent hospital readmission.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Sterile incision checks &amp; surgical drain care</li>
+                <li><svg><use href="#i-check" /></svg> IV infusion therapy &amp; medication schedules</li>
+                <li><svg><use href="#i-check" /></svg> Daily progress reports sent to family &amp; surgeon</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Post-Surgical%20Nursing%20%26%20Recovery">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="post-surgery" aria-label="View post surgery details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Physiotherapy Assistance -->
+          <article class="open-service-card" data-service="physiotherapy">
+            <div class="open-service-media">
+              <img src="assets/images/service-physiotherapy.jpg" alt="Physical therapist helping elder with gentle balance retraining" loading="lazy" />
+              <span class="open-service-badge teal">Rehab &amp; Mobility</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-walk" /></svg>
+                <span>Licensed Physical Therapist</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Physiotherapy &amp; Mobility Rehab</h3>
+              <p class="open-service-desc">Targeted in-home therapeutic exercise, gait retraining, and transfer drills to rebuild strength and prevent household falls.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Gentle joint, balance &amp; muscle rehab</li>
+                <li><svg><use href="#i-check" /></svg> Safe walker, wheelchair &amp; bed transfers</li>
+                <li><svg><use href="#i-check" /></svg> Home safety &amp; fall-risk clearance audit</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Physiotherapy%20%26%20Mobility%20Rehabilitation">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="physiotherapy" aria-label="View physiotherapy details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Medication Management & Vitals -->
+          <article class="open-service-card" data-service="medication-management">
+            <div class="open-service-media">
+              <img src="assets/images/service-medication.jpg" alt="Nurse arranging prescriptions and taking biometric vitals" loading="lazy" />
+              <span class="open-service-badge blue">Pharmacy &amp; Telemetry</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-pill" /></svg>
+                <span>Licensed Practical Nurse (LPN)</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Medication Administration &amp; Vitals</h3>
+              <p class="open-service-desc">Complete prescription adherence, daily dosette organization, and continuous blood pressure, glucose, and oxygen monitoring.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Multi-prescription scheduling &amp; pill organization</li>
+                <li><svg><use href="#i-check" /></svg> Daily vitals logs uploaded to Family Portal</li>
+                <li><svg><use href="#i-check" /></svg> Doctor coordination for dosage refills</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Medication%20Administration%20%26%20Vitals">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="medication-management" aria-label="View medication management details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Dementia & Memory Support -->
+          <article class="open-service-card" data-service="dementia-care">
+            <div class="open-service-media">
+              <img src="assets/images/service-dementia.jpg" alt="Compassionate memory caregiver comforting an Alzheimer patient" loading="lazy" />
+              <span class="open-service-badge teal">Memory &amp; Alzheimer's</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-heart" /></svg>
+                <span>Certified Dementia Practitioner</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>Specialized Dementia &amp; Memory Support</h3>
+              <p class="open-service-desc">Empathetic cognitive support focused on preserving familiar routines, calming agitation, and providing reliable respite for families.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> Gentle validation &amp; soothing familiar routines</li>
+                <li><svg><use href="#i-check" /></svg> Reminiscence therapy, music &amp; photo activities</li>
+                <li><svg><use href="#i-check" /></svg> Disorientation &amp; safe wandering prevention</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=Specialized%20Dementia%20%26%20Memory%20Support">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="dementia-care" aria-label="View dementia care details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: 24/7 Continuous Live-In Care -->
+          <article class="open-service-card" data-service="live-in-care">
+            <div class="open-service-media">
+              <img src="assets/images/service-livein.jpg" alt="Caregiver providing 24/7 overnight assistance" loading="lazy" />
+              <span class="open-service-badge blue">Continuous Care</span>
+              <div class="open-service-clinician-pill">
+                <svg><use href="#i-clock" /></svg>
+                <span>Dedicated Caregiver Pod</span>
+              </div>
+            </div>
+            <div class="open-service-body">
+              <h3>24/7 Respite &amp; Continuous Live-In Care</h3>
+              <p class="open-service-desc">Round-the-clock peace of mind with continuous bedside supervision, overnight vigilance, and compassionate respite for family caregivers.</p>
+              <ul class="open-service-highlights">
+                <li><svg><use href="#i-check" /></svg> 24-hour attentive presence &amp; nighttime safety</li>
+                <li><svg><use href="#i-check" /></svg> Transfers, personal hygiene &amp; meal support</li>
+                <li><svg><use href="#i-check" /></svg> Dependable rotation with zero gap in coverage</li>
+              </ul>
+              <div class="open-service-actions">
+                <a class="button button-primary button-small page-link" href="pages/contact.html?service=24/7%20Respite%20%26%20Continuous%20Live-In%20Care">
+                  Book Caregiver <svg><use href="#i-arrow" /></svg>
+                </a>
+                <button type="button" class="service-popover-trigger" data-service="live-in-care" aria-label="View live-in care details">
+                  Care Details ›
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: "A Day in the Life with CareWell" (Consistent Care Journey) -->
+      <section class="open-section reveal">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Consistent Care Journey</span>
+            <h2>A Day in the Life with CareWell</h2>
+            <p>Here is what a reassuring, enriching day looks like when supported by a dedicated CareWell caregiver.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/caregivers.html">Find Your Match <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <div class="timeline-deck">
+          <article class="timeline-step-card">
+            <span class="timeline-time-badge">08:00 AM — Morning</span>
+            <h3>Rise &amp; Gentle Check-In</h3>
+            <p>Warm greeting, morning vital signs recording, medication reminder, and gentle assistance with hygiene and dressing.</p>
+          </article>
+
+          <article class="timeline-step-card">
+            <span class="timeline-time-badge teal">11:30 AM — Midday</span>
+            <h3>Mobility &amp; Outdoor Stroll</h3>
+            <p>Fresh wholesome lunch preparation, followed by guided balance exercises or a pleasant walk in the neighborhood garden.</p>
+          </article>
+
+          <article class="timeline-step-card">
+            <span class="timeline-time-badge">02:30 PM — Afternoon</span>
+            <h3>Cognitive Joy &amp; Hobbies</h3>
+            <p>Afternoon tea, stimulating puzzles, gardening, visiting family members, and running light errands or pharmacy pickups.</p>
+          </article>
+
+          <article class="timeline-step-card">
+            <span class="timeline-time-badge teal">06:30 PM — Evening</span>
+            <h3>Dinner &amp; Safe Wind-Down</h3>
+            <p>Evening meal preparation, night medication compliance, comfortable bedtime routine, and digital notes sent to family.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: The CareWell Family Portal Spotlight (Open Two-Column Feature) -->
+      <section class="open-section reveal">
+        <div class="home2-open-hero" style="align-items: center;">
+          <div>
+            <span class="eyebrow"><span></span>Real-Time Family Connection</span>
+            <h2 style="font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: var(--navy); margin: 8px 0 14px;">
+              Complete Peace of Mind for Distant Loved Ones
+            </h2>
+            <p style="color: var(--card-text); font-size: 14.5px; line-height: 1.6; margin-bottom: 22px;">
+              You never have to wonder how your parent or spouse is doing. Our digital family care portal provides real-time updates after every single shift, keeping adult children and relatives informed and confident.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--navy);">
+                <span style="width: 28px; height: 28px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: grid; place-items: center; font-size: 12px; flex-shrink: 0;">✓</span>
+                Real-time vital signs logs (Blood Pressure, Glucose, SpO2)
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--navy);">
+                <span style="width: 28px; height: 28px; border-radius: 50%; background: var(--secondary-light); color: var(--secondary); display: grid; place-items: center; font-size: 12px; flex-shrink: 0;">✓</span>
+                Caregiver activity notes, physical exercise, and daily meal logs
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--navy);">
+                <span style="width: 28px; height: 28px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: grid; place-items: center; font-size: 12px; flex-shrink: 0;">✓</span>
+                Direct messaging with your assigned supervising clinical nurse
+              </div>
+            </div>
+            <a class="button button-primary page-link" href="pages/about.html">
+              Learn About the Portal <svg><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+
+          <!-- Purposeful Live Portal Card Container -->
+          <div class="home2-portal-preview-card" style="padding: 28px; background: white; border-radius: 24px; box-shadow: var(--shadow); border: 1px solid rgba(36,101,232,0.15);">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f0f4fa; padding-bottom: 14px; margin-bottom: 18px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--secondary);"></span>
+                <strong style="color: var(--navy); font-size: 15px;">CareWell Family Portal</strong>
+              </div>
+              <span style="font-size: 11px; color: var(--secondary); font-weight: 800; background: var(--secondary-light); padding: 4px 10px; border-radius: 99px;">● Live Sync</span>
+            </div>
+            <div style="font-size: 13px; color: var(--muted); margin-bottom: 10px;">Today's Visit Summary — Client: Arthur D.</div>
+            <div style="background: #f8fbff; border-radius: 14px; padding: 16px; margin-bottom: 14px; border-left: 4px solid var(--primary);">
+              <strong style="color: var(--navy); display: block; font-size: 13.5px; margin-bottom: 4px;">Caregiver: Sarah Jenkins, RN</strong>
+              <small style="color: var(--card-text); line-height: 1.5; font-size: 12.5px; display: block;">"Arthur had a wonderful morning. Blood pressure 122/78 mmHg. Enjoyed a 20-minute garden stroll and finished his therapeutic leg stretches."</small>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12.5px;">
+              <div style="background: var(--primary-light); padding: 10px 14px; border-radius: 10px; color: var(--primary); font-weight: 700;">
+                <b>Vitals:</b> Normal range
+              </div>
+              <div style="background: var(--secondary-light); padding: 10px 14px; border-radius: 10px; color: var(--secondary); font-weight: 700;">
+                <b>Hydration:</b> 1,600 ml logged
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Verified Family Stories (Open Section Header with Purposeful Quote Cards) -->
+      <section class="open-section reveal" id="testimonials">
+        <div class="open-section-header">
+          <div class="header-copy">
+            <span class="eyebrow"><span></span>Community Trust</span>
+            <h2>Heartfelt Words from Local Families</h2>
+            <p>Read how our dedicated nurses and companion caregivers make a lasting, compassionate impact every day.</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-ghost page-link" href="pages/testimonials.html">
+              All Testimonials <svg><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"CareWell has been an answered prayer for our family. Knowing Dad has a skilled nurse who genuinely cares about his happiness lets us sleep peacefully at night."</p>
+            <div class="testimonial-person">
+              <span>DM</span>
+              <div><strong>David Miller</strong><small>Son of Client Arthur D.</small></div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The caregiver compatibility matching was spot on. Elena understands Mum's routine, speaks her language, and always treats her with wonderful respect."</p>
+            <div class="testimonial-person">
+              <span>ER</span>
+              <div><strong>Elena Rodriguez</strong><small>Family Care Partner</small></div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The daily digital logs and medication reminders gave our family complete confidence. Truly the gold standard in in-home senior care."</p>
+            <div class="testimonial-person">
+              <span>MT</span>
+              <div><strong>Marcus Thompson</strong><small>Client Family</small></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Purposeful Consultation Banner -->
+        <div class="consultation-cta-banner">
+          <div>
+            <h3>Ready to help your loved one thrive at home?</h3>
+            <p>Speak directly with our family care coordinators to design a gentle, tailored care plan that fits your schedule.</p>
+          </div>
+          <div class="consultation-cta-actions">
+            <a class="button button-primary page-link" href="pages/contact.html">Request Free Assessment <svg><use href="#i-arrow"/></svg></a>
+            <a class="button button-secondary page-link" href="pages/pricing.html">Explore Pricing Plans</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

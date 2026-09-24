@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon - Play Zone</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260924c">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20260924c">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20260924c">
+
+  <style>
+    .countdown-box-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      max-width: 520px;
+      margin: 2.5rem auto;
+    }
+    .countdown-unit-card {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+    .countdown-num {
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--primary-blue);
+      font-family: var(--font-heading);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .countdown-lbl {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--neutral-500);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 540px) {
+      .countdown-box-grid {
+        gap: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      .countdown-unit-card {
+        padding: 1rem 0.5rem;
+      }
+      .countdown-num {
+        font-size: 1.85rem;
+      }
+      .countdown-lbl {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Floating Theme and Direction Controls -->
+  <div class="auth-top-controls" aria-label="Page display settings">
+    <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Dark / Light Mode" title="Toggle Dark / Light Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button type="button" class="icon-control-btn dir-toggle-btn" aria-label="Toggle Direction (LTR / RTL)" title="Switch to RTL Layout">
+      <i class="fas fa-right-left"></i>
+    </button>
+  </div>
+
+  <main id="main-content" style="padding: 4rem 0; flex-grow: 1; text-align: center; display: flex; align-items: center; justify-content: center;">
+    <div class="container" style="max-width: 780px;">
+      <!-- Brand Logo -->
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <a href="../index.html" class="brand-logo" style="display: inline-flex;" title="Back to Home">
+          <div class="logo-symbol-block">
+            <div class="logo-line"><span>PLAY</span><span class="logo-sq-blue"></span></div>
+            <div class="logo-line"><span>ZONE</span><span class="logo-tri-yellow"></span><span class="logo-dot-red"></span></div>
+          </div>
+        </a>
+      </div>
+      <span class="section-tag tone-red">
+        <i class="fas fa-rocket"></i> New Expansion Opening Fall 2026
+      </span>
+
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; margin-top: 1rem; margin-bottom: 1.25rem; text-transform: uppercase;">
+        THE GLOW ARENA &amp; CYBER MAZE
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--neutral-600); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+        We're expanding! A 5,000 sq.ft state-of-the-art interactive laser arena featuring neon foam obstacles, child-safe infrared blasters, and immersive musical laser missions.
+      </p>
+
+      <!-- Live Countdown Timer -->
+      <div class="countdown-box-grid" aria-label="Expansion Launch Countdown">
+        <div class="countdown-unit-card">
+          <div class="countdown-num" id="cd-days">42</div>
+          <div class="countdown-lbl">Days</div>
+        </div>
+        <div class="countdown-unit-card">
+          <div class="countdown-num" id="cd-hours" style="color: var(--accent-yellow-text);">14</div>
+          <div class="countdown-lbl">Hours</div>
+        </div>
+        <div class="countdown-unit-card">
+          <div class="countdown-num" id="cd-mins" style="color: var(--accent-red);">28</div>
+          <div class="countdown-lbl">Minutes</div>
+        </div>
+        <div class="countdown-unit-card">
+          <div class="countdown-num" id="cd-secs">50</div>
+          <div class="countdown-lbl">Seconds</div>
+        </div>
+      </div>
+
+      <!-- VIP Early Access Alert Form -->
+      <div class="dash-card" style="max-width: 540px; margin: 0 auto; text-align: left;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; text-align: center;">
+          Get VIP First-Play Passes
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--neutral-500); text-align: center; margin-bottom: 1.5rem;">
+          Be the first to test the Glow Arena before public opening. Early signups receive 50% off their first session.
+        </p>
+
+        <form data-validate="true" data-ajax="true" data-success-msg="Congratulations! You have been added to the VIP First-Play priority list.">
+          <div class="form-group">
+            <label for="vip-parent-name" class="form-label">Parent Name</label>
+            <input type="text" id="vip-parent-name" class="form-control" placeholder="e.g. David Miller" required>
+          </div>
+          <div class="form-group">
+            <label for="vip-email" class="form-label">Email Address</label>
+            <input type="email" id="vip-email" class="form-control" placeholder="parent@example.com" required>
+          </div>
+          <button type="submit" class="btn btn-primary-blue btn-block btn-lg">
+            <i class="fas fa-bell"></i> NOTIFY ME FOR VIP OPENING
+          </button>
+        </form>
+      </div>
+
+      <!-- Back to Home Button -->
+      <div style="margin-top: 2rem; text-align: center;">
+        <a href="../index.html" class="btn btn-outline-blue">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js?v=20260924c"></script>
+  <script>
+    // Live Countdown Logic
+    let targetSeconds = (42 * 86400) + (14 * 3600) + (28 * 60) + 50;
+    setInterval(() => {
+      if (targetSeconds > 0) targetSeconds--;
+      const d = Math.floor(targetSeconds / 86400);
+      const h = Math.floor((targetSeconds % 86400) / 3600);
+      const m = Math.floor((targetSeconds % 3600) / 60);
+      const s = targetSeconds % 60;
+      document.getElementById('cd-days').textContent = d;
+      document.getElementById('cd-hours').textContent = h;
+      document.getElementById('cd-mins').textContent = m;
+      document.getElementById('cd-secs').textContent = s;
+    }, 1000);
+  </script>
+</body>
+</html>
