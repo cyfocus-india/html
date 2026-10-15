@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Marigold Grand Banquets</title>
+  <meta name="description" content="Your Marigold Grand client dashboard: availability, bookings, add-ons and payment installments.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body class="dash-body">
+  <a class="skip-link" href="#main">Skip to dashboard content</a>
+  <div class="dash">
+
+    <!-- ===== Sidebar (collapses into a slide-in menu on mobile) ===== -->
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Dashboard menu">
+      <div class="side-brand">
+        <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+          <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="31" height="40">
+          <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Client portal</span></span>
+        </a>
+      </div>
+
+      <nav class="side-nav" aria-label="Dashboard sections">
+        <button class="side-link" type="button" data-view="overview"><span class="side-ic" aria-hidden="true">◈</span>Overview</button>
+        <button class="side-link" type="button" data-view="availability"><span class="side-ic" aria-hidden="true">▦</span>Availability</button>
+        <button class="side-link" type="button" data-view="bookings"><span class="side-ic" aria-hidden="true">✦</span>Bookings<span class="side-count" data-count="bookings">0</span></button>
+        <button class="side-link" type="button" data-view="addons"><span class="side-ic" aria-hidden="true">✿</span>Add-ons</button>
+        <button class="side-link" type="button" data-view="payments"><span class="side-ic" aria-hidden="true">₹</span>Payments<span class="side-count side-count--alert" data-count="due" hidden>0</span></button>
+      </nav>
+
+      <div class="side-manager">
+        <span class="avatar" aria-hidden="true">SK</span>
+        <p><strong>Shruthi Kamath</strong>Your event manager<br><a href="tel:+919845031260"><span dir="ltr">+91 98450 31260</span></a></p>
+      </div>
+
+      <div class="side-tools">
+        <span class="label">Display</span>
+        <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+        <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+      </div>
+
+      <button class="side-logout" type="button" data-logout><span aria-hidden="true">⎋</span> Log Out</button>
+    </aside>
+    <div class="dash-overlay" id="dashOverlay" aria-hidden="true"></div>
+
+    <div class="dash-main">
+      <!-- ===== Top bar ===== -->
+      <header class="dash-top">
+        <button class="burger dash-burger" type="button" aria-label="Open dashboard menu" aria-expanded="false" aria-controls="dashSidebar"><span></span><span></span><span></span></button>
+        <div class="dash-title">
+          <h1 id="viewTitle" tabindex="-1">Overview</h1>
+          <p id="viewSub">Your events at a glance</p>
+        </div>
+        <div class="top-actions">
+          <button class="toggle-btn top-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+          <button class="toggle-btn top-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+
+          <div class="pop-wrap">
+            <button class="toggle-btn notif-btn" type="button" id="notifBtn" aria-expanded="false" aria-controls="notifPanel" aria-label="Notifications">
+              <span class="bell" aria-hidden="true"></span>
+              <span class="notif-count" id="notifCount" hidden>0</span>
+            </button>
+            <div class="pop-panel notif-panel" id="notifPanel" hidden>
+              <div class="pop-head">
+                <h2>Notifications <span class="pop-count" id="notifNew" hidden>0 new</span></h2>
+                <button class="pop-close" type="button" data-close-pop aria-label="Close notifications">✕</button>
+              </div>
+              <ul class="notif-list" id="notifList"></ul>
+              <div class="pop-foot">
+                <button class="text-btn" type="button" id="markAllRead">Mark all as read</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pop-wrap">
+            <button class="profile-btn" type="button" id="profileBtn" aria-expanded="false" aria-controls="profileMenu" aria-label="Account menu">
+              <span class="avatar" id="topAvatar" aria-hidden="true">AR</span>
+              <span class="profile-name" id="topName">Ananya Rao</span>
+              <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="pop-panel profile-menu" id="profileMenu" hidden>
+              <p class="pop-user"><strong id="menuName">Ananya Rao</strong><span id="menuEmail">you@example.com</span></p>
+              <button type="button" data-view="profile">Profile &amp; settings</button>
+              <a href="../index.html">Back to website</a>
+              <button type="button" data-logout>Log out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content" id="main">
+
+        <!-- ===== Overview ===== -->
+        <section class="view" id="view-overview" aria-labelledby="viewTitle">
+          <div class="welcome">
+            <div>
+              <h2 id="welcomeTitle">Welcome back</h2>
+              <p id="welcomeText">Here's where your celebrations stand today.</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn" type="button" data-action="new-booking">New Booking</button>
+              <button class="text-btn text-btn--light" type="button" data-view="availability">Check availability</button>
+            </div>
+          </div>
+
+          <div class="stat-cards" id="statCards">
+            <article class="stat-card"><span class="stat-ic" aria-hidden="true">✦</span><p class="stat-label">Upcoming events</p><p class="stat-value" data-stat="upcoming">0</p><p class="stat-sub" data-stat="upcomingSub"></p></article>
+            <article class="stat-card"><span class="stat-ic" aria-hidden="true">♟</span><p class="stat-label">Guests expected</p><p class="stat-value" data-stat="guests">0</p><p class="stat-sub" data-stat="guestsSub"></p></article>
+            <article class="stat-card"><span class="stat-ic" aria-hidden="true">✓</span><p class="stat-label">Paid so far</p><p class="stat-value" data-stat="paid">₹0</p><p class="stat-sub" data-stat="paidSub"></p></article>
+            <article class="stat-card"><span class="stat-ic" aria-hidden="true">₹</span><p class="stat-label">Balance due</p><p class="stat-value" data-stat="balance">₹0</p><p class="stat-sub" data-stat="balanceSub"></p></article>
+          </div>
+
+          <div class="ov-grid">
+            <article class="panel chart-panel">
+              <div class="panel-head">
+                <h2>Payments by event</h2>
+                <div class="legend"><span><i class="lg-paid"></i>Paid</span><span><i class="lg-due"></i>Balance</span></div>
+              </div>
+              <div class="chart-box">
+                <canvas id="payChart" role="img" aria-label="Bar chart of amount paid and balance for each booking"></canvas>
+              </div>
+              <p class="sr-only" id="chartSummary"></p>
+            </article>
+            <article class="panel next-pay" id="nextPay"></article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Upcoming events</h2>
+              <button class="text-btn" type="button" data-view="bookings">View all bookings</button>
+            </div>
+            <ul class="event-list" id="upcomingList"></ul>
+          </article>
+        </section>
+
+        <!-- ===== Availability ===== -->
+        <section class="view" id="view-availability" aria-labelledby="viewTitle" hidden>
+          <div class="avail-grid">
+            <article class="panel">
+              <div class="cal-toolbar">
+                <div class="field">
+                  <label for="calHall">Hall</label>
+                  <select class="input" id="calHall"></select>
+                </div>
+                <div class="cal-nav">
+                  <button class="toggle-btn" type="button" id="calPrev" aria-label="Previous month"><span class="arrow" aria-hidden="true">←</span></button>
+                  <h2 id="calMonth" aria-live="polite">Month</h2>
+                  <button class="toggle-btn" type="button" id="calNext" aria-label="Next month"><span class="arrow" aria-hidden="true">→</span></button>
+                </div>
+              </div>
+              <div class="cal-legend">
+                <span><i class="sw sw-free"></i>Available</span>
+                <span><i class="sw sw-booked"></i>Booked</span>
+                <span><i class="sw sw-yours"></i>Your booking</span>
+                <span class="muted">L = lunch, D = dinner</span>
+              </div>
+              <div class="calendar" id="calendar" role="grid" aria-labelledby="calMonth"></div>
+            </article>
+            <aside class="panel hall-side" id="hallSide"></aside>
+          </div>
+        </section>
+
+        <!-- ===== Bookings ===== -->
+        <section class="view" id="view-bookings" aria-labelledby="viewTitle" hidden>
+          <div class="panel">
+            <div class="toolbar">
+              <div class="field grow">
+                <label for="bkSearch">Search</label>
+                <input class="input" id="bkSearch" type="search" placeholder="Event name, hall or type">
+              </div>
+              <div class="field">
+                <label for="bkStatus">Status</label>
+                <select class="input" id="bkStatus">
+                  <option value="all">All statuses</option>
+                  <option value="onhold">On hold</option>
+                  <option value="confirmed">Confirmed</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="bkHall">Hall</label>
+                <select class="input" id="bkHall"><option value="all">All halls</option></select>
+              </div>
+              <button class="btn" type="button" data-action="new-booking">New Booking</button>
+            </div>
+            <p class="result-line" id="bkCount" aria-live="polite"></p>
+            <div class="table-scroll">
+              <table class="dash-table" id="bkTable">
+                <caption class="sr-only">Your bookings</caption>
+                <thead>
+                  <tr><th scope="col">Event</th><th scope="col">Date &amp; slot</th><th scope="col">Hall</th><th scope="col">Guests</th><th scope="col">Total</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+                </thead>
+                <tbody id="bkBody"></tbody>
+              </table>
+            </div>
+            <div class="empty" id="bkEmpty" hidden>
+              <p><strong>No bookings match these filters.</strong> Try clearing the search or status filter.</p>
+              <button class="text-btn" type="button" id="bkClear">Clear filters</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Add-ons ===== -->
+        <section class="view" id="view-addons" aria-labelledby="viewTitle" hidden>
+          <div class="addons-layout">
+            <div>
+              <div class="panel">
+                <div class="toolbar">
+                  <div class="field grow">
+                    <label for="adBooking">Booking</label>
+                    <select class="input" id="adBooking"></select>
+                  </div>
+                  <div class="field grow">
+                    <label for="adMenu">Catering menu</label>
+                    <select class="input" id="adMenu"></select>
+                  </div>
+                </div>
+                <p class="result-line" id="adInfo"></p>
+              </div>
+              <div class="panel">
+                <h2 class="panel-title">Food counters <span class="muted">(priced per guest)</span></h2>
+                <div class="addon-cards" id="adCatering"></div>
+              </div>
+              <div class="panel">
+                <h2 class="panel-title">Décor &amp; entertainment <span class="muted">(per event)</span></h2>
+                <div class="addon-cards" id="adDecor"></div>
+              </div>
+              <div class="panel empty" id="adEmpty" hidden>
+                <p><strong>No upcoming bookings to customise.</strong> Book a date first, then come back to add catering and décor.</p>
+                <button class="btn" type="button" data-action="new-booking">New Booking</button>
+              </div>
+            </div>
+            <aside class="panel summary-panel" id="adSummary" aria-live="polite"></aside>
+          </div>
+        </section>
+
+        <!-- ===== Payments ===== -->
+        <section class="view" id="view-payments" aria-labelledby="viewTitle" hidden>
+          <div class="mini-stats" id="payStats"></div>
+          <div class="pay-cards" id="payCards"></div>
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Payment history</h2>
+              <div class="field inline-field">
+                <label for="phFilter" class="sr-only">Filter payments by booking</label>
+                <select class="input" id="phFilter"><option value="all">All bookings</option></select>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="dash-table" id="phTable">
+                <caption class="sr-only">Payments you have made</caption>
+                <thead>
+                  <tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Amount</th><th scope="col">Method</th><th scope="col">Reference</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+                </thead>
+                <tbody id="phBody"></tbody>
+              </table>
+            </div>
+            <div class="empty" id="phEmpty" hidden><p>No payments recorded yet.</p></div>
+          </article>
+        </section>
+
+        <!-- ===== Profile & settings ===== -->
+        <section class="view" id="view-profile" aria-labelledby="viewTitle" hidden>
+          <div class="profile-grid">
+            <article class="panel">
+              <h2 class="panel-title">Profile</h2>
+              <form id="profileForm" novalidate>
+                <div class="form-grid">
+                  <div class="field full">
+                    <label for="pfName">Full name</label>
+                    <input class="input" id="pfName" type="text" autocomplete="name" required>
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="pfEmail">Email</label>
+                    <input class="input" id="pfEmail" type="email" autocomplete="email" required>
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="pfPhone">Mobile</label>
+                    <input class="input" id="pfPhone" type="tel" autocomplete="tel" required>
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="pfCity">City</label>
+                    <input class="input" id="pfCity" type="text" autocomplete="address-level2">
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="pfContact">Preferred contact</label>
+                    <select class="input" id="pfContact">
+                      <option value="whatsapp">WhatsApp</option>
+                      <option value="phone">Phone call</option>
+                      <option value="email">Email</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn" type="submit">Save Profile</button>
+              </form>
+            </article>
+            <article class="panel">
+              <h2 class="panel-title">Settings</h2>
+              <fieldset class="set-group">
+                <legend>Theme</legend>
+                <label class="check"><input type="radio" name="setTheme" value="light"><span>Light</span></label>
+                <label class="check"><input type="radio" name="setTheme" value="dark"><span>Dark</span></label>
+              </fieldset>
+              <fieldset class="set-group">
+                <legend>Layout direction</legend>
+                <label class="check"><input type="radio" name="setDir" value="ltr"><span>Left to right</span></label>
+                <label class="check"><input type="radio" name="setDir" value="rtl"><span>Right to left</span></label>
+              </fieldset>
+              <fieldset class="set-group">
+                <legend>Reminders</legend>
+                <label class="check"><input type="checkbox" id="setEmail"><span>Email me 7 days before each installment</span></label>
+                <label class="check"><input type="checkbox" id="setWhatsapp"><span>WhatsApp reminders for tastings and visits</span></label>
+                <label class="check"><input type="checkbox" id="setDigest"><span>Monthly planning digest</span></label>
+              </fieldset>
+              <div class="danger-zone">
+                <p><strong>Reset sample data</strong><br><span class="muted">Restores the demo bookings, payments and notifications.</span></p>
+                <button class="btn btn--sm" type="button" id="resetData">Reset Data</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== Booking modal (add + edit) ===== -->
+  <div class="modal" id="bookingModal" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="bmTitle">
+      <div class="modal-head">
+        <h2 id="bmTitle">New booking</h2>
+        <button class="modal-x" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="bmName">Event name</label>
+            <input class="input" id="bmName" type="text" maxlength="60" placeholder="e.g. Meera's Sangeet" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmType">Occasion</label>
+            <select class="input" id="bmType"></select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmHall">Hall</label>
+            <select class="input" id="bmHall"></select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmDate">Date</label>
+            <input class="input" id="bmDate" type="date" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmSlot">Slot</label>
+            <select class="input" id="bmSlot">
+              <option value="lunch">Lunch · 11 am – 3 pm</option>
+              <option value="dinner">Dinner · 7 – 11:30 pm</option>
+            </select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmGuests">Guests</label>
+            <input class="input" id="bmGuests" type="number" min="15" max="900" inputmode="numeric" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bmMenu">Menu</label>
+            <select class="input" id="bmMenu"></select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field full">
+            <label for="bmNotes">Notes for your event manager</label>
+            <textarea class="input" id="bmNotes" maxlength="300" rows="3" placeholder="Timings, special requests, VIP guests…"></textarea>
+          </div>
+        </div>
+        <p class="modal-estimate" id="bmEstimate" aria-live="polite"></p>
+        <div class="modal-foot">
+          <button class="text-btn" type="button" data-close>Cancel</button>
+          <button class="btn" type="submit" id="bmSubmit">Save Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Payment modal (record + edit) ===== -->
+  <div class="modal" id="paymentModal" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+      <div class="modal-head">
+        <h2 id="pmTitle">Pay installment</h2>
+        <button class="modal-x" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <form id="paymentForm" novalidate>
+        <p class="pm-for" id="pmFor"></p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="pmAmount">Amount (₹)</label>
+            <input class="input" id="pmAmount" type="number" min="1" step="1" inputmode="numeric" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="pmDate">Payment date</label>
+            <input class="input" id="pmDate" type="date" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="pmMethod">Method</label>
+            <select class="input" id="pmMethod">
+              <option>UPI</option>
+              <option>Credit card</option>
+              <option>Debit card</option>
+              <option>Net banking</option>
+              <option>Bank transfer</option>
+            </select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="pmRef">Reference no.</label>
+            <input class="input" id="pmRef" type="text" maxlength="24" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+        </div>
+        <p class="modal-note">Demo portal: recording a payment here does not charge any card or account.</p>
+        <div class="modal-foot">
+          <button class="text-btn" type="button" data-close>Cancel</button>
+          <button class="btn" type="submit" id="pmSubmit">Record Payment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Confirm modal ===== -->
+  <div class="modal" id="confirmModal" hidden>
+    <div class="modal-dialog modal-dialog--sm" role="alertdialog" aria-modal="true" aria-labelledby="cfTitle" aria-describedby="cfText">
+      <div class="modal-head">
+        <h2 id="cfTitle">Are you sure?</h2>
+        <button class="modal-x" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <p id="cfText"></p>
+      <div class="modal-foot">
+        <button class="text-btn" type="button" data-close>Keep it</button>
+        <button class="btn" type="button" id="cfOk">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

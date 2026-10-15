@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Strand &amp; Steel</title>
+  <meta name="description" content="Barber side and salon side under one roof: walk-in fades, appointment color, wedding styling and gift cards at Strand &amp; Steel, Portland.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="index1.html" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero: split layout with a photo collage ===== -->
+    <section class="hero-split" aria-labelledby="hero2-title">
+      <div class="container split">
+        <div data-reveal>
+          <p class="eyebrow">Barbershop + salon · since 2015</p>
+          <h1 id="hero2-title">Two crafts. One front door.</h1>
+          <p class="lead">Four barber chairs with hot towels and a record player on one side; five salon chairs in soft north light on the other. One front desk, one team, and no need to choose between a fresh fade and a gloss.</p>
+          <div class="btn-row">
+            <a class="btn" href="pages/contact.html#booking">Book Now</a>
+            <a class="text-link" href="#sides">See how each side works <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="collage" data-reveal>
+          <img class="collage-main" src="assets/images/home2-hero-barber-scissor-cut.jpg" alt="Barber shaping a client's dark hair with scissors and a comb under a ring light" width="900" height="1125">
+          <img class="collage-second" src="assets/images/home2-hero-salon-blowdry.jpg" alt="Smiling stylist blow-drying a client's short brown hair in a sunlit salon" width="1100" height="735">
+          <p class="collage-badge"><strong><bdi>9 chairs</bdi></strong><bdi>6 specialists, 1 shared espresso machine</bdi></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Barber side vs. salon side ===== -->
+    <section class="section" id="sides" aria-labelledby="sides-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Barber side / Salon side</p>
+          <h2 id="sides-title">Pick your side — or use both</h2>
+          <p class="lead">Same building, same standards, two different rhythms. Here's how each side runs day to day.</p>
+        </div>
+
+        <div class="sides">
+          <article class="card side-panel" data-reveal>
+            <img src="assets/images/home2-barber-side.jpg" alt="Warm barbershop interior with leather barber chairs, exposed brick and glowing pendant lights" width="1000" height="664" loading="lazy">
+            <div class="side-body">
+              <h3>The Barber Side</h3>
+              <p class="side-tag">Clippers, razors and conversation.</p>
+              <dl class="side-facts">
+                <div><dt>Walk-ins</dt><dd>Welcome Tuesday to Saturday until 6 pm — add your name to the board by the door.</dd></div>
+                <div><dt>Book ahead for</dt><dd>Saturday mornings and anything that includes a hot-towel shave.</dd></div>
+                <div><dt>Perfect for</dt><dd>Lunch-break cleanups, weekly line-ups and parent-and-kid Saturdays.</dd></div>
+                <div><dt>Soundtrack</dt><dd>Vinyl soul and old-school hip-hop, volume negotiable.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card side-panel" data-reveal>
+            <img src="assets/images/home2-salon-side.jpg" alt="Bright salon floor with black styling chairs, tall windows and a wall of hair-care products" width="1000" height="666" loading="lazy">
+            <div class="side-body">
+              <h3>The Salon Side</h3>
+              <p class="side-tag">Color, cuts and calm.</p>
+              <dl class="side-facts">
+                <div><dt>Walk-ins</dt><dd>Appointments only, so your stylist's time is entirely yours.</dd></div>
+                <div><dt>Book ahead for</dt><dd>Color and balayage, usually one to two weeks out.</dd></div>
+                <div><dt>Perfect for</dt><dd>Big changes, color projects and anyone who loves a long blowout.</dd></div>
+                <div><dt>Soundtrack</dt><dd>Low-key playlists and a tea bar with oat milk on tap.</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Weddings & events ===== -->
+    <section class="section section--alt" id="events" aria-labelledby="events-title">
+      <div class="container split">
+        <div data-reveal>
+          <p class="eyebrow">Weddings &amp; events</p>
+          <h2 id="events-title">Hair for the big day — and everyone in the photos</h2>
+          <p class="lead">From one bride to a full wedding party, we style here at the studio or on location, while the barber side takes care of the groom's crew.</p>
+          <ol class="event-steps">
+            <li>
+              <h3>Trial · 6–8 weeks before</h3>
+              <p>A full rehearsal of your style, photographed from every angle so we can fine-tune it together.</p>
+            </li>
+            <li>
+              <h3>Plan · 2 weeks before</h3>
+              <p>We map a timetable for every person so the last style is finished 30 minutes before you leave.</p>
+            </li>
+            <li>
+              <h3>The day</h3>
+              <p>An early studio opening or on-site styling within 25 miles, plus touch-up kits for the evening.</p>
+            </li>
+          </ol>
+          <p class="event-note">Grooms and groomsmen: cuts and straight-razor shaves the day before or on the morning itself.</p>
+          <p><a class="text-link" href="pages/contact.html?service=event#booking">Plan your event <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="event-media" data-reveal>
+          <img src="assets/images/home2-event-updo.jpg" alt="Stylist pinning sections of a client's brown hair into a sculpted updo" width="1100" height="733" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Gift cards ===== -->
+    <section class="section" id="gift" aria-labelledby="gift-title">
+      <div class="container split">
+        <div class="giftcard-stage" data-reveal>
+          <div class="giftcard" role="img" aria-label="Strand and Steel gift card worth 75 dollars">
+            <div class="giftcard-top">
+              <img src="assets/images/logo-mark.png" alt="" width="44" height="44">
+              <span class="giftcard-name">Strand &amp; Steel</span>
+            </div>
+            <div class="giftcard-bottom">
+              <span class="giftcard-label">Gift card</span>
+              <span class="giftcard-amount">$75</span>
+            </div>
+          </div>
+        </div>
+        <div data-reveal>
+          <p class="eyebrow">Gift cards</p>
+          <h2 id="gift-title">Give someone their best hair day</h2>
+          <p class="lead">Digital or printed, in any amount from $25. Good for every service and product we sell, and they never expire.</p>
+          <ul class="check-list">
+            <li>Sent by email within minutes, or collected as a letterpress card at the front desk</li>
+            <li>Redeemable on both the barber side and the salon side</li>
+            <li>Add a handwritten message — we'll tuck it into the envelope</li>
+          </ul>
+          <div class="btn-row gift-actions">
+            <a class="btn" href="pages/contact.html?service=gift#booking">Request a gift card</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Walk-in guide (today's row is flagged by main.js) ===== -->
+    <section class="section section--alt" id="walk-ins" aria-labelledby="walkin-title">
+      <div class="container walkin">
+        <div data-reveal>
+          <p class="eyebrow">Walk-in guide</p>
+          <h2 id="walkin-title">When to drop in on the barber side</h2>
+          <p class="lead">Walk-ins are welcome Tuesday to Saturday until 6 pm. Here's the usual wait for a chair, taken from last season's sign-in board.</p>
+          <ul class="walkin-tips">
+            <li><strong>Quietest:</strong> Tuesday and Wednesday mornings — you'll usually sit straight down.</li>
+            <li><strong>Busiest:</strong> Friday after work and Saturday before 3 pm. On a schedule? Book ahead.</li>
+            <li><strong>While you wait:</strong> add your name to the board by the door and help yourself to an espresso.</li>
+          </ul>
+        </div>
+
+        <div class="card walkin-board" data-walkin data-reveal>
+          <div class="walkin-head">
+            <h3>Typical wait for a barber chair</h3>
+            <ul class="walkin-legend" aria-label="Key">
+              <li><span class="wait wait--1" aria-hidden="true"></span>Quiet · under 10 min</li>
+              <li><span class="wait wait--2" aria-hidden="true"></span>Steady · 10–25 min</li>
+              <li><span class="wait wait--3" aria-hidden="true"></span>Busy · 30+ min</li>
+            </ul>
+          </div>
+          <table class="walkin-table">
+            <caption class="visually-hidden">Typical walk-in wait on the barber side, by day and time of day</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">Day</span></th>
+                <th scope="col"><bdi>Open–11</bdi></th>
+                <th scope="col"><bdi>11–1</bdi></th>
+                <th scope="col"><bdi>1–3</bdi></th>
+                <th scope="col"><bdi>3–5</bdi></th>
+                <th scope="col"><bdi>5–6</bdi></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-day="2">
+                <th scope="row">Tue<span class="visually-hidden">sday</span></th>
+                <td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--2">Steady</span></td>
+              </tr>
+              <tr data-day="3">
+                <th scope="row">Wed<span class="visually-hidden">nesday</span></th>
+                <td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--2">Steady</span></td>
+              </tr>
+              <tr data-day="4">
+                <th scope="row">Thu<span class="visually-hidden">rsday</span></th>
+                <td><span class="wait wait--1">Quiet</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--3">Busy</span></td>
+              </tr>
+              <tr data-day="5">
+                <th scope="row">Fri<span class="visually-hidden">day</span></th>
+                <td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--3">Busy</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--3">Busy</span></td><td><span class="wait wait--3">Busy</span></td>
+              </tr>
+              <tr data-day="6">
+                <th scope="row">Sat<span class="visually-hidden">urday</span></th>
+                <td><span class="wait wait--3">Busy</span></td><td><span class="wait wait--3">Busy</span></td><td><span class="wait wait--3">Busy</span></td><td><span class="wait wait--2">Steady</span></td><td><span class="wait wait--closed">Closed</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="walkin-foot">We open at 9 am on weekdays and 8 am on Saturdays. Sundays are by appointment only, and we're closed on Mondays.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Quick booking widget (next step) ===== -->
+    <section class="section section--pine" id="start" aria-labelledby="start-title">
+      <div class="container quickbook">
+        <div data-reveal>
+          <p class="eyebrow">Start here</p>
+          <h2 id="start-title">Start your booking in three taps</h2>
+          <p class="lead">Choose a side, a service and roughly when. We'll carry your choices over to the booking form.</p>
+        </div>
+
+        <form class="quickbook-form" action="pages/contact.html#booking" method="get" data-quickbook data-reveal>
+          <div class="qb-row">
+            <fieldset class="qb-field">
+              <legend>1. Which side?</legend>
+              <div class="qb-options">
+                <label class="qb-option"><input type="radio" name="side" value="barber" checked><span>Barber</span></label>
+                <label class="qb-option"><input type="radio" name="side" value="salon"><span>Salon</span></label>
+              </div>
+            </fieldset>
+
+            <div class="qb-field">
+              <label for="qb-service">2. What for?</label>
+              <select id="qb-service" name="service">
+                <optgroup label="Barber side" data-side="barber">
+                  <option value="Classic cut">Classic cut</option>
+                  <option value="Skin fade">Skin fade</option>
+                  <option value="Cut &amp; beard combo">Cut &amp; beard combo</option>
+                  <option value="Beard sculpt">Beard sculpt</option>
+                  <option value="Hot-towel shave">Hot-towel shave</option>
+                  <option value="Kids' cut (12 &amp; under)">Kids' cut</option>
+                </optgroup>
+                <optgroup label="Salon side" data-side="salon">
+                  <option value="Women's cut &amp; style">Haircut &amp; style</option>
+                  <option value="Curly dry cut">Curly dry cut</option>
+                  <option value="Balayage">Balayage</option>
+                  <option value="Highlights">Highlights</option>
+                  <option value="Blowout">Blowout</option>
+                  <option value="Braids">Braids</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <fieldset class="qb-field">
+              <legend>3. When?</legend>
+              <div class="qb-options">
+                <label class="qb-option"><input type="radio" name="when" value="this-week" checked><span>This week</span></label>
+                <label class="qb-option"><input type="radio" name="when" value="next-week"><span>Next week</span></label>
+                <label class="qb-option"><input type="radio" name="when" value="flexible"><span>I'm flexible</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="quickbook-foot">
+            <p>Prefer to talk? Call <a class="text-link" href="tel:+15035550143"><span dir="ltr">(503) 555-0143</span></a></p>
+            <button class="btn" type="submit">Continue booking <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

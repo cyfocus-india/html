@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Meet Lumina Dental's board-certified orthodontist, oral surgeon, cosmetic dentist and pediatric dentist, with their weekly clinic hours.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="../index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="../index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="doctors.html" class="nav-link active" aria-current="page">Doctors</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordion" aria-expanded="false" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content" id="mobileHomeContent">
+            <li><a href="../index.html" class="mobile-accordion-link">Home 1</a></li>
+            <li><a href="../index1.html" class="mobile-accordion-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="doctors.html" class="mobile-nav-link active" aria-current="page">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Doctors -->
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="inner-hero">
+      <div class="container inner-hero-grid">
+        <div>
+          <span class="hero-badge">&#10022; Our clinical team</span>
+          <h1>Meet Our Board-Certified Dental Specialists</h1>
+          <p>An orthodontist, an oral surgeon, a cosmetic dentist and a pediatric dentist work side by side under one roof, so complex care never means being sent elsewhere.</p>
+          <div class="inner-hero-actions">
+            <a href="contact.html" class="btn btn-primary">Book with a Specialist</a>
+            <a href="services.html" class="btn btn-outline">Explore Services</a>
+          </div>
+        </div>
+        <div class="inner-hero-img-wrap">
+          <img src="../assets/images/hero-doctors.jpg" alt="Two Lumina dental clinicians in white coats standing together in the clinic's treatment area" width="1200" height="800">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Specialist profiles -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Doctors</span>
+          <h2>Choose the Right Specialist for You</h2>
+          <p>Each doctor completed an accredited residency after dental school and treats only their specialty.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="doctor-card">
+            <img src="../assets/images/doctor-1.jpg" alt="Dr. Sarah Lin, orthodontist, smiling as she explains a dental model to a patient" class="doctor-card-img" width="800" height="800" loading="lazy">
+            <div class="doctor-card-body">
+              <span class="doctor-specialty">Orthodontics</span>
+              <h3>Dr. Sarah Lin, DDS, MS</h3>
+              <p class="doctor-meta">UCSF School of Dentistry &middot; 14 years</p>
+              <p class="doctor-bio">Specializes in clear aligners, adult crossbites and ceramic braces. Recognized as a top-1% clear aligner provider in California.</p>
+              <p class="doctor-hours"><span aria-hidden="true">&#128197;</span> Mon, Wed, Fri &middot; 8:00 AM&ndash;5:00 PM</p>
+              <a href="contact.html?service=Braces+%26+Aligners&amp;doctor=Dr.+Sarah+Lin" data-service="Braces &amp; Aligners" data-doctor="Dr. Sarah Lin" class="btn btn-primary btn-sm btn-block">Book with Dr. Lin</a>
+            </div>
+          </article>
+
+          <article class="doctor-card">
+            <img src="../assets/images/doctor-2.jpg" alt="Dr. Marcus Vance, oral surgeon, in blue scrubs with arms folded" class="doctor-card-img" width="800" height="1000" loading="lazy">
+            <div class="doctor-card-body">
+              <span class="doctor-specialty">Oral &amp; Maxillofacial Surgery</span>
+              <h3>Dr. Marcus Vance, DMD, MD</h3>
+              <p class="doctor-meta">Harvard School of Dental Medicine &middot; 18 years</p>
+              <p class="doctor-bio">Performs computer-guided implants, bone grafts and complex wisdom tooth removal. Fellow of the American College of Oral and Maxillofacial Surgeons.</p>
+              <p class="doctor-hours"><span aria-hidden="true">&#128197;</span> Tue &amp; Thu 7:30 AM&ndash;4:00 PM &middot; Sat 8:00 AM&ndash;2:00 PM</p>
+              <a href="contact.html?service=Dental+Implants&amp;doctor=Dr.+Marcus+Vance" data-service="Dental Implants" data-doctor="Dr. Marcus Vance" class="btn btn-primary btn-sm btn-block">Book with Dr. Vance</a>
+            </div>
+          </article>
+
+          <article class="doctor-card">
+            <img src="../assets/images/doctor-3.jpg" alt="Dr. Elena Rostova, cosmetic dentist, smiling in a white coat outdoors" class="doctor-card-img" width="800" height="533" loading="lazy">
+            <div class="doctor-card-body">
+              <span class="doctor-specialty">Cosmetic &amp; Restorative</span>
+              <h3>Dr. Elena Rostova, DDS</h3>
+              <p class="doctor-meta">NYU College of Dentistry &middot; 12 years</p>
+              <p class="doctor-bio">Focuses on tooth-colored fillings, porcelain veneers and whitening. Accredited member of the American Academy of Cosmetic Dentistry.</p>
+              <p class="doctor-hours"><span aria-hidden="true">&#128197;</span> Mon, Tue, Thu, Fri &middot; 8:30 AM&ndash;6:00 PM</p>
+              <a href="contact.html?service=Tooth+Fillings&amp;doctor=Dr.+Elena+Rostova" data-service="Tooth Fillings" data-doctor="Dr. Elena Rostova" class="btn btn-primary btn-sm btn-block">Book with Dr. Rostova</a>
+            </div>
+          </article>
+
+          <article class="doctor-card">
+            <img src="../assets/images/doctor-4.jpg" alt="Dr. Julian Chen, pediatric dentist, in a white coat with arms folded" class="doctor-card-img" width="800" height="533" loading="lazy">
+            <div class="doctor-card-body">
+              <span class="doctor-specialty">Pediatric Dentistry</span>
+              <h3>Dr. Julian Chen, DDS, MSD</h3>
+              <p class="doctor-meta">University of Washington &middot; 10 years</p>
+              <p class="doctor-bio">Makes visits fun and reassuring for infants, children and teens, with sealants, gentle fillings and laughing gas when needed.</p>
+              <p class="doctor-hours"><span aria-hidden="true">&#128197;</span> Wed&ndash;Fri 8:00 AM&ndash;4:30 PM &middot; Sat 8:00 AM&ndash;4:00 PM</p>
+              <a href="contact.html?service=Cleaning+%26+Exam&amp;doctor=Dr.+Julian+Chen" data-service="Cleaning &amp; Exam" data-doctor="Dr. Julian Chen" class="btn btn-primary btn-sm btn-block">Book with Dr. Chen</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Credentials -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials</span>
+          <h2>Training That Goes Beyond the Minimum</h2>
+          <p>Our doctors complete over 200 hours of continuing education a year, well above California's 50-hour requirement.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#127891;</div>
+            <h3>Residency-Trained Specialists</h3>
+            <p>Each specialist completed a 3- to 6-year hospital residency in their field, so surgery, orthodontics and pediatric care stay in-house.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#128300;</div>
+            <h3>Published Clinical Research</h3>
+            <p>Our team has published in the Journal of Prosthetic Dentistry and the American Journal of Orthodontics on tissue-preserving techniques.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#128737;</div>
+            <h3>Licensed for Sedation</h3>
+            <p>Permitted by the Dental Board of California for oral conscious sedation, with continuous oxygen and heart-rate monitoring.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How the specialists work together -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Team Approach</span>
+          <h2>How Our Specialists Work Together on Your Care</h2>
+          <p>When a treatment involves more than one specialty, you get one coordinated plan instead of separate opinions.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <h3>Weekly Case Reviews</h3>
+            <p>Complex cases, such as implants after orthodontics, are reviewed by all four doctors every Tuesday before your plan is finalized.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>One Shared Patient Record</h3>
+            <p>Your X-rays, scans and notes live in one chart, so you never repeat your history or pay for duplicate imaging.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>The Same Doctor Throughout</h3>
+            <p>The specialist who plans your treatment also performs it and sees you at every follow-up, so nothing gets lost in a handover.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Patient Consultation Standards -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Patient Experience</span>
+          <h2>Our Unhurried Consultation Standards</h2>
+          <p>Great clinical outcomes begin with thoughtful listening. We structure our daily schedule so your doctor is never rushed between operatory chairs.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Standard 1</span>
+            <h3>45-Minute Dedicated Appointments</h3>
+            <p>Initial consultations are blocked for a full 45 minutes of direct doctor contact. You have ample time to review digital imaging, ask detailed questions, and discuss anxieties without being hurried.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Standard 2</span>
+            <h3>High-Definition Chairside Visualization</h3>
+            <p>We use miniature intraoral HD cameras to show you magnified live video of your teeth on a chairside screen. You see exactly what the doctor sees, turning your diagnosis into a collaborative discussion.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Standard 3</span>
+            <h3>Multi-Pathway Written Options</h3>
+            <p>We never pressure you into a single high-cost procedure. You receive a written comparison of conservative, phased, and comprehensive treatment options with clear prognoses for each choice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Next step -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Talk to a Specialist About Your Goals</h2>
+          <p>Book a consultation and leave with a clear diagnosis and a written treatment plan, with no obligation to proceed.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+            <a href="pricing.html" class="btn btn-outline btn-lg">See Treatment Prices</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

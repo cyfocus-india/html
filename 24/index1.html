@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Dashmile Couriers</title>
+  <meta name="description" content="Business shipping from Pune with Dashmile Couriers: doorstep pickups, twice-daily hub sorting, cash-on-delivery, a customer dashboard and packing advice for online sellers, pharmacies, offices and manufacturers.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-home2">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="pages/rates.html">Rate Calculator</a></li>
+          <li><a class="nav-link" href="pages/tracking.html">Tracking</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="pages/about.html">About</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Section 1: Hero (full-bleed photo with overlay) ===== -->
+    <section class="hero-two" aria-labelledby="hero2-title">
+      <img class="hero-two__bg" src="assets/images/hero-home2-sorting-hub.jpg" alt="Parcels in yellow crates moving through a large sorting hub" width="1920" height="1080" fetchpriority="high">
+      <div class="container">
+        <div class="hero-two__content">
+          <p class="eyebrow">Business shipping from Pune</p>
+          <h1 id="hero2-title">Your orders leave the building. We handle the rest.</h1>
+          <p class="lead">One account covers doorstep pickups, cash on delivery, returns and GST invoices. Our hub sorts your parcels twice a day, so nothing sits overnight waiting for a truck.</p>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="pages/signup.html">Open a Business Account</a>
+            <a class="link-arrow" href="pages/contact.html?topic=business">Talk to our sales desk <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-facts">
+          <div><strong>No minimum volume</strong><span>Ship five parcels a month or five thousand.</span></div>
+          <div><strong>Pickups six days a week</strong><span>Monday to Saturday, in 2-hour slots you choose.</span></div>
+          <div><strong>One login for your team</strong><span>Add packers and accountants with their own access.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: How it works ===== -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">From your packing table to their doorstep in four steps</h2>
+          <p class="lead">The same process runs whether you send one parcel or a full van load.</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <h3>Book in two minutes</h3>
+            <p>Add parcels in your dashboard, upload a CSV of up to 500 orders, or WhatsApp us on +91 98220 41735. Shipping labels are ready instantly.</p>
+            <span class="pill pill--brand">Labels in seconds</span>
+          </li>
+          <li class="step" data-reveal>
+            <h3>A rider collects</h3>
+            <p>Your assigned rider arrives inside the slot you picked, scans every parcel and leaves a pickup receipt on your phone.</p>
+            <span class="pill pill--brand">2-hour slot</span>
+          </li>
+          <li class="step" data-reveal>
+            <h3>Sorted at our hub</h3>
+            <p>Parcels are weighed, photographed and sorted at Hadapsar in two daily waves, then leave by bike, van, truck or flight.</p>
+            <span class="pill pill--brand">11 AM &amp; 7 PM waves</span>
+          </li>
+          <li class="step" data-reveal>
+            <h3>Delivered and reconciled</h3>
+            <p>Receivers get a live link. Cash on delivery is paid into your bank every Tuesday and Friday with a line-by-line statement.</p>
+            <span class="pill pill--brand">Twice-weekly payouts</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Industries (tabs) ===== -->
+    <section class="section section--alt" aria-labelledby="industries-title">
+      <div class="container" data-tabs>
+        <div class="section-head">
+          <p class="eyebrow">Who we ship for</p>
+          <h2 id="industries-title">Set up for the way your business sends</h2>
+          <p class="lead">Each industry needs something different from a courier. Pick yours to see how we handle it.</p>
+        </div>
+
+        <div class="tabs-list" role="tablist" aria-label="Industries">
+          <button class="tab-btn" role="tab" id="tab-sellers" aria-controls="panel-sellers" aria-selected="true" type="button">Online sellers</button>
+          <button class="tab-btn" role="tab" id="tab-pharma" aria-controls="panel-pharma" aria-selected="false" tabindex="-1" type="button">Pharmacies &amp; labs</button>
+          <button class="tab-btn" role="tab" id="tab-legal" aria-controls="panel-legal" aria-selected="false" tabindex="-1" type="button">Law firms &amp; offices</button>
+          <button class="tab-btn" role="tab" id="tab-mfg" aria-controls="panel-mfg" aria-selected="false" tabindex="-1" type="button">Manufacturers</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-sellers" aria-labelledby="tab-sellers" tabindex="0">
+          <div class="media-frame"><img src="assets/images/industry-online-sellers.jpg" alt="Sealed shipping cartons with barcode labels beside a small label printer" width="1000" height="750" loading="lazy"></div>
+          <div>
+            <h3>For D2C brands shipping from home or a small warehouse</h3>
+            <p class="muted">Most of our online sellers started with fewer than 20 orders a week. The tools scale with you without a contract.</p>
+            <div class="tab-meta"><span class="pill">Shopify &amp; WooCommerce exports</span><span class="pill">COD up to ₹50,000</span></div>
+            <ul class="check-list">
+              <li>Returned parcels come back within 5 days, opened, checked and photographed at our hub.</li>
+              <li>A tracking page with your logo, so customers see your brand and not ours.</li>
+              <li>Failed-delivery reasons are logged by the rider, which makes fake "customer not available" claims easy to spot.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-pharma" aria-labelledby="tab-pharma" tabindex="0" hidden>
+          <div class="media-frame"><img src="assets/images/industry-pharmacy.jpg" alt="Pharmacist taking a box of medicine from a well-stocked pharmacy shelf" width="1000" height="750" loading="lazy"></div>
+          <div>
+            <h3>Medicines and samples that can't wait or warm up</h3>
+            <p class="muted">Chemists, diagnostic labs and clinics use us for refills, sample runs and inter-branch stock transfers.</p>
+            <div class="tab-meta"><span class="pill">2–8 °C insulated boxes</span><span class="pill">8 AM to 8 PM</span></div>
+            <ul class="check-list">
+              <li>Insulated boxes with gel packs hold 2–8 °C for six hours, with temperature logged at pickup and drop.</li>
+              <li>For Schedule H medicines, the rider checks the prescription copy before handing over.</li>
+              <li>Fixed sample-collection rounds from clinics to your lab at the times you set.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-legal" aria-labelledby="tab-legal" tabindex="0" hidden>
+          <div class="media-frame"><img src="assets/images/industry-legal-documents.jpg" alt="Hand holding out a sealed white envelope" width="1000" height="750" loading="lazy"></div>
+          <div>
+            <h3>Documents that need a signature and a time stamp</h3>
+            <p class="muted">Advocates, CA firms and corporate offices send contracts, notices and originals with a clear chain of custody.</p>
+            <div class="tab-meta"><span class="pill">Tamper-evident pouches</span><span class="pill">ID-checked handover</span></div>
+            <ul class="check-list">
+              <li>A morning document run reaches the Shivajinagar court complex by 10:30 AM on working days.</li>
+              <li>The receiver signs on the rider's phone and shows photo ID. You get a PDF proof of delivery.</li>
+              <li>Each pouch has a serial number, so you can tell if it was opened in transit.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-mfg" aria-labelledby="tab-mfg" tabindex="0" hidden>
+          <div class="media-frame"><img src="assets/images/industry-manufacturing.jpg" alt="Forklift moving wrapped pallets through a warehouse with tall racking" width="1000" height="750" loading="lazy"></div>
+          <div>
+            <h3>Spares and samples between MIDC estates</h3>
+            <p class="muted">Auto-component and engineering units use us to keep production lines moving between plants and vendors.</p>
+            <div class="tab-meta"><span class="pill">Daily milk-run</span><span class="pill">E-way bills handled</span></div>
+            <ul class="check-list">
+              <li>A daily van loop links Chakan, Bhosari, Ranjangaon and Hinjewadi, with fixed stop times you can plan around.</li>
+              <li>Consignments over ₹50,000 travel with an e-way bill. Share the invoice and we generate it.</li>
+              <li>Parcels up to 30 kg go by three-wheeler. Heavier loads get a dedicated van on request.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: Customer dashboard preview (CSS mock) ===== -->
+    <section class="section" aria-labelledby="portal-title">
+      <div class="container split">
+        <div class="mock" aria-hidden="true" data-reveal>
+          <div class="mock__bar"><i></i><i></i><i></i></div>
+          <div class="mock__body">
+            <div class="mock__side"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+            <div class="mock__main">
+              <div class="mock__cards">
+                <div class="mock__card"><b>18</b><small>In transit</small></div>
+                <div class="mock__card"><b>246</b><small>Delivered</small></div>
+                <div class="mock__card"><b>₹8,410</b><small>Due</small></div>
+              </div>
+              <div class="mock__chart"><span style="height:45%"></span><span style="height:62%"></span><span style="height:38%"></span><span style="height:70%"></span><span style="height:92%"></span><span style="height:55%"></span><span style="height:66%"></span></div>
+              <div class="mock__track"><div style="--w:82%"></div><div style="--w:46%"></div><div style="--w:64%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Customer dashboard</p>
+          <h2 id="portal-title">Run every shipment from one screen</h2>
+          <p class="lead">The dashboard is free with every account and works on a phone, so your packers can book from the packing table.</p>
+          <ul class="feature-list">
+            <li><span class="icon-tile" aria-hidden="true">🗓</span><div><h3>Book and reschedule pickups</h3><p>Choose a 2-hour slot and change it any time before a rider is assigned.</p></div></li>
+            <li><span class="icon-tile" aria-hidden="true">📍</span><div><h3>Live parcel board</h3><p>Every parcel in transit on one board, updating as riders scan.</p></div></li>
+            <li><span class="icon-tile" aria-hidden="true">🗂</span><div><h3>Twelve months of history</h3><p>Search by order ID, receiver or PIN code and export it all to CSV.</p></div></li>
+            <li><span class="icon-tile" aria-hidden="true">🧾</span><div><h3>GST invoices on demand</h3><p>Fortnightly tax invoices, ready to download for your accountant.</p></div></li>
+          </ul>
+          <a class="link-arrow" href="pages/signin.html">Sign in to your dashboard <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Packing guide ===== -->
+    <section class="section section--alt" aria-labelledby="pack-title">
+      <div class="container split split--reverse split--top">
+        <div class="pack-media" data-reveal>
+          <div class="media-frame"><img src="assets/images/packaging-fragile-tape.jpg" alt="Cardboard box sealed with red and white fragile tape" width="1000" height="750" loading="lazy"></div>
+        </div>
+        <div>
+          <p class="eyebrow">Packing guide</p>
+          <h2 id="pack-title">Pack it once, pack it right</h2>
+          <p class="lead">Nine out of ten damaged parcels we see come down to packing. These six habits prevent nearly all of them.</p>
+          <ul class="pack-tips">
+            <li><strong>Box inside a box</strong><span>Glass, ceramics and electronics need a double-wall carton with 5 cm of cushioning on every side.</span></li>
+            <li><strong>Do the shake test</strong><span>Close the box and shake it. If anything moves, add paper or air pillows.</span></li>
+            <li><strong>H-tape every seam</strong><span>Tape the centre seam and both edges, top and bottom. One strip is not enough.</span></li>
+            <li><strong>One label, flat face</strong><span>Put the label on the largest face and cover every old barcode.</span></li>
+            <li><strong>Seal the liquids</strong><span>Bottles go in a zip bag with the cap taped, upright and marked "This side up".</span></li>
+            <li><strong>Mark fragile items</strong><span>Parcels marked "Fragile" go down our hand-sort lane instead of the conveyor.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 6: Call to action ===== -->
+    <section class="section" aria-labelledby="cta2-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">Start this afternoon</p>
+            <h2 id="cta2-title">Ready to hand over your first batch?</h2>
+            <p>Book a pickup for today's slots and pay per parcel. Cancel free any time before a rider is assigned.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="pages/contact.html?topic=pickup">Book a Pickup</a>
+            <a class="link-arrow" href="pages/rates.html">Check your price first <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/rates.html">Rate Calculator</a></li>
+          <li><a href="pages/tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="pages/signin.html">Sign In</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+          <li><a href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Strand &amp; Steel</title>
+  <meta name="description" content="Book an appointment at Strand &amp; Steel, 2140 SE Larkspur Avenue, Portland. Phone, email, opening hours, directions and booking policies.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="../assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="../pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Page intro (text-only hero) ===== -->
+    <section class="page-hero page-hero--plain" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-text" data-reveal>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home 1</a></li>
+              <li><span aria-current="page">Contact</span></li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Bookings &amp; questions</p>
+          <h1 id="page-title">Contact</h1>
+          <p class="lead">Request an appointment below or reach the front desk directly. Requests sent before 5 pm are confirmed the same day by text.</p>
+          <p class="status-pill" data-open-status><span class="status-dot" aria-hidden="true"></span><span data-status-text>Tue–Fri 9 am–8 pm · Sat 8 am–5 pm · Sun 10 am–4 pm</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Booking form + contact details ===== -->
+    <section class="section" id="booking" aria-labelledby="booking-title">
+      <div class="container booking-layout">
+
+        <div class="card booking-card" data-reveal>
+          <h2 id="booking-title">Request an appointment</h2>
+          <p>Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required. We'll confirm your exact time by text or email.</p>
+
+          <form class="form-grid" novalidate data-booking-form>
+            <p class="form-alert" role="alert" data-form-alert hidden></p>
+
+            <div class="field">
+              <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+              <p class="field-error" id="err-name"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required aria-describedby="err-email">
+              <p class="field-error" id="err-email"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Mobile phone <span class="req" aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(503) 555-0100" required aria-describedby="hint-phone err-phone">
+              <span class="field-hint" id="hint-phone">Used only to confirm or adjust your booking.</span>
+              <p class="field-error" id="err-phone"></p>
+            </div>
+
+            <div class="field">
+              <label for="service">Service <span class="req" aria-hidden="true">*</span></label>
+              <select id="service" name="service" required aria-describedby="err-service">
+                <option value="">Choose a service…</option>
+                <optgroup label="Haircuts">
+                  <option value="Women's cut &amp; style">Women's cut &amp; style</option>
+                  <option value="Short cut &amp; style">Short cut &amp; style</option>
+                  <option value="Curly dry cut">Curly dry cut</option>
+                  <option value="Men's scissor cut">Men's scissor cut</option>
+                  <option value="Kids' cut (12 &amp; under)">Kids' cut (12 &amp; under)</option>
+                </optgroup>
+                <optgroup label="Barbering &amp; beard trims">
+                  <option value="Classic cut">Classic cut</option>
+                  <option value="Skin fade">Skin fade</option>
+                  <option value="Cut &amp; beard combo">Cut &amp; beard combo</option>
+                  <option value="Beard sculpt">Beard sculpt</option>
+                  <option value="Hot-towel shave">Hot-towel shave</option>
+                  <option value="Gray blending">Gray blending</option>
+                </optgroup>
+                <optgroup label="Coloring">
+                  <option value="Root touch-up">Root touch-up</option>
+                  <option value="All-over color">All-over color</option>
+                  <option value="Highlights">Highlights</option>
+                  <option value="Balayage">Balayage</option>
+                  <option value="Gloss &amp; toner">Gloss &amp; toner</option>
+                  <option value="Color correction consultation">Color correction consultation</option>
+                </optgroup>
+                <optgroup label="Styling">
+                  <option value="Blowout">Blowout</option>
+                  <option value="Waves &amp; curls">Waves &amp; curls</option>
+                  <option value="Updo &amp; event style">Updo &amp; event style</option>
+                  <option value="Silk press">Silk press</option>
+                  <option value="Braids">Braids</option>
+                </optgroup>
+                <optgroup label="Something else">
+                  <option value="Free 15-minute consultation">Free 15-minute consultation</option>
+                  <option value="Wedding or event enquiry">Wedding or event enquiry</option>
+                  <option value="Gift card request">Gift card request</option>
+                </optgroup>
+              </select>
+              <p class="field-error" id="err-service"></p>
+            </div>
+
+            <div class="field">
+              <label for="pro">Preferred professional</label>
+              <select id="pro" name="pro">
+                <option value="No preference">No preference</option>
+                <option value="Hannah Ellis">Hannah Ellis · Color Director</option>
+                <option value="Dorian Vance">Dorian Vance · Lead Barber</option>
+                <option value="Elena Ruiz">Elena Ruiz · Senior Stylist</option>
+                <option value="Amara Okafor">Amara Okafor · Senior Stylist</option>
+                <option value="Mateo Silva">Mateo Silva · Barber</option>
+                <option value="Kai Tanaka">Kai Tanaka · Stylist</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+              <input id="date" name="date" type="date" required aria-describedby="hint-date err-date">
+              <span class="field-hint" id="hint-date">Closed Mondays · bookings up to 90 days ahead.</span>
+              <p class="field-error" id="err-date"></p>
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred time <span class="req" aria-hidden="true">*</span></label>
+              <select id="time" name="time" required aria-describedby="err-time">
+                <option value="">Choose a time of day…</option>
+                <option value="Morning">Morning (opening–12 pm)</option>
+                <option value="Afternoon">Afternoon (12–4 pm)</option>
+                <option value="Evening">Evening (4–8 pm, Tue–Fri)</option>
+              </select>
+              <p class="field-error" id="err-time"></p>
+            </div>
+
+            <div class="field field--full">
+              <div class="field-row-split">
+                <label for="notes">Notes for your stylist or barber</label>
+                <span class="field-hint" data-notes-count aria-hidden="true" dir="ltr">0 / 500</span>
+              </div>
+              <textarea id="notes" name="notes" rows="4" maxlength="500" placeholder="Anything we should know — your last service, the look you're after, or questions." aria-describedby="err-notes"></textarea>
+              <p class="field-error" id="err-notes"></p>
+            </div>
+
+            <div class="field field--full">
+              <div class="check-field">
+                <input id="first" name="first" type="checkbox">
+                <label for="first">This is my first visit to Strand &amp; Steel</label>
+              </div>
+              <div class="check-field">
+                <input id="policy" name="policy" type="checkbox" required aria-describedby="err-policy">
+                <label for="policy">I've read the <a href="#policies">booking policies</a> <span class="req" aria-hidden="true">*</span></label>
+              </div>
+              <p class="field-error" id="err-policy"></p>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Request appointment</button>
+              <p>No payment is taken now.</p>
+            </div>
+          </form>
+
+          <!-- Success message (shown after a valid submission) -->
+          <div class="form-success" data-booking-success hidden>
+            <span class="success-icon" aria-hidden="true">✓</span>
+            <h3 tabindex="-1">Thanks, <span data-success-name>there</span> — your request is in.</h3>
+            <p>Here's what we received. We'll confirm the exact time by text, usually within a couple of hours during opening hours.</p>
+            <dl>
+              <div><dt>Service</dt><dd data-success-service></dd></div>
+              <div><dt>Professional</dt><dd data-success-pro></dd></div>
+              <div><dt>Preferred time</dt><dd data-success-when></dd></div>
+              <div><dt>We'll reach you at</dt><dd data-success-contact></dd></div>
+            </dl>
+            <div class="btn-row">
+              <button class="btn" type="button" data-book-again>Make another request</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card info-card" data-reveal>
+          <h2 id="visit-title">Visit or get in touch</h2>
+          <div class="info-block">
+            <span class="icon-disc" aria-hidden="true">⌖</span>
+            <div>
+              <h3>Address</h3>
+              <address><bdi>2140 SE Larkspur Avenue</bdi><br><bdi>Portland, OR 97214</bdi></address>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=2140+SE+Larkspur+Avenue+Portland+OR+97214" target="_blank" rel="noopener">Get directions <span class="visually-hidden">(opens in a new tab)</span></a>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="icon-disc" aria-hidden="true">✆</span>
+            <div>
+              <h3>Phone &amp; text</h3>
+              <p><a href="tel:+15035550143"><span dir="ltr">(503) 555-0143</span></a></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="icon-disc" aria-hidden="true">✉&#xFE0E;</span>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:hello@strandandsteel.com">hello@strandandsteel.com</a></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="icon-disc" aria-hidden="true">◷</span>
+            <div>
+              <h3>Opening hours</h3>
+              <table class="hours-table">
+                <caption class="visually-hidden">Opening hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+                  <tr data-day="2,3,4,5"><th scope="row">Tuesday–Friday</th><td><bdi>9 AM – 8 PM</bdi></td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td><bdi>8 AM – 5 PM</bdi></td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td><bdi>10 AM – 4 PM</bdi></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Getting here ===== -->
+    <section class="section section--alt" aria-labelledby="here-title">
+      <div class="container getting-here">
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/contact-front-desk.jpg" alt="Front desk of the salon, where a team member checks the day's bookings on a tablet" width="1000" height="668" loading="lazy">
+        </div>
+        <div data-reveal>
+          <p class="eyebrow">Getting here</p>
+          <h2 id="here-title">Easy to find, easy to park</h2>
+          <div class="directions">
+            <div>
+              <span class="icon-disc" aria-hidden="true">Ⓟ</span>
+              <h3>By car</h3>
+              <p>Free two-hour street parking on Larkspur and 21st, plus four client spaces in the lot behind the building.</p>
+            </div>
+            <div>
+              <span class="icon-disc" aria-hidden="true">⇢</span>
+              <h3>By bike or bus</h3>
+              <p>A bike corral sits right outside, and the Larkspur &amp; 21st bus stop is half a block east.</p>
+            </div>
+            <div>
+              <span class="icon-disc" aria-hidden="true">⌂</span>
+              <h3>Step-free access</h3>
+              <p>Level entry from the street, a wide accessible restroom and a height-adjustable chair on each side.</p>
+            </div>
+            <div>
+              <span class="icon-disc" aria-hidden="true">✂&#xFE0E;</span>
+              <h3>Look for</h3>
+              <p>The copper door between the bookshop and the bakery, with our scissors sign hanging above it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Booking policies + next step ===== -->
+    <section class="section" id="policies" aria-labelledby="policies-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Booking policies</p>
+          <h2 id="policies-title">A few fair rules that keep the day running</h2>
+        </div>
+        <div class="policy-grid">
+          <article class="card policy" data-reveal>
+            <h3><span aria-hidden="true">✕</span> Cancellations</h3>
+            <p>Please give 24 hours' notice. Later cancellations are charged 50% of the service; missed color appointments are charged in full.</p>
+          </article>
+          <article class="card policy" data-reveal>
+            <h3><span aria-hidden="true">◷</span> Running late</h3>
+            <p>We'll always try to fit you in. After 15 minutes we may need to shorten the service or move you to the next free slot.</p>
+          </article>
+          <article class="card policy" data-reveal>
+            <h3><span aria-hidden="true">$</span> Deposits</h3>
+            <p>Color services over three hours and all event bookings need a $50 deposit, credited in full to your final bill.</p>
+          </article>
+          <article class="card policy" data-reveal>
+            <h3><span aria-hidden="true">✚</span> Patch tests</h3>
+            <p>New color clients need a quick patch test at least 48 hours before the appointment — drop in any time we're open.</p>
+          </article>
+          <article class="card policy" data-reveal>
+            <h3><span aria-hidden="true">☺&#xFE0E;</span> Under 16s</h3>
+            <p>Clients under 16 need a parent or guardian with them for the whole appointment.</p>
+          </article>
+          <div class="card policy policy-cta" data-reveal>
+            <h3>Ready to book?</h3>
+            <p>Your request takes about two minutes, or call the front desk on <a href="tel:+15035550143"><span dir="ltr">(503) 555-0143</span></a>.</p>
+            <a class="btn" href="#booking">Request an appointment <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/pricing.html">Pricing</a></li>
+            <li><a href="../pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

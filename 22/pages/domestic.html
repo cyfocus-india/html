@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domestic | Wanderkite Holidays</title>
+  <meta name="description" content="Domestic holiday packages across India — Kerala, Rajasthan, Himachal, Ladakh, Andaman, Goa and more, with permits and transport handled.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="../assets/images/logo.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">
+              Home <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/domestic.html" aria-current="page">Domestic</a></li>
+          <li><a class="nav-link" href="../pages/international.html">International</a></li>
+          <li><a class="nav-link" href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        <a class="btn btn--sm" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===== 1. PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="dom-title">
+      <img class="hero-bg" src="../assets/images/hero-domestic.jpg" alt="The Taj Mahal framed by a carved sandstone archway across its forecourt" width="1920" height="1272" fetchpriority="high">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">Domestic</span></li></ol>
+        </nav>
+        <h1 id="dom-title">Domestic holiday packages across India</h1>
+        <p class="lead">From houseboats in Kerala to lakeside camps in Ladakh — ready-made trips with handpicked stays, private cabs and every permit sorted.</p>
+        <ul class="hero-facts">
+          <li>9 ready-made itineraries</li>
+          <li>From ₹14,900 per person</li>
+          <li>Permits &amp; ferries handled</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 2. PACKAGE FINDER ===== -->
+    <section class="section" id="packages" aria-labelledby="pk-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Domestic packages</p>
+          <h2 id="pk-title">Pick a trip, then make it yours</h2>
+          <p>Prices are per person on twin sharing in 3-star hotels with breakfast, private cab and sightseeing. Upgrade any hotel or add days when you enquire.</p>
+        </div>
+
+        <div class="toolbar" data-filter-root="domestic">
+          <div class="chip-group" role="group" aria-label="Filter by trip style">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="mountains" aria-pressed="false">⛰ Mountains</button>
+            <button class="chip" type="button" data-filter="beaches" aria-pressed="false">🏝 Beaches &amp; Islands</button>
+            <button class="chip" type="button" data-filter="heritage" aria-pressed="false">🏰 Heritage</button>
+            <button class="chip" type="button" data-filter="nature" aria-pressed="false">🌿 Nature &amp; Wildlife</button>
+          </div>
+          <div class="toolbar-right">
+            <label class="visually-hidden" for="dom-search">Search packages</label>
+            <input class="input" id="dom-search" type="search" placeholder="Search e.g. Leh, Goa, tea" data-search>
+            <label class="visually-hidden" for="dom-sort">Sort packages</label>
+            <select class="select" id="dom-sort" data-sort>
+              <option value="popular">Most popular</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="nights">Shortest trip first</option>
+            </select>
+          </div>
+        </div>
+        <p class="result-count" data-count aria-live="polite">Showing 9 packages</p>
+
+        <div class="grid grid-3" data-grid>
+          <article class="pkg-card" id="pkg-kerala" data-style="nature" data-price="18900" data-nights="4" data-pop="1"
+            data-id="dom-kerala" data-title="Kerala Backwaters &amp; Munnar" data-img="dom-kerala.jpg" data-duration="4N/5D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-kerala.jpg" alt="Houseboat with a thatched roof moored among coconut palms on a Kerala backwater" width="800" height="600" loading="lazy">
+              <span class="tag">Nature</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Kerala Backwaters &amp; Munnar">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 4N / 5D</span><span>⌖ Kochi · Munnar · Alleppey</span></div>
+              <h3>Kerala Backwaters &amp; Munnar</h3>
+              <ul class="pkg-list">
+                <li><span>Overnight private houseboat with Kerala meals</span></li>
+                <li><span>Tea museum and Eravikulam National Park</span></li>
+                <li><span>Kathakali performance in Fort Kochi</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹18,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Kerala%20Backwaters%20%26%20Munnar#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-golden-triangle" data-style="heritage" data-price="22500" data-nights="5" data-pop="2"
+            data-id="dom-golden-triangle" data-title="Golden Triangle: Delhi, Agra &amp; Jaipur" data-img="dom-golden-triangle.jpg" data-duration="5N/6D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-golden-triangle.jpg" alt="The Taj Mahal reflected in the long garden pool lined with cypress trees" width="800" height="600" loading="lazy">
+              <span class="tag">Heritage</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Golden Triangle: Delhi, Agra &amp; Jaipur">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 5N / 6D</span><span>⌖ Delhi · Agra · Jaipur</span></div>
+              <h3>Golden Triangle: Delhi, Agra &amp; Jaipur</h3>
+              <ul class="pkg-list">
+                <li><span>Sunrise entry at the Taj Mahal with a licensed guide</span></li>
+                <li><span>Amber Fort by jeep and City Palace in Jaipur</span></li>
+                <li><span>Old Delhi rickshaw and street-food walk</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹22,500</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Golden%20Triangle#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-himachal" data-style="mountains" data-price="15900" data-nights="5" data-pop="3"
+            data-id="dom-himachal" data-title="Manali, Solang &amp; Kasol" data-img="dom-himachal.jpg" data-duration="5N/6D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-himachal.jpg" alt="Trekkers crossing a snow-covered ridge beneath clouds in the Himalayas" width="800" height="600" loading="lazy">
+              <span class="tag">Mountains</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Manali, Solang &amp; Kasol">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 5N / 6D</span><span>⌖ Delhi · Manali · Kasol</span></div>
+              <h3>Manali, Solang &amp; Kasol</h3>
+              <ul class="pkg-list">
+                <li><span>Overnight Volvo sleeper from Delhi, both ways</span></li>
+                <li><span>Solang Valley snow point and Atal Tunnel drive</span></li>
+                <li><span>Two nights in a riverside cottage at Kasol</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹15,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Manali%2C%20Solang%20%26%20Kasol#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-rajasthan" data-style="heritage" data-price="31900" data-nights="7" data-pop="4"
+            data-id="dom-rajasthan" data-title="Royal Rajasthan" data-img="dom-rajasthan.jpg" data-duration="7N/8D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-rajasthan.jpg" alt="Golden sandstone ramparts and courtyards of Amber Fort near Jaipur" width="800" height="600" loading="lazy">
+              <span class="tag">Heritage</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Royal Rajasthan">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 7N / 8D</span><span>⌖ Jaipur · Jodhpur · Jaisalmer · Udaipur</span></div>
+              <h3>Royal Rajasthan</h3>
+              <ul class="pkg-list">
+                <li><span>A night in a Jaisalmer dune camp with folk music</span></li>
+                <li><span>Mehrangarh Fort audio tour in Jodhpur</span></li>
+                <li><span>Sunset boat ride on Lake Pichola, Udaipur</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹31,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Royal%20Rajasthan#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-ladakh" data-style="mountains" data-price="38500" data-nights="6" data-pop="5"
+            data-id="dom-ladakh" data-title="Ladakh: Leh, Nubra &amp; Pangong" data-img="dom-ladakh.jpg" data-duration="6N/7D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-ladakh.jpg" alt="Four-wheel drive on a high-altitude desert road with bare mountains under a clear sky" width="800" height="600" loading="lazy">
+              <span class="tag">Mountains</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Ladakh: Leh, Nubra &amp; Pangong">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 6N / 7D</span><span>⌖ Leh · Nubra · Pangong</span></div>
+              <h3>Ladakh: Leh, Nubra &amp; Pangong</h3>
+              <ul class="pkg-list">
+                <li><span>Over Khardung La and Chang La in a private SUV</span></li>
+                <li><span>Lakeside Swiss-tent camp at Pangong</span></li>
+                <li><span>All Inner Line permits filed for you</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹38,500</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Ladakh%3A%20Leh%2C%20Nubra%20%26%20Pangong#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-andaman" data-style="beaches" data-price="34500" data-nights="6" data-pop="6"
+            data-id="dom-andaman" data-title="Andaman Islands Explorer" data-img="dom-andaman.jpg" data-duration="6N/7D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-andaman.jpg" alt="Aerial view of a palm-fringed island with turquoise shallows and a wooden jetty" width="800" height="600" loading="lazy">
+              <span class="tag">Beaches</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Andaman Islands Explorer">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 6N / 7D</span><span>⌖ Port Blair · Havelock · Neil</span></div>
+              <h3>Andaman Islands Explorer</h3>
+              <ul class="pkg-list">
+                <li><span>Sunset at Radhanagar, one of Asia's top beaches</span></li>
+                <li><span>Glass-bottom boat ride at Elephant Beach</span></li>
+                <li><span>Cellular Jail light-and-sound show</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹34,500</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Andaman%20Islands%20Explorer#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-goa" data-style="beaches" data-price="14900" data-nights="4" data-pop="7"
+            data-id="dom-goa" data-title="Goa Beach &amp; Heritage" data-img="dom-goa.jpg" data-duration="4N/5D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-goa.jpg" alt="Leaning coconut palms over a quiet white-sand beach and blue sea" width="800" height="600" loading="lazy">
+              <span class="tag">Beaches</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Goa Beach &amp; Heritage">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 4N / 5D</span><span>⌖ North &amp; South Goa</span></div>
+              <h3>Goa Beach &amp; Heritage</h3>
+              <ul class="pkg-list">
+                <li><span>Pool resort steps from Candolim beach</span></li>
+                <li><span>Old Goa churches and Fontainhas walking tour</span></li>
+                <li><span>Sunset cruise on the Mandovi river</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹14,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Goa%20Beach%20%26%20Heritage#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-amritsar" data-style="heritage" data-price="19800" data-nights="5" data-pop="8"
+            data-id="dom-amritsar" data-title="Amritsar &amp; Dharamshala" data-img="dom-amritsar.jpg" data-duration="5N/6D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-amritsar.jpg" alt="The Golden Temple in Amritsar shining above the sacred pool" width="800" height="600" loading="lazy">
+              <span class="tag">Heritage</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Amritsar &amp; Dharamshala">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 5N / 6D</span><span>⌖ Amritsar · McLeod Ganj</span></div>
+              <h3>Amritsar &amp; Dharamshala</h3>
+              <ul class="pkg-list">
+                <li><span>Golden Temple at dawn and the community langar</span></li>
+                <li><span>Beating Retreat ceremony at the Attari–Wagah border</span></li>
+                <li><span>Optional guided Triund day trek</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹19,800</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Amritsar%20%26%20Dharamshala#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-ranthambore" data-style="nature" data-price="24600" data-nights="3" data-pop="9"
+            data-id="dom-ranthambore" data-title="Ranthambore Tiger Safari" data-img="dom-ranthambore.jpg" data-duration="3N/4D" data-type="Domestic" data-page="domestic.html">
+            <div class="pkg-media">
+              <img src="../assets/images/dom-ranthambore.jpg" alt="Close-up of a Bengal tiger walking through green grass" width="800" height="600" loading="lazy">
+              <span class="tag">Wildlife</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Ranthambore Tiger Safari">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 3N / 4D</span><span>⌖ Sawai Madhopur</span></div>
+              <h3>Ranthambore Tiger Safari</h3>
+              <ul class="pkg-list">
+                <li><span>Two shared-jeep safaris in core zones 1–5</span></li>
+                <li><span>Guided climb to the 10th-century Ranthambore Fort</span></li>
+                <li><span>Jungle lodge with pool and all meals</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹24,600</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Ranthambore%20Tiger%20Safari#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" data-empty>No packages match that search. Try another place, or <a href="contact.html#enquiry">ask us to build one</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== 3. FEATURED ITINERARY ===== -->
+    <section class="section section--alt" aria-labelledby="itin-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Featured itinerary</p>
+          <h2 id="itin-title">Ladakh, day by day</h2>
+          <p>Our most-booked summer trip is paced for altitude: two slow days in Leh before any high pass, and no day longer than seven hours on the road.</p>
+        </div>
+        <div class="itin-layout">
+          <div class="accordion" data-accordion>
+            <details class="acc-item itin-day" open>
+              <summary><span class="day-no">Day 1</span><span class="day-title">Land in Leh (3,500 m) and rest</span></summary>
+              <div class="acc-body"><p>Airport pick-up and a full afternoon of rest to acclimatise. Short evening walk to Shanti Stupa for sunset over the Indus valley.</p><p class="stay">🛏 Stay: Leh — heritage guesthouse, dinner included</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 2</span><span class="day-title">Monasteries of the Indus valley</span></summary>
+              <div class="acc-body"><p>Morning prayers at Thiksey, then Hemis — Ladakh's richest monastery — and the ruins of Shey Palace. Back in Leh by 4 PM.</p><p class="stay">🛏 Stay: Leh</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 3</span><span class="day-title">Over Khardung La to Nubra</span></summary>
+              <div class="acc-body"><p>Cross one of the world's highest motorable passes (5,359 m). Afternoon among the sand dunes of Hunder with an optional double-humped camel ride.</p><p class="stay">🛏 Stay: Hunder — desert camp with attached baths</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 4</span><span class="day-title">Shyok river road to Pangong</span></summary>
+              <div class="acc-body"><p>A dramatic drive along the Shyok river to Pangong Tso, the blue lake that changes colour through the day. Bonfire dinner by the water.</p><p class="stay">🛏 Stay: Pangong — lakeside Swiss tents with heaters</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 5</span><span class="day-title">Pangong sunrise, back via Chang La</span></summary>
+              <div class="acc-body"><p>Watch the sun rise over the lake, then return to Leh across Chang La (5,360 m). Free evening at Leh's main bazaar.</p><p class="stay">🛏 Stay: Leh</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 6</span><span class="day-title">Sham valley and the Sangam</span></summary>
+              <div class="acc-body"><p>Magnetic Hill, Gurudwara Pathar Sahib and the confluence of the Indus and Zanskar rivers. Optional rafting on the Zanskar (₹1,800).</p><p class="stay">🛏 Stay: Leh</p></div>
+            </details>
+            <details class="acc-item itin-day">
+              <summary><span class="day-no">Day 7</span><span class="day-title">Fly home</span></summary>
+              <div class="acc-body"><p>Breakfast and transfer to Kushok Bakula Rimpochee Airport for your flight home.</p></div>
+            </details>
+          </div>
+
+          <aside class="trip-card" aria-label="Ladakh trip summary">
+            <img src="../assets/images/dom-ladakh-itinerary.jpg" alt="Jagged Himalayan peaks glowing pink and orange at dusk" width="1000" height="668" loading="lazy">
+            <div class="inner">
+              <p class="price"><small>6 nights · Leh, Nubra &amp; Pangong</small><strong>₹38,500</strong> <span class="per">/ person, twin sharing</span></p>
+              <h3 class="mt-0" style="margin-top:16px">2027 group departures</h3>
+              <ul class="departures">
+                <li><span>14 May 2027</span><span class="ok">12 seats</span></li>
+                <li><span>04 June 2027</span><span class="low">3 seats left</span></li>
+                <li><span>25 June 2027</span><span class="ok">9 seats</span></li>
+                <li><span>16 July 2027</span><span class="ok">14 seats</span></li>
+              </ul>
+              <a class="btn btn--block" href="contact.html?package=Ladakh%20group%20departure#enquiry">Reserve a Seat</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. PERMITS & TRANSPORT ===== -->
+    <section class="section" aria-labelledby="permit-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Paperwork &amp; getting around</p>
+          <h2 id="permit-title">Permits we file and transport you can add</h2>
+          <p>Several of India's most beautiful regions need permits or limited-quota passes. We apply on your behalf using the ID you share at booking.</p>
+        </div>
+        <div class="split" style="align-items:start">
+          <div>
+            <h3>Permits by region</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th scope="col">Region</th><th scope="col">What's needed</th><th scope="col">Approx. fee</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Region"><strong>Ladakh</strong> — Nubra, Pangong</td><td data-label="What's needed">Inner Line Permit + environment fee</td><td data-label="Approx. fee">₹600 / person</td></tr>
+                  <tr><td data-label="Region"><strong>Sikkim</strong> — Nathula, North Sikkim</td><td data-label="What's needed">Protected area permit; photos 7 days ahead</td><td data-label="Approx. fee">₹200–₹400</td></tr>
+                  <tr><td data-label="Region"><strong>Arunachal Pradesh</strong></td><td data-label="What's needed">e-ILP for Tawang and Ziro</td><td data-label="Approx. fee">₹100–₹400</td></tr>
+                  <tr><td data-label="Region"><strong>Rohtang Pass</strong>, Manali</td><td data-label="What's needed">NGT vehicle permit, daily quota</td><td data-label="Approx. fee">₹550 / vehicle</td></tr>
+                  <tr><td data-label="Region"><strong>Andaman</strong> — Havelock, Neil</td><td data-label="What's needed">No permit for Indians; ferries sell out 30 days ahead</td><td data-label="Approx. fee">Ferry ₹1,400–₹2,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Government fees change from season to season; we charge them at actual cost with receipts.</p>
+          </div>
+          <div>
+            <h3>Transport add-ons</h3>
+            <ul class="rate-list">
+              <li><span><b>Return flights from your city</b><span class="sub">Booked at the live fare, no markup</span></span><span class="amt">At cost</span></li>
+              <li><span><b>Private sedan</b><span class="sub">Dzire or Etios, up to 250 km a day</span></span><span class="amt">₹2,900 / day</span></li>
+              <li><span><b>Private SUV</b><span class="sub">Innova Crysta, ideal for hills</span></span><span class="amt">₹4,200 / day</span></li>
+              <li><span><b>Tempo Traveller</b><span class="sub">12 seats, for groups and families</span></span><span class="amt">₹5,600 / day</span></li>
+              <li><span><b>Train tickets</b><span class="sub">Rajdhani, Vande Bharat and more</span></span><span class="amt">₹250 / PNR</span></li>
+              <li><span><b>Upgrade to 4-star hotels</b><span class="sub">Per room, per night</span></span><span class="amt">from ₹2,200</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CTA ===== -->
+    <section class="cta-band" aria-labelledby="dom-cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow--light">Custom India trips</p>
+          <h2 id="dom-cta">Don't see your corner of India here?</h2>
+          <p>We also plan Spiti, Meghalaya, Hampi, Kutch, Sikkim and 40 more regions on request — tell us the dates and we'll do the rest.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="contact.html?package=Custom%20India%20trip#enquiry">Plan a Custom India Trip</a>
+          <a class="link-arrow link-arrow--light" href="international.html">Browse International <span class="flip" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+            <img src="../assets/images/logo.png" alt="" width="42" height="42">
+            <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+          </a>
+          <p>Handcrafted holiday packages across India and 30+ countries, planned by real people in Bengaluru since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Packages</h3>
+          <ul>
+            <li><a href="../pages/domestic.html">Domestic</a></li>
+            <li><a href="../pages/international.html">International</a></li>
+            <li><a href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="../pages/signin.html">Sign In</a></li>
+            <li><a href="../pages/signup.html">Sign Up</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year">2026</span> Wanderkite Holidays Pvt. Ltd. · IATA-accredited travel agent · All prices in Indian Rupees (₹)</p>
+        <button class="to-top" type="button" data-scroll-top>Back to top <span aria-hidden="true">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

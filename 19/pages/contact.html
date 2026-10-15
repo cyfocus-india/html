@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AuraWash Laundry &amp; Dry Cleaning</title>
+  <meta name="description" content="Get in touch with AuraWash. Request doorstep pickup, ask about commercial laundry, or visit our central cleaning depot.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="site-logo" aria-label="AuraWash Home">
+        <img src="../assets/images/logo.png" alt="AuraWash Laundry &amp; Dry Cleaning Logo" class="site-logo-img">
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Home <span class="caret-arrow" aria-hidden="true"></span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+        </div>
+
+        <!-- Mobile & Tablet Drawer Actions -->
+        <div class="nav-mobile-actions">
+          <a href="signin.html" class="btn btn-primary nav-mobile-signin">Sign In</a>
+          <div class="nav-mobile-toggles">
+            <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+            <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action Buttons & Toggles -->
+      <div class="header-actions">
+        <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+        <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        <a href="signin.html" class="btn btn-primary">Sign In</a>
+
+        <!-- Hamburger Menu Button for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- Contact Overview & Main Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Always Here to Help</div>
+          <h1>Get In Touch With Our Fabric Care Team</h1>
+          <p>
+            Have a question about a delicate silk item, want to book a custom doorstep pickup, or require a commercial linen proposal? Send us a message or call our concierge desk.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Form with Validation & Success Alert -->
+          <div class="contact-form-card">
+            <div id="contactPreselectedAlert" class="alert-box" style="display: none; background-color: rgba(14, 165, 233, 0.12); color: var(--brand-primary); border: 1.5px solid var(--brand-primary); border-radius: var(--radius-md); padding: 0.85rem 1.15rem; margin-bottom: 1.25rem; font-weight: 500; font-size: 0.95rem;"></div>
+            <div id="contactSuccessAlert" class="alert-box alert-success"></div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full Name *</label>
+                  <input type="text" id="contactName" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+                  <div id="contactNameError" class="form-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="e.g. sarah@example.com" required>
+                  <div id="contactEmailError" class="form-error"></div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="contactPhone" class="form-input" placeholder="e.g. (555) 328-9274" required>
+                  <div id="contactPhoneError" class="form-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactService" class="form-label">Primary Service Needed</label>
+                  <select id="contactService" class="form-select">
+                    <option value="Wash &amp; Fold">Wash &amp; Fold Everyday Laundry</option>
+                    <option value="Dry Cleaning">Premium Eco Dry Cleaning</option>
+                    <option value="Steam Ironing">Steam Pressing &amp; Ironing</option>
+                    <option value="Curtains &amp; Drapery">Curtains &amp; Architectural Drapery</option>
+                    <option value="Solo Fresh Plan">Solo Fresh Membership Plan ($59/mo)</option>
+                    <option value="Family Essentials Plan">Family Essentials Membership Plan ($139/mo)</option>
+                    <option value="Executive Club Plan">Executive Wardrobe Club Plan ($89/mo)</option>
+                    <option value="Custom Order Estimate">Custom Order Estimate</option>
+                    <option value="Commercial Laundry">Commercial &amp; Bulk Business Linen</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactAddress" class="form-label">Doorstep Pickup Address or Postal Code</label>
+                <input type="text" id="contactAddress" class="form-input" placeholder="e.g. 742 Evergreen Terrace, Apt 4B">
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message / Specific Fabric Instructions *</label>
+                <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Tell us about special stain spots, preferred pickup days, or commercial inquiries..." required></textarea>
+                <div id="contactMessageError" class="form-error"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Inquiry &amp; Request Pickup</button>
+            </form>
+          </div>
+
+          <!-- Direct Contact Information Details -->
+          <div class="contact-info-card">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.35rem;">Concierge Details</h3>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <h4>Central Cleaning Facility &amp; Drop-off</h4>
+                <p>482 Cleanview Boulevard, Suite 100<br>Metro City, MC 90210</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div>
+                <h4>Customer Support &amp; Dispatch</h4>
+                <p>Direct: (555) 328-9274<br>SMS Route Tracker: (555) 328-9275</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉</div>
+              <div>
+                <h4>Direct Email Inquiries</h4>
+                <p>General Care: care@aurawash.com<br>Commercial Accounts: b2b@aurawash.com</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">⏰</div>
+              <div>
+                <h4>Operating &amp; Delivery Hours</h4>
+                <p>
+                  <strong>Monday – Friday:</strong> 7:00 AM – 9:00 PM<br>
+                  <strong>Saturday:</strong> 8:00 AM – 8:00 PM<br>
+                  <strong>Sunday:</strong> 9:00 AM – 6:00 PM (Emergency Van Routes Only)
+                </p>
+              </div>
+            </div>
+
+            <div style="background-color: var(--bg-secondary); border-radius: var(--radius-sm); padding: 1.25rem; border: 1px solid var(--border-color); margin-top: 1.5rem;">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.35rem; color: var(--text-primary);">⚡ 30-Minute Dispatch Guarantee</h4>
+              <p style="font-size: 0.85rem;">
+                Online inquiries sent during business hours receive a direct phone confirmation or SMS booking link within 30 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Physical Hubs, Depots & 24/7 Smart Lockers -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Walk-In &amp; Express Lockers</div>
+          <h2>Our Central Depots &amp; 24/7 Smart Lockers</h2>
+          <p>Prefer to drop off or collect in person? Visit any of our three climate-controlled facilities or use our contactless electronic locker kiosks anytime, day or night.</p>
+        </div>
+
+        <div class="depots-grid">
+          <!-- Depot 1: Central Metro -->
+          <div class="depot-card">
+            <div class="depot-card-body">
+              <div class="depot-badge-wrap">
+                <span class="depot-card-badge">Flagship Hub</span>
+              </div>
+              <h3 class="depot-title">Central Metro Depot &amp; Smart Lockers</h3>
+              <p class="depot-address">📍 482 Cleanview Boulevard, Suite 100<br>Metro City, MC 90210</p>
+              
+              <ul class="depot-amenities">
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">24/7 Self-service electronic locker pickup &amp; drop</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Dedicated drive-thru bag drop-off lane</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Same-day rush cleaning counter (by 10 AM)</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Complimentary 30-minute customer parking</span></li>
+              </ul>
+
+              <div class="depot-meta-box">
+                <div><strong>📞 Phone:</strong> (555) 328-9274</div>
+                <div><strong>⏰ Counter:</strong> Mon–Sat 7:00 AM – 9:00 PM | Sun 9–6</div>
+                <div><strong>🔐 Smart Lockers:</strong> Accessible 24/7/365</div>
+              </div>
+
+              <a href="tel:5553289274" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;">Call Central Hub</a>
+            </div>
+          </div>
+
+          <!-- Depot 2: Westside Studio -->
+          <div class="depot-card">
+            <div class="depot-card-body">
+              <div class="depot-badge-wrap">
+                <span class="depot-card-badge">Tailoring Studio</span>
+              </div>
+              <h3 class="depot-title">Westside Tailoring &amp; Eco Studio</h3>
+              <p class="depot-address">📍 1140 West Boulevard, Bayview Plaza<br>Metro City, MC 90214</p>
+              
+              <ul class="depot-amenities">
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Resident master tailor for custom fittings</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Specialist couture, silk &amp; bridal gown preservation</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Express alteration &amp; re-hemming drop desk</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Eco-solvent botanical spotting lab</span></li>
+              </ul>
+
+              <div class="depot-meta-box">
+                <div><strong>📞 Phone:</strong> (555) 328-9278</div>
+                <div><strong>⏰ Counter:</strong> Mon–Fri 8:00 AM – 7:30 PM</div>
+                <div><strong>⏰ Saturday:</strong> 9:00 AM – 6:00 PM (Closed Sun)</div>
+              </div>
+
+              <a href="tel:5553289278" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;">Call Westside Studio</a>
+            </div>
+          </div>
+
+          <!-- Depot 3: North Uptown Dock -->
+          <div class="depot-card">
+            <div class="depot-card-body">
+              <div class="depot-badge-wrap">
+                <span class="depot-card-badge">Fleet Operations</span>
+              </div>
+              <h3 class="depot-title">North Uptown Fleet &amp; B2B Dock</h3>
+              <p class="depot-address">📍 890 Industrial Way, Building D<br>Metro City, MC 90218</p>
+              
+              <ul class="depot-amenities">
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Commercial bulk linen &amp; uniform loading bays</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">High-capacity architectural curtain sanitization</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Corporate concierge account dispatch office</span></li>
+                <li><span class="depot-amenity-icon">✓</span> <span class="depot-amenity-text">Direct fleet driver distribution center</span></li>
+              </ul>
+
+              <div class="depot-meta-box">
+                <div><strong>📞 Phone:</strong> (555) 328-9282</div>
+                <div><strong>⏰ Counter:</strong> Mon–Fri 6:30 AM – 8:00 PM</div>
+                <div><strong>⏰ Saturday:</strong> 8:00 AM – 4:00 PM (Closed Sun)</div>
+              </div>
+
+              <a href="tel:5553289282" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;">Call Commercial Desk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Frequently Asked Inquiries & Concierge SLA -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Immediate Help</div>
+          <h2>Frequently Asked Contact &amp; Dispatch Inquiries</h2>
+          <p>Answers to common questions about pickup scheduling, rush turnaround times, porch handoffs, and special fabric care requests.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item is-open">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>How quickly will someone confirm my doorstep pickup request?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Our dispatch desk operates live from 7:00 AM to 9:00 PM daily. Within 30 minutes of submitting the form above, you will receive an SMS confirmation and email calendar invite with your 2-hour driver arrival window.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can I leave my laundry outside if I will not be home?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Yes, absolutely! Over 60% of our residential pickups are contactless. You can leave your laundry bags on your porch, with your building concierge, or in parcel lockers. Simply note your gate code or porch instructions in the message box above. Our driver will send you a timestamped digital photo upon collection and delivery.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What if I have an urgent or emergency rush requirement?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              We offer Same-Day 8-Hour Express Rush for orders collected before 10:00 AM. If you have an urgent suit or dress for an evening event, please specify "Same-Day Rush" in your message or call our direct dispatch line at (555) 328-9274 immediately.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How do I notify you about delicate fabrics or stubborn stains?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Mention specific concerns (such as silk, vintage wool, red wine spots, or oil stains) in the message area. When your items arrive at our depot, our specialists scan the digital barcode and run ultrasonic enzyme spot triage before any wash or dry cleaning cycle begins.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>When and how do I pay for my order?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              You are never billed upfront. After your garments are weighed and inspected at our central facility, an itemized digital invoice is generated and sent via SMS and email. You can pay securely with any credit card, Apple Pay, Google Pay, or charge it to your monthly subscription account.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Pillar Concierge Commitments SLA -->
+        <div class="support-sla-grid">
+          <div class="support-sla-card">
+            <div class="support-sla-icon">⚡</div>
+            <div class="support-sla-content">
+              <h4>30-Min Dispatch SLA</h4>
+              <p>Every inquiry received during operating hours gets a personalized route confirmation within 30 minutes.</p>
+            </div>
+          </div>
+
+          <div class="support-sla-card">
+            <div class="support-sla-icon">📍</div>
+            <div class="support-sla-content">
+              <h4>Live GPS Tracking</h4>
+              <p>Receive an automated SMS with real-time van route tracking when your driver is 15 minutes away.</p>
+            </div>
+          </div>
+
+          <div class="support-sla-card">
+            <div class="support-sla-icon">🛡</div>
+            <div class="support-sla-content">
+              <h4>100% Digital Bag Audit</h4>
+              <p>Each bag is sealed with a serialized tamper-evident barcode at your door, guaranteeing zero item loss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Next Step CTA Banner -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready To Schedule Your First Garment Pickup?</h2>
+          <p>Create an account in 30 seconds to manage scheduled visits, store fabric preferences, and track your clothes in real time.</p>
+          <div class="cta-actions">
+            <a href="signup.html" class="btn btn-primary btn-lg">Create Free Account</a>
+            <a href="signin.html" class="btn btn-secondary btn-lg">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Site Footer (Identical on public pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <img src="../assets/images/logo-dark.png" alt="AuraWash Logo" style="height:40px;">
+          </a>
+          <p>
+            Eco-friendly doorstep laundry, dry cleaning, and fabric care with guaranteed 24-hour turnaround.
+          </p>
+          <div class="footer-contact-mini">
+            <div>📞 (555) 328-9274</div>
+            <div>✉ care@aurawash.com</div>
+            <div>📍 482 Cleanview Blvd, Suite 100</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links-list">
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AuraWash Laundry &amp; Dry Cleaning Services. All rights reserved.</div>
+        <div>Zero Harsh Chemicals &bull; 100% Recyclable Packaging &bull; Cold Ozone Sanitize</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

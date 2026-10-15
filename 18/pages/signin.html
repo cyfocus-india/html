@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Sign in to your Aura Yoga member dashboard to book class slots, manage membership renewal, and track class packs.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-body) 100%);
+    }
+    .auth-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem var(--container-pad);
+      max-width: var(--container-max);
+      width: 100%;
+      margin-inline: auto;
+    }
+    .auth-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 460px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.25rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .auth-view {
+      display: block;
+    }
+    .auth-view.hidden {
+      display: none;
+    }
+    .password-wrap {
+      position: relative;
+    }
+    .password-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    [dir="rtl"] .password-toggle-btn {
+      right: auto;
+      left: 12px;
+    }
+  </style>
+</head>
+<body class="auth-page">
+
+  <!-- Top bar (No header/footer as required) -->
+  <header class="auth-topbar">
+    <a href="../index.html" class="brand-logo" aria-label="Back to Aura Yoga Home 1">
+      <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+      <span class="brand-text">
+        <span class="brand-name">Aura Yoga</span>
+        <span class="brand-sub">Wellness Sanctuary</span>
+      </span>
+    </a>
+
+    <div style="display: flex; gap: 0.75rem;">
+      <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
+      <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <!-- 1. SIGN IN VIEW -->
+      <div id="signin-view" class="auth-view">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <span class="section-badge">Member Portal</span>
+          <h1 style="font-size: 1.85rem; margin-bottom: 0.4rem;">Sign In</h1>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">Access your class bookings and membership details</p>
+        </div>
+
+        <div id="signin-error" class="form-feedback" style="display: none; background: rgba(179, 57, 57, 0.12); color: var(--danger); border: 1px solid var(--danger);" role="alert"></div>
+
+        <form id="signin-form" novalidate>
+          <div class="form-group">
+            <label for="signin-email" class="form-label">Email Address *</label>
+            <input type="email" id="signin-email" class="form-control" placeholder="name@example.com" required>
+            <div class="field-error">Please enter a valid email address</div>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+              <label for="signin-password" class="form-label" style="margin-bottom: 0;">Password *</label>
+              <button type="button" id="open-forgot-btn" style="font-size: 0.82rem; color: var(--primary); text-decoration: underline; background: none; border: none; cursor: pointer;">Forgot password?</button>
+            </div>
+            <div class="password-wrap">
+              <input type="password" id="signin-password" class="form-control" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">&#128065;</button>
+            </div>
+            <div class="field-error">Please enter your password (min 6 characters)</div>
+          </div>
+
+          <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="remember-me" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+            <label for="remember-me" style="font-size: 0.88rem; color: var(--text-secondary); cursor: pointer;">Remember this browser</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Sign In</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-secondary);">
+          Don&rsquo;t have a membership yet? <a href="signup.html" style="color: var(--primary); font-weight: 600;">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- 2. FORGOT PASSWORD VIEW (On same page) -->
+      <div id="forgot-view" class="auth-view hidden">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <span class="section-badge">Account Recovery</span>
+          <h1 style="font-size: 1.85rem; margin-bottom: 0.4rem;">Reset Password</h1>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">Enter your registered email to receive a password reset link.</p>
+        </div>
+
+        <div id="forgot-feedback" class="form-feedback" style="display: none;" role="alert"></div>
+
+        <form id="forgot-form" novalidate>
+          <div class="form-group">
+            <label for="forgot-email" class="form-label">Email Address *</label>
+            <input type="email" id="forgot-email" class="form-control" placeholder="name@example.com" required>
+            <div class="field-error">Please enter a valid email address</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Send Reset Link</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+          <button type="button" id="back-to-signin-btn" class="btn btn-secondary btn-sm">&larr; Back to Sign In</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const signinView = document.getElementById('signin-view');
+      const forgotView = document.getElementById('forgot-view');
+      const openForgotBtn = document.getElementById('open-forgot-btn');
+      const backToSigninBtn = document.getElementById('back-to-signin-btn');
+
+      // Toggle views
+      if (openForgotBtn && backToSigninBtn) {
+        openForgotBtn.addEventListener('click', function () {
+          signinView.classList.add('hidden');
+          forgotView.classList.remove('hidden');
+        });
+        backToSigninBtn.addEventListener('click', function () {
+          forgotView.classList.add('hidden');
+          signinView.classList.remove('hidden');
+        });
+      }
+
+      // Password toggle
+      document.querySelectorAll('.password-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const input = btn.previousElementSibling;
+          if (input.type === 'password') {
+            input.type = 'text';
+            btn.innerHTML = '&#128064;';
+            btn.setAttribute('aria-label', 'Hide password');
+          } else {
+            input.type = 'password';
+            btn.innerHTML = '&#128065;';
+            btn.setAttribute('aria-label', 'Show password');
+          }
+        });
+      });
+
+      // Sign In Form Submission
+      const signinForm = document.getElementById('signin-form');
+      if (signinForm) {
+        signinForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('signin-email');
+          const pass = document.getElementById('signin-password');
+          let valid = true;
+
+          // Clear errors
+          signinForm.querySelectorAll('.form-control').forEach(i => i.classList.remove('error'));
+          signinForm.querySelectorAll('.field-error').forEach(e => e.classList.remove('visible'));
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email || !emailRegex.test(email.value.trim())) {
+            email.classList.add('error');
+            email.parentElement.querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          if (!pass || pass.value.length < 6) {
+            pass.classList.add('error');
+            pass.parentElement.querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          if (valid) {
+            // Save active session
+            const localPart = email.value.split('@')[0];
+            const formattedName = localPart.charAt(0).toUpperCase() + localPart.slice(1);
+            const userSession = {
+              name: formattedName,
+              email: email.value.trim(),
+              loggedInAt: new Date().toISOString()
+            };
+            localStorage.setItem('aura_active_user', JSON.stringify(userSession));
+            window.location.href = 'dashboard.html';
+          }
+        });
+      }
+
+      // Forgot Password Form Submission
+      const forgotForm = document.getElementById('forgot-form');
+      const forgotFeedback = document.getElementById('forgot-feedback');
+      if (forgotForm && forgotFeedback) {
+        forgotForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('forgot-email');
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!email || !emailRegex.test(email.value.trim())) {
+            email.classList.add('error');
+            email.parentElement.querySelector('.field-error').classList.add('visible');
+            return;
+          }
+
+          forgotFeedback.style.display = 'block';
+          forgotFeedback.className = 'form-feedback success';
+          forgotFeedback.textContent = 'A secure password reset link has been dispatched to ' + email.value.trim() + '. Please check your inbox.';
+          forgotForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

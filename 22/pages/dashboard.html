@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Wanderkite Holidays</title>
+  <meta name="description" content="Your Wanderkite traveller dashboard: booking status, itineraries, saved packages, tickets and invoices.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <!-- Apply saved theme & direction before first paint -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="dash-body">
+  <a class="skip-link" href="#dash-main">Skip to content</a>
+
+  <div class="dash">
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Dashboard menu">
+      <a class="brand dash-brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="../assets/images/logo.png" alt="" width="40" height="40">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Traveller</span></span>
+      </a>
+
+      <nav class="dash-nav" aria-label="Dashboard sections">
+        <button class="dash-link" type="button" data-view="overview"><span class="ico" aria-hidden="true">▦</span> Overview</button>
+        <button class="dash-link" type="button" data-view="bookings"><span class="ico" aria-hidden="true">✈</span> My Bookings <span class="pill" data-nav-count="bookings"></span></button>
+        <button class="dash-link" type="button" data-view="itineraries"><span class="ico" aria-hidden="true">⌖</span> Itineraries</button>
+        <button class="dash-link" type="button" data-view="saved"><span class="ico" aria-hidden="true">♡</span> Saved Packages <span class="pill" data-nav-count="saved"></span></button>
+        <button class="dash-link" type="button" data-view="documents"><span class="ico" aria-hidden="true">▤</span> Tickets &amp; Invoices</button>
+      </nav>
+
+      <div class="points-card">
+        <span class="muted-light">Kite Points</span>
+        <strong data-points>0</strong>
+        <span class="muted-light" data-tier>Explorer tier</span>
+        <div class="points-bar"><span data-points-bar></span></div>
+        <a class="link-arrow link-arrow--light" href="contact.html#enquiry">Plan a new trip <span class="flip" aria-hidden="true">→</span></a>
+      </div>
+
+      <button class="dash-link dash-logout" type="button" data-logout><span class="ico" aria-hidden="true">⎋</span> Log Out</button>
+    </aside>
+    <div class="dash-overlay" aria-hidden="true"></div>
+
+    <!-- ============ MAIN ============ -->
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="hamburger dash-burger" type="button" aria-label="Open dashboard menu" aria-controls="dash-sidebar" aria-expanded="false">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+        <div class="dash-heading">
+          <h1 id="view-title">Overview</h1>
+          <p id="view-sub">Your trips at a glance</p>
+        </div>
+        <div class="dash-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+
+          <!-- Notifications -->
+          <div class="pop-wrap">
+            <button class="icon-btn notif-btn" type="button" id="notif-btn" aria-expanded="false" aria-controls="notif-panel" aria-label="Notifications">
+              <span aria-hidden="true">🔔</span><span class="badge" data-notif-badge hidden>0</span>
+            </button>
+            <div class="pop notif-panel" id="notif-panel" hidden>
+              <div class="pop-head">
+                <strong>Notifications</strong>
+                <button class="text-btn" type="button" data-notif-readall>Mark all read</button>
+              </div>
+              <ul class="notif-list" data-notif-list></ul>
+              <div class="pop-foot"><button class="text-btn" type="button" data-notif-clear>Clear all</button></div>
+            </div>
+          </div>
+
+          <!-- User menu -->
+          <div class="pop-wrap">
+            <button class="user-chip" type="button" id="user-btn" aria-expanded="false" aria-controls="user-panel">
+              <span class="avatar" data-user-initials>WK</span>
+              <span class="user-name" data-user-first>Traveller</span>
+              <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="pop user-panel" id="user-panel" hidden>
+              <div class="pop-head pop-head--stack">
+                <strong data-user-name>Traveller</strong>
+                <span class="muted" data-user-email></span>
+              </div>
+              <button class="menu-item" type="button" data-view="profile"><span aria-hidden="true">⚙</span> Profile &amp; Settings</button>
+              <a class="menu-item" href="../index.html"><span aria-hidden="true">⌂</span> Back to website</a>
+              <button class="menu-item" type="button" data-logout><span aria-hidden="true">⎋</span> Log Out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content" id="dash-main" tabindex="-1">
+
+        <!-- ===== OVERVIEW ===== -->
+        <section class="view" data-panel="overview" aria-labelledby="view-title">
+          <div class="next-trip" data-next-trip></div>
+
+          <div class="stat-grid">
+            <div class="stat-card"><span class="ico-tile" aria-hidden="true">🧳</span><div><span class="label">Upcoming trips</span><strong data-stat="upcoming">0</strong><small data-stat-note="upcoming"></small></div></div>
+            <div class="stat-card"><span class="ico-tile" aria-hidden="true">✔</span><div><span class="label">Amount paid</span><strong data-stat="paid">₹0</strong><small data-stat-note="paid"></small></div></div>
+            <div class="stat-card"><span class="ico-tile ico-tile--warn" aria-hidden="true">⏳</span><div><span class="label">Balance due</span><strong data-stat="due">₹0</strong><small data-stat-note="due"></small></div></div>
+            <div class="stat-card"><span class="ico-tile" aria-hidden="true">♡</span><div><span class="label">Saved packages</span><strong data-stat="saved">0</strong><small data-stat-note="saved"></small></div></div>
+          </div>
+
+          <div class="dash-grid">
+            <div class="card">
+              <div class="card-head">
+                <div><h2>Payments by trip</h2><p class="muted">Paid vs. balance for active and past bookings</p></div>
+                <ul class="chart-legend">
+                  <li><span class="sw sw-paid"></span>Paid</li>
+                  <li><span class="sw sw-due"></span>Balance</li>
+                </ul>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="pay-chart" role="img" aria-label="Bar chart of amount paid and balance due for each booking"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head"><div><h2>Payments due</h2><p class="muted">Pay a balance to receive tickets</p></div></div>
+              <ul class="due-list" data-due-list></ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h2>Booking status</h2><p class="muted">All bookings on this account</p></div><button class="text-btn" type="button" data-view="bookings">See all bookings</button></div>
+            <div class="status-bars" data-status-bars></div>
+          </div>
+        </section>
+
+        <!-- ===== BOOKINGS ===== -->
+        <section class="view" data-panel="bookings" hidden aria-labelledby="view-title">
+          <div class="dash-toolbar">
+            <div class="toolbar-fields">
+              <label class="visually-hidden" for="bk-search">Search bookings</label>
+              <input class="input" id="bk-search" type="search" placeholder="Search by trip or booking ID" data-bk-search>
+              <label class="visually-hidden" for="bk-status">Filter by status</label>
+              <select class="select" id="bk-status" data-bk-status>
+                <option value="">All statuses</option>
+                <option>Confirmed</option>
+                <option>Pending Payment</option>
+                <option>Completed</option>
+                <option>Cancelled</option>
+              </select>
+              <label class="visually-hidden" for="bk-type">Filter by trip type</label>
+              <select class="select" id="bk-type" data-bk-type>
+                <option value="">All trip types</option>
+                <option>Domestic</option>
+                <option>International</option>
+                <option>Honeymoon</option>
+                <option>Family</option>
+              </select>
+            </div>
+            <button class="btn" type="button" data-add-booking>+ New Booking</button>
+          </div>
+          <div class="card card--flush">
+            <div class="table-scroll">
+              <table class="dash-table">
+                <thead>
+                  <tr><th scope="col">Booking</th><th scope="col">Dates</th><th scope="col">Travellers</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr>
+                </thead>
+                <tbody data-bk-rows></tbody>
+              </table>
+            </div>
+            <p class="dash-empty" data-bk-empty hidden>No bookings match your filters.</p>
+          </div>
+        </section>
+
+        <!-- ===== ITINERARIES ===== -->
+        <section class="view" data-panel="itineraries" hidden aria-labelledby="view-title">
+          <div class="dash-toolbar itin-toolbar">
+            <div class="toolbar-fields itin-select-group">
+              <label class="field-label" for="it-booking">Trip</label>
+              <select class="select" id="it-booking" data-it-select></select>
+            </div>
+            <div class="toolbar-fields itin-actions">
+              <button class="btn btn--outline" type="button" data-it-download><span aria-hidden="true">⤓</span> <span>Download</span></button>
+              <button class="btn" type="button" data-it-add><span aria-hidden="true">+</span> <span>Add Day</span></button>
+            </div>
+          </div>
+          <div class="card itin-card">
+            <div class="itin-head" data-it-head></div>
+            <ol class="timeline" data-it-list></ol>
+            <p class="dash-empty" data-it-empty hidden>No days planned yet. Use “Add Day” to start this itinerary.</p>
+          </div>
+        </section>
+
+        <!-- ===== SAVED ===== -->
+        <section class="view" data-panel="saved" hidden aria-labelledby="view-title">
+          <div class="dash-toolbar">
+            <div class="toolbar-fields">
+              <label class="visually-hidden" for="sv-search">Search saved packages</label>
+              <input class="input" id="sv-search" type="search" placeholder="Search saved packages" data-sv-search>
+              <label class="visually-hidden" for="sv-type">Filter saved by type</label>
+              <select class="select" id="sv-type" data-sv-type>
+                <option value="">All types</option>
+                <option>Domestic</option>
+                <option>International</option>
+                <option>Honeymoon</option>
+                <option>Family</option>
+              </select>
+            </div>
+          </div>
+          <div class="saved-grid" data-sv-grid></div>
+          <p class="dash-empty card" data-sv-empty hidden>Nothing saved yet. Tap ♡ on any package on our website, or pick one below.</p>
+
+          <h2 class="dash-sub">You might also like</h2>
+          <div class="suggest-grid" data-sv-suggest></div>
+        </section>
+
+        <!-- ===== DOCUMENTS ===== -->
+        <section class="view" data-panel="documents" hidden aria-labelledby="view-title">
+          <div class="dash-toolbar">
+            <div class="chip-group" role="group" aria-label="Filter documents">
+              <button class="chip" type="button" data-doc-filter="" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-doc-filter="E-ticket" aria-pressed="false">E-tickets</button>
+              <button class="chip" type="button" data-doc-filter="Hotel voucher" aria-pressed="false">Hotel vouchers</button>
+              <button class="chip" type="button" data-doc-filter="Invoice" aria-pressed="false">Invoices</button>
+              <button class="chip" type="button" data-doc-filter="Cancellation note" aria-pressed="false">Cancellations</button>
+            </div>
+          </div>
+          <div class="card card--flush">
+            <div class="table-scroll">
+              <table class="dash-table">
+                <thead><tr><th scope="col">Document</th><th scope="col">Trip</th><th scope="col">Issued</th><th scope="col">Amount</th><th scope="col"><span class="visually-hidden">Download</span></th></tr></thead>
+                <tbody data-doc-rows></tbody>
+              </table>
+            </div>
+            <p class="dash-empty" data-doc-empty hidden>No documents of this type yet.</p>
+          </div>
+          <p class="muted doc-note">Tickets and hotel vouchers are issued once a booking is confirmed; invoices are issued for every payment. Files download as printable HTML — open and use your browser's Print → Save as PDF.</p>
+        </section>
+
+        <!-- ===== PROFILE & SETTINGS ===== -->
+        <section class="view" data-panel="profile" hidden aria-labelledby="view-title">
+          <div class="dash-grid dash-grid--even">
+            <form class="card" id="profile-form" novalidate>
+              <h2>Profile</h2>
+              <div class="field">
+                <label for="pf-name">Full name</label>
+                <input class="input" id="pf-name" name="name" type="text" autocomplete="name" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="pf-email">Email</label>
+                <input class="input" id="pf-email" name="email" type="email" autocomplete="email" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="pf-phone">Mobile number</label>
+                <input class="input" id="pf-phone" name="phone" type="tel" autocomplete="tel" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="pf-airport">Usual departure airport</label>
+                <select class="select" id="pf-airport" name="airport">
+                  <option>Bengaluru (BLR)</option><option>Mumbai (BOM)</option><option>Delhi (DEL)</option><option>Chennai (MAA)</option>
+                  <option>Hyderabad (HYD)</option><option>Kolkata (CCU)</option><option>Kochi (COK)</option><option>Ahmedabad (AMD)</option>
+                </select>
+              </div>
+              <button class="btn" type="submit">Save Profile</button>
+            </form>
+
+            <form class="card" id="settings-form">
+              <h2>Settings</h2>
+              <fieldset class="opt-group">
+                <legend>Theme</legend>
+                <label class="check"><input type="radio" name="theme" value="light"> Light</label>
+                <label class="check"><input type="radio" name="theme" value="dark"> Dark</label>
+              </fieldset>
+              <fieldset class="opt-group">
+                <legend>Layout direction</legend>
+                <label class="check"><input type="radio" name="dir" value="ltr"> Left to right</label>
+                <label class="check"><input type="radio" name="dir" value="rtl"> Right to left</label>
+              </fieldset>
+              <fieldset class="opt-group">
+                <legend>Trip updates</legend>
+                <label class="check"><input type="checkbox" name="emailAlerts"> Email me payment reminders and vouchers</label>
+                <label class="check"><input type="checkbox" name="whatsapp"> Send flight and pick-up alerts on WhatsApp</label>
+                <label class="check"><input type="checkbox" name="deals"> Tell me about deals for my saved packages</label>
+              </fieldset>
+              <div class="settings-actions">
+                <button class="btn" type="submit">Save Settings</button>
+                <button class="text-btn danger" type="button" data-reset-demo>Reset demo data</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============ DIALOGS ============ -->
+  <dialog class="modal" id="booking-modal" aria-labelledby="bm-title">
+    <form method="dialog" id="booking-form" novalidate>
+      <div class="modal-head">
+        <h2 id="bm-title">New booking</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <label for="bf-package">Package</label>
+          <select class="select" id="bf-package" name="package" required></select>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="bf-start">Start date</label>
+            <input class="input" id="bf-start" name="start" type="date" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="bf-pax">Travellers</label>
+            <input class="input" id="bf-pax" name="pax" type="number" min="1" max="20" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="bf-amount">Total amount (₹)</label>
+            <input class="input" id="bf-amount" name="amount" type="number" min="1000" max="5000000" required>
+            <span class="hint">Auto-filled from the package price</span>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="bf-paid">Paid so far (₹)</label>
+            <input class="input" id="bf-paid" name="paid" type="number" min="0" max="5000000" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bf-status">Status</label>
+          <select class="select" id="bf-status" name="status">
+            <option>Pending Payment</option>
+            <option>Confirmed</option>
+            <option>Completed</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="text-btn" type="button" data-close>Cancel</button>
+        <button class="btn" type="submit" value="save">Save Booking</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="day-modal" aria-labelledby="dm-title">
+    <form method="dialog" id="day-form" novalidate>
+      <div class="modal-head">
+        <h2 id="dm-title">Add day</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <label for="df-title">Title</label>
+          <input class="input" id="df-title" name="title" type="text" placeholder="e.g. Sunrise at Tegallalang" required>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="df-details">Plan for the day</label>
+          <textarea class="textarea" id="df-details" name="details" required></textarea>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="df-stay">Overnight stay</label>
+          <input class="input" id="df-stay" name="stay" type="text" placeholder="Hotel or camp name">
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="text-btn" type="button" data-close>Cancel</button>
+        <button class="btn" type="submit">Save Day</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal--sm" id="confirm-modal" aria-labelledby="cm-title">
+    <div class="modal-head">
+      <h2 id="cm-title">Are you sure?</h2>
+    </div>
+    <div class="modal-body"><p data-confirm-text></p></div>
+    <div class="modal-foot">
+      <button class="text-btn" type="button" data-confirm-no>Keep it</button>
+      <button class="btn" type="button" data-confirm-yes>Delete</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekend Workshops | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Two-day weekend cooking workshops with a chef and no more than ten students. See dates, the hour-by-hour plan and what you take home.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link is-active" href="workshops.html" aria-current="page">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="ws-title">
+      <div class="page-hero-bg">
+        <img src="../assets/images/hero-workshops-fresh-pasta.jpg" alt="Nests of fresh egg spaghetti dusted with flour on a grey stone counter" width="1600" height="1000">
+      </div>
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="../index.html">Home 1</a></li>
+          <li aria-current="page">Weekend Workshops</li>
+        </ol>
+        <h1 id="ws-title">Weekend Workshops: two days, one skill</h1>
+        <p class="lead">Saturday and Sunday, 10 AM to 4 PM, with one chef and no more than ten students. Long enough to make mistakes, fix them, and leave genuinely good at one thing.</p>
+        <div class="hero-pills"><span>Max 10 students</span><span>12 hours of cooking</span><span>Lunch both days</span><span>From $295</span></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Upcoming workshops ===== -->
+    <section class="section" id="schedule" aria-labelledby="upcoming-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <span class="eyebrow">Upcoming workshops</span>
+            <h2 id="upcoming-title">Autumn and winter dates</h2>
+            <p class="lead">Seven weekends through January. New dates are released three months ahead and usually sell out.</p>
+          </div>
+        </div>
+        <ul class="workshop-list">
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Oct</span><span class="d">24–25</span></div>
+            <img src="../assets/images/workshop-pasta-fresca.jpg" alt="Plate of fresh pappardelle with mushrooms, sage and parmesan" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Pasta Fresca Intensive</h3>
+              <p>Six shapes by hand, from tagliatelle to tortellini, plus four regional sauces.</p>
+              <ul class="class-meta"><li><b>Chef Elena</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Italian</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$345</span>
+              <span class="seat-bar low" role="img" aria-label="8 of 10 seats booked"><i style="width:80%"></i></span>
+              <span class="seats-left low">2 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Pasta Fresca Intensive" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-pasta-fresca&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Nov</span><span class="d">7–8</span></div>
+            <img src="../assets/images/workshop-sourdough.jpg" alt="Sliced loaf of dark seeded sourdough bread on a wooden board" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Sourdough &amp; Wild Fermentation</h3>
+              <p>Build a starter, shape batards and baguettes, and bake in steam-injected deck ovens.</p>
+              <ul class="class-meta"><li><b>Chef Luis</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Baking</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$325</span>
+              <span class="seat-bar" role="img" aria-label="4 of 10 seats booked"><i style="width:40%"></i></span>
+              <span class="seats-left">6 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Sourdough &amp; Wild Fermentation" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                  <option value="3">3 seats</option>
+                  <option value="4">4 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-sourdough&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Nov</span><span class="d">14–15</span></div>
+            <img src="../assets/images/workshop-izakaya.jpg" alt="Slate platter of sushi, sashimi and small Japanese bites" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Japanese Izakaya Weekend</h3>
+              <p>Sashimi cutting, yakitori, gyoza and tempura, with a sake tasting led by a local brewer.</p>
+              <ul class="class-meta"><li><b>Chef Kenji</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Japanese</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$365</span>
+              <span class="seat-bar" role="img" aria-label="6 of 10 seats booked"><i style="width:60%"></i></span>
+              <span class="seats-left">4 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Japanese Izakaya Weekend" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                  <option value="3">3 seats</option>
+                  <option value="4">4 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-izakaya&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Nov</span><span class="d">21–22</span></div>
+            <img src="../assets/images/workshop-holiday-desserts.jpg" alt="Slice of layered sponge cake with cream and fresh raspberries" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Holiday Desserts &amp; Layer Cakes</h3>
+              <p>Genoise, Swiss meringue buttercream and fruit curds, finished as a showpiece cake to take home.</p>
+              <ul class="class-meta"><li><b>Chef Elena</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Pastry</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$335</span>
+              <span class="seat-bar" role="img" aria-label="3 of 10 seats booked"><i style="width:30%"></i></span>
+              <span class="seats-left">7 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Holiday Desserts &amp; Layer Cakes" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                  <option value="3">3 seats</option>
+                  <option value="4">4 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-holiday-desserts&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Dec</span><span class="d">5–6</span></div>
+            <img src="../assets/images/workshop-viennoiserie.jpg" alt="Baking tray of golden pain au chocolat and pastries" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Croissant &amp; Viennoiserie Weekend</h3>
+              <p>Laminate by hand over two days: croissants, pain au chocolat, kouign-amann and danishes.</p>
+              <ul class="class-meta"><li><b>Chef Elena</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>French</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$395</span>
+              <span class="seat-bar low" role="img" aria-label="9 of 10 seats booked"><i style="width:90%"></i></span>
+              <span class="seats-left low">1 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Croissant &amp; Viennoiserie Weekend" data-seat-picker>
+                  <option value="1">1 seat</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-viennoiserie&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Dec</span><span class="d">12–13</span></div>
+            <img src="../assets/images/workshop-thai-curry-paste.jpg" alt="Bowl of Thai red curry with dried chillies scattered on a dark table" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Thai Curry Paste Masterclass</h3>
+              <p>Pound red, green, yellow and massaman pastes from scratch, then cook a curry with each one.</p>
+              <ul class="class-meta"><li><b>Chef Somchai</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Thai</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$335</span>
+              <span class="seat-bar" role="img" aria-label="2 of 10 seats booked"><i style="width:20%"></i></span>
+              <span class="seats-left">8 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Thai Curry Paste Masterclass" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                  <option value="3">3 seats</option>
+                  <option value="4">4 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-thai-curry&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+          <li class="workshop-row reveal">
+            <div class="date-block"><span class="m">Jan</span><span class="d">9–10</span></div>
+            <img src="../assets/images/workshop-fire-steak.jpg" alt="Sliced seared steak and roasted baby potatoes in a cast-iron pan" width="800" height="600" loading="lazy">
+            <div class="workshop-info">
+              <h3>Fire &amp; Steak Weekend</h3>
+              <p>Cast iron, open flame and reverse sear: steaks, chimichurri, fire-roasted vegetables and smoked potatoes.</p>
+              <ul class="class-meta"><li><b>Chef Luis</b></li><li>Sat &amp; Sun · 10 AM–4 PM</li><li>Live fire</li></ul>
+            </div>
+            <div class="workshop-buy">
+              <span class="price">$365</span>
+              <span class="seat-bar" role="img" aria-label="1 of 10 seats booked"><i style="width:10%"></i></span>
+              <span class="seats-left">9 of 10 seats left</span>
+              <div class="workshop-book-group">
+                <select class="select select--sm seat-picker" aria-label="Seats for Fire &amp; Steak Weekend" data-seat-picker>
+                  <option value="1">1 seat</option>
+                  <option value="2">2 seats</option>
+                  <option value="3">3 seats</option>
+                  <option value="4">4 seats</option>
+                </select>
+                <a class="btn btn--sm" href="contact.html?type=workshops&amp;workshop=ws-fire-steak&amp;seats=1" data-book-btn>Reserve</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 3. Hour-by-hour itinerary (tabs) ===== -->
+    <section class="section section--alt" aria-labelledby="itinerary-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">A workshop weekend</span>
+          <h2 id="itinerary-title">Hour by hour</h2>
+          <p class="lead">This is how the Pasta Fresca Intensive runs. Every workshop follows the same rhythm: foundations on Saturday, independence on Sunday.</p>
+        </div>
+        <div data-tabs class="reveal">
+          <div class="tabs-nav" role="tablist" aria-label="Workshop days">
+            <button class="tab-btn" type="button" role="tab" id="tab-sat" aria-controls="panel-sat" aria-selected="true">Saturday</button>
+            <button class="tab-btn" type="button" role="tab" id="tab-sun" aria-controls="panel-sun" aria-selected="false" tabindex="-1">Sunday</button>
+          </div>
+          <div class="tab-panel" id="panel-sat" role="tabpanel" aria-labelledby="tab-sat" tabindex="0">
+            <ol class="schedule">
+              <li><time>9:45 AM</time><div><h3>Coffee and pastries</h3><p>Meet your bench partner and the chef, and set up your station.</p></div></li>
+              <li><time>10:00 AM</time><div><h3>Foundations demo</h3><p>Flours, hydration, and why yolk-heavy dough behaves differently.</p></div></li>
+              <li><time>10:45 AM</time><div><h3>Dough lab</h3><p>Mix, knead and rest three doughs side by side to feel the difference.</p></div></li>
+              <li><time>12:30 PM</time><div><h3>Lunch at the long table</h3><p>A chef-cooked lunch with an optional glass of wine.</p></div></li>
+              <li><time>1:30 PM</time><div><h3>Shaping session</h3><p>Tagliatelle, pappardelle and orecchiette, by hand and by machine.</p></div></li>
+              <li><time>3:15 PM</time><div><h3>Sauce bar</h3><p>Ragù bianco and burro e salvia, matched to the shapes you made.</p></div></li>
+            </ol>
+          </div>
+          <div class="tab-panel" id="panel-sun" role="tabpanel" aria-labelledby="tab-sun" tabindex="0" hidden>
+            <ol class="schedule">
+              <li><time>9:45 AM</time><div><h3>Coffee and recap</h3><p>Review Saturday's notes and questions over coffee.</p></div></li>
+              <li><time>10:00 AM</time><div><h3>Filled pasta</h3><p>Tortellini, ravioli and agnolotti, with three fillings.</p></div></li>
+              <li><time>12:00 PM</time><div><h3>Lunch from your doughs</h3><p>We cook and eat the pasta you shaped on Saturday.</p></div></li>
+              <li><time>1:00 PM</time><div><h3>Solo challenge</h3><p>You plan and cook one plate with no recipe, just what you've learned.</p></div></li>
+              <li><time>3:00 PM</time><div><h3>Chef tasting</h3><p>One-to-one feedback on your plate and your technique.</p></div></li>
+              <li><time>3:45 PM</time><div><h3>Pack up and certificate</h3><p>Collect your kit, workbook and signed certificate.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Workshop vs class comparison ===== -->
+    <section class="section" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Workshop or class?</span>
+          <h2 id="compare-title">How a workshop compares to an evening class</h2>
+          <p class="lead">Both are fully hands-on. The difference is depth, and how much time you get with the chef.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="compare-table">
+            <caption class="visually-hidden">Evening class compared with weekend workshop</caption>
+            <thead>
+              <tr><th scope="col">What you get</th><th scope="col">Evening class</th><th scope="col" class="is-highlight">Weekend workshop</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Cooking time</th><td>3 hours, one evening</td><td class="is-highlight">12 hours over two days</td></tr>
+              <tr><th scope="row">Group size</th><td>Up to 12 students</td><td class="is-highlight">Up to 10 students</td></tr>
+              <tr><th scope="row">Price</th><td>$75–$165 per seat</td><td class="is-highlight">$295–$395 per person</td></tr>
+              <tr><th scope="row">Food</th><td>Dinner of the dishes you cook</td><td class="is-highlight">Lunch both days, plus what you cook</td></tr>
+              <tr><th scope="row">Chef feedback</th><td>Tips at your station</td><td class="is-highlight">One-to-one tasting and review</td></tr>
+              <tr><th scope="row">Best for</th><td>Trying a new cuisine</td><td class="is-highlight">Mastering one skill properly</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. What you take home ===== -->
+    <section class="section section--alt" aria-labelledby="kit-title">
+      <div class="container split">
+        <div class="media-tall reveal">
+          <img src="../assets/images/workshop-take-home-dutch-oven.jpg" alt="Orange enamelled cast-iron Dutch oven on a white kitchen counter" width="900" height="1000" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">What you take home</span>
+          <h2 id="kit-title">More than leftovers</h2>
+          <p class="lead">Every workshop ticket includes a kit chosen for that skill. These are tools you'll actually use again, not souvenirs.</p>
+          <div class="kit-grid">
+            <div class="kit-item"><span class="badge-icon" aria-hidden="true">✂</span><div><h3>Skill kit</h3><p>A pasta cutter and board, a banneton and lame, or a granite mortar, depending on the workshop.</p></div></div>
+            <div class="kit-item"><span class="badge-icon" aria-hidden="true">✎</span><div><h3>Printed workbook</h3><p>Splash-proof, spiral-bound notes with every recipe, ratio and troubleshooting chart.</p></div></div>
+            <div class="kit-item"><span class="badge-icon" aria-hidden="true">★</span><div><h3>Signed certificate</h3><p>A certificate of completion signed by your chef. Frame-worthy, we're told.</p></div></div>
+            <div class="kit-item"><span class="badge-icon" aria-hidden="true">☏</span><div><h3>Follow-up video call</h3><p>15 minutes with your chef within 30 days to troubleshoot what you cook at home.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Call to action ===== -->
+    <section class="section section--tight" aria-labelledby="ws-cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="eyebrow">Bundle and save</span>
+            <h2 id="ws-cta-title">Book two workshops, save $60</h2>
+            <p>Pair any two weekends before March 2027 and we'll take $60 off. Popular pairs: Sourdough with Viennoiserie, and Izakaya with Thai Curry Paste.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--lg" href="#schedule">Reserve a workshop</a>
+            <a class="link-arrow" href="contact.html?topic=workshops">Ask about dates <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="workshops.html">Weekend Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="../index.html#chefs">Chefs</a></li>
+            <li><a href="../index1.html#pricing">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

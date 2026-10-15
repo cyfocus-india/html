@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Create a Lumina Dental patient account to book appointments, track treatments, access prescriptions and manage payment receipts online.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="auth-page">
+
+  <!-- Minimal auth header: logo (links to Home 1) and the theme/direction toggles -->
+  <header class="auth-header">
+    <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+      <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+      <span class="brand-name">
+        <span class="brand-title">Lumina Dental</span>
+        <span class="brand-subtitle">Oral Care Center</span>
+      </span>
+    </a>
+
+    <div class="auth-header-actions">
+      <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+      <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+    </div>
+  </header>
+
+  <main class="auth-main" id="main">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <h1>Create Your Patient Account</h1>
+        <p>Book appointments online, follow your treatment plan and keep every receipt in one place.</p>
+      </div>
+
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="signupName" class="form-label">Full name *</label>
+          <input type="text" id="signupName" class="form-control" placeholder="e.g. Jordan Hayes" autocomplete="name" required aria-describedby="signupNameError">
+          <p class="form-error" id="signupNameError">Please enter your full name.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail" class="form-label">Email address *</label>
+          <input type="email" id="signupEmail" class="form-control" placeholder="jordan.hayes@example.com" autocomplete="email" required aria-describedby="signupEmailError">
+          <p class="form-error" id="signupEmailError">Please enter a valid email address.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword" class="form-label">Password *</label>
+          <div class="input-password-wrapper">
+            <input type="password" id="signupPassword" class="form-control" placeholder="At least 8 characters" autocomplete="new-password" required aria-describedby="signupPasswordHint signupPasswordError">
+            <button type="button" class="password-toggle-btn" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <div class="password-strength" aria-hidden="true">
+            <div class="password-strength-bar" id="passwordStrengthBar"></div>
+          </div>
+          <p class="form-hint" id="signupPasswordHint">Use 8+ characters with a number and a capital letter. <span id="passwordStrengthLabel"></span></p>
+          <p class="form-error" id="signupPasswordError">Password must be at least 8 characters.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="signupConfirmPassword" class="form-label">Confirm password *</label>
+          <div class="input-password-wrapper">
+            <input type="password" id="signupConfirmPassword" class="form-control" placeholder="Re-enter your password" autocomplete="new-password" required aria-describedby="signupConfirmError">
+            <button type="button" class="password-toggle-btn" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <p class="form-error" id="signupConfirmError">Passwords must match.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="signupTerms" required aria-describedby="signupTermsError">
+            <span>I agree to the Notice of Privacy Practices for my patient health information.</span>
+          </label>
+          <p class="form-error" id="signupTermsError">Please accept the Notice of Privacy Practices.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Create Account</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

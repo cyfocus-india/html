@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Lumina Dental patient dashboard: book appointments, view treatment history, access prescriptions and manage payment receipts.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <!-- Apply the saved theme and direction before first paint -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="dashboard-body">
+
+  <!-- ==========================================================
+       Top bar: menu button, logo (links to Home 1), toggles,
+       notifications and profile
+       ========================================================== -->
+  <header class="dash-topbar">
+    <div class="dash-topbar-left">
+      <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Open dashboard menu" aria-expanded="false" aria-controls="dashSidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Patient Portal</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="dash-topbar-right">
+      <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+      <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+
+      <!-- Notifications -->
+      <div class="notif-wrapper">
+        <button type="button" class="notif-bell-btn" id="notifBellBtn" aria-label="Notifications" aria-expanded="false" aria-controls="notifDropdown">
+          <img src="../assets/images/icon-bell.png" alt="" class="icon-img" width="18" height="18">
+          <span class="notif-badge" id="notifBadge" aria-hidden="true">0</span>
+        </button>
+        <div class="notif-dropdown" id="notifDropdown">
+          <div class="notif-header">
+            <h2 class="notif-title">Notifications</h2>
+            <button type="button" class="notif-clear-btn" id="notifClearBtn">Mark all read</button>
+          </div>
+          <ul class="notif-list" id="notifList"></ul>
+        </div>
+      </div>
+
+      <!-- Profile button opens Profile & Settings -->
+      <button type="button" class="user-menu-btn" id="profileBtn" aria-label="Open profile and settings">
+        <img src="../assets/images/avatar-user.png" alt="" class="user-avatar-small" width="32" height="32">
+        <span class="user-name-label" id="topbarUserName">Patient</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+  <div class="dash-layout">
+    <!-- ==========================================================
+         Sidebar: 5 menu items (collapses into a slide-in menu on mobile)
+         ========================================================== -->
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Dashboard menu">
+      <div class="dash-sidebar-mobile-header">
+        <span class="dash-sidebar-mobile-title">Menu</span>
+        <button type="button" class="dash-sidebar-close-btn" id="dashSidebarCloseBtn" aria-label="Close dashboard menu">&#10005;</button>
+      </div>
+
+      <nav aria-label="Dashboard sections">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn active" data-view="viewOverview" aria-current="page">
+              <img src="../assets/images/icon-overview.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+              <span>Overview</span>
+            </button>
+          </li>
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-view="viewAppointments">
+              <img src="../assets/images/icon-calendar.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+              <span>Appointments</span>
+            </button>
+          </li>
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-view="viewTreatments">
+              <img src="../assets/images/icon-tooth.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+              <span>Treatment History</span>
+            </button>
+          </li>
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-view="viewPrescriptions">
+              <img src="../assets/images/icon-rx.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+              <span>Prescriptions</span>
+            </button>
+          </li>
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-view="viewReceipts">
+              <img src="../assets/images/icon-billing.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+              <span>Payment Receipts</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-toggles-row">
+          <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+          <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        </div>
+        <button type="button" class="sidebar-logout-btn" data-action="logout">
+          <img src="../assets/images/icon-logout.png" alt="" class="sidebar-nav-icon" width="18" height="18">
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================================
+         Main content views
+         ========================================================== -->
+    <main class="dash-content" id="main">
+
+      <!-- View 1: Overview -->
+      <section class="dash-view active" id="viewOverview" aria-labelledby="overviewTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="overviewTitle">Welcome back</h1>
+            <p>Your upcoming visits, treatment progress, prescriptions and balance at a glance.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" data-open-booking>+ Book Appointment</button>
+        </div>
+
+        <!-- Summary cards (update automatically with the data) -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-title">Next Visit</span>
+              <span class="metric-icon-wrap"><img src="../assets/images/icon-calendar.png" alt="" class="metric-icon-img" width="22" height="22"></span>
+            </div>
+            <div class="metric-card-body">
+              <span class="metric-value" id="metricNextApt">&ndash;</span>
+              <span class="metric-sub" id="metricNextAptSub">&ndash;</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-title">Treatments Completed</span>
+              <span class="metric-icon-wrap"><img src="../assets/images/icon-tooth.png" alt="" class="metric-icon-img" width="22" height="22"></span>
+            </div>
+            <div class="metric-card-body">
+              <span class="metric-value" id="metricTrtCount">&ndash;</span>
+              <span class="metric-sub" id="metricTrtSub">&ndash;</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-title">Active Prescriptions</span>
+              <span class="metric-icon-wrap"><img src="../assets/images/icon-rx.png" alt="" class="metric-icon-img" width="22" height="22"></span>
+            </div>
+            <div class="metric-card-body">
+              <span class="metric-value" id="metricRxCount">&ndash;</span>
+              <span class="metric-sub" id="metricRxSub">&ndash;</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-title">Balance Due</span>
+              <span class="metric-icon-wrap"><img src="../assets/images/icon-billing.png" alt="" class="metric-icon-img" width="22" height="22"></span>
+            </div>
+            <div class="metric-card-body">
+              <span class="metric-value" id="metricBalance">&ndash;</span>
+              <span class="metric-sub" id="metricBalanceSub">&ndash;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel-grid">
+          <!-- Canvas chart: appointments per month by status -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div>
+                <h2 class="dash-panel-title">Appointment Activity</h2>
+                <p class="dash-panel-sub">Last 4 months and next 2 months</p>
+              </div>
+              <span class="dash-panel-badge" id="chartBadge">0 visits</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="activityChart" class="chart-canvas" role="img" aria-label="Bar chart of appointments per month"></canvas>
+            </div>
+            <ul class="chart-legend" aria-hidden="true">
+              <li><span class="legend-swatch swatch-completed"></span> Completed</li>
+              <li><span class="legend-swatch swatch-upcoming"></span> Upcoming</li>
+              <li><span class="legend-swatch swatch-cancelled"></span> Cancelled</li>
+            </ul>
+            <p class="sr-only" id="chartSummary"></p>
+          </div>
+
+          <!-- Quick actions -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h2 class="dash-panel-title">Quick Actions</h2>
+            </div>
+            <div class="quick-actions-list">
+              <button type="button" class="quick-action-btn" data-go="viewAppointments">
+                <span>Manage appointments</span>
+                <span class="dir-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="quick-action-btn" data-go="viewPrescriptions">
+                <span>Request a prescription refill</span>
+                <span class="dir-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="quick-action-btn" data-go="viewReceipts">
+                <span>Pay or download receipts</span>
+                <span class="dir-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <p class="care-reminder" id="careReminder"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 2: Appointments -->
+      <section class="dash-view" id="viewAppointments" aria-labelledby="aptTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="aptTitle">Appointments</h1>
+            <p>Book a new visit, reschedule or cancel upcoming ones, and remove old records.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" data-open-booking>+ Book Appointment</button>
+        </div>
+
+        <div class="toolbar-bar">
+          <label class="toolbar-search">
+            <img src="../assets/images/icon-search.png" alt="" class="icon-img" width="14" height="14">
+            <span class="sr-only">Search appointments</span>
+            <input type="search" id="aptSearchInput" placeholder="Search appointments">
+          </label>
+          <label class="toolbar-filters">
+            <span class="sr-only">Filter by status</span>
+            <select id="aptFilterSelect" class="filter-select">
+              <option value="all">All appointments</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dash-table-wrap" tabindex="0" role="region" aria-label="Appointments table">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th scope="col">Date &amp; Time</th>
+                <th scope="col">Specialist</th>
+                <th scope="col">Treatment</th>
+                <th scope="col">Notes</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="appointmentsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- View 3: Treatment history -->
+      <section class="dash-view" id="viewTreatments" aria-labelledby="trtTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="trtTitle">Treatment History</h1>
+            <p>Every procedure on your record, with the clinical report from each visit.</p>
+          </div>
+        </div>
+
+        <div class="toolbar-bar">
+          <label class="toolbar-search">
+            <img src="../assets/images/icon-search.png" alt="" class="icon-img" width="14" height="14">
+            <span class="sr-only">Search treatments</span>
+            <input type="search" id="trtSearchInput" placeholder="Search treatments">
+          </label>
+          <label class="toolbar-filters">
+            <span class="sr-only">Filter by category</span>
+            <select id="trtFilterSelect" class="filter-select">
+              <option value="all">All categories</option>
+              <option value="Cleaning">Cleaning &amp; hygiene</option>
+              <option value="Restorative">Fillings &amp; restorations</option>
+              <option value="Endodontics">Root canal</option>
+              <option value="Orthodontics">Orthodontics</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dash-table-wrap" tabindex="0" role="region" aria-label="Treatment history table">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Procedure</th>
+                <th scope="col">Tooth / Area</th>
+                <th scope="col">Doctor</th>
+                <th scope="col">Status</th>
+                <th scope="col">Report</th>
+              </tr>
+            </thead>
+            <tbody id="treatmentsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- View 4: Prescriptions -->
+      <section class="dash-view" id="viewPrescriptions" aria-labelledby="rxTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="rxTitle">Prescriptions</h1>
+            <p>Request refills from your pharmacy and print a copy of any prescription.</p>
+          </div>
+        </div>
+
+        <div class="toolbar-bar">
+          <label class="toolbar-search">
+            <img src="../assets/images/icon-search.png" alt="" class="icon-img" width="14" height="14">
+            <span class="sr-only">Search prescriptions</span>
+            <input type="search" id="rxSearchInput" placeholder="Search prescriptions">
+          </label>
+          <label class="toolbar-filters">
+            <span class="sr-only">Filter by status</span>
+            <select id="rxFilterSelect" class="filter-select">
+              <option value="all">All prescriptions</option>
+              <option value="Active">Active</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dash-table-wrap" tabindex="0" role="region" aria-label="Prescriptions table">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th scope="col">Medication &amp; Directions</th>
+                <th scope="col">Prescribed By</th>
+                <th scope="col">Issued</th>
+                <th scope="col">Refills</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="prescriptionsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- View 5: Payment receipts -->
+      <section class="dash-view" id="viewReceipts" aria-labelledby="recTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="recTitle">Payment Receipts</h1>
+            <p>Itemized statements showing what insurance paid and what you owe.</p>
+          </div>
+        </div>
+
+        <div class="toolbar-bar">
+          <label class="toolbar-search">
+            <img src="../assets/images/icon-search.png" alt="" class="icon-img" width="14" height="14">
+            <span class="sr-only">Search receipts</span>
+            <input type="search" id="recSearchInput" placeholder="Search receipts">
+          </label>
+          <label class="toolbar-filters">
+            <span class="sr-only">Filter by payment status</span>
+            <select id="recFilterSelect" class="filter-select">
+              <option value="all">All statements</option>
+              <option value="Paid">Paid</option>
+              <option value="Pending">Payment due</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dash-table-wrap" tabindex="0" role="region" aria-label="Payment receipts table">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th scope="col">Receipt</th>
+                <th scope="col">Description</th>
+                <th scope="col">Total Fee</th>
+                <th scope="col">Insurance Paid</th>
+                <th scope="col">Your Share</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="receiptsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- View 6: Profile & settings (opened from the profile button) -->
+      <section class="dash-view" id="viewSettings" aria-labelledby="setTitle">
+        <div class="dash-view-header">
+          <div class="dash-view-title">
+            <h1 id="setTitle">Profile &amp; Settings</h1>
+            <p>Keep your contact, insurance and medical details up to date.</p>
+          </div>
+        </div>
+
+        <div class="grid-2 settings-grid">
+          <div class="dash-panel">
+            <h2 class="dash-panel-title">Patient Details</h2>
+            <form id="profileSettingsForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="settName">Full name</label>
+                <input type="text" id="settName" class="form-control" autocomplete="name" required>
+                <p class="form-error">Please enter your full name.</p>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="settEmail">Email</label>
+                  <input type="email" id="settEmail" class="form-control" autocomplete="email" required>
+                  <p class="form-error">Please enter a valid email address.</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="settPhone">Phone</label>
+                  <input type="tel" id="settPhone" class="form-control" autocomplete="tel">
+                  <p class="form-error">Please enter at least 10 digits.</p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="settInsurance">Dental insurance</label>
+                  <input type="text" id="settInsurance" class="form-control" placeholder="Carrier and member ID">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="settBloodGroup">Blood group</label>
+                  <select id="settBloodGroup" class="form-control">
+                    <option value="O+">O positive</option>
+                    <option value="O-">O negative</option>
+                    <option value="A+">A positive</option>
+                    <option value="A-">A negative</option>
+                    <option value="B+">B positive</option>
+                    <option value="B-">B negative</option>
+                    <option value="AB+">AB positive</option>
+                    <option value="AB-">AB negative</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="settAllergies">Allergies or medical alerts</label>
+                <input type="text" id="settAllergies" class="form-control" placeholder="e.g. Penicillin, latex, none">
+              </div>
+              <button type="submit" class="btn btn-primary">Save Profile</button>
+            </form>
+          </div>
+
+          <div class="dash-panel">
+            <h2 class="dash-panel-title">Password</h2>
+            <form id="securityPasswordForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="currentPw">Current password</label>
+                <input type="password" id="currentPw" class="form-control" autocomplete="current-password" required>
+                <p class="form-error">Please enter your current password.</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="newPw">New password</label>
+                <input type="password" id="newPw" class="form-control" autocomplete="new-password" required>
+                <p class="form-error">New password must be at least 8 characters.</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="confirmNewPw">Confirm new password</label>
+                <input type="password" id="confirmNewPw" class="form-control" autocomplete="new-password" required>
+                <p class="form-error">Passwords do not match.</p>
+              </div>
+              <button type="submit" class="btn btn-outline">Update Password</button>
+            </form>
+
+            <div class="prefs-block">
+              <h3 class="prefs-title">Reminders</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" id="prefSms"> Text me 24 hours before each appointment
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="prefEmail"> Email me receipts and treatment reports
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==========================================================
+       Dialogs
+       ========================================================== -->
+
+  <!-- Book appointment -->
+  <div class="modal-backdrop" id="bookModal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="bookModalTitle">
+      <div class="modal-header">
+        <h2 id="bookModalTitle">Book an Appointment</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <form id="bookAppointmentForm" novalidate>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="bookDoctor">Specialist *</label>
+            <select id="bookDoctor" class="form-control" required>
+              <option value="Dr. Sarah Lin" data-specialty="Orthodontics">Dr. Sarah Lin (Orthodontics)</option>
+              <option value="Dr. Marcus Vance" data-specialty="Oral Surgery">Dr. Marcus Vance (Oral Surgery)</option>
+              <option value="Dr. Elena Rostova" data-specialty="Cosmetic &amp; Restorative">Dr. Elena Rostova (Cosmetic &amp; Restorative)</option>
+              <option value="Dr. Julian Chen" data-specialty="Pediatric Dentistry">Dr. Julian Chen (Pediatric)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookTreatment">Treatment *</label>
+            <select id="bookTreatment" class="form-control" required>
+              <option value="Cleaning &amp; Check-Up">Cleaning &amp; check-up ($95)</option>
+              <option value="Comprehensive Exam">Comprehensive exam &amp; X-rays ($120)</option>
+              <option value="Tooth-Colored Filling">Tooth-colored filling ($140 / surface)</option>
+              <option value="Aligner Progress Check">Aligner progress check</option>
+              <option value="Root Canal Consultation">Root canal consultation</option>
+              <option value="Implant Consultation">Implant consultation</option>
+              <option value="Emergency Visit">Emergency visit (pain or swelling)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bookDate">Date *</label>
+              <input type="date" id="bookDate" class="form-control" required>
+              <p class="form-error">Please choose a weekday or Saturday from tomorrow onwards.</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bookTime">Time *</label>
+              <select id="bookTime" class="form-control" required>
+                <option value="08:30 AM">8:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="02:00 PM">2:00 PM</option>
+                <option value="03:30 PM">3:30 PM</option>
+                <option value="05:00 PM">5:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookNotes">Notes for the dentist</label>
+            <textarea id="bookNotes" class="form-control" maxlength="240" placeholder="Any pain, sensitivity or questions"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reschedule appointment -->
+  <div class="modal-backdrop" id="rescheduleModal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="rescheduleModalTitle">
+      <div class="modal-header">
+        <h2 id="rescheduleModalTitle">Reschedule Appointment</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <form id="rescheduleForm" novalidate>
+        <div class="modal-body">
+          <p class="modal-context" id="rescheduleDoctorText"></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="rescheduleDate">New date *</label>
+              <input type="date" id="rescheduleDate" class="form-control" required>
+              <p class="form-error">Please choose a weekday or Saturday from tomorrow onwards.</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rescheduleTime">New time *</label>
+              <select id="rescheduleTime" class="form-control" required>
+                <option value="08:30 AM">8:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="02:00 PM">2:00 PM</option>
+                <option value="03:30 PM">3:30 PM</option>
+                <option value="05:00 PM">5:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save New Time</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Treatment report -->
+  <div class="modal-backdrop" id="treatmentReportModal">
+    <div class="modal-box modal-lg" role="dialog" aria-modal="true" aria-labelledby="reportModalTitle">
+      <div class="modal-header">
+        <h2 id="reportModalTitle">Clinical Report</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body printable">
+        <div class="slip-clinic-header">
+          <div>
+            <p class="slip-heading" id="reportTrtName"></p>
+            <p class="slip-subtext">Lumina Dental &amp; Oral Care Center</p>
+          </div>
+          <p class="slip-meta"><strong>Date:</strong> <span id="reportTrtDate"></span></p>
+        </div>
+        <div class="slip-patient-info">
+          <div><strong>Patient:</strong> <span id="reportPatient"></span></div>
+          <div><strong>Tooth / area:</strong> <span id="reportTrtTooth"></span></div>
+          <div><strong>Doctor:</strong> <span id="reportTrtDoctor"></span></div>
+          <div><strong>Status:</strong> <span id="reportTrtStatus"></span></div>
+        </div>
+        <h3 class="slip-section-title">Notes &amp; Findings</h3>
+        <p id="reportTrtNotes"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-print>
+          <img src="../assets/images/icon-print.png" alt="" class="icon-img" width="16" height="16"> Print Report
+        </button>
+        <button type="button" class="btn btn-primary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prescription slip -->
+  <div class="modal-backdrop" id="rxSlipModal">
+    <div class="modal-box modal-lg" role="dialog" aria-modal="true" aria-labelledby="rxModalTitle">
+      <div class="modal-header">
+        <h2 id="rxModalTitle">Prescription</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body printable">
+        <div class="rx-slip-box">
+          <div class="slip-clinic-header">
+            <div>
+              <p class="slip-heading" id="slipRxDoctor"></p>
+              <p class="slip-subtext">Lumina Dental &middot; 450 Medical Plaza Way, San Francisco</p>
+            </div>
+            <p class="slip-meta"><strong>Issued:</strong> <span id="slipRxDate"></span><br><small id="slipRxRef"></small></p>
+          </div>
+          <div class="slip-patient-info">
+            <div><strong>Patient:</strong> <span id="slipRxPatient"></span></div>
+            <div><strong>Status:</strong> <span id="slipRxStatus"></span></div>
+          </div>
+          <div class="rx-drug-box">
+            <p class="rx-drug-name" id="slipRxDrug"></p>
+            <p class="rx-drug-directions" id="slipRxInstructions"></p>
+            <p class="rx-drug-refills">Refills remaining: <span id="slipRxRefills"></span></p>
+          </div>
+          <div class="slip-signature-row">
+            <small>Valid at licensed pharmacies in California</small>
+            <span class="slip-signature">Electronically signed</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Close</button>
+        <button type="button" class="btn btn-primary" data-print>
+          <img src="../assets/images/icon-print.png" alt="" class="icon-img icon-on-primary" width="16" height="16"> Print Prescription
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment receipt -->
+  <div class="modal-backdrop" id="receiptSlipModal">
+    <div class="modal-box modal-lg" role="dialog" aria-modal="true" aria-labelledby="receiptModalTitle">
+      <div class="modal-header">
+        <h2 id="receiptModalTitle">Payment Receipt</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body printable">
+        <div class="receipt-slip-box">
+          <div class="slip-clinic-header">
+            <div>
+              <p class="slip-heading">Lumina Dental &amp; Oral Care Center</p>
+              <p class="slip-subtext">450 Medical Plaza Way, Suite 300, San Francisco, CA 94102</p>
+            </div>
+            <p class="slip-meta"><strong id="slipRecNumber"></strong><br><small id="slipRecDate"></small></p>
+          </div>
+          <div class="slip-patient-info">
+            <div><strong>Patient:</strong> <span id="slipRecPatient"></span></div>
+            <div><strong>Insurance:</strong> <span id="slipRecInsurance"></span></div>
+            <div><strong>Status:</strong> <span id="slipRecStatus" class="badge-status"></span></div>
+            <div><strong>Paid with:</strong> <span id="slipRecMethod"></span></div>
+          </div>
+          <table class="slip-itemized-table">
+            <thead>
+              <tr>
+                <th scope="col">Description</th>
+                <th scope="col" class="num">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="slipRecDesc"></td>
+                <td class="num" id="slipRecTotal"></td>
+              </tr>
+              <tr>
+                <td class="text-success">Insurance payment</td>
+                <td class="num text-success" id="slipRecInsCovered"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="slip-totals-row">
+            <span id="slipRecTotalLabel">Your share:</span>
+            <span class="slip-total-amount" id="slipRecPaid"></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Close</button>
+        <button type="button" class="btn btn-primary" data-print>
+          <img src="../assets/images/icon-print.png" alt="" class="icon-img icon-on-primary" width="16" height="16"> Print Receipt
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm dialog (replaces browser confirm boxes) -->
+  <div class="modal-backdrop" id="confirmModal">
+    <div class="modal-box modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMessage">
+      <div class="modal-header">
+        <h2 id="confirmTitle">Are you sure?</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Keep It</button>
+        <button type="button" class="btn btn-primary" id="confirmOkBtn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast messages -->
+  <div class="toast-container" id="toastContainer" role="status" aria-live="polite"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

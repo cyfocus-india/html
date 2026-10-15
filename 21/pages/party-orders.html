@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Orders - Scoop & Swirl</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       Site Header (Sticky Navigation)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+        <span class="logo-text">
+          <span class="logo-title">Scoop & Swirl</span>
+          <span class="logo-tagline">Artisan Parlour</span>
+        </span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Wrapper -->
+      <div class="nav-menu-wrapper" id="navDrawer">
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <!-- Home Dropdown (Accordion on Mobile) -->
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Home <span class="dropdown-arrow">▾</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="../index.html" class="dropdown-item">Home 1</a></li>
+                <li><a href="../index1.html" class="dropdown-item">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+            <li class="nav-item"><a href="party-orders.html" class="nav-link active">Party Orders</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Drawer Bottom Controls for Mobile Screens -->
+        <div class="mobile-drawer-bottom">
+          <div class="mobile-controls-row">
+            <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+          </div>
+          <a href="menu.html" class="btn btn-primary">Order Online</a>
+        </div>
+      </div>
+
+      <!-- Header Desktop Controls -->
+      <div class="header-actions">
+        <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+        <a href="menu.html" class="btn btn-primary">Order Online</a>
+        <!-- CSS Animated Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Background Overlay -->
+  <div class="mobile-nav-overlay" id="navOverlay"></div>
+
+  <!-- ======================================================================
+       Page Hero Section (with Hero Image)
+       ====================================================================== -->
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div>
+        <span class="section-tag">Catering &amp; Events</span>
+        <h1 class="hero-title" style="font-size: 2.85rem;">
+          Celebration Catering &amp; <span class="hero-title-highlight">Party Orders</span>
+        </h1>
+        <p class="hero-lead">
+          Make weddings, corporate parties, birthdays, and school events unforgettable with our vintage mobile scoop carts, full sundae bars, and bulk hand-packed pint deliveries.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#catering-packages" class="btn btn-primary">Catering Packages</a>
+          <a href="#party-calculator" class="btn btn-secondary">Instant Price Calculator</a>
+        </div>
+      </div>
+      <div class="page-hero-image">
+        <img src="../assets/images/hero-party.jpg" alt="Vintage ice cream cart with a striped umbrella for an outdoor party" width="600" height="340">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 1: Event Catering Packages (3-Tier Comparison)
+       ====================================================================== -->
+  <section class="section" id="catering-packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tailored Service</span>
+        <h2 class="section-title">Event Catering Packages</h2>
+        <p class="section-subtitle">
+          Every package includes our signature slow-churned flavours, compostable tableware, and hassle-free setup and cleanup handled completely by our parlour crew.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Package 1 -->
+        <div class="card pricing-package-card">
+          <h3 class="package-name">Pop-Up Sundae Bar</h3>
+          <p class="package-desc">
+            Self-serve interactive station with thermal ice wells and full toppings bar for relaxed celebrations.
+          </p>
+          <div class="package-price-wrap">
+            <span class="package-rate">$12</span>
+            <span class="package-unit">/ person (min 25 guests)</span>
+          </div>
+          <ul class="package-features">
+            <li>4 Artisanal flavour selections</li>
+            <li>8 Gourmet toppings &amp; warm sauces</li>
+            <li>Compostable bowls, napkins &amp; wooden spoons</li>
+            <li>Insulated tabletop display equipment</li>
+            <li>2 Hours of setup &amp; maintenance support</li>
+          </ul>
+          <a href="#party-calculator" class="btn btn-secondary">Calculate &amp; Book</a>
+        </div>
+
+        <!-- Package 2 (Featured) -->
+        <div class="card pricing-package-card featured">
+          <div class="featured-ribbon">Most Popular Choice</div>
+          <h3 class="package-name">Vintage Scoop Cart</h3>
+          <p class="package-desc">
+            Our illuminated mobile umbrella ice cream cart with uniformed master scooper servers.
+          </p>
+          <div class="package-price-wrap">
+            <span class="package-rate">$16</span>
+            <span class="package-unit">/ person (min 50 guests)</span>
+          </div>
+          <ul class="package-features">
+            <li>6 Signature &amp; seasonal flavours</li>
+            <li>Fresh-baked artisan waffle cones &amp; cups</li>
+            <li>1–2 Uniformed professional scoop servers</li>
+            <li>Custom hand-lettered chalkboard menu</li>
+            <li>3 Hours of live event scoop service</li>
+            <li>Zero electricity needed (sub-zero chill plates)</li>
+          </ul>
+          <a href="#party-calculator" class="btn btn-primary">Calculate &amp; Book</a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="card pricing-package-card">
+          <h3 class="package-name">Deluxe Dessert Lounge</h3>
+          <p class="package-desc">
+            The ultimate gala &amp; wedding experience: mobile cart, cake cutting, and hand-spun milkshakes.
+          </p>
+          <div class="package-price-wrap">
+            <span class="package-rate">$22</span>
+            <span class="package-unit">/ person (min 75 guests)</span>
+          </div>
+          <ul class="package-features">
+            <li>Unlimited scoops from 8 custom flavours</li>
+            <li>Full hot Belgian chocolate fountain display</li>
+            <li>Hand-spun mini milkshake shooters</li>
+            <li>Gelato celebration cake cutting service</li>
+            <li>3 Dedicated parlour staff for 4 hours</li>
+            <li>Take-home souvenir pint for the host</li>
+          </ul>
+          <a href="#party-calculator" class="btn btn-secondary">Calculate &amp; Book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 2: Bulk Pints & Corporate Office Gifting
+       ====================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Volume Orders</span>
+        <h2 class="section-title">Bulk Pints &amp; Corporate Gifting</h2>
+        <p class="section-subtitle">
+          Reward your company team or stock office freezers with custom hand-packed pints delivered on dry ice.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card" style="text-align: center; padding: 2.25rem 1.5rem;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">15% Off</div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">10 – 25 Pints</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Perfect for department milestones, Friday socials, and family dinner parties.
+          </p>
+          <span class="badge badge-primary">$8.90 per pint</span>
+        </div>
+
+        <div class="card" style="text-align: center; padding: 2.25rem 1.5rem;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">20% Off</div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">26 – 50 Pints</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Ideal for mid-sized corporate celebrations, team offsites, and school faculty days.
+          </p>
+          <span class="badge badge-amber">$8.40 per pint</span>
+        </div>
+
+        <div class="card" style="text-align: center; padding: 2.25rem 1.5rem; border: 2px solid var(--accent-mint);">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--accent-mint); margin-bottom: 0.5rem;">25% Off</div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">51+ Pints</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Includes custom branded logo stickers on pint lids and complimentary dry-ice coolers.
+          </p>
+          <span class="badge badge-mint">$7.85 per pint</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 3: How Party Booking Works (4-Step Timeline)
+       ====================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple Process</span>
+        <h2 class="section-title">How Event Booking Works</h2>
+        <p class="section-subtitle">
+          From first flavor tasting to event day cleanup, our events manager coordinates every single detail seamlessly.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <h4>Submit Date &amp; Details</h4>
+          <p>
+            Use our instant calculator below or submit an inquiry with your expected guest count and event location.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <h4>Complimentary Tasting</h4>
+          <p>
+            For events with 50+ guests, visit our parlour for a private tasting flight to finalize your custom event menu.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <h4>Full White-Glove Setup</h4>
+          <p>
+            Our team arrives 60 minutes prior to guest arrival with our vintage cart or display bars fully chilled and ready.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">4</div>
+          <h4>Effortless Celebration</h4>
+          <p>
+            Your guests enjoy unlimited scoops and sundaes. We handle all cleanup, waste sorting, and pack leftovers for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 4: Interactive Party Calculator & Booking Form
+       ====================================================================== -->
+  <section class="section section-alt" id="party-calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Instant Quote</span>
+        <h2 class="section-title">Party Cost Estimator &amp; Inquiry</h2>
+        <p class="section-subtitle">
+          Adjust guest counts, select your package, and check optional add-ons to see an instant real-time price estimate.
+        </p>
+      </div>
+
+      <div class="party-calc-card">
+        <div class="calc-grid">
+          <!-- Left: Interactive Controls -->
+          <div>
+            <!-- Guest Count Slider -->
+            <div class="calc-form-group">
+              <label class="calc-label" for="calcGuests">Estimated Number of Guests</label>
+              <div class="calc-slider-wrap">
+                <input type="range" id="calcGuests" class="calc-range" min="25" max="300" step="5" value="75">
+                <span class="calc-count-badge" id="calcGuestCount">75 Guests</span>
+              </div>
+              <small style="color: var(--text-muted); display: block; margin-top: 0.35rem;">
+                * 10% automatic volume discount applied on events with 150+ guests.
+              </small>
+            </div>
+
+            <!-- Package Selection Radio Cards -->
+            <div class="calc-form-group">
+              <label class="calc-label">Choose Catering Package</label>
+              <div class="calc-radio-group">
+                <div class="calc-radio-card">
+                  <input type="radio" name="cateringPkg" value="12" id="pkg1">
+                  <div><strong>Sundae Bar</strong></div>
+                  <small>$12 / person</small>
+                </div>
+                <div class="calc-radio-card active">
+                  <input type="radio" name="cateringPkg" value="16" id="pkg2" checked>
+                  <div><strong>Scoop Cart</strong></div>
+                  <small>$16 / person</small>
+                </div>
+                <div class="calc-radio-card">
+                  <input type="radio" name="cateringPkg" value="22" id="pkg3">
+                  <div><strong>Deluxe Lounge</strong></div>
+                  <small>$22 / person</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div class="calc-form-group">
+              <label class="calc-label">Optional Sweet Add-Ons</label>
+              <div class="calc-addons-wrap">
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" class="calc-addon-input" value="2.00">
+                  <span>Fresh Waffle Cone Bar (+$2.00 / guest)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" class="calc-addon-input" value="1.50">
+                  <span>Warm Belgian Chocolate Fondue Fountain (+$1.50 / guest)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" class="calc-addon-input" value="1.00">
+                  <span>Custom Printed Cups &amp; Napkins with Logo (+$1.00 / guest)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Calculator Output Box -->
+          <div>
+            <div class="calc-result-box">
+              <div class="calc-total-label">Estimated Catering Total</div>
+              <div class="calc-total-price" id="calcTotalCost">$1,200</div>
+              <div class="calc-total-note" id="calcCostPerPerson">~$16.00 / guest</div>
+              <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Includes cart transportation up to 25 miles, certified server staff, and compostable tableware.
+              </p>
+              <a href="#inquiry-form-section" class="btn btn-primary" style="width: 100%;">Proceed to Inquiry Form</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inquiry Form Embedded -->
+        <div id="inquiry-form-section" style="margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border-color);">
+          <h3 style="font-size: 1.45rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-main);">
+            Reserve Your Date &amp; Request Official Quote
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+            Fill out your celebration details. Our events coordinator will reply within 24 hours with exact date availability and custom proposals.
+          </p>
+
+          <div id="partySuccessMsg" class="form-success-alert">
+            <strong>Request Received!</strong> Thank you for choosing Scoop &amp; Swirl. Our events team will reach out within 24 hours to confirm date availability and schedule your complimentary tasting.
+          </div>
+
+          <form id="partyQuoteForm">
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="partyName">Your Full Name</label>
+                <input type="text" id="partyName" class="form-control" placeholder="e.g. Rachel Adams" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="partyEmail">Email Address</label>
+                <input type="email" id="partyEmail" class="form-control" placeholder="e.g. rachel@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="partyPhone">Phone Number</label>
+                <input type="tel" id="partyPhone" class="form-control" placeholder="e.g. (555) 726-6700" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="partyDate">Event Date</label>
+                <input type="date" id="partyDate" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="partyEventType">Celebration Type</label>
+              <select id="partyEventType" class="form-control">
+                <option value="wedding">Wedding / Reception</option>
+                <option value="corporate">Corporate Party / Company Picnic</option>
+                <option value="birthday">Birthday Party / Anniversary</option>
+                <option value="school">School Festival / Fundraiser</option>
+                <option value="other">Private Dinner / Other Event</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="partyNotes">Event Location, Special Requests &amp; Flavor Preferences</label>
+              <textarea id="partyNotes" class="form-control" rows="3" placeholder="Tell us about the venue, outdoor vs indoor setup, dietary allergies, or favorite flavors..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Submit Catering Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 5: Final Next-Step CTA Banner
+       ====================================================================== -->
+  <div class="container">
+    <section class="cta-banner">
+      <h2 class="cta-banner-title">Need an Urgent Booking or Custom Setup?</h2>
+      <p class="cta-banner-desc">
+        Planning an event this weekend? Call our catering hotline directly at (555) 726-6737 or email catering@scoopandswirl.com for expedited booking.
+      </p>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Contact Event Team</a>
+        <a href="menu.html" class="btn btn-secondary btn-lg">View Flavors Menu</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================================
+       Site Footer (Identical Across All Pages)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+            <span class="logo-text">
+              <span class="logo-title">Scoop & Swirl</span>
+              <span class="logo-tagline">Artisan Parlour</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Handcrafted small-batch ice creams, towering waffle sundaes, thick shakes, and celebration gelato cakes made fresh daily.
+          </p>
+        </div>
+
+        <!-- Links Group 1: Home -->
+        <div>
+          <h4 class="footer-group-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 2: Parlour -->
+        <div>
+          <h4 class="footer-group-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="offers.html" class="footer-link">Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 3: Orders -->
+        <div>
+          <h4 class="footer-group-title">Orders</h4>
+          <ul class="footer-links-list">
+            <li><a href="party-orders.html" class="footer-link">Party Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Scoop &amp; Swirl Parlour. All rights reserved.
+        </div>
+        <div>
+          Hours: Monday – Sunday: 11:00 AM – 11:00 PM
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

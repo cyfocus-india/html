@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 - AuraWash Laundry &amp; Dry Cleaning</title>
+  <meta name="description" content="Calculate your laundry load, discover our eco-friendly fabric care programs, and set up recurring wardrobe laundry with AuraWash.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="AuraWash Home">
+        <img src="assets/images/logo.png" alt="AuraWash Laundry &amp; Dry Cleaning Logo" class="site-logo-img">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            Home <span class="caret-arrow" aria-hidden="true"></span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1</a>
+            <a href="index1.html" class="dropdown-item active">Home 2</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="pages/services.html" class="nav-link">Services</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+        </div>
+
+        <!-- Mobile & Tablet Drawer Actions -->
+        <div class="nav-mobile-actions">
+          <a href="pages/signin.html" class="btn btn-primary nav-mobile-signin">Sign In</a>
+          <div class="nav-mobile-toggles">
+            <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+            <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action Buttons & Toggles -->
+      <div class="header-actions">
+        <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+        <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        <a href="pages/signin.html" class="btn btn-primary">Sign In</a>
+
+        <!-- Hamburger Menu Button for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO SECTION: Modern Layout with Hero Image and Interactive Estimator -->
+    <section class="hero-h2">
+      <div class="container">
+        <div class="hero-header-h2">
+          <div class="badge">✦ Tailored Garment Engineering</div>
+          <h1>Smarter Wardrobe Care Built Around Your Schedule</h1>
+          <p class="hero-subtitle">
+            From bespoke suits to bulky down duvets, calculate your load in seconds and experience museum-grade fabric cleaning delivered straight to your door.
+          </p>
+        </div>
+
+        <div class="hero-split-h2">
+          <!-- Hero Image Showcase with Badges -->
+          <div class="hero-media-box-h2">
+            <img src="assets/images/hero-home2.jpg" alt="Modern clean laundry care facility with crisp garments and precision equipment">
+            <div class="hero-floating-badges-h2">
+              <div class="hero-badge-pill">★ 4.9/5 Rating</div>
+              <div class="hero-badge-pill">📦 50,000+ Loads Cleaned</div>
+              <div class="hero-badge-pill">⚡ 99.8% On-Time Delivery</div>
+            </div>
+          </div>
+
+          <!-- Instant Interactive Laundry Load Estimator Card -->
+          <div class="estimator-card">
+            <div class="estimator-header">
+              <h3>Instant Laundry Load Estimator</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Adjust weight to preview turnaround and cost</p>
+            </div>
+
+            <div class="estimator-control-group">
+              <div class="estimator-label">
+                <span>Estimated Laundry Weight</span>
+                <strong id="loadWeightVal" style="color: var(--brand-primary); font-size: 1.05rem;">20 lbs</strong>
+              </div>
+              <input type="range" id="loadWeightRange" class="estimator-range" min="10" max="60" value="20" step="5">
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); margin-top:4px;">
+                <span>10 lbs (1 bag)</span>
+                <span>35 lbs (Family)</span>
+                <span>60 lbs (Bulk)</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 0.75rem;">
+              <label class="form-label">Select Treatment Level</label>
+              <div class="estimator-toggles">
+                <button type="button" class="est-toggle-btn is-selected" data-service="wash-fold">Wash &amp; Fold ($1.95/lb)</button>
+                <button type="button" class="est-toggle-btn" data-service="wash-iron">Wash + Press ($2.75/lb)</button>
+              </div>
+            </div>
+
+            <div class="estimator-summary-box">
+              <div class="est-summary-left">
+                <div class="est-price-label">ESTIMATED TOTAL</div>
+                <div class="est-price-val" id="estTotalPrice">$39.00</div>
+              </div>
+              <div class="est-summary-right">
+                <span class="speed-tag" id="estTurnaroundTime">24 Hours Turnaround</span>
+              </div>
+            </div>
+
+            <a href="pages/contact.html?service=Custom%20Order%20Estimate" id="bookHome2EstimateBtn" class="btn btn-primary" style="width: 100%;">Book This Estimated Load</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Garment Care by Wardrobe Category -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Wardrobe Specialization</div>
+          <h2>Specialized Cleaning Protocols by Garment Type</h2>
+          <p>Different fabrics require specialized care. We never mix delicates with heavy cottons or use one-size-fits-all cycles.</p>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-suits.jpg" alt="Tailored executive suits and blazers" class="cat-img">
+            </div>
+            <h3>Executive Suits &amp; Blazers</h3>
+            <p>Non-aggressive hydrocarbon dry cleaning, shoulder-pad preservation, hand cuff steaming, and cedar hanger presentation.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Lapel roll retention</li>
+              <li><span>✓</span> Pocket lining sanitization</li>
+              <li><span>✓</span> Complimentary button reinforcement</li>
+            </ul>
+          </div>
+
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-linens.jpg" alt="Fresh clean bedding linens and down comforters" class="cat-img">
+            </div>
+            <h3>Comforters, Linens &amp; Quilts</h3>
+            <p>Oversized industrial wash drums ensure deep extraction of dust mites, body oils, and allergens with zero clumping.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Hypoallergenic down-plumping</li>
+              <li><span>✓</span> Antimicrobial ozone treatment</li>
+              <li><span>✓</span> Compact breathable storage bags</li>
+            </ul>
+          </div>
+
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-silk.jpg" alt="Delicate silk, cashmere and evening fabrics" class="cat-img">
+            </div>
+            <h3>Silk, Cashmere &amp; Evening Wear</h3>
+            <p>Gentle micro-tumble cycles with pH-neutral plant enzymes that preserve fiber sheen, embroidery, and vibrant color dyes.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Hand spot testing</li>
+              <li><span>✓</span> Zero fabric shrinkage guarantee</li>
+              <li><span>✓</span> Acid-free tissue paper packaging</li>
+            </ul>
+          </div>
+
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-curtains.jpg" alt="Floor-to-ceiling clean drapes and curtains" class="cat-img">
+            </div>
+            <h3>Window Drapery &amp; Curtains</h3>
+            <p>Complete curtain rejuvenation removing smoke, airborne dust, and sunlight grime with precision pleat re-steaming.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Heavy blackout panel care</li>
+              <li><span>✓</span> Weighted bottom hem pressing</li>
+              <li><span>✓</span> Anti-static fiber conditioning</li>
+            </ul>
+          </div>
+
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-outerwear.jpg" alt="Winter wool coats and outerwear jackets" class="cat-img">
+            </div>
+            <h3>Winter Outerwear &amp; Wool Coats</h3>
+            <p>Water-repellent restoration, fur trim conditioning, and heavy thermal insulation fluffing for long-lasting warmth.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Down loft rejuvenation</li>
+              <li><span>✓</span> Waterproof membrane safe</li>
+              <li><span>✓</span> Metal hardware polishing</li>
+            </ul>
+          </div>
+
+          <div class="category-card">
+            <div class="cat-img-wrap">
+              <img src="assets/images/cat-activewear.jpg" alt="Technical athletic performance sportswear" class="cat-img">
+            </div>
+            <h3>Athletic &amp; High-Performance Gear</h3>
+            <p>Deep sweat odor neutralization for technical synthetics, elastane, and moisture-wicking activewear without damaging stretch.</p>
+            <ul class="cat-features-list">
+              <li><span>✓</span> Zero fabric softener coating</li>
+              <li><span>✓</span> Microscopic salt removal</li>
+              <li><span>✓</span> Elasticity retention cycle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Eco-Clean Sustainability Impact Meter -->
+    <section class="section">
+      <div class="container">
+        <div class="impact-showcase">
+          <div>
+            <div class="badge">Environmental Responsibility</div>
+            <h2>Cleaner Clothes, Greener Neighborhoods</h2>
+            <p style="margin-bottom: 1.5rem;">
+              Traditional dry cleaners rely on chlorinated solvents that seep into groundwater and emit toxic VOCs. AuraWash combines advanced ozone wash chemistry and electric fleet routing to minimize our ecological footprint.
+            </p>
+            <div style="background-color:var(--bg-secondary); border-radius:var(--radius-md); padding:1.5rem; border:1px solid var(--border-color);">
+              <h4 style="margin-bottom:0.5rem; color:var(--text-primary);">The AuraWash Zero-Waste Pledge</h4>
+              <p style="font-size:0.9rem;">
+                Every client receives reusable woven hampers upon sign up, eliminating single-use plastic wrap completely. Returned wire hangers are recycled through our circular steel program.
+              </p>
+            </div>
+          </div>
+
+          <div class="impact-stats-list">
+            <div class="impact-stat-item">
+              <div class="impact-metric">14 Gal</div>
+              <h4>Water Saved Per Load</h4>
+              <p>Compared to domestic washing machines via our smart recycling reclamation system.</p>
+            </div>
+
+            <div class="impact-stat-item">
+              <div class="impact-metric">0%</div>
+              <h4>Toxic Solvents</h4>
+              <p>Completely free of perchloroethylene, petrochemical petroleum, and synthetic dyes.</p>
+            </div>
+
+            <div class="impact-stat-item">
+              <div class="impact-metric">100%</div>
+              <h4>Solar Steam Powered</h4>
+              <p>Our central press and sanitization boilers utilize clean solar thermal power.</p>
+            </div>
+
+            <div class="impact-stat-item">
+              <div class="impact-metric">85%</div>
+              <h4>Lower Carbon Footprint</h4>
+              <p>Route-optimized neighborhood cluster pickups slash unnecessary suburban driving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Corporate & Bulk Care Partner Programs -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="corporate-banner-grid">
+          <div>
+            <div class="badge">Commercial &amp; B2B</div>
+            <h2>Specialized Linen &amp; Uniform Care For Local Businesses</h2>
+            <p>
+              We partner with boutique hotels, medical practices, executive offices, and wellness spas to manage recurring linen laundering and employee perks with dedicated account managers and net-30 invoicing.
+            </p>
+
+            <div class="corporate-benefits">
+              <div class="corp-benefit-item"><span>✓</span> Scheduled Morning Handoffs</div>
+              <div class="corp-benefit-item"><span>✓</span> Sanitized Medical Linens</div>
+              <div class="corp-benefit-item"><span>✓</span> Executive Shirt Subsidies</div>
+              <div class="corp-benefit-item"><span>✓</span> Consolidated Monthly Billing</div>
+            </div>
+
+            <a href="pages/contact.html?service=Commercial%20Laundry" class="btn btn-primary" data-service="Commercial Laundry">Request Commercial Quote</a>
+          </div>
+
+          <div>
+            <img src="assets/images/commercial.jpg" alt="Commercial hotel linen and luxury towels freshly laundered" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Master FAQ Accordion -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Common Questions</div>
+          <h2>Everything You Need to Know About Our Service</h2>
+          <p>Clear answers on how we safeguard your clothing, handle missing buttons, and manage secure doorstep handoffs.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item is-open">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>How do you separate and track individual garments?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Every client's laundry bag is tagged with a unique digital barcode upon collection. Items are never mixed with other customers' clothes. Within your order, darks, whites, and delicates are sorted and washed in independent temperature-controlled drums.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What happens if an item has a missing button or loose seam?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Our quality inspection specialists review every shirt and jacket. Standard dress shirt buttons are replaced complimentary, and loose hemlines are tightened before the garment is pressed and packaged.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Do I need to be home when the van arrives for pickup?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Not at all! Many of our clients leave their laundry bags on their front porch, with apartment concierges, or in secure parcel lockers. Simply specify your handoff instructions in your dashboard profile or pickup order.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can you treat stubborn stains like red wine, oil, or ink?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-body">
+              Yes. When scheduling your pickup, you can flag specific stained items. Our master spotters use tailored plant-enzyme chemistry and ultrasonic steam tables to lift stains without damaging delicate fabric threads.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Final Callout Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Reclaim 4+ Hours Every Weekend</h2>
+          <p>Join thousands of local professionals and families who have automated their laundry. Book in 2 minutes with no long-term commitment.</p>
+          <div class="cta-actions">
+            <a href="pages/contact.html" class="btn btn-primary btn-lg">Schedule Your First Pickup</a>
+            <a href="pages/services.html" class="btn btn-secondary btn-lg">Explore All Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Site Footer (Identical on public pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">
+            <img src="assets/images/logo-dark.png" alt="AuraWash Logo" style="height:40px;">
+          </a>
+          <p>
+            Eco-friendly doorstep laundry, dry cleaning, and fabric care with guaranteed 24-hour turnaround.
+          </p>
+          <div class="footer-contact-mini">
+            <div>📞 (555) 328-9274</div>
+            <div>✉ care@aurawash.com</div>
+            <div>📍 482 Cleanview Blvd, Suite 100</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AuraWash Laundry &amp; Dry Cleaning Services. All rights reserved.</div>
+        <div>Zero Harsh Chemicals &bull; 100% Recyclable Packaging &bull; Cold Ozone Sanitize</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

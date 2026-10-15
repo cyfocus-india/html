@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Modern dental technology at Lumina Dental: 3D intraoral scanning, computer-guided implants, AI cavity detection and care for every life stage.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="index1.html" class="dropdown-link active" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="pages/services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="pages/doctors.html" class="nav-link">Doctors</a></li>
+          <li class="nav-item"><a href="pages/pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="pages/dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="pages/signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle active" id="mobileHomeAccordion" aria-expanded="true" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content is-expanded" id="mobileHomeContent">
+            <li><a href="index.html" class="mobile-accordion-link">Home 1</a></li>
+            <li><a href="index1.html" class="mobile-accordion-link active" aria-current="page">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="pages/services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="pages/doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pages/pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="pages/contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="pages/dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="pages/contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="pages/signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Home 2 (modern-equipment template) -->
+  <main id="main">
+    <!-- 1. Hero: centered headline, wide banner image and floating stats -->
+    <section class="hero-home2">
+      <div class="container">
+        <div class="hero-home2-content">
+          <span class="hero-badge">&#10022; Next-generation dental technology</span>
+          <h1 class="hero-title">Precision Diagnostics &amp; Advanced Oral Surgery</h1>
+          <p class="hero-subtitle">3D cone-beam imaging, computer-guided implant surgery and microscope-assisted root canals let us find problems earlier and treat them with less drilling, less radiation and faster healing.</p>
+          <div class="hero-actions">
+            <a href="pages/contact.html?service=Comprehensive+Exam" data-service="Comprehensive Exam" class="btn btn-primary btn-lg">Book a Diagnostic Exam</a>
+            <a href="pages/doctors.html" class="btn btn-outline btn-lg">Meet Our Specialists</a>
+          </div>
+        </div>
+
+        <div class="hero-home2-banner">
+          <img src="assets/images/hero-home2.jpg" alt="Dentist reviewing 3D cone-beam CT reconstructions of teeth and roots on an illuminated viewer" width="1200" height="800">
+        </div>
+
+        <ul class="hero-stats-banner">
+          <li class="stat-box">
+            <span class="stat-num">99.8%</span>
+            <span class="stat-desc">Implant success rate</span>
+          </li>
+          <li class="stat-box">
+            <span class="stat-num">25k+</span>
+            <span class="stat-desc">Patients cared for</span>
+          </li>
+          <li class="stat-box">
+            <span class="stat-num">4</span>
+            <span class="stat-desc">Board-certified specialists</span>
+          </li>
+          <li class="stat-box">
+            <span class="stat-num">80%</span>
+            <span class="stat-desc">Less radiation than hospital CT</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. Technology: image cards for each piece of equipment -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Modern Equipment</span>
+          <h2>The Technology Inside Our Treatment Rooms</h2>
+          <p>Each tool below replaces an older, slower or more invasive method, so appointments are shorter and results are more predictable.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/tech-scanner.jpg" alt="Dental assistant scanning a patient's teeth with a handheld intraoral scanner while a colour 3D model appears on screen" class="feature-card-img" width="800" height="597" loading="lazy">
+            </div>
+            <h3>3D Intraoral Scanning</h3>
+            <p>A wand-sized camera builds a precise 3D model of your teeth in about two minutes, replacing messy impression putty for crowns, aligners and night guards.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/tech-implants.jpg" alt="Titanium dental implant post with a ceramic crown attached" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Computer-Guided Implants</h3>
+            <p>Your implant is planned on a 3D scan and placed through a custom surgical guide, which means smaller incisions and sub-millimeter accuracy.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/tech-ai-cavity.jpg" alt="Panoramic dental X-ray with an AI marker highlighting an area of early enamel decay" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>AI Cavity Detection</h3>
+            <p>Software trained on millions of X-rays flags early decay between teeth, so we can treat it with a small filling before it ever hurts.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/tech-piezo.jpg" alt="Dental treatment unit holding high-speed handpieces and an ultrasonic piezo instrument" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Piezo Ultrasonic Surgery</h3>
+            <p>Ultrasonic micro-vibrations cut bone precisely while sparing nerves and gum tissue, making extractions and bone grafts gentler to recover from.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Care for every life stage -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Every Age</span>
+          <h2>Tailored Oral Health for Every Stage of Life</h2>
+          <p>Teeth and gums change as we age. Each stage gets the right specialist and the right preventive plan.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/lifecycle-pediatric.jpg" alt="Toddler with mouth open during a gentle pediatric dental check-up" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Children (1&ndash;12)</h3>
+            <p>Fluoride varnish, protective sealants and fun, fear-free first visits with our pediatric dentist.</p>
+            <a href="pages/contact.html?service=Cleaning+%26+Exam&amp;doctor=Dr.+Julian+Chen" data-service="Cleaning &amp; Exam" data-doctor="Dr. Julian Chen" class="btn btn-outline btn-sm btn-block card-cta">Book a Child Visit</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/lifecycle-teen.jpg" alt="Teenager fitting a clear orthodontic aligner over their teeth" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Teens (13&ndash;19)</h3>
+            <p>Clear aligners, ceramic braces and custom sports mouthguards that protect smiles through growth spurts.</p>
+            <a href="pages/contact.html?service=Braces+%26+Aligners" data-service="Braces &amp; Aligners" class="btn btn-outline btn-sm btn-block card-cta">Book Ortho Consult</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/lifecycle-adult.jpg" alt="Adult patient wearing protective glasses during an in-office LED teeth whitening session" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Adults (20&ndash;64)</h3>
+            <p>Tooth-colored repairs, veneers, gum treatment and in-office whitening that fit around a busy schedule.</p>
+            <a href="pages/contact.html?service=Teeth+Whitening" data-service="Teeth Whitening" class="btn btn-outline btn-sm btn-block card-cta">Book Cosmetic Consult</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/lifecycle-senior.jpg" alt="Senior woman with silver hair and glasses smiling gently" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Seniors (65+)</h3>
+            <p>Implant-supported dentures, dry-mouth therapy, bone grafting and care for existing crowns and bridges.</p>
+            <a href="pages/contact.html?service=Dental+Implants" data-service="Dental Implants" class="btn btn-outline btn-sm btn-block card-cta">Book Implant Consult</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Same-Day Digital Workflow -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Digital Integration</span>
+          <h2>Our 4-Stage In-House Digital Restoration Workflow</h2>
+          <p>Traditional dental labs take weeks of waiting with unstable temporary crowns. Our in-house digital suite designs, mills, and seats permanent ceramics in one visit.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Stage 1 &middot; 60 Sec</span>
+            <h3>Optical 3D Impression</h3>
+            <p>Our intraoral scanner captures 24 million surface coordinates with 7-micron accuracy. Zero gagging, zero messy silicone putty trays.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Stage 2 &middot; 15 Min</span>
+            <h3>Chairside CAD Design</h3>
+            <p>Your doctor custom-contours anatomical margins, contact points, and natural bite dynamics live on a high-resolution 4K operatory display.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Stage 3 &middot; 20 Min</span>
+            <h3>Precision Robotic Milling</h3>
+            <p>A diamond-tooled 5-axis robotic mill shapes monolithic zirconia or lithium disilicate to within 10 microns of anatomical perfection.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Stage 4 &middot; 15 Min</span>
+            <h3>Furnace Sinter &amp; Bond</h3>
+            <p>Custom-glazed and furnace-sintered for natural translucency, then permanently bonded so you leave with your final restoration the same day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Prevention guide: evidence-based tips -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Prevention Guide</span>
+          <h2>Simple Habits That Prevent Costly Dental Work</h2>
+          <p>Our hygienists' most-asked questions, answered with the clinical facts behind them.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="feature-card">
+            <h3>Wait 30 minutes before brushing after acidic drinks</h3>
+            <p>Enamel softens once mouth pH drops below 5.5. Brushing straight after coffee, citrus or soda scrubs away that softened layer, while waiting lets saliva re-harden it.</p>
+            <p class="tip-box"><strong>Tip:</strong> Rinse with plain water right after acidic food or drinks.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Bleeding gums are an early warning, not normal</h3>
+            <p>Bleeding when you floss usually means gingivitis. Treated early with a professional clean, it is fully reversible. Left alone, it can spread below the gumline and destroy the bone that holds teeth in place.</p>
+            <p class="tip-box"><strong>Benchmark:</strong> Gum pockets deeper than 4&nbsp;mm need a deep cleaning.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Protect the blood clot after an extraction</h3>
+            <p>A stable clot is what heals the socket. For 72 hours, avoid straws, smoking and forceful spitting, and use a cold compress for the first 24 hours to limit swelling.</p>
+            <p class="tip-box"><strong>Aftercare:</strong> Start warm saltwater rinses (&frac12; tsp salt in a cup of water) after 24 hours.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Choose an electric toothbrush for gum health</h3>
+            <p>Sonic brushes make around 31,000 strokes a minute and studies show they remove noticeably more plaque than manual brushing, especially along the gumline.</p>
+            <p class="tip-box"><strong>Technique:</strong> Angle bristles 45&deg; toward the gumline and let the brush do the work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Next step: centered call to action -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>See Your Teeth in 3D at Your First Visit</h2>
+          <p>A comprehensive exam with digital X-rays and a 3D scan is $120, and most PPO plans cover it in full.</p>
+          <div class="cta-actions">
+            <a href="pages/contact.html?service=Comprehensive+Exam" data-service="Comprehensive Exam" class="btn btn-primary btn-lg">Book a Diagnostic Exam</a>
+            <a href="pages/signup.html" class="btn btn-outline btn-lg">Create Patient Account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="pages/services.html" class="footer-link">Services</a></li>
+            <li><a href="pages/doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pages/pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="pages/signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="pages/signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="pages/dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

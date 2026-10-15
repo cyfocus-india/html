@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Transparent per-procedure dental fees, annual membership plans for uninsured patients, insurance billing and 0% APR financing at Lumina Dental.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="../index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="../index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordion" aria-expanded="false" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content" id="mobileHomeContent">
+            <li><a href="../index.html" class="mobile-accordion-link">Home 1</a></li>
+            <li><a href="../index1.html" class="mobile-accordion-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link active" aria-current="page">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Pricing -->
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="inner-hero">
+      <div class="container inner-hero-grid">
+        <div>
+          <span class="hero-badge">&#10022; Transparent pricing</span>
+          <h1>Clear Dental Fees, Agreed Before Treatment</h1>
+          <p>We publish our per-procedure fees, offer annual plans for patients without insurance and bill your insurer directly. You approve a written estimate before any treatment starts.</p>
+          <div class="inner-hero-actions">
+            <a href="contact.html?service=General+Inquiry" data-service="General Inquiry" class="btn btn-primary">Request a Cost Estimate</a>
+            <a href="#procedure-fees" class="btn btn-outline">Browse Procedure Fees</a>
+          </div>
+        </div>
+        <div class="inner-hero-img-wrap">
+          <img src="../assets/images/hero-pricing.jpg" alt="Smiling Lumina treatment coordinator at the front desk, ready to explain costs and insurance" width="1200" height="900">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Per-procedure fees -->
+    <section class="section" id="procedure-fees">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Procedure Fees</span>
+          <h2>What Each Treatment Costs Before Insurance</h2>
+          <p>Dentistry is priced per tooth, per surface or by complexity. In-network PPO plans typically cover 50&ndash;100% of these fees.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Routine Cleaning</h3>
+                <span class="pricing-rate">$95</span>
+              </div>
+              <p class="pricing-desc">Tartar removal, polish and fluoride varnish for adults with healthy gums.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D1110 &middot; Adult cleaning</p>
+              <a href="contact.html?service=Cleaning+%26+Exam" data-service="Cleaning &amp; Exam" class="btn btn-outline btn-sm btn-block card-cta">Book a Cleaning</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Comprehensive Exam</h3>
+                <span class="pricing-rate">$120</span>
+              </div>
+              <p class="pricing-desc">Full exam with digital X-rays, 3D scan, gum charting and oral cancer screening.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D0150, D0274 &middot; New patients</p>
+              <a href="contact.html?service=Comprehensive+Exam" data-service="Comprehensive Exam" class="btn btn-outline btn-sm btn-block card-cta">Book an Exam</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Composite Filling</h3>
+                <span class="pricing-rate">$140 <small>/ surface</small></span>
+              </div>
+              <p class="pricing-desc">Tooth-colored, mercury-free filling shade-matched to your natural tooth.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D2391 &middot; Back-tooth filling</p>
+              <a href="contact.html?service=Tooth+Fillings" data-service="Tooth Fillings" class="btn btn-outline btn-sm btn-block card-cta">Book a Filling</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Root Canal</h3>
+                <span class="pricing-rate"><small>From</small> $480</span>
+              </div>
+              <p class="pricing-desc">Front tooth $480, premolar $640, molar $790. Crown priced separately.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D3310&ndash;D3330 &middot; Endodontics</p>
+              <a href="contact.html?service=Root+Canal+Therapy" data-service="Root Canal Therapy" class="btn btn-outline btn-sm btn-block card-cta">Book a Root Canal Consult</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Clear Aligners</h3>
+                <span class="pricing-rate"><small>From</small> $2,200</span>
+              </div>
+              <p class="pricing-desc">Scan, full aligner series and two sets of retainers. Ceramic braces from $3,400.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D8090 &middot; Orthodontics</p>
+              <a href="contact.html?service=Braces+%26+Aligners" data-service="Braces &amp; Aligners" class="btn btn-outline btn-sm btn-block card-cta">Book an Ortho Consult</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Implant + Crown</h3>
+                <span class="pricing-rate"><small>From</small> $1,650</span>
+              </div>
+              <p class="pricing-desc">Titanium implant, custom abutment and ceramic crown. Bone graft from $450 if needed.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D6010, D6058 &middot; Implant surgery</p>
+              <a href="contact.html?service=Dental+Implants" data-service="Dental Implants" class="btn btn-outline btn-sm btn-block card-cta">Book an Implant Consult</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Teeth Whitening</h3>
+                <span class="pricing-rate">$280</span>
+              </div>
+              <p class="pricing-desc">One-hour in-office LED whitening, plus take-home touch-up gel.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D9972 &middot; In-office whitening</p>
+              <a href="contact.html?service=Teeth+Whitening" data-service="Teeth Whitening" class="btn btn-outline btn-sm btn-block card-cta">Book Whitening</a>
+            </div>
+          </article>
+
+          <article class="pricing-item-card">
+            <div>
+              <div class="pricing-header">
+                <h3>Wisdom Tooth Removal</h3>
+                <span class="pricing-rate"><small>From</small> $180</span>
+              </div>
+              <p class="pricing-desc">Per tooth. Simple removal $180, surgical or impacted from $280.</p>
+            </div>
+            <div>
+              <p class="pricing-includes">CDT D7140, D7210 &middot; Oral surgery</p>
+              <a href="contact.html?service=Wisdom+Extraction" data-service="Wisdom Extraction" class="btn btn-outline btn-sm btn-block card-cta">Book an Extraction</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Membership plans for uninsured patients -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">No Insurance?</span>
+          <h2>Annual Membership Plans</h2>
+          <p>Pay one yearly fee for all your preventive care, then save on any treatment you need, with no deductibles, waiting periods or claim forms.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="plan-card">
+            <h3 class="plan-name">Individual Plan</h3>
+            <div class="plan-price-wrap">
+              <span class="plan-price">$199</span>
+              <span class="plan-period">/ year</span>
+            </div>
+            <p class="plan-intro">For adults who want twice-yearly cleanings and peace of mind if something goes wrong.</p>
+            <ul class="plan-benefits">
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> 2 cleanings and 2 exams a year</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> All routine X-rays included</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> 1 emergency exam with X-ray</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> <strong>20% off</strong> fillings, crowns and root canals</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> No waiting period</li>
+            </ul>
+            <a href="contact.html?service=Individual+Plan" data-service="Individual Plan" class="btn btn-outline btn-block">Join the Individual Plan</a>
+          </article>
+
+          <article class="plan-card featured">
+            <span class="plan-badge">Best value for families</span>
+            <h3 class="plan-name">Family Plan</h3>
+            <div class="plan-price-wrap">
+              <span class="plan-price">$349</span>
+              <span class="plan-period">/ year</span>
+            </div>
+            <p class="plan-intro">Covers two adults and up to two children under 18.</p>
+            <ul class="plan-benefits">
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> 2 cleanings a year for every member</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> Fluoride varnish for children</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> 1 emergency exam per member</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> <strong>25% off</strong> fillings and sealants</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> <strong>$500 off</strong> clear aligners</li>
+            </ul>
+            <a href="contact.html?service=Family+Plan" data-service="Family Plan" class="btn btn-primary btn-block">Join the Family Plan</a>
+          </article>
+
+          <article class="plan-card">
+            <h3 class="plan-name">Gum Care Plan</h3>
+            <div class="plan-price-wrap">
+              <span class="plan-price">$289</span>
+              <span class="plan-period">/ year</span>
+            </div>
+            <p class="plan-intro">For patients managing gum disease who need more frequent maintenance.</p>
+            <ul class="plan-benefits">
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> Up to 4 gum maintenance cleanings</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> Twice-yearly gum pocket charting</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> Antibacterial rinses under the gums</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> <strong>20% off</strong> deep cleaning and gum surgery</li>
+              <li class="plan-benefit-item"><span aria-hidden="true">&#10003;</span> Priority booking with Dr. Vance</li>
+            </ul>
+            <a href="contact.html?service=Gum+Care+Plan" data-service="Gum Care Plan" class="btn btn-outline btn-block">Join the Gum Care Plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Ways to pay and our price guarantees -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Ways to Pay</span>
+          <h2>Insurance, Financing &amp; Our Price Promises</h2>
+          <p>However you pay, the estimate you approve is the price you pay.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#128209;</div>
+            <h3>PPO Insurance Billing</h3>
+            <p>In-network with Delta Dental, MetLife, Guardian, Cigna, Aetna, Anthem and United Concordia. Out of network? We file the claim and you pay only the difference.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#128179;</div>
+            <h3>0% APR Monthly Payments</h3>
+            <p>Spread larger treatments over 6, 12 or 24 months with CareCredit or Sunbit. Approval takes about two minutes and does not affect your credit score.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-badge" aria-hidden="true">&#127974;</div>
+            <h3>HSA &amp; FSA Accepted</h3>
+            <p>Use pre-tax Health Savings or Flexible Spending Account funds for any treatment, from cleanings to braces and implants.</p>
+          </article>
+        </div>
+
+        <div class="grid-2 guarantee-grid">
+          <article class="feature-card guarantee-card">
+            <h3>&#10003; Written Fee Guarantee</h3>
+            <p>You receive an itemized estimate with every CDT code, your insurance share and your exact out-of-pocket cost. Numbing, sterile trays and intraoral photos are always included, never added later.</p>
+          </article>
+
+          <article class="feature-card guarantee-card">
+            <h3>&#10003; Restoration Warranty</h3>
+            <p>Crowns, inlays and onlays carry a 5-year replacement warranty and fillings carry 2 years, as long as you keep your six-monthly check-ups with us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Strategic Dental Financial Planning -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Financial Planning</span>
+          <h2>Three Smart Ways to Lower Your Out-of-Pocket Costs</h2>
+          <p>Our dedicated treatment coordinators work directly with you and your insurance provider to maximize benefits and avoid out-of-pocket waste.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Strategy 1</span>
+            <h3>Year-End Benefit Splitting</h3>
+            <p>For multi-stage treatments like implants or cosmetic crowns, we can strategically schedule appointments across December and January to leverage two separate annual insurance maximums, potentially doubling your insurance coverage.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Strategy 2</span>
+            <h3>Prior-Authorization Pre-Determination</h3>
+            <p>Before undergoing any major restorative work, we submit your digital X-rays and detailed clinical narrative to your carrier. You receive a formal, binding pre-approval letter confirming exact dollar allowances in advance.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Strategy 3</span>
+            <h3>Pre-Tax HSA &amp; FSA Optimization</h3>
+            <p>100% of our clinical procedures qualify for Health Savings Accounts and Flexible Spending Accounts. Paying with pre-tax dollars effectively discounts your dental treatment by 20% to 35% based on your tax bracket.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Next step -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Get an Exact Quote for Your Treatment</h2>
+          <p>Send us your insurance details and the treatment you need. A coordinator will reply with a free written estimate within one working day.</p>
+          <div class="cta-actions">
+            <a href="contact.html?service=General+Inquiry" data-service="General Inquiry" class="btn btn-primary btn-lg">Request an Estimate</a>
+            <a href="signin.html" class="btn btn-outline btn-lg">View My Receipts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

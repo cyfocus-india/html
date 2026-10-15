@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals | Apex Stationery & Office Supplies</title>
+  <meta name="description" content="Discover the latest stationery innovations: mineral stone paper, precision brass pens, ergonomic desk mats, and designer colorways.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('apex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var savedDir = localStorage.getItem('apex_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sticky, Responsive, Dropdown, Hamburger, Theme & Dir Toggles)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+        <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Home <span class="dropdown-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="new-arrivals.html" class="nav-link active">New Arrivals</a>
+        <a href="bulk-orders.html" class="nav-link">Bulk Orders</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
+        <div class="drawer-actions">
+          <div class="drawer-toggles-grid">
+            <button type="button" class="drawer-control-btn theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+              <span class="symbol">☾</span>
+              <span class="control-text">Dark Mode</span>
+            </button>
+            <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+              <span class="symbol">⇄</span>
+              <span class="dir-label">RTL</span>
+            </button>
+          </div>
+          <a href="bulk-orders.html" class="btn btn-primary drawer-cta-btn">Get a Quote</a>
+        </div>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <span class="symbol">☾</span>
+        </button>
+
+        <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+          <span class="dir-label">⇄ RTL</span>
+        </button>
+
+        <a href="bulk-orders.html" class="btn btn-primary cta-btn">Get a Quote</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         Section 1: Hero Section (New Arrivals Showcase with Media)
+         ======================================================================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Fresh Release Cycle</span>
+            <h1>This Season's Fresh Stationery Innovations</h1>
+            <p class="lead">
+              Elevate your daily workday with cutting-edge ergonomic materials, waterproof mineral papers, Japanese precision tips, and curated designer aesthetic palettes.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="#flagship" class="btn btn-primary btn-lg">Explore New Releases</a>
+              <a href="#trial-box" class="btn btn-secondary btn-lg">Discovery Sampler</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img src="../assets/images/hero-new-arrivals.jpg" alt="Aesthetic new stationery arrivals with pastel pens and minimalist notebook">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 2: Flagship Innovations of the Month
+         ======================================================================= -->
+    <section class="section" id="flagship">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Spotlight Gear</span>
+          <h2>Flagship Innovations of the Month</h2>
+          <p class="lead">
+            Four newly landed products engineered to rethink everyday desk tasks through better tactile feel, enhanced ergonomics, and sustainable materials.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Item 1 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-stonepaper.jpg" alt="Terra Stone Paper Notebook">
+              <span class="card-badge">Zero Trees</span>
+            </div>
+            <h3 class="card-title">Terra Mineral Journal</h3>
+            <p class="card-text">Formed from repurposed calcium carbonate limestone powder. Completely waterproof, grease-proof, and impossible to tear by hand.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$21.00</span>
+                <span class="card-unit">Sample unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-pens.jpg" alt="Apex Precision Solid Brass Rollerball">
+              <span class="card-badge">Solid Brass</span>
+            </div>
+            <h3 class="card-title">Apex Brass Rollerball</h3>
+            <p class="card-text">CNC-machined from single-billet naval brass. Natural untreated patina will develop unique character with every signature.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$32.00</span>
+                <span class="card-unit">Sample unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-chargingpad.jpg" alt="Qi Wireless Charging Vegan Leather Desk Pad">
+              <span class="card-badge">Tech Desk</span>
+            </div>
+            <h3 class="card-title">Qi Wireless Desk Mat</h3>
+            <p class="card-text">35 x 16 inch ultra-soft vegan leather blotter with integrated 15W fast wireless phone charging coil in the top-left corner.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$44.00</span>
+                <span class="card-unit">Sample unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-pastel.jpg" alt="Nordic Pastel Chisel Highlighters Set">
+              <span class="card-badge">Anti-Glare</span>
+            </div>
+            <h3 class="card-title">Nordic Pastel Palette</h3>
+            <p class="card-text">Set of 8 muted aesthetic highlighters (dusty rose, sage, slate, ochre). Designed for document readability under fluorescent lighting.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$14.50</span>
+                <span class="card-unit">Sample unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3: Seasonal Designer Colorway Editions
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Coordinated Aesthetics</span>
+          <h2>Curated Seasonal Workstation Palettes</h2>
+          <p class="lead">
+            Eliminate mismatched office clutter. Equip individual departments or executive suites with cohesive, harmonized color systems.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card palette-card">
+            <div class="palette-swatch-bar palette-navy"></div>
+            <h3 class="card-title">Midnight Navy &amp; Brushed Brass</h3>
+            <p class="card-text">
+              The flagship executive boardroom collection. Deep indigo faux-leather folios, gold-foiled ribbon journals, and weighted solid brass desk organizers.
+            </p>
+            <ul class="palette-features">
+              <li><span class="palette-bullet">•</span> <span>Executive monogramming available</span></li>
+              <li><span class="palette-bullet">•</span> <span>Matching brass desk weight &amp; opener</span></li>
+              <li><span class="palette-bullet">•</span> <span>Gift-boxed packaging included</span></li>
+            </ul>
+            <div class="card-footer">
+              <a href="contact.html" class="btn btn-primary">View Navy Series</a>
+            </div>
+          </div>
+
+          <div class="card palette-card">
+            <div class="palette-swatch-bar palette-botanical"></div>
+            <h3 class="card-title">Sage Botanical &amp; Natural Kraft</h3>
+            <p class="card-text">
+              Designed for creative studios, architecture agencies, and eco-conscious workspaces. Recycled cork desk pads and plantable wildflower seed pencils.
+            </p>
+            <ul class="palette-features">
+              <li><span class="palette-bullet">•</span> <span>100% biodegradable composition</span></li>
+              <li><span class="palette-bullet">•</span> <span>Unbleached raw cardboard binders</span></li>
+              <li><span class="palette-bullet">•</span> <span>Natural vegetable-oil inks</span></li>
+            </ul>
+            <div class="card-footer">
+              <a href="contact.html" class="btn btn-primary">View Botanical Series</a>
+            </div>
+          </div>
+
+          <div class="card palette-card">
+            <div class="palette-swatch-bar palette-graphite"></div>
+            <h3 class="card-title">Monochrome Matte Graphite</h3>
+            <p class="card-text">
+              Clean architectural minimalism. Non-reflective charcoal surfaces, isometric blueprint drafting grid pads, and anodized aluminum drafting rulers.
+            </p>
+            <ul class="palette-features">
+              <li><span class="palette-bullet">•</span> <span>Matte anti-fingerprint coating</span></li>
+              <li><span class="palette-bullet">•</span> <span>Laser-etched millimeter scale markings</span></li>
+              <li><span class="palette-bullet">•</span> <span>120 GSM bleed-resistant technical vellum</span></li>
+            </ul>
+            <div class="card-footer">
+              <a href="contact.html" class="btn btn-primary">View Graphite Series</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4: Ergonomic & Tech-Integrated Accessories
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Workplace Ergonomics</span>
+          <h2>Health & Posture Supportive Desk Essentials</h2>
+          <p class="lead">
+            Prevent repetitive strain injury (RSI), wrist fatigue, and optical glare with our new ergonomic certified accessories.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card ergo-card">
+            <div class="feature-num-box">01</div>
+            <h3 class="card-title">Memory Foam Writing Slant</h3>
+            <p class="card-text">
+              Provides an optimal 15-degree writing incline recommended by occupational therapists to alleviate wrist tendon compression during document review.
+            </p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$36.00</span>
+                <span class="card-unit">/ commercial unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+
+          <div class="card ergo-card">
+            <div class="feature-num-box">02</div>
+            <h3 class="card-title">Magnetic Desktop Cable Dock</h3>
+            <p class="card-text">
+              Solid zinc-alloy base that anchors laptop charging, monitor, and phone cables right at the rear border of your desk pad with zero sliding.
+            </p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$22.00</span>
+                <span class="card-unit">/ commercial unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+
+          <div class="card ergo-card">
+            <div class="feature-num-box">03</div>
+            <h3 class="card-title">Document Reference Stand</h3>
+            <p class="card-text">
+              Heavy steel bookstand with adjustable dual-page clips. Keeps reference sheets directly at eye level next to your monitor screen.
+            </p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$29.50</span>
+                <span class="card-unit">/ commercial unit</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Sample</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 5: Early-Bird Launch Pricing & Introduction Sampler
+         ======================================================================= -->
+    <section class="section-alt" id="trial-box">
+      <div class="container">
+        <div class="card discovery-box-card" style="border-color: var(--border-badge);">
+          <div class="grid-2" style="align-items: center;">
+            <div>
+              <span class="section-tag">Limited Launch Batch</span>
+              <h2>The New Arrivals Discovery Box</h2>
+              <p class="lead">
+                Test all four of this season's flagship innovations with your procurement committee. Includes one full-size product from each category in custom gift packaging.
+              </p>
+              <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; list-style: none; padding: 0;">
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><span class="tier-check">✓</span> <span>1x Terra Mineral Stone Paper Hardbound Journal</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><span class="tier-check">✓</span> <span>1x Solid Brass CNC Rollerball Pen (with black refill)</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><span class="tier-check">✓</span> <span>1x Qi-Wireless Charging Vegan Leather Desk Pad</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><span class="tier-check">✓</span> <span>1x 8-Pack Nordic Pastel Dual-Tip Highlighters</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><span class="tier-check">✓</span> <span>Sample paper weight swatch booklet (20lb to 65lb)</span></li>
+              </ul>
+              <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <span class="card-price" style="font-size: 2.25rem;">$68.00</span>
+                <span class="card-price-old" style="font-size: 1.25rem;">$108.50 Value</span>
+                <span class="card-badge" style="position: static;">Save 37%</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-lg">Order Discovery Box</a>
+            </div>
+
+            <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid var(--border-light);">
+              <img src="../assets/images/discovery-box.jpg" alt="New arrivals discovery sampler box assortment">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 6: Beta Tester & Office Manager Panel CTA
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Be the First to Test Next Season's Stationery</h2>
+          <p>
+            Are you an office manager, executive assistant, or operations director? Join the Apex Product Advisory Panel and receive free pre-release samples for your workplace.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Apply for Review Panel</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer (Identical on every page)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+            <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          </a>
+          <p>
+            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="new-arrivals.html" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="bulk-orders.html" class="footer-link">Bulk Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+        </div>
+        <div class="footer-badges-list">
+          <span>ISO 9001:2015 Certified Logistics</span>
+          <span>FSC® Certified Paper Supply</span>
+          <span>Net 30 Vendor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Marigold Grand Banquets</title>
+  <meta name="description" content="Create a Marigold Grand client account to book dates, choose catering and décor add-ons and track installments.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body class="auth-body">
+  <div class="auth-page">
+    <!-- Photo panel (hidden on small screens) -->
+    <aside class="auth-visual" aria-label="About the client portal">
+      <img src="../assets/images/auth-signup.jpg" alt="Long dinner table glowing with candles and red flowers in a dark room" width="1000" height="1300">
+      <div>
+        <h2>Start planning with a free client account</h2>
+        <p>Hold dates, compare halls and build your menu at your own pace. Your event manager sees every change in real time.</p>
+        <ul>
+          <li>Free 72-hour date holds from your dashboard</li>
+          <li>Pay in three installments, tracked for you</li>
+          <li>One login for the whole family</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="auth-main" id="main">
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+          <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+          <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Client portal</span></span>
+        </a>
+        <div class="auth-tools">
+          <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+          <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <section aria-labelledby="signup-title">
+          <h1 id="signup-title">Sign Up</h1>
+          <p class="lead">Create your account in under a minute. No booking or payment needed.</p>
+          <div class="auth-alert auth-alert--error" id="signupAlert" role="alert"></div>
+          <form class="auth-form" id="signupForm" novalidate>
+            <div class="field">
+              <label for="suName">Full name</label>
+              <input class="input" id="suName" type="text" autocomplete="name" placeholder="e.g. Ananya Rao" required>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="suEmail">Email</label>
+              <input class="input" id="suEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="suPassword">Password</label>
+              <div class="pw-wrap">
+                <input class="input" id="suPassword" type="password" autocomplete="new-password" minlength="8" aria-describedby="pwStrengthText" required>
+                <button class="pw-toggle" type="button" data-pw-toggle aria-controls="suPassword" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <div class="strength" id="pwStrength" data-score="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <span class="hint" id="pwStrengthText">Use 8+ characters with a number.</span>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="suConfirm">Confirm password</label>
+              <div class="pw-wrap">
+                <input class="input" id="suConfirm" type="password" autocomplete="new-password" required>
+                <button class="pw-toggle" type="button" data-pw-toggle aria-controls="suConfirm" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" id="suTerms"><span>I agree to the venue booking terms and the cancellation policy.</span></label>
+              <p class="error-msg" id="termsError" aria-live="polite"></p>
+            </div>
+            <button class="btn btn--block btn--lg" type="submit">Create Account</button>
+          </form>
+          <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

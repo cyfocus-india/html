@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="How Beadwell went from a one-van mobile wash in 2014 to three hand-wash bays and a detail studio in Denver.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="../index1.html">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="../pages/about.html" aria-current="page">About</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container page-hero-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="../index.html">Home 1</a></li><li aria-current="page">About</li></ol>
+          </nav>
+          <p class="eyebrow">About</p>
+          <h1 id="page-title">Started with two buckets and a borrowed pressure washer</h1>
+          <p class="lead">Beadwell began in 2014 as a one-van mobile wash. Today we run three hand-wash bays and a detail studio, with the same rule we had on day one: no brush ever touches your paint.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="#team">Meet the team <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <figure class="page-hero-figure">
+          <img class="rounded-img" src="../assets/images/hero-about-paint-inspection.webp" alt="Detailer leaning over a black supercar, checking the paint closely under a bright inspection light" width="1920" height="1440" fetchpriority="high">
+          <figcaption class="hero-badge"><strong>Est. 2014</strong>Locally owned, on Foundry Street since 2017</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. Timeline ===== -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-title">Twelve years, one rule</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="year">2014</span>
+            <div><h3>One van, one route</h3><p>Teo Alvarez washes cars in office parking lots around RiNo, with two buckets and a borrowed pressure washer in the back of a van.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="year">2017</span>
+            <div><h3>The Foundry Street bays</h3><p>Two hand-wash bays open in a former tire shop. Priya Nand joins to run bookings and the front desk, and the waiting list disappears.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="year">2020</span>
+            <div><h3>Water reclaim and spot-free rinse</h3><p>A filtration loop starts reusing most of our wash water, and a reverse-osmosis system ends water spots for good.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="year">2022</span>
+            <div><h3>The detail studio</h3><p>A third wash bay plus a two-bay studio with LED inspection panels and infrared curing lamps for ceramic coatings.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="year">2025</span>
+            <div><h3>Customer portal and points</h3><p>Online slots, live stage tracking and Beadwell Points &mdash; built from two years of feedback cards left at the desk.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 3. Standards ===== -->
+    <section class="section section--alt" aria-labelledby="standards-title">
+      <div class="container standards-grid">
+        <img class="rounded-img reveal" src="../assets/images/about-detailer-at-work.webp" alt="Detailer in a cap and black gloves carefully working on the side of a dark car" width="1000" height="1333" loading="lazy">
+        <div>
+          <p class="eyebrow">Our standards</p>
+          <h2 id="standards-title">Six rules every car gets</h2>
+          <p class="lead">These aren&rsquo;t on a poster in the break room. They&rsquo;re checked on every shift.</p>
+          <ul class="standard-list">
+            <li><span class="bead bead--sm" aria-hidden="true">&#8856;</span><div><h3>No brushes, ever</h3><p>Only mitts and microfiber touch paint. Wheel brushes never leave the wheel bucket.</p></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">&#9681;</span><div><h3>pH-neutral soaps</h3><p>Gentle on the wax, sealant or coating you&rsquo;ve already paid for.</p></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">&#9677;</span><div><h3>Fresh towels per car</h3><p>Microfiber is laundered on site and retired after 120 washes.</p></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">&#9678;</span><div><h3>Measure before polishing</h3><p>No machine touches clear coat until we know how thick it is.</p></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">&#9635;</span><div><h3>Photos at handover</h3><p>Every studio job is photographed, so you have a record for resale.</p></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">&#9719;</span><div><h3>Quoted time is real time</h3><p>If a booked wash runs late, your next one is on us.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Team ===== -->
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The team</p>
+          <h2 id="team-title">The people who&rsquo;ll have your keys</h2>
+          <p class="lead">Fourteen staff across the bays and studio. These four lead it.</p>
+        </div>
+        <div class="team-grid">
+          <article class="member reveal">
+            <img class="member-photo" src="../assets/images/team-teo-alvarez.webp" alt="Teo Alvarez" width="64" height="64" loading="lazy">
+            <h3>Teo Alvarez</h3>
+            <p class="role">Founder &amp; head detailer</p>
+            <p>Started the mobile van in 2014. IDA-certified, and still quotes every 2-step correction himself.</p>
+          </article>
+          <article class="member reveal">
+            <img class="member-photo" src="../assets/images/team-priya-nand.webp" alt="Priya Nand" width="64" height="64" loading="lazy">
+            <h3>Priya Nand</h3>
+            <p class="role">Operations &amp; customer care</p>
+            <p>Runs bookings, Wash Club and the portal. If your slot moved, she&rsquo;s the one who texted you.</p>
+          </article>
+          <article class="member reveal">
+            <img class="member-photo" src="../assets/images/team-malik-brooks.webp" alt="Malik Brooks" width="64" height="64" loading="lazy">
+            <h3>Malik Brooks</h3>
+            <p class="role">Paint correction lead</p>
+            <p>Nine years of polishing, three of them in a collision shop. Trains every new studio technician.</p>
+          </article>
+          <article class="member reveal">
+            <img class="member-photo" src="../assets/images/team-hana-kowalski.webp" alt="Hana Kowalski" width="64" height="64" loading="lazy">
+            <h3>Hana Kowalski</h3>
+            <p class="role">Interior specialist</p>
+            <p>Owns the steamer and the extractor. Finds pet hair you didn&rsquo;t know your car had.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Environmental & community impact ===== -->
+    <section class="section section--band" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Water &amp; community</p>
+          <h2 id="impact-title">Clean cars, lighter footprint</h2>
+        </div>
+        <div class="impact-grid">
+          <div class="impact reveal"><strong>80%</strong><span>of wash water filtered and reused</span></div>
+          <div class="impact reveal"><strong>1.9M gal</strong><span>of water saved in 2025 versus driveway washing</span></div>
+          <div class="impact reveal"><strong>0</strong><span>phosphates &mdash; every soap we use is biodegradable</span></div>
+          <div class="impact reveal"><strong>$14,600</strong><span>raised for Denver youth sports at charity wash days since 2018</span></div>
+        </div>
+        <p class="impact-note">Washing at home sends brake dust and oil into storm drains that run straight to the South Platte. Our bays drain through an oil separator to the city sewer instead.</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing CTA: studio tour ===== -->
+    <section class="section" aria-labelledby="tour-title">
+      <div class="container">
+        <div class="tour-card reveal">
+          <figure class="tour-media">
+            <img src="../assets/images/about-studio-bay.webp" alt="Dark grey sedan parked alone in the clean, bright Beadwell detail studio" width="1000" height="1500" loading="lazy">
+          </figure>
+          <div class="tour-copy">
+            <p class="eyebrow">Visit us</p>
+            <h2 id="tour-title">Come see the bays for yourself</h2>
+            <p class="muted">Free 20-minute tours on Saturdays: the water reclaim room, the studio lights and a live correction in progress. Bring questions about your own car.</p>
+            <div class="tour-times">
+              <span class="chip">Sat 10:00 AM</span>
+              <span class="chip">Sat 2:00 PM</span>
+              <span class="chip">Up to 6 people</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn" href="contact.html?topic=tour">Book a Tour</a>
+              <a class="link-arrow" href="mailto:jobs@beadwell.co">We&rsquo;re hiring a bay lead <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="../pages/services.html">Services</a></li>
+          <li><a href="../pages/pricing.html">Pricing</a></li>
+          <li><a href="../pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="../pages/signin.html">Sign In</a></li>
+          <li><a href="../pages/signup.html">Sign Up</a></li>
+          <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

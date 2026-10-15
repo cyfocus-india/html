@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Marigold Grand Banquets</title>
+  <meta name="description" content="Marigold Grand Banquets in Bengaluru: five halls for 15 to 900 guests, in-house kitchens and a dedicated event manager. Check your date today.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+        <img src="assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+        <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html" class="is-active" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/halls.html">Halls</a></li>
+          <li><a class="nav-link" href="pages/packages.html">Packages</a></li>
+          <li><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+        <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+        <a class="btn btn--sm header-signin" href="pages/signin.html">Sign In</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation (≤1024px) -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-panel" id="mobile-panel" aria-label="Mobile menu">
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav-list">
+        <li>
+          <button class="accordion-toggle is-active" type="button" aria-expanded="true" aria-controls="mobile-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="mobile-sub is-open" id="mobile-home">
+            <ul class="mobile-sub-list">
+              <li><a href="index.html" class="is-active" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html">Home 2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="pages/halls.html">Halls</a></li>
+        <li><a href="pages/packages.html">Packages</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-tools">
+      <span class="label">Display options</span>
+      <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+      <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+    </div>
+    <a class="btn" href="pages/signin.html">Sign In</a>
+    <p class="mobile-contact">Events desk: <a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></p>
+  </aside>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero: cinematic ballroom with quick availability check ===== -->
+    <section class="hero-cine" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="assets/images/hero-home1-ballroom.jpg" alt="Marigold Ballroom dressed for a wedding reception, with crystal chandeliers, wooden banquet tables and a floral stage" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light">Sarjapur Road · Bengaluru</span>
+        <h1 id="hero-title">Celebrations as grand as your guest list</h1>
+        <div class="ornament" aria-hidden="true">✦</div>
+        <p class="lead">Five halls for 15 to 900 guests, two in-house kitchens and one event manager who stays with you from the first site visit to the last song.</p>
+        <div class="btn-row">
+          <a class="btn btn--lg" href="pages/contact.html#enquiry">Book a Date</a>
+          <a class="link-arrow link-arrow--light" href="pages/halls.html">Explore the halls <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <form class="quick-check" id="quickCheck" action="pages/contact.html" method="get" novalidate aria-label="Quick availability check">
+          <div class="field">
+            <label for="qcEvent">Event type</label>
+            <select class="input" id="qcEvent" name="event" required>
+              <option value="">Select an occasion</option>
+              <option value="wedding">Wedding &amp; reception</option>
+              <option value="engagement">Engagement &amp; sangeet</option>
+              <option value="birthday">Birthday</option>
+              <option value="corporate">Corporate event</option>
+              <option value="babyshower">Baby shower &amp; naming</option>
+              <option value="anniversary">Anniversary &amp; private dinner</option>
+            </select>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="qcGuests">Guests</label>
+            <input class="input" id="qcGuests" name="guests" type="number" min="15" max="900" inputmode="numeric" placeholder="e.g. 250" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="qcDate">Preferred date</label>
+            <input class="input" id="qcDate" name="date" type="date" required>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <button class="btn" type="submit">Check Availability</button>
+          <p class="quick-check-note">No payment needed to ask. We reply with every open lunch and dinner slot near your date.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 2. Venue highlights ===== -->
+    <section class="section section--alt" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Venue highlights</span>
+          <h2 id="highlights-title">Everything your event needs, under one roof</h2>
+          <p>No juggling caterers, generator hire and parking contractors. These are built into the venue and into every booking.</p>
+        </div>
+
+        <div class="stat-strip" data-reveal>
+          <div><strong>4,300+</strong><span>events hosted since 2011</span></div>
+          <div><strong>3 acres</strong><span>private campus, no shared gates</span></div>
+          <div><strong>60+</strong><span>crew on a full-house night</span></div>
+          <div><strong>2 hrs</strong><span>average reply to a new enquiry</span></div>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-ballroom.jpg" alt="Bright pillarless ballroom with crystal chandeliers and an open marble floor" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">♛</span>
+              <h3>A pillarless ballroom</h3>
+              <p>12,500 sq ft, 24-ft ceilings and a 40 × 20 ft stage. Tall mandaps, LED walls and hanging décor all fit without a single blocked view.</p>
+            </div>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-kitchen.jpg" alt="Chef cooking at a long stainless-steel range in a commercial kitchen" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">♨&#xFE0E;</span>
+              <h3>Two separate kitchens</h3>
+              <p>A pure-veg kitchen with its own staff and vessels, and a non-veg kitchen in a different block. Jain and satvik food is cooked apart too.</p>
+            </div>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-parking.jpg" alt="Basement car park with marked bays and a well-lit driveway" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">Ⓟ</span>
+              <h3>Parking for 220 cars</h3>
+              <p>Basement and open-air parking with uniformed valets, so elderly guests are dropped right at the hall entrance, not at the road.</p>
+            </div>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-bridal-room.jpg" alt="Bridal room vanity mirror ringed with bulbs above a makeup counter" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">❖</span>
+              <h3>Four bridal &amp; green rooms</h3>
+              <p>Air-conditioned suites with vanity mirrors, attached washrooms and a private corridor that leads straight to the stage.</p>
+            </div>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-generator.jpg" alt="Silent standby generator and power inverters in a plant room" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">⚡&#xFE0E;</span>
+              <h3>Zero-blackout power</h3>
+              <p>Two 500 kVA silent generators take over in under 10 seconds, so the music, lights and air-conditioning never stop.</p>
+            </div>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="feature-media">
+              <img src="assets/images/feat-access-ramp.jpg" alt="Accessible entrance ramp with handrails beside the entry steps" width="800" height="500" loading="lazy">
+            </div>
+            <div class="feature-body">
+              <span class="icon-badge" aria-hidden="true">♿&#xFE0E;</span>
+              <h3>Step-free for every guest</h3>
+              <p>Ramps at each entrance, a 13-person lift to the first-floor halls and accessible restrooms on both floors.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Interactive hall finder ===== -->
+    <section class="section" aria-labelledby="finder-title">
+      <div class="container">
+        <div class="finder" id="hallFinder">
+          <div>
+            <div class="section-head" data-reveal>
+              <span class="eyebrow">Hall finder</span>
+              <h2 id="finder-title">Which hall fits your guest list?</h2>
+              <p>Slide to your expected headcount and pick the occasion. We'll match you to the hall that feels full and lively, never empty or cramped.</p>
+            </div>
+            <div class="card finder-controls">
+              <label class="label" for="guestRange">Expected guests</label>
+              <p class="guest-readout" aria-hidden="true"><span id="guestValue">250</span> <small>guests</small></p>
+              <input class="range" id="guestRange" type="range" min="15" max="900" step="5" value="250" aria-describedby="rangeScale">
+              <div class="range-scale" id="rangeScale"><span>15</span><span>450</span><span>900</span></div>
+              <fieldset class="plain-fieldset">
+                <legend class="label">Occasion</legend>
+                <div class="chips">
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="wedding" checked><span class="chip">Wedding</span></label>
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="engagement"><span class="chip">Engagement</span></label>
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="birthday"><span class="chip">Birthday</span></label>
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="corporate"><span class="chip">Corporate</span></label>
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="babyshower"><span class="chip">Baby shower</span></label>
+                  <label class="chip-radio"><input class="sr-only" type="radio" name="finderType" value="anniversary"><span class="chip">Anniversary</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <article class="card finder-result" id="finderResult" aria-live="polite">
+            <img src="assets/images/hall-saffron.jpg" alt="Saffron Hall set with round tables, gold chairs and chandeliers" width="1000" height="700" loading="lazy">
+            <div class="finder-body">
+              <span class="tag" data-f="tag">Best match for wedding &amp; reception</span>
+              <h3 data-f="name">Saffron Hall</h3>
+              <div class="spec-row">
+                <span><b data-f="seated">280</b> seated</span>
+                <span><b data-f="floating">400</b> standing</span>
+                <span><b data-f="area">5,200 sq ft</b></span>
+                <span>Dinner slot from <b data-f="price">₹95,000</b></span>
+              </div>
+              <p data-f="why">Splits into two soundproofed halls, so a 130-guest sangeet still feels full and lively instead of half-empty.</p>
+              <a class="link-arrow" data-f="link" href="pages/halls.html#saffron">See Saffron Hall details <span class="arrow" aria-hidden="true">→</span></a>
+              <p class="finder-alt" data-f="alt">Also fits: <a href="pages/halls.html#jasmine">Jasmine Lawn</a> (100–500 guests)</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Event-evening timeline ===== -->
+    <section class="section section--alt" aria-labelledby="timeline-title">
+      <div class="container timeline-wrap">
+        <figure class="timeline-photo" data-reveal>
+          <img src="assets/images/evening-toast.jpg" alt="Guests raising glasses for a toast under warm string lights at an evening reception" width="900" height="1100" loading="lazy">
+          <figcaption>A 600-guest reception, dinner slot, Marigold Ballroom</figcaption>
+        </figure>
+        <div>
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">How the night runs</span>
+            <h2 id="timeline-title">An evening at Marigold Grand, hour by hour</h2>
+            <p>This is how a typical dinner-slot reception unfolds, and who handles each part so you don't have to.</p>
+          </div>
+          <ol class="timeline">
+            <li data-reveal>
+              <time datetime="15:30">3:30 pm</time>
+              <h3>The décor crew takes over the hall</h3>
+              <p>Every dinner booking includes a 3½-hour setup window. Florists, lighting and the LED wall go up while you're still at the salon.</p>
+            </li>
+            <li data-reveal>
+              <time datetime="18:00">6:00 pm</time>
+              <h3>Final walkthrough with your event manager</h3>
+              <p>Sound check, stage seating, the cake table and the family seating plan are signed off together. Changes happen now, not mid-event.</p>
+            </li>
+            <li data-reveal>
+              <time datetime="19:00">7:00 pm</time>
+              <h3>Guests arrive to valets and welcome drinks</h3>
+              <p>Valets take cars at the porch, and chilled mocktails are served in the foyer while a live saxophonist plays.</p>
+            </li>
+            <li data-reveal>
+              <time datetime="20:00">8:00 pm</time>
+              <h3>Your stage moments</h3>
+              <p>The couple's entry, speeches and a photo slideshow on the LED wall. Our floor captain cues each moment with your emcee.</p>
+            </li>
+            <li data-reveal>
+              <time datetime="20:45">8:45 pm</time>
+              <h3>Buffet and live counters open</h3>
+              <p>Separate veg and non-veg lines, plus a seated counter for elders and children, keep queues under five minutes even at 600 guests.</p>
+            </li>
+            <li data-reveal>
+              <time datetime="23:30">11:30 pm</time>
+              <h3>Last song and a careful wrap-up</h3>
+              <p>Return gifts are handed out at the exit, and untouched food is packed for a city food bank, with your consent.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Testimonials ===== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Hosts' stories</span>
+          <h2 id="reviews-title">What families and teams say after the lights go down</h2>
+        </div>
+        <p class="rating-summary" data-reveal>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4.8 out of 5</strong>
+          <span>from 1,260 Google reviews</span>
+        </p>
+        <div class="grid grid--3">
+          <figure class="card quote-card" data-reveal>
+            <blockquote>We had 780 guests and not one complained about the food queue. Our event manager had a backup plan for everything, even my uncle's surprise 40 extra guests.</blockquote>
+            <figcaption class="quote-by">
+              <span class="avatar" aria-hidden="true">DK</span>
+              <span><strong>Divya &amp; Karthik Menon</strong><span>Wedding reception · Marigold Ballroom · 780 guests</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card quote-card" data-reveal>
+            <blockquote>The Lotus Room was perfect for our daughter's first birthday. The play corner kept 30 toddlers busy, and the décor team built the jungle theme exactly as I'd sketched it.</blockquote>
+            <figcaption class="quote-by">
+              <span class="avatar" aria-hidden="true">FS</span>
+              <span><strong>Farah Siddiqui</strong><span>First birthday · Lotus Room · 110 guests</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card quote-card" data-reveal>
+            <blockquote>Three years running, our partner summit has been here. Wi-Fi held up for 400 laptops, the AV crew never missed a cue, and lunch was served in 20 minutes flat.</blockquote>
+            <figcaption class="quote-by">
+              <span class="avatar" aria-hidden="true">RI</span>
+              <span><strong>Rajesh Iyer</strong><span>Partner summit · Marigold Ballroom · 420 delegates</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing call to action ===== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="cta-title">Peak wedding weekends book out 8 to 10 months ahead</h2>
+        <p>Send us your date and headcount. You'll get open slots, a hall recommendation and a written quote, with no obligation to book.</p>
+        <div class="btn-row">
+          <a class="btn btn--lg" href="pages/contact.html#enquiry">Book a Date</a>
+          <a class="link-arrow link-arrow--light" href="tel:+918047182260">Or call <span dir="ltr">+91 80 4718 2260</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+            <img src="assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+            <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+          </a>
+          <p>Five banquet halls, an open-air lawn and two in-house kitchens for celebrations of 15 to 900 guests on Sarjapur Road, Bengaluru.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="pages/halls.html">Halls</a></li>
+            <li><a href="pages/packages.html">Packages</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></li>
+            <li><a href="mailto:events@marigoldgrand.in">events@marigoldgrand.in</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul class="footer-links">
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Marigold Grand Banquets Pvt. Ltd. All rights reserved.</p>
+        <p>14 Sarjapur Main Road, Kaikondrahalli, Bengaluru 560035</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

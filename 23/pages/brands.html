@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brands | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="Eyewear, lens and contact lens brands stocked at Lumora Optical, Bengaluru, plus our own Lumora Atelier frames.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link is-current" href="brands.html" aria-current="page">Brands</a></li>
+          <li><a class="nav-link" href="eye-test.html">Eye Test</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="sym" aria-hidden="true">⇄</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== BRANDS =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Page hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-card">
+          <img src="../assets/images/hero-brands-sunglass-display.jpg" alt="Sunglasses displayed in lit square cubbies on a dark store wall" width="1600" height="900" fetchpriority="high">
+          <div class="page-hero-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="../index.html">Home 1</a></li>
+                <li aria-current="page">Brands</li>
+              </ol>
+            </nav>
+            <h1 id="page-title">Brands</h1>
+            <p class="lead">Fifteen eyewear, lens and contact lens brands, bought only through authorised distributors — plus Lumora Atelier, the frames we design ourselves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Brand directory (filterable) -->
+    <section class="section section-alt" aria-labelledby="directory-title">
+      <div class="container" data-filter-scope>
+        <div class="section-head">
+          <p class="eyebrow">Brand directory</p>
+          <h2 id="directory-title">Filter by what you’re shopping for</h2>
+          <p class="lead">Prices are where each brand starts in our store. Anything in a brand’s current range can be ordered in.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-chips" role="group" aria-label="Filter brands by category">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="designer" aria-pressed="false">Designer</button>
+            <button class="chip" type="button" data-filter="everyday" aria-pressed="false">Everyday</button>
+            <button class="chip" type="button" data-filter="sport" aria-pressed="false">Sport</button>
+            <button class="chip" type="button" data-filter="contacts" aria-pressed="false">Contact lenses</button>
+          </div>
+          <p class="filter-count" aria-live="polite" data-filter-count data-noun="brands">Showing all 13 brands</p>
+        </div>
+
+        <ul class="brand-grid">
+          <li class="brand-tile" data-category="designer">
+            <p class="wordmark wm-caps">Prada</p>
+            <p class="brand-cat">Designer</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Italy</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹17,900</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="designer">
+            <p class="wordmark wm-caps">Tom Ford</p>
+            <p class="brand-cat">Designer</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>USA</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹21,500</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="designer">
+            <p class="wordmark wm-serif">Persol</p>
+            <p class="brand-cat">Designer</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Italy</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹13,900</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="designer">
+            <p class="wordmark wm-wide">Silhouette</p>
+            <p class="brand-cat">Designer</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Austria</dd></div>
+              <div><dt>In store</dt><dd>Rimless titanium</dd></div>
+              <div><dt>From</dt><dd>₹19,500</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="everyday">
+            <p class="wordmark wm-serif">Lumora Atelier</p>
+            <p class="brand-cat">Everyday · our label</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>India</dd></div>
+              <div><dt>In store</dt><dd>Optical</dd></div>
+              <div><dt>From</dt><dd>₹3,490</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="everyday">
+            <p class="wordmark wm-wide">Ray-Ban</p>
+            <p class="brand-cat">Everyday</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>USA</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹5,490</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="everyday">
+            <p class="wordmark wm-serif">Vogue Eyewear</p>
+            <p class="brand-cat">Everyday</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Italy</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹4,290</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="everyday sport">
+            <p class="wordmark wm-caps">Carrera</p>
+            <p class="brand-cat">Everyday · Sport</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Italy</dd></div>
+              <div><dt>In store</dt><dd>Optical &amp; sun</dd></div>
+              <div><dt>From</dt><dd>₹6,990</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="sport">
+            <p class="wordmark wm-caps">Oakley</p>
+            <p class="brand-cat">Sport</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>USA</dd></div>
+              <div><dt>In store</dt><dd>Sport, sun &amp; optical</dd></div>
+              <div><dt>From</dt><dd>₹8,490</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="sport">
+            <p class="wordmark wm-wide">Rudy Project</p>
+            <p class="brand-cat">Sport</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>Italy</dd></div>
+              <div><dt>In store</dt><dd>Cycling &amp; running</dd></div>
+              <div><dt>From</dt><dd>₹9,900</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="contacts">
+            <p class="wordmark wm-caps">Acuvue</p>
+            <p class="brand-cat">Contact lenses</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>USA</dd></div>
+              <div><dt>In store</dt><dd>Daily &amp; two-weekly</dd></div>
+              <div><dt><span dir="ltr">30 dailies</span></dt><dd>₹1,850</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="contacts">
+            <p class="wordmark wm-wide">Bausch + Lomb</p>
+            <p class="brand-cat">Contact lenses</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>USA</dd></div>
+              <div><dt>In store</dt><dd>Daily, monthly, toric</dd></div>
+              <div><dt><span dir="ltr">30 dailies</span></dt><dd>₹1,450</dd></div>
+            </dl>
+          </li>
+          <li class="brand-tile" data-category="contacts">
+            <p class="wordmark wm-serif">CooperVision</p>
+            <p class="brand-cat">Contact lenses</p>
+            <dl class="brand-facts">
+              <div><dt>Origin</dt><dd>UK / USA</dd></div>
+              <div><dt>In store</dt><dd>Toric &amp; myopia control</dd></div>
+              <div><dt><span dir="ltr">30 dailies</span></dt><dd>₹1,650</dd></div>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 — Our own label -->
+    <section class="section" aria-labelledby="atelier-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Our own label</p>
+          <h2 id="atelier-title">Lumora Atelier: frames we design and make in small batches</h2>
+          <p>We started Atelier in 2019 when customers kept asking for designer-quality acetate without the designer price. Each shape is drawn in our Indiranagar studio, cut from Italian cellulose acetate and hand-polished by a family workshop in Mumbai.</p>
+          <ul class="ticks">
+            <li>Five-barrel hinges and wire-cored arms you can adjust for years</li>
+            <li>14 shapes in three colours each, sized from 47 to 55 mm</li>
+            <li>About 40% below comparable designer acetate — no distributor margin</li>
+            <li>Two-year warranty against manufacturing faults</li>
+          </ul>
+          <p class="spaced"><a class="link-arrow" href="products.html#frames">See Atelier frames by style <span class="arr" aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="split-media">
+          <img src="../assets/images/atelier-frames-tray.jpg" alt="Display tray of acetate frames in black, tortoiseshell, red and clear" width="1000" height="800" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — Lens partners -->
+    <section class="section section-alt" aria-labelledby="partners-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Lens partners</p>
+          <h2 id="partners-title">The lens brand matters more than the frame label</h2>
+          <p class="lead">You see the world through the lens, so we fit from just four lens ranges we trust with every kind of prescription.</p>
+        </div>
+
+        <ul class="partner-grid">
+          <li class="partner">
+            <h3>ZEISS</h3>
+            <p class="partner-origin">Germany</p>
+            <dl>
+              <div><dt>Known for</dt><dd>Precise progressive designs and DuraVision coatings</dd></div>
+              <div><dt>Our pick</dt><dd>SmartLife progressives for heavy phone users</dd></div>
+              <div><dt>Progressives from</dt><dd>₹14,500 · ready in 7–10 days</dd></div>
+            </dl>
+          </li>
+          <li class="partner">
+            <h3>Essilor</h3>
+            <p class="partner-origin">France</p>
+            <dl>
+              <div><dt>Known for</dt><dd>Varilux progressives and Crizal anti-reflective coatings</dd></div>
+              <div><dt>Our pick</dt><dd>Varilux Comfort for first-time progressive wearers</dd></div>
+              <div><dt>Progressives from</dt><dd>₹13,500 · ready in 7–10 days</dd></div>
+            </dl>
+          </li>
+          <li class="partner">
+            <h3>Hoya</h3>
+            <p class="partner-origin">Japan</p>
+            <dl>
+              <div><dt>Known for</dt><dd>Thin high-index materials and Hoyalux progressives</dd></div>
+              <div><dt>Our pick</dt><dd>1.74 lenses for prescriptions beyond ±6.00</dd></div>
+              <div><dt>Progressives from</dt><dd>₹11,900 · ready in 7 days</dd></div>
+            </dl>
+          </li>
+          <li class="partner">
+            <h3>Lumora Essentials</h3>
+            <p class="partner-origin">Our on-site lab</p>
+            <dl>
+              <div><dt>Known for</dt><dd>Single-vision and office lenses edged in store</dd></div>
+              <div><dt>Our pick</dt><dd>Everyday single vision for under-40s</dd></div>
+              <div><dt>Single vision from</dt><dd>₹1,500 · ready in 3 days</dd></div>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5 — Authorised stockist promise -->
+    <section class="section" aria-labelledby="promise-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Authorised stockist</p>
+          <h2 id="promise-title">Every branded frame is genuine and traceable</h2>
+        </div>
+        <ol class="promise-grid">
+          <li class="promise">
+            <h3>Official distributors only</h3>
+            <p>We buy from each brand’s authorised Indian distributor — never grey-market imports or “first copies”.</p>
+          </li>
+          <li class="promise">
+            <h3>Complete in the box</h3>
+            <p>The original case, cleaning cloth and warranty card come with every branded frame.</p>
+          </li>
+          <li class="promise">
+            <h3>Serial number on your invoice</h3>
+            <p>Your GST invoice lists model, colour and serial number for warranty or insurance claims.</p>
+          </li>
+          <li class="promise">
+            <h3>We handle warranty claims</h3>
+            <p>If a hinge or coating fails within the brand’s warranty, we deal with the distributor so you don’t have to.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section 6 — Next step -->
+    <section class="section section-alt" aria-labelledby="brands-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="brands-cta-title">Can’t see the model you want? We’ll order it in</h2>
+            <p>Send us the brand and model number. If the distributor has it, it arrives in 5–7 working days with a refundable ₹1,000 deposit.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="contact.html?topic=order#contact-form">Request a Model</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+          <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+        </a>
+        <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <div>
+          <h2 class="footer-title">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Shop</h2>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="brands.html" aria-current="page">Brands</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Care</h2>
+          <ul>
+            <li><a href="eye-test.html">Eye Test</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care · 1st Floor, 612, 12th Main Road, Indiranagar, Bengaluru 560008</p>
+      <p>Mon–Sat 10 am – 8:30 pm · Sun 11 am – 6 pm</p>
+    </div>
+  </footer>
+</body>
+</html>

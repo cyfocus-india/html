@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Sign in to the Beadwell customer portal to book wash slots, track your car and manage points.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="auth">
+    <!-- Brand panel with a photo and what members get -->
+    <aside class="auth-media" aria-label="Why sign in">
+      <img src="../assets/images/auth-signin-white-car-droplets.webp" alt="Rear quarter of a white car covered in water droplets after a rinse" width="1100" height="1650">
+      <p class="eyebrow">Customer portal</p>
+      <h2>Book the bay, watch the wash, collect the points.</h2>
+      <ul class="check-list">
+        <li>Same-day wash slots every 20 minutes</li>
+        <li>Live stage tracking while you wait</li>
+        <li>Receipts and service history in one place</li>
+      </ul>
+    </aside>
+
+    <main class="auth-panel" id="main">
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text"><span class="brand-name">Beadwell</span></span>
+        </a>
+        <div class="auth-tools">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        </div>
+      </div>
+
+      <div class="auth-form-wrap">
+        <!-- Sign In view -->
+        <section id="signin-view" aria-labelledby="signin-title">
+          <h1 id="signin-title">Sign In</h1>
+          <p class="muted">Welcome back. Sign in to book a slot, check on your car or redeem points.</p>
+          <form id="signin-form" class="auth-form" novalidate>
+            <div class="field">
+              <label for="si-email">Email</label>
+              <input id="si-email" name="email" type="email" autocomplete="email" required data-label="Email">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="si-password">Password</label>
+              <div class="password-wrap">
+                <input id="si-password" name="password" type="password" autocomplete="current-password" required data-label="Password" data-min="8">
+                <button class="pw-toggle" type="button" aria-controls="si-password" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <div class="auth-row">
+              <label class="check-field"><input type="checkbox" id="si-remember" checked> Keep me signed in</label>
+              <button class="link-btn" type="button" data-show-reset>Forgot password?</button>
+            </div>
+            <button class="btn btn--block" type="submit">Sign In</button>
+          </form>
+          <p class="auth-switch">New to Beadwell? <a href="signup.html">Create an account</a></p>
+          <p class="demo-note">Demo portal: any email with a password of 8+ characters opens a sample dashboard. Accounts made on Sign Up are checked against their own password.</p>
+        </section>
+
+        <!-- Forgot password view (same page) -->
+        <section id="reset-view" aria-labelledby="reset-title" hidden>
+          <h1 id="reset-title">Reset your password</h1>
+          <p class="muted">Enter the email on your account and we&rsquo;ll send a reset link that works for 30 minutes.</p>
+          <form id="reset-form" class="auth-form" novalidate>
+            <div class="field">
+              <label for="rs-email">Email</label>
+              <input id="rs-email" name="reset-email" type="email" autocomplete="email" required data-label="Email">
+              <p class="error-msg" aria-live="polite"></p>
+            </div>
+            <button class="btn btn--block" type="submit">Send Reset Link</button>
+          </form>
+          <div id="reset-success" class="form-success" role="status" tabindex="-1" hidden>
+            <span class="bead" aria-hidden="true">&#10003;</span>
+            <div><strong>Check your inbox</strong>If an account exists for <span data-email></span>, a reset link is on its way. It can take a minute to arrive.</div>
+          </div>
+          <p class="auth-switch"><button class="link-btn" type="button" data-show-signin><span class="arrow" aria-hidden="true">&larr;</span> Back to Sign In</button></p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

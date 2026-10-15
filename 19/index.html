@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 1 - AuraWash Laundry &amp; Dry Cleaning</title>
+  <meta name="description" content="AuraWash doorstep laundry and dry cleaning with 24-hour turnaround, ozone water sanitization, and eco-friendly garment care.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="AuraWash Home">
+        <img src="assets/images/logo.png" alt="AuraWash Laundry &amp; Dry Cleaning Logo" class="site-logo-img">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            Home <span class="caret-arrow" aria-hidden="true"></span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item active">Home 1</a>
+            <a href="index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="pages/services.html" class="nav-link">Services</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+        </div>
+
+        <!-- Mobile & Tablet Drawer Actions -->
+        <div class="nav-mobile-actions">
+          <a href="pages/signin.html" class="btn btn-primary nav-mobile-signin">Sign In</a>
+          <div class="nav-mobile-toggles">
+            <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+            <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action Buttons & Toggles -->
+      <div class="header-actions">
+        <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+        <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        <a href="pages/signin.html" class="btn btn-primary">Sign In</a>
+        
+        <!-- Hamburger Menu Button for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO SECTION: Doorstep Pickup & Fast Turnaround -->
+    <section class="hero-h1">
+      <div class="container hero-grid-h1">
+        <div class="hero-content-h1">
+          <div class="badge">✦ Doorstep Pickup &amp; 24h Turnaround</div>
+          <h1>Crisp, Fresh Laundry Picked Up &amp; Delivered To Your Door</h1>
+          <p class="hero-subtitle">
+            Say goodbye to laundry day chores. We collect your garments, wash, press, and deliver them back folded or hung in as fast as 24 hours.
+          </p>
+
+          <!-- Interactive Area Checker Widget -->
+          <div class="area-checker-card">
+            <div class="checker-title">
+              <span>📍 Check Live Doorstep Route Availability</span>
+            </div>
+            <form id="areaCheckerForm" class="checker-form">
+              <input type="text" id="checkerZipInput" class="checker-input" placeholder="Enter Zip or Postal Code (e.g. 90210)" required>
+              <button type="submit" class="btn btn-primary">Check Route</button>
+            </form>
+            <div id="checkerResult" class="checker-result"></div>
+          </div>
+
+          <div class="hero-badges-list">
+            <div class="trust-item">
+              <span>✓</span> Zero Harsh Solvents
+            </div>
+            <div class="trust-item">
+              <span>✓</span> 100% Cotton Garment Bags
+            </div>
+            <div class="trust-item">
+              <span>✓</span> Free Missing Button Repairs
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media-h1">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero-home1.jpg" alt="Organized clean fresh laundry and linens ready for doorstep delivery">
+          </div>
+          <div class="floating-stat-card">
+            <div class="stat-icon-circle">⏱</div>
+            <div class="stat-content">
+              <div class="stat-number">24 Hours</div>
+              <div class="stat-label">Standard Turnaround</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: How Doorstep Service Works -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Seamless 3-Step Process</div>
+          <h2>How AuraWash Doorstep Care Works</h2>
+          <p>We handle everything from your doorstep to your closet with meticulous care and temperature-controlled transport.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num-pill">1</div>
+            <h3>Book Online in 60s</h3>
+            <p>Select your preferred pickup window and specify your custom care choices (detergent type, starch level, or delicate handling).</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-pill">2</div>
+            <h3>We Bag &amp; Tag at Door</h3>
+            <p>Our uniformed driver collects your garments in weather-sealed hampers, tags each item digitally, and weighs loads on spot.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-pill">3</div>
+            <h3>Delivered Crisp &amp; Fresh</h3>
+            <p>Your laundry is returned pristine, neatly folded or hung on wooden hangers, ready to wear straight out of the protective bag.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Turnaround Speed & Care Matrix -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Speed Comparison</div>
+          <h2>Turnaround Speed &amp; Care Matrix</h2>
+          <p>Transparent timelines matched to your wardrobe needs, whether you have an urgent morning meeting or weekly family loads.</p>
+        </div>
+
+        <div class="matrix-table-wrap">
+          <table class="speed-matrix-table">
+            <thead>
+              <tr>
+                <th>Service Class</th>
+                <th>Turnaround Time</th>
+                <th>Care Method</th>
+                <th>Packaging</th>
+                <th>Typical Items</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard Wash &amp; Fold</strong></td>
+                <td><span class="speed-tag">24 Hours</span></td>
+                <td>Ozone water sanitization, hypoallergenic tumble dry</td>
+                <td>Crisp bundle fold in eco-wrap</td>
+                <td>T-shirts, jeans, towels, everyday linens</td>
+              </tr>
+              <tr>
+                <td><strong>Same-Day Express Rush</strong></td>
+                <td><span class="speed-tag">8 Hours</span></td>
+                <td>Priority wash &amp; hand-pressed steam turnaround</td>
+                <td>Breathable protective garment bags</td>
+                <td>Business shirts, blazers, urgent suits</td>
+              </tr>
+              <tr>
+                <td><strong>Premium Dry Cleaning</strong></td>
+                <td><span class="speed-tag">48 Hours</span></td>
+                <td>Hydrocarbon non-toxic solvent &amp; hand-spotting</td>
+                <td>Custom hangers with collar stays</td>
+                <td>Wool suits, silk blouses, evening wear</td>
+              </tr>
+              <tr>
+                <td><strong>Heavy Drapery &amp; Curtains</strong></td>
+                <td><span class="speed-tag">72 Hours</span></td>
+                <td>Non-shrink steam extraction &amp; weighted hem shaping</td>
+                <td>Padded vertical transport rods</td>
+                <td>Velvet drapes, blackout curtains, sheer panels</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Fabric & Stain Protection Technology -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Fabric Science</div>
+          <h2>Our 4-Pillar Garment Protection System</h2>
+          <p>We treat every fiber with scientific precision, using sustainable chemistry that cleans deeply without fading or fabric fatigue.</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-img-wrap">
+              <img src="assets/images/tech-ozone.jpg" alt="Cold ozone water sanitization wash drum" class="tech-img">
+            </div>
+            <h4>Ozone Water Sanitization</h4>
+            <p>Cold ozone wash eliminates 99.9% of bacteria and allergens while preserving fiber elasticity and natural fabric softness.</p>
+          </div>
+          <div class="tech-card">
+            <div class="tech-img-wrap">
+              <img src="assets/images/tech-eco-solvent.jpg" alt="Botanical green eco-solvent cleaning fluids" class="tech-img">
+            </div>
+            <h4>Zero Perchloroethylene</h4>
+            <p>100% green organic dry cleaning fluids that leave no harsh chemical odors, rashes, or toxic fabric residues.</p>
+          </div>
+          <div class="tech-card">
+            <div class="tech-img-wrap">
+              <img src="assets/images/tech-enzyme-spotting.jpg" alt="Targeted botanical enzyme spotting treatment" class="tech-img">
+            </div>
+            <h4>Targeted Enzyme Spotting</h4>
+            <p>Specialized botanic enzyme treatments dissolve stubborn wine, coffee, and grease stains before garments enter the drum.</p>
+          </div>
+          <div class="tech-card">
+            <div class="tech-img-wrap">
+              <img src="assets/images/tech-steam-press.jpg" alt="Tension steam form finishing press" class="tech-img">
+            </div>
+            <h4>Tension Steam Finishing</h4>
+            <p>State-of-the-art Italian tension presses restore garment silhouettes, sleeve cuffs, and lapels to factory sharpness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Neighborhood Route Availability -->
+    <section class="section">
+      <div class="container">
+        <div class="route-grid">
+          <div class="route-content">
+            <div class="badge">Local Van Coverage</div>
+            <h2>Daily Doorstep Pickup Windows In Your Neighborhood</h2>
+            <p style="margin-bottom: 1.5rem;">
+              Our dedicated fleet operates flexible morning and evening routes so you never have to rearrange your schedule. You receive live SMS tracking when our driver is 15 minutes away.
+            </p>
+            <div class="hero-badges-list">
+              <div class="trust-item"><span>🚚</span> Live GPS Van Tracking</div>
+              <div class="trust-item"><span>📱</span> SMS Arrival Notifications</div>
+              <div class="trust-item"><span>🔒</span> Contactless Porch Handoff</div>
+            </div>
+          </div>
+
+          <div class="route-slots-card">
+            <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Today's Available Route Slots</h3>
+            <div class="slot-item">
+              <div>
+                <div class="slot-time">Morning Express (7:00 AM - 9:00 AM)</div>
+                <div class="slot-desc">Ideal for pre-commute doorstep handoffs</div>
+              </div>
+              <div class="slot-status-open">● Open Slots</div>
+            </div>
+            <div class="slot-item">
+              <div>
+                <div class="slot-time">Midday Route (12:00 PM - 2:00 PM)</div>
+                <div class="slot-desc">Concierge building &amp; office collections</div>
+              </div>
+              <div class="slot-status-open">● Open Slots</div>
+            </div>
+            <div class="slot-item">
+              <div>
+                <div class="slot-time">Evening Route (6:00 PM - 8:30 PM)</div>
+                <div class="slot-desc">Post-work handoff with signature receipt</div>
+              </div>
+              <div class="slot-status-open">● Open Slots</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Customer Stories & Proof -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Verified Reviews</div>
+          <h2>Trusted by Over 12,000 Busy Households</h2>
+          <p>Read how AuraWash transformed everyday laundry routines into effortless convenience.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "The 24-hour turnaround is unmatched. I handed over 30 lbs of mixed family wash on Tuesday evening and had crisp, folded clothes back before dinner Wednesday."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">MR</div>
+              <div>
+                <div class="reviewer-name">Marcus Reynolds</div>
+                <div class="reviewer-tag">Weekly Wash &amp; Fold Subscriber</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "They salvaged a vintage silk blazer that two other dry cleaners refused to touch. The ozone treatment left it completely odor-free and immaculate."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">SL</div>
+              <div>
+                <div class="reviewer-name">Sophia Laurent</div>
+                <div class="reviewer-tag">Dry Cleaning &amp; Alterations</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Having heavy living room drapes taken down, cleaned, pressed, and rehung without any shrinkage or stress was worth every single penny."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">DK</div>
+              <div>
+                <div class="reviewer-name">David Kim</div>
+                <div class="reviewer-tag">Curtain &amp; Linen Service</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Next Step CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready For Truly Effortless Doorstep Garment Care?</h2>
+          <p>Schedule your first pickup now and receive $15 off your order. Complimentary collection and return on all orders over $30.</p>
+          <div class="cta-actions">
+            <a href="pages/contact.html" class="btn btn-primary btn-lg">Schedule Pickup Today</a>
+            <a href="pages/pricing.html" class="btn btn-secondary btn-lg">View Detailed Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Site Footer (Identical on public pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">
+            <img src="assets/images/logo-dark.png" alt="AuraWash Logo" style="height:40px;">
+          </a>
+          <p>
+            Eco-friendly doorstep laundry, dry cleaning, and fabric care with guaranteed 24-hour turnaround.
+          </p>
+          <div class="footer-contact-mini">
+            <div>📞 (555) 328-9274</div>
+            <div>✉ care@aurawash.com</div>
+            <div>📍 482 Cleanview Blvd, Suite 100</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AuraWash Laundry &amp; Dry Cleaning Services. All rights reserved.</div>
+        <div>Zero Harsh Chemicals &bull; 100% Recyclable Packaging &bull; Cold Ozone Sanitize</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

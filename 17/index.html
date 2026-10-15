@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 1 | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Lumina Dental & Oral Care Center in San Francisco: gentle family dentistry, anxiety-free visits and confident smiles for every age.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="index.html" class="dropdown-link active" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="pages/services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="pages/doctors.html" class="nav-link">Doctors</a></li>
+          <li class="nav-item"><a href="pages/pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="pages/dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="pages/signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle active" id="mobileHomeAccordion" aria-expanded="true" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content is-expanded" id="mobileHomeContent">
+            <li><a href="index.html" class="mobile-accordion-link active" aria-current="page">Home 1</a></li>
+            <li><a href="index1.html" class="mobile-accordion-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="pages/services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="pages/doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pages/pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="pages/contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="pages/dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="pages/contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="pages/signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Home 1 (smile-care template) -->
+  <main id="main">
+    <!-- 1. Hero: split layout with smile-care photo -->
+    <section class="hero-home1">
+      <div class="container">
+        <div class="hero-split-grid">
+          <div class="hero-content">
+            <span class="hero-badge">&#10022; Gentle family &amp; cosmetic dentistry</span>
+            <h1 class="hero-title">Healthy Teeth, Confident Smiles for Life</h1>
+            <p class="hero-subtitle">Calm, unhurried dental care for the whole family in downtown San Francisco. From your child's first check-up to a complete smile makeover, we explain every step and never rush you.</p>
+            <div class="hero-actions">
+              <a href="pages/contact.html" class="btn btn-primary btn-lg">Book Appointment</a>
+              <a href="pages/services.html" class="btn btn-outline btn-lg">Explore Services</a>
+            </div>
+
+            <ul class="hero-highlights">
+              <li class="highlight-item">
+                <span class="highlight-num">99.4%</span>
+                <span class="highlight-label">Patient satisfaction</span>
+              </li>
+              <li class="highlight-item">
+                <span class="highlight-num">18k+</span>
+                <span class="highlight-label">Smiles restored</span>
+              </li>
+              <li class="highlight-item">
+                <span class="highlight-num">15+</span>
+                <span class="highlight-label">Years in San Francisco</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <div class="hero-image-frame">
+              <img src="assets/images/hero-home1.jpg" alt="Smiling dentist checking a relaxed, smiling male patient's teeth during a routine exam" width="1200" height="900">
+            </div>
+            <div class="floating-pill">
+              <div class="floating-pill-icon" aria-hidden="true">&#9733;</div>
+              <div>
+                <div class="floating-pill-title">4.9 average rating</div>
+                <div class="floating-pill-subtitle">From 1,200+ verified patient reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. How it works: first visit in four steps -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How It Works</span>
+          <h2>Your First Visit in Four Simple Steps</h2>
+          <p>New patients always know what happens next, what it costs and how long it takes before any treatment begins.</p>
+        </div>
+
+        <ol class="grid-4 journey-list">
+          <li class="journey-step-card">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Gentle Check-Up</h3>
+            <p>A 60-minute exam with low-dose digital X-rays, gum measurements and an oral cancer screening.</p>
+          </li>
+          <li class="journey-step-card">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>Clear Smile Plan</h3>
+            <p>We show you your own photos and X-rays, then walk through every option with written costs and timelines.</p>
+          </li>
+          <li class="journey-step-card">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>Comfortable Treatment</h3>
+            <p>Care at your pace with numbing gel before every injection and a hand signal to pause at any time.</p>
+          </li>
+          <li class="journey-step-card">
+            <div class="step-number" aria-hidden="true">04</div>
+            <h3>Lasting Results</h3>
+            <p>A personal home-care routine and six-month recall reminders sent straight to your patient dashboard.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. Comfort amenities: split cards + photo -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Anxiety-Free Visits</span>
+          <h2>A Chairside Comfort Menu for Nervous Patients</h2>
+          <p>Around one in three adults feels anxious about the dentist. Every treatment room includes these extras at no charge, so ask for whatever helps you relax.</p>
+        </div>
+
+        <div class="split-feature">
+          <div class="grid-2 comfort-grid">
+            <div class="feature-card">
+              <div class="feature-icon-badge" aria-hidden="true">&#127911;</div>
+              <h3>Noise-Canceling Audio</h3>
+              <p>Wireless headphones with your own playlist or calming soundscapes mask the sound of instruments.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-badge" aria-hidden="true">&#128186;</div>
+              <h3>Heated Massage Chairs</h3>
+              <p>Memory-foam chairs with gentle lumbar warmth ease tension during longer appointments.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-badge" aria-hidden="true">&#128250;</div>
+              <h3>Ceiling-Mounted Screens</h3>
+              <p>Stream a favorite show or a nature documentary on an overhead screen while we work.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-badge" aria-hidden="true">&#127807;</div>
+              <h3>Aromatherapy &amp; Warm Towels</h3>
+              <p>Lavender aromatherapy during care and a warm, lemon-scented towel when you are finished.</p>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <div class="hero-image-frame comfort-frame">
+              <img src="assets/images/comfort-suite.jpg" alt="Dentist chatting with a relaxed patient seated in a bright, modern treatment room" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="floating-pill">
+              <div class="floating-pill-icon" aria-hidden="true">&#10024;</div>
+              <div>
+                <div class="floating-pill-title">Phobia-friendly care</div>
+                <div class="floating-pill-subtitle">Extra time is booked for anxious patients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Proof: patient reviews -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Patient Stories</span>
+          <h2>Smile Transformations in Our Patients' Words</h2>
+          <p>Verified reviews from patients treated by our doctors in the last twelve months.</p>
+        </div>
+
+        <div class="grid-3">
+          <figure class="testimonial-card">
+            <div class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote class="testimonial-quote">"I avoided dentists for over a decade. Dr. Elena Rostova explained every step and my tooth-colored fillings were completely pain-free. I finally smile in photos again."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="assets/images/smile-transformation-1.jpg" alt="Portrait of patient Claire Miller" class="author-avatar" width="44" height="44" loading="lazy">
+              <span class="author-info">
+                <span class="author-name">Claire Miller</span>
+                <span class="author-procedure">Fillings &amp; whitening</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <div class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote class="testimonial-quote">"Dr. Sarah Lin corrected my crossbite with clear aligners in nine months. Checking my appointments and rinse prescription in the patient dashboard made it easy."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="assets/images/smile-transformation-2.jpg" alt="Portrait of patient David Chen" class="author-avatar" width="44" height="44" loading="lazy">
+              <span class="author-info">
+                <span class="author-name">David Chen</span>
+                <span class="author-procedure">Clear aligners</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <div class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote class="testimonial-quote">"Dr. Marcus Vance placed my implant in under 45 minutes and I needed nothing stronger than ibuprofen afterwards. The whole team was kind from start to finish."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="assets/images/testimonial-sophia.jpg" alt="Portrait of patient Sophia Turner" class="author-avatar" width="44" height="44" loading="lazy">
+              <span class="author-info">
+                <span class="author-name">Sophia Turner</span>
+                <span class="author-procedure">Implant &amp; ceramic crown</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Clinical Safety & Practice Guarantees -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clinical Excellence</span>
+          <h2>The Four Guarantees Behind Every Visit</h2>
+          <p>We hold our practice to hospital-grade hygiene, biocompatible materials and complete fee transparency.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Safety</span>
+            <h3>Class-B Sterilization</h3>
+            <p>Biological autoclave spore testing is logged every morning. Every instrument cassette remains sealed until opened right in front of you.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Materials</span>
+            <h3>100% Mercury-Free</h3>
+            <p>We use exclusively biocompatible, tooth-matching composite resins and German ceramic restorations that bond naturally with tooth enamel.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Transparency</span>
+            <h3>No Surprise Billing</h3>
+            <p>You receive an itemized, written cost breakdown with insurance benefits verified before any doctor picks up an instrument.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Availability</span>
+            <h3>Same-Day Emergencies</h3>
+            <p>Two emergency slots are kept open daily so patients with acute pain, chipped teeth, or lost crowns receive prompt relief.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Next step: split booking card with same-day emergency line -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="booking-split">
+          <div class="booking-split-text">
+            <span class="section-tag">New Patients Welcome</span>
+            <h2>Ready for a Healthier, Brighter Smile?</h2>
+            <p>Book your first check-up online in under a minute. Most new patients are seen within five working days, and evening slots run until 7:00 PM on weekdays.</p>
+          </div>
+          <div class="booking-split-actions">
+            <a href="pages/contact.html" class="btn btn-primary btn-lg btn-block">Book Appointment</a>
+            <a href="pages/pricing.html" class="btn btn-outline btn-lg btn-block">See Treatment Prices</a>
+            <p class="booking-emergency">
+              <strong>Toothache or broken tooth?</strong>
+              Same-day emergency slots are held every day. Call <a href="tel:+14158903329">(415) 890-3329</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="pages/services.html" class="footer-link">Services</a></li>
+            <li><a href="pages/doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pages/pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="pages/signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="pages/signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="pages/dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

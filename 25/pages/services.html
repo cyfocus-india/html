@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - VoltGuard Electrical</title>
+  <meta name="description" content="Comprehensive electrical services: residential wiring, ceiling fan & light fitting, switchboard repair, and 200-amp panel upgrades.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header (Identical on every page) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo (links to Home 1) -->
+      <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+        <img src="../assets/images/logo.png" alt="VoltGuard Electrical Shield Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">VoltGuard</span>
+          <span class="brand-tagline">Electrical Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index1.html" class="nav-link">Home 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link active">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+          <span aria-hidden="true">☾</span>
+        </button>
+
+        <!-- RTL Direction Toggle -->
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction" title="Toggle text direction">
+          ⇄ RTL
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Service</a>
+
+        <!-- Hamburger Icon for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+          <img src="../assets/images/logo.png" alt="VoltGuard Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">VoltGuard</span>
+            <span class="brand-tagline">Electrical Services</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close navigation menu" title="Close navigation menu">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-list">
+        <a href="../index.html" class="mobile-nav-link">Home 1</a>
+        <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+        <a href="services.html" class="mobile-nav-link active">Services</a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme">
+          <span aria-hidden="true">☾</span> Theme
+        </button>
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction">
+          ⇄ RTL
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Book An Electrician</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section with Relevant Image -->
+    <section class="section hero-standard">
+      <div class="container hero-standard-grid">
+        <div class="hero-content">
+          <span class="section-badge">Master Electrician Capabilities</span>
+          <h1 class="hero-title">Professional Electrical &amp; Home Wiring Services</h1>
+          <p class="hero-subtitle">
+            Engineered residential electrical solutions delivered with certified safety compliance. Whether you need whole-house rewiring, high-ceiling fixture mounting, rapid switchboard repairs, or 200A service upgrades, we guarantee transparent quotes and lifetime reliability.
+          </p>
+          <div class="hero-btn-row">
+            <a href="contact.html" class="btn btn-primary btn-lg">Schedule A Technician</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg">View Service Rates</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="../assets/images/hero-services.jpg" alt="VoltGuard master electrical technician testing circuitry and wiring" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Detailed Breakdown of Core Services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Core Disciplines</span>
+          <h2 class="section-title">Comprehensive Residential Electrical Solutions</h2>
+          <p class="section-desc">
+            Explore the specialized areas our licensed electrical contractors manage every day with certified tools and zero guesswork.
+          </p>
+        </div>
+
+        <div class="grid-2" style="gap: 2.5rem;">
+          <!-- Core Service 1: Wiring & Rewiring -->
+          <div id="wiring-service" class="feature-card" data-service-link="contact.html?service=rewiring" style="display: flex; gap: 1.5rem; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="feature-icon-box" style="margin-bottom: 0;">🔌</div>
+              <div>
+                <span class="hero-pill" style="font-size: 0.75rem;">Safety Upgrade</span>
+                <h3 class="feature-title" style="margin-bottom: 0;">Whole-House Wiring &amp; Rewiring</h3>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Aging, ungrounded, or un-sheathed wires pose serious fire hazards. We replace outdated knob-and-tube, cloth-insulated, and hazardous aluminum branch circuits with modern UL-listed copper NM-B Romex cables. Our specialized wire-fishing technique minimizes wall penetrations, preserving your drywall and trim.
+            </p>
+            <ul class="service-specs-list" style="margin-bottom: 0;">
+              <li class="service-spec-item"><span class="bullet">✓</span> Full copper circuit distribution to all outlets and switches</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Dedicated equipment grounding paths throughout the structure</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Tamper-resistant, child-safe receptacles installed to 2023 code</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <a href="contact.html?service=rewiring" class="btn btn-primary btn-sm">Book Rewiring Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Core Service 2: Fan & Light Fitting -->
+          <div id="fan-light-service" class="feature-card" data-service-link="contact.html?service=fan-light" style="display: flex; gap: 1.5rem; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="feature-icon-box" style="margin-bottom: 0;">💡</div>
+              <div>
+                <span class="hero-pill" style="font-size: 0.75rem;">Precision Fixture</span>
+                <h3 class="feature-title" style="margin-bottom: 0;">Fan &amp; Architectural Light Fitting</h3>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Installing heavy ceiling fans and intricate crystal chandeliers requires structural reinforcement. We replace standard plastic ceiling boxes with heavy-duty metal fan braces anchored directly into ceiling joists, safely supporting dynamic loads up to 70 pounds without vibration or wobble.
+            </p>
+            <ul class="service-specs-list" style="margin-bottom: 0;">
+              <li class="service-spec-item"><span class="bullet">✓</span> Joist-anchored metal support brackets rated for continuous vibration</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Wall speed controls, multi-speed wireless remotes, and smart dimmers</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Safe installation in vaulted, cathedral, and high-story ceilings up to 24ft</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <a href="contact.html?service=fan-light" class="btn btn-primary btn-sm">Book Fan &amp; Light Fitting &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Core Service 3: Switchboard Repair -->
+          <div id="switchboard-service" class="feature-card" data-service-link="contact.html?service=switchboard" style="display: flex; gap: 1.5rem; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="feature-icon-box" style="margin-bottom: 0;">⚙️</div>
+              <div>
+                <span class="hero-alert-pill" style="font-size: 0.75rem;">Emergency Ready</span>
+                <h3 class="feature-title" style="margin-bottom: 0;">Switchboard &amp; Breaker Repair</h3>
+              </div>
+            </div>
+            <p class="feature-desc">
+              When a breaker refuses to reset, buzzes, or emits an acrid burning odor, your electrical panel is warning of danger. Our mobile units carry OEM breakers for all major panel brands to rapidly isolate short circuits, restore burnt busbars, and balance phase loads on the spot.
+            </p>
+            <ul class="service-specs-list" style="margin-bottom: 0;">
+              <li class="service-spec-item"><span class="bullet">✓</span> Fluke digital multimeter phase balancing and load testing</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Busbar reconditioning and torque calibration to manufacturer specs</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Immediate replacement of defective, weak, or arcing circuit breakers</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <a href="contact.html?service=switchboard" class="btn btn-primary btn-sm">Book Breaker Repair &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Core Service 4: Panel Upgrades -->
+          <div id="panel-upgrade-service" class="feature-card" data-service-link="contact.html?service=panel-upgrade" style="display: flex; gap: 1.5rem; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="feature-icon-box" style="margin-bottom: 0;">⚡</div>
+              <div>
+                <span class="hero-pill" style="font-size: 0.75rem;">Capacity Expansion</span>
+                <h3 class="feature-title" style="margin-bottom: 0;">200-Amp Main Panel Upgrades</h3>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Replace obsolete 60A or 100A fuse boxes or problematic Zinsco/Federal Pacific panels with a modern 200A or 400A main service center. We manage the entire lifecycle: utility power shutdown coordination, city building permits, meter socket replacement, and final municipal sign-off.
+            </p>
+            <ul class="service-specs-list" style="margin-bottom: 0;">
+              <li class="service-spec-item"><span class="bullet">✓</span> Dual 8-foot copper grounding rods bonded to main water supply</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> 40-circuit high-capacity panel with built-in surge suppression</li>
+              <li class="service-spec-item"><span class="bullet">✓</span> Complete city permit filing, utility coordination, and inspection guarantee</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <a href="contact.html?service=panel-upgrade" class="btn btn-primary btn-sm">Book 200A Upgrade &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Specialized & High-Demand Additions -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Modern Capabilities</span>
+          <h2 class="section-title">Specialized High-Voltage Installations</h2>
+          <p class="section-desc">
+            Equipping your home for modern electric mobility, smart home conveniences, and clean appliance transitions.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-card" data-service-link="contact.html?service=ev-charger">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/ev-charger.jpg" alt="Level 2 EV Fast Charging station installation" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Level 2 EV Charging</h3>
+            <p class="feature-desc">
+              Dedicated 50A/60A 240V garage or outdoor charging stations for Tesla Wall Connector, ChargePoint, JuiceBox, and universal NEMA 14-50 outlets.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=ev-charger" class="btn btn-primary btn-sm" style="width: 100%;">Book EV Charging &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card" data-service-link="contact.html?service=smart-lighting">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/smart-lighting.jpg" alt="Smart lighting controls and automated dimmers" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Smart Lighting Controls</h3>
+            <p class="feature-desc">
+              Lutron Caseta, Leviton, and smart multi-way dimmer integration for automated scheduling, voice control, and scene creation without neutral wire limitations.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=smart-lighting" class="btn btn-primary btn-sm" style="width: 100%;">Book Smart Lighting &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card" data-service-link="contact.html?service=appliance-run">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/appliance-run.jpg" alt="Dedicated heavy appliance 240V electrical lines" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Dedicated Appliance Runs</h3>
+            <p class="feature-desc">
+              Isolated 240V heavy lines for induction ranges, electric heat pumps, on-demand tankless water heaters, and backyard hot tubs.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=appliance-run" class="btn btn-primary btn-sm" style="width: 100%;">Book Appliance Line &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card" data-service-link="contact.html?service=surge-defense">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/surge-defense.jpg" alt="Whole-house panel surge defense installation" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Whole-House Surge Defense</h3>
+            <p class="feature-desc">
+              Commercial-grade Type 2 surge arrestors wired directly into the panel bus, defending computers, smart refrigerators, and TVs against grid surges.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=surge-defense" class="btn btn-primary btn-sm" style="width: 100%;">Book Surge Defense &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Diagnostic Testing & Safety Inspections -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Advanced Diagnostics</span>
+          <h2 class="section-title">Precision Inspection &amp; Thermal Imaging</h2>
+          <p class="section-desc">
+            We identify unseen electrical hazards inside walls and enclosures before they escalate into dangerous electrical fires.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card" data-service-link="contact.html?service=inspection">
+            <div class="feature-icon-box">🔍</div>
+            <h3 class="feature-title">Thermal Infrared Scans</h3>
+            <p class="feature-desc">
+              High-resolution Fluke thermal cameras reveal hot spots, resistive screw contacts, and overloaded branch breakers hidden inside your panel doors.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=inspection" class="btn btn-primary btn-sm" style="width: 100%;">Book Thermal Scan &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card" data-service-link="contact.html?service=gfci-testing">
+            <div class="feature-icon-box">⚡</div>
+            <h3 class="feature-title">GFCI / AFCI Micro-Fault Tests</h3>
+            <p class="feature-desc">
+              Calibrated test instruments simulate actual ground-fault and arc-fault scenarios to verify that your safety receptacles trip within milliseconds.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=gfci-testing" class="btn btn-primary btn-sm" style="width: 100%;">Book Fault Safety Test &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card" data-service-link="contact.html?service=escrow-audit">
+            <div class="feature-icon-box">📋</div>
+            <h3 class="feature-title">Pre-Purchase Escrow Audits</h3>
+            <p class="feature-desc">
+              Buying a home? Get a certified 25-point master electrician inspection report identifying unpermitted work, ungrounded lines, and panel safety status.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.25rem;">
+              <a href="contact.html?service=escrow-audit" class="btn btn-primary btn-sm" style="width: 100%;">Book Escrow Audit &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tools, Materials & Metallurgy Standards -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Technical Integrity</span>
+          <h2 class="section-title">Commercial Grade Materials. Zero Substandard Parts.</h2>
+          <p class="section-desc">
+            The longevity of your home's electrical grid depends directly on the metallurgy and components installed.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/copper-wiring.jpg" alt="100% Solid copper electrical conductors and wiring" class="card-media-img">
+            </div>
+            <h3 class="feature-title">100% Solid Copper</h3>
+            <p class="feature-desc">
+              We reject cheap copper-clad aluminum wiring. All branch circuits utilize pure high-grade copper conductors for maximum conductivity and thermal stability.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/oem-breakers.jpg" alt="Tier-1 OEM circuit breakers Square D, Siemens, and Eaton" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Tier-1 OEM Breakers</h3>
+            <p class="feature-desc">
+              We install genuine Square D QO, Siemens, and Eaton hardware matched exactly to manufacturer panel listings to maintain factory warranty ratings.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/fluke-testing.jpg" alt="Fluke true-RMS diagnostic multimeters and test instruments" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Fluke Diagnostic Gear</h3>
+            <p class="feature-desc">
+              Industry-standard true-RMS multimeters, insulation resistance megohmmeters, and circuit tracers ensure scientific accuracy on every service call.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/clean-guarantee.jpg" alt="Clean home guarantee with drop cloths and HEPA cleaning" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Clean Home Guarantee</h3>
+            <p class="feature-desc">
+              We wear clean protective shoe covers, lay heavy canvas drop cloths beneath every fixture, and HEPA vacuum all drywall dust before departing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: The VoltGuard 5-Step Service Protocol -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Service Quality</span>
+          <h2 class="section-title">The VoltGuard 5-Step Execution Protocol</h2>
+          <p class="section-desc">
+            Every electrical service call follows a standardized quality workflow to guarantee safety and homeowner satisfaction.
+          </p>
+        </div>
+
+        <div class="process-grid process-grid-5">
+          <div class="process-card">
+            <div class="process-step-num">1</div>
+            <h3 class="process-title">Physical Diagnostic</h3>
+            <p class="process-desc">Comprehensive visual, thermal, and electrical load inspection of the issue.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">2</div>
+            <h3 class="process-title">Upfront Fixed Quote</h3>
+            <p class="process-desc">Written, all-inclusive price presented before any tool touches a conductor.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">3</div>
+            <h3 class="process-title">OSHA Lockout/Tagout</h3>
+            <p class="process-desc">Full circuit de-energization and multi-meter zero-energy safety verification.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">4</div>
+            <h3 class="process-title">Master Craftsmanship</h3>
+            <p class="process-desc">Precision installation adhering strictly to 2023 NEC building codes.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">5</div>
+            <h3 class="process-title">Live Voltage Testing</h3>
+            <p class="process-desc">Under-load testing, clean site sign-off, and delivery of 5-year warranty certificate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Action CTA Banner -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="banner-cta">
+          <div class="banner-content">
+            <span class="section-badge" style="background-color: var(--color-accent); color: #0b192c; border: none; margin-bottom: 0.75rem;">⚡ Ready When You Are</span>
+            <h3>Have an Electrical Project or Urgent Repair?</h3>
+            <p>Our licensed electricians are ready to diagnose, install, and upgrade your home wiring with guaranteed pricing.</p>
+          </div>
+          <div class="banner-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book Service Now</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: #ffffff;">View Pricing Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer (Identical on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Details -->
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link">
+            <img src="../assets/images/logo.png" alt="VoltGuard Electrical Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-title">VoltGuard</span>
+              <span class="brand-tagline">Electrical Services</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            State-certified master electrical contractors delivering high-safety residential wiring, switchboard repairs, and panel modernizations with transparent upfront pricing.
+          </p>
+          <div class="footer-cert-badge">
+            <span>🛡️</span> Master Electrician Lic #EC-984421-B
+          </div>
+        </div>
+
+        <!-- Col 2: Home Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company Links & Emergency -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list" style="margin-bottom: 1.25rem;">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+          <div class="footer-contact-item">
+            <span class="icon">📞</span>
+            <span>(800) 555-8658 (24/7 Hotline)</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">✉️</span>
+            <span>service@voltguardelectric.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">📍</span>
+            <span>442 Ampere Pkwy, Metro Area</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VoltGuard Electrical Services LLC. All rights reserved. Licensed, Bonded &amp; Insured.</div>
+        <div>Compliant with NEC 2023 &amp; OSHA Safety Codes</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

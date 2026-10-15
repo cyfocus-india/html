@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rate Calculator | Dashmile Couriers</title>
+  <meta name="description" content="Calculate your Dashmile courier price from Pune: enter destination PIN, weight and box size to see chargeable weight, a line-by-line breakdown with GST, and the delivery date.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-rates">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link is-active" href="rates.html" aria-current="page">Rate Calculator</a></li>
+          <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Section 1: Page hero ===== -->
+    <section class="page-hero" aria-labelledby="rates-title">
+      <div class="container page-hero__grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">Rate Calculator</span></li></ol></nav>
+          <p class="eyebrow">Rate Calculator</p>
+          <h1 id="rates-title">Your exact price, before the rider arrives</h1>
+          <p class="lead">Prices include doorstep pickup, tracking and proof of delivery. GST is shown on its own line so your accountant can claim it.</p>
+          <ul class="check-list mt-m">
+            <li>Have the destination PIN code ready</li>
+            <li>Weigh the packed parcel, box and all</li>
+            <li>Measure the outer box in centimetres if it is large but light</li>
+          </ul>
+          <div class="btn-row mt-m"><a class="btn" href="#calculator">Start calculating</a></div>
+        </div>
+        <div class="page-hero__media">
+          <div class="media-frame"><img src="../assets/images/hero-rates-parcel-scale.jpg" alt="Paper-wrapped parcels tied with twine sitting in the pan of a hanging weighing scale" width="1400" height="1050" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Calculator ===== -->
+    <section class="section section--alt" id="calculator" aria-labelledby="calc-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Calculator</p>
+          <h2 id="calc-title">Price a parcel in 30 seconds</h2>
+          <p class="lead">Pickups are from Pune &amp; PCMC. The calculator only shows services that actually reach your destination.</p>
+        </div>
+
+        <div class="calc">
+          <form class="card calc-form" id="rate-calc" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="calc-from">Pickup PIN code</label>
+                <input id="calc-from" type="text" inputmode="numeric" maxlength="6" value="411013" autocomplete="postal-code" aria-describedby="calc-from-hint">
+                <span class="hint" id="calc-from-hint">Where our rider collects from</span>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="calc-to">Destination PIN code</label>
+                <input id="calc-to" type="text" inputmode="numeric" maxlength="6" placeholder="e.g. 560034" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+
+              <fieldset class="fieldset field--full">
+                <legend>Service</legend>
+                <div class="service-options" id="calc-services" aria-live="polite"></div>
+              </fieldset>
+
+              <div class="field">
+                <label for="calc-weight">Packed weight (kg)</label>
+                <input id="calc-weight" type="number" inputmode="decimal" min="0.05" step="0.05" placeholder="e.g. 1.5" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <span class="label" id="dims-label">Box size in cm <span class="optional">(optional)</span></span>
+                <div class="dims" role="group" aria-labelledby="dims-label">
+                  <input id="calc-l" type="number" inputmode="decimal" min="1" placeholder="L" aria-label="Length in cm">
+                  <input id="calc-w" type="number" inputmode="decimal" min="1" placeholder="W" aria-label="Width in cm">
+                  <input id="calc-h" type="number" inputmode="decimal" min="1" placeholder="H" aria-label="Height in cm">
+                </div>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" id="calc-cover"> <span><strong>Add Secure Cover</strong> · insures the declared value (1%, min ₹30)</span></label>
+              </div>
+              <div class="field field--full" id="cover-extra">
+                <label for="calc-declared">Declared value (₹)</label>
+                <input id="calc-declared" type="number" inputmode="numeric" min="1" placeholder="e.g. 4999">
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" id="calc-cod"> <span><strong>Collect cash on delivery</strong> · 2% of the amount, min ₹40</span></label>
+              </div>
+              <div class="field field--full" id="cod-extra">
+                <label for="calc-cod-amount">Amount to collect (₹)</label>
+                <input id="calc-cod-amount" type="number" inputmode="numeric" min="1" placeholder="e.g. 1299">
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="btn-row mt-m">
+              <button class="btn" type="submit">Calculate price</button>
+              <button class="text-btn" type="reset">Clear form</button>
+            </div>
+          </form>
+
+          <div class="card calc-result" id="calc-result" aria-live="polite">
+            <p class="eyebrow">Your estimate</p>
+            <h2>Your price will appear here</h2>
+            <p class="result-empty">You'll see the chargeable weight, a line-by-line breakdown including GST, and the date we expect to deliver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Actual vs volumetric weight ===== -->
+    <section class="section" aria-labelledby="vol-title">
+      <div class="container split">
+        <figure class="vol-diagram" data-reveal>
+          <div class="box3d" aria-hidden="true">
+            <span class="top"></span><span class="side"></span><span class="front"></span>
+            <span class="dim dim--l">L 40 cm</span>
+            <span class="dim dim--h">H 20 cm</span>
+            <span class="dim dim--w">W 30 cm</span>
+          </div>
+          <figcaption class="formula">40 × 30 × 20 ÷ 5000 = 4.8 kg</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">How we weigh</p>
+          <h2 id="vol-title">Big, light boxes are charged by size</h2>
+          <p class="lead">You pay for the higher of two numbers: the weight on our scale, or the volumetric weight of the box.</p>
+          <p>A box of cushions might weigh 1.1 kg, but at 40 × 30 × 20 cm it takes the van space of a 4.8 kg parcel, so it is charged as 4.8 kg. Measure the outer box, including any bulges, and divide length × width × height by 5,000.</p>
+          <ul class="check-list mt-m">
+            <li>Use the smallest carton that still leaves room for cushioning.</li>
+            <li>Send clothes and soft goods in poly mailers, not boxes.</li>
+            <li>Ship two small boxes instead of one oversized one when it lowers the total.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: Worked examples ===== -->
+    <section class="section section--alt" aria-labelledby="examples-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Worked examples</p>
+          <h2 id="examples-title">Three real parcels, priced line by line</h2>
+          <p class="lead">These are the exact numbers the calculator gives today. Try them yourself.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card example" data-reveal>
+            <span class="pill pill--brand">Surface · Regional</span>
+            <h3>A kurta set to Nagpur</h3>
+            <p class="route">411057 <span class="arrow" aria-hidden="true">→</span> 440010</p>
+            <p class="muted">1.2 kg in a 30 × 22 × 4 cm mailer. Volumetric weight is only 0.53 kg, so the actual weight counts: three 500 g slabs.</p>
+            <dl class="breakdown">
+              <div><dt>First 500 g</dt><dd>₹45.00</dd></div>
+              <div><dt>2 extra slabs × ₹35</dt><dd>₹70.00</dd></div>
+              <div><dt>GST @ 18%</dt><dd>₹20.70</dd></div>
+              <div class="is-total"><dt>Total</dt><dd>₹135.70</dd></div>
+            </dl>
+          </article>
+          <article class="card example" data-reveal>
+            <span class="pill pill--amber">Air Express · Metro</span>
+            <h3>Running shoes to Bengaluru</h3>
+            <p class="route">411013 <span class="arrow" aria-hidden="true">→</span> 560034</p>
+            <p class="muted">2.2 kg in a 35 × 25 × 15 cm box. Volumetric weight is 2.63 kg, so six 500 g slabs. Insured for ₹4,999.</p>
+            <dl class="breakdown">
+              <div><dt>First 500 g</dt><dd>₹110.00</dd></div>
+              <div><dt>5 extra slabs × ₹85</dt><dd>₹425.00</dd></div>
+              <div><dt>Secure Cover (1%)</dt><dd>₹50.00</dd></div>
+              <div><dt>GST @ 18%</dt><dd>₹105.30</dd></div>
+              <div class="is-total"><dt>Total</dt><dd>₹690.30</dd></div>
+            </dl>
+          </article>
+          <article class="card example" data-reveal>
+            <span class="pill pill--brand">Same-Day · Local</span>
+            <h3>Machine spares to Chakan</h3>
+            <p class="route">411013 <span class="arrow" aria-hidden="true">→</span> 410501</p>
+            <p class="muted">6 kg of bearings in a small, dense box, so actual weight counts. Charged per kilogram on local routes.</p>
+            <dl class="breakdown">
+              <div><dt>First kg</dt><dd>₹69.00</dd></div>
+              <div><dt>5 extra kg × ₹15</dt><dd>₹75.00</dd></div>
+              <div><dt>GST @ 18%</dt><dd>₹25.92</dd></div>
+              <div class="is-total"><dt>Total</dt><dd>₹169.92</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Billing questions ===== -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container split split--top">
+        <div>
+          <p class="eyebrow">Billing questions</p>
+          <h2 id="faq-title">How charges work after you book</h2>
+          <p class="lead">Can't find your answer? Our billing desk replies within one working day at <a href="mailto:billing@dashmile.in">billing@dashmile.in</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is GST included in the prices on this site?</summary>
+            <div class="faq-body">No. Freight and add-ons are listed before tax and 18% GST is added on the invoice. Registered businesses can claim it as input tax credit. Add your GSTIN in your dashboard settings.</div>
+          </details>
+          <details>
+            <summary>What if your scale disagrees with my weight?</summary>
+            <div class="faq-body">Every parcel is photographed on our calibrated scale at the hub. If the difference changes the price, the photo appears in your dashboard and you have 7 days to dispute it.</div>
+          </details>
+          <details>
+            <summary>How can I pay?</summary>
+            <div class="faq-body">Pay per booking by UPI, card or net banking, or top up a prepaid wallet and get 3% back as credit. Accounts with a GSTIN can apply for 15-day credit terms after three months of regular shipping.</div>
+          </details>
+          <details>
+            <summary>Is there a fuel surcharge or pickup fee?</summary>
+            <div class="faq-body">No. The price shown already covers doorstep pickup within Pune &amp; PCMC and fuel. We review the public rate card once a year, in April, and give 30 days' notice of changes.</div>
+          </details>
+          <details>
+            <summary>What does it cost to cancel after a rider is assigned?</summary>
+            <div class="faq-body">A ₹25 visit fee applies once the rider is on the way. Prepaid amounts, less that fee, are refunded to the original payment method within 5–7 working days.</div>
+          </details>
+          <details>
+            <summary>Are returned (RTO) parcels charged?</summary>
+            <div class="faq-body">Returns are charged at the same freight rate as the outward trip. The COD fee is not charged on parcels that come back undelivered.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 6: Call to action ===== -->
+    <section class="section section--alt" aria-labelledby="cta-rates-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">High volume?</p>
+            <h2 id="cta-rates-title">Shipping more than 300 parcels a month?</h2>
+            <p>Contract rates start around 18% below the public rate card, with a named account manager and monthly billing.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="contact.html?topic=business">Ask for contract rates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rate Calculator</a></li>
+          <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

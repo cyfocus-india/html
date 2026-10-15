@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Create a free Beadwell account to book wash slots online, track your car live and earn points toward free washes.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="auth">
+    <!-- Brand panel with a photo and the sign-up offer -->
+    <aside class="auth-media" aria-label="What you get">
+      <img src="../assets/images/auth-signup-blue-car-wash.webp" alt="Gloved hand washing the rear of a bright blue sports car covered in foam" width="1100" height="1650">
+      <p class="eyebrow">Free account</p>
+      <h2>Start with 50 welcome points on us.</h2>
+      <ul class="check-list">
+        <li>Book and reschedule wash slots online</li>
+        <li>See which stage your car is in, live</li>
+        <li>Turn points into free washes at checkout</li>
+      </ul>
+    </aside>
+
+    <main class="auth-panel" id="main">
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text"><span class="brand-name">Beadwell</span></span>
+        </a>
+        <div class="auth-tools">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        </div>
+      </div>
+
+      <div class="auth-form-wrap">
+        <h1>Sign Up</h1>
+        <p class="muted">Takes under a minute. Add your vehicles later from the dashboard.</p>
+        <form id="signup-form" class="auth-form" novalidate>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <input id="su-name" name="name" type="text" autocomplete="name" required data-label="Your name" data-min="2">
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="su-email">Email</label>
+            <input id="su-email" name="email" type="email" autocomplete="email" required data-label="Email">
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="su-password">Password</label>
+            <div class="password-wrap">
+              <input id="su-password" name="password" type="password" autocomplete="new-password" required data-label="Password" data-min="8" data-strong aria-describedby="strength-text">
+              <button class="pw-toggle" type="button" aria-controls="su-password" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <div class="strength" aria-hidden="true"><span></span></div>
+            <p class="hint" id="strength-text">Use 8+ characters with a letter and a number</p>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="su-confirm">Confirm password</label>
+            <div class="password-wrap">
+              <input id="su-confirm" name="confirm" type="password" autocomplete="new-password" required data-label="Password confirmation" data-match="su-password">
+              <button class="pw-toggle" type="button" aria-controls="su-confirm" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <p class="error-msg" aria-live="polite"></p>
+          </div>
+          <label class="check-field"><input type="checkbox" id="su-sms" checked> Text me when my car is ready for pickup</label>
+          <button class="btn btn--block" type="submit">Create Account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

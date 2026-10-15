@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | Dashmile Couriers</title>
+  <meta name="description" content="Sign in to your Dashmile Couriers account to book pickups, track parcels live, view shipment history and download GST invoices.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="auth-body">
+  <div class="auth-layout">
+    <!-- Brand panel (hidden on small screens) -->
+    <aside class="auth-aside" aria-label="Why sign in">
+      <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+      <div>
+        <h2>Every parcel, one dashboard.</h2>
+        <ul class="check-list mt-m">
+          <li>Book doorstep pickups in 2-hour slots</li>
+          <li>Watch parcels move as riders scan them</li>
+          <li>Download GST invoices whenever you need them</li>
+        </ul>
+      </div>
+      <div class="auth-quote">"Our packers book pickups from their phones and I check COD payouts from mine. That's the whole setup."<br><strong>Ananya Joshi, Kesar &amp; Clay Ceramics</strong></div>
+    </aside>
+
+    <!-- Form side -->
+    <main class="auth-main" id="main">
+      <div class="auth-topbar">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <div class="auth-tools">
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <div class="notice" id="signin-banner" role="status" hidden></div>
+
+        <!-- Sign In view -->
+        <div id="signin-view">
+          <h1 class="mt-m">Sign In</h1>
+          <p class="muted">Welcome back. Sign in to book, track and manage your shipments.</p>
+          <form id="signin-form" novalidate>
+            <div class="field">
+              <label for="si-email">Email</label>
+              <input id="si-email" type="email" autocomplete="email" required placeholder="you@company.com">
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="si-password">Password</label>
+              <div class="input-group">
+                <input id="si-password" type="password" autocomplete="current-password" required minlength="8">
+                <button class="reveal-btn" type="button" data-reveal-password aria-controls="si-password" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="auth-row">
+              <label class="check"><input id="si-remember" type="checkbox" checked> <span>Keep me signed in</span></label>
+              <button class="text-btn" type="button" id="forgot-link">Forgot password?</button>
+            </div>
+            <button class="btn btn-lg btn-block" type="submit">Sign In</button>
+          </form>
+          <p class="auth-switch">New to Dashmile? <a href="signup.html">Sign Up</a></p>
+          <p class="demo-hint">Demo site: any email with a password of 8+ characters signs you in. Accounts you create on Sign Up are checked against their password.</p>
+        </div>
+
+        <!-- Forgot password view (same page) -->
+        <div id="reset-view" hidden>
+          <h1 class="mt-m">Reset your password</h1>
+          <p class="muted">Enter your account email and we'll send a link to set a new password.</p>
+          <form id="reset-form" novalidate>
+            <div class="field">
+              <label for="rs-email">Email</label>
+              <input id="rs-email" type="email" autocomplete="email" required placeholder="you@company.com">
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <button class="btn btn-lg btn-block" type="submit">Send reset link</button>
+            <button class="text-btn" type="button" data-back-signin><span class="arrow" aria-hidden="true">←</span> Back to Sign In</button>
+          </form>
+          <div class="notice notice--success mt-m" id="reset-success" role="status" hidden>
+            <span class="notice__icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Check your inbox</strong>
+              If an account exists for <span id="reset-email-echo"></span>, a reset link is on its way. It works for 30 minutes.
+              <p class="mt-s"><button class="text-btn" type="button" data-back-signin><span class="arrow" aria-hidden="true">←</span> Back to Sign In</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

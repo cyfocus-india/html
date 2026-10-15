@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Create a free Copper Pot student account to book class seats, track upcoming sessions and keep every recipe from your classes.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body class="auth-body">
+  <div class="auth-layout">
+    <main class="auth-main" id="main">
+      <!-- Logo + preference toggles (no site header on auth pages) -->
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <div class="toggles">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        </div>
+      </div>
+
+      <section class="auth-card" aria-labelledby="signup-title">
+        <h1 id="signup-title">Sign Up</h1>
+        <p class="lead">Create your free student account to book seats and keep every recipe you cook with us.</p>
+        <div class="auth-alert" data-auth-alert role="alert" hidden></div>
+        <form data-signup-form novalidate>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <input class="input" id="su-name" type="text" autocomplete="name" required data-validate data-label="Full name" minlength="2" placeholder="e.g. Maya Thompson">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-email">Email</label>
+            <input class="input" id="su-email" type="email" autocomplete="email" required data-validate data-label="Email" placeholder="you@example.com">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-password">Password</label>
+            <div class="password-wrap">
+              <input class="input" id="su-password" type="password" autocomplete="new-password" required data-validate data-label="Password" minlength="8" aria-describedby="pw-help">
+              <button class="pw-toggle" type="button" data-pw-toggle aria-controls="su-password" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <div class="pw-meter" data-pw-meter data-score="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <span class="pw-hint" id="pw-help" data-pw-text>Use 8+ characters with a number.</span>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-confirm">Confirm password</label>
+            <div class="password-wrap">
+              <input class="input" id="su-confirm" type="password" autocomplete="new-password" required data-validate data-label="Password confirmation" data-match="su-password">
+              <button class="pw-toggle" type="button" data-pw-toggle aria-controls="su-confirm" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="check"><input id="su-terms" type="checkbox" required data-validate data-msg="Please accept the studio policies to continue."> I agree to the studio's booking and cancellation policies.</label>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--lg btn--block" type="submit">Create account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+      </section>
+    </main>
+
+    <aside class="auth-aside" aria-label="Why create an account">
+      <img src="../assets/images/auth-signup-couple-cooking.jpg" alt="Couple cooking together in a bright kitchen with orange pepper mills and lemons" width="1000" height="1300">
+      <div>
+        <blockquote>Your student account, in one place.</blockquote>
+        <ul class="auth-perks">
+          <li>Book seats in under a minute</li>
+          <li>See every upcoming session and change it</li>
+          <li>Recipes unlock after each class</li>
+          <li>Receipts, cards and class-pass credits</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Sign in to the Lumina Dental patient portal to book appointments, view treatment history, access prescriptions and download payment receipts.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="auth-page">
+
+  <!-- Minimal auth header: logo (links to Home 1) and the theme/direction toggles -->
+  <header class="auth-header">
+    <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+      <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+      <span class="brand-name">
+        <span class="brand-title">Lumina Dental</span>
+        <span class="brand-subtitle">Oral Care Center</span>
+      </span>
+    </a>
+
+    <div class="auth-header-actions">
+      <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+      <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+    </div>
+  </header>
+
+  <main class="auth-main" id="main">
+    <div class="auth-card">
+      <!-- View 1: Sign In -->
+      <div id="signinView">
+        <div class="auth-card-header">
+          <h1>Patient Sign In</h1>
+          <p>Book visits, check your treatment history, refill prescriptions and download receipts.</p>
+        </div>
+
+        <form id="signinForm" novalidate>
+          <div class="form-group">
+            <label for="signinEmail" class="form-label">Email address *</label>
+            <input type="email" id="signinEmail" class="form-control" placeholder="name@example.com" autocomplete="email" required aria-describedby="signinEmailError">
+            <p class="form-error" id="signinEmailError">Please enter a valid email address.</p>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-row">
+              <label for="signinPassword" class="form-label">Password *</label>
+              <a href="#reset" id="forgotPasswordLink" class="forgot-password-link">Forgot password?</a>
+            </div>
+            <div class="input-password-wrapper">
+              <input type="password" id="signinPassword" class="form-control" placeholder="Enter your password" autocomplete="current-password" required aria-describedby="signinPasswordError">
+              <button type="button" class="password-toggle-btn" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <p class="form-error" id="signinPasswordError">Password must be at least 6 characters.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
+        </form>
+
+        <p class="auth-switch">New patient? <a href="signup.html">Sign Up</a></p>
+      </div>
+
+      <!-- View 2: Reset password (same page) -->
+      <div id="resetView" hidden>
+        <div class="auth-card-header">
+          <h1>Reset Your Password</h1>
+          <p class="auth-reset-intro">Enter the email you registered with and we'll send you a secure reset link.</p>
+        </div>
+
+        <div class="alert-success" id="resetSuccessAlert" role="status" aria-live="polite">
+          <span class="alert-icon" aria-hidden="true">&#10003;</span>
+          <div>If an account exists for <strong id="resetEmailEcho"></strong>, a reset link is on its way. It expires in 30 minutes.</div>
+        </div>
+
+        <form id="resetPasswordForm" novalidate>
+          <div class="form-group">
+            <label for="resetEmail" class="form-label">Email address *</label>
+            <input type="email" id="resetEmail" class="form-control" placeholder="name@example.com" autocomplete="email" required aria-describedby="resetEmailError">
+            <p class="form-error" id="resetEmailError">Please enter a valid email address.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Reset Link</button>
+        </form>
+
+        <p class="auth-back-row">
+          <a href="#signin" id="backToSigninLink" class="auth-back-link"><span class="dir-arrow" aria-hidden="true">&larr;</span> Back to Sign In</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

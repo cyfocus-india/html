@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Beadwell customer dashboard: book wash slots, track your car's service status, view history and manage loyalty points.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-body">
+  <a class="skip-link" href="#dash-main">Skip to content</a>
+
+  <div class="dash">
+    <!-- ===== Sidebar ===== -->
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Dashboard menu">
+      <div class="side-head">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Customer portal</span>
+          </span>
+        </a>
+        <button class="side-close" type="button" data-side-close aria-label="Close menu">&#10005;</button>
+      </div>
+
+      <nav class="side-nav" aria-label="Dashboard sections">
+        <button class="side-link" type="button" data-view="overview"><span class="side-ico" aria-hidden="true">&#9707;</span>Overview</button>
+        <button class="side-link" type="button" data-view="bookings"><span class="side-ico" aria-hidden="true">&#9719;</span>Bookings <span class="side-badge" data-upcoming-badge></span></button>
+        <button class="side-link" type="button" data-view="status"><span class="side-ico" aria-hidden="true">&#9673;</span>Service Status <span class="side-badge side-badge--live" data-live-badge hidden>Live</span></button>
+        <button class="side-link" type="button" data-view="history"><span class="side-ico" aria-hidden="true">&#8801;</span>History</button>
+        <button class="side-link" type="button" data-view="loyalty"><span class="side-ico" aria-hidden="true">&#9733;</span>Loyalty</button>
+      </nav>
+
+      <div class="side-card" data-next-reward></div>
+
+      <div class="side-mobile-tools">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+          <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+          <span class="theme-label" aria-hidden="true">Dark</span>
+        </button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+          <span aria-hidden="true">&#8644;</span>
+          <span class="toggle-label" aria-hidden="true">RTL</span>
+        </button>
+      </div>
+
+      <button class="side-link side-logout" type="button" data-logout><span class="side-ico" aria-hidden="true">&#8617;</span>Log out</button>
+    </aside>
+    <div class="side-overlay" hidden></div>
+
+    <!-- ===== Main column ===== -->
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="hamburger dash-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dash-sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="top-title">
+          <h1 id="view-title" tabindex="-1">Overview</h1>
+          <p class="muted" id="view-sub">Your car, bookings and points at a glance</p>
+        </div>
+        <div class="top-tools">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+
+          <div class="pop-wrap">
+            <button class="icon-btn notif-btn" type="button" id="notif-btn" aria-expanded="false" aria-controls="notif-panel" aria-label="Notifications">
+              <span aria-hidden="true">&#9873;</span><span class="notif-count" data-notif-count hidden></span>
+            </button>
+            <div class="popover" id="notif-panel" hidden>
+              <div class="pop-head">
+                <h2>Notifications</h2>
+                <button class="link-btn" type="button" data-action="notif-read-all">Mark all read</button>
+              </div>
+              <ul class="notif-list" data-notif-list></ul>
+              <div class="pop-foot"><button class="link-btn" type="button" data-action="notif-clear">Clear all</button></div>
+            </div>
+          </div>
+
+          <div class="pop-wrap">
+            <button class="avatar-btn" type="button" id="profile-btn" aria-expanded="false" aria-controls="profile-menu" aria-label="Account menu">
+              <span class="initials" data-initials>JR</span><span class="avatar-name" data-first-name>Jordan</span><span class="caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="popover menu-pop" id="profile-menu" hidden>
+              <p class="menu-who"><strong data-full-name>Jordan Reyes</strong><span data-email>jordan@example.com</span></p>
+              <button class="menu-item" type="button" data-view="profile"><span aria-hidden="true">&#9786;&#65038;</span> Profile &amp; vehicles</button>
+              <button class="menu-item" type="button" data-view="settings"><span aria-hidden="true">&#9881;&#65038;</span> Settings</button>
+              <a class="menu-item" href="../index.html"><span aria-hidden="true">&#8962;</span> Back to website</a>
+              <button class="menu-item" type="button" data-logout><span aria-hidden="true">&#8617;</span> Log out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content" id="dash-main">
+
+        <!-- ===== Overview ===== -->
+        <section class="view" data-panel="overview" aria-labelledby="view-title">
+          <div class="welcome">
+            <div>
+              <p class="eyebrow" data-greeting>Good afternoon</p>
+              <h2 data-welcome-title>Welcome back</h2>
+              <p data-welcome-text></p>
+            </div>
+            <div class="btn-row">
+              <button class="btn" type="button" data-go="bookings">Book a Slot</button>
+              <button class="link-arrow link-btn-plain" type="button" data-go="status">Track live status <span class="arrow" aria-hidden="true">&rarr;</span></button>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi">
+              <span class="bead bead--sm" aria-hidden="true">&#9719;</span>
+              <p class="kpi-label">Upcoming bookings</p>
+              <p class="kpi-value" data-kpi="upcoming">0</p>
+              <p class="kpi-sub" data-kpi="upcoming-sub"></p>
+            </article>
+            <article class="kpi">
+              <span class="bead bead--sm" aria-hidden="true">&#9673;</span>
+              <p class="kpi-label">Car in service</p>
+              <p class="kpi-value kpi-value--text" data-kpi="active">None</p>
+              <p class="kpi-sub" data-kpi="active-sub"></p>
+            </article>
+            <article class="kpi">
+              <span class="bead bead--sm" aria-hidden="true">&#9733;</span>
+              <p class="kpi-label">Points balance</p>
+              <p class="kpi-value" data-kpi="points">0</p>
+              <p class="kpi-sub" data-kpi="points-sub"></p>
+            </article>
+            <article class="kpi">
+              <span class="bead bead--sm" aria-hidden="true">$</span>
+              <p class="kpi-label">Spent this year</p>
+              <p class="kpi-value" data-kpi="spent">$0</p>
+              <p class="kpi-sub" data-kpi="spent-sub"></p>
+            </article>
+          </div>
+
+          <div class="ov-grid">
+            <article class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Last 6 months</h2>
+                  <p class="muted small" data-chart-summary></p>
+                </div>
+                <div class="seg" role="group" aria-label="Chart measure">
+                  <button type="button" data-chart-mode="spend" aria-pressed="true">Spend</button>
+                  <button type="button" data-chart-mode="visits" aria-pressed="false">Visits</button>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="spend-chart" role="img" aria-label="Bar chart of monthly spend"></canvas>
+              </div>
+            </article>
+            <article class="panel">
+              <div class="panel-head">
+                <h2>Up next</h2>
+                <button class="link-btn" type="button" data-go="bookings">Manage</button>
+              </div>
+              <ul class="mini-list" data-upnext></ul>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Recent visits</h2>
+              <button class="link-btn" type="button" data-go="history">Full history</button>
+            </div>
+            <ul class="mini-list mini-list--row" data-recent></ul>
+          </article>
+        </section>
+
+        <!-- ===== Bookings ===== -->
+        <section class="view" data-panel="bookings" aria-labelledby="view-title" hidden>
+          <div class="bk-grid">
+            <article class="panel">
+              <h2>Book a wash slot</h2>
+              <p class="muted small">Wash slots every 20 minutes. Studio services are drop-off times and stay pending until we confirm your deposit.</p>
+              <form id="booking-form" class="dash-form" novalidate>
+                <div class="field">
+                  <label for="bk-vehicle">Vehicle</label>
+                  <select id="bk-vehicle" required data-label="A vehicle"></select>
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="bk-service">Service</label>
+                  <select id="bk-service" required data-label="A service"></select>
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="bk-date">Date</label>
+                    <input id="bk-date" type="date" required data-label="A date">
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="bk-time">Time</label>
+                    <select id="bk-time" required data-label="A time"></select>
+                    <p class="error-msg" aria-live="polite"></p>
+                  </div>
+                </div>
+                <div class="field field--notes">
+                  <label for="bk-notes">Notes for the team <span class="optional">(optional)</span></label>
+                  <textarea id="bk-notes" rows="2" placeholder="e.g. Child seat in the back, tree sap on the roof"></textarea>
+                </div>
+                <p class="quote-line" data-quote></p>
+                <button class="btn btn--block bk-submit" type="submit">Confirm Booking</button>
+              </form>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head panel-head--wrap">
+                <h2>Your bookings</h2>
+                <div class="table-tools">
+                  <label class="visually-hidden" for="bk-search">Search bookings</label>
+                  <input class="input input--sm" id="bk-search" type="search" placeholder="Search service, car, notes">
+                  <label class="visually-hidden" for="bk-filter">Filter by status</label>
+                  <select class="input input--sm" id="bk-filter">
+                    <option value="all">All statuses</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In service">In service</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="visually-hidden">Your bookings</caption>
+                  <thead>
+                    <tr><th scope="col">When</th><th scope="col">Vehicle</th><th scope="col">Service</th><th scope="col">Status</th><th scope="col">Total</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr>
+                  </thead>
+                  <tbody data-bookings-body></tbody>
+                </table>
+              </div>
+              <p class="empty-state" data-bookings-empty hidden>No bookings match your search.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== Service status ===== -->
+        <section class="view" data-panel="status" aria-labelledby="view-title" hidden>
+          <div data-status-root></div>
+        </section>
+
+        <!-- ===== History ===== -->
+        <section class="view" data-panel="history" aria-labelledby="view-title" hidden>
+          <article class="panel">
+            <div class="panel-head panel-head--wrap">
+              <div>
+                <h2>Service history</h2>
+                <p class="muted small" data-history-summary></p>
+              </div>
+              <div class="table-tools">
+                <label class="visually-hidden" for="hi-search">Search history</label>
+                <input class="input input--sm" id="hi-search" type="search" placeholder="Search service or car">
+                <label class="visually-hidden" for="hi-vehicle">Filter by vehicle</label>
+                <select class="input input--sm" id="hi-vehicle"></select>
+                <label class="visually-hidden" for="hi-year">Filter by year</label>
+                <select class="input input--sm" id="hi-year"></select>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <caption class="visually-hidden">Past services</caption>
+                <thead>
+                  <tr><th scope="col">Date</th><th scope="col">Vehicle</th><th scope="col">Service</th><th scope="col">Total</th><th scope="col">Points</th><th scope="col">Your rating</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr>
+                </thead>
+                <tbody data-history-body></tbody>
+              </table>
+            </div>
+            <p class="empty-state" data-history-empty hidden>No visits match these filters.</p>
+          </article>
+        </section>
+
+        <!-- ===== Loyalty ===== -->
+        <section class="view" data-panel="loyalty" aria-labelledby="view-title" hidden>
+          <div class="loy-grid">
+            <article class="panel points-card" data-points-card></article>
+            <article class="panel">
+              <h2>Claim your #BeadwellShine bonus</h2>
+              <p class="muted small">Posted a photo of your car after a visit? Paste the public link for 50 points (one claim per post).</p>
+              <form id="share-form" class="dash-form" novalidate>
+                <div class="field">
+                  <label for="share-url">Post link</label>
+                  <input id="share-url" type="url" required data-label="A post link" placeholder="https://www.instagram.com/p/...">
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <button class="btn" type="submit">Claim 50 Points</button>
+              </form>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head"><h2>Rewards</h2><p class="muted small" data-reward-note></p></div>
+            <div class="reward-grid" data-rewards></div>
+          </article>
+
+          <div class="two-col">
+            <article class="panel">
+              <h2>My vouchers</h2>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="visually-hidden">Redeemed vouchers</caption>
+                  <thead><tr><th scope="col">Code</th><th scope="col">Reward</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+                  <tbody data-vouchers-body></tbody>
+                </table>
+              </div>
+              <p class="empty-state" data-vouchers-empty hidden>No vouchers yet. Redeem a reward above.</p>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><h2>Points activity</h2><button class="link-btn" type="button" data-action="toggle-activity">Show all</button></div>
+              <ul class="activity-list" data-activity></ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== Profile ===== -->
+        <section class="view" data-panel="profile" aria-labelledby="view-title" hidden>
+          <div class="two-col">
+            <article class="panel">
+              <h2>Your details</h2>
+              <form id="profile-form" class="dash-form" novalidate>
+                <div class="field">
+                  <label for="pf-name">Full name</label>
+                  <input id="pf-name" type="text" autocomplete="name" required data-label="Your name" data-min="2">
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="pf-email">Email</label>
+                  <input id="pf-email" type="email" autocomplete="email" required data-label="Email">
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="pf-phone">Mobile for &ldquo;car ready&rdquo; texts</label>
+                  <input id="pf-phone" type="tel" autocomplete="tel" required data-label="Mobile number">
+                  <p class="error-msg" aria-live="polite"></p>
+                </div>
+                <button class="btn" type="submit">Save Details</button>
+              </form>
+            </article>
+            <article class="panel">
+              <div class="panel-head">
+                <h2>My vehicles</h2>
+                <button class="btn btn--sm" type="button" data-action="vehicle-add">Add Vehicle</button>
+              </div>
+              <ul class="vehicle-list" data-vehicles></ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== Settings ===== -->
+        <section class="view" data-panel="settings" aria-labelledby="view-title" hidden>
+          <div class="two-col">
+            <article class="panel">
+              <h2>Notifications</h2>
+              <ul class="setting-list">
+                <li>
+                  <label for="st-reminder"><strong>Booking reminders</strong><span>Email the evening before each slot</span></label>
+                  <input class="switch" id="st-reminder" type="checkbox" data-pref="emailReminders">
+                </li>
+                <li>
+                  <label for="st-sms"><strong>&ldquo;Car ready&rdquo; texts</strong><span>SMS the moment your car reaches pickup</span></label>
+                  <input class="switch" id="st-sms" type="checkbox" data-pref="smsReady">
+                </li>
+                <li>
+                  <label for="st-offers"><strong>Member offers</strong><span>One email a month, never shared</span></label>
+                  <input class="switch" id="st-offers" type="checkbox" data-pref="offers">
+                </li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h2>Appearance</h2>
+              <fieldset class="choice-group">
+                <legend>Theme</legend>
+                <label><input type="radio" name="st-theme" value="light"> Light</label>
+                <label><input type="radio" name="st-theme" value="dark"> Dark</label>
+              </fieldset>
+              <fieldset class="choice-group">
+                <legend>Text direction</legend>
+                <label><input type="radio" name="st-dir" value="ltr"> Left to right</label>
+                <label><input type="radio" name="st-dir" value="rtl"> Right to left</label>
+              </fieldset>
+            </article>
+          </div>
+          <article class="panel danger-zone">
+            <div>
+              <h2>Demo data</h2>
+              <p class="muted small">Restore the sample bookings, history and points. Your sign-in stays as it is.</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn" type="button" data-action="reset-data">Reset Demo Data</button>
+              <button class="link-btn" type="button" data-logout>Log out</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Reusable modal dialog -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <h2 id="modal-title">Dialog</h2>
+        <button class="icon-btn" type="button" data-modal-close aria-label="Close dialog">&#10005;</button>
+      </div>
+      <div class="modal-body" data-modal-body></div>
+    </div>
+  </div>
+
+  <!-- Toast messages -->
+  <div class="toast-wrap" role="status" aria-live="polite"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Scoop & Swirl</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       Site Header (Sticky Navigation)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+        <span class="logo-text">
+          <span class="logo-title">Scoop & Swirl</span>
+          <span class="logo-tagline">Artisan Parlour</span>
+        </span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Wrapper -->
+      <div class="nav-menu-wrapper" id="navDrawer">
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <!-- Home Dropdown (Accordion on Mobile) -->
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Home <span class="dropdown-arrow">▾</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="../index.html" class="dropdown-item">Home 1</a></li>
+                <li><a href="../index1.html" class="dropdown-item">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+            <li class="nav-item"><a href="party-orders.html" class="nav-link">Party Orders</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Drawer Bottom Controls for Mobile Screens -->
+        <div class="mobile-drawer-bottom">
+          <div class="mobile-controls-row">
+            <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+          </div>
+          <a href="menu.html" class="btn btn-primary">Order Online</a>
+        </div>
+      </div>
+
+      <!-- Header Desktop Controls -->
+      <div class="header-actions">
+        <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+        <a href="menu.html" class="btn btn-primary">Order Online</a>
+        <!-- CSS Animated Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Background Overlay -->
+  <div class="mobile-nav-overlay" id="navOverlay"></div>
+
+  <!-- ======================================================================
+       Hero Section (Exempt from Hero Image per Prompt Rule)
+       ====================================================================== -->
+  <section class="contact-hero">
+    <div class="container">
+      <span class="section-tag">Find Us &amp; Reach Out</span>
+      <h1 class="hero-title" style="font-size: 3.1rem; margin-bottom: 1rem;">
+        Visit Our Parlours &amp; <span class="hero-title-highlight">Get In Touch</span>
+      </h1>
+      <p class="hero-lead" style="margin: 0 auto 2.5rem auto; max-width: 650px;">
+        Have a question about our ingredients, want to request a special dessert batch, or planning your visit? We would love to hear from you.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <div class="badge badge-primary" style="padding: 0.6rem 1.25rem; font-size: 0.95rem;">
+          <span>📞</span> Call: (555) 726-6701
+        </div>
+        <div class="badge badge-mint" style="padding: 0.6rem 1.25rem; font-size: 0.95rem;">
+          <span>✉</span> Email: hello@scoopandswirl.com
+        </div>
+        <div class="badge badge-amber" style="padding: 0.6rem 1.25rem; font-size: 0.95rem;">
+          <span>⏱</span> Open Daily: 11:00 AM – 11:00 PM
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 1: Two Parlour Locations & Hours Cards
+       ====================================================================== -->
+  <section class="section" id="parlour-locations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Parlour Houses</span>
+        <h2 class="section-title">Two Locations in Town</h2>
+        <p class="section-subtitle">
+          Whether you want a cozy downtown booth or ocean breeze with your sundae, both parlours offer full menus and warm hospitality.
+        </p>
+      </div>
+
+      <div class="contact-locations-grid">
+        <!-- Location 1 -->
+        <div class="card location-info-card">
+          <div class="location-header">
+            <h3>Downtown Flagship Parlour</h3>
+            <span class="badge badge-primary">Full Lounge &amp; Patio</span>
+          </div>
+          <div class="location-detail-list">
+            <div class="location-detail-item">
+              <span class="location-icon">📍</span>
+              <div>
+                <strong>Address:</strong><br>
+                742 Evergreen Terrace, Downtown District, Metropolis
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">⏱</span>
+              <div>
+                <strong>Hours of Operation:</strong><br>
+                Monday – Thursday: 11:00 AM – 10:30 PM<br>
+                Friday – Saturday: 11:00 AM – 11:30 PM<br>
+                Sunday: 11:00 AM – 10:00 PM
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">📞</span>
+              <div>
+                <strong>Phone:</strong> (555) 726-6701
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">✨</span>
+              <div>
+                <strong>Amenities:</strong> 45 Velvet Lounge Seats, Street Patio, Free Wi-Fi, Dog Pup Cups on the patio.
+              </div>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=742+Evergreen+Terrace+Downtown" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Get Directions in Maps ➔
+          </a>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="card location-info-card">
+          <div class="location-header">
+            <h3>Sunset Beach Boardwalk</h3>
+            <span class="badge badge-mint">Ocean Promenade</span>
+          </div>
+          <div class="location-detail-list">
+            <div class="location-detail-item">
+              <span class="location-icon">📍</span>
+              <div>
+                <strong>Address:</strong><br>
+                120 Ocean Promenade, Pier Plaza Suite 4, Seaside Boardwalk
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">⏱</span>
+              <div>
+                <strong>Hours of Operation:</strong><br>
+                Monday – Sunday: 10:30 AM – 11:00 PM Daily<br>
+                (Late-night express window open until midnight on summer weekends)
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">📞</span>
+              <div>
+                <strong>Phone:</strong> (555) 726-6702
+              </div>
+            </div>
+            <div class="location-detail-item">
+              <span class="location-icon">✨</span>
+              <div>
+                <strong>Amenities:</strong> Oceanfront Sun Deck, Express Walk-Up Window, Beach Cruiser Bicycle Racks.
+              </div>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=120+Ocean+Promenade+Pier+Plaza" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Get Directions in Maps ➔
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 2: Interactive Location Map Component
+       ====================================================================== -->
+  <section class="section section-alt" id="interactive-map">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Find Your Way</span>
+        <h2 class="section-title">Sunset Beach Boardwalk Map</h2>
+        <p class="section-subtitle">
+          Find our Sunset Beach Boardwalk parlour located right on the ocean promenade with direct map navigation and driving directions.
+        </p>
+      </div>
+
+      <div class="map-container-box">
+        <div class="map-control-tabs">
+          <button class="map-tab-btn active" data-location="boardwalk" style="cursor: default; pointer-events: none;">
+            🏖 Sunset Beach Boardwalk (120 Ocean Promenade, Pier Plaza)
+          </button>
+        </div>
+
+        <div class="google-maps-display">
+          <iframe 
+            id="mapIframeBoardwalk" 
+            class="google-map-iframe active" 
+            src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s120+Ocean+Promenade+Pier+Plaza" 
+            width="100%" 
+            height="420" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Google Map - Sunset Beach Boardwalk (120 Ocean Promenade)">
+          </iframe>
+        </div>
+
+        <div class="map-footer-bar">
+          <div>
+            <strong id="mapAddressLabel">120 Ocean Promenade, Pier Plaza Suite 4, Seaside Boardwalk</strong><br>
+            <small id="mapHoursLabel" style="color: var(--text-muted);">Mon–Sun: 10:30 AM – 11:00 PM Daily</small>
+          </div>
+          <a id="mapDirectionsLink" href="https://maps.google.com/?q=120+Ocean+Promenade+Pier+Plaza" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            Open in Google Maps ➔
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 3: Contact Form with Live Validation & FAQ Accordion
+       ====================================================================== -->
+  <section class="section" id="contact-form-section">
+    <div class="container">
+      <div class="contact-form-grid">
+        <!-- Form Side -->
+        <div>
+          <span class="section-tag">Direct Inquiries</span>
+          <h2 class="section-title">Send Us a Message</h2>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            Fill out the form below. Our parlour hospitality team reviews every message and responds within 24 business hours.
+          </p>
+
+          <div id="contactSuccessAlert" class="form-success-alert">
+            <strong>Message Received!</strong> Thank you for contacting Scoop &amp; Swirl. A member of our parlour team will respond to your email shortly.
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Samuel Green" required>
+                <div class="form-error">Please enter at least 2 characters.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="e.g. samuel@example.com" required>
+                <div class="form-error">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone Number (Optional)</label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. (555) 726-6700">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactSubject">Inquiry Topic</label>
+                <select id="contactSubject" class="form-control">
+                  <option value="general">General Question</option>
+                  <option value="flavor">Flavor Suggestion / Request</option>
+                  <option value="allergy">Allergies &amp; Dietary Sourcing</option>
+                  <option value="catering">Party &amp; Bulk Catering</option>
+                  <option value="feedback">Guest Experience Feedback</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Your Message *</label>
+              <textarea id="contactMessage" class="form-control" rows="4" placeholder="How can our scoop crew help you today? Minimum 10 characters..." required></textarea>
+              <div class="form-error">Message must be at least 10 characters.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Info / FAQ Side -->
+        <div>
+          <span class="section-tag">Quick Answers</span>
+          <h2 class="section-title">Common Questions</h2>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            Quick answers to the questions our parlour crew gets asked most often.
+          </p>
+
+          <div class="faq-accordion">
+            <div class="accordion-item active">
+              <button class="accordion-header" aria-expanded="true">
+                <span>Can I sample flavors before purchasing?</span>
+                <span class="accordion-icon">×</span>
+              </button>
+              <div class="accordion-content">
+                Absolutely! We encourage curiosity. Our scoop masters are delighted to offer you compostable tasting spoons of any flavor in our dipping cabinets so you find your perfect match.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>Do you accommodate severe peanut and nut allergies?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                While we do carry nut-containing flavors (such as Sicilian Pistachio), our parlour maintains strict separation protocols with dedicated sanitized scoops and bins. Please inform our server immediately of any severe allergies and we will scoop fresh from an unopened container from the back freezer.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>Are physical and digital gift cards available?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                Yes! Both physical embossed gift cards and instant e-gift cards can be purchased in denominations from $10 to $150. They never expire and are redeemable at both parlour locations.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>Are dogs allowed on the parlour patio?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                Yes, our outdoor street and boardwalk patios are 100% pet-friendly! Ask our cashier for our famous complimentary "Pup Cup" (a swirl of unsweetened whipped cream topped with a peanut butter crunch treat).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 4: Final Next-Step CTA Banner
+       ====================================================================== -->
+  <section class="section section-alt" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Can’t Wait to Treat Yourself?</h2>
+        <p class="cta-banner-desc">
+          Drop by either parlour tonight for warm waffle sundaes, or browse our complete artisanal flavor menu online.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="menu.html" class="btn btn-primary btn-lg">Explore Menu &amp; Flavours</a>
+          <a href="party-orders.html" class="btn btn-secondary btn-lg">Book Event Catering</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Site Footer (Identical Across All Pages)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+            <span class="logo-text">
+              <span class="logo-title">Scoop & Swirl</span>
+              <span class="logo-tagline">Artisan Parlour</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Handcrafted small-batch ice creams, towering waffle sundaes, thick shakes, and celebration gelato cakes made fresh daily.
+          </p>
+        </div>
+
+        <!-- Links Group 1: Home -->
+        <div>
+          <h4 class="footer-group-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 2: Parlour -->
+        <div>
+          <h4 class="footer-group-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="offers.html" class="footer-link">Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 3: Orders -->
+        <div>
+          <h4 class="footer-group-title">Orders</h4>
+          <ul class="footer-links-list">
+            <li><a href="party-orders.html" class="footer-link">Party Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Scoop &amp; Swirl Parlour. All rights reserved.
+        </div>
+        <div>
+          Hours: Monday – Sunday: 11:00 AM – 11:00 PM
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

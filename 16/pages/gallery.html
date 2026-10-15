@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Strand &amp; Steel</title>
+  <meta name="description" content="Cuts, color, barbering and styling from Strand &amp; Steel: filter the gallery and see three transformations start to finish.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="../assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/gallery.html" aria-current="page">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="../pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container split">
+        <div data-reveal>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home 1</a></li>
+              <li><span aria-current="page">Gallery</span></li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Recent work from our chairs</p>
+          <h1 id="page-title">Gallery</h1>
+          <p class="lead">Cuts, color, barbering and styling from the past season. Filter by what you're after, then open any photo for a closer look and the name of the look to ask for.</p>
+        </div>
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/gallery-hero-golden-waves.jpg" alt="Woman running her hands through long golden waves surrounded by green leaves" width="1400" height="934">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Filterable gallery ===== -->
+    <section class="section" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Browse the work</p>
+          <h2 id="work-title">Sixteen looks, four crafts</h2>
+        </div>
+
+        <div class="filter-bar" data-reveal>
+          <div class="filters" role="group" aria-label="Filter looks by category">
+            <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All <span class="filter-count">16</span></button>
+            <button class="filter-btn" type="button" data-filter="cuts" aria-pressed="false">Cuts <span class="filter-count">3</span></button>
+            <button class="filter-btn" type="button" data-filter="color" aria-pressed="false">Color <span class="filter-count">4</span></button>
+            <button class="filter-btn" type="button" data-filter="barbering" aria-pressed="false">Barbering <span class="filter-count">5</span></button>
+            <button class="filter-btn" type="button" data-filter="styling" aria-pressed="false">Styling <span class="filter-count">4</span></button>
+          </div>
+          <p class="filter-status" aria-live="polite" data-filter-status>Showing 16 of 16 looks</p>
+        </div>
+
+        <div class="gallery-grid" data-gallery>
+          <figure class="gallery-item" data-category="cuts">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Textured bob">
+              <img src="../assets/images/gallery-cut-textured-bob.jpg" alt="Woman with a softly textured, chin-length bob in ash-brown tones" width="900" height="709" loading="lazy">
+            </button>
+            <figcaption><strong>Textured bob</strong><span>Cuts · Elena</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="color">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Mushroom-ash waves">
+              <img src="../assets/images/gallery-color-ash-waves.jpg" alt="Long waves in a cool mushroom-ash blonde, seen from behind" width="800" height="1000" loading="lazy">
+            </button>
+            <figcaption><strong>Mushroom-ash waves</strong><span>Color · Hannah</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="barbering">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Hard part with freehand design">
+              <img src="../assets/images/gallery-barber-hair-design.jpg" alt="Man with a slicked-back top, faded sides and freehand lines shaved into the hair" width="800" height="1067" loading="lazy">
+            </button>
+            <figcaption><strong>Hard part with freehand design</strong><span>Barbering · Mateo</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="styling">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Box braids, high bun">
+              <img src="../assets/images/gallery-style-box-braids.jpg" alt="Smiling woman with long box braids gathered into a high bun" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Box braids, high bun</strong><span>Styling · Amara</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="cuts">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Beachy lob">
+              <img src="../assets/images/gallery-cut-beachy-lob.jpg" alt="Shoulder-length honey-brown lob with loose beachy waves, seen from behind" width="800" height="1067" loading="lazy">
+            </button>
+            <figcaption><strong>Beachy lob</strong><span>Cuts · Kai</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="barbering">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: High and tight">
+              <img src="../assets/images/gallery-barber-high-tight.jpg" alt="Barber detailing a short high-and-tight cut with clippers and a comb" width="800" height="1000" loading="lazy">
+            </button>
+            <figcaption><strong>High and tight</strong><span>Barbering · Dorian</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="color">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Copper with peekaboo blonde">
+              <img src="../assets/images/gallery-color-copper-underlights.jpg" alt="Copper-brown lob with a band of blonde underlights at the ends" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Copper with peekaboo blonde</strong><span>Color · Hannah</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="styling">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Iron-set curls">
+              <img src="../assets/images/gallery-style-iron-curls.jpg" alt="Stylist curling a client's long brown hair with a curling iron" width="800" height="1424" loading="lazy">
+            </button>
+            <figcaption><strong>Iron-set curls</strong><span>Styling · Kai</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="barbering">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Hot-lather shave">
+              <img src="../assets/images/gallery-barber-hot-lather-shave.jpg" alt="Client with a mustache receiving a straight-razor shave over thick white lather" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Hot-lather shave</strong><span>Barbering · Dorian</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="cuts">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Rounded ringlet cut">
+              <img src="../assets/images/gallery-cut-curly-shape.jpg" alt="Woman with a short, rounded shape of dark ringlet curls" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Rounded ringlet cut</strong><span>Cuts · Elena</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="styling">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Knotless braids">
+              <img src="../assets/images/gallery-style-knotless-braids.jpg" alt="Woman with long knotless braids against a bright orange backdrop" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Knotless braids</strong><span>Styling · Amara</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="color">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Silver ombré">
+              <img src="../assets/images/gallery-color-silver-ombre.jpg" alt="Long wavy hair melting from dark roots to silver-blonde ends" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Silver ombré</strong><span>Color · Hannah</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="barbering">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Curly top with taper">
+              <img src="../assets/images/gallery-barber-curly-top.jpg" alt="Barber shaping a client's curly top with blonde tips above a tapered fade" width="800" height="1064" loading="lazy">
+            </button>
+            <figcaption><strong>Curly top with taper</strong><span>Barbering · Mateo</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="color">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Vivid red bob">
+              <img src="../assets/images/gallery-color-vivid-red-bob.jpg" alt="Woman with a glossy vivid red bob and blunt bangs against a dark background" width="900" height="600" loading="lazy">
+            </button>
+            <figcaption><strong>Vivid red bob</strong><span>Color · Kai</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="styling">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Twisted half-up">
+              <img src="../assets/images/gallery-style-twisted-half-up.jpg" alt="Auburn hair styled half-up with a looped twist and soft curls" width="800" height="1422" loading="lazy">
+            </button>
+            <figcaption><strong>Twisted half-up</strong><span>Styling · Elena</span></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="barbering">
+            <button class="gallery-open" type="button" aria-label="Open larger photo: Full beard sculpt">
+              <img src="../assets/images/gallery-barber-beard-shape.jpg" alt="Profile of a man with a sculpted full beard and a high fade" width="800" height="1200" loading="lazy">
+            </button>
+            <figcaption><strong>Full beard sculpt</strong><span>Barbering · Dorian</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox (opened by main.js) -->
+      <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" data-lightbox hidden>
+        <button class="lb-btn lb-close" type="button" aria-label="Close photo viewer">✕</button>
+        <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
+        <figure>
+          <img src="../assets/images/gallery-cut-textured-bob.jpg" alt="">
+          <figcaption><strong data-lb-title></strong><span data-lb-meta></span></figcaption>
+        </figure>
+        <button class="lb-btn lb-next" type="button" aria-label="Next photo"><span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- ===== 3. Transformation stories ===== -->
+    <section class="section section--alt" aria-labelledby="stories-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Behind the chair</p>
+          <h2 id="stories-title">Three transformations, start to finish</h2>
+          <p class="lead">What it actually took — the time, the technique and the upkeep — so you know what to expect from a bigger change.</p>
+        </div>
+
+        <div class="stories">
+          <article class="card story-card" data-reveal>
+            <img src="../assets/images/gallery-story-color-correction.jpg" alt="Hair sectioned into dozens of foils during a color correction" width="800" height="1200" loading="lazy">
+            <div class="story-body">
+              <p class="story-meta">Color correction · 2 sessions · Hannah</p>
+              <h3>From box black to soft bronde</h3>
+              <p>Three years of at-home black dye, lifted gently over two sessions with bond repair at every step, then glossed to a warm, even bronde.</p>
+              <p class="story-upkeep"><strong>Upkeep:</strong> a gloss every eight weeks, highlights twice a year.</p>
+            </div>
+          </article>
+
+          <article class="card story-card" data-reveal>
+            <img src="../assets/images/gallery-story-curly-design.jpg" alt="Barber shaping a client's copper-dyed curls above a tapered side with a shaved line" width="800" height="1201" loading="lazy">
+            <div class="story-body">
+              <p class="story-meta">Cut &amp; color · 2.5 hours · Mateo with Amara</p>
+              <h3>Copper curls with a crisp taper</h3>
+              <p>Amara brightened his natural curls to copper, then Mateo carved a low taper and a single part line so the color sits like a crown.</p>
+              <p class="story-upkeep"><strong>Upkeep:</strong> taper every three weeks, color refresh every ten.</p>
+            </div>
+          </article>
+
+          <article class="card story-card" data-reveal>
+            <img src="../assets/images/gallery-story-bridal-style.jpg" alt="Two stylists braiding and pinning a bride's long blonde hair during a wedding trial" width="900" height="600" loading="lazy">
+            <div class="story-body">
+              <p class="story-meta">Bridal trial + wedding day · Elena &amp; Kai</p>
+              <h3>A June bride's halo braid</h3>
+              <p>A loose halo braid built to survive an outdoor ceremony: tested at the trial with her veil, then recreated in 50 minutes on the day.</p>
+              <p class="story-upkeep"><strong>Kept in place:</strong> eight hours, one rainstorm and a lot of dancing.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Reference photo tips ===== -->
+    <section class="section" aria-labelledby="tips-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Bring a reference</p>
+          <h2 id="tips-title">How to turn a saved photo into your haircut</h2>
+        </div>
+        <ol class="tips">
+          <li class="card tip" data-reveal>
+            <h3>Save three, not thirty</h3>
+            <p>Two photos you love and one you don't tell us more than an entire moodboard.</p>
+          </li>
+          <li class="card tip" data-reveal>
+            <h3>Match the texture</h3>
+            <p>Look for hair like yours — a curly cut photographed on straight hair won't behave the same way.</p>
+          </li>
+          <li class="card tip" data-reveal>
+            <h3>Check the light</h3>
+            <p>Color photos are often filtered. Daylight shots help us see the real shade you're after.</p>
+          </li>
+          <li class="card tip" data-reveal>
+            <h3>Be honest about mornings</h3>
+            <p>If you style in five minutes, say so. We'll adapt the look so it still works on day two.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 5. This or that? Look pairs ===== -->
+    <section class="section section--alt" id="this-or-that" aria-labelledby="pairs-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Know what to ask for</p>
+          <h2 id="pairs-title">This or that? Four looks people mix up</h2>
+          <p class="lead">Several looks in the gallery have a near-twin with a different name and a very different upkeep. Here's how to tell them apart, so you ask for exactly what you saw.</p>
+        </div>
+
+        <div class="pair-grid">
+          <article class="card pair" data-reveal>
+            <div class="pair-head">
+              <h3>Bob or lob?</h3>
+              <p class="pair-cat">Cuts</p>
+            </div>
+            <div class="pair-sides">
+              <div class="pair-side">
+                <img src="../assets/images/gallery-cut-textured-bob.jpg" alt="Softly textured, chin-length bob in ash-brown tones" width="900" height="709" loading="lazy">
+                <h4>Bob</h4>
+                <p class="pair-desc">Ends between the ear and the jaw. Crisp and structured, so the shape starts to drift as it grows.</p>
+                <p class="pair-meta"><span>Trim every</span>6 weeks</p>
+              </div>
+              <span class="pair-vs" aria-hidden="true">vs</span>
+              <div class="pair-side">
+                <img src="../assets/images/gallery-cut-beachy-lob.jpg" alt="Shoulder-length lob with loose beachy waves, seen from behind" width="800" height="1067" loading="lazy">
+                <h4>Lob</h4>
+                <p class="pair-desc">A “long bob” that sits between the jaw and the collarbone. Long enough to tie back, and it grows out gracefully.</p>
+                <p class="pair-meta"><span>Trim every</span>8–10 weeks</p>
+              </div>
+            </div>
+            <a class="text-link" href="#work-title" data-show-filter="cuts">See all cuts <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card pair" data-reveal>
+            <div class="pair-head">
+              <h3>Highlights or balayage?</h3>
+              <p class="pair-cat">Color</p>
+            </div>
+            <div class="pair-sides">
+              <div class="pair-side">
+                <img src="../assets/images/gallery-story-color-correction.jpg" alt="Hair sectioned into rows of foils" width="800" height="1200" loading="lazy">
+                <h4>Highlights</h4>
+                <p class="pair-desc">Fine sections are lightened in foil right from the root. Even, all-over brightness, with a clear regrowth line later on.</p>
+                <p class="pair-meta"><span>Refresh every</span>8–10 weeks</p>
+              </div>
+              <span class="pair-vs" aria-hidden="true">vs</span>
+              <div class="pair-side">
+                <img src="../assets/images/cut-lived-in-balayage.jpg" alt="Long dark brown hair with hand-painted caramel balayage" width="720" height="1080" loading="lazy">
+                <h4>Balayage</h4>
+                <p class="pair-desc">Painted freehand on the surface, soft at the root and brighter toward the ends. It grows out without a hard line.</p>
+                <p class="pair-meta"><span>Refresh every</span>12–16 weeks</p>
+              </div>
+            </div>
+            <a class="text-link" href="#work-title" data-show-filter="color">See all color <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card pair" data-reveal>
+            <div class="pair-head">
+              <h3>Fade or taper?</h3>
+              <p class="pair-cat">Barbering</p>
+            </div>
+            <div class="pair-sides">
+              <div class="pair-side">
+                <img src="../assets/images/cut-skin-fade.jpg" alt="Side profile of a high skin fade blended into a swept-back top" width="720" height="960" loading="lazy">
+                <h4>Fade</h4>
+                <p class="pair-desc">The sides and back blend down to skin, or close to it — set high, mid or low. Sharp contrast that grows out fast.</p>
+                <p class="pair-meta"><span>Clean up every</span>2–3 weeks</p>
+              </div>
+              <span class="pair-vs" aria-hidden="true">vs</span>
+              <div class="pair-side">
+                <img src="../assets/images/gallery-barber-curly-top.jpg" alt="Curly top above short, tapered sides" width="800" height="1064" loading="lazy">
+                <h4>Taper</h4>
+                <p class="pair-desc">Length shortens gradually only at the sideburns and neckline, so the sides keep more hair. Softer and more forgiving.</p>
+                <p class="pair-meta"><span>Clean up every</span>3–4 weeks</p>
+              </div>
+            </div>
+            <a class="text-link" href="#work-title" data-show-filter="barbering">See all barbering <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card pair" data-reveal>
+            <div class="pair-head">
+              <h3>Box braids or knotless?</h3>
+              <p class="pair-cat">Styling</p>
+            </div>
+            <div class="pair-sides">
+              <div class="pair-side">
+                <img src="../assets/images/gallery-style-box-braids.jpg" alt="Long box braids gathered into a high bun" width="800" height="1200" loading="lazy">
+                <h4>Box braids</h4>
+                <p class="pair-desc">Each braid starts with a small knot of extension hair at the root, for crisp, square parts and fullness from day one.</p>
+                <p class="pair-meta"><span>Chair time</span>5–6 hours</p>
+              </div>
+              <span class="pair-vs" aria-hidden="true">vs</span>
+              <div class="pair-side">
+                <img src="../assets/images/gallery-style-knotless-braids.jpg" alt="Long knotless braids against a bright orange backdrop" width="800" height="1200" loading="lazy">
+                <h4>Knotless</h4>
+                <p class="pair-desc">Your own hair is braided first, then extensions are fed in gradually. Flatter at the root and gentler on the scalp.</p>
+                <p class="pair-meta"><span>Chair time</span>6–7 hours</p>
+              </div>
+            </div>
+            <a class="text-link" href="#work-title" data-show-filter="styling">See all styling <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Next step ===== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <h2 id="cta-title">Seen a look you love?</h2>
+            <p>Mention it by name in your booking notes and we'll tell you what it takes to get there — time, upkeep and price.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="../pages/contact.html#booking">Book this look</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/pricing.html">Pricing</a></li>
+            <li><a href="../pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

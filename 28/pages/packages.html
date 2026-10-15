@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packages | Aisle &amp; Aperture</title>
+  <meta name="description" content="Essential, Signature and Heirloom wedding photography and film packages with prices, a full comparison, albums and payment terms.">
+  <meta name="theme-color" content="#a8385f">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Apply the saved theme and direction before the first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("aa-theme"), r = localStorage.getItem("aa-dir");
+        if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        if (r === "rtl" || r === "ltr") d.setAttribute("dir", r);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+        <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" width="46" height="46">
+        <span class="brand-text">
+          <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+          <span class="brand-tag">Wedding Films &amp; Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-panel" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+              <ul class="dropdown" id="home-menu">
+                <li><a href="../index.html">Home 1</a></li>
+                <li><a href="../index1.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/portfolio.html">Portfolio</a></li>
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/packages.html" aria-current="page">Packages</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">&#x263E;</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-pressed="false" aria-label="Switch to right-to-left layout"><span class="icon" aria-hidden="true">&#x21C4;</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm" href="../pages/contact.html">Check Your Date</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+  <!-- ============ 1. Page hero ============ -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <img class="page-hero__bg" src="../assets/images/packages-hero-fort-mandap.jpg" alt="A red and gold wedding mandap set up in a fort courtyard, seen through a carved stone archway" fetchpriority="high" width="1600" height="2400">
+    <div class="container">
+      <div class="page-hero__panel glass glass--dark">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home 1</a></li>
+            <li aria-current="page">Packages</li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Packages</h1>
+        <p>Three clear packages with every deliverable listed. Prices are for weddings in and around Jaipur; destination travel is quoted separately below.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. Package cards ============ -->
+  <section class="section glow" aria-labelledby="tiers-title">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">2026–27 pricing</p>
+        <h2 id="tiers-title">Pick the coverage that <em>fits your celebration</em></h2>
+      </header>
+
+      <div class="switch-row">
+        <span id="gst-label">Show prices including 18% GST</span>
+        <button class="switch" id="gst-switch" type="button" role="switch" aria-checked="false" aria-labelledby="gst-label"></button>
+      </div>
+
+      <div class="packages">
+        <article class="package glass reveal">
+          <h3>Essential</h3>
+          <p class="package__for">For intimate weddings with one main ceremony day.</p>
+          <p class="package__price" data-price="165000">₹1,65,000</p>
+          <p class="package__tax">Plus 18% GST</p>
+          <ul class="ticks">
+            <li>1 event day, up to 10 hours</li>
+            <li>1 candid + 1 traditional photographer</li>
+            <li>1 cinematographer</li>
+            <li>600+ edited photographs</li>
+            <li>3–4 minute highlight film</li>
+            <li>Full ceremony film</li>
+            <li>Private online gallery for 1 year</li>
+          </ul>
+          <a class="btn btn--block" href="contact.html?package=essential">Choose Essential</a>
+        </article>
+
+        <article class="package package--featured glass reveal">
+          <span class="package__badge">Most booked</span>
+          <h3>Signature</h3>
+          <p class="package__for">For two-day weddings with a sangeet or mehendi.</p>
+          <p class="package__price" data-price="345000">₹3,45,000</p>
+          <p class="package__tax">Plus 18% GST</p>
+          <ul class="ticks">
+            <li>2 days, up to 3 events</li>
+            <li>2 candid + 1 traditional photographer</li>
+            <li>2 cinematographers</li>
+            <li>1,200+ edited photographs</li>
+            <li>Teaser, highlight film &amp; documentary</li>
+            <li>Drone coverage for 1 event</li>
+            <li>40-page lay-flat linen album</li>
+          </ul>
+          <a class="btn btn--block" href="contact.html?package=signature">Choose Signature</a>
+        </article>
+
+        <article class="package glass reveal">
+          <h3>Heirloom</h3>
+          <p class="package__for">For three-day celebrations and destination weddings.</p>
+          <p class="package__price" data-price="585000">₹5,85,000</p>
+          <p class="package__tax">Plus 18% GST</p>
+          <ul class="ticks">
+            <li>3 days, up to 5 events</li>
+            <li>7-person crew including drone pilot</li>
+            <li>2,000+ edited photographs</li>
+            <li>Pre-wedding shoot included</li>
+            <li>Same-day edit at the reception</li>
+            <li>Drone for every outdoor event</li>
+            <li>Velvet album + 2 parents' albums</li>
+          </ul>
+          <a class="btn btn--block" href="contact.html?package=heirloom">Choose Heirloom</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. Comparison table ============ -->
+  <section class="section section--alt" aria-labelledby="compare-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Side by side</p>
+        <h2 id="compare-title">Compare every <em>deliverable</em></h2>
+        <p class="lead">The small print, made big. If a line matters to you and isn't here, ask — we'll add it to your quote.</p>
+      </header>
+
+      <div class="table-wrap glass reveal">
+        <table class="compare">
+          <caption>“Edited” means individually colour corrected and retouched. Delivery times start from your last event day.</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="visually-hidden">Feature</span></th>
+              <th scope="col">Essential</th>
+              <th scope="col">Signature</th>
+              <th scope="col">Heirloom</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Event days</th><td data-label="Essential">1</td><td data-label="Signature">2</td><td data-label="Heirloom">3</td></tr>
+            <tr><th scope="row">Crew on site</th><td data-label="Essential">3</td><td data-label="Signature">5</td><td data-label="Heirloom">7</td></tr>
+            <tr><th scope="row">Edited photographs</th><td data-label="Essential">600+</td><td data-label="Signature">1,200+</td><td data-label="Heirloom">2,000+</td></tr>
+            <tr><th scope="row">72-hour sneak peek</th><td data-label="Essential"><span class="yes">✓</span></td><td data-label="Signature"><span class="yes">✓</span></td><td data-label="Heirloom"><span class="yes">✓</span></td></tr>
+            <tr><th scope="row">Teaser film</th><td data-label="Essential"><span class="no">—</span></td><td data-label="Signature"><span class="yes">✓</span></td><td data-label="Heirloom"><span class="yes">✓</span></td></tr>
+            <tr><th scope="row">Highlight film</th><td data-label="Essential">3–4 min</td><td data-label="Signature">6–8 min</td><td data-label="Heirloom">10–12 min</td></tr>
+            <tr><th scope="row">Documentary edit</th><td data-label="Essential">Ceremony only</td><td data-label="Signature">30–45 min</td><td data-label="Heirloom">60–90 min</td></tr>
+            <tr><th scope="row">Drone coverage</th><td data-label="Essential"><span class="no">—</span></td><td data-label="Signature">1 event</td><td data-label="Heirloom">All outdoor</td></tr>
+            <tr><th scope="row">Pre-wedding shoot</th><td data-label="Essential"><span class="no">—</span></td><td data-label="Signature"><span class="no">—</span></td><td data-label="Heirloom">City session</td></tr>
+            <tr><th scope="row">Albums</th><td data-label="Essential"><span class="no">—</span></td><td data-label="Signature">1 linen</td><td data-label="Heirloom">1 velvet + 2 parents'</td></tr>
+            <tr><th scope="row">Final delivery</th><td data-label="Essential">6 weeks</td><td data-label="Signature">8 weeks</td><td data-label="Heirloom">10 weeks</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. Albums & keepsakes ============ -->
+  <section class="section glow glow--alt" aria-labelledby="albums-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Albums &amp; keepsakes</p>
+        <h2 id="albums-title">Printed to be <em>passed down</em></h2>
+        <p class="lead">Hand-bound in Jaipur on archival paper rated for 100 years. You'll approve a digital proof before anything goes to print.</p>
+      </header>
+
+      <div class="grid-3 albums">
+        <article class="album glass reveal">
+          <img src="../assets/images/album-linen-pair.jpg" alt="Two linen-bound wedding albums with the couple's names debossed on the covers" loading="lazy" width="800" height="1066">
+          <div class="album__body">
+            <h3>Linen lay-flat</h3>
+            <ul class="album__specs"><li class="tag">12 × 12 in</li><li class="tag">40 pages</li></ul>
+            <p class="album__desc">Seamless lay-flat spreads with a natural linen cover and your names debossed on the front.</p>
+            <p class="album__price">Included in Signature · ₹32,000 on its own</p>
+          </div>
+        </article>
+        <article class="album glass reveal">
+          <img src="../assets/images/album-velvet-cover.jpg" alt="A grey velvet wedding album with the couple's names printed in silver script" loading="lazy" width="800" height="1066">
+          <div class="album__body">
+            <h3>Velvet heirloom</h3>
+            <ul class="album__specs"><li class="tag">14 × 11 in</li><li class="tag">60 pages</li></ul>
+            <p class="album__desc">Thick fine-art pages in a velvet cover, delivered in a fabric-lined keepsake box.</p>
+            <p class="album__price">Included in Heirloom · ₹54,000 on its own</p>
+          </div>
+        </article>
+        <article class="album glass reveal">
+          <img src="../assets/images/album-open-spread.jpg" alt="Hands holding open a printed photo book showing a couple beside a vintage car" loading="lazy" width="800" height="1066">
+          <div class="album__body">
+            <h3>Parents' edition</h3>
+            <ul class="album__specs"><li class="tag">10 × 10 in</li><li class="tag">30 pages</li></ul>
+            <p class="album__desc">A smaller companion album built around family portraits and rituals, so each side has its own copy.</p>
+            <p class="album__price">2 included in Heirloom · ₹28,000 each</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. Booking & payment ============ -->
+  <section class="section section--alt" aria-labelledby="pay-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Booking &amp; payment</p>
+        <h2 id="pay-title">Three payments, <em>clear policies</em></h2>
+      </header>
+
+      <div class="pay">
+        <ol class="timeline">
+          <li class="glass reveal">
+            <span class="timeline__pct" style="--pct: 30"><span>30%</span></span>
+            <div>
+              <h3>To block your date</h3>
+              <p>Paid when you sign the agreement. Your crew and date are reserved from this moment.</p>
+            </div>
+          </li>
+          <li class="glass reveal">
+            <span class="timeline__pct" style="--pct: 50"><span>50%</span></span>
+            <div>
+              <h3>A week before</h3>
+              <p>Due seven days before your first event, after the final timeline call.</p>
+            </div>
+          </li>
+          <li class="glass reveal">
+            <span class="timeline__pct" style="--pct: 20"><span>20%</span></span>
+            <div>
+              <h3>On final delivery</h3>
+              <p>Paid when your full gallery and films are handed over. UPI, bank transfer or card.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="policies">
+          <article class="policy glass reveal">
+            <h3>Postponement</h3>
+            <p>Move your date once at no charge, as long as the new date is free on our calendar.</p>
+          </article>
+          <article class="policy glass reveal">
+            <h3>Cancellation</h3>
+            <p>The retainer isn't refundable, but we hold it as credit towards any shoot for 12 months.</p>
+          </article>
+          <article class="policy glass reveal">
+            <h3>Destination travel</h3>
+            <p>Rajasthan: flat ₹18,000. Rest of India: ₹45,000 plus crew stay. Abroad: flights and stay at cost.</p>
+          </article>
+          <article class="policy glass reveal">
+            <h3>Taxes &amp; invoices</h3>
+            <p>All prices exclude 18% GST. You'll receive a GST invoice for every payment you make.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. CTA ============ -->
+  <section class="section glow" aria-labelledby="pk-cta-title">
+    <div class="container">
+      <div class="cta-band__panel glass reveal">
+        <p class="eyebrow">Custom quote</p>
+        <h2 id="pk-cta-title">Need something <em>in between?</em></h2>
+        <p class="lead">Most couples tweak a package — an extra event here, a second album there. Tell us your plans and we'll send a custom quote within 48 hours.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?package=custom">Get a Custom Quote</a>
+          <a class="link-arrow" href="services.html#add-ons">Browse add-ons <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ Footer (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+          <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" loading="lazy" width="46" height="46">
+          <span class="brand-text">
+            <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+            <span class="brand-tag">Wedding Films &amp; Photography</span>
+          </span>
+        </a>
+        <p>Candid wedding photography and cinematic films from a Jaipur studio, for couples marrying anywhere in India.</p>
+      </div>
+
+      <nav aria-labelledby="footer-home">
+        <h2 class="footer-heading" id="footer-home">Home</h2>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-studio">
+        <h2 class="footer-heading" id="footer-studio">Studio</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/portfolio.html">Portfolio</a></li>
+          <li><a href="../pages/services.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-plan">
+        <h2 class="footer-heading" id="footer-plan">Plan</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/packages.html" aria-current="page">Packages</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-reach">
+        <h2 class="footer-heading">Visit &amp; call</h2>
+        <address class="footer-contact">
+          <span>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur 302001</span>
+          <a href="tel:+919829047215">+91 98290 47215</a>
+          <a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a>
+          <span>Tue–Sat 10:30–19:00 · Sun 11:00–16:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aisle &amp; Aperture Studio LLP. All rights reserved.</p>
+      <p>Photographed, filmed and edited in Jaipur, Rajasthan.</p>
+    </div>
+  </footer>
+</body>
+</html>

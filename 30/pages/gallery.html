@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Photos and case files from Beadwell wash bays and detail studio, with measured gloss and beading results.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="../index1.html">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="../pages/gallery.html" aria-current="page">Gallery</a></li>
+          <li><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container page-hero-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="../index.html">Home 1</a></li><li aria-current="page">Gallery</li></ol>
+          </nav>
+          <p class="eyebrow">Gallery</p>
+          <h1 id="page-title">Work we&rsquo;re happy to put under the lights</h1>
+          <p class="lead">Wash bays, studio corrections and interiors, photographed at handover so you can judge the finish for yourself.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="#cases">Read the case files <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <figure class="page-hero-figure">
+          <img class="rounded-img" src="../assets/images/hero-gallery-water-beads.webp" alt="Close-up of tight water beads sitting on glossy blue car paint" width="1920" height="1536" fetchpriority="high">
+          <figcaption class="hero-badge"><strong>Same light, every car</strong>Studio jobs are photographed under one 6,500&nbsp;K panel at pickup</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. Filterable photo grid + lightbox ===== -->
+    <section class="section" aria-labelledby="grid-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Photo gallery</p>
+            <h2 id="grid-title">Browse by type of job</h2>
+          </div>
+          <p class="muted gallery-count" data-gallery-count aria-live="polite">Showing 12 of 12 photos</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter photos by job type">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="exterior" aria-pressed="false">Exterior</button>
+          <button class="filter-btn" type="button" data-filter="interior" aria-pressed="false">Interior</button>
+          <button class="filter-btn" type="button" data-filter="paint" aria-pressed="false">Paint &amp; coating</button>
+          <button class="filter-btn" type="button" data-filter="wheels" aria-pressed="false">Wheels</button>
+        </div>
+
+        <div class="gallery-grid" data-gallery>
+          <button class="gallery-item" type="button" data-cat="exterior" data-caption="Pre-rinse on a classic black convertible, Bay 1">
+            <img src="../assets/images/gallery-exterior-pressure-bmw.webp" alt="Detailer pressure-rinsing a black BMW convertible on the wash pad" width="900" height="720" loading="lazy"><span class="tag">Exterior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="interior" data-caption="Red leather sports seats after conditioning">
+            <img src="../assets/images/gallery-interior-red-leather.webp" alt="Red leather seats and center console of a sports car after an interior detail" width="900" height="1350" loading="lazy"><span class="tag">Interior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="paint" data-caption="Finishing polish on pearl white paint">
+            <img src="../assets/images/gallery-paint-yellow-pad.webp" alt="Gloved hand polishing white paint with a yellow foam pad" width="900" height="1200" loading="lazy"><span class="tag">Paint &amp; coating</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="exterior" data-caption="Two-bucket hand wash outside the studio door">
+            <img src="../assets/images/gallery-exterior-bucket-wash.webp" alt="Detailer hand-washing a black sports car with a mitt beside two wash buckets" width="900" height="600" loading="lazy"><span class="tag">Exterior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="wheels" data-caption="Wheel ceramic beading after the first rain">
+            <img src="../assets/images/gallery-wheels-wet-rim.webp" alt="Glossy black multi-spoke wheel and tire beaded with water" width="900" height="1200" loading="lazy"><span class="tag">Wheels</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="paint" data-caption="Protective film going onto a headlight">
+            <img src="../assets/images/gallery-paint-headlight-film.webp" alt="Installer smoothing clear protection film over a silver Mercedes headlight" width="900" height="600" loading="lazy"><span class="tag">Paint &amp; coating</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="interior" data-caption="Cabin reset on a blue sports sedan">
+            <img src="../assets/images/gallery-interior-blue-coupe.webp" alt="Open driver&rsquo;s door of a blue BMW showing a freshly cleaned black interior" width="900" height="1125" loading="lazy"><span class="tag">Interior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="exterior" data-caption="Late-evening wash in Bay 3">
+            <img src="../assets/images/gallery-exterior-steam-mustang.webp" alt="White Ford Mustang wrapped in steam and spray inside a wash bay at night" width="900" height="599" loading="lazy"><span class="tag">Exterior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="wheels" data-caption="Tire sidewall scrub before dressing">
+            <img src="../assets/images/gallery-wheels-tire-brush.webp" alt="Gloved hand scrubbing a tire sidewall with a detailing brush" width="900" height="1200" loading="lazy"><span class="tag">Wheels</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="paint" data-caption="Final wipe-down after a 2-step correction">
+            <img src="../assets/images/gallery-paint-microfiber.webp" alt="Grey microfiber towel resting on a freshly polished black hood" width="900" height="600" loading="lazy"><span class="tag">Paint &amp; coating</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="interior" data-caption="Tan leather door cards, steamed and conditioned">
+            <img src="../assets/images/gallery-interior-tan-door.webp" alt="Open rear door revealing tan leather door trim and seats" width="900" height="1350" loading="lazy"><span class="tag">Interior</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="exterior" data-caption="Foam mitt on the lower panels">
+            <img src="../assets/images/gallery-exterior-sponge.webp" alt="Close-up of a soapy wash mitt sweeping foam along a car door" width="900" height="600" loading="lazy"><span class="tag">Exterior</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox dialog (opened by gallery buttons) -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <button class="lb-btn lb-close" type="button" aria-label="Close photo viewer">&#10005;</button>
+      <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><span aria-hidden="true">&#8249;</span></button>
+      <figure>
+        <img alt="">
+        <figcaption></figcaption>
+      </figure>
+      <button class="lb-btn lb-next" type="button" aria-label="Next photo"><span aria-hidden="true">&#8250;</span></button>
+    </div>
+
+    <!-- ===== 3. Case files ===== -->
+    <section class="section section--alt" id="cases" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Case files</p>
+          <h2 id="cases-title">Three cars, three different problems</h2>
+          <p class="lead">What came in, what we did, how long it took and what the owner paid.</p>
+        </div>
+        <div class="cases">
+          <article class="case reveal">
+            <figure class="case-figure">
+              <img class="rounded-img" src="../assets/images/case-black-pickup.webp" alt="Black off-road pickup truck parked in the studio after cleaning" width="900" height="1350" loading="lazy">
+            </figure>
+            <div>
+              <p class="case-label">Case 01 &middot; Wash bay</p>
+              <h3>Black pickup after five months of ski-season salt</h3>
+              <p class="muted">A white film of magnesium chloride on the frame rails and wheels that the owner&rsquo;s home hose couldn&rsquo;t shift.</p>
+              <dl class="case-facts">
+                <div><dt>Service</dt><dd>Bead Shield, underbody flush, wheel ceramic</dd></div>
+                <div><dt>Time</dt><dd>2 h 10 min</dd></div>
+                <div><dt>Paid</dt><dd>$250</dd></div>
+                <div><dt>Result</dt><dd>Wheels now rinse clean in seconds</dd></div>
+              </dl>
+            </div>
+          </article>
+          <article class="case reveal">
+            <figure class="case-figure">
+              <img class="rounded-img" src="../assets/images/case-black-sedan-polish.webp" alt="Polisher working across the hood of a black BMW next to its headlight" width="900" height="600" loading="lazy">
+            </figure>
+            <div>
+              <p class="case-label">Case 02 &middot; Studio</p>
+              <h3>Black sedan swirled by tunnel washes</h3>
+              <p class="muted">Three years of automatic washes left heavy marring that showed in every streetlight. The owner wanted it fixed once and protected.</p>
+              <dl class="case-facts">
+                <div><dt>Service</dt><dd>3-year ceramic with 1-step polish</dd></div>
+                <div><dt>Time</dt><dd>2 days</dd></div>
+                <div><dt>Paid</dt><dd>$890</dd></div>
+                <div><dt>Result</dt><dd>Gloss 71 &rarr; 89 GU</dd></div>
+              </dl>
+            </div>
+          </article>
+          <article class="case reveal">
+            <figure class="case-figure">
+              <img class="rounded-img" src="../assets/images/case-white-leather.webp" alt="Bright white leather front seats inside a dark blue SUV" width="900" height="1348" loading="lazy">
+            </figure>
+            <div>
+              <p class="case-label">Case 03 &middot; Studio</p>
+              <h3>White leather after a summer of road trips</h3>
+              <p class="muted">Blue dye transfer from jeans on the driver&rsquo;s bolster, sunscreen marks and sand in every seam.</p>
+              <dl class="case-facts">
+                <div><dt>Service</dt><dd>Interior Reset (SUV), 3 seats extracted</dd></div>
+                <div><dt>Time</dt><dd>4 h 30 min</dd></div>
+                <div><dt>Paid</dt><dd>$273</dd></div>
+                <div><dt>Result</dt><dd>Dye lifted, leather re-protected</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Measured results ===== -->
+    <section class="section section--band" aria-labelledby="meter-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Measured, not eyeballed</p>
+          <h2 id="meter-title">The numbers behind the shine</h2>
+          <p class="lead">We log readings on studio jobs so &ldquo;glossier&rdquo; means something. Averages from our last 40 corrections and coatings.</p>
+        </div>
+        <div class="meter-grid">
+          <article class="meter reveal">
+            <h3>Gloss after correction</h3>
+            <p>Gloss units at 60&deg;; higher means sharper reflections.</p>
+            <div class="bar-row"><span>1-step</span><div class="bar" role="img" aria-label="1-step before: 71 GU"><span style="--v:71%"></span></div><strong>71</strong></div>
+            <div class="bar-row"><span>after</span><div class="bar bar--after" role="img" aria-label="1-step after: 89 GU"><span style="--v:89%"></span></div><strong>89</strong></div>
+            <div class="bar-row"><span>2-step</span><div class="bar" role="img" aria-label="2-step before: 64 GU"><span style="--v:64%"></span></div><strong>64</strong></div>
+            <div class="bar-row"><span>after</span><div class="bar bar--after" role="img" aria-label="2-step after: 92 GU"><span style="--v:92%"></span></div><strong>92</strong></div>
+          </article>
+          <article class="meter reveal">
+            <h3>Water contact angle</h3>
+            <p>How round a bead sits; above 90&deg; water rolls instead of spreading.</p>
+            <div class="bar-row"><span>Bare</span><div class="bar" role="img" aria-label="Bare paint: 68 degrees"><span style="--v:57%"></span></div><strong>68&deg;</strong></div>
+            <div class="bar-row"><span>Sealant</span><div class="bar bar--after" role="img" aria-label="Spray sealant: 98 degrees"><span style="--v:82%"></span></div><strong>98&deg;</strong></div>
+            <div class="bar-row"><span>Ceramic</span><div class="bar bar--after" role="img" aria-label="5-year ceramic: 112 degrees"><span style="--v:93%"></span></div><strong>112&deg;</strong></div>
+          </article>
+          <article class="meter reveal">
+            <h3>Clear coat used</h3>
+            <p>Microns removed from a typical ~100&nbsp;&micro;m clear coat.</p>
+            <div class="bar-row"><span>1-step</span><div class="bar bar--after" role="img" aria-label="1-step polish removes about 2 microns"><span style="--v:8%"></span></div><strong>2&nbsp;&micro;m</strong></div>
+            <div class="bar-row"><span>2-step</span><div class="bar bar--after" role="img" aria-label="2-step correction removes about 5 microns"><span style="--v:18%"></span></div><strong>5&nbsp;&micro;m</strong></div>
+          </article>
+          <article class="meter reveal">
+            <h3>Ready when we said</h3>
+            <p>Share of jobs handed back by the quoted time in 2025.</p>
+            <div class="bar-row"><span>Bays</span><div class="bar bar--after" role="img" aria-label="Wash bays: 96 percent on time"><span style="--v:96%"></span></div><strong>96%</strong></div>
+            <div class="bar-row"><span>Studio</span><div class="bar bar--after" role="img" aria-label="Detail studio: 91 percent on time"><span style="--v:91%"></span></div><strong>91%</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Share & earn ===== -->
+    <section class="section" aria-labelledby="share-title">
+      <div class="container share-grid">
+        <div>
+          <p class="eyebrow">Share your shine</p>
+          <h2 id="share-title">Post your car, earn 50 points</h2>
+          <p class="lead">Customer photos are our favorite kind of proof. Share yours and we&rsquo;ll thank you with points.</p>
+          <ol class="share-steps">
+            <li><span class="bead bead--sm" aria-hidden="true">1</span><div><strong>Shoot it in daylight</strong><span class="muted">Within 7 days of your visit, while the beading is fresh.</span></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">2</span><div><strong>Post with our tag</strong><span class="muted">On Instagram or Google Maps, public for at least a week.</span></div></li>
+            <li><span class="bead bead--sm" aria-hidden="true">3</span><div><strong>Claim in your dashboard</strong><span class="muted">Paste the link under Loyalty; points arrive within a day.</span></div></li>
+          </ol>
+        </div>
+        <div class="hashtag-card reveal">
+          <p class="muted">Tag your photo</p>
+          <span class="hashtag">#BeadwellShine</span>
+          <p class="muted">The best photo each month wins a free Bead Shield.</p>
+          <a class="link-arrow" href="signin.html">Claim points in the portal <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing CTA ===== -->
+    <section class="section section--band" aria-labelledby="gal-cta-title">
+      <div class="container cta-band">
+        <div>
+          <h2 id="gal-cta-title">Want your car in next month&rsquo;s case files?</h2>
+          <p>Book a wash slot today, or send photos for a studio quote. We&rsquo;ll photograph the result at handover.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?topic=wash">Book a Slot</a>
+          <a class="link-arrow" href="contact.html?topic=detail">Get a Detail Quote <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="../pages/services.html">Services</a></li>
+          <li><a href="../pages/pricing.html">Pricing</a></li>
+          <li><a href="../pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="../pages/signin.html">Sign In</a></li>
+          <li><a href="../pages/signup.html">Sign Up</a></li>
+          <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

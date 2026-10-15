@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Dashmile Couriers</title>
+  <meta name="description" content="About Dashmile Couriers: a Pune courier founded in 2017, with hubs in Hadapsar, Bhosari and Baner, an electric-first fleet, the leadership team and the commitments we make to riders and customers.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-about">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="rates.html">Rate Calculator</a></li>
+          <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link is-active" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Section 1: Page hero ===== -->
+    <section class="page-hero" aria-labelledby="about-title">
+      <div class="container page-hero__grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">About</span></li></ol></nav>
+          <p class="eyebrow">About Dashmile</p>
+          <h1 id="about-title">A Pune courier built by people who've worked the night shift</h1>
+          <p class="lead">We started Dashmile in 2017 after ten years of running other companies' sorting hubs, sure that a city courier could be fast and still pick up the phone.</p>
+          <div class="hero-trust">
+            <span><strong>410</strong> people</span>
+            <span><strong>3</strong> hubs in Pune</span>
+            <span><strong>4.2 million</strong> parcels delivered</span>
+          </div>
+        </div>
+        <div class="page-hero__media">
+          <div class="media-frame"><img src="../assets/images/hero-about-hub-team.jpg" alt="Hub staff in uniforms and safety vests walking along the main aisle of a bright warehouse" width="1400" height="1050" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Our story ===== -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container split split--top">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-title">From six scooters to three hubs</h2>
+          <ol class="story-timeline mt-m">
+            <li><span class="year">2017</span><div><h3>Six scooters in Kothrud</h3><p>Rohan and Meera start with six riders, delivering for bookshops and boutiques around FC Road.</p></div></li>
+            <li><span class="year">2019</span><div><h3>The Hadapsar hub opens</h3><p>A proper sorting floor lets us promise same-day delivery across the whole city for the first time.</p></div></li>
+            <li><span class="year">2021</span><div><h3>Air Express takes off</h3><p>Overnight cargo space out of Pune airport connects our customers to six metros by the next day.</p></div></li>
+            <li><span class="year">2023</span><div><h3>Electric three-wheelers arrive</h3><p>38 EVs replace diesel vans on the busiest city beats, quieter and cheaper to run.</p></div></li>
+            <li><span class="year">2025</span><div><h3>PCMC gets its own hub</h3><p>The Bhosari hub cuts average delivery time in Pimpri-Chinchwad by 40 minutes.</p></div></li>
+            <li><span class="year">2026</span><div><h3>4.2 million parcels</h3><p>And the founders still read every escalation that reaches them.</p></div></li>
+          </ol>
+        </div>
+        <figure class="story-media" data-reveal>
+          <div class="media-frame"><img src="../assets/images/about-first-scooter.jpg" alt="Courier on a red scooter with a delivery box speeding through a city street at night" width="1000" height="750" loading="lazy"></div>
+          <figcaption>Late-evening runs on two wheels are still the heart of what we do.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Hubs and fleet ===== -->
+    <section class="section section--alt" aria-labelledby="network-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our network</p>
+          <h2 id="network-title">Three hubs and the vehicles behind them</h2>
+          <p class="lead">Each hub has its own job, which is how a parcel can cross Pune in under three hours.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card hub-card" data-reveal>
+            <span class="pill pill--brand">Main sortation hub</span>
+            <h3>Hadapsar</h3>
+            <p class="muted">The heart of the network, running 24 hours a day, six days a week.</p>
+            <ul>
+              <li><strong>42,000 sq ft</strong> sorting floor</li>
+              <li><strong>38,000</strong> parcels a day capacity</li>
+              <li>Linehaul trucks leave nightly at <strong>10:30 PM</strong></li>
+            </ul>
+          </article>
+          <article class="card hub-card" data-reveal>
+            <span class="pill pill--brand">PCMC hub</span>
+            <h3>Bhosari</h3>
+            <p class="muted">Serves Pimpri-Chinchwad and the industrial belt to the north-west.</p>
+            <ul>
+              <li><strong>18,000 sq ft</strong> in MIDC Bhosari</li>
+              <li>Feeds <strong>Chakan and Talegaon</strong> beats</li>
+              <li>Own sorting wave at <strong>7 PM</strong></li>
+            </ul>
+          </article>
+          <article class="card hub-card" data-reveal>
+            <span class="pill pill--brand">City counter</span>
+            <h3>Baner</h3>
+            <p class="muted">A walk-in counter and the rider base for the west side of the city.</p>
+            <ul>
+              <li>Drop-off and <strong>packing</strong> counter</li>
+              <li>Base for <strong>24 Dash 90</strong> riders</li>
+              <li>Covers Baner, Aundh, Pashan and Balewadi</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card fleet" data-reveal>
+          <h3>Fleet on the road today</h3>
+          <ul class="fleet-bars">
+            <li><span>Two-wheelers</span><span class="bar"><span style="--w:100%"></span></span><b>146</b></li>
+            <li class="is-ev"><span>Electric three-wheelers</span><span class="bar"><span style="--w:26%"></span></span><b>38</b></li>
+            <li><span>Delivery vans</span><span class="bar"><span style="--w:15%"></span></span><b>22</b></li>
+            <li><span>Linehaul trucks</span><span class="bar"><span style="--w:5%"></span></span><b>6</b></li>
+          </ul>
+          <p class="hint mt-s">Every vehicle carries GPS and a fire extinguisher. Vans are serviced every 5,000 km.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: Leadership team ===== -->
+    <section class="section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Leadership</p>
+          <h2 id="team-title">The people who answer for every parcel</h2>
+        </div>
+        <div class="grid grid-4">
+          <article class="team-card" data-reveal>
+            <img src="../assets/images/team-rohan-kulkarni.jpg" alt="Portrait of Rohan Kulkarni, smiling, in glasses and a dark blazer" width="600" height="600" loading="lazy">
+            <h3>Rohan Kulkarni</h3>
+            <span class="role">Co-founder &amp; CEO</span>
+            <p>Ran night operations for a national express company for nine years. Still rides a Dash 90 route on the first Saturday of every month.</p>
+          </article>
+          <article class="team-card" data-reveal>
+            <img src="../assets/images/team-meera-deshpande.jpg" alt="Portrait of Meera Deshpande in a navy suit with arms folded" width="600" height="600" loading="lazy">
+            <h3>Meera Deshpande</h3>
+            <span class="role">Co-founder &amp; COO</span>
+            <p>Designed the Hadapsar hub layout and owns our on-time numbers. Reviews every missed-scan report personally.</p>
+          </article>
+          <article class="team-card" data-reveal>
+            <img src="../assets/images/team-farah-shaikh.jpg" alt="Portrait of Farah Shaikh smiling at her desk" width="600" height="600" loading="lazy">
+            <h3>Farah Shaikh</h3>
+            <span class="role">Head of Customer Care</span>
+            <p>Leads the 28-person support desk that answers calls in under a minute and WhatsApp messages in under five.</p>
+          </article>
+          <article class="team-card" data-reveal>
+            <img src="../assets/images/team-sandeep-jadhav.jpg" alt="Portrait of Sandeep Jadhav in a blue shirt with arms crossed" width="600" height="600" loading="lazy">
+            <h3>Sandeep Jadhav</h3>
+            <span class="role">Fleet &amp; Rider Lead</span>
+            <p>One of the first six riders in 2017. Now trains every new rider in road safety and beat knowledge.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Commitments ===== -->
+    <section class="section section--alt" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How we work</p>
+          <h2 id="values-title">Four promises we hold ourselves to</h2>
+        </div>
+        <div class="grid grid-4">
+          <article class="card" data-reveal><span class="icon-tile" aria-hidden="true">🛵</span><h3>Riders come first</h3><p class="muted">Every rider has accident insurance, a fixed beat and no penalty for slowing down in heavy rain.</p></article>
+          <article class="card" data-reveal><span class="icon-tile" aria-hidden="true">⚡</span><h3>Cleaner kilometres</h3><p class="muted">62% of our city kilometres are electric today. We'll reach 85% by 2028 without adding it to your bill.</p></article>
+          <article class="card" data-reveal><span class="icon-tile" aria-hidden="true">🔒</span><h3>Your data stays yours</h3><p class="muted">Receiver phone numbers are masked from riders. We never sell or share address data.</p></article>
+          <article class="card" data-reveal><span class="icon-tile" aria-hidden="true">🤝</span><h3>One rate card for all</h3><p class="muted">No hidden fees, no secret discounts for the loudest customer, and clear terms in plain language.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 6: Call to action (careers) ===== -->
+    <section class="section" aria-labelledby="cta-about-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">Careers</p>
+            <h2 id="cta-about-title">Ride with Dashmile</h2>
+            <p>We're hiring delivery partners in Wakad, Kharadi and Chakan. Weekly payouts, insured rides, and an EV scooter if you don't own a bike.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="contact.html?topic=careers">Apply to ride</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rate Calculator</a></li>
+          <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

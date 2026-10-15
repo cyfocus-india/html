@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - AuraWash Laundry &amp; Dry Cleaning</title>
+  <meta name="description" content="Transparent per-pound wash and fold rates, itemized dry cleaning prices, and monthly laundry subscriptions from AuraWash.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="site-logo" aria-label="AuraWash Home">
+        <img src="../assets/images/logo.png" alt="AuraWash Laundry &amp; Dry Cleaning Logo" class="site-logo-img">
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Home <span class="caret-arrow" aria-hidden="true"></span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+        </div>
+
+        <!-- Mobile & Tablet Drawer Actions -->
+        <div class="nav-mobile-actions">
+          <a href="signin.html" class="btn btn-primary nav-mobile-signin">Sign In</a>
+          <div class="nav-mobile-toggles">
+            <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+            <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action Buttons & Toggles -->
+      <div class="header-actions">
+        <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+        <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        <a href="signin.html" class="btn btn-primary">Sign In</a>
+
+        <!-- Hamburger Menu Button for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO SECTION: Transparent Pricing Manifesto -->
+    <section class="pricing-hero">
+      <div class="container hero-grid-h1">
+        <div class="hero-content-h1">
+          <div class="badge">✦ Clear, Honest Rates</div>
+          <h1>Simple Per-Pound &amp; Per-Item Garment Pricing</h1>
+          <p class="hero-subtitle">
+            No mystery charges, hidden environmental fees, or surge pricing. Pay only for the exact weight of your everyday laundry and per-piece rates for fine dry cleaning.
+          </p>
+          <div class="hero-badges-list">
+            <div class="trust-item"><span>⚖</span> Digital Weigh-In Photos</div>
+            <div class="trust-item"><span>🚚</span> Free Pickup &amp; Delivery Over $30</div>
+            <div class="trust-item"><span>🏷</span> Guaranteed Upfront Itemization</div>
+          </div>
+        </div>
+
+        <div class="hero-media-h1">
+          <div class="hero-image-frame">
+            <img src="../assets/images/hero-pricing.jpg" alt="Neatly organized and folded laundry on boutique wooden counter">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Interactive Itemized Cost Calculator -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Live Estimator</div>
+          <h2>Interactive Itemized Price Calculator</h2>
+          <p>Add your expected laundry weight and specialty dry cleaning pieces to preview your instant order total.</p>
+        </div>
+
+        <div class="calc-container">
+          <div class="calc-grid">
+            <div class="calc-items-wrap">
+              <!-- Item 1: Wash & Fold lbs -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Everyday Wash &amp; Fold</h4>
+                  <span>$1.95 per pound (10 lb minimum)</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="wash-fold-lbs">-</button>
+                  <span class="stepper-val" id="val-wash-fold-lbs">15</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="wash-fold-lbs">+</button>
+                </div>
+              </div>
+
+              <!-- Item 2: Dress Shirts -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Laundered Dress Shirts</h4>
+                  <span>$3.50 each (washed, pressed &amp; hung)</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="dry-clean-shirts">-</button>
+                  <span class="stepper-val" id="val-dry-clean-shirts">4</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="dry-clean-shirts">+</button>
+                </div>
+              </div>
+
+              <!-- Item 3: Suits & Blazers -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Suits &amp; Blazers (Dry Clean)</h4>
+                  <span>$14.50 each (hand finished)</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="dry-clean-suits">-</button>
+                  <span class="stepper-val" id="val-dry-clean-suits">1</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="dry-clean-suits">+</button>
+                </div>
+              </div>
+
+              <!-- Item 4: Trousers & Pants -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Trousers, Slacks &amp; Skirts</h4>
+                  <span>$7.00 each (crease pressed)</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="dry-clean-pants">-</button>
+                  <span class="stepper-val" id="val-dry-clean-pants">2</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="dry-clean-pants">+</button>
+                </div>
+              </div>
+
+              <!-- Item 5: Curtains & Drapes -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Drapery &amp; Curtain Panels</h4>
+                  <span>$22.00 per panel (steam revitalized)</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="curtains-panels">-</button>
+                  <span class="stepper-val" id="val-curtains-panels">0</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="curtains-panels">+</button>
+                </div>
+              </div>
+
+              <!-- Item 6: Ironing Only -->
+              <div class="calc-row">
+                <div class="calc-item-info">
+                  <h4>Press &amp; Ironing Only</h4>
+                  <span>$2.50 per garment</span>
+                </div>
+                <div class="calc-stepper">
+                  <button type="button" class="stepper-btn" data-action="minus" data-target="ironing-only">-</button>
+                  <span class="stepper-val" id="val-ironing-only">0</span>
+                  <button type="button" class="stepper-btn" data-action="plus" data-target="ironing-only">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calculator Summary Box -->
+            <div class="calc-summary-card">
+              <div class="badge">Estimated Order Total</div>
+              <div class="calc-grand-total" id="calcGrandTotal">$71.75</div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+                Includes ozone wash, eco detergent, custom hangers, and complimentary doorstep pickup &amp; delivery.
+              </p>
+              <a href="contact.html?service=Custom%20Order%20Estimate" id="bookWithEstimateBtn" class="btn btn-primary" style="width:100%;">Book With This Estimate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Monthly Routine Laundry Memberships -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Subscription Savings</div>
+          <h2>Monthly Laundry Care Routine Memberships</h2>
+          <p>Designed around real household routines. Save up to 25% compared to on-demand pricing with priority pickup slots.</p>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Plan 1: Solo Fresh -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>Solo Fresh</h3>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Ideal for busy urban professionals</p>
+              <div class="plan-price">$59 <span>/ month</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>30 lbs</strong> Wash &amp; Fold included</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>2 Dress Shirts</strong> dry cleaned &amp; pressed</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Free weekly scheduled doorstep pickup</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">1 Personalized heavy-duty laundry hamper</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Standard 24h turnaround guarantee</span></li>
+            </ul>
+            <a href="contact.html?service=Solo%20Fresh%20Plan" class="btn btn-secondary select-plan-btn" data-plan="Solo Fresh Plan" style="width:100%;">Choose Solo Fresh</a>
+          </div>
+
+          <!-- Plan 2: Family Essentials (Featured) -->
+          <div class="plan-card featured">
+            <div class="plan-ribbon">Most Popular</div>
+            <div class="plan-header">
+              <h3>Family Essentials</h3>
+              <p style="font-size:0.85rem; color:var(--text-muted);">For households of 3 to 5 people</p>
+              <div class="plan-price">$139 <span>/ month</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>75 lbs</strong> Wash &amp; Fold included</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>6 Dry Cleaning pieces</strong> of any type</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>2x Weekly</strong> doorstep collection visits</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">2 Personalized color-coded hampers</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Free bedding &amp; towel ozone sanitization</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Priority driver dispatch windows</span></li>
+            </ul>
+            <a href="contact.html?service=Family%20Essentials%20Plan" class="btn btn-primary select-plan-btn" data-plan="Family Essentials Plan" style="width:100%;">Choose Family Essentials</a>
+          </div>
+
+          <!-- Plan 3: Executive Wardrobe Club -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>Executive Club</h3>
+              <p style="font-size:0.85rem; color:var(--text-muted);">For professionals wearing tailored daily attire</p>
+              <div class="plan-price">$89 <span>/ month</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>20 Dress Shirts</strong> laundered &amp; hand-pressed</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text"><strong>4 Two-Piece Suits / Blazers</strong> dry cleaned</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Complimentary collar stays &amp; button repairs</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">Breathable zippered travel garment bags</span></li>
+              <li><span class="plan-feature-icon">✓</span> <span class="plan-feature-text">VIP emergency same-day rush privileges</span></li>
+            </ul>
+            <a href="contact.html?service=Executive%20Club%20Plan" class="btn btn-secondary select-plan-btn" data-plan="Executive Club Plan" style="width:100%;">Choose Executive Club</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Specialty Services & Alterations Rate Sheet -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">A La Carte Care</div>
+          <h2>Specialty Item &amp; Garment Repair Rates</h2>
+          <p>Full service care for your home textiles, bulky bed sets, and tailored clothing repairs.</p>
+        </div>
+
+        <div class="matrix-table-wrap">
+          <table class="speed-matrix-table">
+            <thead>
+              <tr>
+                <th>Specialty Item / Alteration</th>
+                <th>Standard Rate</th>
+                <th>Turnaround</th>
+                <th>Service Specifics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Missing Button Replacement</strong></td>
+                <td><strong style="color:var(--success-color);">$0.00 (Free)</strong></td>
+                <td>Included with wash</td>
+                <td>Standard pearl, horn, and resin dress shirt buttons matched and hand-sewn.</td>
+              </tr>
+              <tr>
+                <td><strong>Trouser &amp; Skirt Hemming</strong></td>
+                <td><strong>$12.00 / pair</strong></td>
+                <td>48 Hours</td>
+                <td>Blind stitch or original jean cuff retention by our in-house master tailor.</td>
+              </tr>
+              <tr>
+                <td><strong>Zipper Slider &amp; Pull Repair</strong></td>
+                <td><strong>$15.00 / item</strong></td>
+                <td>48 Hours</td>
+                <td>YKK heavy-duty metal and coil zipper replacements for pants, jackets, and bags.</td>
+              </tr>
+              <tr>
+                <td><strong>Down Comforter / Duvet Deep Wash</strong></td>
+                <td><strong>$28.00 / duvet</strong></td>
+                <td>48 Hours</td>
+                <td>Oversized extraction drum prevents feather clumping; hypoallergenic air plumping.</td>
+              </tr>
+              <tr>
+                <td><strong>Leather &amp; Suede Reconditioning</strong></td>
+                <td><strong>$45.00 / jacket</strong></td>
+                <td>5 Business Days</td>
+                <td>Natural lanolin oil replenishment, color restoration, and water-repellent wax seal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: The AuraWash Price & Weight Guarantee -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Integrity Guarantee</div>
+          <h2>Our Price Transparency Commitment</h2>
+          <p>We believe trust is earned through complete honesty in how we weigh, charge, and deliver.</p>
+        </div>
+
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="g-icon">📸</div>
+            <h4>Digital Scale SMS Photo</h4>
+            <p>You receive an automated photo of your laundry bag resting on our certified digital scale before the wash begins.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="g-icon">🚫</div>
+            <h4>Zero Hidden Surcharges</h4>
+            <p>No unexpected hazardous waste disposal fees, fuel surcharges, or peak evening pickup upcharges. What you see is what you pay.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="g-icon">🛡</div>
+            <h4>$1,000 Garment Protection</h4>
+            <p>Every pickup is insured against loss, damage, or fabric distortion. If an item is harmed, we repair or replace it immediately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Next Step CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready To Simplify Your Wardrobe Care?</h2>
+          <p>Schedule your pickup in under 60 seconds. New customers enjoy $15 off their first order with code FRESHSTART.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book A Pickup Today</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Site Footer (Identical on public pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <img src="../assets/images/logo-dark.png" alt="AuraWash Logo" style="height:40px;">
+          </a>
+          <p>
+            Eco-friendly doorstep laundry, dry cleaning, and fabric care with guaranteed 24-hour turnaround.
+          </p>
+          <div class="footer-contact-mini">
+            <div>📞 (555) 328-9274</div>
+            <div>✉ care@aurawash.com</div>
+            <div>📍 482 Cleanview Blvd, Suite 100</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links-list">
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AuraWash Laundry &amp; Dry Cleaning Services. All rights reserved.</div>
+        <div>Zero Harsh Chemicals &bull; 100% Recyclable Packaging &bull; Cold Ozone Sanitize</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

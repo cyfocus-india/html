@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Wanderkite Holidays</title>
+  <meta name="description" content="Plan a tailor-made holiday with Wanderkite: where to go each season, how booking works, what every package includes and answers to common questions.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="assets/images/logo.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">
+              Home <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/domestic.html">Domestic</a></li>
+          <li><a class="nav-link" href="pages/international.html">International</a></li>
+          <li><a class="nav-link" href="pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        <a class="btn btn--sm" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===== 1. HERO: split layout, travel styles ===== -->
+    <section class="hero-split" aria-labelledby="hero2-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Tailor-made holidays</p>
+          <h1 id="hero2-title">Holidays shaped around how you travel, not a catalogue.</h1>
+          <p class="lead">Tell us your pace, budget and must-sees. A Wanderkite planner builds a day-by-day itinerary that's yours alone, and you pay nothing until you're happy with it.</p>
+          <ul class="style-list">
+            <li><span class="ico" aria-hidden="true">⛰</span><span><strong>Slow &amp; scenic</strong><span class="sub">Fewer hotels, longer stays, more views</span></span></li>
+            <li><span class="ico" aria-hidden="true">🏄</span><span><strong>Active &amp; outdoors</strong><span class="sub">Treks, dives, rafting and road trips</span></span></li>
+            <li><span class="ico" aria-hidden="true">🛕</span><span><strong>Culture &amp; food</strong><span class="sub">Old quarters, temples, cooking classes</span></span></li>
+            <li><span class="ico" aria-hidden="true">👵</span><span><strong>Easy-paced</strong><span class="sub">Senior-friendly hotels and short drives</span></span></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn" href="pages/contact.html#enquiry">Talk to a Planner</a>
+            <a class="link-arrow" href="#how-title">See how it works <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-frame">
+          <img src="assets/images/hero-home2.jpg" alt="Hiker with a yellow backpack walking through a green alpine valley towards forested mountains" width="1400" height="930" fetchpriority="high">
+          <div class="float-badge"><b>₹0</b>planning fee</div>
+          <div class="float-card">
+            <span class="tag">Recently planned</span>
+            <strong>7 nights, Spiti in a 4×4</strong>
+            <p>For a couple from Pune who wanted “quiet villages, no crowds” — <span class="price">₹41,200 per person</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. TRAVEL BY SEASON (tabs) ===== -->
+    <section class="section" aria-labelledby="season-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Plan by season</p>
+          <h2 id="season-title">Where the weather is right, month by month</h2>
+          <p>India's seasons flip from north to south. Pick when you can travel and we'll show the places at their best then.</p>
+        </div>
+
+        <div class="tablist" role="tablist" aria-label="Travel seasons" data-tabs style="justify-content:center">
+          <button class="chip" role="tab" id="tab-winter" aria-selected="true" aria-controls="panel-winter">❄ Oct – Feb</button>
+          <button class="chip" role="tab" id="tab-summer" aria-selected="false" aria-controls="panel-summer" tabindex="-1">☀ Mar – Jun</button>
+          <button class="chip" role="tab" id="tab-monsoon" aria-selected="false" aria-controls="panel-monsoon" tabindex="-1">☂ Jul – Sep</button>
+        </div>
+
+        <div class="tab-panel season-panel" role="tabpanel" id="panel-winter" aria-labelledby="tab-winter">
+          <figure class="season-media">
+            <img src="assets/images/season-winter.jpg" alt="Hawa Mahal in Jaipur lit up in warm gold against a deep blue evening sky" width="800" height="1200" loading="lazy">
+            <figcaption>Cool, dry days of 22–27°C make winter the best time for Rajasthan's forts and desert camps.</figcaption>
+          </figure>
+          <ul class="season-list">
+            <li><h3>Rajasthan &amp; the Thar Desert</h3><span class="temp">22–27°C</span><p>Jaipur, Jodhpur and Jaisalmer dune camps under clear skies; Pushkar fair in November.</p><span class="from">Trips from <strong>₹22,500</strong></span></li>
+            <li><h3>Goa, Gokarna &amp; Andaman</h3><span class="temp">28–31°C</span><p>Calm seas, shacks back in business and the best visibility for snorkelling and diving.</p><span class="from">Trips from <strong>₹14,900</strong></span></li>
+            <li><h3>Dubai &amp; Abu Dhabi</h3><span class="temp">24–29°C</span><p>The only comfortable months for desert safaris, Global Village and outdoor theme parks.</p><span class="from">Trips from <strong>₹46,500</strong></span></li>
+            <li><h3>Thailand &amp; Vietnam</h3><span class="temp">26–32°C</span><p>Dry season on the Andaman coast and in central Vietnam — island hopping at its best.</p><span class="from">Trips from <strong>₹36,400</strong></span></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel season-panel" role="tabpanel" id="panel-summer" aria-labelledby="tab-summer" hidden>
+          <figure class="season-media">
+            <img src="assets/images/season-summer.jpg" alt="Wooden lakeside cabin beneath misty forested mountains in summer" width="800" height="533" loading="lazy">
+            <figcaption>When the plains pass 40°C, mountain stays from 2,000 m up stay a pleasant 15–24°C.</figcaption>
+          </figure>
+          <ul class="season-list">
+            <li><h3>Ladakh &amp; Spiti</h3><span class="temp">12–25°C</span><p>High passes reopen in May; Pangong, Nubra and Chandratal are reachable until September.</p><span class="from">Trips from <strong>₹38,500</strong></span></li>
+            <li><h3>Kashmir, Himachal &amp; Sikkim</h3><span class="temp">15–24°C</span><p>Tulip and rhododendron season, snow at Gulmarg and Yumthang in April, green meadows by June.</p><span class="from">Trips from <strong>₹15,900</strong></span></li>
+            <li><h3>Japan in blossom</h3><span class="temp">10–20°C</span><p>Cherry blossoms reach Tokyo and Kyoto in late March to early April — book by December.</p><span class="from">Trips from <strong>₹2,18,000</strong></span></li>
+            <li><h3>Switzerland &amp; Europe</h3><span class="temp">14–24°C</span><p>Long daylight, open mountain railways and fewer crowds than July. Schengen visas take 3–4 weeks.</p><span class="from">Trips from <strong>₹2,45,000</strong></span></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel season-panel" role="tabpanel" id="panel-monsoon" aria-labelledby="tab-monsoon" hidden>
+          <figure class="season-media">
+            <img src="assets/images/season-monsoon.jpg" alt="Kerala houseboat cruising a wide, rain-fed backwater lined with coconut palms" width="800" height="534" loading="lazy">
+            <figcaption>Monsoon turns Kerala and the Western Ghats emerald — and drops houseboat rates by up to 30%.</figcaption>
+          </figure>
+          <ul class="season-list">
+            <li><h3>Kerala Ayurveda retreats</h3><span class="temp">24–29°C</span><p>Traditional Karkidakam therapy season; 7- and 14-night wellness stays near Kovalam and Thrissur.</p><span class="from">Trips from <strong>₹32,000</strong></span></li>
+            <li><h3>Coorg, Chikmagalur &amp; Munnar</h3><span class="temp">18–24°C</span><p>Waterfalls in full flow, misty coffee estates and plantation bungalows at off-season prices.</p><span class="from">Trips from <strong>₹12,900</strong></span></li>
+            <li><h3>Bali &amp; Maldives value window</h3><span class="temp">26–30°C</span><p>Bali's dry season peaks in August; the Maldives sees short showers and 20–25% lower villa rates.</p><span class="from">Trips from <strong>₹54,900</strong></span></li>
+            <li><h3>Kenya's Great Migration</h3><span class="temp">15–27°C</span><p>Wildebeest cross the Mara River from July to October — the safari of a lifetime.</p><span class="from">Trips from <strong>₹1,64,000</strong></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. HOW BOOKING WORKS + inclusions ===== -->
+    <section class="section section--alt" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">From first message to boarding pass in four steps</h2>
+          <p>No forms to fill in for an hour and no pressure to pay before you're sure.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Share your idea</h3><p>Call, WhatsApp or fill our form with dates, budget and who's travelling.</p><span class="tag when">Day 0 · free</span></li>
+          <li><h3>Get your itinerary</h3><p>A planner sends a day-by-day plan with hotel options and an itemised price.</p><span class="tag when">Within 24 hours</span></li>
+          <li><h3>Confirm with 25%</h3><p>Pay a quarter to lock it in. Balance due 21 days before you fly, or in 0% EMIs.</p><span class="tag when">UPI · cards · EMI</span></li>
+          <li><h3>Travel looked after</h3><p>Vouchers and e-tickets in your traveller dashboard, plus a WhatsApp group with your planner and drivers.</p><span class="tag when">Every day of the trip</span></li>
+        </ol>
+
+        <div class="inclusions">
+          <div class="incl-card incl-card--yes">
+            <h3><span aria-hidden="true">✓</span> Included in every package</h3>
+            <ul>
+              <li><span>Hand-picked hotels with daily breakfast</span></li>
+              <li><span>Private airport and inter-city transfers</span></li>
+              <li><span>Sightseeing with entry tickets listed in your itinerary</span></li>
+              <li><span>Travel insurance on all international trips</span></li>
+              <li><span>All taxes and GST shown upfront — no surprises</span></li>
+            </ul>
+          </div>
+          <div class="incl-card incl-card--no">
+            <h3><span aria-hidden="true">✕</span> Not included unless you add it</h3>
+            <ul>
+              <li><span>Flights on domestic packages (we add them at cost)</span></li>
+              <li><span>Lunches, dinners and drinks not in the meal plan</span></li>
+              <li><span>Optional activities such as scuba, paragliding or spas</span></li>
+              <li><span>Camera fees at monuments and personal tips</span></li>
+              <li><span>TCS on overseas packages, adjustable in your tax return</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. FAQ ===== -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-title">Questions travellers ask before booking</h2>
+          </div>
+          <div class="accordion" data-accordion="single">
+            <details class="acc-item" open>
+              <summary>How much do I pay to confirm, and when is the balance due?</summary>
+              <div class="acc-body"><p>25% of the package price confirms your booking. The balance is due 21 days before departure for domestic trips and 30 days before for international trips. Bookings above ₹50,000 can use 0% EMI for 3 or 6 months on major credit cards.</p></div>
+            </details>
+            <details class="acc-item">
+              <summary>What happens if I need to cancel?</summary>
+              <div class="acc-body"><p>Cancel 45+ days before departure and we refund everything except non-refundable flight fares and bank charges. Between 44 and 15 days, 50% of the land cost is refunded; inside 15 days the land cost is non-refundable. Insurance on international trips covers medical cancellations.</p></div>
+            </details>
+            <details class="acc-item">
+              <summary>Can I change my itinerary after booking?</summary>
+              <div class="acc-body"><p>Yes. Changes up to 15 days before travel are free if the hotel and transport allow it; we only pass on any fare difference.</p></div>
+            </details>
+            <details class="acc-item">
+              <summary>Are flights included?</summary>
+              <div class="acc-body"><p>International packages include return economy flights from Delhi, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata, Kochi or Ahmedabad. Domestic packages are land-only so you can use miles or trains; we can add flights at cost.</p></div>
+            </details>
+            <details class="acc-item">
+              <summary>Do you plan for seniors, kids or travellers with limited mobility?</summary>
+              <div class="acc-body"><p>Often. We pick hotels with lifts and ground-floor rooms, book wheelchair assistance at airports, keep daily drives under four hours and arrange Jain, vegetarian or child-friendly meals.</p></div>
+            </details>
+          </div>
+        </div>
+        <aside class="help-card" aria-label="Talk to a planner">
+          <img src="assets/images/planners-team.jpg" alt="Wanderkite travel planners chatting with a couple about their trip over coffee" width="1000" height="667" loading="lazy">
+          <div class="inner">
+            <h3>Still deciding?</h3>
+            <p class="muted">Our 26 planners have each travelled to at least 15 of the places they sell.</p>
+            <ul>
+              <li>☎ Weekdays 9:30 AM – 7:30 PM, Saturdays till 6 PM</li>
+              <li>💬 WhatsApp +91 98450 31277</li>
+              <li>⌖ Walk in at Indiranagar, Bengaluru</li>
+            </ul>
+            <a class="link-arrow" href="pages/contact.html">Visit Contact page <span class="flip" aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== 5. CTA: request a callback ===== -->
+    <section class="cta-band" aria-labelledby="callback-title">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">Next step</p>
+        <h2 id="callback-title">Prefer to talk it through? We'll call you back today.</h2>
+        <p>Leave your number and a good time. A planner calls within working hours — no sales scripts.</p>
+        <form class="callback-form" id="callback-form" novalidate>
+          <div class="field">
+            <label for="cb-name">Your name</label>
+            <input class="input" id="cb-name" name="name" type="text" autocomplete="name" placeholder="e.g. Priya Sharma" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="cb-phone">Mobile number</label>
+            <input class="input" id="cb-phone" name="phone" type="tel" autocomplete="tel" placeholder="10-digit mobile" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="cb-time">Best time to call</label>
+            <select class="select" id="cb-time" name="time">
+              <option>Morning (9:30 – 12:00)</option>
+              <option>Afternoon (12:00 – 4:00)</option>
+              <option>Evening (4:00 – 7:30)</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Request a Callback</button>
+        </form>
+        <div class="form-success" role="status" tabindex="-1">
+          Thank you! Your callback is booked.
+          <p>A Wanderkite planner will call you in the slot you chose. Keep your travel dates handy.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Wanderkite Holidays — Home 1">
+            <img src="assets/images/logo.png" alt="" width="42" height="42">
+            <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+          </a>
+          <p>Handcrafted holiday packages across India and 30+ countries, planned by real people in Bengaluru since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Packages</h3>
+          <ul>
+            <li><a href="pages/domestic.html">Domestic</a></li>
+            <li><a href="pages/international.html">International</a></li>
+            <li><a href="pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year">2026</span> Wanderkite Holidays Pvt. Ltd. · IATA-accredited travel agent · All prices in Indian Rupees (₹)</p>
+        <button class="to-top" type="button" data-scroll-top>Back to top <span aria-hidden="true">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

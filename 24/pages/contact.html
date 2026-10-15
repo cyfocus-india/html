@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Dashmile Couriers</title>
+  <meta name="description" content="Contact Dashmile Couriers in Pune: call, WhatsApp or email our support desk, send a message, or visit our Hadapsar, Bhosari and Baner counters. Opening hours and addresses.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="rates.html">Rate Calculator</a></li>
+          <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link is-active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Intro + quick contact options ===== -->
+    <section class="contact-intro" aria-labelledby="contact-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">Contact</span></li></ol></nav>
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-title">Talk to a real person in Pune</h1>
+        <p class="lead">Our support desk sits inside the Hadapsar hub, so whoever answers can walk across and check your parcel.</p>
+        <div class="quick-contacts">
+          <a class="quick-contact" href="tel:+912048592210"><span class="icon-tile" aria-hidden="true">☎</span><span><strong>Call us</strong><span>+91 20 4859 2210</span></span></a>
+          <a class="quick-contact" href="https://wa.me/919822041735" target="_blank" rel="noopener"><span class="icon-tile" aria-hidden="true">💬</span><span><strong>WhatsApp</strong><span>+91 98220 41735 · replies in 5 min</span></span></a>
+          <a class="quick-contact" href="mailto:support@dashmile.in"><span class="icon-tile" aria-hidden="true">✉</span><span><strong>Email</strong><span>support@dashmile.in</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact form + details ===== -->
+    <section class="section" aria-labelledby="form-title">
+      <div class="container contact-layout">
+        <div class="card">
+          <h2 id="form-title">Send us a message</h2>
+          <p class="muted">We reply within 2 working hours. Fields marked * are required.</p>
+          <div class="notice notice--success form-success" id="contact-success" role="status" tabindex="-1" hidden></div>
+          <form id="contact-form" class="form-grid mt-m" novalidate>
+            <div class="field">
+              <label for="c-name">Full name *</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="c-email">Email *</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="c-phone">Mobile number *</label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="98XXXXXXXX" required>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="c-topic">What is it about? *</label>
+              <select id="c-topic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option value="general">General question</option>
+                <option value="pickup">Book or change a pickup</option>
+                <option value="tracking">Tracking or delivery problem</option>
+                <option value="business">Business account or contract rates</option>
+                <option value="claims">Damage or loss claim</option>
+                <option value="careers">Careers: delivery partner</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field field--full">
+              <label for="c-ref">Tracking number <span class="optional">(optional)</span></label>
+              <input id="c-ref" name="ref" type="text" autocomplete="off" placeholder="DM48213076" maxlength="12">
+            </div>
+            <div class="field field--full">
+              <label for="c-message">Message *</label>
+              <textarea id="c-message" name="message" required placeholder="Tell us what you need, with pickup area or destination if relevant."></textarea>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field field--full check-field">
+              <label class="check"><input id="c-consent" type="checkbox" required> <span>Dashmile may contact me by phone, email or WhatsApp about this request. *</span></label>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field--full">
+              <button class="btn btn-lg" type="submit">Send message</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card info-card" aria-labelledby="info-title">
+          <h2 id="info-title" class="visually-hidden">Contact details</h2>
+          <dl>
+            <div>
+              <dt>Head office &amp; main hub</dt>
+              <dd><address>Dashmile Couriers Pvt. Ltd.<br>Plot 14, Phase 2, Hadapsar Industrial Estate<br>Pune, Maharashtra 411013</address></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+912048592210">+91 20 4859 2210</a><br><span class="muted">WhatsApp: <a href="https://wa.me/919822041735" target="_blank" rel="noopener">+91 98220 41735</a></span></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:support@dashmile.in">support@dashmile.in</a><br><span class="muted">Business accounts: <a href="mailto:business@dashmile.in">business@dashmile.in</a></span></dd>
+            </div>
+            <div>
+              <dt>Opening hours</dt>
+              <dd>
+                <table class="hours-table">
+                  <caption class="visually-hidden">Opening hours</caption>
+                  <tr><th scope="row">Customer care, Mon–Sat</th><td>8 AM – 9 PM</td></tr>
+                  <tr><th scope="row">Customer care, Sunday</th><td>9 AM – 5 PM</td></tr>
+                  <tr><th scope="row">Pickups, Mon–Sat</th><td>9 AM – 7 PM</td></tr>
+                  <tr><th scope="row">Hadapsar counter, daily</th><td>8 AM – 10 PM</td></tr>
+                </table>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Walk-in counters ===== -->
+    <section class="section section--alt" aria-labelledby="counters-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Walk-in counters</p>
+          <h2 id="counters-title">Drop off a parcel in person</h2>
+          <p class="lead">Bring it packed or let us pack it. Every counter accepts all services and takes UPI, cards and cash.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card counter-card">
+            <span class="pill pill--success">Open daily</span>
+            <h3>Hadapsar</h3>
+            <address>Plot 14, Phase 2, Hadapsar Industrial Estate, Pune 411013</address>
+            <p><strong>8 AM – 10 PM</strong>, every day</p>
+            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Hadapsar+Industrial+Estate+Pune+411013" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="card counter-card">
+            <span class="pill pill--brand">Mon – Sat</span>
+            <h3>Bhosari</h3>
+            <address>Gat No. 211, Sector 7, MIDC Bhosari, Pune 411026</address>
+            <p><strong>8 AM – 9 PM</strong>, Monday to Saturday</p>
+            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=MIDC+Bhosari+Pune+411026" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="card counter-card">
+            <span class="pill pill--brand">Mon – Sat</span>
+            <h3>Baner</h3>
+            <address>Shop 6, Sai Square, Baner Road, Pune 411045</address>
+            <p><strong>10 AM – 8 PM</strong>, Monday to Saturday</p>
+            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Baner+Road+Pune+411045" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="section" aria-labelledby="cta-contact-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">Ready to send?</p>
+            <h2 id="cta-contact-title">Need to schedule a pickup right away?</h2>
+            <p>Fill out the form above with your pickup details, or give our Pune operations desk a call.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="#contact-form" data-topic="pickup">Book a Pickup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rate Calculator</a></li>
+          <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

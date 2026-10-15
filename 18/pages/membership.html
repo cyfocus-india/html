@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Transparent, flexible membership options, class packs, and intro offers at Aura Yoga. No lock-in contracts, free freezing, pure wellness.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness Home 1">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+        <span class="brand-text">
+          <span class="brand-name">Aura Yoga</span>
+          <span class="brand-sub">Wellness Sanctuary</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <span class="dropdown-arrow">&#9662;</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1</a>
+            <a href="../index1.html" class="dropdown-link">Home 2</a>
+          </div>
+        </div>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="instructors.html" class="nav-link">Instructors</a>
+        <a href="membership.html" class="nav-link active">Membership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm">Sign In</a>
+
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="30" height="30">
+        <span class="brand-name" style="font-size: 1.15rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary);">Aura Yoga</span>
+      </div>
+      <button type="button" class="mobile-drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <div class="mobile-nav-list">
+      <div class="mobile-dropdown-group">
+        <a href="#" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          Home <span>&#9662;</span>
+        </a>
+        <div class="mobile-accordion-content">
+          <a href="../index.html" class="mobile-nav-link">Home 1</a>
+          <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+        </div>
+      </div>
+      <a href="classes.html" class="mobile-nav-link">Classes</a>
+      <a href="instructors.html" class="mobile-nav-link">Instructors</a>
+      <a href="membership.html" class="mobile-nav-link active">Membership</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Toggle direction">&#8644; RTL</button>
+      </div>
+      <a href="signin.html" class="btn btn-primary btn-block">Sign In</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Page Hero with Relevant Image -->
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <span class="section-badge">Transparent Pricing</span>
+          <h1>Membership Plans &amp; Class Packs</h1>
+          <p class="section-desc">
+            Invest in your long-term vitality. Choose between flexible non-expiring class packs or recurring monthly memberships with complimentary infrared sauna and mat concierge privileges.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#pricing-tiers" class="btn btn-primary">Compare Plans</a>
+            <a href="signin.html" class="btn btn-secondary">Member Portal</a>
+          </div>
+        </div>
+
+        <div class="page-hero-img">
+          <img src="../assets/images/hero-membership.jpg" alt="Mindful yogi seated in peaceful meditation in warm studio" width="500" height="340">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Realistic Pricing Plans (Not generic tiers) -->
+    <section id="pricing-tiers" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Packages &amp; Passes</span>
+          <h2>Tailored for How You Practice</h2>
+          <p class="section-desc">
+            No initiation fees, no hidden cancellation penalties. Easily freeze your membership when traveling.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Option 1: Intro Pass -->
+          <div class="pricing-card">
+            <span style="font-size: 0.82rem; font-weight: 600; color: var(--accent); text-transform: uppercase;">New Students Only</span>
+            <h3 style="margin-block: 0.3rem 0;">14-Day Intro Pass</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">The best way to try all teachers and class styles.</p>
+
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">49</span>
+              <span class="price-period">/ 14 days</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span class="check-icon">&#10003;</span> Unlimited studio classes for 14 days</li>
+              <li><span class="check-icon">&#10003;</span> Free Manduka Pro mat &amp; towel rental</li>
+              <li><span class="check-icon">&#10003;</span> Unlimited herbal apothecary tea</li>
+              <li><span class="check-icon">&#10003;</span> 1 complimentary 15-min alignment check</li>
+              <li style="color: var(--text-muted);"><span style="color: var(--text-muted);">&#8722;</span> No infrared sauna sessions</li>
+            </ul>
+
+            <a href="signup.html" class="btn btn-secondary btn-block">Claim Intro Pass</a>
+          </div>
+
+          <!-- Option 2: Studio Unlimited (Featured) -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Popular</span>
+            <span style="font-size: 0.82rem; font-weight: 600; color: var(--primary); text-transform: uppercase;">Monthly Autopay</span>
+            <h3 style="margin-block: 0.3rem 0;">Studio Unlimited</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">For committed practitioners practicing 2+ times a week.</p>
+
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">165</span>
+              <span class="price-period">/ month</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span class="check-icon">&#10003;</span> <strong>Unlimited classes</strong> in all styles</li>
+              <li><span class="check-icon">&#10003;</span> Dedicated personal mat storage cubby</li>
+              <li><span class="check-icon">&#10003;</span> 1 guest pass per month for friends</li>
+              <li><span class="check-icon">&#10003;</span> 15% discount on seasonal workshops</li>
+              <li><span class="check-icon">&#10003;</span> Free membership freezing up to 45 days/year</li>
+            </ul>
+
+            <a href="signup.html" class="btn btn-primary btn-block">Join Studio Unlimited</a>
+          </div>
+
+          <!-- Option 3: All-Access + Infrared Sauna -->
+          <div class="pricing-card">
+            <span style="font-size: 0.82rem; font-weight: 600; color: var(--accent); text-transform: uppercase;">Holistic Wellness</span>
+            <h3 style="margin-block: 0.3rem 0;">All-Access + Sauna</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Complete daily practice plus private heat recovery.</p>
+
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">225</span>
+              <span class="price-period">/ month</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li><span class="check-icon">&#10003;</span> <strong>Unlimited classes</strong> in all styles</li>
+              <li><span class="check-icon">&#10003;</span> <strong>4 private infrared sauna</strong> suites / mo</li>
+              <li><span class="check-icon">&#10003;</span> 2 guest passes per month</li>
+              <li><span class="check-icon">&#10003;</span> 25% discount on workshops &amp; trainings</li>
+              <li><span class="check-icon">&#10003;</span> Priority waitlist booking status</li>
+            </ul>
+
+            <a href="signup.html" class="btn btn-secondary btn-block">Join All-Access</a>
+          </div>
+        </div>
+
+        <!-- Flexible Class Packs Banner -->
+        <div style="margin-top: 4rem; background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.5rem;">
+          <div style="text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">
+            <span class="section-badge">Flexible Class Packs</span>
+            <h3 style="font-size: 1.5rem;">Prefer Drop-In Flexibility?</h3>
+            <p style="font-size: 0.95rem; margin: 0;">Our class packs never lock you into a monthly debit. Shareable with family and partners.</p>
+          </div>
+
+          <div class="grid grid-3">
+            <div style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-sm); text-align: center;">
+              <h4 style="margin-bottom: 0.3rem;">5-Class Pack</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">$24 per session &bull; Valid 3 mos</p>
+              <div style="font-size: 1.8rem; font-weight: 600; font-family: var(--font-serif); margin-bottom: 1rem;">$120</div>
+              <a href="signup.html" class="btn btn-secondary btn-sm btn-block">Buy 5 Pack</a>
+            </div>
+
+            <div style="border: 2px solid var(--primary); padding: 1.5rem; border-radius: var(--radius-sm); text-align: center; background: var(--primary-light);">
+              <h4 style="margin-bottom: 0.3rem; color: var(--primary);">10-Class Pack</h4>
+              <p style="font-size: 0.85rem; color: var(--primary); margin-bottom: 0.75rem;">$21.50 per session &bull; Valid 6 mos</p>
+              <div style="font-size: 1.8rem; font-weight: 600; font-family: var(--font-serif); margin-bottom: 1rem; color: var(--primary);">$215</div>
+              <a href="signup.html" class="btn btn-primary btn-sm btn-block">Buy 10 Pack</a>
+            </div>
+
+            <div style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-sm); text-align: center;">
+              <h4 style="margin-bottom: 0.3rem;">20-Class Pack</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">$19 per session &bull; Valid 12 mos</p>
+              <div style="font-size: 1.8rem; font-weight: 600; font-family: var(--font-serif); margin-bottom: 1rem;">$380</div>
+              <a href="signup.html" class="btn btn-secondary btn-sm btn-block">Buy 20 Pack</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Transparent Comparison Matrix -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Feature Comparison</span>
+          <h2>Compare Membership Privileges</h2>
+          <p class="section-desc">
+            A comprehensive look at what is included across each pass option.
+          </p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature / Privilege</th>
+                <th>Single Drop-In ($28)</th>
+                <th>10-Class Pack ($215)</th>
+                <th>Studio Unlimited ($165/mo)</th>
+                <th>All-Access + Sauna ($225/mo)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Class Access</strong></td>
+                <td>1 Single Class</td>
+                <td>10 Credits</td>
+                <td>Unlimited Monthly</td>
+                <td>Unlimited Monthly</td>
+              </tr>
+              <tr>
+                <td><strong>Mat &amp; Prop Rental</strong></td>
+                <td>$5 Rental Fee</td>
+                <td>Complimentary</td>
+                <td>Complimentary</td>
+                <td>Complimentary</td>
+              </tr>
+              <tr>
+                <td><strong>Dedicated Mat Storage</strong></td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>&#10003; Included</td>
+                <td>&#10003; Included</td>
+              </tr>
+              <tr>
+                <td><strong>Infrared Sauna Sessions</strong></td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>$25 / 30-min add-on</td>
+                <td>&#10003; 4 Private Sessions / mo</td>
+              </tr>
+              <tr>
+                <td><strong>Monthly Guest Passes</strong></td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>1 Pass / mo</td>
+                <td>2 Passes / mo</td>
+              </tr>
+              <tr>
+                <td><strong>Workshop Discount</strong></td>
+                <td>0%</td>
+                <td>10%</td>
+                <td>15%</td>
+                <td>25%</td>
+              </tr>
+              <tr>
+                <td><strong>Membership Freezing</strong></td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>Up to 45 Days</td>
+                <td>Up to 60 Days</td>
+              </tr>
+              <tr>
+                <td><strong>Cancellation Terms</strong></td>
+                <td>Non-refundable</td>
+                <td>Transferable</td>
+                <td>14-Day Notice</td>
+                <td>14-Day Notice</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Membership Policies & Freezing FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Fair Play Guarantees</span>
+          <h2>Membership Policies &amp; Terms</h2>
+          <p class="section-desc">
+            We believe yoga studio policies should reflect peace of mind, not financial entrapment.
+          </p>
+        </div>
+
+        <div class="accordion" style="max-width: 800px; margin-inline: auto;">
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>How does membership freezing work when I travel or fall ill?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>Members on monthly plans can freeze their subscription anytime directly from their member dashboard or by notifying reception. Freezing is available in increments of 7 days up to a cumulative 45 days per calendar year with zero pause fees.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Are there signup fees or minimum commitments?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>None. We charge zero initiation fees and zero cancellation fees. You may cancel your monthly autopay at any time with a simple 14-day advance notice before your next billing cycle.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Can I share my 10 or 20-class pack with someone else?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes. Class packs can be shared with one designated partner or family member. Simply notify our front desk coordinator and we will link your accounts in our booking system.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>What is the late cancellation and waitlist policy?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>Because studio spots are capped to ensure physical spaciousness, we ask that you cancel at least 3 hours before class starts. Late cancels on unlimited plans incur a modest $10 fee donated directly to our community fund.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Community Accessibility & Sliding Scale -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+            <img src="../assets/images/membership-community.jpg" alt="Diverse community of students practicing together in studio" width="550" height="380">
+          </div>
+
+          <div>
+            <span class="section-badge">Ahimsa &bull; Accessibility</span>
+            <h2>Mindful Movement for Every Body</h2>
+            <p class="section-desc">
+              Yoga was historically shared as an open offering. We are dedicated to ensuring financial constraints do not prohibit anyone from practicing.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-block: 1.5rem 2rem;">
+              <div>
+                <h4>Student, Teacher &amp; Senior 15% Subsidy</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Full-time students, school teachers, seniors (65+), and non-profit employees receive a permanent 15% discount on all monthly plans and class packs with valid ID.</p>
+              </div>
+              <div>
+                <h4>Karma Yogi Work-Exchange Program</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Contribute 4 hours per week assisting our mat concierge, herbal tea lounge, or plant care in exchange for unlimited studio classes.</p>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-secondary">Inquire About Subsidized Passes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Next Step CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <span style="display: inline-block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600;">Step Into Your Sanctuary</span>
+          <h2>Start with 14 Days of Unlimited Practice for $49</h2>
+          <p>
+            No risk, no lock-in. Experience morning sun, evening singing bowls, and the warmth of community.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="signup.html" class="btn btn-primary">Join Today</a>
+            <a href="contact.html" class="btn btn-secondary">Have a Question? Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness">
+            <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+            <span class="brand-text">
+              <span class="brand-name">Aura Yoga</span>
+              <span class="brand-sub">Wellness Sanctuary</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            A mindful sanctuary offering classical and contemporary yoga, breathwork, and sound meditation designed to restore balance in body and spirit.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="classes.html" class="footer-link">Classes</a></li>
+            <li><a href="instructors.html" class="footer-link">Instructors</a></li>
+            <li><a href="membership.html" class="footer-link">Membership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2026 Aura Yoga &amp; Wellness Studio. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <span>Mindful Movement</span>
+            <span>&bull;</span>
+            <span>Living Lineage</span>
+            <span>&bull;</span>
+            <span>Non-Violence (Ahimsa)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

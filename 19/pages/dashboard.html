@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - AuraWash Laundry &amp; Dry Cleaning</title>
+  <meta name="description" content="Manage your doorstep laundry pickups, track live cleaning status, and manage payment methods with AuraWash.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <!-- Customer Dashboard Layout -->
+  <div class="dashboard-layout">
+
+    <!-- Collapsible Sidebar (Hamburger on mobile) -->
+    <aside class="dash-sidebar" aria-label="Customer Dashboard Navigation">
+      <div class="dash-sidebar-header">
+        <a href="../index.html" class="site-logo" aria-label="AuraWash Home 1">
+          <img src="../assets/images/logo.png" alt="AuraWash Logo" class="site-logo-img">
+        </a>
+      </div>
+
+      <nav class="dash-nav-list">
+        <button type="button" class="dash-nav-btn active" data-view="overview">
+          <span class="dash-nav-icon">📊</span>
+          <span>Overview</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-view="schedule-pickup">
+          <span class="dash-nav-icon">📅</span>
+          <span>Schedule Pickup</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-view="orders-tracking">
+          <span class="dash-nav-icon">📦</span>
+          <span>Orders &amp; Tracking</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-view="payments-invoices">
+          <span class="dash-nav-icon">💳</span>
+          <span>Payments &amp; Invoices</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-view="profile-preferences">
+          <span class="dash-nav-icon">⚙</span>
+          <span>Profile &amp; Settings</span>
+        </button>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <div class="dash-user-badge">
+          <div class="user-avatar-circle">EV</div>
+          <div class="user-badge-info">
+            <div class="user-badge-name dash-user-name">Eleanor Vance</div>
+            <div class="user-badge-role">VIP Member</div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm dash-logout-btn" style="width: 100%; margin-top: 0.75rem;">Sign Out</button>
+        <div class="dash-sidebar-toggles">
+          <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+          <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Workspace -->
+    <div class="dash-main-area">
+
+      <!-- Topbar Header -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="hamburger-btn hamburger-btn-dash" aria-label="Toggle Dashboard Sidebar">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <span class="dash-portal-title" style="font-weight: 700; font-size: 1.15rem; color: var(--text-primary);">Customer Portal</span>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- Theme & Direction Toggles -->
+          <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
+          <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+        </div>
+      </header>
+
+      <!-- Dashboard Dynamic Content Body -->
+      <main class="dash-content-body">
+
+        <!-- ================================================================
+             VIEW 1: OVERVIEW
+             ================================================================ -->
+        <section id="view-overview" class="dash-view-panel active">
+          <!-- Summary Cards -->
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon">🧺</div>
+              <div class="dash-stat-info">
+                <div class="stat-num" id="statActivePickups">2</div>
+                <div class="stat-label">Active Orders In-Care</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon">👔</div>
+              <div class="dash-stat-info">
+                <div class="stat-num">21</div>
+                <div class="stat-label">Garments Washed &amp; Pressed</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon">🚚</div>
+              <div class="dash-stat-info">
+                <div class="stat-num">Today</div>
+                <div class="stat-label">Next Delivery Window</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon">★</div>
+              <div class="dash-stat-info">
+                <div class="stat-num" id="dashRewardPoints">480 pts</div>
+                <div class="stat-label">Loyalty Rewards ($15 off ready)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Order Progress Banner -->
+          <div class="active-tracker-banner">
+            <div class="tracker-header">
+              <div class="tracker-header-info">
+                <span class="badge tracker-badge">Live Progress Tracker</span>
+                <h3 class="tracker-order-id">Active Order #AW-9421</h3>
+              </div>
+              <div class="tracker-eta">Est. Delivery: <strong>Tomorrow 11:00 AM</strong></div>
+            </div>
+
+            <div class="tracker-stages-bar">
+              <div class="tracker-stage-item completed">
+                <div class="tracker-stage-dot">✓</div>
+                <div class="tracker-stage-label">Doorstep Pickup</div>
+              </div>
+              <div class="tracker-stage-item completed">
+                <div class="tracker-stage-dot">✓</div>
+                <div class="tracker-stage-label">Digitally Tagged</div>
+              </div>
+              <div class="tracker-stage-item current">
+                <div class="tracker-stage-dot">●</div>
+                <div class="tracker-stage-label">Eco Washing &amp; Press</div>
+              </div>
+              <div class="tracker-stage-item">
+                <div class="tracker-stage-dot">4</div>
+                <div class="tracker-stage-label">Out for Delivery</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas Volume Chart & Recent Orders Split -->
+          <div class="overview-charts-grid">
+            <div class="dash-chart-card">
+              <div class="card-title-bar">
+                <h3>Monthly Laundry Volume (lbs)</h3>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Last 6 Months Activity</span>
+              </div>
+              <div class="canvas-wrap">
+                <canvas id="monthlyChart"></canvas>
+              </div>
+            </div>
+
+            <div class="dash-activity-card">
+              <div class="card-title-bar">
+                <h3>Recent Pickups</h3>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="document.querySelector('.dash-nav-btn[data-view=\'orders-tracking\']').click()">View All</button>
+              </div>
+              <div id="dashRecentOrdersList" style="display:flex; flex-direction:column; gap:0.5rem;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 2: SCHEDULE PICKUP
+             ================================================================ -->
+        <section id="view-schedule-pickup" class="dash-view-panel">
+          <div style="margin-bottom: 2rem;">
+            <h2>Schedule New Doorstep Pickup</h2>
+            <p>Select your required garment care, preferred time window, and handoff instructions.</p>
+          </div>
+
+          <div class="booking-form-card">
+            <form id="dashBookingForm" novalidate>
+              <div style="margin-bottom: 1.5rem;">
+                <label class="form-label">1. Select Garment Services *</label>
+                <div class="service-checkbox-grid">
+                  <label class="service-check-tile">
+                    <input type="checkbox" name="pickupService" value="Wash &amp; Fold" checked>
+                    <div>
+                      <strong>Wash &amp; Fold Laundry</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">$1.95 / lb (Everyday casuals &amp; linens)</div>
+                    </div>
+                  </label>
+
+                  <label class="service-check-tile">
+                    <input type="checkbox" name="pickupService" value="Premium Dry Cleaning">
+                    <div>
+                      <strong>Organic Dry Cleaning</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">Suits, blazers, silk &amp; evening wear</div>
+                    </div>
+                  </label>
+
+                  <label class="service-check-tile">
+                    <input type="checkbox" name="pickupService" value="Steam Ironing Only">
+                    <div>
+                      <strong>Artisan Steam Ironing</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">$2.50 / garment (Crisp form press)</div>
+                    </div>
+                  </label>
+
+                  <label class="service-check-tile">
+                    <input type="checkbox" name="pickupService" value="Curtains &amp; Drapery">
+                    <div>
+                      <strong>Architectural Curtains</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">$22.00 / panel (Steam rejuvenation)</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookDate" class="form-label">2. Preferred Pickup Date *</label>
+                  <input type="date" id="bookDate" class="form-input" required value="2026-10-14">
+                </div>
+
+                <div class="form-group">
+                  <label for="bookTimeSlot" class="form-label">Pickup Time Window *</label>
+                  <select id="bookTimeSlot" class="form-select" required>
+                    <option value="Morning Express (7:00 AM - 9:00 AM)">Morning Express (7:00 AM - 9:00 AM)</option>
+                    <option value="Midday Route (11:00 AM - 1:00 PM)">Midday Route (11:00 AM - 1:00 PM)</option>
+                    <option value="Afternoon Slot (2:00 PM - 4:00 PM)">Afternoon Slot (2:00 PM - 4:00 PM)</option>
+                    <option value="Evening Route (6:00 PM - 8:30 PM)">Evening Route (6:00 PM - 8:30 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookWeightEst" class="form-label">Estimated Weight / Garment Count</label>
+                  <input type="text" id="bookWeightEst" class="form-input" placeholder="e.g. 20 lbs or 4 suits" value="15 lbs">
+                </div>
+
+                <div class="form-group">
+                  <label for="bookPaymentMethod" class="form-label">Payment Method</label>
+                  <select id="bookPaymentMethod" class="form-select">
+                    <option value="Visa-4821">Visa ending in 4821 (Default)</option>
+                    <option value="Mastercard-9014">Mastercard ending in 9014</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bookNotes" class="form-label">Driver Handoff Notes &amp; Special Stain Instructions</label>
+                <textarea id="bookNotes" class="form-textarea" rows="3" placeholder="e.g. Leave hamper with building doorman, delicate wash on wool sweater..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Confirm &amp; Dispatch Van Driver</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 3: ORDERS & TRACKING (CRUD)
+             ================================================================ -->
+        <section id="view-orders-tracking" class="dash-view-panel">
+          <div class="dash-section-header">
+            <div>
+              <h2>Orders &amp; Garment Tracking</h2>
+              <p>Filter, inspect, edit notes, or cancel your doorstep laundry orders.</p>
+            </div>
+          </div>
+
+          <div class="orders-table-wrapper">
+            <!-- Filter Bar & Search -->
+            <div class="dash-filter-bar">
+              <div class="filter-tabs">
+                <button type="button" class="filter-tab-btn active" data-status="all">All Orders</button>
+                <button type="button" class="filter-tab-btn" data-status="scheduled">Scheduled</button>
+                <button type="button" class="filter-tab-btn" data-status="cleaning">Cleaning</button>
+                <button type="button" class="filter-tab-btn" data-status="delivery">Out for Delivery</button>
+                <button type="button" class="filter-tab-btn" data-status="delivered">Delivered</button>
+              </div>
+
+              <div class="dash-search-box">
+                <span>🔍</span>
+                <input type="text" id="orderSearchInput" placeholder="Filter by ID or Service...">
+              </div>
+            </div>
+
+            <!-- Orders Table in dedicated scroll container -->
+            <div class="dash-table-container">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Services</th>
+                    <th>Weight / Items</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dashOrdersTableBody">
+                  <!-- Dynamically populated by dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 4: PAYMENTS & INVOICES
+             ================================================================ -->
+        <section id="view-payments-invoices" class="dash-view-panel">
+          <div class="dash-section-header">
+            <div>
+              <h2>Saved Payment Methods</h2>
+              <p>Manage your saved credit cards for automated contactless billing.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="openAddCardBtn">+ Add Payment Card</button>
+          </div>
+
+          <!-- Cards Grid -->
+          <div id="dashSavedCardsList" class="cards-grid">
+            <!-- Dynamically populated by dashboard.js -->
+          </div>
+
+          <div class="dash-section-header" style="margin-top: 3rem; margin-bottom: 1.25rem;">
+            <div>
+              <h3>Billing &amp; Invoice History</h3>
+              <p>Download digital tax receipts and verify weigh-in statements.</p>
+            </div>
+          </div>
+
+          <div class="orders-table-wrapper">
+            <div class="dash-table-container">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Invoice ID</th>
+                    <th>Order Reference</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>INV-2026-102</strong></td>
+                    <td>#AW-9388 (Dry Cleaning)</td>
+                    <td>2026-10-10</td>
+                    <td><strong>$44.50</strong></td>
+                    <td><span class="status-badge delivered">Paid</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="window.viewInvoiceModal('INV-2026-102', '$44.50', '2026-10-10')">View Invoice</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>INV-2026-094</strong></td>
+                    <td>#AW-9310 (Wash &amp; Fold)</td>
+                    <td>2026-10-06</td>
+                    <td><strong>$54.60</strong></td>
+                    <td><span class="status-badge delivered">Paid</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="window.viewInvoiceModal('INV-2026-094', '$54.60', '2026-10-06')">View Invoice</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>INV-2026-081</strong></td>
+                    <td>#AW-9250 (Curtains)</td>
+                    <td>2026-09-28</td>
+                    <td><strong>$88.00</strong></td>
+                    <td><span class="status-badge delivered">Paid</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="window.viewInvoiceModal('INV-2026-081', '$88.00', '2026-09-28')">View Invoice</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 5: PROFILE & LAUNDRY PREFERENCES
+             ================================================================ -->
+        <section id="view-profile-preferences" class="dash-view-panel">
+          <div style="margin-bottom: 2rem;">
+            <h2>Profile &amp; Garment Preferences</h2>
+            <p>Customize your personal account info and default fabric wash specifications.</p>
+          </div>
+
+          <div class="profile-grid">
+            <!-- Account Info Form -->
+            <div class="profile-section-card">
+              <h3 style="margin-bottom: 1.25rem;">Personal Details</h3>
+              <form id="dashProfileForm">
+                <div class="form-group">
+                  <label for="profName" class="form-label">Full Name</label>
+                  <input type="text" id="profName" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profEmail" class="form-label">Email Address</label>
+                  <input type="email" id="profEmail" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profPhone" class="form-label">Contact Phone</label>
+                  <input type="tel" id="profPhone" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profAddress" class="form-label">Primary Pickup Address</label>
+                  <textarea id="profAddress" class="form-textarea" rows="2" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Profile Changes</button>
+              </form>
+            </div>
+
+            <!-- Laundry Care Preferences Form -->
+            <div class="profile-section-card">
+              <h3 style="margin-bottom: 1.25rem;">Fabric &amp; Care Preferences</h3>
+              <form id="dashPrefsForm">
+                <div class="form-group">
+                  <label for="prefWaterTemp" class="form-label">Wash Water Temperature</label>
+                  <select id="prefWaterTemp" class="form-select">
+                    <option value="Cold">Cold Ozone Water (Protects fibers, saves energy)</option>
+                    <option value="Warm">Warm Gentle (Everyday cottons)</option>
+                    <option value="Hot">Hot Sanitizing (Towels &amp; heavy bedding)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="prefDetergent" class="form-label">Detergent &amp; Scent Selection</label>
+                  <select id="prefDetergent" class="form-select">
+                    <option value="Hypoallergenic Unscented">Hypoallergenic Unscented (Sensitive Skin)</option>
+                    <option value="Provençal Organic Lavender">Provençal Organic Lavender</option>
+                    <option value="Mountain Spring Rain">Mountain Spring Rain</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="prefStarch" class="form-label">Shirt Starch Density</label>
+                  <select id="prefStarch" class="form-select">
+                    <option value="None">No Starch (Natural drape)</option>
+                    <option value="Light">Light Touch (Wrinkle resistance)</option>
+                    <option value="Medium">Medium Crisp</option>
+                    <option value="Crisp Heavy">Crisp Heavy (Executive collar stiffness)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="prefFolding" class="form-label">Packaging &amp; Folding Style</label>
+                  <select id="prefFolding" class="form-select">
+                    <option value="Flat Fold">Flat Fold (Ready for closet drawers)</option>
+                    <option value="Roll Pack">Luggage Roll Pack (Compact travel)</option>
+                    <option value="Wooden Hangers">Wooden Hangers (Wardrobe hanging)</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                  <label class="auth-checkbox-label">
+                    <input type="checkbox" id="prefSms" checked style="accent-color: var(--brand-primary);">
+                    <span>Receive SMS van route updates (driver 15 mins away)</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Laundry Preferences</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       MODALS (PURE CSS/JS, ZERO SVG)
+       ================================================================ -->
+
+  <!-- Modal 1: Order Details Modal -->
+  <div id="orderDetailModal" class="modal-overlay">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 style="font-size: 1.2rem;">Order Information</h3>
+        <button type="button" class="modal-close-btn modal-close-trigger">&times;</button>
+      </div>
+      <div id="orderModalContent" class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-trigger">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Add Payment Card Modal -->
+  <div id="addCardModal" class="modal-overlay">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 style="font-size: 1.2rem;">Add New Payment Card</h3>
+        <button type="button" class="modal-close-btn modal-close-trigger">&times;</button>
+      </div>
+      <form id="addCardForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="cardHolderName" class="form-label">Cardholder Name</label>
+            <input type="text" id="cardHolderName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+          </div>
+          <div class="form-group">
+            <label for="cardNumberInput" class="form-label">Card Number (16 digits)</label>
+            <input type="text" id="cardNumberInput" class="form-input" placeholder="4532 8920 1928 4821" maxlength="19" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cardExpInput" class="form-label">Expiration (MM/YY)</label>
+              <input type="text" id="cardExpInput" class="form-input" placeholder="08/28" maxlength="5" required>
+            </div>
+            <div class="form-group">
+              <label for="cardCvvInput" class="form-label">CVV Security Code</label>
+              <input type="password" id="cardCvvInput" class="form-input" placeholder="382" maxlength="4" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-close-trigger">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Payment Card</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: View Invoice Modal -->
+  <div id="invoiceModal" class="modal-overlay">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 style="font-size: 1.2rem;">Digital Receipt</h3>
+        <button type="button" class="modal-close-btn modal-close-trigger">&times;</button>
+      </div>
+      <div id="invoiceModalBody" class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-trigger">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

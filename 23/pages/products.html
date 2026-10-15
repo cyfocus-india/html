@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="Lumora house frames by style, lens types compared with prices, lens upgrades, a thickness advisor and a frame size guide.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link is-current" href="products.html" aria-current="page">Products</a></li>
+          <li><a class="nav-link" href="brands.html">Brands</a></li>
+          <li><a class="nav-link" href="eye-test.html">Eye Test</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="sym" aria-hidden="true">⇄</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== PRODUCTS =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Page hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-card">
+          <img src="../assets/images/hero-products-frame-wall.jpg" alt="Lit glass shelves holding rows of eyeglass frames inside an optical store" width="1600" height="900" fetchpriority="high">
+          <div class="page-hero-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="../index.html">Home 1</a></li>
+                <li aria-current="page">Products</li>
+              </ol>
+            </nav>
+            <h1 id="page-title">Products</h1>
+            <p class="lead">Our own frames by style, then the lens types and upgrades that turn them into your glasses. Frames and lenses are priced separately, so you only pay for what your eyes need.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Frames by style (filterable) -->
+    <section class="section section-alt" id="frames" aria-labelledby="frames-title">
+      <div class="container" data-filter-scope>
+        <div class="section-head">
+          <p class="eyebrow">Frames by style</p>
+          <h2 id="frames-title">Lumora house frames, designed in Indiranagar</h2>
+          <p class="lead">Eight best-selling shapes from our own label, each in store in two or three sizes. Prices are for the frame only.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-chips" role="group" aria-label="Filter frames by style">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="rectangle" aria-pressed="false">Rectangle</button>
+            <button class="chip" type="button" data-filter="round" aria-pressed="false">Round</button>
+            <button class="chip" type="button" data-filter="panto" aria-pressed="false">Panto</button>
+            <button class="chip" type="button" data-filter="cat-eye" aria-pressed="false">Cat-eye</button>
+            <button class="chip" type="button" data-filter="geometric" aria-pressed="false">Geometric</button>
+            <button class="chip" type="button" data-filter="browline" aria-pressed="false">Browline</button>
+          </div>
+          <p class="filter-count" aria-live="polite" data-filter-count data-noun="frames">Showing all 8 frames</p>
+        </div>
+
+        <ul class="product-grid">
+          <li class="product-card" data-category="rectangle">
+            <img src="../assets/images/product-rectangle-black.jpg" alt="Black acetate rectangular glasses lying on a pale grey surface" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Rectangle · Bestseller</p>
+              <h3>Arlo</h3>
+              <p class="product-spec">Acetate · 53□17-145</p>
+              <p class="swatches" role="img" aria-label="Colours: matte black, navy">
+                <span class="swatch" style="background: #1d1d1f"></span>
+                <span class="swatch" style="background: #1f3a5f"></span>
+              </p>
+              <p class="product-price"><strong>₹3,490</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="rectangle">
+            <img src="../assets/images/product-clear-crystal.jpg" alt="Transparent crystal glasses resting on an open laptop keyboard" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Rectangle</p>
+              <h3>Clara</h3>
+              <p class="product-spec">Crystal acetate · 51□18-140</p>
+              <p class="swatches" role="img" aria-label="Colours: crystal clear, smoke grey">
+                <span class="swatch" style="background: #e4ecee"></span>
+                <span class="swatch" style="background: #8a8f94"></span>
+              </p>
+              <p class="product-price"><strong>₹3,690</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="round">
+            <img src="../assets/images/product-round-tortoise.jpg" alt="Tortoiseshell round glasses lying folded on a white surface" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Round</p>
+              <h3>Mira</h3>
+              <p class="product-spec">Acetate · 49□20-145</p>
+              <p class="swatches" role="img" aria-label="Colours: tortoise, honey">
+                <span class="swatch" style="background: #6b3f1f"></span>
+                <span class="swatch" style="background: #c58a3a"></span>
+              </p>
+              <p class="product-price"><strong>₹4,290</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="round">
+            <img src="../assets/images/product-titanium-wire.jpg" alt="Thin silver titanium round glasses casting a shadow on white paper" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Round · 7.8 g</p>
+              <h3>Feather</h3>
+              <p class="product-spec">Titanium · 50□21-145</p>
+              <p class="swatches" role="img" aria-label="Colours: silver, gunmetal">
+                <span class="swatch" style="background: #c0c4c8"></span>
+                <span class="swatch" style="background: #4b4f54"></span>
+              </p>
+              <p class="product-price"><strong>₹6,290</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="panto">
+            <img src="../assets/images/product-panto-black.jpg" alt="Black panto glasses with a keyhole bridge on a white table" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Panto</p>
+              <h3>Otto</h3>
+              <p class="product-spec">Acetate · 50□21-145</p>
+              <p class="swatches" role="img" aria-label="Colours: black, grey fade">
+                <span class="swatch" style="background: #111111"></span>
+                <span class="swatch" style="background: #9aa0a6"></span>
+              </p>
+              <p class="product-price"><strong>₹3,890</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="cat-eye">
+            <img src="../assets/images/product-cateye-metal.jpg" alt="Black upswept cat-eye glasses with a thin gold bridge on a white background" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Cat-eye</p>
+              <h3>Celeste</h3>
+              <p class="product-spec">Metal &amp; acetate · 52□18-140</p>
+              <p class="swatches" role="img" aria-label="Colours: black and gold, burgundy">
+                <span class="swatch" style="background: #1b1b1b"></span>
+                <span class="swatch" style="background: #6d1f2c"></span>
+              </p>
+              <p class="product-price"><strong>₹4,890</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="geometric">
+            <img src="../assets/images/product-geometric-gold.jpg" alt="Gold hexagonal metal glasses on a white background" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Geometric</p>
+              <h3>Hexa</h3>
+              <p class="product-spec">Titanium · 51□19-145</p>
+              <p class="swatches" role="img" aria-label="Colours: gold, rose gold">
+                <span class="swatch" style="background: #c9a14a"></span>
+                <span class="swatch" style="background: #c58b7a"></span>
+              </p>
+              <p class="product-price"><strong>₹6,990</strong><span>frame only</span></p>
+            </div>
+          </li>
+          <li class="product-card" data-category="browline">
+            <img src="../assets/images/product-browline.jpg" alt="Black and gold browline glasses standing on a wooden deck at sunset" width="700" height="525" loading="lazy">
+            <div class="product-body">
+              <p class="product-tag">Browline</p>
+              <h3>Wilde</h3>
+              <p class="product-spec">Acetate &amp; metal · 51□20-145</p>
+              <p class="swatches" role="img" aria-label="Colours: black and gold, tortoise and silver">
+                <span class="swatch" style="background: #1b1b1b"></span>
+                <span class="swatch" style="background: #7a4a26"></span>
+              </p>
+              <p class="product-price"><strong>₹4,590</strong><span>frame only</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 — Lenses by type (comparison table) -->
+    <section class="section" id="lenses" aria-labelledby="lenses-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Lenses by type</p>
+          <h2 id="lenses-title">Choose the lens for how far you need to see</h2>
+          <p class="lead">Prices are per pair in standard 1.50 material, fitted into any frame you buy from us.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Lens types compared by what they correct, who they suit, time to adapt and starting price</caption>
+            <thead>
+              <tr>
+                <th scope="col">Lens type</th>
+                <th scope="col">What it corrects</th>
+                <th scope="col">Best for</th>
+                <th scope="col">Getting used to it</th>
+                <th scope="col">From</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Single vision</th>
+                <td data-label="Corrects">One distance — far or near</td>
+                <td data-label="Best for">Most people under 40; reading-only glasses</td>
+                <td data-label="Adapting">1–2 days</td>
+                <td data-label="From" class="num">₹1,500</td>
+              </tr>
+              <tr>
+                <th scope="row">Office / computer</th>
+                <td data-label="Corrects">Arm’s-length screens and close work</td>
+                <td data-label="Best for">Long desk days after 40</td>
+                <td data-label="Adapting">2–3 days</td>
+                <td data-label="From" class="num">₹4,800</td>
+              </tr>
+              <tr>
+                <th scope="row">Bifocal</th>
+                <td data-label="Corrects">Distance and reading, split by a visible line</td>
+                <td data-label="Best for">A budget near-and-far pair with little screen work</td>
+                <td data-label="Adapting">About a week</td>
+                <td data-label="From" class="num">₹2,800</td>
+              </tr>
+              <tr>
+                <th scope="row">Progressive</th>
+                <td data-label="Corrects">Far, middle and near with no visible line</td>
+                <td data-label="Best for">One pair for everything after 40</td>
+                <td data-label="Adapting">1–2 weeks</td>
+                <td data-label="From" class="num">₹6,500</td>
+              </tr>
+              <tr>
+                <th scope="row">Polarised prescription sun</th>
+                <td data-label="Corrects">Your power plus glare off roads and water</td>
+                <td data-label="Best for">Driving, beaches and cycling</td>
+                <td data-label="Adapting">Same day</td>
+                <td data-label="From" class="num">₹4,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — Upgrades price list + lens thickness advisor -->
+    <section class="section section-alt" aria-labelledby="addons-title">
+      <div class="container addons">
+        <div>
+          <p class="eyebrow">Upgrades &amp; thickness</p>
+          <h2 id="addons-title">Optional upgrades, priced per pair</h2>
+          <p class="lead">Add only what helps. The advisor on the right shows when thinner lenses are worth it.</p>
+          <ul class="price-list">
+            <li><div><strong>Blue-light filter coating</strong><span>Cuts glare from LED screens</span></div><strong class="price" dir="ltr">+₹1,200</strong></li>
+            <li><div><strong>Photochromic</strong><span>Clear indoors, sunglass-dark outside in about a minute</span></div><strong class="price" dir="ltr">+₹3,200</strong></li>
+            <li><div><strong>Polycarbonate</strong><span>Impact-resistant, standard for kids and sport</span></div><strong class="price" dir="ltr">+₹900</strong></li>
+            <li><div><strong>1.60 thin</strong><span>Recommended from ±2.25</span></div><strong class="price" dir="ltr">+₹1,400</strong></li>
+            <li><div><strong>1.67 thinner</strong><span>Recommended from ±4.25</span></div><strong class="price" dir="ltr">+₹2,800</strong></li>
+            <li><div><strong>1.74 ultra-thin</strong><span>For powers beyond ±6.00</span></div><strong class="price" dir="ltr">+₹5,500</strong></li>
+            <li><div><strong>Sun tint or mirror</strong><span>Any colour, solid or gradient</span></div><strong class="price" dir="ltr">+₹1,000</strong></li>
+          </ul>
+        </div>
+
+        <div class="advisor" data-advisor>
+          <h3>Which lens thickness do I need?</h3>
+          <p class="small">Move the slider to the strongest SPH number on your prescription. Minus means short-sighted, plus means long-sighted.</p>
+          <label for="power">Your SPH power</label>
+          <input type="range" id="power" min="-10" max="6" step="0.25" value="-3">
+          <div class="range-scale" aria-hidden="true"><span dir="ltr">−10.00</span><span>0</span><span dir="ltr">+6.00</span></div>
+          <output class="advisor-power" for="power" data-advisor-power>−3.00</output>
+
+          <div class="advisor-result" aria-live="polite">
+            <p class="advisor-pick"><strong data-advisor-pick>1.60 thin · +₹1,400</strong></p>
+            <p data-advisor-text>Short-sighted lenses are thickest at the edge.</p>
+            <div class="thickness" aria-hidden="true">
+              <div class="thickness-row"><span>1.50 standard</span><span class="thickness-bar"><i data-bar-standard style="width: 50%"></i></span><span dir="ltr" data-mm-standard>3.9 mm</span></div>
+              <div class="thickness-row thickness-row--pick"><span data-pick-label>1.60 pick</span><span class="thickness-bar"><i data-bar-pick style="width: 40%"></i></span><span dir="ltr" data-mm-pick>3.4 mm</span></div>
+            </div>
+          </div>
+          <p class="small advisor-note">Estimates for the thickest point of a 50 mm lens. Your optician confirms the final choice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 — Frame size guide -->
+    <section class="section" aria-labelledby="size-title">
+      <div class="container size-guide">
+        <div>
+          <p class="eyebrow">Frame size guide</p>
+          <h2 id="size-title">Read the three numbers inside your current frame</h2>
+          <p>Look on the inside of a temple arm. A frame marked <strong>52□18-140</strong> has:</p>
+          <ul class="size-points">
+            <li><strong>52 mm lens width</strong> — the most important number for fit</li>
+            <li><strong>18 mm bridge</strong> — the gap between the lenses, over your nose</li>
+            <li><strong>140 mm temple</strong> — arm length from hinge to the tip behind your ear</li>
+          </ul>
+          <dl class="size-bands">
+            <div class="size-band"><dt>Small</dt><dd class="mm"><span dir="ltr">46–49 mm</span></dd><dd>Narrow faces and teens</dd></div>
+            <div class="size-band"><dt>Medium</dt><dd class="mm"><span dir="ltr">50–53 mm</span></dd><dd>Most adult faces</dd></div>
+            <div class="size-band"><dt>Large</dt><dd class="mm"><span dir="ltr">54–57 mm</span></dd><dd>Broad faces and cheekbones</dd></div>
+          </dl>
+        </div>
+
+        <figure class="frame-diagram">
+          <div class="fd" aria-hidden="true">
+            <span class="fd-dim fd-dim--bridge"><span><span dir="ltr">18 mm</span></span></span>
+            <span class="fd-lens fd-lens--a"></span>
+            <span class="fd-bridge"></span>
+            <span class="fd-lens fd-lens--b"></span>
+            <span class="fd-dim fd-dim--lens"><span><span dir="ltr">52 mm</span></span></span>
+          </div>
+          <div class="fd-temple" aria-hidden="true"></div>
+          <p class="fd-temple-label" aria-hidden="true"><span dir="ltr">140 mm</span> temple</p>
+          <figcaption>Front view of a 52□18-140 frame: lens width, bridge and temple length.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Section 6 — Next step -->
+    <section class="section section-alt" aria-labelledby="products-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="products-cta-title">Spotted a frame? We’ll hold it for 48 hours</h2>
+            <p>Send the frame name and colour and we’ll keep it at the counter in your size while you plan your visit. No deposit needed.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="contact.html?topic=reserve#contact-form">Reserve a Frame</a>
+            <a class="cta-link" href="https://wa.me/919845021734" target="_blank" rel="noopener">or WhatsApp +91 98450 21734</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+          <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+        </a>
+        <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <div>
+          <h2 class="footer-title">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Shop</h2>
+          <ul>
+            <li><a href="products.html" aria-current="page">Products</a></li>
+            <li><a href="brands.html">Brands</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Care</h2>
+          <ul>
+            <li><a href="eye-test.html">Eye Test</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care · 1st Floor, 612, 12th Main Road, Indiranagar, Bengaluru 560008</p>
+      <p>Mon–Sat 10 am – 8:30 pm · Sun 11 am – 6 pm</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packages | Marigold Grand Banquets</title>
+  <meta name="description" content="All-inclusive event packages, per-plate catering menus, décor add-ons and a live budget estimator for Marigold Grand Banquets, Bengaluru.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+        <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="halls.html">Halls</a></li>
+          <li><a class="nav-link is-active" href="packages.html" aria-current="page">Packages</a></li>
+          <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+        <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+        <a class="btn btn--sm header-signin" href="signin.html">Sign In</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation (≤1024px) -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-panel" id="mobile-panel" aria-label="Mobile menu">
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav-list">
+        <li>
+          <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="mobile-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="mobile-sub" id="mobile-home">
+            <ul class="mobile-sub-list">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="halls.html">Halls</a></li>
+        <li><a href="packages.html" class="is-active" aria-current="page">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-tools">
+      <span class="label">Display options</span>
+      <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+      <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+    </div>
+    <a class="btn" href="signin.html">Sign In</a>
+    <p class="mobile-contact">Events desk: <a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></p>
+  </aside>
+
+  <main id="main">
+
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="hero-media">
+        <img src="../assets/images/hero-packages.jpg" alt="Wedding stage dressed with red and white roses, ivory drapes and a carved sofa for the couple" width="1920" height="1000" fetchpriority="high">
+      </div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home 1</a><span aria-hidden="true">/</span><span aria-current="page">Packages</span></nav>
+        <span class="eyebrow eyebrow--light">Packages</span>
+        <h1 id="page-title">Packages priced per guest, planned around your occasion</h1>
+        <p class="lead">Pick an all-inclusive package for the event you're hosting, or build your own from a hall, a menu and add-ons. Either way, you see the full figure before you pay anything.</p>
+        <div class="hero-facts">
+          <span>6 event packages</span>
+          <span>7 catering menus</span>
+          <span>Instant estimate below</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. How pricing works ===== -->
+    <section class="section" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">How pricing works</span>
+          <h2 id="pricing-title">Your quote is built from three simple parts</h2>
+          <p>Packages bundle these together at a better rate. Custom bookings use the same building blocks.</p>
+        </div>
+        <div class="formula" data-reveal>
+          <div class="card formula-tile">
+            <span class="icon-badge" aria-hidden="true">⌂</span>
+            <h3>Hall slot</h3>
+            <p>A fixed price per lunch or dinner slot, from ₹12,000 to ₹2,40,000.</p>
+          </div>
+          <span class="formula-op" aria-hidden="true">+</span>
+          <div class="card formula-tile">
+            <span class="icon-badge" aria-hidden="true">♨&#xFE0E;</span>
+            <h3>Menu × plates</h3>
+            <p>Per-plate price times guests, with a minimum plate count per hall.</p>
+          </div>
+          <span class="formula-op" aria-hidden="true">+</span>
+          <div class="card formula-tile">
+            <span class="icon-badge" aria-hidden="true">✿</span>
+            <h3>Add-ons</h3>
+            <p>Optional décor, live counters and entertainment at fixed prices.</p>
+          </div>
+          <span class="formula-op" aria-hidden="true">=</span>
+          <div class="card formula-tile formula-tile--total">
+            <span class="icon-badge" aria-hidden="true">₹</span>
+            <h3>Your quote</h3>
+            <p>Plus 18% GST, shown on its own line. That's the final figure.</p>
+          </div>
+        </div>
+
+        <div class="card pay-plan" data-reveal>
+          <h3>Pay in three installments</h3>
+          <div class="pay-bar" role="img" aria-label="Payment plan: 25 percent to confirm, 50 percent 30 days before, 25 percent 7 days before the event">
+            <span>25%</span><span>50%</span><span>25%</span>
+          </div>
+          <div class="pay-legend">
+            <p class="mb-0"><b>To confirm</b>Locks your date and hall</p>
+            <p class="mb-0"><b>30 days before</b>Menu and décor are frozen</p>
+            <p class="mb-0"><b>7 days before</b>Final guest count settled</p>
+          </div>
+          <p class="note-box">A refundable security deposit of ₹25,000 (Ballroom and Lawn) or ₹10,000 (other halls) is returned within 7 days after your event. UPI, cards, net banking and bank transfer all accepted.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Event packages ===== -->
+    <section class="section section--alt" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Event packages</span>
+          <h2 id="packages-title">All-inclusive packages for six occasions</h2>
+          <p>Each price includes the hall slot, the menu and the décor listed. Minimum guest numbers apply, and GST is added at 18%.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-wedding.jpg" alt="Couple performing wedding rituals under a floral canopy inside a chandeliered ballroom" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Wedding Reception</h3>
+              <p class="package-price"><strong>₹1,650</strong><span>per guest, from</span></p>
+              <p class="package-meta">Min. 400 guests · Marigold Ballroom · dinner</p>
+              <ul class="package-features">
+                <li>Veg Royal menu with two live counters</li>
+                <li>Grand floral stage and entrance florals</li>
+                <li>Bridal suite from 3 pm and LED-wall slideshow</li>
+                <li>Valet for four hours instead of three</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=wedding&amp;hall=ballroom#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-engagement.jpg" alt="White engagement cake with gold initials on a dessert table with flowers" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Engagement &amp; Sangeet</h3>
+              <p class="package-price"><strong>₹1,250</strong><span>per guest, from</span></p>
+              <p class="package-meta">Min. 150 guests · Saffron Hall or Jasmine Lawn</p>
+              <ul class="package-features">
+                <li>Veg Classic menu plus a chaat counter</li>
+                <li>Ring-ceremony stage with floral backdrop</li>
+                <li>DJ and 24 × 24 ft dance floor for four hours</li>
+                <li>Mocktail bar through the evening</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=engagement&amp;hall=saffron#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-birthday.jpg" alt="Birthday setup with a pink and white balloon arch, neon sign and cake table" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Birthday Celebration</h3>
+              <p class="package-price"><strong>₹890</strong><span>per guest, from</span></p>
+              <p class="package-meta">Min. 50 guests · Lotus Room · 4 hours</p>
+              <ul class="package-features">
+                <li>Theme décor: balloon arch, backdrop, cake table</li>
+                <li>Kids' plates for under-10s, buffet for adults</li>
+                <li>Emcee and party games for two hours</li>
+                <li>Return-gift table and photo corner</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=birthday&amp;hall=lotus#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-corporate.jpg" alt="Speaker on a lit stage addressing a large conference audience with wide screens" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Corporate Conference</h3>
+              <p class="package-price"><strong>₹1,850</strong><span>per delegate, full day</span></p>
+              <p class="package-meta">Min. 60 delegates · 9 am – 6 pm</p>
+              <ul class="package-features">
+                <li>Theatre or classroom setup with a stage</li>
+                <li>LED wall, four mics and dedicated Wi-Fi</li>
+                <li>Two tea breaks and a buffet lunch</li>
+                <li>Breakout room and registration desk</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=corporate#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-babyshower.jpg" alt="Light-up BABY letters framed by pastel balloon garlands for a baby shower" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Baby Shower &amp; Naming</h3>
+              <p class="package-price"><strong>₹980</strong><span>per guest, from</span></p>
+              <p class="package-meta">Min. 50 guests · Lotus Room · lunch</p>
+              <ul class="package-features">
+                <li>Seemantham or cradle-ceremony décor</li>
+                <li>Traditional banana-leaf vegetarian lunch</li>
+                <li>Priest coordination and pooja essentials</li>
+                <li>Bangle and mehendi corner for guests</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=babyshower&amp;hall=lotus#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="card package-card" data-reveal>
+            <img src="../assets/images/pkg-anniversary.jpg" alt="Candelabras and red roses on a formal dinner table set for an anniversary" width="900" height="650" loading="lazy">
+            <div class="package-body">
+              <h3>Anniversary &amp; Private Dinner</h3>
+              <p class="package-price"><strong>₹2,200</strong><span>per guest, from</span></p>
+              <p class="package-meta">15–40 guests · Ember Room · dinner</p>
+              <ul class="package-features">
+                <li>Five-course plated dinner</li>
+                <li>Candle-and-rose table styling</li>
+                <li>Violinist for 45 minutes</li>
+                <li>2 kg celebration cake of your choice</li>
+              </ul>
+              <a class="link-arrow" href="contact.html?event=anniversary&amp;hall=ember#enquiry">Get a quote for this <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Catering menus ===== -->
+    <section class="section" id="menus" aria-labelledby="menus-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Catering menus</span>
+          <h2 id="menus-title">Menus and per-plate prices</h2>
+          <p>Use these for custom bookings or to upgrade a package. All menus are served buffet-style, and the Ember Room serves them plated.</p>
+        </div>
+        <div class="menu-grid">
+          <figure class="menu-photo" data-reveal>
+            <img src="../assets/images/menu-thali-spread.jpg" alt="Silver thali with paneer curry, dal, raita, rice, rotis and sweets on a red tablecloth" width="1000" height="800" loading="lazy">
+            <figcaption><p>Tastings run Tuesday to Saturday, 12 pm to 3 pm. Bring your menu wish-list and we'll cook from it.</p></figcaption>
+          </figure>
+          <ul class="menu-list">
+            <li class="card menu-item" data-reveal>
+              <h3><span class="veg-mark" role="img" aria-label="Vegetarian"></span>Veg Classic</h3>
+              <span class="per">₹750 / plate</span>
+              <p>22 items: 2 welcome drinks, 4 starters, 6 mains, 2 breads, veg biryani and jeera rice, salads and 3 desserts.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="veg-mark" role="img" aria-label="Vegetarian"></span>Veg Royal</h3>
+              <span class="per">₹1,050 / plate</span>
+              <p>30 items with live pasta and tandoor counters, 6 starters, regional specials and 4 desserts including hot gulab jamun.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="nonveg-mark" role="img" aria-label="Non-vegetarian"></span>Non-Veg Classic</h3>
+              <span class="per">₹950 / plate</span>
+              <p>24 items: the Veg Classic spread plus chicken starters, a chicken curry and Donne-style mutton biryani.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="nonveg-mark" role="img" aria-label="Non-vegetarian"></span>Non-Veg Royal</h3>
+              <span class="per">₹1,350 / plate</span>
+              <p>32 items with prawn and fish starters, Chettinad and Mughlai mains, a seafood counter and 5 desserts.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="veg-mark" role="img" aria-label="Vegetarian"></span>Jain &amp; Satvik</h3>
+              <span class="per">₹850 / plate</span>
+              <p>No onion, garlic or root vegetables, cooked in separate vessels by a dedicated team.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="veg-mark" role="img" aria-label="Vegetarian"></span>High Tea</h3>
+              <span class="per">₹450 / plate</span>
+              <p>4 savouries, 2 sweets, filter coffee and masala chai. Ideal for showers, launches and conference breaks.</p>
+            </li>
+            <li class="card menu-item" data-reveal>
+              <h3><span class="veg-mark" role="img" aria-label="Vegetarian"></span>Kids' Plate</h3>
+              <span class="per">₹395 / plate</span>
+              <p>Mini dosas, pasta, fries, fruit and ice cream for guests aged 3 to 10, served at child-height tables.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Décor & add-ons ===== -->
+    <section class="section section--alt" aria-labelledby="addons-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Décor &amp; add-ons</span>
+          <h2 id="addons-title">Add-ons with fixed, published prices</h2>
+          <p>Mix and match with any package or hall. Prices are per event unless marked per guest.</p>
+        </div>
+        <div class="addon-wrap">
+          <div class="card addon-group" data-reveal>
+            <h3><span aria-hidden="true">✿</span> Décor</h3>
+            <ul class="price-list">
+              <li><span class="name">Classic floral stage<small>Single backdrop, fresh flowers</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹45,000</span></li>
+              <li><span class="name">Grand floral stage<small>Layered backdrop, pillars, chandelier</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹1,20,000</span></li>
+              <li><span class="name">Fresh-flower mandap<small>Four pillars with canopy</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹85,000</span></li>
+              <li><span class="name">Entrance &amp; aisle florals</span><span class="dots" aria-hidden="true"></span><span class="amt">₹28,000</span></li>
+              <li><span class="name">Kids' theme décor<small>Balloons, cut-outs, backdrop</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹18,000</span></li>
+              <li><span class="name">Lawn rain hanger<small>Recommended June to October</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹65,000</span></li>
+            </ul>
+          </div>
+          <div class="card addon-group" data-reveal>
+            <h3><span aria-hidden="true">♪</span> Food counters &amp; entertainment</h3>
+            <ul class="price-list">
+              <li><span class="name">Live dosa counter</span><span class="dots" aria-hidden="true"></span><span class="amt">₹95 / guest</span></li>
+              <li><span class="name">Chaat &amp; pani-puri counter</span><span class="dots" aria-hidden="true"></span><span class="amt">₹85 / guest</span></li>
+              <li><span class="name">Live grill &amp; kebab counter</span><span class="dots" aria-hidden="true"></span><span class="amt">₹180 / guest</span></li>
+              <li><span class="name">Mocktail bar</span><span class="dots" aria-hidden="true"></span><span class="amt">₹120 / guest</span></li>
+              <li><span class="name">Kulfi &amp; jalebi station</span><span class="dots" aria-hidden="true"></span><span class="amt">₹110 / guest</span></li>
+              <li><span class="name">DJ + 24 × 24 ft dance floor</span><span class="dots" aria-hidden="true"></span><span class="amt">₹32,000</span></li>
+              <li><span class="name">Photo booth with prints<small>3 hours</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹16,000</span></li>
+              <li><span class="name">Cold-pyro entry<small>4 shots</small></span><span class="dots" aria-hidden="true"></span><span class="amt">₹9,500</span></li>
+              <li><span class="name">Extra valet hour</span><span class="dots" aria-hidden="true"></span><span class="amt">₹3,500</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="addon-photos">
+          <figure data-reveal>
+            <img src="../assets/images/addons-haldi-decor.jpg" alt="Haldi entrance draped in yellow and orange fabric with paper flowers on the lawn" width="1000" height="800" loading="lazy">
+            <figcaption>Haldi drapes and paper florals, Jasmine Lawn</figcaption>
+          </figure>
+          <figure data-reveal>
+            <img src="../assets/images/addons-dj.jpg" alt="DJ mixing on turntables under purple party lights" width="1000" height="800" loading="lazy">
+            <figcaption>DJ console with dance-floor lighting</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Budget estimator ===== -->
+    <section class="section" id="estimate" aria-labelledby="estimate-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Budget estimator</span>
+          <h2 id="estimate-title">Estimate your event in under a minute</h2>
+          <p>Prices update as you choose. The total includes GST and shows what each installment will be.</p>
+        </div>
+        <div class="estimator">
+          <form class="card estimator-form" id="estimator" novalidate aria-label="Event budget estimator">
+            <div class="form-grid">
+              <div class="field">
+                <label for="estHall">Hall</label>
+                <select class="input" id="estHall">
+                  <option value="ballroom">Marigold Ballroom (350–900)</option>
+                  <option value="saffron" selected>Saffron Hall (120–400)</option>
+                  <option value="jasmine">Jasmine Lawn (100–500)</option>
+                  <option value="lotus">Lotus Room (40–150)</option>
+                  <option value="ember">Ember Room (15–40)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="estGuests">Guests</label>
+                <input class="input" id="estGuests" type="number" min="15" max="900" value="250" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="estMenu">Menu</label>
+                <select class="input" id="estMenu">
+                  <option value="veg-classic">Veg Classic · ₹750</option>
+                  <option value="veg-royal" selected>Veg Royal · ₹1,050</option>
+                  <option value="nonveg-classic">Non-Veg Classic · ₹950</option>
+                  <option value="nonveg-royal">Non-Veg Royal · ₹1,350</option>
+                  <option value="satvik">Jain &amp; Satvik · ₹850</option>
+                  <option value="hightea">High Tea · ₹450</option>
+                </select>
+              </div>
+              <div class="field">
+                <span class="label" id="estSlotLabel">Slot</span>
+                <div class="segmented" role="radiogroup" aria-labelledby="estSlotLabel">
+                  <label><input class="sr-only" type="radio" name="estSlot" value="lunch"><span>Lunch</span></label>
+                  <label><input class="sr-only" type="radio" name="estSlot" value="dinner" checked><span>Dinner</span></label>
+                </div>
+              </div>
+            </div>
+            <fieldset>
+              <legend>Add-ons</legend>
+              <div class="addon-checks">
+                <label class="check"><input type="checkbox" name="estAddon" value="dosa"><span>Live dosa counter <span class="muted">₹95/guest</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="chaat"><span>Chaat counter <span class="muted">₹85/guest</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="mocktail"><span>Mocktail bar <span class="muted">₹120/guest</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="dessert"><span>Kulfi &amp; jalebi station <span class="muted">₹110/guest</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="stage-classic" checked><span>Classic floral stage <span class="muted">₹45,000</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="stage-grand"><span>Grand floral stage <span class="muted">₹1,20,000</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="dj"><span>DJ + dance floor <span class="muted">₹32,000</span></span></label>
+                <label class="check"><input type="checkbox" name="estAddon" value="booth"><span>Photo booth <span class="muted">₹16,000</span></span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="card estimate-summary" aria-labelledby="summary-title" aria-live="polite">
+            <h3 id="summary-title">Your estimate</h3>
+            <ul class="estimate-lines">
+              <li><span>Hall slot<br><small data-est="hallLabel">Saffron Hall · dinner slot</small></span><span data-est="hall">₹95,000</span></li>
+              <li><span>Catering<br><small data-est="cateringLabel">250 plates × ₹1,050 (Veg Royal)</small></span><span data-est="catering">₹2,62,500</span></li>
+              <li><span>Add-ons</span><span data-est="addons">₹45,000</span></li>
+              <li><span>GST at 18%</span><span data-est="gst">₹72,450</span></li>
+            </ul>
+            <div class="estimate-total"><span>Estimated total</span><strong data-est="total">₹4,74,950</strong></div>
+            <p class="estimate-warning" data-est="warning"></p>
+            <ul class="estimate-split">
+              <li><span>25% to confirm</span><span data-est="i1">₹1,18,738</span></li>
+              <li><span>50% 30 days before</span><span data-est="i2">₹2,37,475</span></li>
+              <li><span>25% 7 days before</span><span data-est="i3">₹1,18,737</span></li>
+              <li><span>Works out to</span><span data-est="perGuest">₹1,900 per guest, all-in</span></li>
+            </ul>
+            <a class="btn btn--block" data-est="cta" href="contact.html#enquiry">Request This Quote</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+            <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+          </a>
+          <p>Five banquet halls, an open-air lawn and two in-house kitchens for celebrations of 15 to 900 guests on Sarjapur Road, Bengaluru.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="halls.html">Halls</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></li>
+            <li><a href="mailto:events@marigoldgrand.in">events@marigoldgrand.in</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul class="footer-links">
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Marigold Grand Banquets Pvt. Ltd. All rights reserved.</p>
+        <p>14 Sarjapur Main Road, Kaikondrahalli, Bengaluru 560035</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

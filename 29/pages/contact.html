@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Contact Copper Pot Cooking Studio: address, phone, email, opening hours and a message form for classes, events and gift cards.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="workshops.html">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link is-active" href="contact.html" aria-current="page">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Page heading ===== -->
+    <section class="page-head" aria-labelledby="contact-title">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="../index.html">Home 1</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+        <h1 id="contact-title">Contact</h1>
+        <p class="lead">Questions about a class, a private event or a gift card? Send us a note or call the studio. We reply within one business day.</p>
+      </div>
+    </section>
+
+    <!-- ===== Form + studio details ===== -->
+    <section class="section" aria-label="Contact form and studio details">
+      <div class="container contact-layout">
+        <div class="form-card">
+          <h2>Send us a message / Book a seat</h2>
+          <p class="muted">Fields marked * are required.</p>
+          <form data-contact-form novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-name">Full name *</label>
+                <input class="input" id="c-name" name="name" type="text" autocomplete="name" required data-validate data-label="Your name" minlength="2">
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email *</label>
+                <input class="input" id="c-email" name="email" type="email" autocomplete="email" required data-validate data-label="Email">
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-phone">Phone <span class="optional">(optional)</span></label>
+                <input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" data-validate data-label="Phone">
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-topic">Topic / Booking option *</label>
+                <select class="select" id="c-topic" name="topic" required data-validate data-label="Topic">
+                  <option value="">Choose an option...</option>
+                  <option value="classes">Cooking Classes (Book seats)</option>
+                  <option value="workshops">Weekend Workshops (Book seats)</option>
+                  <option value="private">Private event or team booking</option>
+                  <option value="gift">Gift cards</option>
+                  <option value="other">Something else</option>
+                </select>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Dynamic Cooking Classes selector -->
+            <div class="field" id="field-class" hidden>
+              <label for="c-class">Choose a cooking class *</label>
+              <select class="select" id="c-class" name="class" data-label="Cooking class">
+                <option value="">Select a cooking class...</option>
+                <option value="roman-pasta" data-title="Roman Pasta Classics" data-date="2026-10-15" data-time="6:30 PM" data-price="89" data-chef="Chef Elena">Roman Pasta Classics — $89 · Thu, Oct 15, 6:30 PM</option>
+                <option value="neapolitan-pizza" data-title="Neapolitan Pizza Night" data-date="2026-10-16" data-time="6:30 PM" data-price="85" data-chef="Chef Luis">Neapolitan Pizza Night — $85 · Fri, Oct 16, 6:30 PM</option>
+                <option value="sushi-rolling" data-title="Sushi Rolling Basics" data-date="2026-10-17" data-time="11:00 AM" data-price="95" data-chef="Chef Kenji">Sushi Rolling Basics — $95 · Sat, Oct 17, 11:00 AM</option>
+                <option value="handmade-ravioli" data-title="Handmade Ravioli &amp; Butter Sauces" data-date="2026-10-20" data-time="6:00 PM" data-price="115" data-chef="Chef Elena">Handmade Ravioli &amp; Butter Sauces — $115 · Tue, Oct 20, 6:00 PM</option>
+                <option value="thai-street-wok" data-title="Thai Street Wok" data-date="2026-10-21" data-time="6:30 PM" data-price="109" data-chef="Chef Somchai">Thai Street Wok — $109 · Wed, Oct 21, 6:30 PM</option>
+                <option value="street-tacos" data-title="Street Tacos &amp; Fresh Salsas" data-date="2026-10-23" data-time="6:30 PM" data-price="85" data-chef="Chef Luis">Street Tacos &amp; Fresh Salsas — $85 · Fri, Oct 23, 6:30 PM</option>
+                <option value="ramen" data-title="Ramen from the Broth Up" data-date="2026-10-24" data-time="10:00 AM" data-price="155" data-chef="Chef Kenji">Ramen from the Broth Up — $155 · Sat, Oct 24, 10:00 AM</option>
+                <option value="knife-skills" data-title="Knife Skills Bootcamp" data-date="2026-10-27" data-time="6:30 PM" data-price="75" data-chef="Chef Kenji">Knife Skills Bootcamp — $75 · Tue, Oct 27, 6:30 PM</option>
+                <option value="north-indian-curry" data-title="North Indian Curry House" data-date="2026-10-28" data-time="6:30 PM" data-price="89" data-chef="Guest chef Priya Nair">North Indian Curry House — $89 · Wed, Oct 28, 6:30 PM</option>
+                <option value="seafood-paella" data-title="Seafood Paella" data-date="2026-10-29" data-time="6:30 PM" data-price="119" data-chef="Chef Luis">Seafood Paella — $119 · Thu, Oct 29, 6:30 PM</option>
+                <option value="croissants" data-title="Laminated Dough: Croissants" data-date="2026-10-31" data-time="9:30 AM" data-price="165" data-chef="Chef Elena">Laminated Dough: Croissants — $165 · Sat, Oct 31, 9:30 AM</option>
+                <option value="khao-soi" data-title="Khao Soi &amp; Curry Pastes" data-date="2026-11-01" data-time="11:00 AM" data-price="145" data-chef="Chef Somchai">Khao Soi &amp; Curry Pastes — $145 · Sun, Nov 1, 11:00 AM</option>
+                <option value="samosas-chutneys" data-title="Samosas, Pakoras &amp; Chutneys" data-date="2026-11-05" data-time="6:30 PM" data-price="105" data-chef="Guest chef Priya Nair">Samosas, Pakoras &amp; Chutneys — $105 · Thu, Nov 5, 6:30 PM</option>
+                <option value="macarons" data-title="Parisian Macarons" data-date="2026-11-08" data-time="11:00 AM" data-price="139" data-chef="Chef Elena">Parisian Macarons — $139 · Sun, Nov 8, 11:00 AM</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Dynamic Weekend Workshops selector -->
+            <div class="field" id="field-workshop" hidden>
+              <label for="c-workshop">Choose a weekend workshop *</label>
+              <select class="select" id="c-workshop" name="workshop" data-label="Weekend workshop">
+                <option value="">Select a weekend workshop...</option>
+                <option value="ws-pasta-fresca" data-title="Pasta Fresca Intensive" data-date="2026-10-24" data-dates="Oct 24–25" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="345" data-chef="Chef Elena">Pasta Fresca Intensive — $345 · Oct 24–25</option>
+                <option value="ws-sourdough" data-title="Sourdough &amp; Wild Fermentation" data-date="2026-11-07" data-dates="Nov 7–8" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="325" data-chef="Chef Luis">Sourdough &amp; Wild Fermentation — $325 · Nov 7–8</option>
+                <option value="ws-izakaya" data-title="Japanese Izakaya Weekend" data-date="2026-11-14" data-dates="Nov 14–15" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="365" data-chef="Chef Kenji">Japanese Izakaya Weekend — $365 · Nov 14–15</option>
+                <option value="ws-holiday-desserts" data-title="Holiday Desserts &amp; Layer Cakes" data-date="2026-11-21" data-dates="Nov 21–22" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="335" data-chef="Chef Elena">Holiday Desserts &amp; Layer Cakes — $335 · Nov 21–22</option>
+                <option value="ws-viennoiserie" data-title="Croissant &amp; Viennoiserie Weekend" data-date="2026-12-05" data-dates="Dec 5–6" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="395" data-chef="Chef Elena">Croissant &amp; Viennoiserie Weekend — $395 · Dec 5–6</option>
+                <option value="ws-thai-curry" data-title="Thai Curry Paste Masterclass" data-date="2026-12-12" data-dates="Dec 12–13" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="335" data-chef="Chef Somchai">Thai Curry Paste Masterclass — $335 · Dec 12–13</option>
+                <option value="ws-fire-steak" data-title="Fire &amp; Steak Weekend" data-date="2027-01-09" data-dates="Jan 9–10" data-time="Sat &amp; Sun · 10 AM–4 PM" data-price="365" data-chef="Chef Luis">Fire &amp; Steak Weekend — $365 · Jan 9–10</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="c-guests" id="label-guests">Number of seats <span class="optional">(1–10)</span></label>
+                <input class="input" id="c-guests" name="guests" type="number" min="1" max="24" value="1" inputmode="numeric" placeholder="1">
+              </div>
+              <div class="field">
+                <label for="c-date">Preferred date <span class="optional">(optional)</span></label>
+                <input class="input" id="c-date" name="date" type="date">
+              </div>
+            </div>
+
+            <!-- Booking live summary card -->
+            <div class="booking-summary" id="booking-summary" hidden>
+              <div class="bs-badge"><span class="badge-dot" aria-hidden="true"></span><strong id="bs-type">Booking summary</strong></div>
+              <div class="bs-body">
+                <div>
+                  <h4 id="bs-title">Session title</h4>
+                  <p id="bs-meta" class="muted small">Date &amp; Chef</p>
+                </div>
+                <div class="bs-price-block">
+                  <span class="bs-rate" id="bs-rate">$0 / seat</span>
+                  <strong class="bs-total" id="bs-total">$0 total</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="c-message">Message *</label>
+              <textarea class="textarea" id="c-message" name="message" required data-validate data-label="Your message" minlength="10" placeholder="Tell us what you're planning, any dietary needs, or seat preferences."></textarea>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="form-foot">
+              <p>We only use your details to reply to this message and confirm bookings.</p>
+              <button class="btn btn--lg" type="submit" id="c-submit">Send message</button>
+            </div>
+          </form>
+          <div class="form-success" data-contact-success tabindex="-1" role="status" hidden>
+            <span class="badge-icon" aria-hidden="true">✓</span>
+            <div>
+              <h3>Thanks, <span data-success-name>there</span>! Your booking request is on its way.</h3>
+              <p data-success-detail>Someone from the studio will reply to your email within one business day. Need an answer sooner? Call us on (503) 555-0148.</p>
+              <p class="mt-6"><button class="link-btn" type="button" data-contact-again>Book another session or send a message</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-stack">
+          <div class="info-card">
+            <h2><span class="badge-icon" aria-hidden="true">⌖</span>Visit the studio</h2>
+            <p>1127 NW Glisan Street<br>Portland, OR 97209</p>
+            <p class="muted small">Entrance and bike racks on the NW 12th Avenue side.</p>
+          </div>
+          <div class="info-card">
+            <h2><span class="badge-icon" aria-hidden="true">☏</span>Call or email</h2>
+            <p><a href="tel:+15035550148">(503) 555-0148</a></p>
+            <p><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></p>
+            <p class="muted small">Events team: <a href="mailto:events@copperpotstudio.com">events@copperpotstudio.com</a></p>
+          </div>
+          <div class="info-card">
+            <h2><span class="badge-icon" aria-hidden="true">◷</span>Opening hours</h2>
+            <table class="hours">
+              <caption class="visually-hidden">Studio opening hours</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>10 AM – 9:30 PM</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>10 AM – 9:30 PM</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>10 AM – 9:30 PM</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>10 AM – 9:30 PM</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>9 AM – 9:30 PM</td></tr>
+                <tr data-day="0"><th scope="row">Sunday</th><td>10 AM – 5 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Getting here ===== -->
+    <section class="section section--alt" aria-labelledby="directions-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Getting here</span>
+          <h2 id="directions-title">Easy to reach from anywhere in Portland</h2>
+        </div>
+        <div class="directions">
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">⇆</span>By streetcar</h3><p>Take the NS Line to NW 11th &amp; Glisan. We're a two-minute walk east.</p></article>
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">P</span>By car</h3><p>Park at the Glisan Street garage and bring your ticket. We validate 3 hours for $5.</p></article>
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">⚲</span>By bike</h3><p>Covered racks for 14 bikes at our side entrance, plus a pump and repair stand.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Next step ===== -->
+    <section class="section section--tight" aria-labelledby="contact-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <span class="eyebrow">Ready already?</span>
+            <h2 id="contact-cta-title">Skip the email and book a seat</h2>
+            <p>Live dates and seat counts are on the class catalog. Booking takes about a minute.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--lg" href="classes.html#catalog">Browse classes</a>
+            <a class="link-arrow" href="workshops.html">See weekend workshops <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="workshops.html">Weekend Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="../index.html#chefs">Chefs</a></li>
+            <li><a href="../index1.html#pricing">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

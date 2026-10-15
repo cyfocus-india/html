@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Dental cleaning, tooth-colored fillings, braces and clear aligners, root canal therapy, implants, whitening and gum care at Lumina Dental.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="../index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="../index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link active" aria-current="page">Services</a></li>
+          <li class="nav-item"><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordion" aria-expanded="false" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content" id="mobileHomeContent">
+            <li><a href="../index.html" class="mobile-accordion-link">Home 1</a></li>
+            <li><a href="../index1.html" class="mobile-accordion-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link active" aria-current="page">Services</a></li>
+        <li class="mobile-nav-item"><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Services -->
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="inner-hero">
+      <div class="container inner-hero-grid">
+        <div>
+          <span class="hero-badge">&#10022; Treatments we offer</span>
+          <h1>Dental Treatments for Every Smile</h1>
+          <p>Cleanings, fillings, braces and root canals form the core of our care, with whitening, implants, extractions and gum therapy all handled in-house by our own specialists.</p>
+          <div class="inner-hero-actions">
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+            <a href="pricing.html" class="btn btn-outline">See All Prices</a>
+          </div>
+        </div>
+        <div class="inner-hero-img-wrap">
+          <img src="../assets/images/hero-services.jpg" alt="Dentist pointing to a patient's digital X-ray on the chairside monitor while she listens from the treatment chair" width="1200" height="900">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Core services: cleaning, fillings, braces, root canal -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Treatments</span>
+          <h2>Our Four Most-Requested Treatments</h2>
+          <p>What each treatment involves, what makes our approach different and the starting fee before insurance.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="service-card">
+            <img src="../assets/images/service-cleaning.jpg" alt="Dental hygienist adjusting the overhead light before a patient's professional teeth cleaning" class="service-card-img" width="800" height="533" loading="lazy">
+            <div class="service-card-body">
+              <h3>Dental Cleaning &amp; Check-Up</h3>
+              <p>Removes hardened tartar and plaque above and below the gumline, then polishes and seals enamel with fluoride. Recommended every six months.</p>
+              <ul class="service-feature-list">
+                <li class="service-feature-item">Gentle ultrasonic tartar removal</li>
+                <li class="service-feature-item">Gum pocket measurements at every visit</li>
+                <li class="service-feature-item">Stain-lifting polish and fluoride varnish</li>
+                <li class="service-feature-item">Personal brushing and flossing coaching</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="price-tag">$95</span>
+                <a href="contact.html?service=Cleaning+%26+Exam" data-service="Cleaning &amp; Exam" class="btn btn-outline btn-sm">Book a Cleaning</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="../assets/images/service-fillings.jpg" alt="Dentist in a navy uniform preparing a tooth for a filling while the patient reclines" class="service-card-img" width="800" height="533" loading="lazy">
+            <div class="service-card-body">
+              <h3>Tooth-Colored Fillings</h3>
+              <p>Cavities are repaired with mercury-free composite resin that bonds to your tooth and is shade-matched so nobody can tell it is there.</p>
+              <ul class="service-feature-list">
+                <li class="service-feature-item">Minimal drilling to keep healthy enamel</li>
+                <li class="service-feature-item">BPA-free, mercury-free materials</li>
+                <li class="service-feature-item">LED-cured so you can chew straight away</li>
+                <li class="service-feature-item">Two-year warranty on every filling</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="price-tag">$140 <small>/ surface</small></span>
+                <a href="contact.html?service=Tooth+Fillings" data-service="Tooth Fillings" class="btn btn-outline btn-sm">Book a Filling</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="../assets/images/service-braces.jpg" alt="Two dental models side by side, one fitted with a clear aligner and one with metal braces" class="service-card-img" width="800" height="533" loading="lazy">
+            <div class="service-card-body">
+              <h3>Braces &amp; Clear Aligners</h3>
+              <p>Straighten crowded or gapped teeth and correct your bite with near-invisible clear aligners or low-profile ceramic braces, for teens and adults.</p>
+              <ul class="service-feature-list">
+                <li class="service-feature-item">3D preview of your finished smile</li>
+                <li class="service-feature-item">Removable aligners with no food limits</li>
+                <li class="service-feature-item">Tooth-colored ceramic brackets</li>
+                <li class="service-feature-item">Typical treatment time 6&ndash;14 months</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="price-tag"><small>From</small> $2,200</span>
+                <a href="contact.html?service=Braces+%26+Aligners" data-service="Braces &amp; Aligners" class="btn btn-outline btn-sm">Book an Ortho Consult</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="../assets/images/service-rootcanal.jpg" alt="Dentist holding a cross-section tooth model that shows an infected root canal" class="service-card-img" width="800" height="533" loading="lazy">
+            <div class="service-card-body">
+              <h3>Root Canal Therapy</h3>
+              <p>Saves a badly decayed or infected tooth instead of removing it. We clean out the infected pulp, disinfect the canals and seal them, usually in one visit.</p>
+              <ul class="service-feature-list">
+                <li class="service-feature-item">Profound numbing before we begin</li>
+                <li class="service-feature-item">Operating microscope for precision</li>
+                <li class="service-feature-item">Flexible files for curved roots</li>
+                <li class="service-feature-item">Same-day core build-up for the crown</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="price-tag"><small>From</small> $480</span>
+                <a href="contact.html?service=Root+Canal+Therapy" data-service="Root Canal Therapy" class="btn btn-outline btn-sm">Book a Root Canal Consult</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Specialist treatments -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Specialist Care</span>
+          <h2>Cosmetic, Surgical &amp; Gum Treatments</h2>
+          <p>Handled in-house by our oral surgeon and cosmetic dentist, so you never need an outside referral.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="../assets/images/service-whitening.jpg" alt="Close-up of a bright, white smile after professional teeth whitening" class="feature-card-img img-pos-end" width="800" height="600" loading="lazy">
+            </div>
+            <h3>In-Office Whitening</h3>
+            <p>A professional-strength gel activated by blue LED light lifts teeth up to eight shades in one 60-minute visit, with a desensitizer built in.</p>
+            <p class="price-tag card-price">$280</p>
+            <a href="contact.html?service=Teeth+Whitening" data-service="Teeth Whitening" class="btn btn-outline btn-sm btn-block">Book Whitening</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="../assets/images/service-implants.jpg" alt="Dental model showing a titanium implant with a crown between two natural teeth" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Dental Implants</h3>
+            <p>A titanium root fuses with the jawbone and is topped with a custom ceramic crown, so a replacement tooth looks and feels natural for decades.</p>
+            <p class="price-tag card-price"><small>From</small> $1,650</p>
+            <a href="contact.html?service=Dental+Implants" data-service="Dental Implants" class="btn btn-outline btn-sm btn-block">Book an Implant Consult</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="../assets/images/service-extraction.jpg" alt="Oral surgeon and assistant in surgical gowns performing a tooth extraction" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Wisdom Tooth Removal</h3>
+            <p>Impacted or painful wisdom teeth are removed under local anesthetic or oral sedation, with a written recovery plan to take home.</p>
+            <p class="price-tag card-price"><small>From</small> $180 <small>/ tooth</small></p>
+            <a href="contact.html?service=Wisdom+Extraction" data-service="Wisdom Extraction" class="btn btn-outline btn-sm btn-block">Book an Extraction</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="../assets/images/service-periodontal.jpg" alt="Dentist measuring gum pocket depth with a periodontal probe and mouth mirror" class="feature-card-img" width="800" height="600" loading="lazy">
+            </div>
+            <h3>Gum Disease Treatment</h3>
+            <p>Deep cleaning below the gumline removes the bacteria that cause bleeding gums and bone loss, stopping gum disease before teeth loosen.</p>
+            <p class="price-tag card-price">$160 <small>/ quadrant</small></p>
+            <a href="contact.html?service=Periodontal+Care" data-service="Periodontal Care" class="btn btn-outline btn-sm btn-block">Book Gum Care</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Comparison table: time, durability, anesthesia, recovery -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Compare Treatments</span>
+          <h2>How Long It Takes and How Long It Lasts</h2>
+          <p>Plan time off work and know what to expect afterwards with this quick side-by-side guide.</p>
+        </div>
+
+        <div class="table-responsive" tabindex="0" role="region" aria-label="Treatment comparison table">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Treatment</th>
+                <th scope="col">Chair Time</th>
+                <th scope="col">How Long It Lasts</th>
+                <th scope="col">Numbing</th>
+                <th scope="col">Recovery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Cleaning &amp; check-up</th>
+                <td>45&ndash;60 min</td>
+                <td>6 months (next recall)</td>
+                <td>Not needed (gel on request)</td>
+                <td>Back to normal immediately</td>
+              </tr>
+              <tr>
+                <th scope="row">Tooth-colored filling</th>
+                <td>30&ndash;45 min</td>
+                <td>7&ndash;10+ years</td>
+                <td>Local anesthetic</td>
+                <td>Numbness fades in 1&ndash;2 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Clear aligners</th>
+                <td>45 min start, then check-ins</td>
+                <td>Lifelong with a night retainer</td>
+                <td>Not needed</td>
+                <td>1&ndash;2 days of mild pressure</td>
+              </tr>
+              <tr>
+                <th scope="row">Root canal</th>
+                <td>60&ndash;90 min</td>
+                <td>Lifelong once crowned</td>
+                <td>Local anesthetic</td>
+                <td>About 24 hours of tenderness</td>
+              </tr>
+              <tr>
+                <th scope="row">Single implant</th>
+                <td>45&ndash;60 min</td>
+                <td>25+ years</td>
+                <td>Local, nitrous oxide optional</td>
+                <td>Soft foods for 2&ndash;3 days</td>
+              </tr>
+              <tr>
+                <th scope="row">In-office whitening</th>
+                <td>60 min</td>
+                <td>1&ndash;3 years (diet dependent)</td>
+                <td>Gum barrier, no injection</td>
+                <td>Avoid staining drinks for 48 hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Conservative Treatment Philosophy -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Conservative Care</span>
+          <h2>Our Three Principles of Minimally Invasive Dentistry</h2>
+          <p>We believe the best restoration is the one you never needed. Our clinicians prioritize preserving your natural tooth structure and vitality above aggressive procedures.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Principle 1</span>
+            <h3>Biomimetic Enamel Preservation</h3>
+            <p>When treating decay, we remove exclusively damaged tissue while preserving healthy tooth structure, bonding with advanced composite matrices that mimic the natural flexibility and hardness of tooth enamel.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Principle 2</span>
+            <h3>Vital Pulp Therapy</h3>
+            <p>When deep cavities approach the nerve, we place therapeutic bioceramic calcium silicate caps to stimulate protective secondary dentin growth, preserving the living tooth nerve and preventing root canal surgery.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="badge badge-accent" style="margin-bottom:0.75rem;">Principle 3</span>
+            <h3>Pre-Visualized Diagnostic Previews</h3>
+            <p>Before any smile design, veneer, or orthodontic alignment starts, we generate high-definition digital simulations on your own photos so you approve every aesthetic contour before treatment begins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Next step -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Not Sure Which Treatment You Need?</h2>
+          <p>Start with a comprehensive exam. You will leave with a written plan, itemized costs and no pressure to book on the spot.</p>
+          <div class="cta-actions">
+            <a href="contact.html?service=Comprehensive+Exam" data-service="Comprehensive Exam" class="btn btn-primary btn-lg">Book an Exam</a>
+            <a href="pricing.html" class="btn btn-outline btn-lg">See All Prices</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

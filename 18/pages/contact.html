@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Get in touch with Aura Yoga &amp; Wellness Sanctuary. Studio location, reception hours, class inquiries, transit directions, and studio map.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness Home 1">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+        <span class="brand-text">
+          <span class="brand-name">Aura Yoga</span>
+          <span class="brand-sub">Wellness Sanctuary</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <span class="dropdown-arrow">&#9662;</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1</a>
+            <a href="../index1.html" class="dropdown-link">Home 2</a>
+          </div>
+        </div>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="instructors.html" class="nav-link">Instructors</a>
+        <a href="membership.html" class="nav-link">Membership</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm">Sign In</a>
+
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="30" height="30">
+        <span class="brand-name" style="font-size: 1.15rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary);">Aura Yoga</span>
+      </div>
+      <button type="button" class="mobile-drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <div class="mobile-nav-list">
+      <div class="mobile-dropdown-group">
+        <a href="#" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          Home <span>&#9662;</span>
+        </a>
+        <div class="mobile-accordion-content">
+          <a href="../index.html" class="mobile-nav-link">Home 1</a>
+          <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+        </div>
+      </div>
+      <a href="classes.html" class="mobile-nav-link">Classes</a>
+      <a href="instructors.html" class="mobile-nav-link">Instructors</a>
+      <a href="membership.html" class="mobile-nav-link">Membership</a>
+      <a href="contact.html" class="mobile-nav-link active">Contact</a>
+      <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Toggle direction">&#8644; RTL</button>
+      </div>
+      <a href="signin.html" class="btn btn-primary btn-block">Sign In</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Contact Header Banner -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-badge">Get in Touch</span>
+          <h1>We are Here to Support Your Practice</h1>
+          <p class="section-desc">
+            Have questions about membership, private sessions, teacher training, or finding the right style for your body? Our studio coordinators are ready to help.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Grid: Form + Studio Details -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: flex-start; gap: 3.5rem;">
+          <!-- Contact Form with Validation -->
+          <div class="card" style="padding: 2.5rem;">
+            <h3 style="margin-bottom: 0.5rem;">Send Us a Message</h3>
+            <p style="margin-bottom: 1.75rem; font-size: 0.92rem;">Fill out the form below and we will respond within one business day.</p>
+
+            <div id="contact-form-feedback" class="form-feedback" role="alert"></div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Maya Angelou" required>
+                <div class="field-error">Please enter your name</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" required>
+                <div class="field-error">Please enter a valid email address</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number (Optional)</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="(555) 000-0000">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-interest" class="form-label">What are you interested in?</label>
+                <select id="contact-interest" class="form-control">
+                  <option value="trial">14-Day Intro Pass / First Visit</option>
+                  <option value="membership">Monthly Unlimited Membership</option>
+                  <option value="packs">Class Pack Purchase</option>
+                  <option value="private">Private 1-on-1 Coaching</option>
+                  <option value="training">200-Hour Teacher Training</option>
+                  <option value="general">General Studio Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message *</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Tell us about your practice experience or any questions you have..." required></textarea>
+                <div class="field-error">Message must be at least 10 characters long</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
+            </form>
+          </div>
+
+          <!-- Studio Location & Hours Information -->
+          <div>
+            <div class="card" style="margin-bottom: 2rem;">
+              <h3 style="margin-bottom: 1.25rem;">Studio Sanctuary Details</h3>
+
+              <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.95rem;">
+                <div style="display: flex; gap: 1rem;">
+                  <div class="feature-circle" style="width: 42px; height: 42px; font-size: 1.1rem; flex-shrink: 0; margin: 0;">&#9872;</div>
+                  <div>
+                    <strong>Studio Address</strong>
+                    <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+                      428 Lotus Blossom Way, Suite 200<br>
+                      Zen Quarter District, CA 90210
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                  <div class="feature-circle" style="width: 42px; height: 42px; font-size: 1.1rem; flex-shrink: 0; margin: 0;">&#9742;</div>
+                  <div>
+                    <strong>Phone &amp; Direct Text</strong>
+                    <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+                      Studio Front Desk: (555) 382-9642<br>
+                      SMS Concierge: (555) 382-9643
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                  <div class="feature-circle" style="width: 42px; height: 42px; font-size: 1.1rem; flex-shrink: 0; margin: 0;">&#9993;</div>
+                  <div>
+                    <strong>Direct Email</strong>
+                    <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+                      General: hello@aurayogastudio.com<br>
+                      Membership: members@aurayogastudio.com
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                  <div class="feature-circle" style="width: 42px; height: 42px; font-size: 1.1rem; flex-shrink: 0; margin: 0;">&#9782;</div>
+                  <div>
+                    <strong>Operating Hours</strong>
+                    <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+                      Monday &ndash; Friday: 6:00 AM &ndash; 9:00 PM<br>
+                      Saturday &ndash; Sunday: 7:00 AM &ndash; 8:00 PM<br>
+                      <em>* Studio opens 20 minutes before the first daily class</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Transit & Parking Card -->
+            <div class="card">
+              <h4 style="margin-bottom: 0.75rem;">Getting Here &amp; Parking</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+                <strong>Metro Transit:</strong> 3-minute walk from Zen Quarter Metro Station (Line 4, North Exit).
+              </p>
+              <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+                <strong>Complimentary Parking:</strong> 90 minutes free validated parking in the underground Lotus Court garage (enter via Blossom Alley).
+              </p>
+              <p style="font-size: 0.9rem; margin: 0;">
+                <strong>Bicycle Racks:</strong> Secure indoor bike storage room available directly next to our ground floor entry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Arrival FAQ Accordion -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Helpful Knowledge</span>
+          <h2>Studio Arrival Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Quick answers to ensure your arrival is effortless and serene.
+          </p>
+        </div>
+
+        <div class="accordion" style="max-width: 820px; margin-inline: auto;">
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>What should I wear and bring to my first class?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>Wear breathable, flexible athletic attire. We practice barefoot on bamboo floors. You do not need to bring a mat&mdash;complimentary sanitized Manduka Pro mats, blocks, and straps are provided. Bring a reusable water bottle; we have chilled filtered alkaline water taps.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>What happens if I run a few minutes late?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>To preserve the quiet contemplative space and avoid disturbing centering breathwork, studio doors lock exactly 2 minutes before class. If you arrive late, you are welcome to enjoy the tea lounge and wait for the next scheduled session without losing your pass credit.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Can I shower and change after morning class before work?</span>
+              <span class="accordion-icon">&#9662;</span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes. We have six private rain shower suites equipped with organic botanical shampoos, conditioners, body washes, and Dyson hair dryers. Fresh organic cotton towels are provided complimentary for all members.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Step CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready to Begin Your Practice?</h2>
+          <p>
+            Join our warm community today. Drop in for a class or claim our 14-day unlimited introductory pass.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="classes.html" class="btn btn-primary">Book a Class Slot</a>
+            <a href="membership.html" class="btn btn-secondary">Explore Passes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness">
+            <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+            <span class="brand-text">
+              <span class="brand-name">Aura Yoga</span>
+              <span class="brand-sub">Wellness Sanctuary</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            A mindful sanctuary offering classical and contemporary yoga, breathwork, and sound meditation designed to restore balance in body and spirit.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="classes.html" class="footer-link">Classes</a></li>
+            <li><a href="instructors.html" class="footer-link">Instructors</a></li>
+            <li><a href="membership.html" class="footer-link">Membership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2026 Aura Yoga &amp; Wellness Studio. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <span>Mindful Movement</span>
+            <span>&bull;</span>
+            <span>Living Lineage</span>
+            <span>&bull;</span>
+            <span>Non-Violence (Ahimsa)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

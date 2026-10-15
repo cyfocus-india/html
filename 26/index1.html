@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Marigold Grand Banquets</title>
+  <meta name="description" content="Plan your wedding, birthday or corporate event at Marigold Grand: everything included, four-step booking, on-site kitchens and clear answers to common questions.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+        <img src="assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+        <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" class="is-active" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/halls.html">Halls</a></li>
+          <li><a class="nav-link" href="pages/packages.html">Packages</a></li>
+          <li><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+        <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+        <a class="btn btn--sm header-signin" href="pages/signin.html">Sign In</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation (≤1024px) -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-panel" id="mobile-panel" aria-label="Mobile menu">
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav-list">
+        <li>
+          <button class="accordion-toggle is-active" type="button" aria-expanded="true" aria-controls="mobile-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="mobile-sub is-open" id="mobile-home">
+            <ul class="mobile-sub-list">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" class="is-active" aria-current="page">Home 2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="pages/halls.html">Halls</a></li>
+        <li><a href="pages/packages.html">Packages</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-tools">
+      <span class="label">Display options</span>
+      <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+      <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+    </div>
+    <a class="btn" href="pages/signin.html">Sign In</a>
+    <p class="mobile-contact">Events desk: <a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></p>
+  </aside>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero: split layout with arch-framed photo ===== -->
+    <section class="hero-split" aria-labelledby="hero-title">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Banquets · Lawn · Private dining</span>
+          <h1 id="hero-title">Plan less. Celebrate more.</h1>
+          <p class="lead">One booking covers your hall, menu, décor and a dedicated event manager, so the week before your event is spent with family, not chasing vendors.</p>
+          <div class="btn-row">
+            <a class="btn btn--lg" href="pages/contact.html#enquiry">Book a Date</a>
+            <a class="link-arrow" href="pages/signup.html">Create a client account <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="promise-list">
+            <div><strong>72 hrs</strong><span>free hold on your date</span></div>
+            <div><strong>3</strong><span>easy payment installments</span></div>
+            <div><strong>1</strong><span>event manager, start to finish</span></div>
+          </div>
+        </div>
+        <div class="arch-frame">
+          <div class="arch-img">
+            <img src="assets/images/hero-home2-floral-arch.jpg" alt="Archway of red and white roses leading into a decorated banquet hall with gold chairs" width="1000" height="1250" fetchpriority="high">
+          </div>
+          <div class="arch-badge">
+            <strong>Rose archway entrance</strong>
+            <span>Saffron Hall engagement, February 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Included as standard ===== -->
+    <section class="section section--alt" aria-labelledby="included-title">
+      <div class="container split">
+        <div class="included-media" data-reveal>
+          <img src="assets/images/included-stage.jpg" alt="White stage with arched backdrop and chandeliers, part of the standard décor in every hall" width="1000" height="1100" loading="lazy">
+        </div>
+        <div data-reveal>
+          <span class="eyebrow">Included as standard</span>
+          <h2 id="included-title">What every booking already includes</h2>
+          <p class="muted">Many venues quote low and add extras later. Our hall price covers the essentials below, whichever hall or package you choose.</p>
+          <ul class="check-list">
+            <li>Stage with basic backdrop and lighting</li>
+            <li>Round tables, chiavari chairs and linen</li>
+            <li>Two air-conditioned green rooms</li>
+            <li>Sound system with two cordless mics</li>
+            <li>Valet parking for three hours</li>
+            <li>An event manager and floor captain</li>
+            <li>Menu tasting for six people</li>
+            <li>A welcome drink for every guest</li>
+            <li>Housekeeping and washroom attendants</li>
+            <li>Generator backup, AC and CCTV security</li>
+            <li>Dressed cake and gift tables</li>
+            <li>Drinking-water stations in every hall</li>
+          </ul>
+          <p class="note-box">The only line we add to your quote is 18% GST. No service charge, no cleaning fee, no surprise "décor handling" costs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Booking process ===== -->
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">How booking works</span>
+          <h2 id="steps-title">From first call to final toast in four steps</h2>
+          <p>Most families finish the first three steps in a single weekend.</p>
+        </div>
+        <ol class="steps">
+          <li class="card step" data-reveal>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Walk the venue</h3>
+            <p>Drop in for a 30-minute site visit any day between 10 am and 7 pm. See the halls, check the parking and meet a manager.</p>
+            <span class="step-meta">⏱ 30 minutes</span>
+          </li>
+          <li class="card step" data-reveal>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Hold your date</h3>
+            <p>Like what you see? We pencil in your slot, free, while you talk it over with family. No deposit, no card details.</p>
+            <span class="step-meta">⏱ 72-hour hold</span>
+          </li>
+          <li class="card step" data-reveal>
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Taste the menu</h3>
+            <p>Bring up to six people to a sit-down tasting. Swap dishes, adjust spice levels and choose your live counters.</p>
+            <span class="step-meta">⏱ About 90 minutes</span>
+          </li>
+          <li class="card step" data-reveal>
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3>Confirm and relax</h3>
+            <p>Pay 25% to lock the date, then follow the remaining installments, add-ons and documents in your client dashboard.</p>
+            <span class="step-meta">⏱ 5 minutes online</span>
+          </li>
+        </ol>
+        <div class="steps-cta">
+          <a class="btn" href="pages/contact.html#enquiry">Book a Site Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Kitchen & chefs ===== -->
+    <section class="section section--alt" aria-labelledby="kitchen-title">
+      <div class="container split">
+        <div data-reveal>
+          <span class="eyebrow">Our kitchens</span>
+          <h2 id="kitchen-title">Cooked here, served within minutes</h2>
+          <p class="muted">Every plate is cooked on-site, not driven across the city in a van. Food leaves our kitchen less than 20 minutes before it reaches your buffet.</p>
+          <div class="fact-grid">
+            <div class="fact"><strong>240+</strong><span>dishes across six regional cuisines</span></div>
+            <div class="fact"><strong>2 kitchens</strong><span>pure-veg and non-veg, kept fully apart</span></div>
+            <div class="fact"><strong>20 min</strong><span>maximum time from stove to buffet</span></div>
+            <div class="fact"><strong>FSSAI</strong><span>licensed and audited every quarter</span></div>
+          </div>
+          <div class="chef-note">
+            <span class="avatar" aria-hidden="true">RB</span>
+            <p><strong>Chef Raghavendra Bhat</strong> leads a 34-member brigade and has cooked for weddings of up to 1,500 guests over 22 years.</p>
+          </div>
+          <p class="link-line"><a class="link-arrow" href="pages/packages.html#menus">See menus and per-plate prices <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="kitchen-media" data-reveal>
+          <img src="assets/images/kitchen-chefs.jpg" alt="Gloved chefs plating desserts in rows in the Marigold Grand kitchen" width="1000" height="750" loading="lazy">
+          <img src="assets/images/kitchen-thali.jpg" alt="Traditional thali with dal, vegetable curries, rice and pickles in steel bowls" width="800" height="800" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. FAQ ===== -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Questions, answered</span>
+          <h2 id="faq-title">What hosts usually ask before booking</h2>
+          <p>Straight answers on outside vendors, alcohol, timings and refunds.</p>
+        </div>
+        <div class="accordion">
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">Can we bring our own caterer?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p>No. All food is cooked in our kitchens so we can guarantee hygiene and timing. You're welcome to bring a wedding cake, sweets from your family's favourite shop, or a paan counter.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">Can we use our own decorator or photographer?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Yes. Outside vendors pay a one-time access fee of ₹15,000 and follow our setup rules: no nails or tape on walls, and open flames only in approved holders. The fee is waived for our listed partners.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">Is alcohol allowed?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>Yes, at dinner events in the Ballroom, Saffron Hall and Ember Room. You buy from a licensed retailer, we help you apply for the one-day excise licence, and our bar team serves for a flat ₹12,000 setup fee.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">What time does the music have to stop?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>Indoor halls can play until 11:30 pm. Music on Jasmine Lawn ends at 10 pm, in line with city rules for open-air venues, after which guests can move indoors if a hall is free.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">What happens if it rains on the lawn?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>From June to October we recommend our waterproof hanger. At any other time of year, if rain is forecast we move you into Saffron Hall at no extra cost, as long as it's free that day.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">Can we change the guest count after booking?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-6" role="region" aria-labelledby="faq-6-btn"><div><p>Yes, up to 7 days before the event. We bill on the higher of your final confirmed count or the hall's minimum plate guarantee.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="mb-0"><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-btn">What is your cancellation policy?<span class="acc-icon" aria-hidden="true">+</span></button></h3>
+            <div class="acc-panel" id="faq-7" role="region" aria-labelledby="faq-7-btn"><div><p>Cancel 90 or more days ahead for a full refund minus ₹10,000. Between 30 and 90 days, we refund 50% of what you've paid. Inside 30 days there's no refund, but you can move to another date within six months, once.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Next step: visit or sign in ===== -->
+    <section class="section section--alt" aria-labelledby="next-title">
+      <div class="container dual-cta">
+        <div class="cta-card cta-card--image" data-reveal>
+          <img src="assets/images/cta-string-lights.jpg" alt="Warm string lights glowing over the Jasmine Lawn at dusk" width="1920" height="900" loading="lazy">
+          <span class="eyebrow eyebrow--light">Visit us</span>
+          <h2 id="next-title">Come and see it lit up this week</h2>
+          <p>Visits after 6 pm show the halls with full lighting. Bring your decorator or family elders, there's no limit on numbers.</p>
+          <div class="btn-row"><a class="btn" href="pages/contact.html#enquiry">Book a Site Visit</a></div>
+        </div>
+        <div class="cta-card cta-card--plain" data-reveal>
+          <h3>Already booked with us?</h3>
+          <p>Your client account shows live hall availability, lets you add catering and décor, and tracks every installment.</p>
+          <ul class="mini-list">
+            <li>See your next payment and due date</li>
+            <li>Add a live counter or upgrade the stage</li>
+            <li>Get reminders before tastings and visits</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="pages/signin.html">Sign In</a>
+            <a class="link-arrow" href="pages/signup.html">New client? Sign Up <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+            <img src="assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+            <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+          </a>
+          <p>Five banquet halls, an open-air lawn and two in-house kitchens for celebrations of 15 to 900 guests on Sarjapur Road, Bengaluru.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="pages/halls.html">Halls</a></li>
+            <li><a href="pages/packages.html">Packages</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></li>
+            <li><a href="mailto:events@marigoldgrand.in">events@marigoldgrand.in</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul class="footer-links">
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Marigold Grand Banquets Pvt. Ltd. All rights reserved.</p>
+        <p>14 Sarjapur Main Road, Kaikondrahalli, Bengaluru 560035</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

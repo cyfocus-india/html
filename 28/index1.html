@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Aisle &amp; Aperture</title>
+  <meta name="description" content="Meet the Aisle &amp; Aperture crew: how we work, where we shoot and answers to the questions couples ask before booking a wedding photographer in Jaipur.">
+  <meta name="theme-color" content="#a8385f">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <!-- Apply the saved theme and direction before the first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("aa-theme"), r = localStorage.getItem("aa-dir");
+        if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        if (r === "rtl" || r === "ltr") d.setAttribute("dir", r);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+        <img src="assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" width="46" height="46">
+        <span class="brand-text">
+          <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+          <span class="brand-tag">Wedding Films &amp; Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-panel" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li class="has-dropdown is-current">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+              <ul class="dropdown" id="home-menu">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="index1.html" aria-current="page">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/packages.html">Packages</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">&#x263E;</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-pressed="false" aria-label="Switch to right-to-left layout"><span class="icon" aria-hidden="true">&#x21C4;</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm" href="pages/contact.html">Check Your Date</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+  <!-- ============ 1. Hero: editorial split with arch collage ============ -->
+  <section class="hero-editorial glow" aria-labelledby="hero2-title">
+    <div class="container hero-editorial__grid">
+      <div class="hero-editorial__text">
+        <p class="eyebrow">Est. 2015 · A Jaipur studio</p>
+        <h1 id="hero2-title">Quiet storytellers for <em>loud, joyful</em> weddings.</h1>
+        <p class="lead">We're a fourteen-person team of photographers, filmmakers and editors who have spent eleven years learning when to step in — and when to disappear.</p>
+        <div class="btn-row">
+          <a class="btn" href="pages/contact.html?type=call">Book a Discovery Call</a>
+          <a class="link-arrow" href="#crew">Meet the crew <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="languages">
+          <p class="field-label">Our crews speak your family's language</p>
+          <ul class="chip-list">
+            <li class="chip glass">Hindi</li>
+            <li class="chip glass">English</li>
+            <li class="chip glass">Marwari</li>
+            <li class="chip glass">Punjabi</li>
+            <li class="chip glass">Bengali</li>
+            <li class="chip glass">Tamil</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collage">
+        <img class="collage__a" src="assets/images/home2-hero-couple-embrace.jpg" alt="Groom embracing his smiling bride, who wears a red dupatta and heirloom gold jewellery" width="1000" height="1500">
+        <img class="collage__b" src="assets/images/home2-hero-varmala.jpg" alt="Newlyweds in rose and jasmine varmalas, the bride resting her head on the groom's shoulder" width="900" height="1348">
+        <img class="collage__c" src="assets/images/home2-hero-mehndi-hands.jpg" alt="A bride holding out both palms covered in intricate bridal mehndi" width="800" height="1200">
+        <div class="collage__badge glass glass--strong">
+          <p>Next open dates</p>
+          <ul>
+            <li>22 Nov 2026</li>
+            <li>6 Dec 2026</li>
+            <li>18 Jan 2027</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. Our story ============ -->
+  <section class="section section--alt" aria-labelledby="story-title">
+    <div class="container story">
+      <figure class="story__media reveal">
+        <img src="assets/images/home2-founder-rhea.jpg" alt="Co-founder Rhea Mathur photographing the carved arches of a heritage palace hallway" loading="lazy" width="900" height="1200">
+        <figcaption class="glass glass--dark">Rhea scouting light at a heritage venue, two days before a wedding.</figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">Our story</p>
+        <h2 id="story-title">It began with one borrowed camera at <em>a cousin's sangeet</em></h2>
+        <p>In 2015 Rhea Mathur was the cousin with the camera and Dev Shekhawat was the friend filming on his phone. Their footage of that sangeet travelled further than the hired crew's — and a studio was born in a spare room in Malviya Nagar.</p>
+        <p>Today we work from a light-filled studio in C-Scheme, but the rule from that first night hasn't changed: film the people, not the décor.</p>
+
+        <ul class="values">
+          <li class="glass"><strong>80 / 20</strong><span>Eighty percent observed, twenty percent gently guided.</span></li>
+          <li class="glass"><strong>4–7</strong><span>Crew per event — enough to cover it all, few enough to blend in.</span></li>
+          <li class="glass"><strong>1 founder</strong><span>Rhea or Dev personally leads every wedding we book.</span></li>
+        </ul>
+
+        <p class="signature">— Rhea &amp; Dev</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. How it works ============ -->
+  <section class="section glow" aria-labelledby="process-title">
+    <div class="container process">
+      <div class="process__intro">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-title">From first hello to <em>the final album</em></h2>
+        <p class="lead">Five steps, no surprises. Most couples go from enquiry to a confirmed crew in under a week.</p>
+        <img class="process__img reveal" src="assets/images/home2-process-viewfinder.jpg" alt="A photographer's hand on a camera whose screen shows a bride and groom mid-embrace" loading="lazy" width="900" height="1200">
+      </div>
+
+      <ol class="steps">
+        <li class="step glass reveal">
+          <span class="step__num" aria-hidden="true">01</span>
+          <div>
+            <h3>Enquire</h3>
+            <p class="step__when">Day 0</p>
+            <p>Share your date, city and events. We reply with availability and a quote built around your actual schedule — not a generic rate card.</p>
+          </div>
+        </li>
+        <li class="step glass reveal">
+          <span class="step__num" aria-hidden="true">02</span>
+          <div>
+            <h3>Discovery call</h3>
+            <p class="step__when">Week 1</p>
+            <p>A 30-minute video call with your lead photographer. We learn the families, the rituals and the moments you'd never forgive us for missing.</p>
+          </div>
+        </li>
+        <li class="step glass reveal">
+          <span class="step__num" aria-hidden="true">03</span>
+          <div>
+            <h3>Block your date</h3>
+            <p class="step__when">Within 7 days</p>
+            <p>Sign the agreement and pay the retainer. Your crew is locked in, and the date disappears from our calendar for everyone else.</p>
+          </div>
+        </li>
+        <li class="step glass reveal">
+          <span class="step__num" aria-hidden="true">04</span>
+          <div>
+            <h3>Plan together</h3>
+            <p class="step__when">6–8 weeks before</p>
+            <p>A shared timeline, a family shot list and a venue recce. If you've booked a pre-wedding shoot, it happens in this window.</p>
+          </div>
+        </li>
+        <li class="step glass reveal">
+          <span class="step__num" aria-hidden="true">05</span>
+          <div>
+            <h3>The wedding &amp; after</h3>
+            <p class="step__when">The big days onward</p>
+            <p>We coordinate directly with your planner on the day. Galleries, films and album proofs then follow on the dates written into your contract.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 4. Destinations ============ -->
+  <section class="section section--alt" aria-labelledby="dest-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Destinations</p>
+        <h2 id="dest-title">Where we've called <em>“action”</em> most often</h2>
+        <p class="lead">Jaipur is home, but more than half our weddings happen somewhere else. Six favourites — and what we love about filming in each.</p>
+      </header>
+
+      <div class="grid-3">
+        <article class="dest reveal">
+          <img src="assets/images/dest-udaipur.jpg" alt="Udaipur's Lake Palace glowing at sunset on Lake Pichola" loading="lazy" width="900" height="1350">
+          <div class="dest__body glass glass--dark">
+            <h3>Udaipur</h3>
+            <p class="dest__count">46 weddings</p>
+            <p>Lake-facing palace ceremonies; we film boat entries from the water and the air.</p>
+          </div>
+        </article>
+        <article class="dest reveal">
+          <img src="assets/images/dest-jaipur.jpg" alt="Aerial view of Amber Fort and Maota Lake in the hills outside Jaipur" loading="lazy" width="900" height="506">
+          <div class="dest__body glass glass--dark">
+            <h3>Jaipur</h3>
+            <p class="dest__count">128 weddings</p>
+            <p>Our home turf — havelis, fort lawns and the old-city lanes we know by heart.</p>
+          </div>
+        </article>
+        <article class="dest reveal">
+          <img src="assets/images/dest-jodhpur.jpg" alt="The blue houses of Jodhpur seen from a rooftop at sunset" loading="lazy" width="900" height="1125">
+          <div class="dest__body glass glass--dark">
+            <h3>Jodhpur</h3>
+            <p class="dest__count">31 weddings</p>
+            <p>Blue-city portraits at golden hour and sangeets under the walls of Mehrangarh.</p>
+          </div>
+        </article>
+        <article class="dest reveal">
+          <img src="assets/images/dest-goa.jpg" alt="Palm trees silhouetted against an orange sunset over a Goa beach" loading="lazy" width="900" height="674">
+          <div class="dest__body glass glass--dark">
+            <h3>Goa</h3>
+            <p class="dest__count">27 weddings</p>
+            <p>Beach pheras timed to sunset, with wind-shielded microphones so vows stay clear.</p>
+          </div>
+        </article>
+        <article class="dest reveal">
+          <img src="assets/images/dest-kerala.jpg" alt="A traditional houseboat gliding past water lilies on the Kerala backwaters" loading="lazy" width="900" height="600">
+          <div class="dest__body glass glass--dark">
+            <h3>Kerala</h3>
+            <p class="dest__count">18 weddings</p>
+            <p>Temple mornings in Guruvayur and receptions drifting along the backwaters.</p>
+          </div>
+        </article>
+        <article class="dest reveal">
+          <img src="assets/images/dest-rishikesh.jpg" alt="The Ganga flowing beneath a suspension bridge in Rishikesh, with misty hills behind" loading="lazy" width="900" height="675">
+          <div class="dest__body glass glass--dark">
+            <h3>Rishikesh</h3>
+            <p class="dest__count">12 weddings</p>
+            <p>Riverside vows, Ganga aarti sessions and mountain light that needs no filter.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. The crew ============ -->
+  <section class="section glow glow--alt" id="crew" aria-labelledby="crew-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">The crew</p>
+        <h2 id="crew-title">The people <em>behind the lenses</em></h2>
+        <p class="lead">Four of the fourteen faces you'll meet. Each wedding is led by someone from this group.</p>
+      </header>
+
+      <div class="grid-4">
+        <article class="member glass reveal">
+          <img src="assets/images/team-dev.jpg" alt="Portrait of Dev Shekhawat holding a camera against a dark studio backdrop" loading="lazy" width="700" height="467">
+          <div class="member__body">
+            <h3>Dev Shekhawat</h3>
+            <p class="member__role">Co-founder · Lead cinematographer</p>
+            <p>Believes every wedding film needs one long, unbroken take — usually the baraat.</p>
+          </div>
+        </article>
+        <article class="member glass reveal">
+          <img src="assets/images/team-ananya.jpg" alt="Portrait of Ananya Rao with two cameras slung over her shoulders at a wedding venue" loading="lazy" width="700" height="1050">
+          <div class="member__body">
+            <h3>Ananya Rao</h3>
+            <p class="member__role">Lead candid photographer</p>
+            <p>A former photojournalist with a gift for finding the grandmother in every crowd.</p>
+          </div>
+        </article>
+        <article class="member glass reveal">
+          <img src="assets/images/team-kabir.jpg" alt="Portrait of Kabir Malhotra holding a camera in a dimly lit doorway" loading="lazy" width="700" height="467" style="object-position: left center;">
+          <div class="member__body">
+            <h3>Kabir Malhotra</h3>
+            <p class="member__role">Drone pilot · Second shooter</p>
+            <p>Six hundred hours flown over forts, lakes and beaches — without a single missed shot list.</p>
+          </div>
+        </article>
+        <article class="member glass reveal">
+          <img src="assets/images/team-tanvi.jpg" alt="Portrait of Tanvi Joshi holding a camera up beside her face" loading="lazy" width="700" height="980">
+          <div class="member__body">
+            <h3>Tanvi Joshi</h3>
+            <p class="member__role">Colourist · Film editor</p>
+            <p>Grades every film by hand and keeps skin tones true under yellow haldi light.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. FAQ + discovery call ============ -->
+  <section class="section section--alt" aria-labelledby="faq-title">
+    <div class="container faq-cta">
+      <div>
+        <p class="eyebrow">Before you book</p>
+        <h2 id="faq-title">Questions couples ask <em>us first</em></h2>
+
+        <div class="faq">
+          <details>
+            <summary>How far in advance should we book?</summary>
+            <p>Peak-season dates between November and February usually go 9–12 months ahead. Weekday and off-season weddings can often be booked with 8–10 weeks' notice.</p>
+          </details>
+          <details>
+            <summary>Can we choose the music for our films?</summary>
+            <p>Yes. We license tracks from professional music libraries and you can shortlist from them. Popular Bollywood songs can be used for private viewing, but platforms may mute them if you post publicly.</p>
+          </details>
+          <details>
+            <summary>How many photographs will we receive?</summary>
+            <p>Roughly 300–400 edited photographs per event, depending on its length and guest count. We never pad galleries with near-identical frames.</p>
+          </details>
+          <details>
+            <summary>What do you need from us on the day?</summary>
+            <p>A meal break for the crew, one point person from each family, and twenty minutes alone with the two of you at golden hour. That's it.</p>
+          </details>
+          <details>
+            <summary>Can our wedding planner coordinate with you directly?</summary>
+            <p>Please let them. We share our timeline and crew list with planners a month ahead and join their final run-through call.</p>
+          </details>
+        </div>
+      </div>
+
+      <aside class="cta-card glass reveal" aria-labelledby="call-title">
+        <p class="eyebrow">Free · 20 minutes</p>
+        <h3 id="call-title">Book a discovery call</h3>
+        <p class="muted">Pick a slot from Tuesday to Saturday. We'll walk you through two complete wedding galleries — not just the highlights — and answer everything on your list.</p>
+        <ul class="ticks">
+          <li>Video or phone, your choice</li>
+          <li>Parents are welcome to join</li>
+          <li>No obligation to book</li>
+        </ul>
+        <a class="btn btn--block" href="pages/contact.html?type=call">Book a Discovery Call</a>
+      </aside>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ Footer (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+          <img src="assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" loading="lazy" width="46" height="46">
+          <span class="brand-text">
+            <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+            <span class="brand-tag">Wedding Films &amp; Photography</span>
+          </span>
+        </a>
+        <p>Candid wedding photography and cinematic films from a Jaipur studio, for couples marrying anywhere in India.</p>
+      </div>
+
+      <nav aria-labelledby="footer-home">
+        <h2 class="footer-heading" id="footer-home">Home</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html" aria-current="page">Home 2</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-studio">
+        <h2 class="footer-heading" id="footer-studio">Studio</h2>
+        <ul class="footer-links">
+          <li><a href="pages/portfolio.html">Portfolio</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-plan">
+        <h2 class="footer-heading" id="footer-plan">Plan</h2>
+        <ul class="footer-links">
+          <li><a href="pages/packages.html">Packages</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-reach">
+        <h2 class="footer-heading">Visit &amp; call</h2>
+        <address class="footer-contact">
+          <span>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur 302001</span>
+          <a href="tel:+919829047215">+91 98290 47215</a>
+          <a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a>
+          <span>Tue–Sat 10:30–19:00 · Sun 11:00–16:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aisle &amp; Aperture Studio LLP. All rights reserved.</p>
+      <p>Photographed, filmed and edited in Jaipur, Rajasthan.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offers - Scoop & Swirl</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       Site Header (Sticky Navigation)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+        <span class="logo-text">
+          <span class="logo-title">Scoop & Swirl</span>
+          <span class="logo-tagline">Artisan Parlour</span>
+        </span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Wrapper -->
+      <div class="nav-menu-wrapper" id="navDrawer">
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <!-- Home Dropdown (Accordion on Mobile) -->
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Home <span class="dropdown-arrow">▾</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="../index.html" class="dropdown-item">Home 1</a></li>
+                <li><a href="../index1.html" class="dropdown-item">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="offers.html" class="nav-link active">Offers</a></li>
+            <li class="nav-item"><a href="party-orders.html" class="nav-link">Party Orders</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Drawer Bottom Controls for Mobile Screens -->
+        <div class="mobile-drawer-bottom">
+          <div class="mobile-controls-row">
+            <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+          </div>
+          <a href="menu.html" class="btn btn-primary">Order Online</a>
+        </div>
+      </div>
+
+      <!-- Header Desktop Controls -->
+      <div class="header-actions">
+        <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+        <a href="menu.html" class="btn btn-primary">Order Online</a>
+        <!-- CSS Animated Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Background Overlay -->
+  <div class="mobile-nav-overlay" id="navOverlay"></div>
+
+  <!-- ======================================================================
+       Page Hero Section (with Hero Image)
+       ====================================================================== -->
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div>
+        <span class="section-tag">Sweet Savings</span>
+        <h1 class="hero-title" style="font-size: 2.85rem;">
+          Parlour Specials &amp; <span class="hero-title-highlight">Exclusive Offers</span>
+        </h1>
+        <p class="hero-lead">
+          Enjoy recurring weekly discounts, bundled take-home dessert kits for family movie nights, and earn sweet rewards every time you visit with our Scoop Club.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#weekly-specials" class="btn btn-primary">Weekly Deals</a>
+          <a href="#take-home-kits" class="btn btn-secondary">Take-Home Kits</a>
+        </div>
+      </div>
+      <div class="page-hero-image">
+        <img src="../assets/images/hero-offers.jpg" alt="Bowl of colorful ice cream scoops with rainbow sprinkles" width="600" height="340">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 1: Weekly Special Days Calendar Grid
+       ====================================================================== -->
+  <section class="section" id="weekly-specials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Daily Perks</span>
+        <h2 class="section-title">Recurring Weekly Specials</h2>
+        <p class="section-subtitle">
+          There is always a sweet reason to visit our parlour. Check out our scheduled daily promos valid for both in-parlour dining and pickup counter orders.
+        </p>
+      </div>
+
+      <div class="grid grid-4">
+        <!-- Deal 1 -->
+        <div class="card offer-deal-card">
+          <span class="deal-day-tag">Every Monday</span>
+          <h3 class="offer-deal-title">Mini-Scoop Madness</h3>
+          <p class="offer-deal-desc">
+            Order any double scoop cup or cone and receive a complimentary single junior scoop of any seasonal flavour for free.
+          </p>
+          <div class="offer-deal-footer">
+            <span class="badge badge-primary">Save $4.50</span>
+            <span class="deal-time-label">⏱ All Day Monday</span>
+          </div>
+        </div>
+
+        <!-- Deal 2 -->
+        <div class="card offer-deal-card">
+          <span class="deal-day-tag">Every Wednesday</span>
+          <h3 class="offer-deal-title">Waffle Wednesday</h3>
+          <p class="offer-deal-desc">
+            Upgrade any single, double, or triple scoop order to a fresh cast-iron baked artisan waffle cone or chocolate dipped cone at no extra charge.
+          </p>
+          <div class="offer-deal-footer">
+            <span class="badge badge-amber">Free Cone Upgrade</span>
+            <span class="deal-time-label">⏱ All Day Wednesday</span>
+          </div>
+        </div>
+
+        <!-- Deal 3 -->
+        <div class="card offer-deal-card">
+          <span class="deal-day-tag">Thu – Sat After 9 PM</span>
+          <h3 class="offer-deal-title">Late-Night Shake Hour</h3>
+          <p class="offer-deal-desc">
+            Craving a midnight treat? All 16 oz hand-spun thick milkshakes and float creations are just $6.00 flat from 9:00 PM until closing.
+          </p>
+          <div class="offer-deal-footer">
+            <span class="badge badge-mint">$6 Flat Rate</span>
+            <span class="deal-time-label">⏱ 9:00 PM – 11:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Deal 4 -->
+        <div class="card offer-deal-card">
+          <span class="deal-day-tag">Every Sunday</span>
+          <h3 class="offer-deal-title">Sundae Family Day</h3>
+          <p class="offer-deal-desc">
+            Celebrate family weekend traditions with 20% off all specialty tabletop sundaes, including our famous Brownie Avalanche and Banana Split Royale.
+          </p>
+          <div class="offer-deal-footer">
+            <span class="badge badge-primary">20% Off Sundaes</span>
+            <span class="deal-time-label">⏱ All Day Sunday</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 2: Family & Party Take-Home Bundles
+       ====================================================================== -->
+  <section class="section section-alt" id="take-home-kits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value Bundles</span>
+        <h2 class="section-title">Take-Home Dessert Kits</h2>
+        <p class="section-subtitle">
+          Bring the full parlour experience straight to your living room. Packed in reusable insulated carry bags with everything you need.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <!-- Kit 1 -->
+        <div class="card bundle-kit-card">
+          <div class="bundle-kit-img">
+            <img src="../assets/images/offer-family-kit.jpg" alt="Sundae party cups loaded with sauces and toppings" width="350" height="220">
+          </div>
+          <div>
+            <span class="badge badge-primary" style="margin-bottom: 0.5rem;">Most Popular Kit</span>
+            <h3 style="font-size: 1.45rem; font-weight: 800; margin-bottom: 0.5rem;">The Sundae Night-In Kit</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Includes 2 hand-packed pints of your choice, 4 fresh waffle cones, 3 squeeze bottles of warm sauces (Hot Fudge, Salted Caramel, Strawberry Coulis), 4 crunch toppings, and rainbow sprinkles.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+              <div>
+                <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.9rem;">$45.00</span>
+                <span class="flavor-price" style="font-size: 1.45rem; margin-left: 0.5rem;">$34.00</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="kit-sundae-night" data-name="The Sundae Night-In Kit" data-price="34.00" data-category="kit">+ Order Kit</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kit 2 -->
+        <div class="card bundle-kit-card">
+          <div class="bundle-kit-img">
+            <img src="../assets/images/offer-waffle.jpg" alt="Fresh waffle cones filled with assorted ice cream flavors" width="350" height="220">
+          </div>
+          <div>
+            <span class="badge badge-amber" style="margin-bottom: 0.5rem;">Freezer Saver</span>
+            <h3 style="font-size: 1.45rem; font-weight: 800; margin-bottom: 0.5rem;">The 4-Pint Freezer Stash</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Choose any 4 signature or seasonal pints. Includes a complimentary heavy-duty zippered thermal freezer tote that keeps pints frozen for up to 2 hours of travel.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+              <div>
+                <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.9rem;">$48.00</span>
+                <span class="flavor-price" style="font-size: 1.45rem; margin-left: 0.5rem;">$38.00</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="kit-pints-stash" data-name="The 4-Pint Freezer Stash" data-price="38.00" data-category="kit">+ Order Kit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 3: Scoop Club Loyalty Program
+       ====================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Rewards Program</span>
+        <h2 class="section-title">Join The Scoop Club</h2>
+        <p class="section-subtitle">
+          Earn 1 point for every $1 spent at our parlour counter. No physical plastic card required — simply type your phone number at checkout.
+        </p>
+      </div>
+
+      <div class="loyalty-tiers-grid">
+        <div class="card loyalty-tier-card">
+          <div class="loyalty-pts-badge">50 Points</div>
+          <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Free Topping or Cone</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Redeem for any fresh waffle cone upgrade, espresso shot, or warm ganache drizzle.
+          </p>
+        </div>
+
+        <div class="card loyalty-tier-card">
+          <div class="loyalty-pts-badge">100 Points</div>
+          <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Free Double Scoop</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Redeem for any double scoop cup, cone, or a standard 16 oz hand-spun milkshake.
+          </p>
+        </div>
+
+        <div class="card loyalty-tier-card">
+          <div class="loyalty-pts-badge">200 Points</div>
+          <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Free Hand-Packed Pint</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Take home any 16 oz artisan pint tub of your choice, or enjoy a table specialty sundae.
+          </p>
+        </div>
+
+        <div class="card loyalty-tier-card" style="border: 2px solid var(--primary);">
+          <div class="loyalty-pts-badge" style="background-color: var(--primary-light); color: var(--primary);">Birthday Perk</div>
+          <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Birthday Sundae Free</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Celebrate your special day with a complimentary celebratory birthday sundae on the house.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 4: Community Discounts & Offer FAQ
+       ====================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Community &amp; Details</span>
+        <h2 class="section-title">Community Discounts &amp; Conditions</h2>
+        <p class="section-subtitle">
+          We proudly support local students, seniors, healthcare workers, teachers, and first responders with everyday perks.
+        </p>
+      </div>
+
+      <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.25rem;">
+            15% Off Everyday for Students, Seniors &amp; First Responders
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.925rem;">
+            Available Monday through Friday between 2:00 PM and 5:00 PM upon presenting a valid student ID, senior transit card, or service badge.
+          </p>
+        </div>
+        <span class="badge badge-mint" style="font-size: 0.9rem; padding: 0.5rem 1rem;">15% Off Weekdays</span>
+      </div>
+
+      <!-- FAQ Accordion for Offers -->
+      <div class="faq-accordion" style="max-width: 800px; margin: 0 auto;">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Can I combine Scoop Club points with weekly promo days?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            You will always earn Scoop Club reward points on the dollars spent during promo days. However, reward redemptions (such as free scoops or pints) cannot be stacked with percentage-off promotional discounts on the same item.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Do take-home dessert kits require advance pre-ordering?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            Our parlour keeps a regular supply of Sundae Night-In Kits and 4-Pint Stashes in stock at both locations for walk-in pickup. For orders of 5 or more kits, we recommend calling at least 3 hours ahead to ensure your requested flavors are packed.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Can I use parlour offers when ordering through third-party delivery apps?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            Weekly specials such as Mini-Scoop Madness, Waffle Wednesday, and Late-Night Shake Hour are exclusive to in-parlour walk-in visits and direct counter pickups. Delivery apps run their own periodic promotions independently.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 5: Final Next-Step CTA Banner
+       ====================================================================== -->
+  <div class="container">
+    <section class="cta-banner">
+      <h2 class="cta-banner-title">Claim Your First Sweet Perk Today</h2>
+      <p class="cta-banner-desc">
+        Stop by either of our two convenient parlour locations or order online to start earning rewards right away.
+      </p>
+      <div class="cta-banner-actions">
+        <a href="menu.html" class="btn btn-primary btn-lg">Browse Menu &amp; Order</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">View Parlour Locations</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================================
+       Site Footer (Identical Across All Pages)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="../index.html" class="site-logo">
+            <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+            <span class="logo-text">
+              <span class="logo-title">Scoop & Swirl</span>
+              <span class="logo-tagline">Artisan Parlour</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Handcrafted small-batch ice creams, towering waffle sundaes, thick shakes, and celebration gelato cakes made fresh daily.
+          </p>
+        </div>
+
+        <!-- Links Group 1: Home -->
+        <div>
+          <h4 class="footer-group-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 2: Parlour -->
+        <div>
+          <h4 class="footer-group-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="offers.html" class="footer-link">Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 3: Orders -->
+        <div>
+          <h4 class="footer-group-title">Orders</h4>
+          <ul class="footer-links-list">
+            <li><a href="party-orders.html" class="footer-link">Party Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Scoop &amp; Swirl Parlour. All rights reserved.
+        </div>
+        <div>
+          Hours: Monday – Sunday: 11:00 AM – 11:00 PM
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

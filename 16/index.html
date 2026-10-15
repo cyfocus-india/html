@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Strand &amp; Steel</title>
+  <meta name="description" content="Strand &amp; Steel is a Southeast Portland hair salon and barbershop for skin fades, precision bobs, lived-in balayage and curl cuts.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="index.html" aria-current="page">Home 1</a></li>
+              <li><a class="dropdown-link" href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero: full-bleed editorial photo ===== -->
+    <section class="hero-full" aria-labelledby="hero-title">
+      <img class="hero-bg" src="assets/images/home1-hero-undercut-fade.jpg" alt="Barber detailing a disconnected undercut with clippers on a bearded client in a brick-walled shop" width="1800" height="1200">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Hair salon &amp; barbershop · Southeast Portland</p>
+          <h1 id="hero-title">Sharp fades, soft color and a chair that feels like yours.</h1>
+          <p class="lead">Precision cutting, hand-painted color and straight-razor finishes from a team that asks how you actually wear your hair before anyone picks up the shears.</p>
+          <div class="btn-row">
+            <a class="btn" href="pages/contact.html#booking">Book Now</a>
+            <a class="text-link text-link--light" href="#signature">Explore signature cuts <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Signature cuts & styles ===== -->
+    <section class="section" id="signature" aria-labelledby="signature-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Signature cuts &amp; styles</p>
+          <h2 id="signature-title">The looks our chairs are known for</h2>
+          <p class="lead">Six cuts we do every single day — each shaped to your texture, your growth patterns and the time you really give your hair in the morning.</p>
+        </div>
+
+        <div class="looks-grid">
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-skin-fade.jpg" alt="Side profile of a man with a high skin fade blended into a swept-back top and a full beard" width="720" height="960" loading="lazy">
+            <div class="look-body">
+              <h3>Skin Fade</h3>
+              <p>Bare at the sides, blended by hand into whatever length you keep on top. Crisp from every angle, including the back of your head.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Thick or coarse hair</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 2–3 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-textured-quiff.jpg" alt="Man with a voluminous textured quiff, tapered sides and a groomed beard" width="720" height="1099" loading="lazy">
+            <div class="look-body">
+              <h3>Textured Quiff</h3>
+              <p>Point-cut length up top over a soft taper, styled forward and up so the lift lasts from the morning commute to dinner.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Medium to thick hair</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 4 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-precision-bob.jpg" alt="Woman with a glossy jaw-length black bob, blunt bangs and round glasses" width="720" height="1080" loading="lazy">
+            <div class="look-body">
+              <h3>Precision Bob</h3>
+              <p>A blunt, jaw-skimming line, cut dry for accuracy, with bangs tailored to your brow line and your frames.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Straight, fine-to-medium hair</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 6 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-curtain-bang-shag.jpg" alt="Profile of a woman with a feathered blonde shag and soft curtain bangs" width="720" height="1080" loading="lazy">
+            <div class="look-body">
+              <h3>Curtain-Bang Shag</h3>
+              <p>Soft, piecey layers and face-framing bangs that grow out gracefully — air-dry friendly, no round brush required.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Wavy or fine hair</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 8 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-lived-in-balayage.jpg" alt="Long dark brown hair with hand-painted caramel balayage falling in loose waves" width="720" height="1080" loading="lazy">
+            <div class="look-body">
+              <h3>Lived-in Balayage</h3>
+              <p>Hand-painted brightness that melts into your natural root, so the grow-out looks intentional instead of overdue.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Any length past the chin</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 12–16 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card look-card" data-reveal>
+            <img src="assets/images/cut-curl-shape.jpg" alt="Laughing woman with a full, rounded shape of defined blonde curls" width="720" height="1080" loading="lazy">
+            <div class="look-body">
+              <h3>Curl Shape</h3>
+              <p>Cut dry, curl by curl, to build a rounded shape that springs instead of puffs — and keeps its form between visits.</p>
+              <dl class="meta-list">
+                <div><dt>Best for</dt><dd>Curly and coily textures</dd></div>
+                <div><dt>Upkeep</dt><dd>Every 10–12 weeks</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Why clients stay ===== -->
+    <section class="section section--alt" aria-labelledby="why-title">
+      <div class="container reasons">
+        <div class="reasons-intro" data-reveal>
+          <p class="eyebrow">Why clients stay</p>
+          <h2 id="why-title">Small habits that make a big difference</h2>
+          <p class="lead">We would rather earn your second visit than rush your first. These are the promises every chair keeps, on both sides of the shop.</p>
+        </div>
+
+        <div class="reason-grid">
+          <article class="card reason" data-reveal>
+            <span class="icon-disc" aria-hidden="true">✂&#xFE0E;</span>
+            <h3>Consult before the cape</h3>
+            <p>Every first visit starts with ten unhurried minutes at the mirror: your hair history, your routine and the photos you saved.</p>
+          </article>
+          <article class="card reason" data-reveal>
+            <span class="icon-disc" aria-hidden="true">◎</span>
+            <h3>Cut for your texture</h3>
+            <p>Each stylist trains in dry curl cutting and precision wet cutting, so straight, wavy, curly and coily hair are all home turf.</p>
+          </article>
+          <article class="card reason" data-reveal>
+            <span class="icon-disc" aria-hidden="true">↺</span>
+            <h3>The 7-day fix</h3>
+            <p>Lived with it for a few days and something feels off? Come back within a week and we'll adjust it, free of charge.</p>
+          </article>
+          <article class="card reason" data-reveal>
+            <span class="icon-disc" aria-hidden="true">◷</span>
+            <h3>We run on time</h3>
+            <p>Appointments are booked with real buffer time. If we keep you waiting more than 15 minutes, your next add-on is on us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. The visit, step by step ===== -->
+    <section class="section visit" aria-labelledby="visit-title">
+      <div class="container split">
+        <div class="media-frame" data-reveal>
+          <img src="assets/images/home1-visit-consultation.jpg" alt="Stylist talking with a client at a styling chair in a bright, plant-filled salon" width="900" height="1350" loading="lazy">
+        </div>
+        <div data-reveal>
+          <p class="eyebrow">Your first visit</p>
+          <h2 id="visit-title">From hello to the final mirror check</h2>
+          <p class="lead">No guesswork and no surprises — here is exactly how an appointment unfolds.</p>
+          <ol class="steps">
+            <li>
+              <div>
+                <h3>Book in two minutes</h3>
+                <p>Pick a service, a professional (or "no preference") and a time that suits you.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Talk it through</h3>
+                <p>We look at your hair dry, ask how you style it, and agree on length, shape and upkeep before anything is cut.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Wash, cut, color</h3>
+                <p>A scalp-massage shampoo, then the work itself — with check-ins along the way, not a big reveal.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Finish and plan</h3>
+                <p>We style it the way you will at home, show you the one or two products that matter, and note when to come back.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Client reviews ===== -->
+    <section class="section section--alt" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Client reviews</p>
+          <h2 id="reviews-title">Heard at the front desk</h2>
+          <p class="lead">We ask every client how we did once the cape comes off. Here's what a few regulars from both sides of the shop told us.</p>
+        </div>
+
+        <div class="review-grid">
+          <figure class="card review review--featured" data-reveal>
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
+            <blockquote>
+              <p>I've had curly hair for thirty-four years, and this is the first cut I haven't gone home and fixed. Elena cut it dry, curl by curl, and explained every step. Three months on, it still holds its shape.</p>
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">PN</span>
+              <span><span class="review-name">Priya N.</span><span class="review-service">Curl shape with Elena</span></span>
+            </figcaption>
+          </figure>
+
+          <div class="card review-summary" data-reveal>
+            <p class="review-score"><span data-count="4.9">4.9</span><small>/ 5</small></p>
+            <p class="stars" role="img" aria-label="Average rating 4.9 out of 5">★★★★★</p>
+            <p class="review-summary-text">Average from 640+ client reviews since we opened in 2015.</p>
+            <dl class="review-stats">
+              <div><dt>Rebook before leaving</dt><dd>8 in 10</dd></div>
+              <div><dt>Cuts needing the 7-day fix</dt><dd>Under 2%</dd></div>
+            </dl>
+          </div>
+
+          <figure class="card review" data-reveal>
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
+            <blockquote>
+              <p>Walked in on a Tuesday lunch break and was back at my desk in forty minutes with the cleanest fade I've ever had. Mateo even tamed the crown my last barber gave up on.</p>
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">MT</span>
+              <span><span class="review-name">Marcus T.</span><span class="review-service">Skin fade with Mateo</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card review" data-reveal>
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
+            <blockquote>
+              <p>Four months of grow-out and my balayage still looks deliberate. Hannah saved my formula, so my second appointment took half the time.</p>
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">JR</span>
+              <span><span class="review-name">Jenna R.</span><span class="review-service">Lived-in balayage with Hannah</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card review" data-reveal>
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
+            <blockquote>
+              <p>The hot-towel shave is the best forty minutes of my month. I brought my whole groom's crew to Dorian before the wedding, and every one of them has been back since.</p>
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">SO</span>
+              <span><span class="review-name">Sam O.</span><span class="review-service">Hot-towel shave with Dorian</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Next step ===== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <h2 id="cta-title">Your next favorite haircut is one booking away.</h2>
+            <p>Choose a time that works for you — we'll handle the rest, right down to the final mirror check.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="pages/contact.html#booking">Book Now</a>
+            <a class="text-link" href="tel:+15035550143">Call <span dir="ltr">(503) 555-0143</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

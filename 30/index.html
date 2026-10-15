@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Beadwell Wash &amp; Detail: hand-wash bays in Denver with pH-neutral snow foam, spot-free rinse and online slot booking.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html" aria-current="page">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="index1.html">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="pages/pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="pages/about.html">About</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Hero: full-bleed wash bay + bay board ===== -->
+    <section class="hero-wash" aria-labelledby="hero-title">
+      <figure class="hero-media">
+        <img src="assets/images/hero-home1-foam-bay.webp" alt="Dark sedan covered in thick snow foam inside a wash bay, lit by warm overhead lamps" width="1920" height="1280" fetchpriority="high">
+      </figure>
+      <div class="container hero-wash-grid">
+        <div>
+          <p class="eyebrow">Hand-wash bays &middot; Foundry St, Denver</p>
+          <h1 id="hero-title">Drive in dusty. Roll out beading.</h1>
+          <p class="lead">Three hand-wash bays, pH-neutral snow foam and a spot-free final rinse &mdash; and not a single spinning brush. Book a 20-minute window online and skip the line.</p>
+          <div class="btn-row">
+            <a class="btn" href="pages/contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="#packages">See wash packages <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+        <aside class="bay-board" aria-labelledby="bay-title">
+          <h2 id="bay-title">Bay board</h2>
+          <p class="small">Members see this live in their dashboard</p>
+          <ul class="bay-list">
+            <li>
+              <span class="bay-name">Bay 1 <small>Foam Bath &middot; 8 min left</small></span>
+              <span class="status-pill status-pill--busy">Washing</span>
+            </li>
+            <li>
+              <span class="bay-name">Bay 2 <small>Ready for the next car</small></span>
+              <span class="status-pill status-pill--open">Open</span>
+            </li>
+            <li>
+              <span class="bay-name">Bay 3 <small>Bead Shield &middot; 31 min left</small></span>
+              <span class="status-pill status-pill--busy">Sealing</span>
+            </li>
+          </ul>
+          <p class="next-slot"><span>Next online slot &middot; <span data-next-slot="day">Today</span></span> <strong data-next-slot="time">2:40 PM</strong></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== 2. Wash packages ===== -->
+    <section class="section" id="packages" aria-labelledby="pkg-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Wash packages</p>
+            <h2 id="pkg-title">Four washes. Every one done by hand.</h2>
+            <p class="lead">Each package builds on the one before it, so you only pay for the steps your car actually needs this week. Prices shown are for sedans and coupes.</p>
+          </div>
+          <a class="link-arrow" href="pages/pricing.html#wash-prices">SUV &amp; truck prices <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="pkg-grid">
+          <article class="pkg-card reveal">
+            <div class="pkg-top"><h3>Rinse &amp; Go</h3><span class="pkg-time">&#9719; 10 min</span></div>
+            <p class="pkg-price"><strong>$15</strong>quick, contact-free refresh</p>
+            <ul class="check-list">
+              <li>Snow-foam pre-soak</li>
+              <li>Low-pressure, contact-free rinse</li>
+              <li>Spot-free RO final rinse</li>
+              <li>Filtered-air blow dry</li>
+            </ul>
+            <a class="link-arrow" href="pages/services.html#exterior">See the bay process <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="pkg-card pkg-card--featured reveal">
+            <span class="pkg-flag">Most booked</span>
+            <div class="pkg-top"><h3>Foam Bath</h3><span class="pkg-time">&#9719; 25 min</span></div>
+            <p class="pkg-price"><strong>$29</strong>the weekly hand wash</p>
+            <ul class="check-list">
+              <li>Everything in Rinse &amp; Go</li>
+              <li>Two-bucket hand wash</li>
+              <li>Wheel faces and tires scrubbed</li>
+              <li>Door jambs wiped</li>
+              <li>Microfiber towel dry</li>
+            </ul>
+            <a class="link-arrow" href="pages/pricing.html#club">Unlimited for $39/month <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="pkg-card reveal">
+            <div class="pkg-top"><h3>Hand Finish</h3><span class="pkg-time">&#9719; 45 min</span></div>
+            <p class="pkg-price"><strong>$45</strong>clean inside and out</p>
+            <ul class="check-list">
+              <li>Everything in Foam Bath</li>
+              <li>Interior vacuum, mats included</li>
+              <li>Glass inside and out</li>
+              <li>Dash and console wipe-down</li>
+              <li>Tire dressing</li>
+            </ul>
+            <a class="link-arrow" href="pages/services.html#interior">Deeper interior options <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="pkg-card reveal">
+            <div class="pkg-top"><h3>Bead Shield</h3><span class="pkg-time">&#9719; 60 min</span></div>
+            <p class="pkg-price"><strong>$69</strong>wash plus 6&ndash;8 weeks of protection</p>
+            <ul class="check-list">
+              <li>Everything in Hand Finish</li>
+              <li>Iron-fallout decon, paint and wheels</li>
+              <li>SiO&#8322; spray sealant</li>
+              <li>Exterior trim dressing</li>
+            </ul>
+            <a class="link-arrow" href="index1.html#protection">Sealant vs. ceramic <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. How a visit works ===== -->
+    <section class="section section--alt" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <figure class="visit-figure reveal">
+          <img class="rounded-img" src="assets/images/home1-foam-spray-garage.webp" alt="Detailer spraying snow foam over the wheel and side of a black sports car" width="1100" height="1100" loading="lazy">
+          <figcaption><strong>4-minute foam dwell</strong>Long enough to lift grit before a wash mitt ever touches the paint.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">How a visit works</p>
+          <h2 id="visit-title">From booking to beading in four steps</h2>
+          <ol class="visit-steps">
+            <li>
+              <div>
+                <h3>Pick a 20-minute window</h3>
+                <p>Choose your package and arrival time in the customer portal. Same-day slots open every 20 minutes.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Pull up when we text you</h3>
+                <p>A &ldquo;bay ready&rdquo; text arrives 5 minutes before your slot. Wait in the lounge or leave the keys at the desk.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Follow each stage live</h3>
+                <p>Your dashboard shows the exact stage &mdash; foam, hand wash, dry, interior, final check &mdash; with a real finish time.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Drive off, points added</h3>
+                <p>Pay by card, phone or cash in the bay. Points land in your account before you reach the street.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Results ===== -->
+    <section class="section" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Results</p>
+          <h2 id="results-title">Fresh off the bays this month</h2>
+          <p class="lead">A few of the cars that rolled out recently, with the package each one got and how long it took.</p>
+        </div>
+        <div class="results-grid">
+          <figure class="result-card reveal">
+            <img src="assets/images/home1-result-grey-sedan.webp" alt="Silver luxury sedan gleaming in bright sunlight beside the water" width="1000" height="667" loading="lazy">
+            <figcaption><strong>Silver executive sedan</strong><span>Bead Shield &middot; 58 min &middot; still beading two weeks later</span></figcaption>
+          </figure>
+          <figure class="result-card reveal">
+            <img src="assets/images/home1-result-black-sedan.webp" alt="Black luxury sedan with a spotless, mirror-like finish parked on a city street" width="1000" height="667" loading="lazy">
+            <figcaption><strong>Black luxury sedan</strong><span>Hand Finish &middot; 44 min &middot; zero water spots</span></figcaption>
+          </figure>
+          <figure class="result-card reveal">
+            <img src="assets/images/home1-result-white-coupe.webp" alt="White sedan on a wet bay floor with soap suds rinsing away from the tires" width="1000" height="1500" loading="lazy">
+            <figcaption><strong>White sedan, salt season</strong><span>Foam Bath + underbody flush &middot; 27 min</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat reveal"><strong>41,800+</strong><span>cars hand-washed since 2014</span></div>
+          <div class="stat reveal"><strong>4.9 &#9733;</strong><span>average across 1,260 Google reviews</span></div>
+          <div class="stat reveal"><strong>24 min</strong><span>average Foam Bath, door to door</span></div>
+          <div class="stat reveal"><strong>72%</strong><span>of first-timers rebook within 6 weeks</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Customer portal teaser ===== -->
+    <section class="section section--band" aria-labelledby="portal-title">
+      <div class="container portal-grid">
+        <div>
+          <p class="eyebrow">Customer portal</p>
+          <h2 id="portal-title">Your car&rsquo;s wash log, kept for you</h2>
+          <p class="lead">A free Beadwell account turns every visit into a record you can actually use.</p>
+          <ul class="portal-list">
+            <li>
+              <span class="bead bead--sm" aria-hidden="true">&#9719;</span>
+              <div><strong>Book and move slots</strong><span>Reschedule up to 2 hours before your slot, free.</span></div>
+            </li>
+            <li>
+              <span class="bead bead--sm" aria-hidden="true">&#9673;</span>
+              <div><strong>Track the stage your car is in</strong><span>Updated by the bay team as each step finishes.</span></div>
+            </li>
+            <li>
+              <span class="bead bead--sm" aria-hidden="true">&#8801;</span>
+              <div><strong>Every receipt in one list</strong><span>Handy for company-car expenses and resale records.</span></div>
+            </li>
+            <li>
+              <span class="bead bead--sm" aria-hidden="true">&#9733;</span>
+              <div><strong>Points that become free washes</strong><span>Redeem straight from your dashboard at checkout.</span></div>
+            </li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="pages/signup.html">Create a Free Account</a>
+            <a class="link-arrow" href="pages/signin.html">Already a member? Sign in <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- CSS-built preview of the dashboard -->
+        <div class="mock reveal" role="img" aria-label="Preview of the Beadwell customer dashboard: a time slot being booked, a live wash stage tracker and a points balance">
+          <div class="mock-bar"><strong>Hi, Jordan</strong><span>Beadwell portal</span></div>
+          <div class="mock-card">
+            <p class="mock-label">Book a slot &middot; Thursday</p>
+            <div class="mock-slots"><span>8:20</span><span>9:00</span><span class="pick">9:20</span><span>10:40</span><span>11:20</span></div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-row"><span class="mock-label">Live status &middot; Bay 2</span><span>Hand Finish</span></div>
+            <div class="mock-track"><span class="done"></span><span class="done"></span><span class="now"></span><span></span><span></span><span></span></div>
+            <div class="mock-row"><span>Hand wash in progress</span><strong>Ready 3:05 PM</strong></div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-row"><span class="mock-label">Beadwell points</span><span>Gloss tier</span></div>
+            <p class="mock-points">366 pts</p>
+            <div class="mock-row"><span>Free Foam Bath unlocked</span><span>&#10003;</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing CTA: next open slot ===== -->
+    <section class="section section--alt" aria-labelledby="slot-title">
+      <div class="container">
+        <div class="slot-cta reveal">
+          <div class="slot-clock"><div><small data-next-slot="day">Today</small><strong data-next-slot="time">2:40 PM</strong></div></div>
+          <div>
+            <h2 id="slot-title">Skip the line &mdash; grab the next open slot</h2>
+            <p class="muted">Drive-ups are welcome, but booked cars go first. From November to March, add a salt-season underbody flush for $8 to keep magnesium chloride off your brake lines.</p>
+          </div>
+          <div class="slot-actions">
+            <a class="btn" href="pages/contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="tel:+13035550172">Call <span dir="ltr">(303) 555-0172</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/pricing.html">Pricing</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="pages/signin.html">Sign In</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+          <li><a href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

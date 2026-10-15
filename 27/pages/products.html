@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Apex Stationery & Office Supplies</title>
+  <meta name="description" content="Explore our complete stationery catalog: writing instruments, executive notebooks, filing and archiving systems, and high-volume printing paper.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('apex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var savedDir = localStorage.getItem('apex_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sticky, Responsive, Dropdown, Hamburger, Theme & Dir Toggles)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+        <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Home <span class="dropdown-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+        <a href="bulk-orders.html" class="nav-link">Bulk Orders</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
+        <div class="drawer-actions">
+          <div class="drawer-toggles-grid">
+            <button type="button" class="drawer-control-btn theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+              <span class="symbol">☾</span>
+              <span class="control-text">Dark Mode</span>
+            </button>
+            <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+              <span class="symbol">⇄</span>
+              <span class="dir-label">RTL</span>
+            </button>
+          </div>
+          <a href="bulk-orders.html" class="btn btn-primary drawer-cta-btn">Get a Quote</a>
+        </div>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <span class="symbol">☾</span>
+        </button>
+
+        <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+          <span class="dir-label">⇄ RTL</span>
+        </button>
+
+        <a href="bulk-orders.html" class="btn btn-primary cta-btn">Get a Quote</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         Section 1: Hero Section (Catalog Department Header with Media)
+         ======================================================================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Complete Product Inventory</span>
+            <h1>Comprehensive Catalog by Department</h1>
+            <p class="lead">
+              Precision stationery and commercial office supplies organized by the four pillars of modern workplace administration: writing instruments, notebooks, document filing, and high-volume printing paper.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#writing" class="btn btn-secondary btn-sm">Writing</a>
+              <a href="#notebooks" class="btn btn-secondary btn-sm">Notebooks</a>
+              <a href="#filing" class="btn btn-secondary btn-sm">Filing</a>
+              <a href="#paper" class="btn btn-secondary btn-sm">Printing Paper</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img src="../assets/images/hero-products.jpg" alt="Comprehensive stationery supplies flatlay assortment">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 2: Category 1 - Writing Instruments
+         ======================================================================= -->
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Category 1</span>
+          <h2>Writing Instruments & Drafting Pens</h2>
+          <p class="lead">
+            Smooth-flowing rollerballs, refillable executive fountain pens, quick-dry gel markers, and precision mechanical drafting pencils.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/cat-writing.jpg" alt="Apex Signature Rollerball Pen">
+              <span class="card-badge">0.7mm Tip</span>
+            </div>
+            <h3 class="card-title">Apex Signature Rollerball</h3>
+            <p class="card-text">Liquid ink technology for effortless glide. Archival black pigment, stainless steel tip. Box of 12.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$18.50</span>
+                  <span class="card-unit">per box</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Apex Signature Rollerball"
+                  data-price="18.50"
+                  data-unit="box"
+                  data-sku="APX-WRI-001"
+                  data-badge="0.7mm Tip"
+                  data-img="../assets/images/cat-writing.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Apex+Signature+Rollerball" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/deal-pens.jpg" alt="Precision Gel Pens 50 Pack">
+              <span class="card-badge">0.5mm Micro</span>
+            </div>
+            <h3 class="card-title">Vanguard Micro Gel Pack</h3>
+            <p class="card-text">Quick-drying smear-proof gel ink ideal for left-handed writers and bookkeeping. Box of 24 pens.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$26.00</span>
+                  <span class="card-unit">per box</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Vanguard Micro Gel Pack"
+                  data-price="26.00"
+                  data-unit="box"
+                  data-sku="APX-WRI-002"
+                  data-badge="0.5mm Micro"
+                  data-img="../assets/images/deal-pens.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Vanguard+Micro+Gel+Pack" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-fountain-pen.jpg" alt="Executive Fountain Pen">
+              <span class="card-badge">Iridium Nib</span>
+            </div>
+            <h3 class="card-title">Baron Executive Fountain</h3>
+            <p class="card-text">Matte brass body, stainless iridium medium nib. Includes piston converter and 6 ink cartridges.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$45.00</span>
+                  <span class="card-unit">per each</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Baron Executive Fountain"
+                  data-price="45.00"
+                  data-unit="each"
+                  data-sku="APX-WRI-003"
+                  data-badge="Iridium Nib"
+                  data-img="../assets/images/product-fountain-pen.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Baron+Executive+Fountain" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-pastel.jpg" alt="Dual-Tip Chisel Highlighters">
+              <span class="card-badge">Set of 8</span>
+            </div>
+            <h3 class="card-title">Dual-Tip Pastel Highlighters</h3>
+            <p class="card-text">Chisel and fine bullet tip in one marker. Pastel non-glare hues that will not bleed copy sheets.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$12.80</span>
+                  <span class="card-unit">per pack</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Dual-Tip Pastel Highlighters"
+                  data-price="12.80"
+                  data-unit="pack"
+                  data-sku="APX-WRI-004"
+                  data-badge="Set of 8"
+                  data-img="../assets/images/arrival-pastel.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Dual-Tip+Pastel+Highlighters" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3: Category 2 - Notebooks & Paper Pads
+         ======================================================================= -->
+    <section class="section-alt" id="notebooks">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Category 2</span>
+          <h2>Notebooks, Journals & Legal Paper Pads</h2>
+          <p class="lead">
+            Heavyweight fountain-pen friendly paper, durable stitch-bindings, lay-flat designs, and archival acid-free stocks.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-hardbound-journal.jpg" alt="Executive Hardbound A5 Journal">
+              <span class="card-badge">100 GSM</span>
+            </div>
+            <h3 class="card-title">Apex Sovereign Hardbound</h3>
+            <p class="card-text">A5 size, 192 numbered dot-grid pages, dual ribbon bookmarks, expandable rear inner document pocket.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$16.50</span>
+                  <span class="card-unit">per each</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Apex Sovereign Hardbound"
+                  data-price="16.50"
+                  data-unit="each"
+                  data-sku="APX-NOT-001"
+                  data-badge="100 GSM"
+                  data-img="../assets/images/product-hardbound-journal.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Apex+Sovereign+Hardbound" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/arrival-stonepaper.jpg" alt="Eco Stone Paper Notebook">
+              <span class="card-badge">Waterproof</span>
+            </div>
+            <h3 class="card-title">Terra Stone Paper Journal</h3>
+            <p class="card-text">Made from repurposed limestone mineral powder. Completely tear-resistant, silky smooth, and waterproof.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$21.00</span>
+                  <span class="card-unit">per each</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Terra Stone Paper Journal"
+                  data-price="21.00"
+                  data-unit="each"
+                  data-sku="APX-NOT-002"
+                  data-badge="Waterproof"
+                  data-img="../assets/images/arrival-stonepaper.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Terra+Stone+Paper+Journal" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-spiral-notebooks.jpg" alt="Wirebound Spiral Meeting Notebook">
+              <span class="card-badge">Pack of 3</span>
+            </div>
+            <h3 class="card-title">TaskMaster Spiral Notebooks</h3>
+            <p class="card-text">Twin-wire brass binding, perforated 80gsm college-ruled sheets with action checklist margin.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$14.20</span>
+                  <span class="card-unit">per pack</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="TaskMaster Spiral Notebooks"
+                  data-price="14.20"
+                  data-unit="pack"
+                  data-sku="APX-NOT-003"
+                  data-badge="Pack of 3"
+                  data-img="../assets/images/product-spiral-notebooks.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=TaskMaster+Spiral+Notebooks" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-legal-pads.jpg" alt="Yellow Perforated Legal Pads">
+              <span class="card-badge">12-Pack</span>
+            </div>
+            <h3 class="card-title">Classic Canary Legal Pads</h3>
+            <p class="card-text">Standard 8.5 x 11.75 inch legal-ruled yellow writing pads. Extra-thick 60-point backing chipboard.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$24.00</span>
+                  <span class="card-unit">per pack</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Classic Canary Legal Pads"
+                  data-price="24.00"
+                  data-unit="pack"
+                  data-sku="APX-NOT-004"
+                  data-badge="12-Pack"
+                  data-img="../assets/images/product-legal-pads.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Classic+Canary+Legal+Pads" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4: Category 3 - Filing, Archiving & Desk Organization
+         ======================================================================= -->
+    <section class="section" id="filing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Category 3</span>
+          <h2>Filing, Archiving & Desk Organization</h2>
+          <p class="lead">
+            Built for heavy-duty records retention, legal compliance, and ergonomic workstation decluttering.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/cat-filing.jpg" alt="Lever Arch Document Binders">
+              <span class="card-badge">500-Sheet</span>
+            </div>
+            <h3 class="card-title">Apex Titan Lever-Arch Binders</h3>
+            <p class="card-text">Heavy 3-inch spine with reinforced metal edge protectors, thumb ring, and reversible spine label.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$7.25</span>
+                  <span class="card-unit">per each</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Apex Titan Lever-Arch Binders"
+                  data-price="7.25"
+                  data-unit="each"
+                  data-sku="APX-FIL-001"
+                  data-badge="500-Sheet"
+                  data-img="../assets/images/cat-filing.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Apex+Titan+Lever-Arch+Binders" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-pressboard-folders.jpg" alt="Polypropylene Classification Folders">
+              <span class="card-badge">Box of 25</span>
+            </div>
+            <h3 class="card-title">2-Divider Pressboard Folders</h3>
+            <p class="card-text">Heavy 25-pt pressboard with 2 Kraft dividers creating 6 distinct filing surfaces. 2-inch embedded fasteners.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$48.50</span>
+                  <span class="card-unit">per box</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="2-Divider Pressboard Folders"
+                  data-price="48.50"
+                  data-unit="box"
+                  data-sku="APX-FIL-002"
+                  data-badge="Box of 25"
+                  data-img="../assets/images/product-pressboard-folders.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=2-Divider+Pressboard+Folders" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/deal-organizer.jpg" alt="Tiered Document Desk Trays">
+              <span class="card-badge">Steel Mesh</span>
+            </div>
+            <h3 class="card-title">Cascade 4-Tier Desk Sorter</h3>
+            <p class="card-text">Solid steel mesh construction for incoming, in-review, outgoing, and archival paperwork. Non-skid feet.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$28.00</span>
+                  <span class="card-unit">per each</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Cascade 4-Tier Desk Sorter"
+                  data-price="28.00"
+                  data-unit="each"
+                  data-sku="APX-FIL-003"
+                  data-badge="Steel Mesh"
+                  data-img="../assets/images/deal-organizer.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Cascade+4-Tier+Desk+Sorter" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-records-boxes.jpg" alt="Heavy duty Bankers Archival Storage Boxes">
+              <span class="card-badge">12-Pack</span>
+            </div>
+            <h3 class="card-title">Heavy-Duty Records Boxes</h3>
+            <p class="card-text">Double-wall corrugated construction, lift-off locking lid. Stacks up to 850 lbs. Fits letter or legal folders.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$54.00</span>
+                  <span class="card-unit">per case</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Heavy-Duty Records Boxes"
+                  data-price="54.00"
+                  data-unit="case"
+                  data-sku="APX-FIL-004"
+                  data-badge="12-Pack"
+                  data-img="../assets/images/product-records-boxes.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Heavy-Duty+Records+Boxes" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 5: Category 4 - Printing Paper & Multipurpose Media
+         ======================================================================= -->
+    <section class="section-alt" id="paper">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Category 4</span>
+          <h2>Printing Paper & Commercial Media</h2>
+          <p class="lead">
+            Jam-free performance across high-speed digital presses, laser printers, and color copiers.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/cat-paper.jpg" alt="Standard 20lb Copy Paper Reams">
+              <span class="card-badge">92 Bright</span>
+            </div>
+            <h3 class="card-title">Apex Standard 20lb Copy</h3>
+            <p class="card-text">Everyday draft printing and memo copy paper. Guaranteed 99.99% jam-free performance on all machines.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$38.00</span>
+                  <span class="card-unit">per 5 reams</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Apex Standard 20lb Copy"
+                  data-price="38.00"
+                  data-unit="5 reams"
+                  data-sku="APX-PAP-001"
+                  data-badge="92 Bright"
+                  data-img="../assets/images/cat-paper.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Apex+Standard+20lb+Copy" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/deal-paper.jpg" alt="Ultra White 24lb Laser Presentation Paper">
+              <span class="card-badge">98 Bright</span>
+            </div>
+            <h3 class="card-title">Premier 24lb Laser Bright</h3>
+            <p class="card-text">Heavier weight prevents show-through on double-sided executive proposals and client presentations.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$46.50</span>
+                  <span class="card-unit">per 5 reams</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Premier 24lb Laser Bright"
+                  data-price="46.50"
+                  data-unit="5 reams"
+                  data-sku="APX-PAP-002"
+                  data-badge="98 Bright"
+                  data-img="../assets/images/deal-paper.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Premier+24lb+Laser+Bright" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-color-paper.jpg" alt="Heavy 28lb Color Copy Digital Press Paper">
+              <span class="card-badge">100 Bright</span>
+            </div>
+            <h3 class="card-title">Digital 28lb Color Pro Paper</h3>
+            <p class="card-text">Ultra-smooth calendered finish designed for full-color saturation, flyers, marketing one-pagers, and diagrams.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$58.00</span>
+                  <span class="card-unit">per 5 reams</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Digital 28lb Color Pro Paper"
+                  data-price="58.00"
+                  data-unit="5 reams"
+                  data-sku="APX-PAP-003"
+                  data-badge="100 Bright"
+                  data-img="../assets/images/product-color-paper.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Digital+28lb+Color+Pro+Paper" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="../assets/images/product-kraft-cardstock.jpg" alt="100% Recycled Kraft Cardstock">
+              <span class="card-badge">65lb Cover</span>
+            </div>
+            <h3 class="card-title">Eco Kraft 65lb Cardstock</h3>
+            <p class="card-text">Rustic natural brown paper stock made from 100% post-consumer fibers. Excellent for covers and tags.</p>
+            <div class="card-footer product-card-footer">
+              <div class="product-pricing-bar">
+                <div class="card-price-group">
+                  <span class="card-price">$32.00</span>
+                  <span class="card-unit">per ream</span>
+                </div>
+                <span class="stock-tag">In Stock</span>
+              </div>
+              <div class="product-actions-bar">
+                <button type="button" class="btn btn-primary btn-sm btn-order-item"
+                  data-name="Eco Kraft 65lb Cardstock"
+                  data-price="32.00"
+                  data-unit="ream"
+                  data-sku="APX-PAP-004"
+                  data-badge="65lb Cover"
+                  data-img="../assets/images/product-kraft-cardstock.jpg">
+                  Order Item
+                </button>
+                <a href="bulk-orders.html?product=Eco+Kraft+65lb+Cardstock" class="btn btn-secondary btn-sm">Bulk Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 6: Technical Sizing & Comparison Guide + Sample CTA
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Buyer's Reference</span>
+          <h2>Paper Weights & Binder Capacity Guide</h2>
+          <p class="lead">
+            Quick reference matrix to ensure you select the exact paper weight and binder spine capacity for your department's specific workload.
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Paper Basis Weight</th>
+                <th>Metric (GSM)</th>
+                <th>Opacity / Caliper</th>
+                <th>Recommended Application</th>
+                <th>Typical Binder Capacity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>20 lb Bond</strong></td>
+                <td>75 GSM</td>
+                <td>88% / 3.8 mil</td>
+                <td>High-volume internal memos, draft copy, receipts</td>
+                <td>1" Ring holds ~220 sheets</td>
+              </tr>
+              <tr>
+                <td><strong>24 lb Bond</strong></td>
+                <td>90 GSM</td>
+                <td>94% / 4.4 mil</td>
+                <td>Executive proposals, client contracts, 2-sided reports</td>
+                <td>1.5" Ring holds ~350 sheets</td>
+              </tr>
+              <tr>
+                <td><strong>28 lb Bond</strong></td>
+                <td>105 GSM</td>
+                <td>97% / 5.1 mil</td>
+                <td>Full-color pitch decks, corporate presentations, flyers</td>
+                <td>2" Ring holds ~480 sheets</td>
+              </tr>
+              <tr>
+                <td><strong>65 lb Cover</strong></td>
+                <td>176 GSM</td>
+                <td>99% / 8.5 mil</td>
+                <td>Report front/back covers, index dividers, postcards</td>
+                <td>3" Ring holds ~650 sheets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cta-banner" style="margin-top: 3.5rem;">
+          <h2>Need Material Swatches or Department Test Packs?</h2>
+          <p>
+            We supply verified enterprise procurement teams with comprehensive paper sample boxes and writing pen trial packs free of charge.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Request Free Sample Kit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Direct Item Quick Order Modal & Live Checkout Dialog
+         ========================================================================= -->
+    <div id="order-modal" class="order-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" style="display: none;">
+      <div class="order-modal-dialog">
+        <!-- Modal Header -->
+        <div class="order-modal-header">
+          <div class="order-modal-title-group">
+            <span class="order-modal-tag">Instant Commercial Checkout</span>
+            <h3 id="order-modal-title" class="order-modal-title">Direct Item Order</h3>
+          </div>
+          <button type="button" class="order-modal-close" id="order-modal-close-btn" aria-label="Close order dialog">✕</button>
+        </div>
+
+        <!-- Modal Content: Order Form View -->
+        <div class="order-modal-body" id="order-modal-form-view">
+          <!-- Item Summary Preview Strip -->
+          <div class="order-item-strip">
+            <div class="order-item-media">
+              <img id="order-modal-img" src="../assets/images/cat-writing.jpg" alt="Selected Product Preview">
+            </div>
+            <div class="order-item-info">
+              <h4 id="order-modal-name" class="order-item-name">Apex Signature Rollerball</h4>
+              <div class="order-item-meta">
+                <span id="order-modal-sku" class="order-item-sku">SKU: APX-WRI-001</span>
+                <span id="order-modal-badge" class="order-item-badge">0.7mm Tip</span>
+              </div>
+              <div class="order-item-price-unit">
+                <span id="order-modal-unit-price" class="order-item-price">$18.50</span>
+                <span id="order-modal-unit-label" class="order-item-unit">/ box</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quantity Stepper & Tier Savings Banner -->
+          <div class="order-config-section">
+            <div class="order-qty-row">
+              <div>
+                <label for="order-modal-qty" class="order-config-label">Order Quantity (<span id="order-qty-unit-label">boxes</span>)</label>
+                <div class="order-qty-sublabel">Same-Day Chicago Warehouse Dispatch</div>
+              </div>
+              <div class="order-stepper">
+                <button type="button" class="order-step-btn" id="order-qty-minus" aria-label="Decrease quantity">−</button>
+                <input type="number" id="order-modal-qty" class="order-qty-input" value="1" min="1" max="500">
+                <button type="button" class="order-step-btn" id="order-qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            
+            <div class="order-tier-banner" id="order-tier-banner">
+              <span class="tier-pill">Tier Discount</span>
+              <span id="order-tier-text">Add 4 more to unlock 5% volume savings!</span>
+            </div>
+          </div>
+
+          <!-- Live Price Breakdown -->
+          <div class="order-calc-table">
+            <div class="order-calc-row">
+              <span>Item Subtotal (<span id="order-calc-qty">1</span> units):</span>
+              <strong id="order-calc-subtotal">$18.50</strong>
+            </div>
+            <div class="order-calc-row" id="order-calc-discount-row" style="display: none;">
+              <span class="text-accent">Volume Savings:</span>
+              <strong class="text-accent" id="order-calc-discount">-$0.00</strong>
+            </div>
+            <div class="order-calc-row">
+              <span>Standard Commercial Freight:</span>
+              <strong style="color: #10b981;">FREE (Standard Ground)</strong>
+            </div>
+            <div class="order-calc-row">
+              <span>Estimated Sales Tax (8.25%):</span>
+              <strong id="order-calc-tax">$1.53</strong>
+            </div>
+            <div class="order-calc-total-row">
+              <span>Total Direct Order Cost:</span>
+              <span id="order-calc-total" class="order-total-amount">$20.03</span>
+            </div>
+          </div>
+
+          <!-- Direct Order Checkout Form -->
+          <form id="order-direct-form" novalidate>
+            <h4 class="order-form-heading">Delivery & Corporate Account Details</h4>
+            <div class="grid-2 order-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="order-company">Company / Institution Name *</label>
+                <input type="text" id="order-company" class="form-control" placeholder="e.g. Apex Legal Group" required>
+                <span class="form-error">Company or facility name is required.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="order-buyer">Purchaser Full Name *</label>
+                <input type="text" id="order-buyer" class="form-control" placeholder="e.g. Rachel Adams" required>
+                <span class="form-error">Purchaser name is required.</span>
+              </div>
+            </div>
+
+            <div class="grid-2 order-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="order-email">Corporate Work Email *</label>
+                <input type="email" id="order-email" class="form-control" placeholder="rachel@apexlegal.com" required>
+                <span class="form-error">Valid work email required for dispatch receipt.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="order-phone">Contact Phone *</label>
+                <input type="tel" id="order-phone" class="form-control" placeholder="(312) 555-0144" required>
+                <span class="form-error">Contact telephone is required.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="order-address">Shipping Street Address *</label>
+              <input type="text" id="order-address" class="form-control" placeholder="742 Evergreen Terrace, Suite 400" required>
+              <span class="form-error">Delivery address is required.</span>
+            </div>
+
+            <div class="grid-3 order-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="order-city">City *</label>
+                <input type="text" id="order-city" class="form-control" placeholder="Chicago" required>
+                <span class="form-error">City required.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="order-state">State *</label>
+                <input type="text" id="order-state" class="form-control" placeholder="IL" required>
+                <span class="form-error">State required.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="order-zip">ZIP Code *</label>
+                <input type="text" id="order-zip" class="form-control" placeholder="60601" required>
+                <span class="form-error">ZIP required.</span>
+              </div>
+            </div>
+
+            <div class="grid-2 order-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="order-payment-method">Payment Terms *</label>
+                <select id="order-payment-method" class="form-control">
+                  <option value="net30">Net 30 Commercial Invoice (Consolidated)</option>
+                  <option value="pcard">Corporate P-Card / Purchasing Card</option>
+                  <option value="ach">Electronic ACH Transfer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="order-po">Internal PO Number (Optional)</label>
+                <input type="text" id="order-po" class="form-control" placeholder="e.g. PO-2026-8812">
+              </div>
+            </div>
+
+            <div class="order-modal-footer">
+              <button type="button" class="btn btn-secondary" id="order-cancel-btn">Cancel</button>
+              <button type="submit" class="btn btn-primary" id="order-submit-btn">
+                <span id="order-btn-text">Place Direct Order</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Content: Order Success / Confirmation Receipt View -->
+        <div class="order-modal-body order-success-view" id="order-modal-success-view" style="display: none;">
+          <div class="order-success-icon-box">✓</div>
+          <h3 class="order-success-title">Order Successfully Placed!</h3>
+          <p class="order-success-desc">
+            Your commercial purchase order has been queued for immediate fulfillment. An official PDF invoice and courier tracking link have been dispatched to <strong id="success-buyer-email">your email</strong>.
+          </p>
+
+          <div class="order-receipt-card">
+            <div class="receipt-row">
+              <span>Order Reference #:</span>
+              <strong id="success-order-id" class="text-accent">#APX-ORD-92841</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Product Ordered:</span>
+              <strong id="success-product-name">Apex Signature Rollerball</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Quantity:</span>
+              <strong id="success-quantity">1 box</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Total Billed:</span>
+              <strong id="success-total-amount" style="font-size: 1.15rem; color: var(--text-primary);">$20.03</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Payment Terms:</span>
+              <span id="success-payment-terms">Net 30 Commercial Invoice</span>
+            </div>
+            <div class="receipt-row">
+              <span>Estimated Delivery:</span>
+              <span style="color: #10b981; font-weight: 600;">Next Business Day via Apex Fleet Freight</span>
+            </div>
+          </div>
+
+          <div class="order-success-actions">
+            <button type="button" class="btn btn-primary" id="order-success-done-btn">Continue Browsing</button>
+            <button type="button" class="btn btn-secondary" id="order-print-receipt-btn">Print Order Slip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer (Identical on every page)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+            <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          </a>
+          <p>
+            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="new-arrivals.html" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="bulk-orders.html" class="footer-link">Bulk Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+        </div>
+        <div class="footer-badges-list">
+          <span>ISO 9001:2015 Certified Logistics</span>
+          <span>FSC® Certified Paper Supply</span>
+          <span>Net 30 Vendor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

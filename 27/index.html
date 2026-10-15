@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 1 | Apex Stationery & Office Supplies</title>
+  <meta name="description" content="Apex Stationery & Office Supplies - Premium workplace essentials, writing instruments, notebooks, filing, and volume procurement.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Immediate Theme & Direction Initialization to prevent FOUC
+    (function() {
+      var savedTheme = localStorage.getItem('apex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var savedDir = localStorage.getItem('apex_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sticky, Responsive, Dropdown, Hamburger, Theme & Dir Toggles)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo linking to Home 1 -->
+      <a href="index.html" class="brand" aria-label="Apex Stationery & Office Supplies Home">
+        <img src="assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+            Home <span class="dropdown-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item active">Home 1</a>
+            <a href="index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+
+        <a href="pages/products.html" class="nav-link">Products</a>
+        <a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a>
+        <a href="pages/bulk-orders.html" class="nav-link">Bulk Orders</a>
+        <a href="pages/contact.html" class="nav-link">Contact</a>
+
+        <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
+        <div class="drawer-actions">
+          <div class="drawer-toggles-grid">
+            <button type="button" class="drawer-control-btn theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+              <span class="symbol">☾</span>
+              <span class="control-text">Dark Mode</span>
+            </button>
+            <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+              <span class="symbol">⇄</span>
+              <span class="dir-label">RTL</span>
+            </button>
+          </div>
+          <a href="pages/bulk-orders.html" class="btn btn-primary drawer-cta-btn">Get a Quote</a>
+        </div>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <span class="symbol">☾</span>
+        </button>
+
+        <!-- Direction Toggle -->
+        <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+          <span class="dir-label">⇄ RTL</span>
+        </button>
+
+        <!-- Primary Header CTA -->
+        <a href="pages/bulk-orders.html" class="btn btn-primary cta-btn">Get a Quote</a>
+
+        <!-- Hamburger Button (<= 1024px) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         Section 1: Hero (Split Layout with Imagery & Quick Chips)
+         ======================================================================= -->
+    <section class="hero-split">
+      <div class="container">
+        <div class="hero-split-grid">
+          <div class="hero-content">
+            <span class="section-tag">Daily Office Essentials</span>
+            <h1>Streamlined Supplies for Modern Productive Workplaces</h1>
+            <p class="lead">
+              From smooth writing instruments and archival notebooks to heavy-duty filing and premium multipurpose copy reams. Keep your workspace completely stocked with zero fulfillment friction.
+            </p>
+
+            <div class="hero-chips">
+              <span class="hero-chip">✓ Same-Day Dispatch</span>
+              <span class="hero-chip">✓ Net 30 Invoicing</span>
+              <span class="hero-chip">✓ FSC Eco-Certified Stock</span>
+              <span class="hero-chip">✓ Volume Price Tiers</span>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 2rem;">
+              <a href="pages/products.html" class="btn btn-primary btn-lg">Shop Essentials</a>
+              <a href="pages/bulk-orders.html" class="btn btn-secondary btn-lg">Bulk Volume Rates</a>
+            </div>
+          </div>
+
+          <div class="hero-media-wrapper">
+            <img src="assets/images/hero-home1.jpg" alt="Organized modern office desk layout with stationery, notebooks, and writing tools">
+            <div class="hero-floating-card">
+              <span style="font-size: 1.75rem;">★</span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem; color: var(--text-primary);">99.8% On-Time Fulfillment</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Over 145,000 orders dispatched nationwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 2: Curated Daily Essentials (Featured Workstation Bundles)
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pre-Packaged Convenience</span>
+          <h2>Curated Daily Essentials & Workstation Bundles</h2>
+          <p class="lead">
+            Hand-selected stationery bundles engineered to furnish new workstations and eliminate multi-vendor procurement headaches.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Bundle 1 -->
+          <div class="card">
+            <div class="card-media">
+              <img src="assets/images/bundle-executive-desk.jpg" alt="Executive Desk Writing Bundle">
+              <span class="card-badge">Bestseller</span>
+            </div>
+            <h3 class="card-title">Executive Desk Bundle</h3>
+            <p class="card-text">Set of 12 rollerball ink pens, brass desk ruler, hardbound faux-leather A5 notebook, and precision steel binder clips.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$49.00</span>
+                <span class="card-price-old">$65.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div class="card">
+            <div class="card-media">
+              <img src="assets/images/cat-notebooks.jpg" alt="Creative Studio Starter stationery kit">
+              <span class="card-badge">Popular</span>
+            </div>
+            <h3 class="card-title">Creative Studio Starter</h3>
+            <p class="card-text">Set of 3 dot-grid wirebound journals, 10-pack fineliner drafting markers, pastel sticky notes, and drafting pencils.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$79.00</span>
+                <span class="card-price-old">$98.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="card">
+            <div class="card-media">
+              <img src="assets/images/cat-filing.jpg" alt="Heavy-duty filing and archiving kit">
+              <span class="card-badge">Value Pack</span>
+            </div>
+            <h3 class="card-title">Document Filing & Archiving Kit</h3>
+            <p class="card-text">10 lever-arch binders (3-inch spine), 50 reinforced tab dividers, 100 expanding suspension folders, and spine labels.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$65.00</span>
+                <span class="card-price-old">$85.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+          </div>
+
+          <!-- Bundle 4 -->
+          <div class="card">
+            <div class="card-media">
+              <img src="assets/images/cat-paper.jpg" alt="High volume printing paper pack">
+              <span class="card-badge">Eco Pack</span>
+            </div>
+            <h3 class="card-title">High-Volume Print Pack</h3>
+            <p class="card-text">5 reams (2,500 sheets) 24lb bright white multipurpose copy paper plus 500 peel-and-seal business security envelopes.</p>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$115.00</span>
+                <span class="card-price-old">$140.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3: Why Enterprise & Small Teams Choose Apex (Value Pillars)
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">The Apex Standard</span>
+          <h2>Engineered for Operational Reliability & Speed</h2>
+          <p class="lead">
+            We operate our own regional distribution warehouses so your organization never runs out of the materials that power your business.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="feature-num-box">01</div>
+            <h3 class="card-title">Guaranteed Same-Day Dispatch</h3>
+            <p class="card-text">Orders placed before 3:00 PM CST depart our regional fulfillment hubs on the same business day, guaranteed.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-num-box">02</div>
+            <h3 class="card-title">Predictable Net 30 Billing</h3>
+            <p class="card-text">Simplify ordering with consolidated monthly billing, custom departmental GL codes, and automated invoicing.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-num-box">03</div>
+            <h3 class="card-title">Dedicated Account Concierge</h3>
+            <p class="card-text">Direct phone and email access to a senior supplies manager who tracks your inventory and locks contract pricing.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-num-box">04</div>
+            <h3 class="card-title">Plastic-Neutral Packaging</h3>
+            <p class="card-text">All shipments arrive in 100% post-consumer recycled corrugated cartons secured with water-activated paper tape.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4: Weekly Warehouse Deals & Clearance
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Limited Time</span>
+          <h2>Weekly Warehouse Deals & High-Volume Specials</h2>
+          <p class="lead">
+            Take advantage of contract-tier savings on overstocked inventory items. Prices valid through end of week or while inventory lasts.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Deal 1 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="assets/images/deal-pens.jpg" alt="Bulk box of gel pens on sale">
+              <span class="card-badge">38% OFF</span>
+            </div>
+            <h3 class="card-title">Ultra-Glide Gel Pens (50-Pack)</h3>
+            <p class="card-text">0.7mm quick-drying black pigment ink. Smudge-free on gloss papers, ergonomic textured rubber grip.</p>
+            <div style="margin-bottom: 0.75rem;">
+              <small class="text-muted" style="display: block; margin-bottom: 0.25rem;">Stock Allocated: 78% Claimed</small>
+              <div style="width: 100%; height: 6px; background-color: var(--bg-subtle); border-radius: 3px; overflow: hidden;">
+                <div style="width: 78%; height: 100%; background-color: var(--text-accent);"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$22.50</span>
+                <span class="card-price-old">$36.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">Claim Deal</a>
+            </div>
+          </div>
+
+          <!-- Deal 2 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="assets/images/deal-paper.jpg" alt="Multipurpose copy paper cartons">
+              <span class="card-badge">25% OFF</span>
+            </div>
+            <h3 class="card-title">Premium 24lb Copy Paper (5 Reams)</h3>
+            <p class="card-text">99.99% jam-free guarantee. Engineered for dual-sided color laser and high-speed inkjet commercial printers.</p>
+            <div style="margin-bottom: 0.75rem;">
+              <small class="text-muted" style="display: block; margin-bottom: 0.25rem;">Stock Allocated: 92% Claimed</small>
+              <div style="width: 100%; height: 6px; background-color: var(--bg-subtle); border-radius: 3px; overflow: hidden;">
+                <div style="width: 92%; height: 100%; background-color: var(--text-accent);"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$38.99</span>
+                <span class="card-price-old">$52.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">Claim Deal</a>
+            </div>
+          </div>
+
+          <!-- Deal 3 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="assets/images/deal-binders.jpg" alt="Heavy duty binders box">
+              <span class="card-badge">35% OFF</span>
+            </div>
+            <h3 class="card-title">D-Ring Binders 2-Inch (Case of 12)</h3>
+            <p class="card-text">Clear-view customizable spine and cover inserts. Holds up to 480 sheets. Non-stick archival-safe polypropylene.</p>
+            <div style="margin-bottom: 0.75rem;">
+              <small class="text-muted" style="display: block; margin-bottom: 0.25rem;">Stock Allocated: 64% Claimed</small>
+              <div style="width: 100%; height: 6px; background-color: var(--bg-subtle); border-radius: 3px; overflow: hidden;">
+                <div style="width: 64%; height: 100%; background-color: var(--text-accent);"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$31.20</span>
+                <span class="card-price-old">$48.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">Claim Deal</a>
+            </div>
+          </div>
+
+          <!-- Deal 4 -->
+          <div class="card product-card">
+            <div class="card-media">
+              <img src="assets/images/deal-organizer.jpg" alt="Desktop organizer set">
+              <span class="card-badge">36% OFF</span>
+            </div>
+            <h3 class="card-title">Steel Mesh Desktop Organizer Set</h3>
+            <p class="card-text">5-piece matching setup: 3-tier document tray, pen cup, memo pad holder, business card stand, and mail sorter.</p>
+            <div style="margin-bottom: 0.75rem;">
+              <small class="text-muted" style="display: block; margin-bottom: 0.25rem;">Stock Allocated: 85% Claimed</small>
+              <div style="width: 100%; height: 6px; background-color: var(--bg-subtle); border-radius: 3px; overflow: hidden;">
+                <div style="width: 85%; height: 100%; background-color: var(--text-accent);"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-group">
+                <span class="card-price">$24.80</span>
+                <span class="card-price-old">$39.00</span>
+              </div>
+              <a href="pages/products.html" class="btn btn-primary btn-sm">Claim Deal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 5: Customer & Office Manager Stories (Social Proof)
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client Testimonials</span>
+          <h2>Trusted by 12,000+ Operations Leaders</h2>
+          <p class="lead">
+            Discover how corporate administrative teams and facility managers rely on Apex for zero-downtime office procurement.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div style="color: #f59e0b; font-size: 1.25rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p class="card-text" style="font-style: italic;">
+              "Apex transformed our monthly stationery restocking routine. What used to take hours of manual cross-referencing is now a 5-minute automated order with consolidated billing."
+            </p>
+            <div class="card-footer" style="border: none; padding-top: 0.5rem;">
+              <div>
+                <strong style="display: block; color: var(--text-primary);">Sarah Jenkins</strong>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Director of Operations, Meridian Law LLP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="color: #f59e0b; font-size: 1.25rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p class="card-text" style="font-style: italic;">
+              "Our engineering firm relies on heavy archival stock and technical fineliners. Apex matched our exact manufacturer specs and cut our annual paper expenditure by 22%."
+            </p>
+            <div class="card-footer" style="border: none; padding-top: 0.5rem;">
+              <div>
+                <strong style="display: block; color: var(--text-primary);">Marcus Vance</strong>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Procurement Lead, Horizon Tech Labs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="color: #f59e0b; font-size: 1.25rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p class="card-text" style="font-style: italic;">
+              "Tax-exempt institutional purchasing was activated on our account within two hours. Delivery across our six campuses is always punctual before each academic semester starts."
+            </p>
+            <div class="card-footer" style="border: none; padding-top: 0.5rem;">
+              <div>
+                <strong style="display: block; color: var(--text-primary);">Elena Rostova</strong>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Facilities Coordinator, Beacon Academies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 6: Page Bottom CTA Banner (Clear Next Step)
+         ======================================================================= -->
+    <section class="section-alt" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready to Upgrade Your Workplace Supply Chain?</h2>
+          <p>
+            Get in touch with an Apex procurement specialist today to lock in your custom corporate price tier or explore our volume pallet discounts.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="pages/bulk-orders.html" class="btn btn-primary btn-lg">Request Bulk Quote</a>
+            <a href="pages/contact.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">Speak With Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer (Identical on every page, grouped links, full business info)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Description -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="Apex Stationery Home">
+            <img src="assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          </a>
+          <p>
+            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
+          </p>
+        </div>
+
+        <!-- Navigation Group 1: Home -->
+        <div>
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigation Group 2: Explore -->
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="pages/products.html" class="footer-link">Products</a></li>
+            <li><a href="pages/new-arrivals.html" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigation Group 3: Company -->
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="pages/bulk-orders.html" class="footer-link">Bulk Orders</a></li>
+            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+        </div>
+        <div class="footer-badges-list">
+          <span>ISO 9001:2015 Certified Logistics</span>
+          <span>FSC® Certified Paper Supply</span>
+          <span>Net 30 Vendor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

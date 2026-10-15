@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Aisle &amp; Aperture</title>
+  <meta name="description" content="Browse wedding ceremonies, pre-wedding shoots, candid moments, haldi and mehendi, and aerial photographs by Aisle &amp; Aperture.">
+  <meta name="theme-color" content="#a8385f">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Apply the saved theme and direction before the first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("aa-theme"), r = localStorage.getItem("aa-dir");
+        if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        if (r === "rtl" || r === "ltr") d.setAttribute("dir", r);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+        <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" width="46" height="46">
+        <span class="brand-text">
+          <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+          <span class="brand-tag">Wedding Films &amp; Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-panel" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+              <ul class="dropdown" id="home-menu">
+                <li><a href="../index.html">Home 1</a></li>
+                <li><a href="../index1.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/packages.html">Packages</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">&#x263E;</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-pressed="false" aria-label="Switch to right-to-left layout"><span class="icon" aria-hidden="true">&#x21C4;</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm" href="../pages/contact.html">Check Your Date</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+  <!-- ============ 1. Page hero ============ -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <img class="page-hero__bg" src="../assets/images/portfolio-hero-garland-bw.jpg" alt="Black-and-white close-up of a bride and groom touching foreheads, both wearing jasmine garlands" fetchpriority="high" width="1600" height="1067">
+    <div class="container">
+      <div class="page-hero__panel glass glass--dark">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home 1</a></li>
+            <li aria-current="page">Portfolio</li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Portfolio</h1>
+        <p>Real weddings from Rajasthan to Kerala. Filter by the moments you care about most, then open any frame full screen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. Filterable gallery ============ -->
+  <section class="section glow" aria-labelledby="gallery-title">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">The gallery</p>
+        <h2 id="gallery-title">Twenty-four frames, <em>five kinds of moments</em></h2>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filter photographs by category">
+        <button class="filter" type="button" data-filter="all" data-label="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="ceremony" data-label="ceremony" aria-pressed="false">Ceremonies</button>
+        <button class="filter" type="button" data-filter="prewedding" data-label="pre-wedding" aria-pressed="false">Pre-wedding</button>
+        <button class="filter" type="button" data-filter="candid" data-label="candid" aria-pressed="false">Candid</button>
+        <button class="filter" type="button" data-filter="haldi" data-label="haldi &amp; mehendi" aria-pressed="false">Haldi &amp; Mehendi</button>
+        <button class="filter" type="button" data-filter="aerial" data-label="aerial" aria-pressed="false">Aerial</button>
+      </div>
+      <p class="filters__status" aria-live="polite">Showing all 24 photographs</p>
+
+      <div class="masonry">
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-bengali-couple.jpg"><img src="../assets/images/gal-ceremony-bengali-couple.jpg" alt="Bengali bride and groom in topor and mukut smiling together at their wedding ceremony" loading="lazy" width="900" height="601"></a><figcaption class="glass glass--dark">Shubho drishti smiles · Kolkata</figcaption></figure>
+        <figure class="tile" data-cat="prewedding"><a href="../assets/images/gal-prewed-monument-embrace.jpg"><img src="../assets/images/gal-prewed-monument-embrace.jpg" alt="Couple embracing in front of a sandstone monument during a pre-wedding shoot" loading="lazy" width="900" height="1125"></a><figcaption class="glass glass--dark">Sandstone and sunshine · Lucknow</figcaption></figure>
+        <figure class="tile" data-cat="haldi"><a href="../assets/images/gal-haldi-circle.jpg"><img src="../assets/images/gal-haldi-circle.jpg" alt="Bride at the centre of a circle of turmeric-covered hands during her haldi" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">A circle of haldi hands · Indore</figcaption></figure>
+        <figure class="tile" data-cat="candid"><a href="../assets/images/gal-candid-laughter.jpg"><img src="../assets/images/gal-candid-laughter.jpg" alt="Couple laughing together in matching blush and beige outfits" loading="lazy" width="900" height="1220"></a><figcaption class="glass glass--dark">The laugh between poses · Delhi</figcaption></figure>
+        <figure class="tile" data-cat="aerial"><a href="../assets/images/gal-aerial-palace-night.jpg"><img src="../assets/images/gal-aerial-palace-night.jpg" alt="Aerial night view of an illuminated palace hotel with hills in the distance" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">Reception lights from 120 metres · Kukas</figcaption></figure>
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-ritual-family.jpg"><img src="../assets/images/gal-ceremony-ritual-family.jpg" alt="Bride and groom performing a ritual under the mandap as family members look on" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Kanyadaan, eyes on the ritual · Jaipur</figcaption></figure>
+        <figure class="tile" data-cat="prewedding"><a href="../assets/images/gal-prewed-chhatri.jpg"><img src="../assets/images/gal-prewed-chhatri.jpg" alt="Couple posing inside a white marble chhatri pavilion" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">Marble chhatri portraits · Udaipur</figcaption></figure>
+        <figure class="tile" data-cat="haldi"><a href="../assets/images/gal-haldi-pour.jpg"><img src="../assets/images/gal-haldi-pour.jpg" alt="Friends pouring water over a laughing bride during her haldi ceremony" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">The haldi shower · Jaipur</figcaption></figure>
+        <figure class="tile" data-cat="candid"><a href="../assets/images/gal-candid-forehead.jpg"><img src="../assets/images/gal-candid-forehead.jpg" alt="Groom resting his head against his smiling bride, both wearing rose and jasmine garlands" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">Heads together after the varmala · Bhopal</figcaption></figure>
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-punjab.jpg"><img src="../assets/images/gal-ceremony-punjab.jpg" alt="Groom applying sindoor to his bride's hair parting as her sister holds the dupatta" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Sindoor daan · Kanpur</figcaption></figure>
+        <figure class="tile" data-cat="aerial"><a href="../assets/images/gal-aerial-udaipur.jpg"><img src="../assets/images/gal-aerial-udaipur.jpg" alt="Aerial view over Udaipur's City Palace and old city toward Lake Pichola" loading="lazy" width="900" height="601"></a><figcaption class="glass glass--dark">The palace before the baraat · Udaipur</figcaption></figure>
+        <figure class="tile" data-cat="prewedding"><a href="../assets/images/gal-prewed-hilltop-veil.jpg"><img src="../assets/images/gal-prewed-hilltop-veil.jpg" alt="A long lime-green veil flying in the wind as a couple stands on a hilltop" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Wind on the ridge · Nandi Hills</figcaption></figure>
+        <figure class="tile" data-cat="haldi"><a href="../assets/images/gal-mehendi-hands-circle.jpg"><img src="../assets/images/gal-mehendi-hands-circle.jpg" alt="Bride smiling inside a ring of hennaed hands at her mehendi" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Mehendi, one hand at a time · Ahmedabad</figcaption></figure>
+        <figure class="tile" data-cat="candid"><a href="../assets/images/gal-candid-twirl.jpg"><img src="../assets/images/gal-candid-twirl.jpg" alt="Groom twirling his bride in a red lehenga on a dark lawn" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">One last twirl after midnight · Pune</figcaption></figure>
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-havan.jpg"><img src="../assets/images/gal-ceremony-havan.jpg" alt="Bride and groom seated before the sacred fire with floral garlands around them" loading="lazy" width="900" height="582"></a><figcaption class="glass glass--dark">Around the sacred fire · Varanasi</figcaption></figure>
+        <figure class="tile" data-cat="prewedding"><a href="../assets/images/gal-prewed-lantern-night.jpg"><img src="../assets/images/gal-prewed-lantern-night.jpg" alt="Couple standing close on a balcony lit by warm hanging lanterns" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Lantern-lit balcony · Amritsar</figcaption></figure>
+        <figure class="tile" data-cat="haldi"><a href="../assets/images/gal-haldi-couple-florals.jpg"><img src="../assets/images/gal-haldi-couple-florals.jpg" alt="Couple dressed in yellow resting heads together against a marigold backdrop" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">A joint haldi in yellow · Jaipur</figcaption></figure>
+        <figure class="tile" data-cat="candid"><a href="../assets/images/gal-candid-bw-smile.jpg"><img src="../assets/images/gal-candid-bw-smile.jpg" alt="Black-and-white portrait of a smiling bride and groom standing cheek to cheek" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">Quiet in the noise · Nagpur</figcaption></figure>
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-rajasthan-portrait.jpg"><img src="../assets/images/gal-ceremony-rajasthan-portrait.jpg" alt="Newlyweds embracing in traditional red and navy wedding outfits against a night sky" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">Just married · Balotra</figcaption></figure>
+        <figure class="tile" data-cat="aerial"><a href="../assets/images/gal-aerial-jal-mahal.jpg"><img src="../assets/images/gal-aerial-jal-mahal.jpg" alt="Aerial view of Jal Mahal floating in Man Sagar Lake, Jaipur" loading="lazy" width="900" height="506"></a><figcaption class="glass glass--dark">Jal Mahal from the drone · Jaipur</figcaption></figure>
+        <figure class="tile" data-cat="prewedding"><a href="../assets/images/gal-prewed-lucknow-arches.jpg"><img src="../assets/images/gal-prewed-lucknow-arches.jpg" alt="Bride twirling a yellow lehenga under carved stone arches as her partner looks on" loading="lazy" width="900" height="1125"></a><figcaption class="glass glass--dark">Twirl under the arches · Lucknow</figcaption></figure>
+        <figure class="tile" data-cat="haldi"><a href="../assets/images/gal-haldi-blessing.jpg"><img src="../assets/images/gal-haldi-blessing.jpg" alt="An elder applying turmeric to the bride's cheek as relatives smile" loading="lazy" width="900" height="600"></a><figcaption class="glass glass--dark">Nani's turn with the haldi · Surat</figcaption></figure>
+        <figure class="tile" data-cat="candid"><a href="../assets/images/gal-candid-family-walk.jpg"><img src="../assets/images/gal-candid-family-walk.jpg" alt="Bride in a floral lehenga walking out with her family on a sunlit lawn" loading="lazy" width="900" height="1350"></a><figcaption class="glass glass--dark">The walk out with family · Coorg</figcaption></figure>
+        <figure class="tile" data-cat="ceremony"><a href="../assets/images/gal-ceremony-reception-dance.jpg"><img src="../assets/images/gal-ceremony-reception-dance.jpg" alt="Groom in a white sherwani dancing with his bride in a pink lehenga on a floral stage" loading="lazy" width="900" height="1353"></a><figcaption class="glass glass--dark">Reception first dance · Lucknow</figcaption></figure>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <div class="lightbox__inner glass glass--dark">
+        <div class="dialog-bar">
+          <h2 id="lightbox-title" class="visually-hidden">Photograph</h2>
+          <button class="icon-btn icon-btn--light" type="button" data-close-dialog aria-label="Close photograph"><span aria-hidden="true">&#x2715;</span></button>
+        </div>
+        <div class="lightbox__stage">
+          <img src="../assets/images/gal-ceremony-bengali-couple.jpg" alt="Enlarged view of the selected portfolio photograph" width="900" height="601">
+          <button class="icon-btn icon-btn--light lightbox__nav lightbox__prev" type="button" aria-label="Previous photograph"><span aria-hidden="true">&#x2039;</span></button>
+          <button class="icon-btn icon-btn--light lightbox__nav lightbox__next" type="button" aria-label="Next photograph"><span aria-hidden="true">&#x203A;</span></button>
+        </div>
+        <p class="lightbox__caption"><span class="lightbox__text"></span><span class="lightbox__count" aria-live="polite"></span></p>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- ============ 3. Wedding stories ============ -->
+  <section class="section section--alt" aria-labelledby="stories-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Wedding stories</p>
+        <h2 id="stories-title">Three weddings, <em>three very different days</em></h2>
+        <p class="lead">Scale, light and mood change everything about how we shoot. Here's how we adapted for each.</p>
+      </header>
+
+      <div class="grid-3 stories">
+        <article class="story-card glass reveal">
+          <img src="../assets/images/story-pavilion-night.jpg" alt="Newlyweds standing under a pavilion draped with plants and hanging lanterns at night" loading="lazy" width="900" height="599">
+          <div class="story-card__body">
+            <ul class="chip-list"><li class="tag">Signature</li><li class="tag">350 guests</li></ul>
+            <h3>Lanterns &amp; late pheras</h3>
+            <p class="story-card__meta">Pooja &amp; Siddharth · Pune · 2 days</p>
+            <p>A midnight ceremony lit only by lanterns. We added two hidden LED panels and no flash, so the glow in the film is the glow guests saw.</p>
+          </div>
+        </article>
+        <article class="story-card glass reveal">
+          <img src="../assets/images/story-kerala-sunset.jpg" alt="Bride in a shimmering grey saree leading her groom by the hand in warm evening light" loading="lazy" width="900" height="1350">
+          <div class="story-card__body">
+            <ul class="chip-list"><li class="tag">Heirloom</li><li class="tag">180 guests</li></ul>
+            <h3>Sunset on the backwaters</h3>
+            <p class="story-card__meta">Anjali &amp; Varun · Kumarakom · 3 days</p>
+            <p>A temple wedding at dawn and a reception on the water at dusk. Our second cinematographer filmed the procession from a following boat.</p>
+          </div>
+        </article>
+        <article class="story-card glass reveal">
+          <img src="../assets/images/story-banyan-vows.jpg" alt="Couple standing beneath the wide branches of an old tree in soft evening light" loading="lazy" width="900" height="1350">
+          <div class="story-card__body">
+            <ul class="chip-list"><li class="tag">Essential</li><li class="tag">80 guests</li></ul>
+            <h3>Under the old banyan</h3>
+            <p class="story-card__meta">Kavya &amp; Nikhil · Ahmedabad · 1 day</p>
+            <p>An intimate farmhouse wedding where the tree was the mandap. Two crew members, one long lens, zero interruptions.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. Colour styles ============ -->
+  <section class="section glow" aria-labelledby="grade-title">
+    <div class="container grade">
+      <figure class="grade__figure reveal">
+        <img class="is-warm" src="../assets/images/portfolio-grade-sample.jpg" alt="Bride and groom smiling at each other outdoors in late-afternoon light, shown in the selected colour style" loading="lazy" width="1400" height="934">
+        <figcaption class="grade__label glass glass--dark">Warm Film</figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">Colour styles</p>
+        <h2 id="grade-title">See one frame in our <em>three edits</em></h2>
+        <p class="lead">You choose a look per event — or leave it to us to decide frame by frame. Switch between them below.</p>
+
+        <div class="tabs" role="tablist" aria-label="Colour styles">
+          <button type="button" role="tab" id="tab-warm" aria-controls="panel-warm" aria-selected="true" tabindex="0" data-grade="is-warm">Warm Film</button>
+          <button type="button" role="tab" id="tab-true" aria-controls="panel-true" aria-selected="false" tabindex="-1" data-grade="is-true">True Colour</button>
+          <button type="button" role="tab" id="tab-mono" aria-controls="panel-mono" aria-selected="false" tabindex="-1" data-grade="is-mono">Timeless Mono</button>
+        </div>
+
+        <div class="tab-panel glass" role="tabpanel" id="panel-warm" aria-labelledby="tab-warm">
+          <h3>Warm Film</h3>
+          <p>Soft golden highlights and gentle grain, inspired by Kodak Portra. Our most requested look for day events and pre-wedding shoots.</p>
+        </div>
+        <div class="tab-panel glass" role="tabpanel" id="panel-true" aria-labelledby="tab-true" hidden>
+          <h3>True Colour</h3>
+          <p>Exactly what the eye saw: accurate lehenga reds and natural skin. Ideal for couples who want outfits remembered precisely.</p>
+        </div>
+        <div class="tab-panel glass" role="tabpanel" id="panel-mono" aria-labelledby="tab-mono" hidden>
+          <h3>Timeless Mono</h3>
+          <p>Rich, high-contrast black and white for emotional moments — the vidaai, the speeches, the grandparents. Usually 10–15% of a gallery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. Behind the frame ============ -->
+  <section class="section section--alt" aria-labelledby="gear-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Behind the frame</p>
+        <h2 id="gear-title">What we carry to <em>every wedding</em></h2>
+        <p class="lead">Good gear doesn't make good photographs, but it does stop a dark mandap or a crowded baraat from ruining them.</p>
+      </header>
+
+      <div class="grid-3 gear">
+        <figure class="gear-card glass reveal">
+          <img src="../assets/images/bts-gimbal-venue.jpg" alt="Videographer holding a gimbal-mounted cinema camera in a decorated wedding hall" loading="lazy" width="800" height="1200">
+          <figcaption>
+            <h3>Cinema cameras on gimbals</h3>
+            <p>Full-frame cinema bodies on motorised gimbals keep processions smooth, even across uneven palace stone.</p>
+          </figcaption>
+        </figure>
+        <figure class="gear-card glass reveal">
+          <img src="../assets/images/bts-camera-raised.jpg" alt="Photographer raising a camera above the crowd beneath a glowing floral installation" loading="lazy" width="800" height="1200">
+          <figcaption>
+            <h3>Fast lenses for low light</h3>
+            <p>Bright f/1.2 prime lenses let us shoot night pheras by candle and string light, so flash stays in the bag.</p>
+          </figcaption>
+        </figure>
+        <figure class="gear-card glass reveal">
+          <img src="../assets/images/bts-two-shooters.jpg" alt="Two crew members in black standing with tripods and cameras at a garden ceremony aisle" loading="lazy" width="800" height="1200">
+          <figcaption>
+            <h3>Two of everything</h3>
+            <p>Dual-card cameras and two copies of every card on separate drives before the crew sleeps. In eleven years, not one lost frame.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. CTA ============ -->
+  <section class="section glow glow--alt" aria-labelledby="pf-cta-title">
+    <div class="container">
+      <div class="cta-band__panel glass reveal">
+        <p class="eyebrow">Your turn</p>
+        <h2 id="pf-cta-title">Saw a frame you <em>can't stop thinking about?</em></h2>
+        <p class="lead">Mention it in your enquiry and we'll tell you exactly how we'd recreate that feeling at your venue.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html">Share Your Vision</a>
+          <a class="link-arrow" href="packages.html">See what's included <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ Footer (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+          <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" loading="lazy" width="46" height="46">
+          <span class="brand-text">
+            <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+            <span class="brand-tag">Wedding Films &amp; Photography</span>
+          </span>
+        </a>
+        <p>Candid wedding photography and cinematic films from a Jaipur studio, for couples marrying anywhere in India.</p>
+      </div>
+
+      <nav aria-labelledby="footer-home">
+        <h2 class="footer-heading" id="footer-home">Home</h2>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-studio">
+        <h2 class="footer-heading" id="footer-studio">Studio</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="../pages/services.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-plan">
+        <h2 class="footer-heading" id="footer-plan">Plan</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/packages.html">Packages</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-reach">
+        <h2 class="footer-heading">Visit &amp; call</h2>
+        <address class="footer-contact">
+          <span>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur 302001</span>
+          <a href="tel:+919829047215">+91 98290 47215</a>
+          <a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a>
+          <span>Tue–Sat 10:30–19:00 · Sun 11:00–16:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aisle &amp; Aperture Studio LLP. All rights reserved.</p>
+      <p>Photographed, filmed and edited in Jaipur, Rajasthan.</p>
+    </div>
+  </footer>
+</body>
+</html>

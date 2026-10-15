@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Orders | Apex Stationery & Office Supplies</title>
+  <meta name="description" content="Commercial bulk stationery sourcing, volume price tiers up to 45% off, custom corporate branding, and institutional supply contracts.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('apex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var savedDir = localStorage.getItem('apex_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sticky, Responsive, Dropdown, Hamburger, Theme & Dir Toggles)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+        <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Home <span class="dropdown-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+        <a href="bulk-orders.html" class="nav-link active">Bulk Orders</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
+        <div class="drawer-actions">
+          <div class="drawer-toggles-grid">
+            <button type="button" class="drawer-control-btn theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+              <span class="symbol">☾</span>
+              <span class="control-text">Dark Mode</span>
+            </button>
+            <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+              <span class="symbol">⇄</span>
+              <span class="dir-label">RTL</span>
+            </button>
+          </div>
+          <a href="bulk-orders.html" class="btn btn-primary drawer-cta-btn">Get a Quote</a>
+        </div>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <span class="symbol">☾</span>
+        </button>
+
+        <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+          <span class="dir-label">⇄ RTL</span>
+        </button>
+
+        <a href="bulk-orders.html" class="btn btn-primary cta-btn">Get a Quote</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         Section 1: Hero Section (Bulk Procurement Overview with Media)
+         ======================================================================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Volume Contract Sourcing</span>
+            <h1>Volume Sourcing & Institutional Supply Contracts</h1>
+            <p class="lead">
+              Scale your stationery procurement without sacrificing quality. Enjoy steep volume pricing tiers, custom corporate branding, dedicated account managers, and scheduled LTL freight logistics.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#calculator" class="btn btn-primary btn-lg">Estimate Volume Pricing</a>
+              <a href="#tiers" class="btn btn-secondary btn-lg">View Discount Schedule</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img src="../assets/images/hero-bulk-orders.jpg" alt="Organized commercial office supplies warehouse storage racks">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 2: Volume Pricing Tiers Schedule (Detailed Matrix)
+         ======================================================================= -->
+    <section class="section" id="tiers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Transparent Wholesale Pricing</span>
+          <h2>Standard Tiered Discount Structure</h2>
+          <p class="lead">
+            No haggling or hidden markups. Volume discounts apply automatically across catalog lines based on total carton units or order value.
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Pricing Tier</th>
+                <th>Order Quantity</th>
+                <th>Discount Off MSRP</th>
+                <th>Payment Terms</th>
+                <th>Shipping & Logistics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tier 1 · Starter Bulk</strong></td>
+                <td>10 – 49 Units / Cartons</td>
+                <td><strong class="text-accent">15% OFF</strong></td>
+                <td>Credit Card / ACH</td>
+                <td>Standard Ground (Free over $150)</td>
+              </tr>
+              <tr>
+                <td><strong>Tier 2 · Departmental</strong></td>
+                <td>50 – 249 Units / Cartons</td>
+                <td><strong class="text-accent">25% OFF</strong></td>
+                <td>Net 30 with approved PO</td>
+                <td>Free Expedited Commercial Freight</td>
+              </tr>
+              <tr>
+                <td><strong>Tier 3 · Corporate Scale</strong></td>
+                <td>250 – 999 Units / Cartons</td>
+                <td><strong class="text-accent">35% OFF</strong></td>
+                <td>Net 30 / Net 45 terms</td>
+                <td>Free Priority LTL Freight with Liftgate</td>
+              </tr>
+              <tr>
+                <td><strong>Tier 4 · Pallet / Enterprise</strong></td>
+                <td>1,000+ Units (Full Pallet)</td>
+                <td><strong class="text-accent">45% OFF</strong></td>
+                <td>Net 60 + Quarterly Rebate</td>
+                <td>Dedicated Carrier & Scheduled Multi-Drop</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3: Custom Corporate Branding & Private Label Imprinting
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 3.5rem;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid var(--border-light);">
+            <img src="../assets/images/bulk-custom-branding.jpg" alt="Corporate debossed custom leather journals and executive pens">
+          </div>
+
+          <div>
+            <span class="section-tag">Corporate Identity</span>
+            <h2>Custom Imprinting & New Hire Welcome Kits</h2>
+            <p class="lead">
+              Turn everyday stationery into powerful brand touchpoints. We customize notebooks, executive pens, and presentation folios with your organization's exact Pantone colors and logo debossing.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+              <div style="display: flex; gap: 0.75rem;">
+                <span class="text-accent" style="font-weight: 700;">✓</span>
+                <div>
+                  <strong>Blind & Foil Debossing:</strong> Deep, crisp tactile impression on Italian vegan leather and linen journal covers.
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.75rem;">
+                <span class="text-accent" style="font-weight: 700;">✓</span>
+                <div>
+                  <strong>Precision Laser Pen Engraving:</strong> Permanent silver or golden contrast engraving on solid brass and aluminum writing pens.
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.75rem;">
+                <span class="text-accent" style="font-weight: 700;">✓</span>
+                <div>
+                  <strong>Remote Onboarding Kitting:</strong> We pack custom branded welcome boxes and drop-ship directly to new employee residences nationwide.
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary btn-lg">Request Brand Mockup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4: Institutional Accounts for Education & Government
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Public Sector & Academics</span>
+          <h2>Institutional Accounts & Tax-Exempt Purchasing</h2>
+          <p class="lead">
+            Tailored procurement pathways built to satisfy public school board, university, and municipal government procurement statutes.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="feature-num-box">01</div>
+            <h3 class="card-title">Tax-Exempt Purchasing</h3>
+            <p class="card-text">
+              Submit your state tax exemption certificate once. Our system automatically waives sales taxes across all future purchase orders and branch accounts.
+            </p>
+            <span class="text-accent" style="font-size: 0.85rem; font-weight: 600;">Approved within 2 business hours</span>
+          </div>
+
+          <div class="card">
+            <div class="feature-num-box">02</div>
+            <h3 class="card-title">Official PO Upload & Net 60</h3>
+            <p class="card-text">
+              We accept standard municipal and district Purchase Orders (POs) without requiring credit card pre-authorization. Extended Net 60 terms for public institutions.
+            </p>
+            <span class="text-accent" style="font-size: 0.85rem; font-weight: 600;">Electronic EDI & PDF PO support</span>
+          </div>
+
+          <div class="card">
+            <div class="feature-num-box">03</div>
+            <h3 class="card-title">Staggered Semester Logistics</h3>
+            <p class="card-text">
+              Lock summer contract pricing and schedule phased deliveries across multiple school campus addresses right before autumn and spring term starts.
+            </p>
+            <span class="text-accent" style="font-size: 0.85rem; font-weight: 600;">Zero warehousing surcharge</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 5: Pallet Shipping & Commercial Logistics
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 3.5rem;">
+          <div>
+            <span class="section-tag">Freight Handling</span>
+            <h2>Palletized Freight & Multi-Branch Drop-Off</h2>
+            <p class="lead">
+              Our regional distribution hubs feature full-scale freight loading docks and direct partnerships with premier national LTL logistics carriers.
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem; font-size: 0.95rem;">
+              <li>✓ <strong>Liftgate & Inside Delivery:</strong> Free hydraulic liftgate delivery for locations without a dedicated freight dock.</li>
+              <li>✓ <strong>Pallet Banding & Shrink-Wrap:</strong> High-gauge weatherized film protection ensures paper reams arrive in pristine factory condition.</li>
+              <li>✓ <strong>Multi-Destination Split Invoicing:</strong> Ship 200 cartons split across 8 separate regional offices on one master corporate order.</li>
+              <li>✓ <strong>Guaranteed Freight Windows:</strong> Real-time carrier tracking with scheduled 2-hour appointment delivery confirmation.</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-lg">Inquire Freight Rates</a>
+          </div>
+
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid var(--border-light);">
+            <img src="../assets/images/bulk-logistics.jpg" alt="Commercial pallet freight handling with organized shipping cartons">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 6: Interactive Instant Bulk Estimator & RFP Submission
+         ======================================================================= -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="card bulk-calc-card" style="max-width: 900px; margin-inline: auto; border: 2px solid var(--border-light);">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag">Interactive Pricing Tool</span>
+            <h2>Instant Bulk Order Price Estimator</h2>
+            <p class="lead">Select your primary supply category and projected volume to preview your contract savings.</p>
+          </div>
+
+          <div class="grid-2" style="gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="calc-category">Select Product Category</label>
+              <select id="calc-category" class="form-control" style="height: 48px;">
+                <option value="paper">Copy & Printing Paper (Box of 5 Reams / 2,500 Sheets)</option>
+                <option value="pens">Writing Instruments (Carton of 50 Pens)</option>
+                <option value="notebooks">Hardbound & Wirebound Notebooks (Case of 24)</option>
+                <option value="filing">Lever-Arch & D-Ring Binders (Case of 12)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calc-qty">Projected Quantity (Cartons / Boxes)</label>
+              <input type="number" id="calc-qty" class="form-control" value="100" min="10" max="5000" step="10" style="height: 48px;">
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <button type="button" id="calc-estimate-btn" class="btn btn-primary btn-lg">Calculate Estimated Cost</button>
+          </div>
+
+          <div class="bulk-calc-result-box" style="background-color: var(--bg-subtle); border-radius: var(--radius-md); text-align: center; border: 1px solid var(--border-light);">
+            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">
+              Estimated Volume Total
+            </span>
+            <div id="calc-result-price" class="text-accent" style="font-size: clamp(2.25rem, 4vw, 3rem); font-weight: 800; line-height: 1.2;">
+              $3,360.00
+            </div>
+            <div id="calc-result-discount" style="font-size: 0.95rem; font-weight: 600; color: #16a34a; margin-top: 0.25rem;">
+              20% Volume Savings Applied (-$840.00)
+            </div>
+            <small style="display: block; margin-top: 0.5rem; color: var(--text-muted);">
+              *Estimate includes standard commercial freight. Final customized quotes may qualify for additional enterprise rebates.
+            </small>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Submit Official RFP Specification</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer (Identical on every page)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+            <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          </a>
+          <p>
+            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="new-arrivals.html" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="bulk-orders.html" class="footer-link">Bulk Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+        </div>
+        <div class="footer-badges-list">
+          <span>ISO 9001:2015 Certified Logistics</span>
+          <span>FSC® Certified Paper Supply</span>
+          <span>Net 30 Vendor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

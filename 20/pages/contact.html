@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - HydroFix Plumbing</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="HydroFix Home">
+        <img src="../assets/images/logo.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-light">
+        <img src="../assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-dark">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="desktop-nav">
+          <li class="nav-item dropdown">
+            <a href="../index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Home <span class="dropdown-icon">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="emergency.html" class="nav-link">Emergency</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Tools & CTA -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="tool-btn theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <span class="theme-symbol">☾</span>
+        </button>
+
+        <!-- Direction Toggle -->
+        <button type="button" class="tool-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle text direction">
+          <span class="dir-text">⇄ RTL</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="contact.html" class="btn-primary">Book Now</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop & Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-panel" aria-label="Mobile Navigation Drawer">
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+      <button type="button" class="tool-btn theme-toggle-btn" style="flex: 1;" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <span class="theme-symbol">☾</span>
+      </button>
+      <button type="button" class="tool-btn dir-toggle-btn" style="flex: 1;" aria-label="Toggle text direction" title="Toggle text direction">
+        <span class="dir-text">⇄ RTL</span>
+      </button>
+    </div>
+
+    <ul class="mobile-links">
+      <li>
+        <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+          Home <span>▼</span>
+        </button>
+        <ul class="mobile-accordion-menu">
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="emergency.html">Emergency</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+
+    <div style="border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+      <a href="contact.html" class="btn-primary mobile-drawer-cta">Book Now</a>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- SECTION 1: HERO (Exempt from Hero Image as per guidelines) -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section-subtitle">Get In Touch</span>
+        <h1 class="section-title">Contact &amp; Service Booking</h1>
+        <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
+          Schedule an on-site master plumber, request written estimates, or alert our 24/7 emergency dispatch coordinators. We respond within minutes.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BOOKING FORM & DIRECT CONTACT CHANNELS -->
+    <section class="section">
+      <div class="container contact-layout-grid">
+        
+        <!-- Interactive Booking Form with Validation -->
+        <div class="contact-form-card">
+          <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">Schedule A Service Call</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 2rem;">
+            Fill out the details below. Our automated dispatch system will assign the nearest equipped van and send an SMS confirmation.
+          </p>
+
+          <!-- Success Alert Banner (Revealed by main.js) -->
+          <div id="contact-success-banner" class="form-success-banner" role="alert">
+            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>✓</span> Dispatch Request Confirmed!
+            </h3>
+            <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.75rem;">
+              Your service request has been registered under Ticket <strong class="ticket-id">#HF-892401</strong>. A dispatch coordinator has notified the on-duty mobile plumber in your sector.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 600; color: #166534;">
+              Estimated arrival time notification will be sent via SMS within 5 minutes.
+            </div>
+          </div>
+
+          <form id="booking-contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name" class="form-label">Full Name *</label>
+                <input type="text" id="cf-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+                <span class="form-error">Please enter your full name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="cf-phone" class="form-input" placeholder="e.g. (555) 234-5678" required>
+                <span class="form-error">Please enter a valid phone number (at least 7 digits).</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-email" class="form-label">Email Address *</label>
+                <input type="email" id="cf-email" class="form-input" placeholder="e.g. sarah@example.com" required>
+                <span class="form-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-service" class="form-label">Service Required *</label>
+                <select id="cf-service" class="form-select" required>
+                  <option value="">-- Choose Required Service --</option>
+                  <option value="pipe_repair">Pipe Repair / Pinhole Leak</option>
+                  <option value="drain_unblock">Drain Unblocking &amp; Sewer Clearing</option>
+                  <option value="tap_replace">Tap Replacement &amp; Fixtures</option>
+                  <option value="tank_clean">Water Storage Tank Cleaning</option>
+                  <option value="water_heater">Water Heater / Pressure Regulator</option>
+                  <option value="audit_inspection">Preventative Plumbing Audit</option>
+                  <option value="emergency_burst">Emergency Burst Pipe (Priority)</option>
+                </select>
+                <span class="form-error">Please choose a service category.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-urgency" class="form-label">Response Urgency</label>
+                <select id="cf-urgency" class="form-select">
+                  <option value="standard">Standard Appointment (Next Available)</option>
+                  <option value="today">Same-Day Service</option>
+                  <option value="emergency">Emergency 24/7 Immediate Dispatch</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-date" class="form-label">Preferred Date</label>
+                <input type="date" id="cf-date" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="cf-address" class="form-label">Property Street Address &amp; Zip Code *</label>
+              <input type="text" id="cf-address" class="form-input" placeholder="e.g. 742 Evergreen Terrace, Metro City 90210" required>
+              <span class="form-error">Please specify your address for dispatch coordination.</span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 2rem;">
+              <label for="cf-notes" class="form-label">Description of Problem (Optional)</label>
+              <textarea id="cf-notes" class="form-textarea" rows="4" placeholder="Describe symptoms, pipe location, or access instructions (e.g. leak is under second-floor bathroom sink, main valve turned off)."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 0.9rem; font-size: 1.05rem;">
+              Submit Service Request
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Contact Channels & Headquarters -->
+        <div>
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+              Direct Contact Details
+            </h3>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <strong>Telephone Hotline</strong>
+                <p><a href="tel:8005557473" style="font-weight: 700; color: var(--brand-blue);">(800) 555-7473</a></p>
+                <p>Local Dispatch: (555) 892-0199</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-text">
+                <strong>Electronic Mail</strong>
+                <p><a href="mailto:dispatch@hydrofixplumbing.com">dispatch@hydrofixplumbing.com</a></p>
+                <p><a href="mailto:quotes@hydrofixplumbing.com">quotes@hydrofixplumbing.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <strong>Operating Headquarters</strong>
+                <p>HydroFix Technical Operations Depot</p>
+                <p>4280 Industrial Parkway, Suite 100</p>
+                <p>Metro City, MC 90210</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🚨</div>
+              <div class="info-text">
+                <strong>24/7 Emergency Line</strong>
+                <p><a href="tel:8005557473" style="font-weight: 800; color: #b91c1c;">(800) 555-PIPE</a></p>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Direct line to on-duty master plumber</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: OPERATING HOURS & LIVE DISPATCH SCHEDULE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Availability</span>
+          <h2 class="section-title">Operating Hours &amp; Field Dispatch Windows</h2>
+          <p class="section-desc">
+            We provide full scheduled service coverage six days a week, plus around-the-clock emergency dispatch teams 365 days a year.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon-box">📅</div>
+            <h3 class="card-title">Standard Weekday Hours</h3>
+            <p class="card-desc">
+              Monday through Friday: <strong>7:00 AM – 7:00 PM</strong>
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Full standard diagnostic rates apply ($0 callout fee with completed repair). Guaranteed 2-hour arrival windows.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon-box">☀️</div>
+            <h3 class="card-title">Saturday Service</h3>
+            <p class="card-desc">
+              Saturday: <strong>8:00 AM – 5:00 PM</strong>
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Standard rates, no weekend surcharges for scheduled tank cleanings, tap installations, or general maintenance.
+            </p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid #b91c1c;">
+            <div class="card-icon-box" style="background-color: #fee2e2; color: #b91c1c;">🚨</div>
+            <h3 class="card-title">24/7 Emergency Service</h3>
+            <p class="card-desc">
+              Nights, Sundays &amp; Holidays: <strong>Active 24 Hours</strong>
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">
+              On-call master plumbers equipped for burst pipes, mainline blockages, and commercial plumbing emergencies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SERVICE COVERAGE DISTRICTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Local Zones</span>
+          <h2 class="section-title">Metropolitan Service Coverage Area</h2>
+          <p class="section-desc">
+            Our 14 fully equipped mobile units operate across the entire metropolitan region and surrounding counties.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 2.5rem;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">
+            Guaranteed Rapid Dispatch Zones
+          </h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            If your property is located in any of the following districts, our average response time is guaranteed under 45 minutes:
+          </p>
+
+          <div class="coverage-chips">
+            <div class="coverage-chip"><span>📍</span> Downtown Central Core (30 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> North Hills &amp; Highland Park (32 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> Riverfront Medical District (28 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> East Lake Commercial Corridor (35 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> South Suburban Estates (38 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> West End Industrial Park (34 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> Oakwood Residential Quarter (40 Mins)</div>
+            <div class="coverage-chip"><span>📍</span> Tech Ridge Valley Campus (36 Mins)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FINAL CTA BANNER -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-content">
+            <h2>Need An Immediate Emergency Response?</h2>
+            <p>
+              If water is actively leaking or flooding, bypass the online form and contact our 24/7 central dispatch room right now for instant routing.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="tel:8005557473" class="btn-primary">Call (800) 555-7473</a>
+            <div class="cta-phone-tag">Live Operator Available Right Now</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="HydroFix Home">
+            <img src="../assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img">
+          </a>
+          <p class="footer-desc">
+            Licensed 24/7 plumbing, emergency pipe repair, advanced leak diagnostics, and comprehensive sanitation services.
+          </p>
+          <div class="footer-contact-item">
+            <span>📞</span> <span>(800) 555-PIPE / (800) 555-7473</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span> <span>dispatch@hydrofixplumbing.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📍</span> <span>4280 Industrial Parkway, Suite 100, Metro City</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HydroFix Plumbing &amp; Pipe Repair Service. All rights reserved.
+        </div>
+        <div class="footer-meta">
+          <span>License #MP-849201</span>
+          <span>Fully Insured &amp; Bonded</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

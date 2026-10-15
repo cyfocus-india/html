@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 1 - Scoop & Swirl</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       Site Header (Sticky Navigation)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+        <span class="logo-text">
+          <span class="logo-title">Scoop & Swirl</span>
+          <span class="logo-tagline">Artisan Parlour</span>
+        </span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Wrapper -->
+      <div class="nav-menu-wrapper" id="navDrawer">
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <!-- Home Dropdown (Accordion on Mobile) -->
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-trigger active" aria-expanded="false" aria-haspopup="true">
+                Home <span class="dropdown-arrow">▾</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="index.html" class="dropdown-item active">Home 1</a></li>
+                <li><a href="index1.html" class="dropdown-item">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="pages/menu.html" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="pages/offers.html" class="nav-link">Offers</a></li>
+            <li class="nav-item"><a href="pages/party-orders.html" class="nav-link">Party Orders</a></li>
+            <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Drawer Bottom Controls for Mobile Screens -->
+        <div class="mobile-drawer-bottom">
+          <div class="mobile-controls-row">
+            <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+          </div>
+          <a href="pages/menu.html" class="btn btn-primary">Order Online</a>
+        </div>
+      </div>
+
+      <!-- Header Desktop Controls -->
+      <div class="header-actions">
+        <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
+        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+        <a href="pages/menu.html" class="btn btn-primary">Order Online</a>
+        <!-- CSS Animated Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Background Overlay -->
+  <div class="mobile-nav-overlay" id="navOverlay"></div>
+
+  <!-- ======================================================================
+       Hero Section (Split Layout)
+       ====================================================================== -->
+  <section class="hero-split">
+    <div class="container hero-split-grid">
+      <div class="hero-split-content">
+        <span class="hero-badge">★ 100% Organic Jersey Dairy & Small Batch</span>
+        <h1 class="hero-title">
+          Pure Joy in Every <span class="hero-title-highlight">Scoop & Swirl</span>
+        </h1>
+        <p class="hero-lead">
+          Handcrafted daily using organic pasture-raised milk, slow-churned French techniques, and single-origin ingredients. Taste ice cream the way it was meant to be.
+        </p>
+        <div class="hero-cta-group">
+          <a href="pages/menu.html" class="btn btn-primary btn-lg">Explore Flavors</a>
+          <a href="pages/contact.html" class="btn btn-secondary btn-lg">Find Our Parlour</a>
+        </div>
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-value">28+</span>
+            <span class="stat-label">Artisan Flavors Daily</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Organic Milk & Cream</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">4.9 ★</span>
+            <span class="stat-label">Over 1,200 Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-card">
+          <img src="assets/images/hero-home1.jpg" alt="Artisan waffle cone with layered gourmet scoops" width="600" height="480">
+          <div class="hero-floating-pill">
+            <div>
+              <div class="pill-meta-title">Flavor of the Week</div>
+              <div class="pill-meta-sub">Wild Blueberry & Vanilla Bean</div>
+            </div>
+            <div class="pill-price">$4.50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 1: Signature Flavors Showcase
+       ====================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Signature Scoops</span>
+        <h2 class="section-title">Our Masterpiece Flavors</h2>
+        <p class="section-subtitle">
+          Each batch is churned in small 5-gallon pots to preserve dense creaminess and bold, authentic flavour profiles without synthetic extracts.
+        </p>
+      </div>
+
+      <div class="grid grid-4">
+        <!-- Flavor Card 1 -->
+        <div class="card flavor-card">
+          <div class="flavor-image-wrap">
+            <img src="assets/images/flavor-caramel.jpg" alt="Salted Butter Caramel Crunch ice cream scoop" width="300" height="220">
+            <span class="flavor-badge">Customer Favorite</span>
+          </div>
+          <div class="flavor-body">
+            <h3 class="flavor-name">Salted Butter Caramel</h3>
+            <p class="flavor-desc">
+              Slow-caramelized brown sugar ribboned with fleur de sel and crunchy honeycomb toffee bits.
+            </p>
+            <div class="flavor-meta">
+              <div class="flavor-meta-row">
+                <span class="badge badge-amber">Gluten-Free</span>
+                <span class="flavor-price">$4.50</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="scoop-caramel" data-name="Salted Butter Caramel" data-price="4.50" data-category="scoop">+ Order Scoop</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 2 -->
+        <div class="card flavor-card">
+          <div class="flavor-image-wrap">
+            <img src="assets/images/flavor-pistachio.jpg" alt="Sicilian Pistachio Deluxe gelato scoop" width="300" height="220">
+            <span class="flavor-badge">Award Winner</span>
+          </div>
+          <div class="flavor-body">
+            <h3 class="flavor-name">Sicilian Pistachio</h3>
+            <p class="flavor-desc">
+              Bronte pistachios roasted in-house, folded into an ultra-creamy velvety sweet cream base.
+            </p>
+            <div class="flavor-meta">
+              <div class="flavor-meta-row">
+                <span class="badge badge-mint">Nut Lovers</span>
+                <span class="flavor-price">$4.85</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="scoop-pistachio" data-name="Sicilian Pistachio" data-price="4.85" data-category="scoop">+ Order Scoop</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 3 -->
+        <div class="card flavor-card">
+          <div class="flavor-image-wrap">
+            <img src="assets/images/flavor-vanilla.jpg" alt="Madagascar Bourbon Vanilla Bean scoop" width="300" height="220">
+            <span class="flavor-badge">Classic Pure</span>
+          </div>
+          <div class="flavor-body">
+            <h3 class="flavor-name">Bourbon Vanilla Bean</h3>
+            <p class="flavor-desc">
+              Whole Madagascar vanilla pods steeped for 48 hours in Jersey cream for intense aromatic floral sweetness.
+            </p>
+            <div class="flavor-meta">
+              <div class="flavor-meta-row">
+                <span class="badge badge-primary">Classic</span>
+                <span class="flavor-price">$4.50</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="scoop-vanilla" data-name="Bourbon Vanilla Bean" data-price="4.50" data-category="scoop">+ Order Scoop</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 4 -->
+        <div class="card flavor-card">
+          <div class="flavor-image-wrap">
+            <img src="assets/images/flavor-chocolate.jpg" alt="Belgian Dark Chocolate Fudge scoop" width="300" height="220">
+            <span class="flavor-badge">72% Cacao</span>
+          </div>
+          <div class="flavor-body">
+            <h3 class="flavor-name">Dark Chocolate Fudge</h3>
+            <p class="flavor-desc">
+              Decadent 72% Belgian single-origin dark chocolate paired with thick cocoa fudge swirls.
+            </p>
+            <div class="flavor-meta">
+              <div class="flavor-meta-row">
+                <span class="badge badge-primary">Rich &amp; Dark</span>
+                <span class="flavor-price">$4.65</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-item" data-id="scoop-chocolate" data-name="Dark Chocolate Fudge" data-price="4.65" data-category="scoop">+ Order Scoop</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 2: Towering Gourmet Sundaes
+       ====================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Parlour Specialties</span>
+        <h2 class="section-title">Towering Gourmet Sundaes</h2>
+        <p class="section-subtitle">
+          Architectural masterpieces crafted with house-baked pastries, warm drizzle fountains, and clouds of fresh Chantilly cream.
+        </p>
+      </div>
+
+      <!-- Sundae 1 -->
+      <div class="sundae-showcase-item">
+        <div class="sundae-photo">
+          <img src="assets/images/sundae-brownie.jpg" alt="Warm skillet brownie topped with vanilla ice cream and fudge" width="550" height="340">
+        </div>
+        <div class="sundae-info">
+          <span class="badge badge-primary" style="margin-bottom: 0.75rem;">House Specialty</span>
+          <h3>The Brownie Avalanche</h3>
+          <p>
+            A warm, fudgy Valrhona chocolate brownie skillet crowned with two scoops of Bourbon Vanilla and Salted Caramel, submerged in hot chocolate ganache and candied pecans.
+          </p>
+          <ul class="sundae-layer-list">
+            <li>Warm Dutch cocoa skillet brownie base</li>
+            <li>Double scoop of slow-churned gelato</li>
+            <li>House-made hot fudge & crushed toasted pecans</li>
+            <li>Vanilla bean Chantilly whipped cream & Maraschino cherry</li>
+          </ul>
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span class="flavor-price" style="font-size: 1.6rem;">$11.50</span>
+            <button class="btn btn-primary btn-sm btn-order-item" data-id="sundae-brownie" data-name="The Brownie Avalanche Sundae" data-price="11.50" data-category="sundae">+ Order Sundae</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sundae 2 (Reverse layout) -->
+      <div class="sundae-showcase-item reverse">
+        <div class="sundae-photo">
+          <img src="assets/images/sundae-churro.jpg" alt="Warm churros served with a cup of rich chocolate dipping sauce" width="550" height="340">
+        </div>
+        <div class="sundae-info">
+          <span class="badge badge-amber" style="margin-bottom: 0.75rem;">Crispy & Warm</span>
+          <h3>Warm Churro Swirl Sundae</h3>
+          <p>
+            Crisp, golden cinnamon-sugar churro loops standing tall in scoops of Dulce de Leche and Mexican Dark Chocolate gelato, finished with spiced Mexican hot chocolate syrup.
+          </p>
+          <ul class="sundae-layer-list">
+            <li>Three freshly fried cinnamon-sugar churros</li>
+            <li>Dulce de Leche & Dark Chocolate gelato scoops</li>
+            <li>Warm spiced cajeta caramel drizzle</li>
+            <li>Toasted salted almonds & whipped mascarpone</li>
+          </ul>
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span class="flavor-price" style="font-size: 1.6rem;">$12.00</span>
+            <button class="btn btn-primary btn-sm btn-order-item" data-id="sundae-churro" data-name="Warm Churro Swirl Sundae" data-price="12.00" data-category="sundae">+ Order Sundae</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sundae 3 -->
+      <div class="sundae-showcase-item">
+        <div class="sundae-photo">
+          <img src="assets/images/sundae-strawberry.jpg" alt="Strawberry Shortcake Delight Sundae with fresh berries" width="550" height="340">
+        </div>
+        <div class="sundae-info">
+          <span class="badge badge-mint" style="margin-bottom: 0.75rem;">Summer Favorite</span>
+          <h3>Strawberry Shortcake Delight</h3>
+          <p>
+            Fluffy house-baked butter biscuit layered with Madagascar Sweet Cream, balsamic macerated farm strawberries, and strawberry coulis topped with shortbread crumbs.
+          </p>
+          <ul class="sundae-layer-list">
+            <li>Warm flaky golden butter biscuit</li>
+            <li>Fresh strawberry compote & balsamic drizzle</li>
+            <li>Sweet cream gelato & crunchy biscuit crumbles</li>
+            <li>Edible pink sugar petals & whipped cream</li>
+          </ul>
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span class="flavor-price" style="font-size: 1.6rem;">$10.75</span>
+            <button class="btn btn-primary btn-sm btn-order-item" data-id="sundae-strawberry" data-name="Strawberry Shortcake Delight Sundae" data-price="10.75" data-category="sundae">+ Order Sundae</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 3: The Artisan Churning Process
+       ====================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Craftsmanship</span>
+        <h2 class="section-title">How We Churn Perfection</h2>
+        <p class="section-subtitle">
+          We refuse to take shortcuts. Real ice cream requires pure ingredients, patience, and meticulous temperature control.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <h4>Organic Jersey Milk</h4>
+          <p>
+            Sourced exclusively from pastured Jersey cows with 18% natural butterfat, creating an unmatched velvety body without gums or stabilisers.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <h4>Slow Pot Churning</h4>
+          <p>
+            We churn at low RPM to incorporate less than 20% air overrun. The result is remarkably dense, rich ice cream that melts slowly on your palate.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <h4>Hand-Folded Inclusions</h4>
+          <p>
+            Caramels, brownies, fruit jams, and nut pastes are prepared in our bakery kitchen and swirled gently into the churned base by hand.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card">
+          <div class="process-step-num">4</div>
+          <h4>Optimal -12°C Service</h4>
+          <p>
+            Maintained at precisely -12°C in our bespoke pozzetti dip cabinets, ensuring immediate softness and pristine taste without ice crystallization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 4: Guest Love & Verified Tasting Reviews
+       ====================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Guest Love</span>
+        <h2 class="section-title">What Our Scoop Fans Say</h2>
+        <p class="section-subtitle">
+          Thousands of happy dessert lovers visit our parlour doors every week. Here is what keeps them coming back.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Review 1 -->
+        <div class="card testimonial-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "The Salted Butter Caramel is in a league of its own. You can taste the genuine cream and pure butter. The homemade waffle cones are still warm when they hand them to you!"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Maya Rodriguez</div>
+              <div class="author-title">Food & Travel Columnist</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="card testimonial-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "We ordered the Brownie Avalanche for our anniversary dessert date and were blown away. The parlour ambiance is warm, welcoming, and the team lets you sample generously."
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">DL</div>
+            <div>
+              <div class="author-name">David &amp; Lucas Chen</div>
+              <div class="author-title">Local Foodies & Regulars</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="card testimonial-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "As someone with gluten sensitivities, finding a parlour that takes cross-contamination seriously and makes gluten-free waffle cones was a dream come true. 10/10!"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">SP</div>
+            <div>
+              <div class="author-name">Sarah Patel</div>
+              <div class="author-title">Verified Dessert Connoisseur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Section 5: Final Next-Step CTA Banner
+       ====================================================================== -->
+  <div class="container">
+    <section class="cta-banner">
+      <h2 class="cta-banner-title">Craving Something Sweet Tonight?</h2>
+      <p class="cta-banner-desc">
+        Our parlour doors are open until 11:00 PM every night. Order ahead for lightning-fast express counter pickup, or sink into our cozy booths.
+      </p>
+      <div class="cta-banner-actions">
+        <a href="pages/menu.html" class="btn btn-primary btn-lg">Order Online Now</a>
+        <a href="pages/contact.html" class="btn btn-secondary btn-lg">View Locations & Hours</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================================
+       Site Footer (Identical Across All Pages)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">
+            <img src="assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+            <span class="logo-text">
+              <span class="logo-title">Scoop & Swirl</span>
+              <span class="logo-tagline">Artisan Parlour</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Handcrafted small-batch ice creams, towering waffle sundaes, thick shakes, and celebration gelato cakes made fresh daily.
+          </p>
+        </div>
+
+        <!-- Links Group 1: Home -->
+        <div>
+          <h4 class="footer-group-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 2: Parlour -->
+        <div>
+          <h4 class="footer-group-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/menu.html" class="footer-link">Menu</a></li>
+            <li><a href="pages/offers.html" class="footer-link">Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 3: Orders -->
+        <div>
+          <h4 class="footer-group-title">Orders</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/party-orders.html" class="footer-link">Party Orders</a></li>
+            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Scoop &amp; Swirl Parlour. All rights reserved.
+        </div>
+        <div>
+          Hours: Monday – Sunday: 11:00 AM – 11:00 PM
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>International | Wanderkite Holidays</title>
+  <meta name="description" content="International holiday packages with return flights from 8 Indian cities — Bali, Thailand, Vietnam, Dubai, Japan, Europe, Maldives and Kenya.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="../assets/images/logo.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">
+              Home <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/domestic.html">Domestic</a></li>
+          <li><a class="nav-link" href="../pages/international.html" aria-current="page">International</a></li>
+          <li><a class="nav-link" href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        <a class="btn btn--sm" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===== 1. PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="int-title">
+      <img class="hero-bg" src="../assets/images/hero-international.jpg" alt="Swiss alpine village beside a waterfall and towering cliffs in the Lauterbrunnen valley" width="1920" height="1280" fetchpriority="high">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">International</span></li></ol>
+        </nav>
+        <h1 id="int-title">International holidays, flights included</h1>
+        <p class="lead">Nine ready itineraries across Asia, the Middle East, Europe, the Indian Ocean and Africa — priced with return flights, visas and insurance, so the number you see is the number you pay.</p>
+        <ul class="hero-facts">
+          <li>Departures from 8 Indian cities</li>
+          <li>Visa paperwork done for you</li>
+          <li>0% EMI on 3 or 6 months</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 2. PACKAGE FINDER ===== -->
+    <section class="section" id="packages" aria-labelledby="ipk-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">International packages</p>
+          <h2 id="ipk-title">Choose a region, compare, save your favourites</h2>
+          <p>Prices are per person on twin sharing with return economy flights from Delhi or Mumbai. Departing from another city? Your planner re-quotes in minutes.</p>
+        </div>
+
+        <div class="toolbar" data-filter-root="international">
+          <div class="chip-group" role="group" aria-label="Filter by region">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="asia" aria-pressed="false">Southeast &amp; East Asia</button>
+            <button class="chip" type="button" data-filter="middle-east" aria-pressed="false">Middle East</button>
+            <button class="chip" type="button" data-filter="europe" aria-pressed="false">Europe &amp; Turkey</button>
+            <button class="chip" type="button" data-filter="islands-africa" aria-pressed="false">Islands &amp; Africa</button>
+          </div>
+          <div class="toolbar-right">
+            <label class="visually-hidden" for="int-search">Search packages</label>
+            <input class="input" id="int-search" type="search" placeholder="Search e.g. Bali, safari" data-search>
+            <label class="visually-hidden" for="int-sort">Sort packages</label>
+            <select class="select" id="int-sort" data-sort>
+              <option value="popular">Most popular</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="nights">Shortest trip first</option>
+            </select>
+          </div>
+        </div>
+        <p class="result-count" data-count aria-live="polite">Showing 9 packages</p>
+
+        <div class="grid grid-3" data-grid>
+          <article class="pkg-card" id="pkg-bali" data-style="asia" data-price="54900" data-nights="6" data-pop="1"
+            data-id="int-bali" data-title="Bali: Ubud &amp; Seminyak" data-img="int-bali.jpg" data-duration="6N/7D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-bali.jpg" alt="Terraced green rice fields surrounded by palm jungle in Ubud, Bali" width="800" height="600" loading="lazy">
+              <span class="tag">Indonesia</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Bali: Ubud &amp; Seminyak">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 6N / 7D</span><span>✈ Flights included</span></div>
+              <h3>Bali: Ubud &amp; Seminyak</h3>
+              <ul class="pkg-list">
+                <li><span>3 nights in an Ubud pool villa, 3 by Seminyak beach</span></li>
+                <li><span>Kintamani volcano view and Tegallalang terraces</span></li>
+                <li><span>Nusa Penida day trip by fast boat</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹54,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Bali%3A%20Ubud%20%26%20Seminyak#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-thailand" data-style="asia" data-price="48900" data-nights="6" data-pop="2"
+            data-id="int-thailand" data-title="Phuket, Krabi &amp; Phi Phi" data-img="int-thailand.jpg" data-duration="6N/7D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-thailand.jpg" alt="Speedboats in an emerald bay ringed by steep limestone cliffs in Thailand" width="800" height="600" loading="lazy">
+              <span class="tag">Thailand</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Phuket, Krabi &amp; Phi Phi">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 6N / 7D</span><span>✈ Flights included</span></div>
+              <h3>Phuket, Krabi &amp; Phi Phi</h3>
+              <ul class="pkg-list">
+                <li><span>Phi Phi islands by speedboat with lunch</span></li>
+                <li><span>Four-island tour from Ao Nang, Krabi</span></li>
+                <li><span>Phuket old town and Big Buddha at sunset</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹48,900</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Phuket%2C%20Krabi%20%26%20Phi%20Phi#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-dubai" data-style="middle-east" data-price="46500" data-nights="4" data-pop="3"
+            data-id="int-dubai" data-title="Dubai City &amp; Desert" data-img="int-dubai.jpg" data-duration="4N/5D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-dubai.jpg" alt="Looking up at the Burj Khalifa and Downtown Dubai towers against a blue sky" width="800" height="600" loading="lazy">
+              <span class="tag">UAE</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Dubai City &amp; Desert">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 4N / 5D</span><span>✈ Flights included</span></div>
+              <h3>Dubai City &amp; Desert</h3>
+              <ul class="pkg-list">
+                <li><span>Burj Khalifa level 124 at a sunset slot</span></li>
+                <li><span>Desert safari with dune bashing and BBQ dinner</span></li>
+                <li><span>Dhow dinner cruise on Dubai Marina</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹46,500</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Dubai%20City%20%26%20Desert#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-maldives" data-style="islands-africa" data-price="89000" data-nights="4" data-pop="4"
+            data-id="int-maldives" data-title="Maldives Water Villa Escape" data-img="int-maldives.jpg" data-duration="4N/5D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-maldives.jpg" alt="Overwater villas with thatched roofs on stilts above a clear turquoise lagoon" width="800" height="600" loading="lazy">
+              <span class="tag">Maldives</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Maldives Water Villa Escape">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 4N / 5D</span><span>✈ Flights included</span></div>
+              <h3>Maldives Water Villa Escape</h3>
+              <ul class="pkg-list">
+                <li><span>2 nights beach villa + 2 nights water villa</span></li>
+                <li><span>Half board with a sandbank picnic</span></li>
+                <li><span>Speedboat transfers from Malé</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹89,000</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Maldives%20Water%20Villa%20Escape#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-vietnam" data-style="asia" data-price="74500" data-nights="7" data-pop="5"
+            data-id="int-vietnam" data-title="Vietnam: Hanoi, Ha Long &amp; Saigon" data-img="int-vietnam.jpg" data-duration="7N/8D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-vietnam.jpg" alt="Boats sailing between forested limestone islands in Ha Long Bay, Vietnam" width="800" height="600" loading="lazy">
+              <span class="tag">Vietnam</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Vietnam: Hanoi, Ha Long &amp; Saigon">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 7N / 8D</span><span>✈ Flights included</span></div>
+              <h3>Vietnam: Hanoi, Ha Long &amp; Saigon</h3>
+              <ul class="pkg-list">
+                <li><span>Overnight cruise in Ha Long Bay with kayaking</span></li>
+                <li><span>Hanoi Old Quarter street-food evening</span></li>
+                <li><span>Cu Chi tunnels and Mekong delta day trip</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹74,500</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Vietnam%3A%20Hanoi%2C%20Ha%20Long%20%26%20Saigon#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-turkey" data-style="europe" data-price="112000" data-nights="7" data-pop="6"
+            data-id="int-turkey" data-title="Istanbul &amp; Cappadocia" data-img="int-turkey.jpg" data-duration="7N/8D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-turkey.jpg" alt="The Blue Mosque in Istanbul with its domes and six minarets" width="800" height="600" loading="lazy">
+              <span class="tag">Turkey</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Istanbul &amp; Cappadocia">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 7N / 8D</span><span>✈ Flights included</span></div>
+              <h3>Istanbul &amp; Cappadocia</h3>
+              <ul class="pkg-list">
+                <li><span>Hagia Sophia, Topkapı Palace and a Bosphorus cruise</span></li>
+                <li><span>Two nights in a Cappadocia cave hotel</span></li>
+                <li><span>Domestic flight Istanbul–Kayseri included</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹1,12,000</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Istanbul%20%26%20Cappadocia#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-kenya" data-style="islands-africa" data-price="164000" data-nights="6" data-pop="7"
+            data-id="int-kenya" data-title="Kenya: Masai Mara Safari" data-img="int-kenya.jpg" data-duration="6N/7D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-kenya.jpg" alt="Safari vehicle on the savanna at sunset among acacia trees" width="800" height="600" loading="lazy">
+              <span class="tag">Kenya</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Kenya: Masai Mara Safari">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 6N / 7D</span><span>✈ Flights included</span></div>
+              <h3>Kenya: Masai Mara Safari</h3>
+              <ul class="pkg-list">
+                <li><span>3 nights in a tented camp inside the Mara</span></li>
+                <li><span>Pop-up-roof 4×4 with a private driver-guide</span></li>
+                <li><span>Lake Nakuru flamingos and rhino sanctuary</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹1,64,000</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Kenya%3A%20Masai%20Mara%20Safari#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-japan" data-style="asia" data-price="218000" data-nights="8" data-pop="8"
+            data-id="int-japan" data-title="Japan: Tokyo, Hakone &amp; Kyoto" data-img="int-japan.jpg" data-duration="8N/9D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-japan.jpg" alt="Snow-capped Mount Fuji framed by pink cherry blossoms" width="800" height="600" loading="lazy">
+              <span class="tag">Japan</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Japan: Tokyo, Hakone &amp; Kyoto">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 8N / 9D</span><span>✈ Flights included</span></div>
+              <h3>Japan: Tokyo, Hakone &amp; Kyoto</h3>
+              <ul class="pkg-list">
+                <li><span>7-day Japan Rail Pass with bullet trains</span></li>
+                <li><span>A night in a Hakone ryokan with hot springs</span></li>
+                <li><span>Fushimi Inari and Arashiyama bamboo grove</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹2,18,000</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Japan%3A%20Tokyo%2C%20Hakone%20%26%20Kyoto#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg-card" id="pkg-europe" data-style="europe" data-price="245000" data-nights="9" data-pop="9"
+            data-id="int-europe" data-title="Paris, Swiss Alps &amp; Venice" data-img="int-paris.jpg" data-duration="9N/10D" data-type="International" data-page="international.html">
+            <div class="pkg-media">
+              <img src="../assets/images/int-paris.jpg" alt="The Eiffel Tower above the Seine in Paris at dusk" width="800" height="600" loading="lazy">
+              <span class="tag">Europe</span>
+              <button class="save-btn" type="button" aria-pressed="false" aria-label="Save Paris, Swiss Alps &amp; Venice">♡</button>
+            </div>
+            <div class="pkg-body">
+              <div class="pkg-meta"><span>🕒 9N / 10D</span><span>✈ Flights included</span></div>
+              <h3>Paris, Swiss Alps &amp; Venice</h3>
+              <ul class="pkg-list">
+                <li><span>Seine cruise and skip-the-line Louvre entry</span></li>
+                <li><span>Jungfraujoch excursion from Interlaken</span></li>
+                <li><span>Gondola ride and Murano glass island in Venice</span></li>
+              </ul>
+              <div class="pkg-foot">
+                <p class="price"><small>from</small><strong>₹2,45,000</strong> <span class="per">/ person</span></p>
+                <a class="btn btn--sm" href="contact.html?package=Paris%2C%20Swiss%20Alps%20%26%20Venice#enquiry">Enquire</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" data-empty>No packages match that search. Try another country, or <a href="contact.html#enquiry">ask us to build one</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== 3. VISA ASSISTANCE ===== -->
+    <section class="section section--alt" aria-labelledby="visa-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Visa assistance</p>
+          <h2 id="visa-title">The visa for each trip, and how long it takes</h2>
+          <p>For Indian passport holders. We fill the forms, book biometrics where needed and track your application until it's approved.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th scope="col">Destination</th><th scope="col">Visa we arrange</th><th scope="col">Typical processing</th><th scope="col">Our service fee</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Destination"><strong>Maldives</strong></td><td data-label="Visa we arrange">Free visa on arrival, 30 days</td><td data-label="Typical processing">Not needed</td><td data-label="Our service fee">Free</td></tr>
+              <tr><td data-label="Destination"><strong>Indonesia (Bali)</strong></td><td data-label="Visa we arrange">e-Visa on Arrival, 30 days</td><td data-label="Typical processing">3–5 working days</td><td data-label="Our service fee">₹1,500</td></tr>
+              <tr><td data-label="Destination"><strong>Thailand</strong></td><td data-label="Visa we arrange">Visa exemption or e-Visa, as per current rules</td><td data-label="Typical processing">2–7 working days</td><td data-label="Our service fee">₹1,500</td></tr>
+              <tr><td data-label="Destination"><strong>UAE (Dubai)</strong></td><td data-label="Visa we arrange">Tourist e-Visa, 30 days</td><td data-label="Typical processing">3–4 working days</td><td data-label="Our service fee">₹1,800</td></tr>
+              <tr><td data-label="Destination"><strong>Vietnam</strong></td><td data-label="Visa we arrange">e-Visa, single entry</td><td data-label="Typical processing">4–6 working days</td><td data-label="Our service fee">₹2,000</td></tr>
+              <tr><td data-label="Destination"><strong>Kenya</strong></td><td data-label="Visa we arrange">Electronic Travel Authorisation (eTA)</td><td data-label="Typical processing">3–5 working days</td><td data-label="Our service fee">₹1,800</td></tr>
+              <tr><td data-label="Destination"><strong>Japan</strong></td><td data-label="Visa we arrange">Tourist visa via the Japan eVISA system</td><td data-label="Typical processing">5–8 working days</td><td data-label="Our service fee">₹2,500</td></tr>
+              <tr><td data-label="Destination"><strong>Turkey</strong></td><td data-label="Visa we arrange">e-Visa if eligible, otherwise sticker visa</td><td data-label="Typical processing">3–15 working days</td><td data-label="Our service fee">₹2,500</td></tr>
+              <tr><td data-label="Destination"><strong>Schengen</strong> (France, Switzerland, Italy)</td><td data-label="Visa we arrange">Short-stay visa with VFS biometrics</td><td data-label="Typical processing">15–30 working days</td><td data-label="Our service fee">₹3,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Embassy fees are charged at actual cost. Entry rules change often, so we confirm the latest guidance on the day you book — and refund our service fee if a visa is refused.</p>
+      </div>
+    </section>
+
+    <!-- ===== 4. COST BREAKDOWN ===== -->
+    <section class="section" aria-labelledby="cost-title">
+      <div class="container split" style="align-items:start">
+        <div>
+          <p class="eyebrow">Transparent pricing</p>
+          <h2 id="cost-title">Where every rupee of a Bali trip goes</h2>
+          <p class="lead">Every international quote comes itemised like this, so you can compare us line by line with booking it all yourself.</p>
+          <ul class="check-list">
+            <li><span>Flight fares shown with the airline and baggage allowance</span></li>
+            <li><span>Hotel names and room types fixed before you pay</span></li>
+            <li><span>Our margin is built in — no booking or convenience fees on top</span></li>
+            <li><span>TCS on overseas packages is collected as per income-tax rules and can be claimed back when you file</span></li>
+          </ul>
+          <a class="btn" href="contact.html?package=Bali%3A%20Ubud%20%26%20Seminyak#enquiry">Get an Itemised Quote</a>
+        </div>
+        <div class="breakdown-card">
+          <h3 class="mt-0">Bali: Ubud &amp; Seminyak · 6N / 7D</h3>
+          <p class="muted" style="margin:0">Per person, twin sharing, ex-Bengaluru</p>
+          <div class="stack-bar" role="img" aria-label="Flights 43%, hotels 30%, transfers and tours 14%, visa and insurance 6%, GST 7%">
+            <span class="c1" style="width:43%"></span><span class="c2" style="width:30%"></span><span class="c3" style="width:14%"></span><span class="c4" style="width:6%"></span><span class="c5" style="width:7%"></span>
+          </div>
+          <ul class="legend">
+            <li><span class="sw c1"></span><span><b>Return flights</b><small>Bengaluru – Denpasar via Singapore, 30 kg baggage</small></span><span class="amt">₹23,800</span></li>
+            <li><span class="sw c2"></span><span><b>Hotels with breakfast</b><small>3N Ubud pool villa + 3N Seminyak resort</small></span><span class="amt">₹16,700</span></li>
+            <li><span class="sw c3"></span><span><b>Private transfers &amp; tours</b><small>Kintamani, Nusa Penida, Tanah Lot</small></span><span class="amt">₹7,600</span></li>
+            <li><span class="sw c4"></span><span><b>Visa &amp; travel insurance</b><small>e-VOA and ₹25 lakh medical cover</small></span><span class="amt">₹3,100</span></li>
+            <li><span class="sw c5"></span><span><b>GST at 5%</b><small>On the tour package value</small></span><span class="amt">₹3,700</span></li>
+          </ul>
+          <div class="total-row"><span>Total per person</span><span>₹54,900</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CTA ===== -->
+    <section class="cta-band" aria-labelledby="int-cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow--light">Flying from somewhere else?</p>
+          <h2 id="int-cta">Get these trips priced from your home airport</h2>
+          <p>Chennai, Hyderabad, Kolkata, Kochi or Ahmedabad — share your city and dates, and we'll send an updated itemised quote the same day.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="contact.html?package=International%20quote#enquiry">Request My Quote</a>
+          <a class="link-arrow link-arrow--light" href="honeymoon-family.html">Honeymoon &amp; Family trips <span class="flip" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+            <img src="../assets/images/logo.png" alt="" width="42" height="42">
+            <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+          </a>
+          <p>Handcrafted holiday packages across India and 30+ countries, planned by real people in Bengaluru since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Packages</h3>
+          <ul>
+            <li><a href="../pages/domestic.html">Domestic</a></li>
+            <li><a href="../pages/international.html">International</a></li>
+            <li><a href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="../pages/signin.html">Sign In</a></li>
+            <li><a href="../pages/signup.html">Sign Up</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year">2026</span> Wanderkite Holidays Pvt. Ltd. · IATA-accredited travel agent · All prices in Indian Rupees (₹)</p>
+        <button class="to-top" type="button" data-scroll-top>Back to top <span aria-hidden="true">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

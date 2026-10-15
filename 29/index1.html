@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Find a cooking class by cuisine and skill level, see per-seat pricing, book private events and order gift cards at Copper Pot Cooking Studio.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-link is-active" href="index1.html" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pages/classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/workshops.html">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Hero (full-bleed photo + class finder) ===== -->
+    <section class="hero-full" aria-labelledby="hero2-title">
+      <div class="hero-full-bg">
+        <img src="assets/images/hero-home2-cooking-together.jpg" alt="Three friends laughing while cooking together at a kitchen island with teal cookware" width="1920" height="1100">
+      </div>
+      <div class="container">
+        <div class="hero-full-content">
+          <span class="eyebrow">Classes · Weekend workshops · Private events</span>
+          <h1 id="hero2-title">Pick a cuisine. Pick your level. We'll handle the rest.</h1>
+          <p class="lead">Tell us what you'd like to cook and how confident you feel in the kitchen. We'll show you the classes that fit, with real dates and seats you can book today.</p>
+          <form class="finder" action="pages/classes.html#catalog" method="get" aria-label="Find a class">
+            <div class="field">
+              <label for="find-cuisine">Cuisine</label>
+              <select class="select" id="find-cuisine" name="cuisine">
+                <option value="all">Any cuisine</option>
+                <option value="italian">Italian</option>
+                <option value="japanese">Japanese</option>
+                <option value="indian">Indian</option>
+                <option value="thai">Thai</option>
+                <option value="mexican">Mexican</option>
+                <option value="french">French</option>
+                <option value="spanish">Spanish</option>
+                <option value="fundamentals">Fundamentals</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="find-level">Skill level</label>
+              <select class="select" id="find-level" name="level">
+                <option value="all">Any level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Find classes</button>
+          </form>
+          <p class="hero-popular">Popular right now:
+            <a href="pages/classes.html?cuisine=japanese#catalog">Sushi</a> ·
+            <a href="pages/classes.html?cuisine=italian#catalog">Fresh pasta</a> ·
+            <a href="pages/classes.html?level=beginner#catalog">Beginner nights</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. The studio: numbers + bento ===== -->
+    <section class="section" aria-labelledby="studio-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The studio</span>
+          <h2 id="studio-title">Built for cooking, not watching</h2>
+          <p class="lead">No mirrors-and-stools demo theatre here. Every seat comes with a full station, so the whole class is hands-on.</p>
+        </div>
+        <div class="stats-row reveal">
+          <div class="stat"><strong>140+</strong><span>class dates on the calendar each season</span></div>
+          <div class="stat"><strong>11</strong><span>Oregon farms and fishers we buy from</span></div>
+          <div class="stat"><strong>38,400</strong><span>home cooks taught since 2016</span></div>
+          <div class="stat"><strong>96%</strong><span>of students book a second class</span></div>
+        </div>
+        <div class="bento">
+          <article class="bento-tile bento-photo bento-a reveal">
+            <img src="assets/images/home2-studio-stations.jpg" alt="Bright studio kitchen with white counters, open shelves and red enamel pots" width="900" height="700" loading="lazy">
+            <span class="chip">Your station</span>
+            <h3>Two burners, one board, all yours</h3>
+            <p>Each station has two induction burners, a full-size board, a German chef's knife and every pan the recipe needs. No sharing, no waiting.</p>
+          </article>
+          <article class="bento-tile bento-b reveal">
+            <span class="badge-icon" aria-hidden="true">✓</span>
+            <h3>Tested on home stoves</h3>
+            <p>Every recipe is re-tested on an ordinary four-burner range before class, so it works in your kitchen, not just ours.</p>
+          </article>
+          <article class="bento-tile bento-photo bento-c reveal">
+            <img src="assets/images/home2-local-produce.jpg" alt="Cutting board with avocado, cherry tomatoes, eggs, mushrooms, spinach and spring onions" width="900" height="700" loading="lazy">
+            <span class="chip">Sourcing</span>
+            <h3>Seasonal and local</h3>
+            <p>Produce from Sauvie Island growers, flour milled in the Willamette Valley, fish delivered the morning of class.</p>
+          </article>
+          <article class="bento-tile bento-photo bento-d reveal">
+            <img src="assets/images/home2-wine-pairing.jpg" alt="Friends raising glasses of red wine in a toast" width="900" height="700" loading="lazy">
+            <span class="chip">At the table</span>
+            <h3>A pairing poured with dinner</h3>
+            <p>Every evening class includes a glass of Oregon wine or a house-made shrub soda when you sit down to eat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Private events ===== -->
+    <section class="section section--alt" aria-labelledby="events-title">
+      <div class="container split">
+        <div class="events-media reveal">
+          <img src="assets/images/home2-private-dinner.jpg" alt="Guests at a candlelit dinner table being served a plated course" width="1000" height="1100" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Private events</span>
+          <h2 id="events-title">Cook together, then celebrate together</h2>
+          <p class="lead">Book the whole studio for your team, a birthday or the night before a wedding. We plan the menu with you, run the class and set the long table.</p>
+          <ul class="event-list">
+            <li>
+              <span class="badge-icon" aria-hidden="true">⚑</span>
+              <div><h3>Team cook-offs</h3><p>8–24 guests · 3 hours. Teams get a mystery basket and the chef judges the plates.</p></div>
+            </li>
+            <li>
+              <span class="badge-icon" aria-hidden="true">✦</span>
+              <div><h3>Birthdays &amp; celebrations</h3><p>6–16 guests. Choose any class menu and we'll add a celebration cake from our pastry room.</p></div>
+            </li>
+            <li>
+              <span class="badge-icon" aria-hidden="true">♥</span>
+              <div><h3>Rehearsal &amp; family dinners</h3><p>Up to 24 guests. Everyone cooks the starters together, the chefs finish the mains.</p></div>
+            </li>
+          </ul>
+          <a class="link-arrow" href="pages/contact.html?topic=private">Plan a private event <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Pricing ===== -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2 id="pricing-title">Simple, per-seat pricing</h2>
+          <p class="lead">Every price includes ingredients, apron and the meal itself. No membership and no booking fees.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <h3>Evening class</h3>
+            <span class="from">From</span>
+            <span class="amount">$75 <small>/ seat</small></span>
+            <p>Weeknight and weekend-morning classes, 2.5 to 4.5 hours long.</p>
+            <ul class="check-list">
+              <li>Beginner classes $75–$95</li>
+              <li>Intermediate classes $105–$119</li>
+              <li>Advanced classes $139–$165</li>
+            </ul>
+            <a class="link-arrow" href="pages/classes.html#catalog">Browse classes <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="price-card is-featured reveal">
+            <span class="price-flag">Best value</span>
+            <h3>5-Class Pass</h3>
+            <span class="from">One payment of</span>
+            <span class="amount">$425</span>
+            <p>Five seats for any class priced up to $125, valid for 12 months.</p>
+            <ul class="check-list">
+              <li>Save up to $200 on single seats</li>
+              <li>Share credits with a friend</li>
+              <li>Book and track credits in your dashboard</li>
+            </ul>
+            <a class="btn btn--block" href="pages/signup.html">Get the pass</a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Weekend workshop</h3>
+            <span class="from">From</span>
+            <span class="amount">$295 <small>/ person</small></span>
+            <p>Two-day deep dives, Saturday and Sunday, 10 AM–4 PM.</p>
+            <ul class="check-list">
+              <li>Lunch served both days</li>
+              <li>Skill kit to take home</li>
+              <li>Maximum 10 students</li>
+            </ul>
+            <a class="link-arrow" href="pages/workshops.html">See workshop dates <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Private group</h3>
+            <span class="from">From</span>
+            <span class="amount">$1,250</span>
+            <p>Exclusive use of the studio for up to 10 guests.</p>
+            <ul class="check-list">
+              <li>$95 per extra guest, up to 24</li>
+              <li>Custom menu planning call</li>
+              <li>Weekday and weekend dates</li>
+            </ul>
+            <a class="link-arrow" href="pages/contact.html?topic=private">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <div class="policy-strip reveal">
+          <p><strong>Free date changes</strong>Move or cancel up to 72 hours before class for a full credit.</p>
+          <p><strong>Cooking as a pair?</strong>Book two seats and we'll put you side by side on a double bench.</p>
+          <p><strong>Card or pass credits</strong>Pay either way. Receipts are saved to your student account.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Student reviews ===== -->
+    <section class="section section--alt" aria-labelledby="reviews-title">
+      <div class="container reviews-layout">
+        <aside class="rating-panel reveal" aria-label="Average rating">
+          <div class="score">4.9</div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>Average from 2,340 verified student reviews since 2016.</p>
+          <ul class="rating-bars">
+            <li><span>5★</span><span class="bar"><i style="width:91%"></i></span><span>91%</span></li>
+            <li><span>4★</span><span class="bar"><i style="width:7%"></i></span><span>7%</span></li>
+            <li><span>3★</span><span class="bar"><i style="width:1%"></i></span><span>1%</span></li>
+            <li><span>2★</span><span class="bar"><i style="width:1%"></i></span><span>1%</span></li>
+            <li><span>1★</span><span class="bar"><i style="width:0%"></i></span><span>0%</span></li>
+          </ul>
+        </aside>
+        <div>
+          <div class="section-head reveal">
+            <span class="eyebrow">Student reviews</span>
+            <h2 id="reviews-title">What students cooked next</h2>
+            <p class="lead">The best measure of a class is what people make at home afterwards.</p>
+          </div>
+          <div class="review-columns">
+            <figure class="review reveal">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote>I've made the carbonara four times since class. Elena's trick of loosening the eggs with pasta water finally made it click. No more scrambled sauce.</blockquote>
+              <figcaption><img src="assets/images/student-hannah.jpg" alt="Hannah Price" width="200" height="200" loading="lazy"><div><strong>Hannah Price</strong><span>Roman Pasta Classics</span></div></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote>Two and a half hours and my weeknight prep time is honestly cut in half. Worth it just for learning to hone a knife properly.</blockquote>
+              <figcaption><img src="assets/images/student-marcus.jpg" alt="Marcus Reyes" width="200" height="200" loading="lazy"><div><strong>Marcus Reyes</strong><span>Knife Skills Bootcamp</span></div></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote>Came as a total beginner with my sister. Kenji was patient and funny, and our rolls actually looked like the photos.</blockquote>
+              <figcaption><img src="assets/images/student-grace.jpg" alt="Grace Whitman" width="200" height="200" loading="lazy"><div><strong>Grace Whitman</strong><span>Sushi Rolling Basics</span></div></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote>The best money I've spent on cooking. Two full days, lunch both days, and I left with a cast-iron pan and real confidence at the grill.</blockquote>
+              <figcaption><img src="assets/images/student-david.jpg" alt="David Klein" width="200" height="200" loading="lazy"><div><strong>David Klein</strong><span>Fire &amp; Steak Weekend</span></div></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <span class="stars" aria-label="4 out of 5 stars">★★★★☆</span>
+              <blockquote>Somchai taught us to taste and adjust instead of following a recipe blindly. My pad thai finally tastes like the stalls in Chiang Mai. I'd love a longer class!</blockquote>
+              <figcaption><img src="assets/images/student-sofia.jpg" alt="Sofia Marín" width="200" height="200" loading="lazy"><div><strong>Sofia Marín</strong><span>Thai Street Wok</span></div></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote>We booked a cook-off for 18 people. Planning took one call, and even our least kitchen-confident engineers were plating like pros by the end.</blockquote>
+              <figcaption><img src="assets/images/student-james.jpg" alt="James Moreau" width="200" height="200" loading="lazy"><div><strong>James Moreau</strong><span>Private team event</span></div></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Gift cards (closing call to action) ===== -->
+    <section class="section" aria-labelledby="gift-title">
+      <div class="container gift">
+        <div class="gift-media reveal">
+          <img src="assets/images/home2-gift-fruit-tarts.jpg" alt="Rows of small fruit tarts topped with berries, kiwi and edible flowers" width="900" height="900" loading="lazy">
+          <div class="gift-card-mock" aria-hidden="true">
+            <div class="gc-top"><img src="assets/images/logo-mark.png" alt="" width="28" height="28"> Copper Pot</div>
+            <span class="gc-amount">$95</span>
+            <small>Gift card · one evening class</small>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Gift cards</span>
+          <h2 id="gift-title">Give someone a seat at the table</h2>
+          <p class="lead">Gift cards arrive by email within minutes and never expire. Whoever receives it picks the class and date that suit them.</p>
+          <ul class="gift-options">
+            <li><strong>$50</strong><span>Put toward any class or workshop</span></li>
+            <li><strong>$95</strong><span>Covers one beginner evening class</span></li>
+            <li><strong>$425</strong><span>The 5-Class Pass, wrapped as a gift</span></li>
+          </ul>
+          <div class="gift-actions">
+            <a class="btn btn--lg" href="pages/contact.html?topic=gift">Order a gift card</a>
+            <a class="link-arrow" href="pages/classes.html#catalog">Or book your own seat <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="pages/classes.html">Classes</a></li>
+            <li><a href="pages/workshops.html">Weekend Workshops</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="index.html#chefs">Chefs</a></li>
+            <li><a href="index1.html#pricing">Pricing</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

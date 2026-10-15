@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Strand &amp; Steel</title>
+  <meta name="description" content="Haircuts, coloring, beard trims and styling at Strand &amp; Steel, explained plainly, plus add-on treatments and a service finder.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="../assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/services.html" aria-current="page">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="../pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container split">
+        <div data-reveal>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home 1</a></li>
+              <li><span aria-current="page">Services</span></li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Haircuts · Coloring · Beard trims · Styling</p>
+          <h1 id="page-title">Services</h1>
+          <p class="lead">Everything we do, explained plainly — what each service is for, what's included and what happens in the chair, so you can book with confidence.</p>
+          <ul class="chip-list" aria-label="Jump to a service category">
+            <li><a class="chip" href="#haircuts">Haircuts</a></li>
+            <li><a class="chip" href="#coloring">Coloring</a></li>
+            <li><a class="chip" href="#beard-trims">Beard Trims</a></li>
+            <li><a class="chip" href="#styling">Styling</a></li>
+          </ul>
+        </div>
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/services-hero-tools-raised.jpg" alt="Row of hands raising paddle brushes, shears, a round brush and a tint brush against a white wall" width="1400" height="935">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Service categories ===== -->
+    <section class="section" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">What we do</p>
+          <h2 id="categories-title">Four crafts, done properly</h2>
+          <p class="lead">Every service begins with a conversation about your hair and ends with a finish you can recreate at home.</p>
+        </div>
+
+        <div class="service-rows">
+          <article class="service-row" id="haircuts" data-reveal>
+            <div class="service-media">
+              <img src="../assets/images/service-haircuts.jpg" alt="Stylist cutting a client's long, wet dark hair with shears" width="900" height="1125" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Haircuts</h3>
+              <p>Precision cuts for every length and texture. We cut wet when a line needs to be exact, and dry when curls, waves and texture need to be seen as they really fall.</p>
+              <div class="service-cols">
+                <div>
+                  <h4>Always included</h4>
+                  <ul class="check-list">
+                    <li>Consultation and hair-history check</li>
+                    <li>Shampoo with scalp massage</li>
+                    <li>A finish you can repeat at home</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>On the menu</h4>
+                  <ul class="dot-list">
+                    <li>Women's cut &amp; style</li>
+                    <li>Short cut &amp; style</li>
+                    <li>Curly dry cut</li>
+                    <li>Men's scissor cut</li>
+                    <li>Bang &amp; neckline trims</li>
+                    <li>Kids' cuts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row" id="coloring" data-reveal>
+            <div class="service-media">
+              <img src="../assets/images/service-coloring.jpg" alt="Colorist painting lightener onto sections of hair and folding them into foils" width="900" height="1350" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Coloring</h3>
+              <p>From covering grays to a full blonde transformation, every formula is built around your skin tone, your starting shade and how often you want to come back.</p>
+              <div class="service-cols">
+                <div>
+                  <h4>Always included</h4>
+                  <ul class="check-list">
+                    <li>Patch and strand test for new color clients</li>
+                    <li>Your formula saved for next time</li>
+                    <li>Toner or gloss, then a blow-dry</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>On the menu</h4>
+                  <ul class="dot-list">
+                    <li>Root touch-up</li>
+                    <li>All-over color</li>
+                    <li>Partial &amp; full highlights</li>
+                    <li>Balayage</li>
+                    <li>Gloss &amp; toner</li>
+                    <li>Color correction</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row" id="beard-trims" data-reveal>
+            <div class="service-media">
+              <img src="../assets/images/service-beard-trims.jpg" alt="Barber trimming a client's full, reddish-brown beard with scissors" width="900" height="1350" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Beard Trims</h3>
+              <p>Beards are shaped to your jawline and growth pattern, lined up with a straight razor and finished with warm oil — whether you're growing it out or keeping it tight.</p>
+              <div class="service-cols">
+                <div>
+                  <h4>Always included</h4>
+                  <ul class="check-list">
+                    <li>Hot towel to soften the hair</li>
+                    <li>Straight-razor line-up on cheeks and neck</li>
+                    <li>Beard oil and a home-care tip</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>On the menu</h4>
+                  <ul class="dot-list">
+                    <li>Beard trim &amp; line-up</li>
+                    <li>Beard sculpt</li>
+                    <li>Hot-towel straight-razor shave</li>
+                    <li>Head shave</li>
+                    <li>Gray blending</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row" id="styling" data-reveal>
+            <div class="service-media">
+              <img src="../assets/images/service-styling.jpg" alt="Stylist blow-drying a client's highlighted hair with a round brush" width="1000" height="668" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Styling</h3>
+              <p>For dinners, weddings or just because: smooth blowouts, bouncy waves, braids and polished updos that hold up long past midnight.</p>
+              <div class="service-cols">
+                <div>
+                  <h4>Always included</h4>
+                  <ul class="check-list">
+                    <li>Wash with a treatment matched to your hair</li>
+                    <li>Heat protection on every style</li>
+                    <li>A day-two refresh tip</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>On the menu</h4>
+                  <ul class="dot-list">
+                    <li>Blowout</li>
+                    <li>Waves &amp; curls</li>
+                    <li>Updos &amp; event styles</li>
+                    <li>Silk press</li>
+                    <li>Box braids &amp; cornrows</li>
+                    <li>Bridal trials</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Add-ons & treatments ===== -->
+    <section class="section section--alt" aria-labelledby="addons-title">
+      <div class="container addons">
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/service-treatments-wash.jpg" alt="Client relaxing at a shampoo bowl while a stylist rinses a treatment through her hair" width="1000" height="667" loading="lazy">
+        </div>
+        <div data-reveal>
+          <p class="eyebrow">Add-ons &amp; treatments</p>
+          <h2 id="addons-title">Small extras that change how your hair behaves</h2>
+          <p class="lead">Add any of these when you book, or ask at the chair — most take fifteen minutes or less.</p>
+          <div class="addon-list">
+            <div class="card addon">
+              <h3>Bond-repair treatment</h3>
+              <p>Rebuilds the inner structure of bleached or heat-styled hair. Ideal alongside any lightening service.</p>
+            </div>
+            <div class="card addon">
+              <h3>Deep conditioning mask</h3>
+              <p>Ten minutes under gentle heat for softness and shine that last several washes.</p>
+            </div>
+            <div class="card addon">
+              <h3>Scalp detox</h3>
+              <p>Lifts product buildup and calms itching, followed by a cooling massage.</p>
+            </div>
+            <div class="card addon">
+              <h3>Clear gloss</h3>
+              <p>Mirror shine without changing your color; fades gently over about six weeks.</p>
+            </div>
+            <div class="card addon">
+              <h3>Hot towel &amp; charcoal mask</h3>
+              <p>The barber-side reset: steam, a deep-cleansing mask and a cold towel to finish.</p>
+            </div>
+            <div class="card addon">
+              <h3>Brow tidy</h3>
+              <p>A quick shape with scissors and razor so your brows match the new cut.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Service finder ===== -->
+    <section class="section" aria-labelledby="finder-title">
+      <div class="container finder" data-finder>
+        <div data-reveal>
+          <p class="eyebrow">Service finder</p>
+          <h2 id="finder-title">Not sure what to book?</h2>
+          <p class="lead">Pick what you're hoping for and we'll point you to the right service — plus what to mention in your booking notes.</p>
+          <div class="finder-options" role="group" aria-label="What are you hoping for?">
+            <button class="finder-btn" type="button" data-goal="tidy" aria-pressed="false">A tidy-up of my current cut</button>
+            <button class="finder-btn" type="button" data-goal="lighter" aria-pressed="false">To go lighter or brighter</button>
+            <button class="finder-btn" type="button" data-goal="grays" aria-pressed="false">To deal with grays</button>
+            <button class="finder-btn" type="button" data-goal="fix" aria-pressed="false">Fix brassy or patchy color</button>
+            <button class="finder-btn" type="button" data-goal="beard" aria-pressed="false">A sharper beard</button>
+            <button class="finder-btn" type="button" data-goal="event" aria-pressed="false">Hair for a big event</button>
+            <button class="finder-btn" type="button" data-goal="new" aria-pressed="false">Something completely new</button>
+          </div>
+        </div>
+
+        <div aria-live="polite" data-reveal>
+          <div class="card finder-result" data-result="tidy">
+            <p class="eyebrow">We suggest</p>
+            <h3>A haircut in your usual style</h3>
+            <p>Book the same cut as last time — Women's, Short, Curly or Men's. We'll refresh the shape, clean up the ends and keep the length you like.</p>
+            <p class="result-tip"><strong>In your notes:</strong> roughly when your last cut was, so we can plan the shape around the regrowth.</p>
+          </div>
+          <div class="card finder-result" data-result="lighter">
+            <p class="eyebrow">We suggest</p>
+            <h3>Highlights or balayage</h3>
+            <p>Highlights bring brightness right from the root; balayage is hand-painted and grows out softer, so you can wait longer between visits.</p>
+            <p class="result-tip"><strong>In your notes:</strong> any box dye from the last two years — if so, we'll start with a color consultation.</p>
+          </div>
+          <div class="card finder-result" data-result="grays">
+            <p class="eyebrow">We suggest</p>
+            <h3>Root touch-up or gray blending</h3>
+            <p>A root touch-up gives full coverage every four to six weeks. Gray blending, on the barber side, softens grays so regrowth is barely noticeable.</p>
+            <p class="result-tip"><strong>In your notes:</strong> roughly how much gray you have — a quarter, half or most of it.</p>
+          </div>
+          <div class="card finder-result" data-result="fix">
+            <p class="eyebrow">We suggest</p>
+            <h3>A gloss, or a correction consultation</h3>
+            <p>Brassiness is usually solved with a gloss and toner. Patchy, banded or very dark color needs a correction plan, which starts with a consultation.</p>
+            <p class="result-tip"><strong>In your notes:</strong> when your hair was last colored, and whether it was done at home.</p>
+          </div>
+          <div class="card finder-result" data-result="beard">
+            <p class="eyebrow">We suggest</p>
+            <h3>A beard sculpt</h3>
+            <p>Shape, straight-razor line-up and a hot towel in one appointment. Add a cut if your hair and beard should meet in a seamless fade.</p>
+            <p class="result-tip"><strong>In your notes:</strong> how long you've been growing it — two to three weeks of growth gives us more to sculpt.</p>
+          </div>
+          <div class="card finder-result" data-result="event">
+            <p class="eyebrow">We suggest</p>
+            <h3>An event style, with a trial first</h3>
+            <p>Book an updo or event style for the day itself, and a trial four to eight weeks beforehand so nothing is left to chance.</p>
+            <p class="result-tip"><strong>In your notes:</strong> your neckline, any accessories and what time you need to leave.</p>
+          </div>
+          <div class="card finder-result" data-result="new">
+            <p class="eyebrow">We suggest</p>
+            <h3>A free 15-minute consultation</h3>
+            <p>We'll talk through options, upkeep and cost before you commit to anything — then book the right service with the right person.</p>
+            <p class="result-tip"><strong>In your notes:</strong> the looks you're drawn to — then bring the photos along to the consultation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Before & after your visit (tabs share the Pricing script) ===== -->
+    <section class="section section--alt" id="care" aria-labelledby="care-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Before &amp; after your visit</p>
+          <h2 id="care-title">Small habits that make the result last</h2>
+          <p class="lead">What you do the day before and the week after matters almost as much as the time in the chair. Pick a service for our short checklist.</p>
+        </div>
+
+        <div data-tabs data-reveal>
+          <div class="tabs" role="tablist" aria-label="Care guides by service" hidden>
+            <button class="tab" type="button" role="tab" id="tab-care-cuts" aria-controls="panel-care-cuts" aria-selected="true">Haircuts</button>
+            <button class="tab" type="button" role="tab" id="tab-care-color" aria-controls="panel-care-color" aria-selected="false" tabindex="-1">Coloring</button>
+            <button class="tab" type="button" role="tab" id="tab-care-beard" aria-controls="panel-care-beard" aria-selected="false" tabindex="-1">Beard Trims</button>
+            <button class="tab" type="button" role="tab" id="tab-care-styling" aria-controls="panel-care-styling" aria-selected="false" tabindex="-1">Styling</button>
+          </div>
+
+          <div class="care-panel" role="tabpanel" id="panel-care-cuts" aria-labelledby="tab-care-cuts" tabindex="0">
+            <h3 class="care-panel-title">Haircuts</h3>
+            <div class="card care-card">
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">◷</span>Before you come in</h4>
+                <ul class="check-list">
+                  <li>Wear your hair the way you usually do, so we can see your part, cowlicks and natural fall.</li>
+                  <li>Booked a curly dry cut? Arrive with clean, dry, product-free curls worn down, not tied up.</li>
+                  <li>Save two or three reference photos, plus one look you don't want.</li>
+                </ul>
+              </div>
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">↺</span>After you leave</h4>
+                <ul class="check-list">
+                  <li>Give a new shape two or three washes to settle before you judge it.</li>
+                  <li>Start with a pea-sized amount of the product we showed you, and add more only if you need it.</li>
+                  <li>Book your next visit at the desk — every 6 to 8 weeks keeps most cuts on track.</li>
+                </ul>
+              </div>
+              <p class="care-tip"><strong>Remember the 7-day fix:</strong> if something feels off after a few days, come back within a week and we'll adjust it free of charge.</p>
+            </div>
+          </div>
+
+          <div class="care-panel" role="tabpanel" id="panel-care-color" aria-labelledby="tab-care-color" tabindex="0">
+            <h3 class="care-panel-title">Coloring</h3>
+            <div class="card care-card">
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">◷</span>Before you come in</h4>
+                <ul class="check-list">
+                  <li>Wash your hair a day or two before. Natural oils help protect your scalp during lightening.</li>
+                  <li>New to coloring with us? Pop in for a five-minute patch test at least 48 hours ahead.</li>
+                  <li>Tell us about box dye, henna or keratin treatments from the past two years.</li>
+                </ul>
+              </div>
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">↺</span>After you leave</h4>
+                <ul class="check-list">
+                  <li>Wait 72 hours before your first shampoo so the color can fully set.</li>
+                  <li>Switch to a sulfate-free shampoo and rinse with cool water.</li>
+                  <li>Use heat protection every time — hot tools fade color faster than anything else.</li>
+                </ul>
+              </div>
+              <p class="care-tip"><strong>Keep it fresh:</strong> a gloss between color appointments revives the tone and shine in about 45 minutes.</p>
+            </div>
+          </div>
+
+          <div class="care-panel" role="tabpanel" id="panel-care-beard" aria-labelledby="tab-care-beard" tabindex="0">
+            <h3 class="care-panel-title">Beard Trims</h3>
+            <div class="card care-card">
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">◷</span>Before you come in</h4>
+                <ul class="check-list">
+                  <li>Want a new shape? Let it grow for two to three weeks — it gives us more to sculpt.</li>
+                  <li>Put the trimmer down for a week, especially around the neckline.</li>
+                  <li>Come with it clean and dry, without heavy balm or wax.</li>
+                </ul>
+              </div>
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">↺</span>After you leave</h4>
+                <ul class="check-list">
+                  <li>Work a few drops of beard oil into the skin underneath every day.</li>
+                  <li>Brush it into shape each morning with a boar-bristle brush.</li>
+                  <li>Book a line-up every 2 to 3 weeks to keep the edges crisp.</li>
+                </ul>
+              </div>
+              <p class="care-tip"><strong>Pair it with a cut:</strong> book the cut &amp; beard combo so your fade and beard blend into one seamless line.</p>
+            </div>
+          </div>
+
+          <div class="care-panel" role="tabpanel" id="panel-care-styling" aria-labelledby="tab-care-styling" tabindex="0">
+            <h3 class="care-panel-title">Styling</h3>
+            <div class="card care-card">
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">◷</span>Before you come in</h4>
+                <ul class="check-list">
+                  <li>For updos and event styles, wear a top that buttons or zips so it comes off without touching your hair.</li>
+                  <li>Bring any accessories — veil, clips or flowers — so we can build them in.</li>
+                  <li>Booked braids? Arrive with your hair detangled. The braiding hair is on us.</li>
+                </ul>
+              </div>
+              <div class="care-col">
+                <h4><span class="icon-disc" aria-hidden="true">↺</span>After you leave</h4>
+                <ul class="check-list">
+                  <li>Sleep on a silk pillowcase or in a loose bonnet to keep a blowout or silk press smooth.</li>
+                  <li>Keep a fresh silk press away from steam and humidity for the first 24 hours.</li>
+                  <li>Moisturize your scalp twice a week while in braids, and take them out within 6 to 8 weeks.</li>
+                </ul>
+              </div>
+              <p class="care-tip"><strong>Big day coming up?</strong> Book a trial 4 to 8 weeks before, so the style is tested and nothing is left to chance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Next step ===== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <h2 id="cta-title">Know what you want? Let's get it on the calendar.</h2>
+            <p>Booking takes a couple of minutes. Questions about a service? Add them to your notes and we'll answer before we confirm.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="../pages/contact.html#booking">Book Now</a>
+            <a class="text-link" href="../pages/pricing.html">See prices <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/pricing.html">Pricing</a></li>
+            <li><a href="../pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

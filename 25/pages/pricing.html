@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - VoltGuard Electrical</title>
+  <meta name="description" content="Transparent electrical pricing guide: flat-rate repairs, 200A panel upgrade packages, EV charger installs, and interactive cost calculator.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header (Identical on every page) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo (links to Home 1) -->
+      <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+        <img src="../assets/images/logo.png" alt="VoltGuard Electrical Shield Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">VoltGuard</span>
+          <span class="brand-tagline">Electrical Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index1.html" class="nav-link">Home 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+          <span aria-hidden="true">☾</span>
+        </button>
+
+        <!-- RTL Direction Toggle -->
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction" title="Toggle text direction">
+          ⇄ RTL
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Service</a>
+
+        <!-- Hamburger Icon for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+          <img src="../assets/images/logo.png" alt="VoltGuard Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">VoltGuard</span>
+            <span class="brand-tagline">Electrical Services</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close navigation menu" title="Close navigation menu">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-list">
+        <a href="../index.html" class="mobile-nav-link">Home 1</a>
+        <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="pricing.html" class="mobile-nav-link active">Pricing</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme">
+          <span aria-hidden="true">☾</span> Theme
+        </button>
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction">
+          ⇄ RTL
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Book An Electrician</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section with Relevant Image -->
+    <section class="section hero-standard">
+      <div class="container hero-standard-grid">
+        <div class="hero-content">
+          <span class="section-badge">Upfront &amp; Transparent Rates</span>
+          <h1 class="hero-title">Transparent Electrical Pricing Guide</h1>
+          <p class="hero-subtitle">
+            No surprise travel fees, no open-ended hourly billing, and zero hidden charges. We provide written, all-inclusive quotes before beginning work. Plus, your diagnostic inspection fee is 100% credited toward your completed repair.
+          </p>
+          <div class="hero-btn-row">
+            <a href="#estimator" class="btn btn-primary btn-lg">Calculate Your Estimate</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Book Diagnostic ($89)</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="../assets/images/hero-pricing.jpg" alt="Clear pricing for modern home lighting and electrical service" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Standard Flat-Rate Service Schedule -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Flat-Rate Pricing</span>
+          <h2 class="section-title">Common Electrical Services Flat-Rate Schedule</h2>
+          <p class="section-desc">
+            Exact pricing reflects scope, materials, and labor. Below are our standard rates for common residential electrical tasks.
+          </p>
+        </div>
+
+        <div class="pricing-guide-grid">
+          <!-- Item 1: Ceiling Fan Fitting -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=fan-light">
+            <div class="pricing-header">
+              <span class="hero-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Per Fixture</span>
+              <h3 class="pricing-job-title">Ceiling Fan Fitting &amp; Assembly</h3>
+              <div class="pricing-rate">$160 - $240 <span class="pricing-unit">/ unit</span></div>
+            </div>
+            <p class="pricing-scope">
+              Includes complete fan assembly, dynamic blade balancing, connection to existing ceiling box, and wall speed switch installation for ceilings up to 12 feet.
+            </p>
+            <a href="contact.html?service=fan-light" class="btn btn-secondary btn-sm">Book This Service</a>
+          </div>
+
+          <!-- Item 2: Architectural Chandelier -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=chandelier">
+            <div class="pricing-header">
+              <span class="hero-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Heavy Duty</span>
+              <h3 class="pricing-job-title">Architectural Chandelier Mounting</h3>
+              <div class="pricing-rate">$190 - $350 <span class="pricing-unit">/ unit</span></div>
+            </div>
+            <p class="pricing-scope">
+              Includes heavy-duty joist-anchored ceiling brace replacement, wiring, delicate crystal/glass assembly, and safety weight load certification up to 70 lbs.
+            </p>
+            <a href="contact.html?service=chandelier" class="btn btn-secondary btn-sm">Book This Service</a>
+          </div>
+
+          <!-- Item 3: Outlet / Switch Replacement -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=outlet-switch">
+            <div class="pricing-header">
+              <span class="hero-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Standard Device</span>
+              <h3 class="pricing-job-title">Duplex Outlet or Dimmer Switch</h3>
+              <div class="pricing-rate">$85 - $130 <span class="pricing-unit">/ location</span></div>
+            </div>
+            <p class="pricing-scope">
+              Replacement of degraded, loose, or painted-over receptacles with child-safe tamper-resistant outlets or modern sliding dimmer controls.
+            </p>
+            <a href="contact.html?service=outlet-switch" class="btn btn-secondary btn-sm">Book This Service</a>
+          </div>
+
+          <!-- Item 4: GFCI / AFCI Installation -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=gfci-outlet">
+            <div class="pricing-header">
+              <span class="hero-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Life Safety</span>
+              <h3 class="pricing-job-title">GFCI / AFCI Safety Receptacle</h3>
+              <div class="pricing-rate">$120 - $180 <span class="pricing-unit">/ location</span></div>
+            </div>
+            <p class="pricing-scope">
+              Required for kitchens, bathrooms, garages, and outdoors. Includes micro-fault sensor testing and line/load identification on shared circuits.
+            </p>
+            <a href="contact.html?service=gfci-outlet" class="btn btn-secondary btn-sm">Book This Service</a>
+          </div>
+
+          <!-- Item 5: Dedicated 240V Circuit -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=appliance-run">
+            <div class="pricing-header">
+              <span class="hero-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Heavy Appliance</span>
+              <h3 class="pricing-job-title">Dedicated 240V Circuit Run</h3>
+              <div class="pricing-rate">$380 - $650 <span class="pricing-unit">/ line</span></div>
+            </div>
+            <p class="pricing-scope">
+              Installation of a 30A-50A double-pole breaker, heavy copper Romex or conduit run up to 40 feet, and NEMA receptacle for dryers, ranges, or heat pumps.
+            </p>
+            <a href="contact.html?service=appliance-run" class="btn btn-secondary btn-sm">Book This Service</a>
+          </div>
+
+          <!-- Item 6: Diagnostic Safety Inspection -->
+          <div class="pricing-item-card" data-service-link="contact.html?service=inspection" style="border: 2px solid var(--color-accent); background-color: var(--color-accent-glow);">
+            <div class="pricing-header">
+              <span class="hero-alert-pill" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Credited Fee</span>
+              <h3 class="pricing-job-title">Electrical Safety &amp; Fault Diagnostic</h3>
+              <div class="pricing-rate">$89 <span class="pricing-unit">/ comprehensive visit</span></div>
+            </div>
+            <p class="pricing-scope">
+              Complete on-site Fluke thermal scan, breaker load test, and written quote. <strong>100% of this fee is credited toward your repair!</strong>
+            </p>
+            <a href="contact.html?service=inspection" class="btn btn-primary btn-sm">Schedule Diagnostic</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Turnkey Comprehensive Project Packages -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Project Packages</span>
+          <h2 class="section-title">All-Inclusive Turnkey Electrical Upgrades</h2>
+          <p class="section-desc">
+            Fixed-scope comprehensive packages that bundle materials, certified master labor, utility coordination, and municipal permits.
+          </p>
+        </div>
+
+        <div class="bundle-grid">
+          <!-- Package 1: Level 2 EV Charger Installation -->
+          <div class="bundle-card" data-service-link="contact.html?service=ev-charger">
+            <div class="bundle-title">EV Level 2 Charger Package</div>
+            <p class="bundle-subtitle">High-speed home charging for Tesla, Rivian, Ford, and universal EVs.</p>
+            <div class="bundle-price-wrap">
+              <span class="bundle-starting">Starting From</span>
+              <div class="bundle-price">$750</div>
+            </div>
+            <div class="bundle-features">
+              <div class="bundle-feature-item"><span>✓</span> 50-Amp dedicated double-pole breaker</div>
+              <div class="bundle-feature-item"><span>✓</span> Up to 25ft heavy copper conduit run</div>
+              <div class="bundle-feature-item"><span>✓</span> Hardwired charger or NEMA 14-50 outlet</div>
+              <div class="bundle-feature-item"><span>✓</span> Wi-Fi connection &amp; charge rate testing</div>
+              <div class="bundle-feature-item"><span>✓</span> Municipal electrical permit included</div>
+            </div>
+            <a href="contact.html?service=ev-charger" class="btn btn-primary">Book EV Package</a>
+          </div>
+
+          <!-- Package 2: 200A Service Modernization (Featured) -->
+          <div class="bundle-card featured" data-service-link="contact.html?service=panel-upgrade">
+            <span class="bundle-badge">Most Popular</span>
+            <div class="bundle-title">200A Main Service Modernization</div>
+            <p class="bundle-subtitle">Comprehensive upgrade from 60A/100A to modern high-capacity 200A.</p>
+            <div class="bundle-price-wrap">
+              <span class="bundle-starting">Starting From</span>
+              <div class="bundle-price">$2,250</div>
+            </div>
+            <div class="bundle-features">
+              <div class="bundle-feature-item"><span>✓</span> New 200A 40-circuit high-capacity panel</div>
+              <div class="bundle-feature-item"><span>✓</span> Exterior utility meter socket upgrade</div>
+              <div class="bundle-feature-item"><span>✓</span> Two 8-foot copper grounding rods &amp; water bond</div>
+              <div class="bundle-feature-item"><span>✓</span> Whole-home surge protection module included</div>
+              <div class="bundle-feature-item"><span>✓</span> Utility shutdown coordination &amp; city permit</div>
+            </div>
+            <a href="contact.html?service=panel-upgrade" class="btn btn-primary">Book 200A Upgrade</a>
+          </div>
+
+          <!-- Package 3: Whole-Home Surge & Safety Defense -->
+          <div class="bundle-card" data-service-link="contact.html?service=surge-defense">
+            <div class="bundle-title">Whole-Home Surge Defense</div>
+            <p class="bundle-subtitle">Commercial panel-mounted protection for all connected devices.</p>
+            <div class="bundle-price-wrap">
+              <span class="bundle-starting">Starting From</span>
+              <div class="bundle-price">$420</div>
+            </div>
+            <div class="bundle-features">
+              <div class="bundle-feature-item"><span>✓</span> Type 2 dual-pole 50kA surge arrestor</div>
+              <div class="bundle-feature-item"><span>✓</span> Panel busbar torque calibration</div>
+              <div class="bundle-feature-item"><span>✓</span> Direct neutral and ground path bonding</div>
+              <div class="bundle-feature-item"><span>✓</span> LED diagnostic status indicator</div>
+              <div class="bundle-feature-item"><span>✓</span> $50,000 connected equipment insurance warranty</div>
+            </div>
+            <a href="contact.html?service=surge-defense" class="btn btn-primary">Book Surge Package</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive Project Cost Estimator -->
+    <section id="estimator" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Cost Estimator</span>
+          <h2 class="section-title">Calculate Your Estimated Project Cost</h2>
+          <p class="section-desc">
+            Use our interactive calculator to receive an instant, realistic price range based on your exact electrical needs.
+          </p>
+        </div>
+
+        <div class="calc-wrapper">
+          <form id="pricing-calc-form">
+            <div class="calc-grid">
+              <div class="calc-field">
+                <label for="calc-service" class="calc-label">Select Electrical Service</label>
+                <select id="calc-service" class="calc-select">
+                  <option value="fan-fitting">Ceiling Fan Fitting &amp; Assembly ($160 - $240 / unit)</option>
+                  <option value="light-fixture">Chandelier or Pendant Fitting ($190 - $350 / unit)</option>
+                  <option value="switchboard-repair">Switchboard or Breaker Repair ($180 - $320+)</option>
+                  <option value="panel-upgrade-200a">200A Main Service Panel Upgrade ($2,250 - $3,100)</option>
+                  <option value="ev-charger">Level 2 EV Fast Charger Station ($750 - $1,200)</option>
+                  <option value="rewiring">Room / Area Copper Rewiring ($1,200 - $2,100 / room)</option>
+                </select>
+              </div>
+
+              <div class="calc-field">
+                <label for="calc-count" class="calc-label">Quantity / Number of Fixtures or Rooms</label>
+                <input type="number" id="calc-count" class="calc-input" min="1" max="15" value="1">
+              </div>
+
+              <div class="calc-field">
+                <label for="calc-urgency" class="calc-label">Dispatch Urgency Window</label>
+                <select id="calc-urgency" class="calc-select">
+                  <option value="standard">Standard Scheduled Appointment (Best Rate)</option>
+                  <option value="next-day">Next-Day Priority Morning (+10%)</option>
+                  <option value="emergency">24/7 Rapid Emergency Dispatch Within 2 Hours (+35%)</option>
+                </select>
+              </div>
+
+              <div class="calc-field">
+                <label class="calc-label">Diagnostic Credit Applied</label>
+                <div style="font-size: 0.9375rem; color: var(--color-success); font-weight: 700; padding-top: 0.75rem;">
+                  ✓ $89 Diagnostic fee 100% credited on approval
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div>
+                <div class="calc-est-label">Instant Estimated Investment Range:</div>
+                <div id="calc-estimate-result" class="calc-est-value">$160 - $240</div>
+              </div>
+              <a href="contact.html?service=fan-light" id="calc-book-btn" class="btn btn-primary btn-lg">Lock In This Estimate</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: What is Always Included in Every Quote -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">The VoltGuard Standard</span>
+          <h2 class="section-title">What Is Always Included In Every Quote</h2>
+          <p class="section-desc">
+            No asterisks or small print. Every price quotation you receive includes these essential guarantees.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/master-labor.jpg" alt="Licensed Master Electrician Labor" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Master Electrician Labor</h3>
+            <p class="feature-desc">
+              Your installation is led by a licensed master technician with over 8,000 certified hours. We never delegate jobs to unsupervised apprentices.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/safety-inspections.jpg" alt="Municipal Permits and Electrical Inspections" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Permits &amp; Inspections</h3>
+            <p class="feature-desc">
+              We handle all paperwork, municipal electrical permit fees, and attend the on-site inspector walk-through to ensure guaranteed approval.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/ul-parts.jpg" alt="Premium UL-Listed Circuit Breakers and Copper Parts" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Premium UL-Listed Parts</h3>
+            <p class="feature-desc">
+              We supply solid copper wiring, industrial-grade breakers, and heavy-gauge steel junction boxes from Square D, Siemens, and Leviton.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/warranty-guarantee.jpg" alt="5-Year Written Guarantee and Trust Agreement" class="card-media-img">
+            </div>
+            <h3 class="feature-title">5-Year Written Guarantee</h3>
+            <p class="feature-desc">
+              Every screw, conductor, breaker, and fixture is backed by our five-year warranty. If it loosens or trips unexpectedly, we repair it free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Financing & Payment Options -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Flexible Payments</span>
+          <h2 class="section-title">Payment Options &amp; 0% APR Financing</h2>
+          <p class="section-desc">
+            Essential electrical repairs shouldn't strain your budget. We provide multiple convenient payment and financing choices.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/payment-methods.jpg" alt="All Major Cards and Mobile Digital Pay" class="card-media-img">
+            </div>
+            <h3 class="feature-title">All Major Cards &amp; Digital Pay</h3>
+            <p class="feature-desc">
+              Pay seamlessly on-site with Visa, MasterCard, American Express, Discover, or Apple Pay. Instant digital receipts with itemized code breakdown.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/financing-plan.jpg" alt="0% APR Electrical Project Financing for 12 Months" class="card-media-img">
+            </div>
+            <h3 class="feature-title">0% APR for 12 Months</h3>
+            <p class="feature-desc">
+              Qualify in 60 seconds without affecting your credit score for major service upgrades, rewiring, or EV charger installations with equal monthly payments.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-media-wrapper">
+              <img src="../assets/images/insurance-claim.jpg" alt="Fluke Diagnostics and Insurance Claim Support" class="card-media-img">
+            </div>
+            <h3 class="feature-title">Insurance Claim Support</h3>
+            <p class="feature-desc">
+              Suffered lightning damage or power surge destruction? We provide comprehensive Fluke diagnostic logs and photos for your home insurance adjuster.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Action CTA Banner -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="banner-cta">
+          <div class="banner-content">
+            <span class="section-badge" style="background-color: var(--color-accent); color: #0b192c; border: none; margin-bottom: 0.75rem;">⚡ Zero-Risk Diagnostic</span>
+            <h3>Ready for an Upfront, Honest Electrical Quote?</h3>
+            <p>Schedule your diagnostic visit today. Remember: your $89 inspection fee is 100% credited toward your approved repair!</p>
+          </div>
+          <div class="banner-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book Service Now</a>
+            <a href="tel:8005558658" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: #ffffff;">Call (800) 555-8658</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer (Identical on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Details -->
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link">
+            <img src="../assets/images/logo.png" alt="VoltGuard Electrical Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-title">VoltGuard</span>
+              <span class="brand-tagline">Electrical Services</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            State-certified master electrical contractors delivering high-safety residential wiring, switchboard repairs, and panel modernizations with transparent upfront pricing.
+          </p>
+          <div class="footer-cert-badge">
+            <span>🛡️</span> Master Electrician Lic #EC-984421-B
+          </div>
+        </div>
+
+        <!-- Col 2: Home Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Home</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company Links & Emergency -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list" style="margin-bottom: 1.25rem;">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+          <div class="footer-contact-item">
+            <span class="icon">📞</span>
+            <span>(800) 555-8658 (24/7 Hotline)</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">✉️</span>
+            <span>service@voltguardelectric.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">📍</span>
+            <span>442 Ampere Pkwy, Metro Area</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VoltGuard Electrical Services LLC. All rights reserved. Licensed, Bonded &amp; Insured.</div>
+        <div>Compliant with NEC 2023 &amp; OSHA Safety Codes</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

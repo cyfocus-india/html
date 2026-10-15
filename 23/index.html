@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="Lumora Optical & Eye Care in Indiranagar, Bengaluru: eyewear collections, face-shape frame advice and eye tests with qualified optometrists.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html" class="is-current" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/products.html">Products</a></li>
+          <li><a class="nav-link" href="pages/brands.html">Brands</a></li>
+          <li><a class="nav-link" href="pages/eye-test.html">Eye Test</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="sym" aria-hidden="true">⇄</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="pages/eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== HOME 1: collection-led template =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Hero: split copy with arched portrait and live store status -->
+    <section class="hero-a" aria-labelledby="hero-a-title">
+      <div class="container hero-a-grid">
+        <div class="hero-a-copy">
+          <p class="eyebrow">Optical store &amp; eye clinic · Indiranagar</p>
+          <h1 id="hero-a-title">Frames that fit your face. <span class="text-brand">Lenses that fit your day.</span></h1>
+          <p class="lead">Try on 1,200 frames, have your eyes checked by a qualified optometrist and collect glasses cut in our own lens lab — all on the first floor of 612, 12th Main Road.</p>
+          <div class="hero-actions">
+            <a class="btn" href="pages/eye-test.html#book">Book Eye Test</a>
+            <a class="link-arrow" href="pages/products.html">Browse frames <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-a-media">
+          <img src="assets/images/hero-home1-woman-in-glasses.jpg" alt="Smiling woman in black rectangular glasses resting her chin on her hand" width="1000" height="1200" fetchpriority="high">
+          <div class="status-card" data-store-status>
+            <span class="status-dot" aria-hidden="true"></span>
+            <div>
+              <strong data-status-text>Open Mon–Sat 10 am – 8:30 pm</strong>
+              <span data-status-sub>Sundays 11 am – 6 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Eyewear collections -->
+    <section class="section section-alt" aria-labelledby="collections-title">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <p class="eyebrow">Eyewear collections</p>
+            <h2 id="collections-title">Four collections, each made for a different part of your day</h2>
+            <p class="lead">Every collection is stocked in several sizes, so you judge fit on your own face — not on a screen.</p>
+          </div>
+          <a class="link-arrow" href="pages/products.html#frames">Shop frames by style <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+
+        <ul class="collection-grid">
+          <li>
+            <a class="collection-card" href="pages/products.html#frames">
+              <img src="assets/images/collection-everyday.jpg" alt="Tortoiseshell browline glasses standing on an open white book" width="720" height="900" loading="lazy">
+              <div class="collection-body">
+                <h3>Everyday Optical</h3>
+                <p>Light acetate and metal frames that stay comfortable from the first meeting to the drive home.</p>
+                <p class="collection-meta"><span>540 frames</span><strong>Frames from ₹1,990</strong></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="collection-card" href="pages/brands.html">
+              <img src="assets/images/collection-sun.jpg" alt="Rows of round and cat-eye sunglasses with brown, green and grey lenses on white shelves" width="720" height="900" loading="lazy">
+              <div class="collection-body">
+                <h3>Sun &amp; Polarised</h3>
+                <p>UV400 sunglasses, polarised driving pairs and any frame glazed with your prescription in a sun tint.</p>
+                <p class="collection-meta"><span>310 styles</span><strong>From ₹2,490</strong></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="collection-card" href="pages/eye-test.html#tests">
+              <img src="assets/images/collection-kids.jpg" alt="Smiling young girl wearing pink rectangular glasses" width="720" height="900" loading="lazy">
+              <div class="collection-body">
+                <h3>Kids &amp; Teens</h3>
+                <p>Flexible hinges, adjustable nose pads and impact-resistant lenses, sized for ages 3 to 15.</p>
+                <p class="collection-meta"><span>150 frames</span><strong>Frames from ₹1,790</strong></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="collection-card" href="pages/products.html#lenses">
+              <img src="assets/images/collection-screen.jpg" alt="Older man in dark-rimmed glasses working on a laptop at his desk" width="720" height="900" loading="lazy">
+              <div class="collection-body">
+                <h3>Screen &amp; Office</h3>
+                <p>Frames paired with office lenses that widen the computer zone for long desk days after 40.</p>
+                <p class="collection-meta"><span>200 frames</span><strong>Lenses from ₹4,800</strong></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 — Face-shape frame finder (interactive tabs) -->
+    <section class="section" aria-labelledby="finder-title">
+      <div class="container finder">
+        <div>
+          <p class="eyebrow">Frame finder</p>
+          <h2 id="finder-title">Not sure what suits you? Start with your face shape</h2>
+          <p class="lead">Pick the outline closest to yours. Our opticians follow one rule of thumb: contrast your features rather than repeat them.</p>
+
+          <div class="tablist" role="tablist" aria-label="Face shapes">
+            <button class="chip" type="button" role="tab" id="tab-oval" aria-selected="true" aria-controls="panel-oval">Oval</button>
+            <button class="chip" type="button" role="tab" id="tab-round" aria-selected="false" aria-controls="panel-round" tabindex="-1">Round</button>
+            <button class="chip" type="button" role="tab" id="tab-square" aria-selected="false" aria-controls="panel-square" tabindex="-1">Square</button>
+            <button class="chip" type="button" role="tab" id="tab-heart" aria-selected="false" aria-controls="panel-heart" tabindex="-1">Heart</button>
+            <button class="chip" type="button" role="tab" id="tab-diamond" aria-selected="false" aria-controls="panel-diamond" tabindex="-1">Diamond</button>
+          </div>
+          <p class="finder-tip">Tip: pull your hair back and look straight into a mirror. Whichever is widest — forehead, cheekbones or jaw — decides your shape.</p>
+        </div>
+
+        <div>
+          <div class="finder-panel" role="tabpanel" id="panel-oval" aria-labelledby="tab-oval" tabindex="0">
+            <div class="face-demo" aria-hidden="true"><div class="face face--oval"><span class="specs specs--brow"></span></div></div>
+            <div>
+              <h3>Oval face</h3>
+              <p>Balanced proportions with a jaw slightly narrower than the forehead. Almost every shape works, so focus on scale.</p>
+              <dl class="fit-list">
+                <div><dt>Try</dt><dd>Browlines, wide rectangles and generous round frames</dd></div>
+                <div><dt>Skip</dt><dd>Very narrow frames that make the face look longer</dd></div>
+              </dl>
+              <a class="link-arrow" href="pages/products.html#frames">Our pick: Wilde browline <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="finder-panel" role="tabpanel" id="panel-round" aria-labelledby="tab-round" tabindex="0" hidden>
+            <div class="face-demo" aria-hidden="true"><div class="face face--round"><span class="specs specs--rect"></span></div></div>
+            <div>
+              <h3>Round face</h3>
+              <p>Soft curves with similar width and length, widest at the cheeks. Angles add definition.</p>
+              <dl class="fit-list">
+                <div><dt>Try</dt><dd>Rectangles and geometric frames that sit slightly above the cheekbones</dd></div>
+                <div><dt>Skip</dt><dd>Small, perfectly round frames that echo the face</dd></div>
+              </dl>
+              <a class="link-arrow" href="pages/products.html#frames">Our pick: Arlo rectangle <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="finder-panel" role="tabpanel" id="panel-square" aria-labelledby="tab-square" tabindex="0" hidden>
+            <div class="face-demo" aria-hidden="true"><div class="face face--square"><span class="specs specs--round"></span></div></div>
+            <div>
+              <h3>Square face</h3>
+              <p>A strong jaw and broad forehead of similar width. Curves soften the angles.</p>
+              <dl class="fit-list">
+                <div><dt>Try</dt><dd>Round, panto and oval frames, or thin metal rims</dd></div>
+                <div><dt>Skip</dt><dd>Boxy, heavy rectangles that repeat the jawline</dd></div>
+              </dl>
+              <a class="link-arrow" href="pages/products.html#frames">Our pick: Mira round <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="finder-panel" role="tabpanel" id="panel-heart" aria-labelledby="tab-heart" tabindex="0" hidden>
+            <div class="face-demo" aria-hidden="true"><div class="face face--heart"><span class="specs specs--oval"></span></div></div>
+            <div>
+              <h3>Heart face</h3>
+              <p>A wider forehead tapering to a narrow chin. Keep the top of the frame light.</p>
+              <dl class="fit-list">
+                <div><dt>Try</dt><dd>Thin metal, rimless or ovals that are slightly wider at the bottom</dd></div>
+                <div><dt>Skip</dt><dd>Heavy browlines and decorated top rims</dd></div>
+              </dl>
+              <a class="link-arrow" href="pages/products.html#frames">Our pick: Feather titanium <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="finder-panel" role="tabpanel" id="panel-diamond" aria-labelledby="tab-diamond" tabindex="0" hidden>
+            <div class="face-demo" aria-hidden="true"><div class="face face--diamond"><span class="specs specs--cat"></span></div></div>
+            <div>
+              <h3>Diamond face</h3>
+              <p>Cheekbones are the widest point, with a narrower forehead and jaw. Add width at the brow.</p>
+              <dl class="fit-list">
+                <div><dt>Try</dt><dd>Cat-eye, upswept and browline frames</dd></div>
+                <div><dt>Skip</dt><dd>Narrow frames that sit inside the cheekbones</dd></div>
+              </dl>
+              <a class="link-arrow" href="pages/products.html#frames">Our pick: Celeste cat-eye <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — What every pair includes -->
+    <section class="section section-alt" aria-labelledby="included-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Included with every pair</p>
+          <h2 id="included-title">The price on the tag already covers what others charge extra for</h2>
+        </div>
+
+        <ul class="feature-grid">
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">◎&#xFE0E;</span>
+            <h3>Anti-glare and UV400 as standard</h3>
+            <p>Every prescription lens we fit has a multi-layer anti-reflective coat and full UV protection at no extra cost.</p>
+          </li>
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">↺&#xFE0E;</span>
+            <h3>Free adjustments for life</h3>
+            <p>Walk in any time for re-alignment, new nose pads and an ultrasonic clean. No receipt or appointment needed.</p>
+          </li>
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">◷&#xFE0E;</span>
+            <h3>Ready in three working days</h3>
+            <p>Single-vision lenses are edged in our on-site lab. Progressives from ZEISS or Essilor take 7–10 days.</p>
+          </li>
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">☂&#xFE0E;</span>
+            <h3>12-month breakage cover</h3>
+            <p>Snapped a hinge or scratched a lens in the first year? We replace it once for a ₹500 handling fee.</p>
+          </li>
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">✓&#xFE0E;</span>
+            <h3>30-day progressive promise</h3>
+            <p>Can’t get used to your progressive lenses within 30 days? We remake them in a different design, free.</p>
+          </li>
+          <li class="feature">
+            <span class="feature-icon" aria-hidden="true">♻&#xFE0E;</span>
+            <h3>₹500 trade-in on old frames</h3>
+            <p>Bring any old pair when you buy. We clean and re-glaze them for people who can’t afford glasses.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5 — Free frame styling session (how it works) -->
+    <section class="section" aria-labelledby="styling-title">
+      <div class="container split">
+        <div class="split-media">
+          <img src="assets/images/try-on-mirror.jpg" alt="Customer trying on frames in front of a mirror beside a wall of eyeglasses" width="1000" height="800" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Free frame styling</p>
+          <h2 id="styling-title">Twenty minutes with an optician beats an hour of scrolling</h2>
+          <p>Book a styling session and a dispensing optician will narrow the whole wall down to the few frames that suit your face, prescription and budget.</p>
+          <ol class="steps">
+            <li>
+              <h3>Tell us how you use your eyes</h3>
+              <p>Screens, night driving, Sunday cricket — your routine decides the lens type and frame material.</p>
+            </li>
+            <li>
+              <h3>Try a shortlist of eight</h3>
+              <p>We pull frames that suit your lens power too: strong prescriptions look best in smaller, rounder shapes.</p>
+            </li>
+            <li>
+              <h3>Compare side by side</h3>
+              <p>Our mirror camera saves a photo of each frame on you, so you can decide at home or ask family on WhatsApp.</p>
+            </li>
+          </ol>
+          <p class="note">Sessions run Monday to Friday, 11 am – 4 pm. Mention “styling” when you message us.</p>
+          <a class="link-arrow" href="pages/contact.html">Ask for a styling slot <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 — Next step -->
+    <section class="section section-alt" aria-labelledby="home1-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="home1-cta-title">Need a new prescription before you choose?</h2>
+            <p>A standard eye test takes 20 minutes and costs ₹350 — refunded when you buy a complete pair within 30 days.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="pages/eye-test.html#book">Book Eye Test</a>
+            <a class="cta-link" href="tel:+918041276650">or call +91 80 4127 6650</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+          <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+        </a>
+        <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <div>
+          <h2 class="footer-title">Home</h2>
+          <ul>
+            <li><a href="index.html" aria-current="page">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Shop</h2>
+          <ul>
+            <li><a href="pages/products.html">Products</a></li>
+            <li><a href="pages/brands.html">Brands</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Care</h2>
+          <ul>
+            <li><a href="pages/eye-test.html">Eye Test</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care · 1st Floor, 612, 12th Main Road, Indiranagar, Bengaluru 560008</p>
+      <p>Mon–Sat 10 am – 8:30 pm · Sun 11 am – 6 pm</p>
+    </div>
+  </footer>
+</body>
+</html>

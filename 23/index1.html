@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="Lumora's eye clinic in Indiranagar: four optometrists, specialty clinics for myopia, dry eye and keratoconus, and an eye-test self-check.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" class="is-current" aria-current="page">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/products.html">Products</a></li>
+          <li><a class="nav-link" href="pages/brands.html">Brands</a></li>
+          <li><a class="nav-link" href="pages/eye-test.html">Eye Test</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="sym" aria-hidden="true">⇄</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="pages/eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== HOME 2: eye-clinic-led template =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Hero: full-bleed clinic photograph -->
+    <section class="hero-b" aria-labelledby="hero-b-title">
+      <img class="hero-b-bg" src="assets/images/hero-home2-child-eye-exam.jpg" alt="Child looking into a phoropter while an optometrist checks their prescription" width="1920" height="1100" fetchpriority="high">
+      <div class="container">
+        <div class="hero-b-content">
+          <p class="eyebrow">Eye clinic · four optometrists on site</p>
+          <h1 id="hero-b-title">Eye care first. Eyewear second.</h1>
+          <p class="lead">Every Lumora appointment starts with the health of your eyes, not the price of a frame. We screen for glaucoma, cataract and diabetic changes before anyone mentions glasses.</p>
+          <div class="hero-actions">
+            <a class="btn" href="pages/eye-test.html#book">Book Eye Test</a>
+            <a class="link-arrow link-light" href="#team">Meet the optometrists <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Our story with key numbers -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container story">
+        <div class="story-media">
+          <img src="assets/images/story-frame-wall-customer.jpg" alt="Woman adjusting her new glasses in front of a wall of eyeglass frames" width="1000" height="800" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-title">A two-chair clinic that kept its promise to take its time</h2>
+          <p>Optometrist Karthik Rao opened Lumora in 2012 after eight years in a hospital eye department, where tests were squeezed into seven minutes. His rule was simple: an eye test lasts as long as your eyes need.</p>
+          <p>Today four optometrists and three dispensing opticians share the same rule, and the appointment book still leaves room for questions.</p>
+          <ul class="stats">
+            <li class="stat"><strong><span dir="ltr">38,000+</span></strong><span>eye exams since 2012</span></li>
+            <li class="stat"><strong><span dir="ltr">9,400</span></strong><span>children screened free at school camps</span></li>
+            <li class="stat"><strong><span dir="ltr">7</span></strong><span>eye-care professionals on the team</span></li>
+            <li class="stat"><strong><span dir="ltr">14 yrs</span></strong><span>on 12th Main, Indiranagar</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 — Specialty clinics with prices -->
+    <section class="section section-alt" aria-labelledby="clinics-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Specialty clinics</p>
+          <h2 id="clinics-title">When glasses alone aren’t the answer</h2>
+          <p class="lead">Beyond routine eye tests, our optometrists run six focused clinics by appointment. Prices are for the first assessment.</p>
+        </div>
+
+        <ul class="clinic-list">
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">◐</span>
+            <div>
+              <h3>Myopia control for children</h3>
+              <p>Defocus spectacle lenses, myopia-control soft contacts and six-monthly eye-length measurements to slow worsening short sight.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹4,500</strong><span dir="ltr">per year</span></p>
+          </li>
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">≈</span>
+            <div>
+              <h3>Dry eye clinic</h3>
+              <p>Tear-film tests and eyelid-gland imaging for gritty, tired eyes — common after long screen days in air-conditioned offices.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹1,500</strong><span dir="ltr">40 min</span></p>
+          </li>
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">◉</span>
+            <div>
+              <h3>Diabetic eye screening</h3>
+              <p>Retinal photographs and an OCT scan, with a written report for your physician within 24 hours.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹1,100</strong><span dir="ltr">30 min</span></p>
+          </li>
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">◠</span>
+            <div>
+              <h3>Keratoconus &amp; specialty lenses</h3>
+              <p>Scleral and rigid gas-permeable lenses for irregular corneas, fitted over two or three visits.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹3,500</strong><span dir="ltr">full fitting</span></p>
+          </li>
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">✧</span>
+            <div>
+              <h3>Low vision support</h3>
+              <p>Magnifiers, telescopic aids and lighting plans for macular degeneration and other conditions glasses can’t fully correct.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹1,200</strong><span dir="ltr">60 min</span></p>
+          </li>
+          <li class="clinic">
+            <span class="clinic-icon" aria-hidden="true">∞</span>
+            <div>
+              <h3>Binocular vision &amp; eye strain</h3>
+              <p>Checks for eye-teaming and focusing problems behind reading fatigue or double vision, with a six-week exercise plan.</p>
+            </div>
+            <p class="clinic-price"><strong dir="ltr">₹1,400</strong><span dir="ltr">45 min</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4 — Meet the optometrists -->
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">The optometrists</p>
+          <h2 id="team-title">Four specialists, one shared patient record</h2>
+          <p class="lead">Whoever you see, your scans and notes from every visit are on screen — nobody starts from scratch.</p>
+        </div>
+
+        <ul class="team-grid">
+          <li class="member">
+            <img src="assets/images/team-karthik-rao.jpg" alt="Karthik Rao smiling in a white coat with a stethoscope and glasses" width="600" height="700" loading="lazy">
+            <h3>Karthik Rao</h3>
+            <p class="role">Founder &amp; clinical director</p>
+            <p>M.Optom, 22 years in practice. Leads glaucoma screening and complex prescriptions.</p>
+            <p class="langs">Speaks English, Kannada, Telugu</p>
+          </li>
+          <li class="member">
+            <img src="assets/images/team-sana-fernandes.jpg" alt="Sana Fernandes in teal scrubs, standing with arms folded and smiling" width="600" height="700" loading="lazy">
+            <h3>Sana Fernandes</h3>
+            <p class="role">Paediatric &amp; myopia optometrist</p>
+            <p>B.Optom with a paediatric fellowship. Runs the children’s clinic and our school eye camps.</p>
+            <p class="langs">Speaks English, Konkani, Hindi</p>
+          </li>
+          <li class="member">
+            <img src="assets/images/team-arjun-menon.jpg" alt="Arjun Menon in a white coat and glasses, arms folded" width="600" height="700" loading="lazy">
+            <h3>Arjun Menon</h3>
+            <p class="role">Contact lens specialist</p>
+            <p>B.Optom, FIACLE. Fits scleral and keratoconus lenses and trains first-time wearers.</p>
+            <p class="langs">Speaks English, Malayalam, Tamil</p>
+          </li>
+          <li class="member">
+            <img src="assets/images/team-priya-raghavan.jpg" alt="Priya Raghavan in a white coat with a stethoscope against a red wall" width="600" height="700" loading="lazy">
+            <h3>Priya Raghavan</h3>
+            <p class="role">Dry eye &amp; low vision optometrist</p>
+            <p>M.Optom. Heads the dry eye clinic and low vision aids service.</p>
+            <p class="langs">Speaks English, Tamil, Kannada</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5 — Patient reviews (proof) -->
+    <section class="section section-alt" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Patient reviews</p>
+          <h2 id="reviews-title">What patients say after the appointment</h2>
+        </div>
+
+        <div class="reviews">
+          <div class="rating-card">
+            <p class="rating-score">4.9</p>
+            <p class="stars" aria-hidden="true">★★★★★</p>
+            <p class="rating-note"><span class="visually-hidden">Rated 4.9 out of 5. </span>Average of 1,186 Google reviews</p>
+            <ul class="bars">
+              <li><span dir="ltr">5 ★</span><span class="bar" aria-hidden="true"><i style="width: 93%"></i></span><span dir="ltr">93%</span></li>
+              <li><span dir="ltr">4 ★</span><span class="bar" aria-hidden="true"><i style="width: 5%"></i></span><span dir="ltr">5%</span></li>
+              <li><span dir="ltr">3 ★</span><span class="bar" aria-hidden="true"><i style="width: 1%"></i></span><span dir="ltr">1%</span></li>
+              <li><span dir="ltr">1–2 ★</span><span class="bar" aria-hidden="true"><i style="width: 1%"></i></span><span dir="ltr">1%</span></li>
+            </ul>
+          </div>
+
+          <div class="quotes">
+            <figure class="quote">
+              <blockquote>
+                <p>I’d been told twice that my headaches were “just stress”. Priya found a small uncorrected astigmatism plus dry eye from ten-hour coding days. Two weeks later the headaches had stopped.</p>
+              </blockquote>
+              <figcaption><strong>Rohan M.</strong> · Software engineer, Koramangala</figcaption>
+            </figure>
+            <figure class="quote">
+              <blockquote>
+                <p>Sana turned my six-year-old’s first eye test into a game. We joined the myopia programme and his last two check-ups have shown barely any change.</p>
+              </blockquote>
+              <figcaption><strong>Deepa S.</strong> · Parent, HAL 3rd Stage</figcaption>
+            </figure>
+            <figure class="quote">
+              <blockquote>
+                <p>Arjun spent three visits getting my scleral lenses right for keratoconus. For the first time in years I can drive at night without halos.</p>
+              </blockquote>
+              <figcaption><strong>Farhan A.</strong> · Architect, Whitefield</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 — Self-check that recommends an appointment (next step) -->
+    <section class="section" aria-labelledby="check-title">
+      <div class="container check">
+        <div>
+          <p class="eyebrow">Quick self-check</p>
+          <h2 id="check-title">Is it time for an eye test?</h2>
+          <p class="lead">Tick anything that sounds familiar and we’ll suggest the right appointment. It’s guidance, not a diagnosis.</p>
+          <p>Healthy adults under 60 should be checked every two years. Children who wear glasses, people with diabetes and everyone over 60 should come once a year.</p>
+        </div>
+
+        <div class="check-card" data-selfcheck>
+          <fieldset>
+            <legend>In the last few months, have you…</legend>
+            <label class="check-row"><input type="checkbox" value="screen"> had headaches or tired eyes after screen work?</label>
+            <label class="check-row"><input type="checkbox" value="distance"> squinted at road signs or the TV, especially at night?</label>
+            <label class="check-row"><input type="checkbox" value="near"> held your phone further away to read it?</label>
+            <label class="check-row"><input type="checkbox" value="overdue"> gone more than two years since your last test?</label>
+            <label class="check-row"><input type="checkbox" value="risk"> got diabetes, high blood pressure or family glaucoma?</label>
+            <label class="check-row"><input type="checkbox" value="child"> noticed a child struggling to see the board or TV?</label>
+          </fieldset>
+          <div class="check-result" aria-live="polite">
+            <p class="check-result-title" data-check-title>Nothing ticked yet</p>
+            <p data-check-text>Your suggestion will appear here.</p>
+          </div>
+          <a class="btn" href="pages/eye-test.html?test=standard#book" data-check-link>Book Eye Test</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+          <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+        </a>
+        <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <div>
+          <h2 class="footer-title">Home</h2>
+          <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html" aria-current="page">Home 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Shop</h2>
+          <ul>
+            <li><a href="pages/products.html">Products</a></li>
+            <li><a href="pages/brands.html">Brands</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Care</h2>
+          <ul>
+            <li><a href="pages/eye-test.html">Eye Test</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care · 1st Floor, 612, 12th Main Road, Indiranagar, Bengaluru 560008</p>
+      <p>Mon–Sat 10 am – 8:30 pm · Sun 11 am – 6 pm</p>
+    </div>
+  </footer>
+</body>
+</html>

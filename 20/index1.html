@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 - HydroFix Plumbing</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="HydroFix Home">
+        <img src="assets/images/logo.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-light">
+        <img src="assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-dark">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="desktop-nav">
+          <li class="nav-item dropdown active">
+            <a href="index1.html" class="nav-link active" aria-haspopup="true" aria-expanded="false">
+              Home <span class="dropdown-icon">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="index1.html" class="active">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="pages/services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/pricing.html" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/emergency.html" class="nav-link">Emergency</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Tools & CTA -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="tool-btn theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <span class="theme-symbol">☾</span>
+        </button>
+
+        <!-- Direction Toggle -->
+        <button type="button" class="tool-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle text direction">
+          <span class="dir-text">⇄ RTL</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="pages/contact.html" class="btn-primary">Book Now</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop & Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-panel" aria-label="Mobile Navigation Drawer">
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+      <button type="button" class="tool-btn theme-toggle-btn" style="flex: 1;" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <span class="theme-symbol">☾</span>
+      </button>
+      <button type="button" class="tool-btn dir-toggle-btn" style="flex: 1;" aria-label="Toggle text direction" title="Toggle text direction">
+        <span class="dir-text">⇄ RTL</span>
+      </button>
+    </div>
+
+    <ul class="mobile-links">
+      <li>
+        <button type="button" class="mobile-accordion-toggle" aria-expanded="true">
+          Home <span>▼</span>
+        </button>
+        <ul class="mobile-accordion-menu is-expanded">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html" class="active">Home 2</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="pages/pricing.html">Pricing</a></li>
+      <li><a href="pages/emergency.html">Emergency</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+
+    <div style="border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+      <a href="pages/contact.html" class="btn-primary mobile-drawer-cta">Book Now</a>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- SECTION 1: HERO (Full-Width Diagnostics Hero + Interactive Issue Selector) -->
+    <section class="home2-hero" style="background-image: url('assets/images/hero-home2.jpg');">
+      <div class="home2-hero-overlay"></div>
+      <div class="container">
+        <div class="live-ticker">
+          <span class="pulse-dot"></span>
+          <span>Live Fleet Status: 14 GPS Vans Active Across Metro • Avg Dispatch: 34 Mins</span>
+        </div>
+        <h1>Modern Plumbing Diagnostics &amp; Engineered Pipe Infrastructure</h1>
+        <p>
+          We employ non-invasive acoustic sensors, optical fiber scopes, and high-pressure jetting technology to pinpoint and eliminate plumbing failures without tearing apart your property.
+        </p>
+
+        <!-- Interactive Issue Selector -->
+        <div class="issue-selector-box">
+          <div class="issue-selector-label">
+            <span>🔍</span>
+            <span>Identify Your Plumbing Problem:</span>
+          </div>
+          <select id="home2-issue-select" class="issue-select" aria-label="Select plumbing symptom">
+            <option value="burst_pipe">Active Pipe Fracture or Hidden Water Leak</option>
+            <option value="clogged_drain">Slow or Completely Backed-Up Sewer Drain</option>
+            <option value="low_pressure">Severe Water Pressure Drop or Valve Shudder</option>
+            <option value="tank_sediment">Storage Tank Contamination &amp; Murky Water</option>
+            <option value="faucet_leak">Constant Drip or High-Pressure Tap Malfunction</option>
+          </select>
+        </div>
+
+        <div id="home2-issue-output" style="max-width: 920px; margin: 0 auto;">
+          <!-- Dynamically populated by main.js with immediate diagnostic breakdown -->
+          <div style="background-color: var(--bg-card); border: 2px solid var(--brand-blue); border-radius: var(--radius-md); padding: 1.5rem; text-align: start; box-shadow: var(--card-shadow); color: var(--text-primary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+              <strong style="font-size: 1.15rem;">Active Pipe Fracture / Leak Detected</strong>
+              <span class="badge badge-guarantee">30-45 Mins Arrival</span>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Immediate emergency shutoff assistance, acoustic leak localization, and high-temp copper/PEX sectional pipe replacement.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-light); padding-top: 0.75rem;">
+              <span style="font-weight: 800; font-size: 1.1rem; color: var(--brand-blue);">Starting from $175</span>
+              <a href="pages/contact.html?service=emergency_burst" data-service="emergency_burst" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.88rem;">Book This Service</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: ADVANCED DIAGNOSTIC EQUIPMENT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Precision Technology</span>
+          <h2 class="section-title">Zero-Destruction Diagnostic Equipment</h2>
+          <p class="section-desc">
+            Rather than knocking through walls or excavating gardens to find leaks, our master technicians leverage cutting-edge electronic diagnostic tools.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="tech-card">
+            <img src="assets/images/diagnostic-tools.jpg" alt="Acoustic leak detector analyzing water flow through concrete floor" class="tech-card-img">
+            <div class="tech-card-body">
+              <h3 class="card-title">Ultrasonic Acoustic Sensors</h3>
+              <p class="card-desc">
+                Picks up minute sound frequencies created by pressurized water escaping through hairline copper fractures beneath concrete slabs.
+              </p>
+              <ul class="tech-spec-list">
+                <li>• Accuracy within 2 inches</li>
+                <li>• Sub-slab &amp; drywall scanning</li>
+                <li>• Zero wall demo required</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <img src="assets/images/sewer-camera.jpg" alt="High-definition 4K fiber optic camera snake inspecting interior of sewer line" class="tech-card-img">
+            <div class="tech-card-body">
+              <h3 class="card-title">4K Optical Sewer Scopes</h3>
+              <p class="card-desc">
+                High-definition, waterproof camera heads that travel up to 200 feet through sewer laterals to pinpoint clogs, bellied pipes, and roots.
+              </p>
+              <ul class="tech-spec-list">
+                <li>• 1080p color video recording</li>
+                <li>• Real-time digital foot counter</li>
+                <li>• Sonde depth tracking transmitter</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <img src="assets/images/hydro-jetting.jpg" alt="Commercial hydro-jetting machine delivering 4000 PSI water pressure" class="tech-card-img">
+            <div class="tech-card-body">
+              <h3 class="card-title">4,000 PSI Hydro-Jetting</h3>
+              <p class="card-desc">
+                Rotary water nozzles that scour sewer walls clean of built-up grease, hardened mineral scale, and heavy root clusters.
+              </p>
+              <ul class="tech-spec-list">
+                <li>• 18 GPM high-velocity flow</li>
+                <li>• Restores full pipe diameter</li>
+                <li>• 100% eco-pure (zero chemicals)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <img src="assets/images/thermal-imaging.jpg" alt="Infrared thermography camera identifying hidden thermal water leaks" class="tech-card-img">
+            <div class="tech-card-body">
+              <h3 class="card-title">Infrared Thermal Imagers</h3>
+              <p class="card-desc">
+                Detects micro-temperature variations caused by hot water line leaks or latent moisture pooling behind ceiling plaster.
+              </p>
+              <ul class="tech-spec-list">
+                <li>• FLIR high-resolution sensor</li>
+                <li>• Moisture boundary mapping</li>
+                <li>• Insurer-accepted audit reports</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: RESIDENTIAL VS COMMERCIAL MATRIX -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Dual Capabilities</span>
+          <h2 class="section-title">Residential Care vs. Commercial Infrastructure</h2>
+          <p class="section-desc">
+            Plumbing demands differ dramatically between a family residence and a multi-level commercial complex. Our specialized divisions cater to both.
+          </p>
+        </div>
+
+        <div class="split-facility-grid">
+          <div class="facility-card residential">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span class="badge">Residential Division</span>
+              <span style="font-size: 1.5rem;">🏡</span>
+            </div>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">Single-Family &amp; Apartment Services</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Tailored for homeowners, landlords, and condo residents. Focused on quiet operation, spotless site cleanliness, and fast same-day resolution.
+            </p>
+            <ul class="facility-checklist">
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Bathroom &amp; Kitchen Fixture Modernization</strong>
+                  <p>Installation of high-efficiency mixer taps, dual-flush toilets, and under-sink filtration.</p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Domestic Water Storage Sanitization</strong>
+                  <p>Annual overhead tank silt extraction, UV disinfection, and booster pump tuning.</p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Low Water Pressure Restoration</strong>
+                  <p>PRV regulator valve replacements and pipe descaling to deliver consistent shower pressure.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="facility-card commercial">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span class="badge badge-guarantee">Commercial Division</span>
+              <span style="font-size: 1.5rem;">🏢</span>
+            </div>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">Enterprise &amp; Facility Infrastructure</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Engineered for restaurants, retail complexes, office towers, and medical clinics needing code compliance and minimal business downtime.
+            </p>
+            <ul class="facility-checklist">
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Grease Interceptor &amp; Vent Stack Maintenance</strong>
+                  <p>Scheduled hydro-flushing to maintain local municipal health and municipal sewer compliance.</p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Certified Backflow Preventer Testing (RPZ)</strong>
+                  <p>Annual testing, repair, and state reporting for cross-connection safety valves.</p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>High-Volume Industrial Water Boilers &amp; Pumps</strong>
+                  <p>Emergency rebuilds of multi-stage circulation pumps, pressure vessels, and steam piping.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PREVENTATIVE MEMBERSHIP CLUB -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Proactive Protection</span>
+          <h2 class="section-title">HydroFix Maintenance Club Memberships</h2>
+          <p class="section-desc">
+            Prevent catastrophic water damages and extend the lifespan of your plumbing network with routine preventative audits and member discounts.
+          </p>
+        </div>
+
+        <div class="plan-grid">
+          <div class="plan-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800;">Home Shield</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">For single-family homes &amp; duplexes</p>
+            <div class="plan-price">$19 <span>/ month</span></div>
+            <ul class="plan-features">
+              <li><span>✓</span> 1 Comprehensive Annual Plumbing Audit</li>
+              <li><span>✓</span> 1 Water Heater Tank Flush &amp; Anode Check</li>
+              <li><span>✓</span> 15% Discount on all repairs &amp; parts</li>
+              <li><span>✓</span> $0 Diagnostic Fee on any callout</li>
+              <li><span>✓</span> Priority Booking over standard queue</li>
+            </ul>
+            <a href="pages/contact.html?service=audit_inspection" data-service="audit_inspection" class="btn-secondary" style="width: 100%; justify-content: center;">Join Home Shield</a>
+          </div>
+
+          <div class="plan-card featured">
+            <span class="badge badge-urgent plan-badge">Most Popular</span>
+            <h3 style="font-size: 1.35rem; font-weight: 800;">Landlord Care</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">For property managers &amp; multi-unit owners</p>
+            <div class="plan-price">$49 <span>/ month</span></div>
+            <ul class="plan-features">
+              <li><span>✓</span> Bi-Annual Inspections across up to 4 units</li>
+              <li><span>✓</span> Annual Main Sewer Optical Camera Scan</li>
+              <li><span>✓</span> 20% Discount on all emergency repairs</li>
+              <li><span>✓</span> Direct Tenant Triage Dispatch line</li>
+              <li><span>✓</span> Detailed Insurer-Ready Compliance Records</li>
+            </ul>
+            <a href="pages/contact.html?service=audit_inspection" data-service="audit_inspection" class="btn-primary" style="width: 100%; justify-content: center;">Join Landlord Care</a>
+          </div>
+
+          <div class="plan-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800;">Facility Pro</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">For restaurants, clinics &amp; commercial centers</p>
+            <div class="plan-price">$149 <span>/ month</span></div>
+            <ul class="plan-features">
+              <li><span>✓</span> Quarterly Backflow &amp; Grease Line Inspections</li>
+              <li><span>✓</span> Guaranteed 30-Minute Emergency Dispatch SLA</li>
+              <li><span>✓</span> 25% Discount on all parts, pumps &amp; valves</li>
+              <li><span>✓</span> Dedicated Lead Master Plumber account rep</li>
+              <li><span>✓</span> 24/7 Priority Emergency Access</li>
+            </ul>
+            <a href="pages/contact.html?service=audit_inspection" data-service="audit_inspection" class="btn-secondary" style="width: 100%; justify-content: center;">Join Facility Pro</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: REGIONAL FLEET & DISPATCH HUBS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Local Coverage</span>
+          <h2 class="section-title">Our Strategic Mobile Dispatch Depots</h2>
+          <p class="section-desc">
+            To guarantee our 45-minute arrival commitment, our fleet of fully outfitted mobile workshops is stationed across four strategically positioned metro hubs.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-icon-box">📍</div>
+            <h3 class="card-title">Central Depot</h3>
+            <p class="card-desc">
+              Downtown core, Financial District, and riverfront loft towers. 4 rapid service vans on duty.
+            </p>
+            <div style="margin-top: 1rem; font-size: 0.85rem; font-weight: 700; color: #15803d;">
+              ● Avg Arrival: 26 Mins
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon-box">📍</div>
+            <h3 class="card-title">North Suburban Hub</h3>
+            <p class="card-desc">
+              Highland Park, North Hills, and industrial business parks. 3 heavy hydro-jetting rigs stationed.
+            </p>
+            <div style="margin-top: 1rem; font-size: 0.85rem; font-weight: 700; color: #15803d;">
+              ● Avg Arrival: 32 Mins
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon-box">📍</div>
+            <h3 class="card-title">East Metro Station</h3>
+            <p class="card-desc">
+              University district, medical clinic corridors, and residential subdivisions. 4 response vans.
+            </p>
+            <div style="margin-top: 1rem; font-size: 0.85rem; font-weight: 700; color: #15803d;">
+              ● Avg Arrival: 35 Mins
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon-box">📍</div>
+            <h3 class="card-title">South County Depot</h3>
+            <p class="card-desc">
+              South Hills, commercial logistics centers, and residential estates. 3 mobile diagnostic units.
+            </p>
+            <div style="margin-top: 1rem; font-size: 0.85rem; font-weight: 700; color: #15803d;">
+              ● Avg Arrival: 38 Mins
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SMART WATER CONSERVATION & EFFICIENCY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Modern Efficiency</span>
+          <h2 class="section-title">Smart Water Conservation &amp; Micro-Leak Defense</h2>
+          <p class="section-desc">
+            Modernize your infrastructure to slash utility waste. Our engineered conservation retrofits protect both regional water tables and your monthly bills.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="assets/images/conserve-iot.jpg" alt="Whole home smart ultrasonic flow sensor and digital leak monitor" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">📡</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">IoT Smart Flow Monitors</h3>
+              <p class="card-desc">
+                Whole-home ultrasonic sensors installed on your main supply line that track real-time consumption and automatically shut off water upon detecting micro-leaks.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="assets/images/conserve-aerator.jpg" alt="High pressure aerated tap nozzle boosting velocity while saving water" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">💨</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">High-Pressure Aerators</h3>
+              <p class="card-desc">
+                Engineered micro-bubble aerators that reduce water volume by up to 35% while amplifying spray velocity for kitchen and bath faucets.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="assets/images/conserve-greywater.jpg" alt="Greywater diversion valve and garden drip irrigation recycling system" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">♻️</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Greywater Ready Retrofits</h3>
+              <p class="card-desc">
+                Dual-line diverter valves that route clean laundry rinse water to outdoor garden irrigation, reducing freshwater consumption during hot summer months.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="assets/images/conserve-pressure.jpg" alt="Brass pressure reducing valve calibration to optimal 55 PSI" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">⚖️</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pressure Relief Tuning</h3>
+              <p class="card-desc">
+                Balancing household pressure down to an optimal 55 PSI, preventing premature toilet valve failure, burst washing machine hoses, and pipe strain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA BANNER -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-content">
+            <h2>Protect Your Property Before An Emergency Strikes</h2>
+            <p>
+              Schedule a comprehensive plumbing diagnostic audit or join our maintenance club today. Our certified technicians keep your systems operating flawlessly.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="pages/contact.html" class="btn-primary">Book Now</a>
+            <div class="cta-phone-tag">Direct Coordinator: <strong>(800) 555-7473</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link" aria-label="HydroFix Home">
+            <img src="assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img">
+          </a>
+          <p class="footer-desc">
+            Licensed 24/7 plumbing, emergency pipe repair, advanced leak diagnostics, and comprehensive sanitation services.
+          </p>
+          <div class="footer-contact-item">
+            <span>📞</span> <span>(800) 555-PIPE / (800) 555-7473</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span> <span>dispatch@hydrofixplumbing.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📍</span> <span>4280 Industrial Parkway, Suite 100, Metro City</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Home</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/emergency.html">Emergency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HydroFix Plumbing &amp; Pipe Repair Service. All rights reserved.
+        </div>
+        <div class="footer-meta">
+          <span>License #MP-849201</span>
+          <span>Fully Insured &amp; Bonded</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Explore our complete yoga class catalog by style and level. From energetic Vinyasa Flow to therapeutic Yin and sound healing.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness Home 1">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+        <span class="brand-text">
+          <span class="brand-name">Aura Yoga</span>
+          <span class="brand-sub">Wellness Sanctuary</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <span class="dropdown-arrow">&#9662;</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1</a>
+            <a href="../index1.html" class="dropdown-link">Home 2</a>
+          </div>
+        </div>
+        <a href="classes.html" class="nav-link active">Classes</a>
+        <a href="instructors.html" class="nav-link">Instructors</a>
+        <a href="membership.html" class="nav-link">Membership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm">Sign In</a>
+
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="30" height="30">
+        <span class="brand-name" style="font-size: 1.15rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary);">Aura Yoga</span>
+      </div>
+      <button type="button" class="mobile-drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <div class="mobile-nav-list">
+      <div class="mobile-dropdown-group">
+        <a href="#" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          Home <span>&#9662;</span>
+        </a>
+        <div class="mobile-accordion-content">
+          <a href="../index.html" class="mobile-nav-link">Home 1</a>
+          <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+        </div>
+      </div>
+      <a href="classes.html" class="mobile-nav-link active">Classes</a>
+      <a href="instructors.html" class="mobile-nav-link">Instructors</a>
+      <a href="membership.html" class="mobile-nav-link">Membership</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Toggle theme">&#9790; Dark</button>
+        <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Toggle direction">&#8644; RTL</button>
+      </div>
+      <a href="signin.html" class="btn btn-primary btn-block">Sign In</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Page Hero with Relevant Image -->
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <span class="section-badge">Practice Catalog</span>
+          <h1>Classes by Style &amp; Level</h1>
+          <p class="section-desc">
+            Explore mindful movement practices designed to meet you exactly where you are today. Filter by yogic lineage, physical intensity, or practitioner experience level.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#class-catalog" class="btn btn-primary">Filter Classes</a>
+            <a href="membership.html" class="btn btn-secondary">View Pricing</a>
+          </div>
+        </div>
+
+        <div class="page-hero-img">
+          <img src="../assets/images/hero-classes.jpg" alt="A class of focused yoga practitioners moving in unified rhythm" width="500" height="340">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Interactive Style & Level Filtering -->
+    <section id="class-catalog" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Interactive Filter</span>
+          <h2>Find the Right Session for Your Body</h2>
+          <p class="section-desc">
+            Select a style and practice level below to view tailored sessions and upcoming available studio slots.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+          <div class="filter-bar" data-filter-group="style" style="margin-bottom: 0.5rem;">
+            <button type="button" class="filter-btn active" data-filter="all">All Styles</button>
+            <button type="button" class="filter-btn" data-filter="vinyasa">Vinyasa Flow</button>
+            <button type="button" class="filter-btn" data-filter="yin">Yin &amp; Sound</button>
+            <button type="button" class="filter-btn" data-filter="hatha">Hatha Alignment</button>
+            <button type="button" class="filter-btn" data-filter="ashtanga">Ashtanga</button>
+            <button type="button" class="filter-btn" data-filter="pranayama">Pranayama &amp; Breath</button>
+          </div>
+
+          <div class="filter-bar" data-filter-group="level" style="margin-bottom: 0;">
+            <button type="button" class="filter-btn active" data-filter="all">All Levels</button>
+            <button type="button" class="filter-btn" data-filter="beginner">Beginner Friendly</button>
+            <button type="button" class="filter-btn" data-filter="intermediate">Intermediate</button>
+            <button type="button" class="filter-btn" data-filter="advanced">Advanced</button>
+          </div>
+        </div>
+
+        <p id="filter-status-msg" style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2.25rem; font-weight: 500;">Showing all 6 studio classes</p>
+
+        <!-- Section 2: Detailed Class Catalog Cards -->
+        <div class="grid grid-2" id="class-catalog-grid">
+          <!-- Class Card 1 -->
+          <div class="class-card filterable-card" data-style="vinyasa" data-level="all beginner intermediate advanced">
+            <div class="class-card-img">
+              <img src="../assets/images/class-vinyasa.jpg" alt="Dynamic fluid vinyasa yoga flow in morning light" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Vinyasa Flow</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; Open to All Levels</span>
+                <span class="class-intensity intensity-moderate">&#9679; Intensity: Medium-High</span>
+              </div>
+              <h3>Prana Flow &amp; Vitality</h3>
+              <p class="class-card-desc">
+                Seamless transitions linked to the rhythm of breath. Builds cardiovascular stamina, core stabilization, and neuromuscular coordination through dynamic sequencing.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 60 Min</span>
+                <span class="class-meta-item">&#9832; Room: 76&deg;F Warm</span>
+                <span class="class-meta-item">&#10003; Props Included</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Includes mat &amp; blocks</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class Card 2 -->
+          <div class="class-card filterable-card" data-style="yin" data-level="beginner intermediate">
+            <div class="class-card-img">
+              <img src="../assets/images/class-yin.jpg" alt="Yin practitioner resting in a supported pose on a round floor bolster" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Yin &amp; Sound</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; Beginner Friendly</span>
+                <span class="class-intensity intensity-gentle">&#9679; Intensity: Gentle</span>
+              </div>
+              <h3>Deep Yin &amp; Alchemy Sound</h3>
+              <p class="class-card-desc">
+                Passive floor postures held for 3 to 6 minutes, releasing deep myofascial tension accompanied by quartz crystal sound frequencies.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 75 Min</span>
+                <span class="class-meta-item">&#9832; Room: 72&deg;F Ambient</span>
+                <span class="class-meta-item">&#10003; Props Included</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Buckwheat bolsters &amp; eye pillows</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class Card 3 -->
+          <div class="class-card filterable-card" data-style="hatha" data-level="all beginner intermediate advanced">
+            <div class="class-card-img">
+              <img src="../assets/images/class-hatha.jpg" alt="Gentle alignment hatha pose with structural precision" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Hatha Alignment</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; All Levels</span>
+                <span class="class-intensity intensity-moderate">&#9679; Intensity: Moderate</span>
+              </div>
+              <h3>Classical Hatha &amp; Biomechanics</h3>
+              <p class="class-card-desc">
+                Clear anatomical instruction focusing on pelvic stability, spinal extension, and isometric strength in steady, focused poses.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 60 Min</span>
+                <span class="class-meta-item">&#9832; Room: 74&deg;F Comfortable</span>
+                <span class="class-meta-item">&#10003; Props Included</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Straps, wooden blocks &amp; wall rope</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class Card 4 -->
+          <div class="class-card filterable-card" data-style="ashtanga" data-level="intermediate advanced">
+            <div class="class-card-img">
+              <img src="../assets/images/class-ashtanga.jpg" alt="Dedicated Ashtanga practitioner practicing disciplined postures" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Ashtanga</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; Intermediate &bull; Advanced</span>
+                <span class="class-intensity intensity-vigorous">&#9679; Intensity: Vigorous</span>
+              </div>
+              <h3>Ashtanga Primary Series</h3>
+              <p class="class-card-desc">
+                Fixed sequence of standing, seated, and finishing postures. Emphasizes internal heat, bandha engagement, and drishti gaze focus.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 75 Min</span>
+                <span class="class-meta-item">&#9832; Room: 78&deg;F Heated</span>
+                <span class="class-meta-item">&#10003; Towel Provided</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Organic cotton towel provided</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class Card 5 -->
+          <div class="class-card filterable-card" data-style="pranayama" data-level="all beginner intermediate advanced">
+            <div class="class-card-img">
+              <img src="../assets/images/class-pranayama.jpg" alt="Seated practitioner in lotus pose focusing on breath regulation" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Pranayama &amp; Breath</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; All Welcome</span>
+                <span class="class-intensity intensity-gentle">&#9679; Intensity: Calming</span>
+              </div>
+              <h3>Pranayama &amp; Nervous Regulation</h3>
+              <p class="class-card-desc">
+                Systematic breathing exercises (Nadi Shodhana, Kapalabhati, Bhramari) to balance nervous equilibrium and cultivate meditative clarity.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 45 Min</span>
+                <span class="class-meta-item">&#9832; Room: 72&deg;F Ambient</span>
+                <span class="class-meta-item">&#10003; Props Included</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Zafu meditation cushions provided</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class Card 6 -->
+          <div class="class-card filterable-card" data-style="yin" data-level="all beginner intermediate advanced">
+            <div class="class-card-img">
+              <img src="../assets/images/class-restorative.jpg" alt="Deep relaxation in supported child's pose on a warm wooden floor" width="800" height="533" loading="lazy">
+              <span class="class-card-tag">Restorative Yin</span>
+            </div>
+            <div class="class-card-body">
+              <div class="class-card-header">
+                <span class="class-level-badge">&#9873; All Levels</span>
+                <span class="class-intensity intensity-gentle">&#9679; Intensity: Restful</span>
+              </div>
+              <h3>Restorative Somatics &amp; Nidra</h3>
+              <p class="class-card-desc">
+                Completely zero-effort postures supported by propping. Concludes with a 20-minute guided delta-wave body scan meditation.
+              </p>
+              <div class="class-meta-row">
+                <span class="class-meta-item">&#9200; 60 Min</span>
+                <span class="class-meta-item">&#9832; Room: 74&deg;F Gentle</span>
+                <span class="class-meta-item">&#10003; Props Included</span>
+              </div>
+              <div class="class-card-footer">
+                <span class="class-prop-note">Heavy organic blankets provided</span>
+                <a href="signin.html" class="btn btn-primary btn-sm">Book Slot &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty State (Shown when no classes match filter) -->
+          <div id="no-classes-found" class="no-results-box" style="display: none;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">&#129496;</div>
+            <h4>No Sessions Found</h4>
+            <p>No classes currently match this style and experience combination. Try resetting your filters to explore our full schedule.</p>
+            <button type="button" class="btn btn-secondary btn-sm" id="reset-filters-btn">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Practice Level Framework & Preparation -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Progression Roadmap</span>
+          <h2>Understanding Our Practice Levels</h2>
+          <p class="section-desc">
+            We honor individual anatomical variation. There is no hierarchy in yoga; choosing the appropriate level preserves joint longevity and creates sustainable progress.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;">Level 1 &bull; Foundations</div>
+            <p style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.8rem;">For newcomers or those resetting postural alignment.</p>
+            <p style="font-size: 0.9rem;">
+              Emphasis on joint positioning, pelvic tilts, foundational standing poses, and proper breathing mechanics. Teachers provide abundant verbal and visual cues.
+            </p>
+            <ul style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>&#10003; Pace: Measured &amp; steady</li>
+              <li>&#10003; Prerequisite: None required</li>
+              <li>&#10003; Ideal: Yin, Hatha, Restorative</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--accent); margin-bottom: 0.5rem;">Level 2 &bull; Expansion</div>
+            <p style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.8rem;">For practitioners with 6+ months consistent practice.</p>
+            <p style="font-size: 0.9rem;">
+              Introduces arm balances, gentle inversions (headstand and shoulderstand preps), deeper backbends, and longer flow sequences linked by ujjayi breath.
+            </p>
+            <ul style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>&#10003; Pace: Fluid &amp; rhythmic</li>
+              <li>&#10003; Prerequisite: Comfortable with Sun Salutations</li>
+              <li>&#10003; Ideal: Vinyasa Flow, Ashtanga Half</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;">Level 3 &bull; Deepening</div>
+            <p style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.8rem;">For seasoned students and teachers seeking mastery.</p>
+            <p style="font-size: 0.9rem;">
+              Rigorous physical challenges, complex transitions (floating jump-throughs, pincha mayurasana), full bandha control, and extended kumbhaka breath retention.
+            </p>
+            <ul style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>&#10003; Pace: Autonomous &amp; vigorous</li>
+              <li>&#10003; Prerequisite: Established personal practice</li>
+              <li>&#10003; Ideal: Ashtanga Full Primary, Solar Flow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Private 1-on-1 & Corporate Wellness -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+          <div>
+            <span class="section-badge">Bespoke Guidance</span>
+            <h2>Private Instruction &amp; Corporate Offerings</h2>
+            <p class="section-desc">
+              Whether you are recovering from an injury, preparing for teacher training, or cultivating executive team resilience, our senior faculty delivers tailored instruction.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-block: 1.5rem 2rem;">
+              <div style="display: flex; gap: 1rem;">
+                <div class="feature-circle" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0;">&#9733;</div>
+                <div>
+                  <h4 style="margin-bottom: 0.2rem;">Individual Biomechanics Assessment</h4>
+                  <p style="font-size: 0.9rem; margin: 0;">60 or 90-minute 1-on-1 sessions analyzing structural asymmetries, joint mobility limitations, and prescribing home flows.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <div class="feature-circle" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0;">&#9874;</div>
+                <div>
+                  <h4 style="margin-bottom: 0.2rem;">Corporate Breath &amp; Stress Reduction</h4>
+                  <p style="font-size: 0.9rem; margin: 0;">On-site or studio executive sessions focused on ergonomic mobility, eye-strain relief, and parasympathetic breathwork.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-secondary">Inquire About Private Sessions</a>
+          </div>
+
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 6px solid var(--bg-surface);">
+            <img src="../assets/images/private-coaching.jpg" alt="Senior teacher providing hands-on private alignment guidance" width="550" height="420">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Next Step CTA -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-banner">
+          <span style="display: inline-block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600;">Begin Your Journey</span>
+          <h2>Ready to Step onto Your Mat?</h2>
+          <p>
+            Book your first class or sign in to your member dashboard to reserve your favorite weekly spot.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="membership.html" class="btn btn-primary">Choose a Membership Plan</a>
+            <a href="signin.html" class="btn btn-secondary">Member Sign In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" aria-label="Aura Yoga &amp; Wellness">
+            <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+            <span class="brand-text">
+              <span class="brand-name">Aura Yoga</span>
+              <span class="brand-sub">Wellness Sanctuary</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            A mindful sanctuary offering classical and contemporary yoga, breathwork, and sound meditation designed to restore balance in body and spirit.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="classes.html" class="footer-link">Classes</a></li>
+            <li><a href="instructors.html" class="footer-link">Instructors</a></li>
+            <li><a href="membership.html" class="footer-link">Membership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2026 Aura Yoga &amp; Wellness Studio. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <span>Mindful Movement</span>
+            <span>&bull;</span>
+            <span>Living Lineage</span>
+            <span>&bull;</span>
+            <span>Non-Violence (Ahimsa)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

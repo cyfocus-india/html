@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Photos from class nights, weekend workshops, student plates and the Copper Pot studio space.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="workshops.html">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link is-active" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="gallery-title">
+      <div class="page-hero-bg">
+        <img src="../assets/images/hero-gallery-chef-plating.jpg" alt="Chef plating a dish under warm copper pendant lamps" width="1600" height="1000">
+      </div>
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="../index.html">Home 1</a></li>
+          <li aria-current="page">Gallery</li>
+        </ol>
+        <h1 id="gallery-title">Gallery: inside the studio</h1>
+        <p class="lead">Class nights, weekend workshops, the plates our students make and the kitchen they cook in, photographed by our team and our students.</p>
+        <div class="hero-pills"><span>Shot during real classes</span><span>No food stylists</span><span>Updated every month</span></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Filterable photo gallery + lightbox ===== -->
+    <section class="section" aria-labelledby="photos-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Photo gallery</span>
+          <h2 id="photos-title">Moments from the kitchen</h2>
+          <p class="lead">Filter by type, then select any photo to see it full size. Use the arrow keys to browse.</p>
+        </div>
+        <div class="gallery-filters" role="group" aria-label="Filter photos">
+          <button class="filter-btn" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-gallery-filter="classes" aria-pressed="false">Classes</button>
+          <button class="filter-btn" type="button" data-gallery-filter="workshops" aria-pressed="false">Workshops</button>
+          <button class="filter-btn" type="button" data-gallery-filter="dishes" aria-pressed="false">Dishes</button>
+          <button class="filter-btn" type="button" data-gallery-filter="studio" aria-pressed="false">Studio</button>
+          <button class="filter-btn" type="button" data-gallery-filter="events" aria-pressed="false">Events</button>
+        </div>
+        <div class="gallery-grid" data-gallery>
+          <button class="gallery-item wide" type="button" data-cat="classes" data-caption="Date-night class: browning chicken in an enamel pot">
+            <img src="../assets/images/gallery-couple-cooking.jpg" alt="Couple cooking together, one holding a tray over a red enamel pot" width="900" height="700" loading="lazy"><span class="cap">Date-night class</span>
+          </button>
+          <button class="gallery-item tall" type="button" data-cat="workshops" data-caption="Plating asparagus starters during a weekend workshop">
+            <img src="../assets/images/gallery-plating-asparagus.jpg" alt="Cook placing asparagus spears onto rows of plates" width="900" height="1100" loading="lazy"><span class="cap">Plating practice</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="dishes" data-caption="Pleated dumplings fresh from the steamer">
+            <img src="../assets/images/gallery-dim-sum.jpg" alt="Steamed dumplings in a black steamer basket" width="900" height="700" loading="lazy"><span class="cap">Steamed dumplings</span>
+          </button>
+          <button class="gallery-item tall" type="button" data-cat="studio" data-caption="Enamelled cookware on the demo kitchen range">
+            <img src="../assets/images/gallery-studio-range.jpg" alt="Blue enamel stockpot and pans on a stainless-steel range" width="900" height="1100" loading="lazy"><span class="cap">The demo range</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="classes" data-caption="Sharing the first pies at Neapolitan Pizza Night">
+            <img src="../assets/images/gallery-sharing-pizza.jpg" alt="Several hands reaching for slices of a large pizza on a dining table" width="900" height="900" loading="lazy"><span class="cap">Pizza Night</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="workshops" data-caption="Flambé lesson at the Fire &amp; Steak Weekend">
+            <img src="../assets/images/gallery-flambe.jpg" alt="Cook tossing a pan as flames rise from it" width="900" height="900" loading="lazy"><span class="cap">Flambé lesson</span>
+          </button>
+          <button class="gallery-item wide" type="button" data-cat="dishes" data-caption="Crispy-skin salmon with herb noodles">
+            <img src="../assets/images/gallery-salmon.jpg" alt="Seared salmon fillet on herb noodles on a black plate" width="900" height="700" loading="lazy"><span class="cap">Crispy-skin salmon</span>
+          </button>
+          <button class="gallery-item wide" type="button" data-cat="events" data-caption="Garden-party menu for a private group">
+            <img src="../assets/images/gallery-long-table-feast.jpg" alt="Long outdoor table spread with platters, glasses and shared dishes" width="900" height="700" loading="lazy"><span class="cap">Private garden party</span>
+          </button>
+          <button class="gallery-item" type="button" data-cat="studio" data-caption="The knife roll every student cooks with">
+            <img src="../assets/images/gallery-knife-roll.jpg" alt="Set of wooden-handled kitchen knives above a leather knife roll" width="900" height="900" loading="lazy"><span class="cap">Station knife roll</span>
+          </button>
+          <button class="gallery-item tall" type="button" data-cat="dishes" data-caption="Seared scallops with strawberry salsa, a student plate">
+            <img src="../assets/images/gallery-scallops.jpg" alt="Seared scallop with diced strawberry salsa on a wooden board" width="900" height="1100" loading="lazy"><span class="cap">Seared scallops</span>
+          </button>
+          <button class="gallery-item tall" type="button" data-cat="workshops" data-caption="Prepping mise en place before a workshop">
+            <img src="../assets/images/gallery-chef-chopping.jpg" alt="Chef in whites chopping ingredients at a stainless-steel counter" width="900" height="1100" loading="lazy"><span class="cap">Mise en place</span>
+          </button>
+          <button class="gallery-item wide" type="button" data-cat="events" data-caption="Team dinner after a corporate cook-off">
+            <img src="../assets/images/gallery-group-dinner.jpg" alt="Large group laughing and eating together at a long table" width="900" height="700" loading="lazy"><span class="cap">Team cook-off dinner</span>
+          </button>
+          <button class="gallery-item wide" type="button" data-cat="dishes" data-caption="Bibimbap bowls from our Korean pop-up night">
+            <img src="../assets/images/gallery-bibimbap.jpg" alt="Bibimbap with a fried egg, spinach, mushrooms and julienned vegetables" width="900" height="900" loading="lazy"><span class="cap">Bibimbap pop-up</span>
+          </button>
+          <button class="gallery-item wide" type="button" data-cat="studio" data-caption="Open shelving in the pastry room">
+            <img src="../assets/images/gallery-studio-shelves.jpg" alt="White tiled kitchen with wooden open shelves of glassware and pans" width="900" height="700" loading="lazy"><span class="cap">The pastry room</span>
+          </button>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+          <button class="lb-btn lb-close" type="button" aria-label="Close photo viewer">✕</button>
+          <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><span class="flip-rtl" aria-hidden="true">←</span></button>
+          <figure>
+            <img src="../assets/images/gallery-couple-cooking.jpg" alt="">
+            <figcaption></figcaption>
+          </figure>
+          <button class="lb-btn lb-next" type="button" aria-label="Next photo"><span class="flip-rtl" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. The space ===== -->
+    <section class="section section--alt" aria-labelledby="space-title">
+      <div class="container split">
+        <div class="space-media reveal">
+          <img src="../assets/images/gallery-space-demo-kitchen.jpg" alt="The studio's demo kitchen with white tiles, a butcher-block island and red cookware" width="1000" height="800" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">The space</span>
+          <h2 id="space-title">Three rooms and one long table</h2>
+          <p class="lead">A converted 1920s bakery on NW Glisan Street, restored with plenty of daylight, strong ventilation and a lot of counter space.</p>
+          <ul class="rooms">
+            <li><h3>Demo Kitchen</h3><span class="chip">12 stations</span><p>Our main classroom: twelve induction stations around a demo island with an overhead camera.</p></li>
+            <li><h3>Pastry Room</h3><span class="chip">10 benches</span><p>Cool marble benches, two deck ovens and proofing cabinets. Home of the weekend workshops.</p></li>
+            <li><h3>Pantry &amp; Shop</h3><span class="chip">Open daily</span><p>Our ingredient store, plus the shelf of knives and pans we teach with.</p></li>
+            <li><h3>The Long Table</h3><span class="chip">Seats 24</span><p>One reclaimed-fir table where every class ends with dinner together.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Plan your visit (access) ===== -->
+    <section class="section" aria-labelledby="access-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Plan your visit</span>
+          <h2 id="access-title">Designed so every cook can join in</h2>
+          <p class="lead">Tell us what you need when you book and it will be ready before you arrive.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">♿</span><h3>Step-free entry</h3><p>Level entrance from the street, wide doorways and an accessible restroom.</p></article>
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">⇕</span><h3>Adjustable stations</h3><p>Two stations lower to seated height. Let us know and we'll reserve one for you.</p></article>
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">◉</span><h3>Clear demos</h3><p>The overhead camera feeds two large screens, and chefs wear a mic linked to our hearing loop.</p></article>
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">⌂</span><h3>Stools at every station</h3><p>Prefer to cook sitting down for part of the class? There's a stool waiting at every bench.</p></article>
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">▣</span><h3>Lockers and coat rack</h3><p>Free lockers for bags and coats, so your station stays clear and safe.</p></article>
+          <article class="access-card reveal"><span class="badge-icon" aria-hidden="true">❀</span><h3>A quiet corner</h3><p>A calm nook off the long table if you need a break from the buzz.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Student plates ===== -->
+    <section class="section section--alt" aria-labelledby="plates-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Student plates</span>
+          <h2 id="plates-title">Cooked by students, not stylists</h2>
+          <p class="lead">Each of these was photographed at a student's station, minutes before it was eaten.</p>
+        </div>
+        <div class="plates">
+          <figure class="plate reveal"><img src="../assets/images/plate-tacos.jpg" alt="Tacos with roasted sweet potato, avocado and a squeeze of lime" width="500" height="500" loading="lazy"><figcaption><strong>Ana R.</strong><span>Street Tacos &amp; Fresh Salsas</span></figcaption></figure>
+          <figure class="plate reveal"><img src="../assets/images/plate-gyoza.jpg" alt="Bowls of steamed and pan-fried gyoza with dipping sauce" width="500" height="500" loading="lazy"><figcaption><strong>Tom W.</strong><span>Japanese Izakaya Weekend</span></figcaption></figure>
+          <figure class="plate reveal"><img src="../assets/images/plate-grain-bowl.jpg" alt="Bowl of chickpeas, tomatoes, avocado, sweet potato and red cabbage" width="500" height="500" loading="lazy"><figcaption><strong>Lena K.</strong><span>Knife Skills Bootcamp</span></figcaption></figure>
+          <figure class="plate reveal"><img src="../assets/images/plate-pizza.jpg" alt="Golden pizza cut into slices with rosemary and cherry tomatoes" width="500" height="500" loading="lazy"><figcaption><strong>Ravi S.</strong><span>Neapolitan Pizza Night</span></figcaption></figure>
+          <figure class="plate reveal"><img src="../assets/images/plate-paella.jpg" alt="Seafood paella in a black pan with lemon and mussels" width="500" height="500" loading="lazy"><figcaption><strong>Carmen D.</strong><span>Seafood Paella</span></figcaption></figure>
+          <figure class="plate reveal"><img src="../assets/images/plate-cupcakes.jpg" alt="Chocolate cupcakes topped with swirls of mocha frosting" width="500" height="500" loading="lazy"><figcaption><strong>Mia &amp; Jo</strong><span>Private birthday class</span></figcaption></figure>
+        </div>
+        <p class="hashtag-note">Tag your plate <strong>#CopperPotCooks</strong> and we'll feature our favourites here each month.</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. Call to action ===== -->
+    <section class="section section--tight" aria-labelledby="gallery-cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="eyebrow">Your turn</span>
+            <h2 id="gallery-cta-title">Put your plate in next month's gallery</h2>
+            <p>Pick a class today and you could be cooking at a station by the weekend.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--lg" href="classes.html#catalog">Book a Seat</a>
+            <a class="link-arrow" href="contact.html?topic=private">Plan a private event <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="workshops.html">Weekend Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="../index.html#chefs">Chefs</a></li>
+            <li><a href="../index1.html#pricing">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

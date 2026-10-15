@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Every Beadwell service: hand-wash packages, interior care, wheels, paint correction, ceramic coating and specialty fixes.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="../index1.html">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/services.html" aria-current="page">Services</a></li>
+          <li><a class="nav-link" href="../pages/pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container page-hero-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="../index.html">Home 1</a></li><li aria-current="page">Services</li></ol>
+          </nav>
+          <p class="eyebrow">Services</p>
+          <h1 id="page-title">From a 10-minute rinse to a two-day paint correction</h1>
+          <p class="lead">Everything happens by hand, in one building: three wash bays out front and a two-bay detail studio behind them. No subcontractors, no brush tunnel.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="pricing.html">View pricing <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <figure class="page-hero-figure">
+          <img class="rounded-img" src="../assets/images/hero-services-machine-polish.webp" alt="Dual-action polisher working across the hood of a black car beside its LED headlight" width="1920" height="1280" fetchpriority="high">
+          <figcaption class="hero-badge"><strong>6 service lines</strong>wash, interior, wheels, correction, coating and specialty fixes</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. Services at a glance ===== -->
+    <section class="section" aria-labelledby="glance-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">At a glance</p>
+          <h2 id="glance-title">Six ways we can help your car</h2>
+          <p class="lead">Start with the problem you want solved. Each line below shows typical time with us and where to read more.</p>
+        </div>
+        <div class="glance-grid">
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#9677;</span>
+            <h3>Exterior wash</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 10&ndash;60 min</span><span class="chip">Drive-in bays</span></div>
+            <p>Four hand-wash packages, from a contact-free foam rinse to a full wash with spray sealant.</p>
+            <a class="link-arrow" href="#exterior">How the bay works <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#9707;</span>
+            <h3>Interior care</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 2&ndash;5 hours</span><span class="chip">Studio</span></div>
+            <p>Vacuum, steam, hot-water extraction and leather care, priced by how much the cabin needs.</p>
+            <a class="link-arrow" href="#interior">What&rsquo;s included <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#8858;</span>
+            <h3>Wheels &amp; tires</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 15&ndash;45 min</span><span class="chip">Add-on</span></div>
+            <p>Barrel cleaning, iron removal, tire dressing and a ceramic coat that makes brake dust rinse off.</p>
+            <a class="link-arrow" href="pricing.html#addons">Wheel add-on prices <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#9680;</span>
+            <h3>Paint correction</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 1&ndash;2 days</span><span class="chip">Studio</span></div>
+            <p>Machine polishing that removes swirls, haze and light scratches from the clear coat.</p>
+            <a class="link-arrow" href="#paint">Our six stages <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#9670;</span>
+            <h3>Ceramic &amp; film</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 2&ndash;3 days</span><span class="chip">Studio</span></div>
+            <p>3- and 5-year ceramic coatings, plus partial-front paint protection film for stone-chip zones.</p>
+            <a class="link-arrow" href="../index1.html#protection">Wax vs. sealant vs. ceramic <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="glance-card reveal">
+            <span class="bead" aria-hidden="true">&#10023;</span>
+            <h3>Specialty fixes</h3>
+            <div class="glance-meta"><span class="chip">&#9719; 30 min&ndash;2 hours</span><span class="chip">Bay or studio</span></div>
+            <p>Headlight restoration, odor removal, engine-bay cleaning and a rain-repellent windshield coat.</p>
+            <a class="link-arrow" href="pricing.html#addons">Specialty prices <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Exterior wash & wheels ===== -->
+    <section class="section section--alt" id="exterior" aria-labelledby="exterior-title">
+      <div class="container process-grid">
+        <div class="stack-figures reveal">
+          <img class="rounded-img" src="../assets/images/services-exterior-suds.webp" alt="Grey SUV covered in white soap suds inside a wash bay" width="1000" height="1500" loading="lazy">
+          <img class="rounded-img" src="../assets/images/services-wheel-wash.webp" alt="Brush cleaning between the spokes of a red alloy wheel under running foam" width="900" height="1350" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Exterior wash &amp; wheels</p>
+          <h2 id="exterior-title">What happens in the bay</h2>
+          <p class="lead">Brush tunnels drag grit from the last car across yours. We work contact-last: chemistry and water do the heavy lifting before a mitt touches the paint.</p>
+          <ol class="process-list">
+            <li><h3>Pre-rinse</h3><p>A low-pressure rinse knocks off loose dirt and road salt.</p></li>
+            <li><h3>Snow foam</h3><p>pH-neutral foam dwells for 4 minutes to soften bonded grime.</p></li>
+            <li><h3>Wheels first</h3><p>Separate brushes and buckets, so brake dust never reaches paint.</p></li>
+            <li><h3>Two-bucket wash</h3><p>Top-down, a fresh mitt per side, with grit guards trapping sand.</p></li>
+            <li><h3>Spot-free rinse</h3><p>Reverse-osmosis water leaves no minerals to dry into spots.</p></li>
+            <li><h3>Air, then towel</h3><p>Filtered air clears mirrors and badges before plush microfiber.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Interior care ===== -->
+    <section class="section" id="interior" aria-labelledby="interior-title">
+      <div class="container checklist-grid">
+        <div>
+          <p class="eyebrow">Interior care</p>
+          <h2 id="interior-title">Interior Reset: the cabin, seam by seam</h2>
+          <p class="lead">3&ndash;4 hours for most sedans and SUVs. We remove child seats and loose items, then work from headliner to floor so dust only falls onto areas we haven&rsquo;t cleaned yet.</p>
+          <div class="checklist-cols">
+            <div>
+              <h3>Always included</h3>
+              <ul class="check-list">
+                <li>Full vacuum, under seats and the trunk</li>
+                <li>Steam-cleaned vents, cup holders and door pockets</li>
+                <li>Plastics cleaned and UV-protected, matte not greasy</li>
+                <li>Leather cleaned and conditioned, or fabric spot-treated</li>
+                <li>Streak-free glass, mirrors and screens</li>
+                <li>Floor mats pressure-washed and dried</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Add when needed</h3>
+              <ul class="addon-list">
+                <li><strong>Pet hair removal</strong><span>Rubber blades and a dedicated vacuum lift embedded fur.</span></li>
+                <li><strong>Seat shampoo &amp; extraction</strong><span>Hot-water extraction for food, coffee and kid stains.</span></li>
+                <li><strong>Ozone odor treatment</strong><span>Neutralizes smoke and mildew; the car airs out for an hour.</span></li>
+                <li><strong>Child-seat deep clean</strong><span>Straps and padding removed, washed and refitted.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img class="rounded-img reveal" src="../assets/images/services-interior-wheel.webp" alt="Gloved hand wiping a leather steering wheel with an orange microfiber cloth" width="1000" height="1250" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ===== 5. Paint correction & coating ===== -->
+    <section class="section section--alt" id="paint" aria-labelledby="paint-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Paint correction &amp; coating</p>
+          <h2 id="paint-title">Six stages between swirled and sealed</h2>
+          <p class="lead">Correction removes defects; coating locks the result in. Most studio jobs combine both and take one to three days.</p>
+        </div>
+        <div class="stage-grid">
+          <article class="stage reveal"><h3>Measure</h3><p>Paint-depth gauge readings at 12 points show how much clear coat we can safely work with.</p></article>
+          <article class="stage reveal"><h3>Decontaminate</h3><p>Iron remover, tar remover and a clay bar leave the surface truly bare.</p></article>
+          <figure class="stage stage--image reveal"><img src="../assets/images/services-paint-polisher.webp" alt="Detailer guiding a polisher with a yellow foam pad across white paint" width="1000" height="1500" loading="lazy"></figure>
+          <article class="stage reveal"><h3>Compound</h3><p>2-step jobs only: a cutting pad removes deeper swirls and light scratches.</p></article>
+          <article class="stage reveal"><h3>Polish</h3><p>A finishing pad refines the surface to a haze-free, high-gloss finish.</p></article>
+          <article class="stage reveal"><h3>Coat</h3><p>After an alcohol panel wipe, ceramic goes on panel by panel and is levelled within 60 seconds.</p></article>
+          <article class="stage reveal"><h3>Cure</h3><p>Infrared lamps set the coating overnight, so you collect a car that&rsquo;s ready for rain.</p></article>
+        </div>
+        <div class="correction-note">
+          <div class="card reveal">
+            <h3>1-step correction</h3>
+            <p class="muted">Removes about 60&ndash;70% of swirls in one day. Right for daily drivers and any car getting a coating.</p>
+          </div>
+          <div class="card reveal">
+            <h3>2-step correction</h3>
+            <p class="muted">Removes 85&ndash;95% of defects over two days. For dark paint, show cars and anyone who notices every swirl.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing CTA: free paint inspection ===== -->
+    <section class="section section--band" aria-labelledby="inspect-title">
+      <div class="container inspect-grid">
+        <div>
+          <p class="eyebrow">Free paint inspection</p>
+          <h2 id="inspect-title">Not sure what your paint needs? Let us measure it.</h2>
+          <p class="lead">Book a free 15-minute inspection at the studio. No obligation and no upsell script.</p>
+          <ul class="check-list">
+            <li>Paint-depth readings on every panel</li>
+            <li>Swirl and scratch check under our LED inspection light</li>
+            <li>A 50/50 test spot, so you see the correction before you pay</li>
+            <li>A written quote and time estimate to take home</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?topic=inspection">Book a Free Inspection</a>
+            <a class="link-arrow" href="tel:+13035550172">Call the studio <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <img class="rounded-img reveal" src="../assets/images/services-inspection-taped.webp" alt="Polisher resting on a black car with green masking tape protecting the trim before correction" width="1000" height="1250" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="../pages/services.html">Services</a></li>
+          <li><a href="../pages/pricing.html">Pricing</a></li>
+          <li><a href="../pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="../pages/signin.html">Sign In</a></li>
+          <li><a href="../pages/signup.html">Sign Up</a></li>
+          <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

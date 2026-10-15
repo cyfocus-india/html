@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Marigold Grand Banquets</title>
+  <meta name="description" content="Photos and stories from weddings, birthdays and corporate events at Marigold Grand, plus our décor lookbook and preferred vendor partners.">
+  <meta name="theme-color" content="#5a1e4e">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () { try { var t = localStorage.getItem('mg-theme'), d = localStorage.getItem('mg-dir'); if (t) document.documentElement.setAttribute('data-theme', t); if (d) document.documentElement.setAttribute('dir', d); } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+        <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="halls.html">Halls</a></li>
+          <li><a class="nav-link" href="packages.html">Packages</a></li>
+          <li><a class="nav-link is-active" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+        <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+        <a class="btn btn--sm header-signin" href="signin.html">Sign In</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation (≤1024px) -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-panel" id="mobile-panel" aria-label="Mobile menu">
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav-list">
+        <li>
+          <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="mobile-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="mobile-sub" id="mobile-home">
+            <ul class="mobile-sub-list">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="halls.html">Halls</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html" class="is-active" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-tools">
+      <span class="label">Display options</span>
+      <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
+      <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+    </div>
+    <a class="btn" href="signin.html">Sign In</a>
+    <p class="mobile-contact">Events desk: <a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></p>
+  </aside>
+
+  <main id="main">
+
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="hero-media">
+        <img src="../assets/images/hero-gallery.jpg" alt="Reception tables under magenta uplighting with tall floral centrepieces and a lit monogram" width="1920" height="1000" fetchpriority="high">
+      </div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home 1</a><span aria-hidden="true">/</span><span aria-current="page">Gallery</span></nav>
+        <span class="eyebrow eyebrow--light">Gallery</span>
+        <h1 id="page-title">Real events, photographed in our halls</h1>
+        <p class="lead">Weddings, first birthdays, product launches and quiet anniversary dinners. Browse by occasion to see how each space changes with the décor.</p>
+        <div class="hero-facts">
+          <span>18 photos from 2025–26</span>
+          <span>Shot by partner photographers</span>
+          <span>Tap any photo to enlarge</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Filterable gallery ===== -->
+    <section class="section" aria-labelledby="photos-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Photo gallery</span>
+          <h2 id="photos-title">Browse by occasion</h2>
+        </div>
+        <div class="chips gallery-filters" role="group" aria-label="Filter photos by occasion">
+          <button class="chip" type="button" data-gfilter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-gfilter="wedding" aria-pressed="false">Weddings</button>
+          <button class="chip" type="button" data-gfilter="birthday" aria-pressed="false">Birthdays</button>
+          <button class="chip" type="button" data-gfilter="corporate" aria-pressed="false">Corporate</button>
+          <button class="chip" type="button" data-gfilter="decor" aria-pressed="false">Décor</button>
+          <button class="chip" type="button" data-gfilter="food" aria-pressed="false">Food</button>
+        </div>
+        <p class="result-count text-center" id="galleryCount" aria-live="polite">Showing 18 photos</p>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <button class="g-item wide tall" type="button" data-cat="wedding">
+            <img src="../assets/images/g-wedding-mandap.jpg" alt="Bride and groom seated under a rose-and-white canopy during the wedding rituals" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Weddings</span>Mandap ceremony under a rose canopy, Jasmine Lawn</span>
+          </button>
+          <button class="g-item wide" type="button" data-cat="wedding">
+            <img src="../assets/images/g-wedding-stage.jpg" alt="Red-and-gold mandap with pillars of flowers and a crystal chandelier" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Weddings</span>Red-and-gold mandap, Marigold Ballroom</span>
+          </button>
+          <button class="g-item" type="button" data-cat="wedding">
+            <img src="../assets/images/g-mehendi.jpg" alt="Several hands with fresh bridal mehendi held together over yellow outfits" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Weddings</span>Mehendi afternoon, lawn pergola</span>
+          </button>
+          <button class="g-item tall" type="button" data-cat="wedding">
+            <img src="../assets/images/g-wedding-entry.jpg" alt="Couple walking past a black welcome wall with white floral spray on the lawn" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Weddings</span>Couple's entry past the welcome wall</span>
+          </button>
+          <button class="g-item" type="button" data-cat="birthday">
+            <img src="../assets/images/g-birthday-balloons.jpg" alt="Ceiling covered in shiny multicoloured helium balloons with ribbons" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Birthdays</span>Balloon ceiling for a 30th, Lotus Room</span>
+          </button>
+          <button class="g-item tall" type="button" data-cat="birthday">
+            <img src="../assets/images/g-birthday-fifteen.jpg" alt="Light-up number 15 marquee with pastel balloon garland and chrome balloons" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Birthdays</span>Marquee "15" with pastel garland</span>
+          </button>
+          <button class="g-item" type="button" data-cat="birthday">
+            <img src="../assets/images/g-birthday-blue.jpg" alt="Blue and white balloons around a cake table with a Happy Birthday foil banner" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Birthdays</span>Blue-and-white lounge, Ember Room</span>
+          </button>
+          <button class="g-item wide" type="button" data-cat="birthday">
+            <img src="../assets/images/g-birthday-candles.jpg" alt="Three children blowing out candles on a birthday cake" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Birthdays</span>Cake moment at a twins' sixth birthday</span>
+          </button>
+          <button class="g-item wide" type="button" data-cat="corporate">
+            <img src="../assets/images/g-corporate-audience.jpg" alt="Audience seated in rows watching a product keynote in a darkened hall" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Corporate</span>Product keynote, theatre seating, Ballroom</span>
+          </button>
+          <button class="g-item" type="button" data-cat="corporate">
+            <img src="../assets/images/g-corporate-panel.jpg" alt="Panel discussion on stage with a large LED screen and a full audience" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Corporate</span>Panel discussion with LED wall</span>
+          </button>
+          <button class="g-item" type="button" data-cat="corporate">
+            <img src="../assets/images/g-corporate-gala.jpg" alt="Guests in formal wear at gala tables beneath a mirror ball in a domed ceiling" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Corporate</span>Annual awards night under the mirror ball</span>
+          </button>
+          <button class="g-item tall" type="button" data-cat="decor">
+            <img src="../assets/images/g-decor-hanging-florals.jpg" alt="Long yellow floral strings hanging over a stage at dusk" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Décor</span>Hanging floral strings for a haldi stage</span>
+          </button>
+          <button class="g-item wide" type="button" data-cat="decor">
+            <img src="../assets/images/g-decor-floral-lounge.jpg" alt="Ivory sofas on a green carpet in front of a garden-window backdrop of colourful flowers" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Décor</span>Garden-window lounge stage, Saffron Hall</span>
+          </button>
+          <button class="g-item" type="button" data-cat="decor">
+            <img src="../assets/images/g-decor-haldi-lawn.jpg" alt="Pink and yellow fabric canopies with colourful floor cushions on the lawn" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Décor</span>Pink-and-yellow haldi brunch canopies</span>
+          </button>
+          <button class="g-item" type="button" data-cat="food">
+            <img src="../assets/images/g-food-buffet.jpg" alt="Buffet trays of starters displayed on white pebbles with fresh flowers" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Food</span>Starter spread on a pebble display</span>
+          </button>
+          <button class="g-item wide" type="button" data-cat="food">
+            <img src="../assets/images/g-food-appetizers.jpg" alt="Long counter lined with canapés and skewered appetisers" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Food</span>Canapé counter at a cocktail evening</span>
+          </button>
+          <button class="g-item" type="button" data-cat="food">
+            <img src="../assets/images/g-food-desserts.jpg" alt="Two-tier white celebration cake with gold details on a dessert table" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Food</span>Dessert table with a two-tier cake</span>
+          </button>
+          <button class="g-item" type="button" data-cat="food">
+            <img src="../assets/images/g-food-thali.jpg" alt="Brass bowls of curries and rice served on a thali for a family lunch" width="1200" height="800" loading="lazy">
+            <span class="g-cap"><span class="g-cat">Food</span>Sit-down thali service for a family lunch</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox (shared by every gallery photo) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+      <button class="lb-btn lb-close" type="button" aria-label="Close photo viewer">✕</button>
+      <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><span aria-hidden="true">‹</span></button>
+      <figure>
+        <img src="../assets/images/g-wedding-mandap.jpg" alt="Enlarged view of the selected gallery photo">
+        <figcaption></figcaption>
+      </figure>
+      <button class="lb-btn lb-next" type="button" aria-label="Next photo"><span aria-hidden="true">›</span></button>
+    </div>
+
+    <!-- ===== 3. Event stories ===== -->
+    <section class="section section--alt" aria-labelledby="stories-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Event stories</span>
+          <h2 id="stories-title">Three events, start to finish</h2>
+          <p>The numbers, the choices and one honest quote from each host.</p>
+        </div>
+        <div class="stories">
+          <article class="story" data-reveal>
+            <div class="story-media"><img src="../assets/images/story-reception.jpg" alt="Reception floor with blush chairs, white floral centrepieces and green ceiling lights" width="1000" height="700" loading="lazy"></div>
+            <div>
+              <span class="tag">Wedding reception</span>
+              <h3>Meera &amp; Kabir's night-garden reception</h3>
+              <p class="muted">Meera wanted the Ballroom to feel like a garden after dark. We swapped white light for green uplighting, set 60 round tables with blush chairs plus lounge corners, and ran three live counters so all 820 guests had eaten within 40 minutes.</p>
+              <div class="story-facts">
+                <div><span>Hall</span><b>Marigold Ballroom</b></div>
+                <div><span>Guests</span><b>820</b></div>
+                <div><span>Menu</span><b>Non-Veg Royal</b></div>
+                <div><span>Décor</span><b>Midnight Garden</b></div>
+              </div>
+              <blockquote>"Our parents still talk about the food. Nobody waited, and nobody went home hungry." — Meera S.</blockquote>
+            </div>
+          </article>
+          <article class="story" data-reveal>
+            <div class="story-media"><img src="../assets/images/story-gala.jpg" alt="Gala dinner tables beneath hundreds of hanging warm bulbs" width="1000" height="700" loading="lazy"></div>
+            <div>
+              <span class="tag">Corporate gala</span>
+              <h3>A software firm's 10-year anniversary gala</h3>
+              <p class="muted">540 employees, a 12-act awards show and a hard stop at 11:30 pm. Our AV crew ran 64 cues off the LED wall while the kitchen served a five-course plated dinner in four waves.</p>
+              <div class="story-facts">
+                <div><span>Hall</span><b>Marigold Ballroom</b></div>
+                <div><span>Guests</span><b>540</b></div>
+                <div><span>Menu</span><b>Plated five-course</b></div>
+                <div><span>Décor</span><b>Hanging-bulb ceiling</b></div>
+              </div>
+              <blockquote>"Every cue landed. Our CEO asked who the stage manager was so he could hire them." — Anjali R., HR Director</blockquote>
+            </div>
+          </article>
+          <article class="story" data-reveal>
+            <div class="story-media"><img src="../assets/images/story-dino-birthday.jpg" alt="Dinosaur-themed birthday backdrop with a balloon arch and dinosaur cut-outs" width="1000" height="700" loading="lazy"></div>
+            <div>
+              <span class="tag">First birthday</span>
+              <h3>Vihaan &amp; Vivaan's dinosaur-park birthday</h3>
+              <p class="muted">Twin boys, 120 guests and a dinosaur theme. We fenced a soft-play zone, served the kids at toddler-height tables, and finished the décor in three hours on a lunch slot.</p>
+              <div class="story-facts">
+                <div><span>Hall</span><b>Lotus Room</b></div>
+                <div><span>Guests</span><b>120</b></div>
+                <div><span>Menu</span><b>Veg Classic + Kids' Plate</b></div>
+                <div><span>Décor</span><b>Candy Carnival, dino edit</b></div>
+              </div>
+              <blockquote>"The kids had their own buffet at their own height. Genius." — Pooja N.</blockquote>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Décor lookbook ===== -->
+    <section class="section" aria-labelledby="themes-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Décor lookbook</span>
+          <h2 id="themes-title">Four signature themes our décor team knows by heart</h2>
+          <p>Start from one of these and personalise the colours, flowers and props. Each fits inside a single setup window.</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="card theme-card" data-reveal>
+            <img src="../assets/images/theme-marigold.jpg" alt="Strings of orange marigolds and white jasmine hanging as a floral curtain" width="800" height="1000" loading="lazy">
+            <div class="theme-body">
+              <div class="swatches" aria-hidden="true"><span style="background:#f2a51a"></span><span style="background:#e07b12"></span><span style="background:#ffffff"></span><span style="background:#2e7d32"></span></div>
+              <h3>Marigold Heritage</h3>
+              <p>Marigold and jasmine strings, brass urlis and banana-leaf accents for traditional ceremonies.</p>
+              <span class="tag">Haldi · Mehendi · Pooja</span>
+            </div>
+          </article>
+          <article class="card theme-card" data-reveal>
+            <img src="../assets/images/theme-ivory.jpg" alt="Bright white banquet hall with white chairs, round tables and gold accents" width="800" height="1000" loading="lazy">
+            <div class="theme-body">
+              <div class="swatches" aria-hidden="true"><span style="background:#ffffff"></span><span style="background:#f3e9d2"></span><span style="background:#c9a227"></span><span style="background:#d9d9d9"></span></div>
+              <h3>Ivory &amp; Gold</h3>
+              <p>White linen, gold-rim chargers and white floral runners under bright crystal light.</p>
+              <span class="tag">Receptions · Anniversaries</span>
+            </div>
+          </article>
+          <article class="card theme-card" data-reveal>
+            <img src="../assets/images/theme-midnight.jpg" alt="Warm bulbs and colourful bunting strung overhead against a night sky" width="800" height="1000" loading="lazy">
+            <div class="theme-body">
+              <div class="swatches" aria-hidden="true"><span style="background:#0f2a1d"></span><span style="background:#2e5e3e"></span><span style="background:#f7d774"></span><span style="background:#a23e48"></span></div>
+              <h3>Midnight Garden</h3>
+              <p>Deep greens, warm bulbs and trailing foliage that turn a hall or the lawn into a night garden.</p>
+              <span class="tag">Cocktails · Sangeet · Galas</span>
+            </div>
+          </article>
+          <article class="card theme-card" data-reveal>
+            <img src="../assets/images/theme-carnival.jpg" alt="Colourful party plates, hats, cake and confetti on a purple and pink table" width="800" height="1000" loading="lazy">
+            <div class="theme-body">
+              <div class="swatches" aria-hidden="true"><span style="background:#ff6fa8"></span><span style="background:#7c4dff"></span><span style="background:#ffd54f"></span><span style="background:#29b6f6"></span></div>
+              <h3>Candy Carnival</h3>
+              <p>Pastel balloons, party hats, a popcorn cart and a confetti photo corner for children's parties.</p>
+              <span class="tag">Kids' birthdays · Baby showers</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Preferred vendors ===== -->
+    <section class="section section--alt" aria-labelledby="vendors-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Preferred partners</span>
+          <h2 id="vendors-title">Trusted vendors who already know our halls</h2>
+          <p>Book any of them and the outside-vendor access fee is waived. You deal with them directly, and we coordinate with them on the day.</p>
+        </div>
+        <div class="vendor-grid">
+          <article class="card vendor" data-reveal>
+            <span class="cat">Photography</span>
+            <h3>Lenscraft Stories</h3>
+            <p>Candid wedding and event photography with a same-night highlight reel.</p>
+            <span class="from">From ₹85,000 per day</span>
+          </article>
+          <article class="card vendor" data-reveal>
+            <span class="cat">Makeup &amp; hair</span>
+            <h3>Studio Kajal</h3>
+            <p>Bridal makeup, saree draping and family styling, done in our bridal suite.</p>
+            <span class="from">From ₹25,000</span>
+          </article>
+          <article class="card vendor" data-reveal>
+            <span class="cat">Mehendi</span>
+            <h3>Henna Lane Artists</h3>
+            <p>Bridal and guest mehendi; six artists cover 100 guests in three hours.</p>
+            <span class="from">From ₹12,000</span>
+          </article>
+          <article class="card vendor" data-reveal>
+            <span class="cat">Music</span>
+            <h3>Bassline Collective</h3>
+            <p>DJs, dhol players and a six-piece live band for sangeet nights.</p>
+            <span class="from">From ₹30,000</span>
+          </article>
+          <article class="card vendor" data-reveal>
+            <span class="cat">Priests &amp; rituals</span>
+            <h3>Vedic Sanskara Services</h3>
+            <p>Priests for weddings and naming ceremonies, in Kannada, Tamil, Telugu and Hindi.</p>
+            <span class="from">From ₹11,000</span>
+          </article>
+          <article class="card vendor" data-reveal>
+            <span class="cat">Invitations &amp; gifting</span>
+            <h3>Paperleaf Studio</h3>
+            <p>Printed and digital invitations, return gifts and welcome hampers.</p>
+            <span class="from">From ₹150 per guest</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Open house (next step) ===== -->
+    <section class="section" aria-labelledby="openhouse-title">
+      <div class="container">
+        <div class="open-house" data-reveal>
+          <div>
+            <span class="eyebrow eyebrow--light">Monthly open house</span>
+            <h2 id="openhouse-title">See a hall dressed for a real event</h2>
+            <p>On the first Sunday of every month, we open a fully decorated hall from 11 am to 2 pm. Walk through, taste the starters and meet our décor team.</p>
+            <a class="btn" href="contact.html?message=I%27d%20like%20to%20reserve%20a%20place%20at%20the%20next%20open%20house.#enquiry">Reserve an Open House Spot</a>
+          </div>
+          <ul class="oh-dates" id="openHouseDates">
+            <li><span>Sun, 1 Nov</span><b>Ballroom · Ivory &amp; Gold</b></li>
+            <li><span>Sun, 6 Dec</span><b>Jasmine Lawn · Midnight Garden</b></li>
+            <li><span>Sun, 3 Jan</span><b>Saffron Hall · Marigold Heritage</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+            <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Banquets &amp; Halls</span></span>
+          </a>
+          <p>Five banquet halls, an open-air lawn and two in-house kitchens for celebrations of 15 to 900 guests on Sarjapur Road, Bengaluru.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="halls.html">Halls</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:+918047182260"><span dir="ltr">+91 80 4718 2260</span></a></li>
+            <li><a href="mailto:events@marigoldgrand.in">events@marigoldgrand.in</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul class="footer-links">
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Marigold Grand Banquets Pvt. Ltd. All rights reserved.</p>
+        <p>14 Sarjapur Main Road, Kaikondrahalli, Bengaluru 560035</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

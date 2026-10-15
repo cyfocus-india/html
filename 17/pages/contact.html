@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Lumina Dental &amp; Oral Care Center</title>
+  <meta name="description" content="Book an appointment or ask a question. Lumina Dental, 450 Medical Plaza Way, Suite 300, San Francisco. Call (415) 890-3321.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply the saved theme and direction before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('lumina_theme') || 'light');
+        document.documentElement.setAttribute('dir', localStorage.getItem('lumina_dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       Sticky header (identical on every public page)
+       ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdown">
+              Home <span class="dropdown-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu" id="homeDropdown">
+              <li><a href="../index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="../index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="doctors.html" class="nav-link">Doctors</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggles and Sign In primary CTA -->
+      <div class="header-actions">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <a href="signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
+
+        <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile slide-in navigation -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+        <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="34" height="34">
+        <span class="brand-name">
+          <span class="brand-title">Lumina Dental</span>
+          <span class="brand-subtitle">Oral Care Center</span>
+        </span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordion" aria-expanded="false" aria-controls="mobileHomeContent">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="mobile-accordion-content" id="mobileHomeContent">
+            <li><a href="../index.html" class="mobile-accordion-link">Home 1</a></li>
+            <li><a href="../index1.html" class="mobile-accordion-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link active" aria-current="page">Contact</a></li>
+        <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-controls">
+      <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+      <a href="signin.html" class="btn btn-outline btn-block">Sign In</a>
+      <div class="mobile-toggles-row">
+        <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content: Contact -->
+  <main id="main">
+    <section class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h1>Contact Our Dental Team</h1>
+          <p>Request an appointment, ask about a treatment or check your insurance. We reply within two hours during opening times.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Appointment / inquiry form with client-side validation -->
+          <div class="contact-card">
+            <h2 class="contact-card-title">Request an Appointment</h2>
+            <p class="contact-card-intro">Fields marked * are required. A patient coordinator will call or email you to confirm a time.</p>
+
+            <!-- Success message (announced to screen readers) -->
+            <div class="alert-success" id="contactSuccess" role="status" aria-live="polite" tabindex="-1">
+              <span class="alert-icon" aria-hidden="true">&#10003;</span>
+              <div>
+                <strong>Thank you, your request has been received.</strong><br>
+                A patient coordinator will contact you shortly to confirm your appointment.
+              </div>
+            </div>
+
+            <!-- Shown when a service was chosen on another page -->
+            <div class="service-prefill-badge" id="servicePrefillBanner" hidden>
+              <span class="badge-icon" aria-hidden="true">&#10003;</span>
+              <div>We've pre-selected <strong id="prefilledServiceName"></strong> for you. You can change it below.</div>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full name *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="e.g. Jordan Hayes" autocomplete="name" required aria-describedby="contactNameError">
+                  <p class="form-error" id="contactNameError">Please enter your full name.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email address *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="e.g. jordan@example.com" autocomplete="email" required aria-describedby="contactEmailError">
+                  <p class="form-error" id="contactEmailError">Please enter a valid email address.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label">Phone number *</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. (415) 555-0192" autocomplete="tel" required aria-describedby="contactPhoneError">
+                  <p class="form-error" id="contactPhoneError">Please enter a phone number with at least 10 digits.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactService" class="form-label">Treatment *</label>
+                  <select id="contactService" class="form-control" required aria-describedby="contactServiceError">
+                    <option value="">Select a treatment&hellip;</option>
+                    <option value="Comprehensive Exam">New patient exam &amp; X-rays ($120)</option>
+                    <option value="Cleaning &amp; Exam">Cleaning &amp; check-up ($95)</option>
+                    <option value="Tooth Fillings">Tooth-colored filling ($140 / surface)</option>
+                    <option value="Braces &amp; Aligners">Braces or clear aligners</option>
+                    <option value="Root Canal Therapy">Root canal therapy</option>
+                    <option value="Dental Implants">Dental implant consultation</option>
+                    <option value="Teeth Whitening">In-office whitening ($280)</option>
+                    <option value="Wisdom Extraction">Wisdom tooth removal</option>
+                    <option value="Periodontal Care">Gum disease treatment</option>
+                    <option value="Individual Plan">Individual Plan membership ($199 / yr)</option>
+                    <option value="Family Plan">Family Plan membership ($349 / yr)</option>
+                    <option value="Gum Care Plan">Gum Care Plan membership ($289 / yr)</option>
+                    <option value="Emergency Relief">Dental emergency (pain, swelling, broken tooth)</option>
+                    <option value="General Inquiry">General question, estimate or insurance</option>
+                  </select>
+                  <p class="form-error" id="contactServiceError">Please choose a treatment.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactDoctor" class="form-label">Preferred specialist</label>
+                  <select id="contactDoctor" class="form-control">
+                    <option value="">No preference</option>
+                    <option value="Dr. Sarah Lin">Dr. Sarah Lin (Orthodontics)</option>
+                    <option value="Dr. Marcus Vance">Dr. Marcus Vance (Oral Surgery)</option>
+                    <option value="Dr. Elena Rostova">Dr. Elena Rostova (Cosmetic)</option>
+                    <option value="Dr. Julian Chen">Dr. Julian Chen (Pediatric)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactDate" class="form-label">Preferred date</label>
+                  <input type="date" id="contactDate" class="form-control" aria-describedby="contactDateError">
+                  <p class="form-error" id="contactDateError">Please choose a date from tomorrow onwards.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">How can we help? *</label>
+                <textarea id="contactMessage" class="form-control" placeholder="Describe any pain, your goals or the times that suit you best&hellip;" required aria-describedby="contactMessageError"></textarea>
+                <p class="form-error" id="contactMessageError">Please add a short message (at least 10 characters).</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Send Appointment Request</button>
+            </form>
+          </div>
+
+          <!-- Clinic details and map -->
+          <div class="contact-aside">
+            <div class="info-card">
+              <h2 class="info-card-title">Clinic Details</h2>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">&#128205;</div>
+                <div class="info-content">
+                  <h3>Address</h3>
+                  <p>450 Medical Plaza Way, Suite 300<br>San Francisco, CA 94102<br><small class="info-note">Free 2-hour parking in the underground garage</small></p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">&#9742;</div>
+                <div class="info-content">
+                  <h3>Phone</h3>
+                  <p>Front desk: <a href="tel:+14158903321">(415) 890-3321</a><br>Emergency line: <a href="tel:+14158903329">(415) 890-3329</a><br><small>Emergency line answered 24/7</small></p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">&#9993;</div>
+                <div class="info-content">
+                  <h3>Email</h3>
+                  <p>Appointments: <a href="mailto:care@luminadental.com">care@luminadental.com</a><br>Billing &amp; insurance: <a href="mailto:billing@luminadental.com">billing@luminadental.com</a></p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">&#9201;</div>
+                <div class="info-content">
+                  <h3>Opening Hours</h3>
+                  <p>Monday&ndash;Friday: 7:30 AM &ndash; 7:00 PM<br>Saturday: 8:00 AM &ndash; 4:00 PM<br>Sunday: Closed (emergency line only)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location map -->
+            <div class="map-card">
+              <div class="map-frame-container">
+                <iframe
+                  title="Map showing Lumina Dental near Civic Center, San Francisco"
+                  src="https://maps.google.com/maps?q=Civic+Center,+San+Francisco,+CA+94102&amp;z=15&amp;output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="map-card-footer">
+                <div>
+                  <p class="map-card-name">Lumina Dental &amp; Oral Care Center</p>
+                  <p class="map-card-address">Two blocks from Civic Center BART &middot; step-free entrance on Plaza West</p>
+                </div>
+                <a href="https://maps.google.com/?q=Civic+Center,+San+Francisco,+CA+94102" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Get Directions <span class="dir-arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       Footer (identical on every public page)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
+            <img src="../assets/images/logo.png" alt="Lumina Dental tooth logomark" class="brand-logo-img" width="40" height="40">
+            <span class="brand-name">
+              <span class="brand-title">Lumina Dental</span>
+              <span class="brand-subtitle">Oral Care Center</span>
+            </span>
+          </a>
+          <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="doctors.html" class="footer-link">Doctors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Company</h2>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-group-title">Account</h2>
+          <ul class="footer-links">
+            <li><a href="signin.html" class="footer-link">Sign In</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumina Dental &amp; Oral Care Center. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li>HIPAA Compliant</li>
+          <li>ADA Member Practice</li>
+          <li>OSHA Bio-Safe Facility</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Wanderkite Holidays</title>
+  <meta name="description" content="Contact Wanderkite Holidays — send a trip enquiry, call, WhatsApp or visit our Bengaluru, Mumbai, Delhi and Kochi offices.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="../assets/images/logo.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">
+              Home <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/domestic.html">Domestic</a></li>
+          <li><a class="nav-link" href="../pages/international.html">International</a></li>
+          <li><a class="nav-link" href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          <li><a class="nav-link" href="../pages/contact.html" aria-current="page">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        <a class="btn btn--sm" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===== PAGE BAND ===== -->
+    <section class="page-band" aria-labelledby="contact-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">Contact</span></li></ol>
+        </nav>
+        <h1 id="contact-title">Let's plan your trip</h1>
+        <p>Send us a few details and a planner will reply with ideas and prices within one working day. Prefer to talk? Call, WhatsApp or drop by one of our offices.</p>
+      </div>
+    </section>
+
+    <!-- ===== ENQUIRY FORM + DETAILS ===== -->
+    <section class="section" id="enquiry" aria-labelledby="form-title">
+      <div class="container contact-grid">
+        <div class="form-card">
+          <h2 id="form-title" style="font-size:1.6rem">Trip enquiry</h2>
+          <p class="muted">Fields marked * are required. We never share your details.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-name">Full name *</label>
+                <input class="input" id="c-name" name="name" type="text" autocomplete="name" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email *</label>
+                <input class="input" id="c-email" name="email" type="email" autocomplete="email" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-phone">Mobile number *</label>
+                <input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="10-digit mobile" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-type">Trip type *</label>
+                <select class="select" id="c-type" name="type" required>
+                  <option value="">Choose one</option>
+                  <option>Domestic</option>
+                  <option>International</option>
+                  <option>Honeymoon</option>
+                  <option>Family</option>
+                  <option>Group / corporate</option>
+                </select>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-package">Package or destination</label>
+              <input class="input" id="c-package" name="package" type="text" placeholder="e.g. Kerala Backwaters & Munnar, or 'somewhere with snow'">
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-date">Approximate start date *</label>
+                <input class="input" id="c-date" name="date" type="date" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-pax">Travellers *</label>
+                <input class="input" id="c-pax" name="pax" type="number" min="1" max="40" value="2" required>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-budget">Budget per person</label>
+              <select class="select" id="c-budget" name="budget">
+                <option>Not sure yet</option>
+                <option>Under ₹25,000</option>
+                <option>₹25,000 – ₹60,000</option>
+                <option>₹60,000 – ₹1,50,000</option>
+                <option>Above ₹1,50,000</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-msg">Anything we should know? *</label>
+              <textarea class="textarea" id="c-msg" name="message" data-label="Trip details" placeholder="Pace, hotel style, food preferences, special occasions…" required></textarea>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label class="check"><input type="checkbox" id="c-consent" name="consent" required> <span>I agree to be contacted by phone, email or WhatsApp about this enquiry. *</span></label>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <button class="btn" type="submit">Send Enquiry</button>
+          </form>
+
+          <div class="form-success" id="contact-success" role="status" tabindex="-1">
+            Thank you — your enquiry is in!
+            <p>Reference <strong data-ref>WK-0000</strong>. A planner will email you within one working day. For urgent trips, call <a href="tel:+918047182290">+91 80 4718 2290</a>.</p>
+          </div>
+        </div>
+
+        <div class="info-stack">
+          <div class="info-card">
+            <span class="ico-tile" aria-hidden="true">⌖</span>
+            <div><h2>Head office</h2><p>42, 2nd Floor, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038</p></div>
+          </div>
+          <div class="info-card">
+            <span class="ico-tile" aria-hidden="true">☎</span>
+            <div><h2>Phone &amp; WhatsApp</h2><p>Sales: <a href="tel:+918047182290">+91 80 4718 2290</a><br>WhatsApp: <a href="https://wa.me/919845031277">+91 98450 31277</a><br>On-trip emergencies (24×7): <a href="tel:+918047182299">+91 80 4718 2299</a></p></div>
+          </div>
+          <div class="info-card">
+            <span class="ico-tile" aria-hidden="true">✉</span>
+            <div><h2>Email</h2><p>Trips: <a href="mailto:hello@wanderkite.in">hello@wanderkite.in</a><br>Existing bookings: <a href="mailto:care@wanderkite.in">care@wanderkite.in</a></p></div>
+          </div>
+          <div class="info-card">
+            <span class="ico-tile" aria-hidden="true">🕘</span>
+            <div style="flex:1">
+              <h2>Opening hours</h2>
+              <table class="hours">
+                <tr><td>Monday – Friday</td><td>9:30 AM – 7:30 PM</td></tr>
+                <tr><td>Saturday</td><td>10:00 AM – 6:00 PM</td></tr>
+                <tr><td>Sunday</td><td>10:00 AM – 2:00 PM</td></tr>
+                <tr><td>Public holidays</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BRANCH OFFICES ===== -->
+    <section class="section section--alt" aria-labelledby="office-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Walk in</p>
+          <h2 id="office-title">Our offices</h2>
+          <p>Meet a planner in person — bring your dates and we'll sketch the trip together over chai.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="office-card">
+            <h3>Mumbai</h3>
+            <p>Unit 7, Ground Floor, Linking Road, Bandra West, Mumbai 400050</p>
+            <a href="tel:+912240159821">+91 22 4015 9821</a>
+          </div>
+          <div class="office-card">
+            <h3>New Delhi</h3>
+            <p>M-14, Middle Circle, Connaught Place, New Delhi 110001</p>
+            <a href="tel:+911141623370">+91 11 4162 3370</a>
+          </div>
+          <div class="office-card">
+            <h3>Kochi</h3>
+            <p>2nd Floor, Padma Junction, MG Road, Ernakulam, Kochi 682035</p>
+            <a href="tel:+914842388104">+91 484 238 8104</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-band" aria-labelledby="contact-cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow--light">Already booked with us?</p>
+          <h2 id="contact-cta">Find your tickets, invoices and itinerary in one place</h2>
+          <p>Sign in to your traveller dashboard to track payments, download documents and save packages for later.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="signin.html">Sign In to Dashboard</a>
+          <a class="link-arrow link-arrow--light" href="signup.html">Create an account <span class="flip" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+            <img src="../assets/images/logo.png" alt="" width="42" height="42">
+            <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+          </a>
+          <p>Handcrafted holiday packages across India and 30+ countries, planned by real people in Bengaluru since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Packages</h3>
+          <ul>
+            <li><a href="../pages/domestic.html">Domestic</a></li>
+            <li><a href="../pages/international.html">International</a></li>
+            <li><a href="../pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="../pages/signin.html">Sign In</a></li>
+            <li><a href="../pages/signup.html">Sign Up</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year">2026</span> Wanderkite Holidays Pvt. Ltd. · IATA-accredited travel agent · All prices in Indian Rupees (₹)</p>
+        <button class="to-top" type="button" data-scroll-top>Back to top <span aria-hidden="true">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

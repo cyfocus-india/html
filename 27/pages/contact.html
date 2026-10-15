@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Apex Stationery & Office Supplies</title>
+  <meta name="description" content="Contact Apex Stationery & Office Supplies for commercial bulk orders, tax-exempt institutional accounts, and customer support.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('apex_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var savedDir = localStorage.getItem('apex_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sticky, Responsive, Dropdown, Hamburger, Theme & Dir Toggles)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+        <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Home <span class="dropdown-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Home 1</a>
+            <a href="../index1.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+        <a href="bulk-orders.html" class="nav-link">Bulk Orders</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+
+        <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
+        <div class="drawer-actions">
+          <div class="drawer-toggles-grid">
+            <button type="button" class="drawer-control-btn theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+              <span class="symbol">☾</span>
+              <span class="control-text">Dark Mode</span>
+            </button>
+            <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+              <span class="symbol">⇄</span>
+              <span class="dir-label">RTL</span>
+            </button>
+          </div>
+          <a href="bulk-orders.html" class="btn btn-primary drawer-cta-btn">Get a Quote</a>
+        </div>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <span class="symbol">☾</span>
+        </button>
+
+        <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
+          <span class="dir-label">⇄ RTL</span>
+        </button>
+
+        <a href="bulk-orders.html" class="btn btn-primary cta-btn">Get a Quote</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         Section 1: Hero Section (Contact Header with Support Metrics)
+         ======================================================================= -->
+    <section class="page-hero">
+      <div class="container" style="text-align: center; max-width: 860px;">
+        <span class="section-tag">Direct Human Support</span>
+        <h1>Contact Our Supply Specialists</h1>
+        <p class="lead" style="margin-inline: auto;">
+          Whether you need a custom contract quote, tax-exempt institutional setup, custom foil-embossed corporate samples, or shipping logistics tracking, our Chicago headquarters team is ready to assist.
+        </p>
+
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+          <div class="card" style="padding: 1rem 1.5rem; flex-direction: row; align-items: center; gap: 0.85rem;">
+            <span class="contact-pill-icon">15m</span>
+            <div style="text-align: start;">
+              <strong style="display: block; font-size: 0.9rem; color: var(--text-primary);">Response Time</strong>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">&lt; 15 min during business hours</span>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1rem 1.5rem; flex-direction: row; align-items: center; gap: 0.85rem;">
+            <span class="contact-pill-icon">TEL</span>
+            <div style="text-align: start;">
+              <strong style="display: block; font-size: 0.9rem; color: var(--text-primary);">Toll-Free Phone</strong>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">+1 (800) 555-APEX (2739)</span>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1rem 1.5rem; flex-direction: row; align-items: center; gap: 0.85rem;">
+            <span class="contact-pill-icon">EML</span>
+            <div style="text-align: start;">
+              <strong style="display: block; font-size: 0.9rem; color: var(--text-primary);">Direct Email</strong>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">support@apexstationery.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 2: Interactive Contact & Quote Enquiry Form
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Form Column -->
+          <div class="card" style="padding: 2.5rem 2rem;">
+            <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Send an Official Enquiry</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">
+              Fill out the form below. We will match your request with an experienced supply specialist in your industry.
+            </p>
+
+            <div id="form-success-alert" class="form-success-alert">
+              <strong>✓ Enquiry Successfully Sent!</strong><br>
+              Thank you for reaching out. Your request has been assigned to a senior procurement specialist at our Chicago logistics center. You will receive a direct reply within 1 business hour.
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Jane Doe" required>
+                  <span class="form-error">Please enter your full name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Work Email *</label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="jane@company.com" required>
+                  <span class="form-error">Please enter a valid business email.</span>
+                </div>
+              </div>
+
+              <div class="grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-company">Company / Organization *</label>
+                  <input type="text" id="contact-company" class="form-control" placeholder="Meridian Legal LLP" required>
+                  <span class="form-error">Please specify your company or organization.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">Phone Number *</label>
+                  <input type="tel" id="contact-phone" class="form-control" placeholder="(312) 555-0198" required>
+                  <span class="form-error">Please provide a callback telephone number.</span>
+                </div>
+              </div>
+
+              <div class="grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-dept">Enquiry Department</label>
+                  <select id="contact-dept" class="form-control" style="height: 46px;">
+                    <option value="bulk">Bulk Volume Sourcing & Pallet Rates</option>
+                    <option value="institutional">Education & Tax-Exempt Institutional</option>
+                    <option value="branding">Custom Imprinting & Logo Branding</option>
+                    <option value="samples">Product Specifications & Free Trial Samples</option>
+                    <option value="billing">Net 30 Billing & Account Services</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-volume">Estimated Monthly Supply Budget</label>
+                  <select id="contact-volume" class="form-control" style="height: 46px;">
+                    <option value="under1k">Under $1,000 / month</option>
+                    <option value="1k-5k">$1,000 – $5,000 / month</option>
+                    <option value="5k-20k">$5,000 – $20,000 / month</option>
+                    <option value="20k+">$20,000+ / month (Enterprise Contract)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject *</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Requesting contract pricing for 50 cases of copy paper" required>
+                <span class="form-error">Please enter a message subject line.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Detailed Requirements / RFP Notes *</label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="Specify items, estimated quantities, preferred delivery timing, or questions..." required></textarea>
+                <span class="form-error">Please provide details regarding your inquiry.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Submit Official Enquiry</button>
+            </form>
+          </div>
+
+          <!-- Contact Quick Info Side Column -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="card">
+              <h3 class="card-title">Headquarters & Showroom</h3>
+              <p class="text-muted" style="margin-bottom: 1.25rem;">
+                Visit our physical showroom to inspect paper weights, test pen glide, and review customized binder samples in person.
+              </p>
+              <div class="contact-info-list">
+                <div class="contact-info-item">
+                  <span class="contact-badge">HQ</span>
+                  <div>
+                    <strong>Corporate Address:</strong><br>
+                    742 Evergreen Terrace, Suite 400<br>
+                    Chicago, IL 60601, United States
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <span class="contact-badge">HUB</span>
+                  <div>
+                    <strong>Freight & Logistics Hub:</strong><br>
+                    1400 Industrial Way, Gate 4<br>
+                    Elk Grove Village, IL 60007
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <span class="contact-badge">TEL</span>
+                  <div>
+                    <strong>Direct Switchboard:</strong><br>
+                    Toll-Free: +1 (800) 555-APEX<br>
+                    Local Chicago: +1 (312) 555-0198
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <span class="contact-badge">EML</span>
+                  <div>
+                    <strong>Email Inboxes:</strong><br>
+                    General: support@apexstationery.com<br>
+                    Commercial Sales: sales@apexstationery.com
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="background-color: var(--bg-badge); border-color: var(--border-badge);">
+              <h3 class="card-title" style="color: var(--text-badge);">Need Instant Assistance?</h3>
+              <p style="font-size: 0.925rem; color: var(--text-primary); margin-bottom: 1.25rem;">
+                Speak directly with an available on-duty fulfillment manager right now for urgent same-day shipping cutoffs.
+              </p>
+              <a href="tel:18005552739" class="btn btn-primary" style="width: 100%;">Call +1 (800) 555-APEX</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3: Department Direct Contacts & Extensions
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Routing</span>
+          <h2>Department Direct Contacts & Extensions</h2>
+          <p class="lead">
+            Bypass general switchboard queues by reaching our specialized procurement desks directly.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card dept-card">
+            <h4 class="card-title">Commercial &amp; Bulk Sales</h4>
+            <p class="card-text">Volume tiers, custom quotes, contract rate locks, and enterprise accounts.</p>
+            <div class="dept-footer">
+              <div class="dept-meta-item">
+                <strong>Ext:</strong> <span>102</span>
+              </div>
+              <div class="dept-meta-email">
+                <strong>Email:</strong>
+                <a href="mailto:sales@apexstationery.com" class="dept-email-link">sales@apexstationery.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dept-card">
+            <h4 class="card-title">Institutional &amp; Education</h4>
+            <p class="card-text">School district accounts, tax-exempt certificates, and municipal tender bids.</p>
+            <div class="dept-footer">
+              <div class="dept-meta-item">
+                <strong>Ext:</strong> <span>105</span>
+              </div>
+              <div class="dept-meta-email">
+                <strong>Email:</strong>
+                <a href="mailto:edu@apexstationery.com" class="dept-email-link">edu@apexstationery.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dept-card">
+            <h4 class="card-title">Freight &amp; Logistics</h4>
+            <p class="card-text">LTL freight carrier appointments, liftgate scheduling, and tracking updates.</p>
+            <div class="dept-footer">
+              <div class="dept-meta-item">
+                <strong>Ext:</strong> <span>108</span>
+              </div>
+              <div class="dept-meta-email">
+                <strong>Email:</strong>
+                <a href="mailto:logistics@apexstationery.com" class="dept-email-link">logistics@apexstationery.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dept-card">
+            <h4 class="card-title">Billing &amp; Accounts</h4>
+            <p class="card-text">Net 30 applications, credit lines, consolidated invoices, and W-9 requests.</p>
+            <div class="dept-footer">
+              <div class="dept-meta-item">
+                <strong>Ext:</strong> <span>110</span>
+              </div>
+              <div class="dept-meta-email">
+                <strong>Email:</strong>
+                <a href="mailto:billing@apexstationery.com" class="dept-email-link">billing@apexstationery.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4: Operating Hours & Logistics Shipping Schedule
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fulfillment Hours</span>
+          <h2>Customer Support & Distribution Schedule</h2>
+          <p class="lead">
+            Review our active warehouse dispatch windows and live customer care availability.
+          </p>
+        </div>
+
+        <div class="table-wrapper" style="max-width: 860px; margin-inline: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Day of Week</th>
+                <th>Phone & Desk Support</th>
+                <th>Warehouse Fulfillment & Dispatch</th>
+                <th>Will-Call Showroom Pickup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday – Thursday</strong></td>
+                <td>8:00 AM – 7:00 PM CST</td>
+                <td>Same-day cutoff at 3:00 PM CST</td>
+                <td>8:30 AM – 5:30 PM CST</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>8:00 AM – 6:00 PM CST</td>
+                <td>Same-day cutoff at 2:00 PM CST</td>
+                <td>8:30 AM – 5:00 PM CST</td>
+              </tr>
+              <tr>
+                <td><strong>Saturday</strong></td>
+                <td>9:00 AM – 2:00 PM CST</td>
+                <td>Scheduled weekend freight only</td>
+                <td>9:00 AM – 3:00 PM CST</td>
+              </tr>
+              <tr>
+                <td><strong>Sunday</strong></td>
+                <td>Closed</td>
+                <td>Automated portal orders queued</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 5: Frequently Asked Enquiry Questions (Accordion FAQ) + Next Step
+         ======================================================================= -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Common Enquiries</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="lead">
+            Find immediate answers to standard questions regarding payment terms, sample kits, and order procedures.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button">
+              <span>How do we submit a tax exemption certificate?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Simply email your state-issued sales tax exemption or resale certificate to <code>edu@apexstationery.com</code> or attach it when responding to your initial quote email. Our accounting team reviews and exempts your account profile within two business hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button">
+              <span>What are your minimum order requirements for bulk discounts?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Tier 1 discounts begin at just 10 units (or cartons). Full pallet rates apply at 1,000 units or 40 cases of paper. You can also mix-and-match product lines within the same order to reach volume tier thresholds.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button">
+              <span>Can we split a bulk shipment across multiple branch offices?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Yes! We regularly provide multi-destination split delivery for corporate clients. You receive the high-volume tiered pricing across the master total, and our logistics team generates individual tracking numbers and packing slips for each receiving facility.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button">
+              <span>What is your policy for damaged goods or paper cartons?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Every shipment is 100% insured. If any carton or pallet sustains freight damage, simply note it on the bill of lading or take a quick photo and notify your account manager. We dispatch an immediate replacement shipment within 24 hours at no expense to you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-banner" style="margin-top: 4rem;">
+          <h2>Ready to Streamline Your Supply Chain?</h2>
+          <p>
+            Speak directly with a senior supply specialist today or request a custom trial box delivered to your office door.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:18005552739" class="btn btn-primary btn-lg">Call +1 (800) 555-APEX</a>
+            <a href="bulk-orders.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">View Bulk Tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer (Identical on every page)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Apex Stationery Home">
+            <img src="../assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
+            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          </a>
+          <p>
+            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="new-arrivals.html" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="bulk-orders.html" class="footer-link">Bulk Orders</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+        </div>
+        <div class="footer-badges-list">
+          <span>ISO 9001:2015 Certified Logistics</span>
+          <span>FSC® Certified Paper Supply</span>
+          <span>Net 30 Vendor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

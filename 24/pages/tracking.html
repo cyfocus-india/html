@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking | Dashmile Couriers</title>
+  <meta name="description" content="Track a Dashmile parcel with its DM number: live status, scan history and proof of delivery, plus what each status means and what to do if a delivery is late, missed or damaged.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-tracking">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="rates.html">Rate Calculator</a></li>
+          <li><a class="nav-link is-active" href="tracking.html" aria-current="page">Tracking</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Section 1: Page hero with tracking form ===== -->
+    <section class="page-hero" aria-labelledby="tracking-title">
+      <div class="container page-hero__grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home 1</a></li><li><span aria-current="page">Tracking</span></li></ol></nav>
+          <p class="eyebrow">Tracking</p>
+          <h1 id="tracking-title">Where's my parcel? Ask once, see the whole journey.</h1>
+          <p class="lead">Enter the DM number from your booking SMS or receipt to see every scan, the latest ETA and proof of delivery.</p>
+          <form class="track-hero-form" id="track-form" novalidate>
+            <div class="field">
+              <label class="visually-hidden" for="track-id">Tracking number</label>
+              <input id="track-id" name="id" type="text" autocomplete="off" spellcheck="false" maxlength="12" placeholder="e.g. DM48213076" aria-describedby="track-note">
+            </div>
+            <button class="btn" type="submit">Track parcel</button>
+          </form>
+          <p class="track-form-note" id="track-note" aria-live="polite">Your number starts with DM followed by 8 digits.</p>
+          <div class="sample-ids">
+            <span>Try a sample:</span>
+            <button type="button" data-sample-id="DM48213076">DM48213076</button>
+            <button type="button" data-sample-id="DM48207719">DM48207719</button>
+            <button type="button" data-sample-id="DM48199240">DM48199240</button>
+            <button type="button" data-sample-id="DM48222105">DM48222105</button>
+          </div>
+        </div>
+        <div class="page-hero__media">
+          <div class="media-frame"><img src="../assets/images/hero-tracking-customer-phone.jpg" alt="Smiling woman checking a parcel update on her phone while holding a small package at her desk" width="1400" height="1050" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Tracking result ===== -->
+    <section class="section section--tight section--alt" id="result" aria-labelledby="result-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="result-title">Tracking result</h2>
+        <div id="track-output" aria-live="polite">
+          <div class="card track-placeholder">
+            <span class="icon-tile" aria-hidden="true">📦</span>
+            <h3>Your parcel's journey will appear here</h3>
+            <p class="muted">Results list every scan from pickup to doorstep. New bookings show up about 15 minutes after the rider's first scan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Status glossary ===== -->
+    <section class="section" aria-labelledby="status-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Status guide</p>
+          <h2 id="status-title">What each tracking status means</h2>
+          <p class="lead">Eight statuses cover a parcel's whole life with us. Here's what's happening behind each one.</p>
+        </div>
+        <div class="status-grid">
+          <div class="status-card" data-reveal><span class="pill pill--muted">Booked</span><p>We have the details and a label number, but no rider has scanned the parcel yet.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--brand">Picked up</span><p>The rider scanned it at your door. The pickup receipt is in your SMS.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--brand">Sorted at hub</span><p>Weighed, photographed and assigned to the next bike, van, truck or flight.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--info">In transit</span><p>Moving between cities. Scans appear at each hub, roughly every 6 to 12 hours.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--amber">Out for delivery</span><p>With the rider on today's beat. The receiver gets an OTP and a live ETA link.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--success">Delivered</span><p>Handed over with an OTP, signature or doorstep photo. Proof is saved for 12 months.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--danger">Delivery attempted</span><p>The rider couldn't complete the drop. A second attempt is booked automatically.</p></div>
+          <div class="status-card" data-reveal><span class="pill pill--danger">Returning to sender</span><p>After two failed attempts and 5 days at the hub, the parcel heads back to you.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: Problems and fixes ===== -->
+    <section class="section section--alt" aria-labelledby="fix-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Something wrong?</p>
+          <h2 id="fix-title">Late, missed or damaged: what to do next</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card fix-card" data-reveal>
+            <span class="icon-tile icon-tile--amber" aria-hidden="true">⏱</span>
+            <h3>It's running late</h3>
+            <ol>
+              <li>Check the time of the latest scan above.</li>
+              <li>No new scan for 6 hours (local) or 24 hours (outstation)? Message us with the DM number.</li>
+              <li>We escalate to the hub lead and reply with a firm new ETA within 2 hours.</li>
+            </ol>
+          </article>
+          <article class="card fix-card" data-reveal>
+            <span class="icon-tile icon-tile--amber" aria-hidden="true">🚪</span>
+            <h3>Nobody was home</h3>
+            <ol>
+              <li>The second attempt is the next working day, 10 AM to 1 PM.</li>
+              <li>Reply to the SMS to pick another day, redirect to a neighbour, or collect from a counter.</li>
+              <li>Uncollected parcels wait 5 days at the hub before returning to the sender.</li>
+            </ol>
+          </article>
+          <article class="card fix-card" data-reveal>
+            <span class="icon-tile icon-tile--amber" aria-hidden="true">📷</span>
+            <h3>It arrived damaged</h3>
+            <ol>
+              <li>Note the damage in the rider's app, or refuse the parcel at the door.</li>
+              <li>Photograph the outer box and the contents within 48 hours.</li>
+              <li>Raise a claim from the dashboard or the contact page, with the item invoice.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Update channels ===== -->
+    <section class="section" aria-labelledby="updates-title">
+      <div class="container split">
+        <div class="media-frame" data-reveal><img src="../assets/images/tracking-courier-phone.jpg" alt="Courier in a yellow cap reading a delivery update on his phone while holding a parcel" width="1000" height="750" loading="lazy"></div>
+        <div>
+          <p class="eyebrow">Delivery updates</p>
+          <h2 id="updates-title">Updates on the channel you actually read</h2>
+          <p class="lead">Receivers get alerts automatically. Senders choose their channels in the dashboard.</p>
+          <ul class="channel-list">
+            <li><span class="icon-tile" aria-hidden="true">💬</span><div><h3>WhatsApp</h3><p>A message at each key scan. Reply "RESCHEDULE" or "COUNTER" to change the delivery yourself.</p></div></li>
+            <li><span class="icon-tile" aria-hidden="true">✉</span><div><h3>SMS</h3><p>The delivery OTP and an out-for-delivery alert. Works on any phone, no data needed.</p></div></li>
+            <li><span class="icon-tile" aria-hidden="true">📨</span><div><h3>Email digest</h3><p>Senders get one email at 8 PM summarising every parcel delivered, delayed or returned that day.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 6: Call to action ===== -->
+    <section class="section section--alt" aria-labelledby="cta-track-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">Ship regularly?</p>
+            <h2 id="cta-track-title">Track every parcel in one place</h2>
+            <p>With a free account, every parcel you book appears on one live board, and you get an alert the moment one stalls.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="signup.html">Sign Up free</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rate Calculator</a></li>
+          <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

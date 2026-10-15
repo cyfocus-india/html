@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Dashmile Couriers</title>
+  <meta name="description" content="Dashmile Couriers delivers parcels the same day across Pune and Pimpri-Chinchwad and next day to India's metros. Check coverage and cut-off times, then book a doorstep pickup.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-home1">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header (identical on every public page) ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Dashmile Couriers, go to Home 1">
+        <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-name">Dashmile<small>Couriers</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link sub-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="sub-menu" id="home-menu">
+              <li><a href="index.html" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="pages/rates.html">Rate Calculator</a></li>
+          <li><a class="nav-link" href="pages/tracking.html">Tracking</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="pages/about.html">About</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-extra">
+          <a class="btn btn-block" href="pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+        <a class="btn btn-sm header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ===== Section 1: Hero (split layout + quick tracking) ===== -->
+    <section class="hero-one" aria-labelledby="hero-title">
+      <div class="container hero-one__grid">
+        <div>
+          <p class="eyebrow">Pune courier · since 2017</p>
+          <h1 id="hero-title">Booked by lunch. <span>Delivered before dinner.</span></h1>
+          <p class="lead">Dashmile collects from your door anywhere in Pune and Pimpri-Chinchwad and delivers across the city the same evening, with a next-day air line to India's metros when it has further to go.</p>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="pages/contact.html?topic=pickup">Book a Pickup</a>
+            <a class="link-arrow" href="pages/rates.html">Price a parcel <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <form class="track-form" action="pages/tracking.html" method="get" data-quick-track novalidate>
+            <label class="visually-hidden" for="quick-id">Tracking number</label>
+            <input id="quick-id" name="id" type="text" autocomplete="off" spellcheck="false" maxlength="12" placeholder="e.g. DM48213076" aria-describedby="quick-note">
+            <button class="btn" type="submit">Track</button>
+          </form>
+          <p class="track-form-note" id="quick-note" data-track-note aria-live="polite">Paste the number from your booking SMS. No sign-in needed.</p>
+
+          <div class="hero-trust">
+            <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.8/5</strong> from 2,300+ Google reviews</span>
+            <span><strong>1,200+</strong> Pune businesses ship with us every week</span>
+          </div>
+        </div>
+
+        <div class="hero-one__media">
+          <div class="media-frame">
+            <img src="assets/images/hero-home1-scooter-courier.jpg" alt="Courier on a scooter carrying a white delivery box through city traffic" width="1400" height="1050" fetchpriority="high">
+          </div>
+          <div class="live-card" aria-hidden="true">
+            <span class="pulse"></span>
+            <div><strong>Out for delivery · Baner</strong><span class="mono">DM48213076 · 1.4 kg · Same-Day</span></div>
+          </div>
+          <span class="zone-chip" aria-hidden="true">All 62 Pune PIN codes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Delivery coverage (CSS ring map + PIN checker) ===== -->
+    <section class="section" id="coverage" aria-labelledby="coverage-title">
+      <div class="container coverage">
+        <div class="rings" role="img" aria-label="Diagram of three delivery rings around the Hadapsar hub: core city within 8 km, city ring from 8 to 20 km and outer ring from 20 to 45 km">
+          <div class="ring ring--outer"><span class="ring-label">Outer ring · 20–45 km</span></div>
+          <div class="ring ring--city"><span class="ring-label">City ring · 8–20 km</span></div>
+          <div class="ring ring--core"></div>
+          <span class="hub-pin">Hadapsar<br>hub</span>
+          <span class="area-dot" style="top:15%; inset-inline-start:6%;">Chakan</span>
+          <span class="area-dot" style="top:47%; inset-inline-start:0%;">Hinjewadi</span>
+          <span class="area-dot" style="top:84%; inset-inline-start:58%;">Saswad</span>
+          <span class="area-dot" style="top:31%; inset-inline-start:21%;">Baner</span>
+          <span class="area-dot" style="top:71%; inset-inline-start:21%;">Katraj</span>
+          <span class="area-dot" style="top:62%; inset-inline-start:67%;">Kothrud</span>
+          <span class="area-dot" style="top:35%; inset-inline-start:58%;">Kharadi</span>
+          <span class="area-dot" style="top:61%; inset-inline-start:27%;">Camp</span>
+        </div>
+
+        <div>
+          <p class="eyebrow">Delivery coverage</p>
+          <h2 id="coverage-title">Every corner of Pune, mapped in three rings</h2>
+          <p class="lead">Riders work fixed beats that radiate out of our Hadapsar hub, so distance from the hub decides how fast a parcel can arrive. Traffic luck doesn't come into it.</p>
+          <div class="zones">
+            <div class="zone-row">
+              <span class="swatch swatch--core" aria-hidden="true"></span>
+              <div><h3>Core city · within 8 km</h3><p>Camp, Koregaon Park, Kharadi, Viman Nagar, Swargate and the old city peths</p></div>
+              <span class="pill pill--brand">Dash 90</span>
+            </div>
+            <div class="zone-row">
+              <span class="swatch swatch--city" aria-hidden="true"></span>
+              <div><h3>City ring · 8 to 20 km</h3><p>Baner, Aundh, Kothrud, Wakad, Katraj, Pimpri, Chinchwad, Bhosari</p></div>
+              <span class="pill pill--brand">Dash 90 · Same-Day</span>
+            </div>
+            <div class="zone-row">
+              <span class="swatch swatch--outer" aria-hidden="true"></span>
+              <div><h3>Outer ring · 20 to 45 km</h3><p>Hinjewadi Phase 3, Chakan MIDC, Talegaon, Ranjangaon, Saswad, Uruli Kanchan</p></div>
+              <span class="pill pill--brand">Same-Day</span>
+            </div>
+          </div>
+
+          <div class="pin-check">
+            <h3>Sending outside Pune? Check the PIN</h3>
+            <p class="muted">We reach 19,400+ PIN codes in 28 states and 8 union territories.</p>
+            <form data-pin-check novalidate>
+              <label class="visually-hidden" for="pin-input">Destination PIN code</label>
+              <input class="input" id="pin-input" type="text" inputmode="numeric" maxlength="6" placeholder="e.g. 440010" autocomplete="postal-code">
+              <button class="btn" type="submit">Check PIN</button>
+            </form>
+            <div class="pin-result" data-pin-result aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Daily cut-off timeline ===== -->
+    <section class="section section--alt" aria-labelledby="cutoff-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Daily cut-off times</p>
+          <h2 id="cutoff-title">Six times that run our day</h2>
+          <p class="lead">Book before each one and the promise beside it holds, Monday to Saturday. Festival-day changes are announced 48 hours ahead.</p>
+        </div>
+        <ol class="cutoffs">
+          <li class="cutoff" data-reveal><time datetime="09:00">9:00 AM</time><h3>Pickup slots open</h3><p>First riders leave the Hadapsar and Bhosari hubs for scheduled collections.</p></li>
+          <li class="cutoff" data-reveal><time datetime="11:00">11:00 AM</time><h3>Outer-ring same-day</h3><p>Last call for same-day delivery to Chakan, Talegaon, Saswad and Ranjangaon.</p></li>
+          <li class="cutoff is-key" data-reveal><time datetime="13:00">1:00 PM</time><h3>City same-day</h3><p>Book by 1 PM and it reaches any address within 20 km by 9 PM tonight.</p></li>
+          <li class="cutoff is-key" data-reveal><time datetime="17:00">5:00 PM</time><h3>Air Express pickup</h3><p>Collected by 5 PM, it flies out of Pune overnight and lands in the metros next day.</p></li>
+          <li class="cutoff" data-reveal><time datetime="19:00">7:00 PM</time><h3>Last surface pickup</h3><p>Final collections for Next-Day Local and outstation Surface parcels.</p></li>
+          <li class="cutoff" data-reveal><time datetime="20:00">8:00 PM</time><h3>Last Dash 90 order</h3><p>The 90-minute bike service takes its final booking, delivered by 9:30 PM.</p></li>
+        </ol>
+        <div class="cutoff-now notice notice--info" data-cutoff-now hidden></div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: Reliability record ===== -->
+    <section class="section" aria-labelledby="proof-title">
+      <div class="container split">
+        <div class="proof-media" data-reveal>
+          <div class="media-frame">
+            <img src="assets/images/proof-parcel-handover.jpg" alt="A sealed cardboard parcel being handed from one person to another at the doorstep" width="1000" height="1100" loading="lazy">
+          </div>
+          <div class="proof-badge"><strong>OTP or photo on every drop</strong>Nothing is marked "left at gate" without proof you can see.</div>
+        </div>
+        <div>
+          <p class="eyebrow">Our track record</p>
+          <h2 id="proof-title">Numbers we publish every quarter</h2>
+          <p class="lead">Taken straight from our scan data for January to September 2026, across 1.38 million parcels.</p>
+          <div class="stat-grid">
+            <div class="stat"><span class="stat__value">97.8%</span><span class="stat__label">delivered on the promised day</span></div>
+            <div class="stat"><span class="stat__value">2 h 41 m</span><span class="stat__label">average Same-Day time, pickup to door</span></div>
+            <div class="stat"><span class="stat__value">94.6%</span><span class="stat__label">delivered at the first attempt</span></div>
+            <div class="stat"><span class="stat__value">0.06%</span><span class="stat__label">of parcels had a damage claim</span></div>
+          </div>
+          <ul class="check-list">
+            <li>Every hand-off is scanned, so finding a stray parcel takes minutes, not a week of emails.</li>
+            <li>Riders keep the same beat for months and know the guard at your society gate by name.</li>
+            <li>Damage claims are settled within 7 working days of receiving photos and the invoice.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Customer stories ===== -->
+    <section class="section section--alt" aria-labelledby="stories-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Customer stories</p>
+          <h2 id="stories-title">What Pune sends with Dashmile</h2>
+          <p class="lead">Three customers, three very different parcels, one city.</p>
+        </div>
+        <div class="grid grid-3">
+          <figure class="card quote-card" data-reveal>
+            <span class="stars" aria-label="Rated 5 out of 5">★★★★★</span>
+            <blockquote>"We had 140 wedding invitations to hand-deliver and two weeks to go. Dashmile collected them on Saturday morning and every family had theirs by evening, with a photo for each one."</blockquote>
+            <p class="result">140 invitations delivered in one evening</p>
+            <figcaption class="person">
+              <span class="avatar" aria-hidden="true">SP</span>
+              <div class="person-meta">
+                <strong class="person-name">Sneha Patwardhan</strong>
+                <span class="person-role">Kothrud · Sent wedding invitations</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card quote-card" data-reveal>
+            <span class="stars" aria-label="Rated 5 out of 5">★★★★★</span>
+            <blockquote>"Customers drop phones off for repair and want them back the same day. With Dash 90 the repaired phone is in their hand about an hour after we finish, and they stopped calling to chase us."</blockquote>
+            <p class="result">Repairs back with customers in about 70 minutes</p>
+            <figcaption class="person">
+              <span class="avatar avatar--amber" aria-hidden="true">MS</span>
+              <div class="person-meta">
+                <strong class="person-name">Mohsin Shaikh</strong>
+                <span class="person-role">Owner, Shaikh Mobile Care, Camp</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card quote-card" data-reveal>
+            <span class="stars" aria-label="Rated 5 out of 5">★★★★★</span>
+            <blockquote>"Cakes are the worst thing to courier. Their riders carry them flat in a top box and call before they arrive. In a year we've had three dented boxes and not one ruined cake."</blockquote>
+            <p class="result">1,900 cakes delivered in 12 months</p>
+            <figcaption class="person">
+              <span class="avatar avatar--deep" aria-hidden="true">GK</span>
+              <div class="person-meta">
+                <strong class="person-name">Gauri Kulkarni</strong>
+                <span class="person-role">Founder, The Crumb Lab, Wakad</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 6: Call to action ===== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">New customer offer</p>
+            <h2 id="cta-title">Your first five local deliveries are on us</h2>
+            <p>Create a free account and we'll waive the freight on your first five parcels within Pune &amp; PCMC, up to ₹69 each. Valid until 31 December 2026.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-lg" href="pages/signup.html">Claim five free deliveries</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer (identical on every public page) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+        <p>Pune's same-day parcel courier, with next-day air and nightly surface freight to the rest of India.</p>
+        <p class="footer-hours">Pickups Mon–Sat, 9 AM–7 PM · Customer care Mon–Sat, 8 AM–9 PM</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h3 id="f-home">Home</h3>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h3 id="f-company">Company</h3>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h3 id="f-explore">Explore</h3>
+        <ul>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/rates.html">Rate Calculator</a></li>
+          <li><a href="pages/tracking.html">Tracking</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h3 id="f-account">Account</h3>
+        <ul>
+          <li><a href="pages/signin.html">Sign In</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+          <li><a href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Dashmile Couriers Pvt. Ltd. All rights reserved.</span>
+        <span>Plot 14, Hadapsar Industrial Estate, Pune 411013 · <a href="tel:+912048592210">+91 20 4859 2210</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

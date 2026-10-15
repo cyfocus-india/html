@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Aisle &amp; Aperture</title>
+  <meta name="description" content="Send a booking enquiry to Aisle &amp; Aperture, or find our Jaipur studio address, phone, email and opening hours.">
+  <meta name="theme-color" content="#a8385f">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Apply the saved theme and direction before the first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("aa-theme"), r = localStorage.getItem("aa-dir");
+        if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        if (r === "rtl" || r === "ltr") d.setAttribute("dir", r);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+        <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" width="46" height="46">
+        <span class="brand-text">
+          <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+          <span class="brand-tag">Wedding Films &amp; Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-panel" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+              <ul class="dropdown" id="home-menu">
+                <li><a href="../index.html">Home 1</a></li>
+                <li><a href="../index1.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/portfolio.html">Portfolio</a></li>
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/packages.html">Packages</a></li>
+            <li><a href="../pages/contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">&#x263E;</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-pressed="false" aria-label="Switch to right-to-left layout"><span class="icon" aria-hidden="true">&#x21C4;</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm" href="../pages/contact.html">Check Your Date</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+  <!-- ============ 1. Intro ============ -->
+  <section class="section contact-intro glow" aria-labelledby="page-title">
+    <div class="container">
+      <div class="contact-intro__panel glass">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home 1</a></li>
+              <li aria-current="page">Contact</li>
+            </ol>
+          </nav>
+          <h1 id="page-title">Contact</h1>
+          <p class="lead">Tell us about your celebration. A real person from the studio — usually Rhea or Dev — replies to every enquiry within one working day.</p>
+        </div>
+        <ul class="quick-facts">
+          <li class="glass glass--strong"><span class="icon-badge" aria-hidden="true">&#x2709;&#xFE0E;</span><span><strong>Reply in 1 working day</strong>Often the same evening</span></li>
+          <li class="glass glass--strong"><span class="icon-badge" aria-hidden="true">&#x260E;&#xFE0E;</span><span><strong>+91 98290 47215</strong>Calls and WhatsApp</span></li>
+          <li class="glass glass--strong"><span class="icon-badge" aria-hidden="true">&#x2302;</span><span><strong>Studio visits welcome</strong>Tuesday to Sunday</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. Booking enquiry form + details ============ -->
+  <section class="section section--alt" aria-labelledby="form-title">
+    <div class="container contact-grid">
+      <div class="form-card glass">
+        <form id="enquiry-form" novalidate aria-labelledby="form-title">
+          <h2 id="form-title">Booking <em>enquiry</em></h2>
+          <p class="muted">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required. Approximate details are absolutely fine.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="field__error" id="name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-partner">Partner's name</label>
+              <input id="f-partner" name="partner" type="text" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="field__error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98XXX XXXXX" required aria-describedby="phone-error">
+              <p class="field__error" id="phone-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-date">Wedding date <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-date" name="date" type="date" required data-future aria-describedby="date-error">
+              <p class="field__error" id="date-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-venue">City or venue <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-venue" name="venue" type="text" autocomplete="off" placeholder="e.g. Udaipur, a lakeside hotel" required aria-describedby="venue-error">
+              <p class="field__error" id="venue-error" aria-live="polite"></p>
+            </div>
+
+            <fieldset class="field field--full" aria-describedby="events-error">
+              <legend>Events to cover <span class="req" aria-hidden="true">*</span></legend>
+              <div class="check-grid">
+                <label class="check"><input type="checkbox" name="events" value="Haldi"> Haldi</label>
+                <label class="check"><input type="checkbox" name="events" value="Mehendi"> Mehendi</label>
+                <label class="check"><input type="checkbox" name="events" value="Sangeet"> Sangeet</label>
+                <label class="check"><input type="checkbox" name="events" value="Wedding ceremony"> Wedding ceremony</label>
+                <label class="check"><input type="checkbox" name="events" value="Reception"> Reception</label>
+                <label class="check"><input type="checkbox" name="events" value="Pre-wedding shoot"> Pre-wedding shoot</label>
+              </div>
+              <p class="field__error" id="events-error" aria-live="polite"></p>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-guests">Approximate guests</label>
+              <select id="f-guests" name="guests">
+                <option value="Under 100">Under 100</option>
+                <option value="100–300" selected>100–300</option>
+                <option value="300–600">300–600</option>
+                <option value="600+">600+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-package">Package of interest</label>
+              <select id="f-package" name="package">
+                <option value="undecided">Not sure yet</option>
+                <option value="essential">Essential — ₹1,65,000</option>
+                <option value="signature">Signature — ₹3,45,000</option>
+                <option value="heirloom">Heirloom — ₹5,85,000</option>
+                <option value="custom">Custom quote</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="f-reply">How should we reply?</label>
+              <select id="f-reply" name="reply">
+                <option value="email">Email me a quote</option>
+                <option value="whatsapp">WhatsApp me</option>
+                <option value="video-call">Book a 20-minute discovery call</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="f-message">Tell us about your plans <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-message" name="message" required aria-describedby="message-hint message-error" placeholder="Rituals, timings, the moments that matter most…"></textarea>
+              <p class="field__hint" id="message-hint">A few lines is plenty — at least 20 characters.</p>
+              <p class="field__error" id="message-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field field--full">
+              <label class="consent"><input type="checkbox" name="consent" aria-describedby="consent-error"> <span>I agree that Aisle &amp; Aperture may contact me about this enquiry. We never share your details.</span></label>
+              <p class="field__error" id="consent-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Send Enquiry</button>
+            <p>We'll check your date before we reply.</p>
+          </div>
+        </form>
+
+        <!-- Success message (shown after a valid submission) -->
+        <div class="form-success" id="form-success" tabindex="-1" role="status" hidden>
+          <div class="form-success__icon" aria-hidden="true">✓</div>
+          <h2>Thank you, <em id="success-name">friend</em></h2>
+          <p>Your enquiry is with the studio. We're checking our calendar now and will reply within one working day.</p>
+          <dl class="summary-list glass">
+            <div><dt>Wedding date</dt><dd id="success-date"></dd></div>
+            <div><dt>City or venue</dt><dd id="success-venue"></dd></div>
+            <div><dt>Events</dt><dd id="success-events"></dd></div>
+            <div><dt>Reference</dt><dd id="success-ref"></dd></div>
+          </dl>
+          <button class="btn" type="button" id="enquiry-again">Send Another Enquiry</button>
+        </div>
+      </div>
+
+      <aside class="info-card glass" aria-labelledby="details-title">
+        <h2 id="details-title" class="h3-size">Studio details</h2>
+        <ul class="info-list">
+          <li>
+            <span class="icon-badge" aria-hidden="true">&#x2316;</span>
+            <div><span>Address</span><address>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur, Rajasthan 302001</address></div>
+          </li>
+          <li>
+            <span class="icon-badge" aria-hidden="true">&#x260E;&#xFE0E;</span>
+            <div><span>Phone</span><a href="tel:+919829047215">+91 98290 47215</a></div>
+          </li>
+          <li>
+            <span class="icon-badge" aria-hidden="true">&#x2709;&#xFE0E;</span>
+            <div><span>Email</span><a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a></div>
+          </li>
+        </ul>
+        <table class="hours">
+          <caption>Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Tuesday – Saturday</th><td>10:30 am – 7:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>11:00 am – 4:00 pm</td></tr>
+            <tr><th scope="row">Monday</th><td>Closed (we're at weddings)</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 3. Visit the studio ============ -->
+  <section class="section glow" aria-labelledby="visit-title">
+    <div class="container split">
+      <div class="split__media media-stack reveal">
+        <img class="media-stack__main" src="../assets/images/contact-studio-window.jpg" alt="A bright studio room with a tall arched window, a rattan stool and a softbox light" loading="lazy" width="800" height="1200">
+        <img class="media-stack__inset" src="../assets/images/contact-studio-set.jpg" alt="Studio set with a warm paper backdrop, a chair and two umbrella lights" loading="lazy" width="800" height="1120">
+      </div>
+      <div>
+        <p class="eyebrow">Visit the studio</p>
+        <h2 id="visit-title">Come for chai, <em>stay for the albums</em></h2>
+        <p>Seeing real albums and full-length films is the best way to decide. Book a visit and set aside about an hour.</p>
+        <ul class="ticks visit-list">
+          <li>Leaf through printed linen and velvet albums</li>
+          <li>Watch two complete wedding films on a big screen</li>
+          <li>Try the portrait room for a quick couple's photo</li>
+          <li>Free parking in the building basement</li>
+          <li>A two-minute walk from Ram Niwas Garden</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. Other enquiries ============ -->
+  <section class="section section--alt" aria-labelledby="other-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Not a couple?</p>
+        <h2 id="other-title">Planners, crew &amp; <em>press</em></h2>
+        <p class="lead">Different questions go to different inboxes, so the right person sees them first.</p>
+      </header>
+      <div class="grid-3">
+        <article class="policy glass reveal">
+          <h3>Wedding planners</h3>
+          <p>Partnership rates, shared timelines and a single point of contact for multi-event weddings.</p>
+          <p><a href="mailto:planners@aisleandaperture.in">planners@aisleandaperture.in</a></p>
+        </article>
+        <article class="policy glass reveal">
+          <h3>Join the crew</h3>
+          <p>We hire second shooters and editors before each season. Send a portfolio link and your city.</p>
+          <p><a href="mailto:careers@aisleandaperture.in">careers@aisleandaperture.in</a></p>
+        </article>
+        <article class="policy glass reveal">
+          <h3>Press &amp; features</h3>
+          <p>Image requests, interviews and real-wedding submissions for magazines and blogs.</p>
+          <p><a href="mailto:press@aisleandaperture.in">press@aisleandaperture.in</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. CTA ============ -->
+  <section class="section glow glow--alt" aria-labelledby="ct-cta-title">
+    <div class="container">
+      <div class="cta-band__panel glass reveal">
+        <p class="eyebrow">Prefer to talk?</p>
+        <h2 id="ct-cta-title">Some plans are easier <em>said out loud</em></h2>
+        <p class="lead">Call during studio hours or send a WhatsApp message any time — voice notes from parents are very welcome.</p>
+        <div class="btn-row">
+          <a class="btn" href="tel:+919829047215">Call the Studio</a>
+          <a class="btn" href="https://wa.me/919829047215" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ Footer (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+          <img src="../assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" loading="lazy" width="46" height="46">
+          <span class="brand-text">
+            <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+            <span class="brand-tag">Wedding Films &amp; Photography</span>
+          </span>
+        </a>
+        <p>Candid wedding photography and cinematic films from a Jaipur studio, for couples marrying anywhere in India.</p>
+      </div>
+
+      <nav aria-labelledby="footer-home">
+        <h2 class="footer-heading" id="footer-home">Home</h2>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-studio">
+        <h2 class="footer-heading" id="footer-studio">Studio</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/portfolio.html">Portfolio</a></li>
+          <li><a href="../pages/services.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-plan">
+        <h2 class="footer-heading" id="footer-plan">Plan</h2>
+        <ul class="footer-links">
+          <li><a href="../pages/packages.html">Packages</a></li>
+          <li><a href="../pages/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-reach">
+        <h2 class="footer-heading">Visit &amp; call</h2>
+        <address class="footer-contact">
+          <span>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur 302001</span>
+          <a href="tel:+919829047215">+91 98290 47215</a>
+          <a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a>
+          <span>Tue–Sat 10:30–19:00 · Sun 11:00–16:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aisle &amp; Aperture Studio LLP. All rights reserved.</p>
+      <p>Photographed, filmed and edited in Jaipur, Rajasthan.</p>
+    </div>
+  </footer>
+</body>
+</html>

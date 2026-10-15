@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Wanderkite Holidays</title>
+  <meta name="description" content="Create a free Wanderkite traveller account to save packages, track bookings and keep every ticket and invoice in one place.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="auth-page">
+    <aside class="auth-visual" aria-label="Why create an account">
+      <img src="../assets/images/auth-signup.jpg" alt="Traveller with a backpack reading the departures board in an airport terminal" width="1200" height="800">
+      <div class="inner">
+        <p class="eyebrow eyebrow--light">Free account</p>
+        <h2>Plan once, travel lighter</h2>
+        <ul>
+          <li>Save packages from any page with ♡</li>
+          <li>Pay balances and see what's due when</li>
+          <li>Earn Kite Points on every booking</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="auth-main" id="main">
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+          <img src="../assets/images/logo.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+        </a>
+        <div class="auth-toggles">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        </div>
+      </div>
+
+      <div class="auth-box">
+        <h1>Create your account</h1>
+        <p>It takes a minute. Your saved packages and bookings stay synced to this account.</p>
+
+        <form id="signup-form" novalidate>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <input class="input" id="su-name" name="name" type="text" autocomplete="name" placeholder="As on your ID" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-email">Email</label>
+            <input class="input" id="su-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-password">Password</label>
+            <div class="pw-wrap">
+              <input class="input" id="su-password" name="password" type="password" autocomplete="new-password" data-password data-strong required aria-describedby="su-strength-text">
+              <button class="pw-toggle" type="button" aria-controls="su-password" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <div class="strength" aria-hidden="true"><span></span></div>
+            <span class="hint" id="su-strength-text" data-strength-text>Use 8+ characters with letters and a number</span>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="su-confirm">Confirm password</label>
+            <div class="pw-wrap">
+              <input class="input" id="su-confirm" name="confirm" type="password" autocomplete="new-password" data-match="su-password" required>
+              <button class="pw-toggle" type="button" aria-controls="su-confirm" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" id="su-terms" name="terms" required> <span>I agree to the booking terms and privacy policy.</span></label>
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--block" type="submit">Create Account</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+      </div>
+
+      <p class="auth-foot">© <span class="year">2026</span> Wanderkite Holidays · <a href="contact.html">Questions? Contact us</a></p>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

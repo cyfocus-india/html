@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Browse 14 hands-on cooking classes by cuisine and skill level, with dates, prices and a weekly timetable.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link is-active" href="classes.html" aria-current="page">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="workshops.html">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="classes-title">
+      <div class="page-hero-bg">
+        <img src="../assets/images/hero-classes-chopping-vegetables.jpg" alt="Students' hands chopping peppers, lettuce and cucumber on a shared wooden board" width="1600" height="1000">
+      </div>
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="../index.html">Home 1</a></li>
+          <li aria-current="page">Classes</li>
+        </ol>
+        <h1 id="classes-title">Classes by cuisine and skill level</h1>
+        <p class="lead">Fourteen hands-on classes across eight cuisines, each graded Beginner, Intermediate or Advanced so you know exactly what you're signing up for.</p>
+        <div class="hero-pills"><span>14 classes</span><span>8 cuisines</span><span>3 skill levels</span><span>Max 12 students</span></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Class catalog with filters ===== -->
+    <section class="section" id="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Class catalog</span>
+          <h2 id="catalog-title">Find your next class</h2>
+          <p class="lead">Filter by cuisine and level, or search for a dish. Prices are per seat and include everything you'll cook with.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-group" role="group" aria-label="Filter by cuisine">
+            <span class="filter-label" aria-hidden="true">Cuisine</span>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="italian" aria-pressed="false">Italian</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="japanese" aria-pressed="false">Japanese</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="indian" aria-pressed="false">Indian</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="thai" aria-pressed="false">Thai</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="mexican" aria-pressed="false">Mexican</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="french" aria-pressed="false">French</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="spanish" aria-pressed="false">Spanish</button>
+            <button class="filter-btn" type="button" data-filter="cuisine" data-value="fundamentals" aria-pressed="false">Fundamentals</button>
+          </div>
+          <div class="filter-group" role="group" aria-label="Filter by skill level">
+            <span class="filter-label" aria-hidden="true">Level</span>
+            <button class="filter-btn" type="button" data-filter="level" data-value="all" aria-pressed="true">All levels</button>
+            <button class="filter-btn" type="button" data-filter="level" data-value="beginner" aria-pressed="false">Beginner</button>
+            <button class="filter-btn" type="button" data-filter="level" data-value="intermediate" aria-pressed="false">Intermediate</button>
+            <button class="filter-btn" type="button" data-filter="level" data-value="advanced" aria-pressed="false">Advanced</button>
+          </div>
+          <div class="filter-tools">
+            <div class="search-box">
+              <label class="visually-hidden" for="class-search">Search classes</label>
+              <input class="input" id="class-search" type="search" placeholder="Search a dish, e.g. ramen" data-class-search>
+            </div>
+            <p class="result-count" data-result-count aria-live="polite">14 classes found</p>
+          </div>
+        </div>
+
+        <div class="grid grid-3" data-catalog>
+          <article class="class-card" data-class data-cuisine="italian" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-roman-pasta.jpg" alt="Spaghetti carbonara topped with crispy guanciale and grated pecorino" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Italian</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Roman Pasta Classics</h3>
+              <p class="menu">Cacio e pepe, carbonara and amatriciana, and why pasta water is your best friend.</p>
+              <ul class="class-meta"><li><b>Thu, Oct 15</b> 6:30 PM</li><li>3 hrs</li><li>Chef Elena</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$89 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Roman Pasta Classics" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=roman-pasta&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="italian" data-level="intermediate">
+            <div class="class-card-media">
+              <img src="../assets/images/class-handmade-ravioli.jpg" alt="Square handmade ravioli dusted with parmesan on a dark plate" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Italian</span><span class="chip">Intermediate</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Handmade Ravioli &amp; Butter Sauces</h3>
+              <p class="menu">Egg dough by hand, ricotta-lemon and roasted squash fillings, and a brown-butter sage sauce.</p>
+              <ul class="class-meta"><li><b>Tue, Oct 20</b> 6:00 PM</li><li>3.5 hrs</li><li>Chef Elena</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$115 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Handmade Ravioli &amp; Butter Sauces" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=handmade-ravioli&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="italian" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-neapolitan-pizza.jpg" alt="Neapolitan margherita pizza with blistered crust and fresh basil" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Italian</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Neapolitan Pizza Night</h3>
+              <p class="menu">48-hour dough, stretching without a rolling pin, and blistered pies from our 900°F oven.</p>
+              <ul class="class-meta"><li><b>Fri, Oct 16</b> 6:30 PM</li><li>3 hrs</li><li>Chef Luis</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$85 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Neapolitan Pizza Night" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=neapolitan-pizza&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="japanese" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-sushi-rolling.jpg" alt="Salmon and avocado sushi rolls arranged on a dark serving board" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Japanese</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Sushi Rolling Basics</h3>
+              <p class="menu">Seasoned sushi rice, uramaki and hosomaki rolls, and a quick miso soup.</p>
+              <ul class="class-meta"><li><b>Sat, Oct 17</b> 11:00 AM</li><li>3 hrs</li><li>Chef Kenji</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$95 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Sushi Rolling Basics" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=sushi-rolling&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="japanese" data-level="advanced">
+            <div class="class-card-media">
+              <img src="../assets/images/class-ramen.jpg" alt="Bowl of ramen with shrimp, soft-boiled eggs, snap peas and chopsticks" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Japanese</span><span class="chip">Advanced</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Ramen from the Broth Up</h3>
+              <p class="menu">Chicken paitan broth, shoyu tare, fresh alkaline noodles and jammy marinated eggs.</p>
+              <ul class="class-meta"><li><b>Sat, Oct 24</b> 10:00 AM</li><li>4 hrs</li><li>Chef Kenji</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$155 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Ramen from the Broth Up" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=ramen&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="indian" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-north-indian-curry.jpg" alt="Two copper bowls of North Indian curry garnished with coriander" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Indian</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>North Indian Curry House</h3>
+              <p class="menu">Butter chicken, chana masala and jeera rice, plus how to bloom whole spices in ghee.</p>
+              <ul class="class-meta"><li><b>Wed, Oct 28</b> 6:30 PM</li><li>3 hrs</li><li>Guest chef Priya Nair</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$89 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for North Indian Curry House" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=north-indian-curry&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="indian" data-level="intermediate">
+            <div class="class-card-media">
+              <img src="../assets/images/class-samosas-chutneys.jpg" alt="Golden fried samosas with a green chilli on a wooden board" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Indian</span><span class="chip">Intermediate</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Samosas, Pakoras &amp; Chutneys</h3>
+              <p class="menu">Flaky ajwain pastry, spiced potato filling, onion pakoras, and mint and tamarind chutneys.</p>
+              <ul class="class-meta"><li><b>Thu, Nov 5</b> 6:30 PM</li><li>3 hrs</li><li>Guest chef Priya Nair</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$105 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Samosas, Pakoras &amp; Chutneys" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=samosas-chutneys&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="thai" data-level="intermediate">
+            <div class="class-card-media">
+              <img src="../assets/images/class-thai-street-wok.jpg" alt="Shrimp pad thai with bean sprouts and lime on a white plate" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Thai</span><span class="chip">Intermediate</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Thai Street Wok</h3>
+              <p class="menu">Pad thai, pad see ew and green papaya salad, with real wok heat on our high-output burners.</p>
+              <ul class="class-meta"><li><b>Wed, Oct 21</b> 6:30 PM</li><li>3 hrs</li><li>Chef Somchai</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$109 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Thai Street Wok" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=thai-street-wok&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="thai" data-level="advanced">
+            <div class="class-card-media">
+              <img src="../assets/images/class-khao-soi.jpg" alt="Bowl of khao soi curry noodle soup with lime, pickles and chilli paste" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Thai</span><span class="chip">Advanced</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Khao Soi &amp; Curry Pastes</h3>
+              <p class="menu">Hand-pounded curry paste, coconut curry noodle soup and a nest of crispy egg noodles.</p>
+              <ul class="class-meta"><li><b>Sun, Nov 1</b> 11:00 AM</li><li>4 hrs</li><li>Chef Somchai</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$145 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Khao Soi &amp; Curry Pastes" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=khao-soi&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="mexican" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-street-tacos.jpg" alt="Row of corn tortilla tacos filled with braised beef, onion and coriander" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Mexican</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Street Tacos &amp; Fresh Salsas</h3>
+              <p class="menu">Corn tortillas pressed from masa, slow-cooked carnitas, charred salsa roja and salsa verde.</p>
+              <ul class="class-meta"><li><b>Fri, Oct 23</b> 6:30 PM</li><li>3 hrs</li><li>Chef Luis</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$85 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Street Tacos &amp; Fresh Salsas" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=street-tacos&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="french" data-level="advanced">
+            <div class="class-card-media">
+              <img src="../assets/images/class-croissants.jpg" alt="Two golden croissants being dusted with flour on a dark surface" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">French</span><span class="chip">Advanced</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Laminated Dough: Croissants</h3>
+              <p class="menu">Butter blocks, three letter folds, shaping and proofing, then croissants and pain au chocolat.</p>
+              <ul class="class-meta"><li><b>Sat, Oct 31</b> 9:30 AM</li><li>4.5 hrs</li><li>Chef Elena</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$165 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Laminated Dough: Croissants" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=croissants&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="french" data-level="advanced">
+            <div class="class-card-media">
+              <img src="../assets/images/class-macarons.jpg" alt="Stack of pink, lilac and yellow French macarons" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">French</span><span class="chip">Advanced</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Parisian Macarons</h3>
+              <p class="menu">Italian meringue, macaronage by feel, even piping, and fillings from ganache to lemon curd.</p>
+              <ul class="class-meta"><li><b>Sun, Nov 8</b> 11:00 AM</li><li>3.5 hrs</li><li>Chef Elena</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$139 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Parisian Macarons" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=macarons&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="spanish" data-level="intermediate">
+            <div class="class-card-media">
+              <img src="../assets/images/class-seafood-paella.jpg" alt="Large pan of seafood paella with mussels, clams, prawns and lime wedges" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Spanish</span><span class="chip">Intermediate</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Seafood Paella</h3>
+              <p class="menu">Slow sofrito, bomba rice, practical seafood prep and crispy socarrat.</p>
+              <ul class="class-meta"><li><b>Thu, Oct 29</b> 6:30 PM</li><li>3 hrs</li><li>Chef Luis</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$119 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Seafood Paella" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=seafood-paella&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="class-card" data-class data-cuisine="fundamentals" data-level="beginner">
+            <div class="class-card-media">
+              <img src="../assets/images/class-knife-skills.jpg" alt="Hands using a chef's knife to slice green chillies next to sliced mushrooms" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Fundamentals</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Knife Skills Bootcamp</h3>
+              <p class="menu">Grip, the claw, dicing onions, julienne and chiffonade, then a quick soup with everything you cut.</p>
+              <ul class="class-meta"><li><b>Tue, Oct 27</b> 6:30 PM</li><li>2.5 hrs</li><li>Chef Kenji</li></ul>
+              <div class="class-card-foot">
+                <span class="price">$75 <small>/ seat</small></span>
+                <div class="class-book-group">
+                  <select class="select select--sm seat-picker" aria-label="Seats for Knife Skills Bootcamp" data-seat-picker>
+                    <option value="1">1 seat</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                  </select>
+                  <a class="btn btn--sm" href="contact.html?type=classes&amp;class=knife-skills&amp;seats=1" data-book-btn>Book seat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" data-empty hidden>
+          <h3>No classes match those filters</h3>
+          <p>Try another level or cuisine, or clear everything to see all fourteen.</p>
+          <button class="btn" type="button" data-reset-filters>Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Weekly timetable ===== -->
+    <section class="section section--alt" aria-labelledby="week-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Weekly timetable</span>
+          <h2 id="week-title">When classes run</h2>
+          <p class="lead">Evening classes start at 6:30 PM. Weekend classes run in the morning, so you're home by mid-afternoon.</p>
+        </div>
+        <ul class="week-grid reveal">
+          <li class="is-off"><span class="day">Mon</span><span class="time">Closed</span><span class="what">Studio prep and deliveries</span></li>
+          <li><span class="day">Tue</span><span class="time">6:30 PM</span><span class="what">Italian pasta and Fundamentals</span></li>
+          <li><span class="day">Wed</span><span class="time">6:30 PM</span><span class="what">Thai and Indian</span></li>
+          <li><span class="day">Thu</span><span class="time">6:30 PM</span><span class="what">Italian, Spanish and Indian</span></li>
+          <li><span class="day">Fri</span><span class="time">6:30 PM</span><span class="what">Pizza and taco nights, our date-night favourites</span></li>
+          <li><span class="day">Sat</span><span class="time">9:30 &amp; 11 AM</span><span class="what">Japanese and French baking</span></li>
+          <li><span class="day">Sun</span><span class="time">11:00 AM</span><span class="what">Thai and French pastry</span></li>
+        </ul>
+        <p class="week-note reveal">Weekend workshops run in our separate pastry room, so Saturday and Sunday classes go ahead as usual.</p>
+      </div>
+    </section>
+
+    <!-- ===== 4. Skill levels ===== -->
+    <section class="section" aria-labelledby="levels-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Skill levels</span>
+          <h2 id="levels-title">Which level is right for you?</h2>
+          <p class="lead">Every class is graded by technique, not by how fancy the food sounds. Here's how to pick.</p>
+        </div>
+        <div class="level-grid">
+          <article class="level-card reveal">
+            <div class="level-meter" role="img" aria-label="Level 1 of 3"><i class="on"></i><i></i><i></i></div>
+            <h3>Beginner</h3>
+            <p class="ready"><strong>You're ready if</strong> you can boil pasta and want to feel calm and confident in your own kitchen.</p>
+            <h4>You'll learn</h4>
+            <ul class="check-list">
+              <li>Holding and using a chef's knife safely</li>
+              <li>Seasoning by taste, not by teaspoon</li>
+              <li>Timing three dishes to finish together</li>
+            </ul>
+            <p class="level-start">Start with <a href="contact.html?type=classes&amp;class=knife-skills&amp;seats=1">Knife Skills Bootcamp</a></p>
+          </article>
+          <article class="level-card reveal">
+            <div class="level-meter" role="img" aria-label="Level 2 of 3"><i class="on"></i><i class="on"></i><i></i></div>
+            <h3>Intermediate</h3>
+            <p class="ready"><strong>You're ready if</strong> you cook a few nights a week and can follow a recipe without stress.</p>
+            <h4>You'll learn</h4>
+            <ul class="check-list">
+              <li>Making doughs and fillings by feel</li>
+              <li>Controlling wok and pan heat</li>
+              <li>Building sauces from the fond</li>
+            </ul>
+            <p class="level-start">Start with <a href="contact.html?type=classes&amp;class=handmade-ravioli&amp;seats=1">Handmade Ravioli</a></p>
+          </article>
+          <article class="level-card reveal">
+            <div class="level-meter" role="img" aria-label="Level 3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+            <h3>Advanced</h3>
+            <p class="ready"><strong>You're ready if</strong> knife work is second nature and you want projects that reward patience.</p>
+            <h4>You'll learn</h4>
+            <ul class="check-list">
+              <li>Laminating butter into dough</li>
+              <li>Long-simmered broths and pastes</li>
+              <li>Precise pastry temperatures</li>
+            </ul>
+            <p class="level-start">Start with <a href="contact.html?type=classes&amp;class=ramen&amp;seats=1">Ramen from the Broth Up</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Good to know (FAQ) ===== -->
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="faq-aside reveal">
+          <span class="eyebrow">Good to know</span>
+          <h2 id="faq-title">Before you book</h2>
+          <p class="lead">Quick answers about dietary needs, cancellations and what to bring.</p>
+          <div class="note">
+            <p>Still unsure? Message the studio and a chef will point you to the class that suits you.</p>
+            <a class="link-arrow" href="contact.html?topic=classes">Ask us directly <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="faq reveal">
+          <details open>
+            <summary>I have a food allergy. Can I still join?</summary>
+            <div class="answer"><p>Yes. Add it to your booking at least 48 hours ahead and we'll prepare swapped ingredients for your station. Our kitchen handles nuts, gluten and shellfish, so we can't promise a trace-free space for severe allergies.</p></div>
+          </details>
+          <details>
+            <summary>What's your cancellation policy?</summary>
+            <div class="answer"><p>Change or cancel for free up to 72 hours before class and we'll return the full amount as class credit. Inside 72 hours you can send a friend in your place at no cost.</p></div>
+          </details>
+          <details>
+            <summary>What should I wear and bring?</summary>
+            <div class="answer"><p>Closed-toe shoes and something to tie back long hair. We provide aprons, knives, all equipment and boxes for leftovers.</p></div>
+          </details>
+          <details>
+            <summary>Can I come on my own?</summary>
+            <div class="answer"><p>Of course. About a third of our students come solo. You'll share a bench with another cook and usually leave with a new friend.</p></div>
+          </details>
+          <details>
+            <summary>Is there a minimum age?</summary>
+            <div class="answer"><p>Evening classes are 18+ because wine is served. Teens aged 12–17 can join Saturday morning classes with an adult who also has a seat booked.</p></div>
+          </details>
+          <details>
+            <summary>Can I buy the equipment we use?</summary>
+            <div class="answer"><p>Yes. Our shop shelf stocks the same chef's knives, carbon-steel woks and Dutch ovens we teach with, and students get 10% off on class night.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Call to action ===== -->
+    <section class="section section--tight" aria-labelledby="classes-cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="eyebrow">Not sure where to start?</span>
+            <h2 id="classes-cta-title">Start with Knife Skills Bootcamp</h2>
+            <p>It's our most-booked first class for a reason: two and a half hours, $75, and every recipe you cook afterwards gets faster.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--lg" href="contact.html?type=classes&amp;class=knife-skills&amp;seats=1">Book Knife Skills</a>
+            <a class="link-arrow" href="contact.html?topic=classes">Ask which class fits <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="workshops.html">Weekend Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="../index.html#chefs">Chefs</a></li>
+            <li><a href="../index1.html#pricing">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

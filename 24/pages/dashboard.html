@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Dashmile Couriers</title>
+  <meta name="description" content="Your Dashmile Couriers dashboard: book pickups, track parcels in real time, review shipment history and download GST invoices.">
+  <meta name="theme-color" content="#0A6B5C">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script>
+    /* Apply the saved theme and direction before the page paints (avoids a flash) */
+    (function () {
+      try {
+        var t = localStorage.getItem('dm-theme');
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('dm-dir');
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="dash-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="dash">
+    <!-- ================= Sidebar ================= -->
+    <aside class="dash-side" id="dash-side" aria-label="Dashboard">
+      <div class="dash-side__top">
+        <a class="brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-name">Dashmile<small>Couriers</small></span>
+        </a>
+      </div>
+      <nav aria-label="Dashboard sections">
+        <ul class="dash-nav">
+          <li><a href="#overview" data-view="overview"><span class="dn-icon" aria-hidden="true">▦</span>Overview</a></li>
+          <li><a href="#pickups" data-view="pickups"><span class="dn-icon" aria-hidden="true">🗓</span>Pickups<span class="dn-count" data-count="pickups"></span></a></li>
+          <li><a href="#tracking" data-view="tracking"><span class="dn-icon" aria-hidden="true">📍</span>Live Tracking<span class="dn-count dn-count--live" data-count="tracking"></span></a></li>
+          <li><a href="#shipments" data-view="shipments"><span class="dn-icon" aria-hidden="true">📦</span>Shipments</a></li>
+          <li><a href="#invoices" data-view="invoices"><span class="dn-icon" aria-hidden="true">🧾</span>Invoices<span class="dn-count dn-count--amber" data-count="invoices"></span></a></li>
+        </ul>
+      </nav>
+      <div class="dash-help">
+        <strong>Need a hand?</strong>
+        <p>Our Pune desk answers in under a minute.</p>
+        <a href="tel:+912048592210">+91 20 4859 2210</a>
+      </div>
+    </aside>
+    <div class="dash-overlay" aria-hidden="true"></div>
+
+    <!-- ================= Main column ================= -->
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="hamburger dash-burger" type="button" aria-controls="dash-side" aria-expanded="false" aria-label="Open dashboard menu"><span></span><span></span><span></span></button>
+        <a class="dash-top-brand" href="../index.html" aria-label="Dashmile Couriers, go to Home 1"><img src="../assets/images/logo-mark.png" alt="" width="36" height="36"></a>
+        <p class="dash-greeting" id="dash-greeting">Welcome back</p>
+        <div class="dash-tools">
+          <button class="btn btn-sm dash-book" type="button" data-action="book">+ Book pickup</button>
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+
+          <div class="dd" id="notif-dd">
+            <button class="icon-btn dd-toggle" type="button" aria-expanded="false" aria-controls="notif-panel" aria-label="Notifications">🔔<span class="badge" id="notif-badge" hidden></span></button>
+            <div class="dd-panel dd-panel--wide" id="notif-panel" hidden>
+              <div class="dd-head"><strong>Notifications</strong><button class="text-btn" type="button" data-action="read-all">Mark all as read</button></div>
+              <ul class="notif-list" id="notif-list"></ul>
+            </div>
+          </div>
+
+          <div class="dd" id="profile-dd">
+            <button class="avatar-btn dd-toggle" type="button" aria-expanded="false" aria-controls="profile-panel" aria-label="Account menu"><span class="avatar" id="avatar-initials">DM</span></button>
+            <div class="dd-panel" id="profile-panel" hidden>
+              <div class="dd-head dd-head--stack"><strong id="profile-name">Customer</strong><span id="profile-email" class="muted"></span></div>
+              <ul class="dd-menu">
+                <li><a href="#settings">Profile &amp; settings</a></li>
+                <li><a href="../index.html">Back to website</a></li>
+                <li><button type="button" data-action="logout">Log out</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content" id="main" tabindex="-1">
+
+        <!-- ===== Overview ===== -->
+        <section class="view" data-panel="overview" aria-labelledby="h-overview">
+          <div class="view-head">
+            <div><h1 id="h-overview">Overview</h1><p class="muted" id="overview-sub">Here's how your shipments are doing.</p></div>
+            <div class="view-actions"><a class="text-btn" href="#shipments">View all shipments</a></div>
+          </div>
+          <div class="kpis" id="kpis"></div>
+          <div class="dash-grid">
+            <article class="panel panel--chart">
+              <div class="panel-head"><div><h2>Parcels booked</h2><p class="muted" id="chart-caption">Last 14 days</p></div>
+                <div class="seg" role="group" aria-label="Chart range">
+                  <button type="button" class="seg-btn is-on" data-range="14" aria-pressed="true">14 days</button>
+                  <button type="button" class="seg-btn" data-range="30" aria-pressed="false">30 days</button>
+                </div>
+              </div>
+              <div class="chart-wrap"><canvas id="ship-chart" height="240" role="img" aria-label="Bar chart of parcels booked per day"></canvas></div>
+              <table class="visually-hidden" id="chart-table"></table>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><h2>Status mix</h2></div>
+              <div class="donut-wrap">
+                <div class="donut" id="donut" role="img" aria-label="Share of shipments by status"><span id="donut-total"></span></div>
+                <ul class="legend" id="legend"></ul>
+              </div>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><h2>Moving right now</h2><a class="text-btn" href="#tracking">Open live board</a></div>
+              <ul class="mini-live" id="mini-live"></ul>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><h2>Next pickup</h2><a class="text-btn" href="#pickups">All pickups</a></div>
+              <div id="next-pickup"></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== Pickups ===== -->
+        <section class="view" data-panel="pickups" aria-labelledby="h-pickups" hidden>
+          <div class="view-head">
+            <div><h1 id="h-pickups">Pickups</h1><p class="muted">Book, reschedule or cancel doorstep collections.</p></div>
+            <div class="view-actions"><button class="btn" type="button" data-action="book">+ Book pickup</button></div>
+          </div>
+          <div class="toolbar">
+            <div class="seg" role="group" aria-label="Filter pickups by status" id="pickup-filter">
+              <button type="button" class="seg-btn is-on" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="seg-btn" data-filter="Scheduled" aria-pressed="false">Scheduled</button>
+              <button type="button" class="seg-btn" data-filter="Collected" aria-pressed="false">Collected</button>
+              <button type="button" class="seg-btn" data-filter="Cancelled" aria-pressed="false">Cancelled</button>
+            </div>
+            <div class="search"><label class="visually-hidden" for="pickup-search">Search pickups</label><input class="input" id="pickup-search" type="search" placeholder="Search by ID or address"></div>
+          </div>
+          <div class="table-wrap"><table class="data-table dash-table"><thead><tr><th scope="col">Pickup</th><th scope="col">Date &amp; slot</th><th scope="col">Address</th><th scope="col">Parcels</th><th scope="col">Service</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="pickup-rows"></tbody></table></div>
+        </section>
+
+        <!-- ===== Live tracking ===== -->
+        <section class="view" data-panel="tracking" aria-labelledby="h-tracking" hidden>
+          <div class="view-head">
+            <div><h1 id="h-tracking">Live Tracking</h1><p class="muted"><span class="live-dot" aria-hidden="true"></span> Positions refresh every few seconds as riders scan.</p></div>
+          </div>
+          <div class="track-board">
+            <div class="panel track-list-panel">
+              <div class="search"><label class="visually-hidden" for="track-search">Find a parcel</label><input class="input" id="track-search" type="search" placeholder="Find by DM number or city"></div>
+              <ul class="track-list" id="track-list" aria-label="Parcels in progress"></ul>
+            </div>
+            <div class="panel" id="track-detail" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <!-- ===== Shipments ===== -->
+        <section class="view" data-panel="shipments" aria-labelledby="h-shipments" hidden>
+          <div class="view-head">
+            <div><h1 id="h-shipments">Shipments</h1><p class="muted" id="ship-count">Your shipment history.</p></div>
+            <div class="view-actions">
+              <button class="text-btn" type="button" data-action="export">Export CSV</button>
+              <button class="btn" type="button" data-action="new-shipment">+ New shipment</button>
+            </div>
+          </div>
+          <div class="toolbar">
+            <div class="search"><label class="visually-hidden" for="ship-search">Search shipments</label><input class="input" id="ship-search" type="search" placeholder="Search DM number, receiver, city or PIN"></div>
+            <div class="field field--inline"><label class="visually-hidden" for="ship-status">Status</label>
+              <select id="ship-status"><option value="all">All statuses</option><option>Booked</option><option>Picked up</option><option>At hub</option><option>In transit</option><option>Out for delivery</option><option>Delivered</option><option>Attempted</option><option>Returned</option></select></div>
+            <div class="field field--inline"><label class="visually-hidden" for="ship-service">Service</label>
+              <select id="ship-service"><option value="all">All services</option><option value="next">Next-Day Local</option><option value="same">Same-Day</option><option value="dash">Dash 90</option><option value="surface">Surface</option><option value="air">Air Express</option></select></div>
+          </div>
+          <div class="table-wrap"><table class="data-table dash-table"><thead><tr><th scope="col">DM number</th><th scope="col">Booked</th><th scope="col">Receiver</th><th scope="col">Service</th><th scope="col">Weight</th><th scope="col">Status</th><th scope="col">Charge</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="ship-rows"></tbody></table></div>
+          <div class="pager" id="ship-pager"></div>
+        </section>
+
+        <!-- ===== Invoices ===== -->
+        <section class="view" data-panel="invoices" aria-labelledby="h-invoices" hidden>
+          <div class="view-head">
+            <div><h1 id="h-invoices">Invoices</h1><p class="muted">GST invoices are raised on the 1st and 16th of every month.</p></div>
+          </div>
+          <div class="kpis kpis--3" id="invoice-kpis"></div>
+          <div class="toolbar">
+            <div class="seg" role="group" aria-label="Filter invoices" id="invoice-filter">
+              <button type="button" class="seg-btn is-on" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="seg-btn" data-filter="Due" aria-pressed="false">Due</button>
+              <button type="button" class="seg-btn" data-filter="Paid" aria-pressed="false">Paid</button>
+            </div>
+          </div>
+          <div class="table-wrap"><table class="data-table dash-table"><thead><tr><th scope="col">Invoice</th><th scope="col">Billing period</th><th scope="col">Parcels</th><th scope="col">Amount</th><th scope="col">Due date</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="invoice-rows"></tbody></table></div>
+        </section>
+
+        <!-- ===== Profile & settings ===== -->
+        <section class="view" data-panel="settings" aria-labelledby="h-settings" hidden>
+          <div class="view-head">
+            <div><h1 id="h-settings">Profile &amp; settings</h1><p class="muted">Your details appear on pickup slips and invoices.</p></div>
+          </div>
+          <div class="settings-grid">
+            <form class="panel" id="profile-form" novalidate>
+              <h2>Profile</h2>
+              <div class="form-grid">
+                <div class="field"><label for="pf-name">Full name</label><input id="pf-name" type="text" autocomplete="name"><span class="field-error"></span></div>
+                <div class="field"><label for="pf-company">Business name</label><input id="pf-company" type="text" autocomplete="organization"><span class="field-error"></span></div>
+                <div class="field"><label for="pf-email">Email</label><input id="pf-email" type="email" autocomplete="email"><span class="field-error"></span></div>
+                <div class="field"><label for="pf-phone">Mobile</label><input id="pf-phone" type="tel" autocomplete="tel"><span class="field-error"></span></div>
+                <div class="field field--full"><label for="pf-address">Default pickup address</label><input id="pf-address" type="text" autocomplete="street-address"><span class="field-error"></span></div>
+                <div class="field"><label for="pf-pin">Pickup PIN</label><input id="pf-pin" type="text" inputmode="numeric" maxlength="6"><span class="field-error"></span></div>
+                <div class="field"><label for="pf-gstin">GSTIN <span class="optional">(optional)</span></label><input id="pf-gstin" type="text" maxlength="15" placeholder="27ABCDE1234F1Z5"><span class="field-error"></span></div>
+              </div>
+              <div class="btn-row mt-m"><button class="btn" type="submit">Save profile</button></div>
+            </form>
+
+            <div class="settings-side">
+              <form class="panel" id="prefs-form">
+                <h2>Notifications &amp; display</h2>
+                <fieldset class="fieldset">
+                  <legend>Send me shipment updates by</legend>
+                  <label class="check"><input type="checkbox" name="whatsapp"> <span>WhatsApp</span></label>
+                  <label class="check"><input type="checkbox" name="sms"> <span>SMS</span></label>
+                  <label class="check"><input type="checkbox" name="email"> <span>Daily email digest at 8 PM</span></label>
+                </fieldset>
+                <div class="form-grid mt-m">
+                  <div class="field"><label for="pref-theme">Theme</label><select id="pref-theme"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+                  <div class="field"><label for="pref-dir">Text direction</label><select id="pref-dir"><option value="ltr">Left to right</option><option value="rtl">Right to left</option></select></div>
+                </div>
+                <div class="btn-row mt-m"><button class="btn" type="submit">Save preferences</button></div>
+              </form>
+
+              <form class="panel" id="password-form" novalidate>
+                <h2>Change password</h2>
+                <div class="field"><label for="pw-current">Current password</label><input id="pw-current" type="password" autocomplete="current-password"><span class="field-error"></span></div>
+                <div class="field mt-s"><label for="pw-new">New password</label><input id="pw-new" type="password" autocomplete="new-password"><span class="field-error"></span></div>
+                <div class="field mt-s"><label for="pw-confirm">Confirm new password</label><input id="pw-confirm" type="password" autocomplete="new-password"><span class="field-error"></span></div>
+                <div class="btn-row mt-m"><button class="btn" type="submit">Update password</button></div>
+              </form>
+
+              <div class="panel">
+                <h2>Demo data</h2>
+                <p class="muted">Restore the sample pickups, shipments, invoices and notifications.</p>
+                <button class="btn mt-s" type="button" data-action="reset">Reset sample data</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- ================= Modals ================= -->
+  <dialog class="modal" id="pickup-modal" aria-labelledby="pickup-modal-title">
+    <form id="pickup-form" novalidate>
+      <div class="modal-head"><h2 id="pickup-modal-title">Book a pickup</h2><button class="modal-x" type="button" data-close aria-label="Close">✕</button></div>
+      <div class="modal-body form-grid">
+        <div class="field"><label for="pk-date">Pickup date</label><input id="pk-date" type="date" required><span class="field-error"></span></div>
+        <div class="field"><label for="pk-slot">Time slot</label>
+          <select id="pk-slot" required><option value="">Choose a slot</option><option>9:00 – 11:00 AM</option><option>11:00 AM – 1:00 PM</option><option>1:00 – 3:00 PM</option><option>3:00 – 5:00 PM</option><option>5:00 – 7:00 PM</option></select><span class="field-error"></span></div>
+        <div class="field field--full"><label for="pk-address">Pickup address</label><input id="pk-address" type="text" required><span class="field-error"></span></div>
+        <div class="field"><label for="pk-pin">PIN code</label><input id="pk-pin" type="text" inputmode="numeric" maxlength="6" required><span class="field-error"></span></div>
+        <div class="field"><label for="pk-service">Main service</label>
+          <select id="pk-service"><option value="same">Same-Day</option><option value="next">Next-Day Local</option><option value="dash">Dash 90</option><option value="surface">Surface</option><option value="air">Air Express</option></select></div>
+        <div class="field"><label for="pk-parcels">Number of parcels</label><input id="pk-parcels" type="number" min="1" max="200" value="1" required><span class="field-error"></span></div>
+        <div class="field"><label for="pk-weight">Approx. total weight (kg)</label><input id="pk-weight" type="number" min="0.1" step="0.1" required><span class="field-error"></span></div>
+        <div class="field field--full"><label for="pk-notes">Notes for the rider <span class="optional">(optional)</span></label><input id="pk-notes" type="text" maxlength="140" placeholder="e.g. Ring the bell twice, parcels at security desk"></div>
+      </div>
+      <div class="modal-foot"><button class="text-btn" type="button" data-close>Cancel</button><button class="btn" type="submit" id="pickup-submit">Confirm pickup</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="ship-modal" aria-labelledby="ship-modal-title">
+    <form id="ship-form" novalidate>
+      <div class="modal-head"><h2 id="ship-modal-title">New shipment</h2><button class="modal-x" type="button" data-close aria-label="Close">✕</button></div>
+      <div class="modal-body form-grid">
+        <div class="field"><label for="sh-name">Receiver name</label><input id="sh-name" type="text" required><span class="field-error"></span></div>
+        <div class="field"><label for="sh-phone">Receiver mobile</label><input id="sh-phone" type="tel" required placeholder="98XXXXXXXX"><span class="field-error"></span></div>
+        <div class="field"><label for="sh-city">Area / city</label><input id="sh-city" type="text" required placeholder="e.g. Koramangala, Bengaluru"><span class="field-error"></span></div>
+        <div class="field"><label for="sh-pin">Destination PIN</label><input id="sh-pin" type="text" inputmode="numeric" maxlength="6" required><span class="field-error"></span></div>
+        <div class="field"><label for="sh-service">Service</label><select id="sh-service"></select><span class="field-error"></span></div>
+        <div class="field"><label for="sh-weight">Weight (kg)</label><input id="sh-weight" type="number" min="0.05" step="0.05" required><span class="field-error"></span></div>
+        <div class="field field--full"><label for="sh-cod">Cash on delivery amount (₹) <span class="optional">(leave blank if prepaid)</span></label><input id="sh-cod" type="number" min="0" step="1"><span class="field-error"></span></div>
+        <p class="field--full quote-line" id="sh-quote" aria-live="polite"></p>
+      </div>
+      <div class="modal-foot"><button class="text-btn" type="button" data-close>Cancel</button><button class="btn" type="submit" id="ship-submit">Create shipment</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal--sm" id="confirm-modal" aria-labelledby="confirm-title">
+    <div class="modal-head"><h2 id="confirm-title">Are you sure?</h2><button class="modal-x" type="button" data-close aria-label="Close">✕</button></div>
+    <div class="modal-body"><p id="confirm-text"></p></div>
+    <div class="modal-foot"><button class="text-btn" type="button" data-close>Keep it</button><button class="btn" type="button" id="confirm-ok">Confirm</button></div>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

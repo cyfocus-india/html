@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="Beadwell wash prices by vehicle size, Wash Club memberships, studio starting prices, add-ons and points rewards.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="../index1.html">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="../pages/pricing.html" aria-current="page">Pricing</a></li>
+          <li><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="../pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="../pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container page-hero-grid">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="../index.html">Home 1</a></li><li aria-current="page">Pricing</li></ol>
+          </nav>
+          <p class="eyebrow">Pricing</p>
+          <h1 id="page-title">Posted prices, sized to your vehicle</h1>
+          <p class="lead">Wash prices are fixed by vehicle size. Studio work starts from the prices below and is confirmed in writing after we see the car &mdash; never haggled at the counter.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?topic=wash">Book a Slot</a>
+            <a class="link-arrow" href="#detailing">Jump to studio prices <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <figure class="page-hero-figure">
+          <img class="rounded-img" src="../assets/images/hero-pricing-wash-bay-night.webp" alt="Teal muscle car being rinsed with a pressure wand in a brightly lit wash bay at night" width="1920" height="1281" fetchpriority="high">
+          <figcaption class="hero-badge"><strong>Tax included</strong>The price on this page is the price on your receipt</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. Wash prices by size ===== -->
+    <section class="section" id="wash-prices" aria-labelledby="wash-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Wash prices</p>
+          <h2 id="wash-title">Hand-wash packages by vehicle size</h2>
+          <p class="lead">Bigger vehicles take more product and more time, so prices step up by size class. Not sure which class you&rsquo;re in? The examples under each heading are a good guide.</p>
+        </div>
+        <div class="price-table-wrap reveal">
+          <table class="price-table stack-table">
+            <caption class="visually-hidden">Wash package prices by vehicle size</caption>
+            <thead>
+              <tr>
+                <th scope="col">Package</th>
+                <th scope="col">Sedan / Coupe <small>Civic, Model 3, Mustang</small></th>
+                <th scope="col">SUV / Crossover <small>RAV4, Outback, Model Y</small></th>
+                <th scope="col">Truck / Van / 3-row <small>F-150, Sienna, Tahoe</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Rinse &amp; Go <small>10 min &middot; foam, rinse, blow dry</small></th>
+                <td data-label="Sedan / Coupe">$15</td>
+                <td data-label="SUV / Crossover">$21</td>
+                <td data-label="Truck / Van / 3-row">$25</td>
+              </tr>
+              <tr>
+                <th scope="row">Foam Bath <small>25 min &middot; two-bucket hand wash</small></th>
+                <td data-label="Sedan / Coupe">$29</td>
+                <td data-label="SUV / Crossover">$37</td>
+                <td data-label="Truck / Van / 3-row">$43</td>
+              </tr>
+              <tr>
+                <th scope="row">Hand Finish <small>45 min &middot; adds interior and glass</small></th>
+                <td data-label="Sedan / Coupe">$45</td>
+                <td data-label="SUV / Crossover">$55</td>
+                <td data-label="Truck / Van / 3-row">$63</td>
+              </tr>
+              <tr>
+                <th scope="row">Bead Shield <small>60 min &middot; adds decon and sealant</small></th>
+                <td data-label="Sedan / Coupe">$69</td>
+                <td data-label="SUV / Crossover">$83</td>
+                <td data-label="Truck / Van / 3-row">$93</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="size-notes">
+          <p class="muted"><strong>Heavy mud or sand:</strong> $25&ndash;$60 extra, quoted before we start &mdash; common after ski trips and trail weekends.</p>
+          <p class="muted"><strong>Roof racks and boxes:</strong> washed at no charge. We never remove accessories without asking.</p>
+          <p class="muted"><strong>Lifted trucks and duallys:</strong> Truck price plus $10 for the extra reach and ladder work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Wash Club memberships ===== -->
+    <section class="section section--band" id="club" aria-labelledby="club-title">
+      <div class="container">
+        <div class="club-split">
+          <div>
+            <p class="eyebrow">Wash Club</p>
+            <h2 id="club-title">Unlimited washes for one monthly price</h2>
+            <p class="lead">A plan pays for itself at about two visits a month. Your plate is linked to your plan, so you just book a slot and drive in &mdash; nothing to pay at the bay.</p>
+          </div>
+          <img class="rounded-img reveal" src="../assets/images/pricing-club-pressure-rinse.webp" alt="Black-and-white photo of a sports car being pressure-rinsed, spray flying off the rear wheel" width="1000" height="563" loading="lazy">
+        </div>
+        <div class="plan-grid">
+          <article class="plan reveal">
+            <h3>Foam Bath Club</h3>
+            <p class="muted">For commuters who want it clean every week</p>
+            <p class="plan-price">$39<span> / month</span></p>
+            <ul class="check-list">
+              <li>Unlimited Foam Bath washes</li>
+              <li>Book slots up to 7 days ahead</li>
+              <li>Double points on add-ons</li>
+            </ul>
+            <a class="btn btn--block" href="contact.html?topic=club-foam">Join Foam Bath Club</a>
+          </article>
+          <article class="plan plan--pick reveal">
+            <span class="pkg-flag">Best value</span>
+            <h3>Hand Finish Club</h3>
+            <p class="muted">Inside and out, as often as you like</p>
+            <p class="plan-price">$59<span> / month</span></p>
+            <ul class="check-list">
+              <li>Unlimited Hand Finish washes</li>
+              <li>Book slots up to 14 days ahead</li>
+              <li>One free seat shampoo each quarter</li>
+              <li>Double points on add-ons</li>
+            </ul>
+            <a class="btn btn--block" href="contact.html?topic=club-hand">Join Hand Finish Club</a>
+          </article>
+          <article class="plan reveal">
+            <h3>Bead Shield Club</h3>
+            <p class="muted">Keeps sealant topped up all year</p>
+            <p class="plan-price">$89<span> / month</span></p>
+            <ul class="check-list">
+              <li>Unlimited Bead Shield washes</li>
+              <li>Book slots up to 14 days ahead</li>
+              <li>Monthly wheel-barrel decon</li>
+              <li>10% off any studio detail</li>
+            </ul>
+            <a class="btn btn--block" href="contact.html?topic=club-shield">Join Bead Shield Club</a>
+          </article>
+        </div>
+        <p class="muted fine-print">Plan prices are for sedans and coupes; SUVs add $8 a month and trucks or vans add $14. Add a second household car for 30% off. Pause up to two months a year, or cancel any time before your renewal date.</p>
+      </div>
+    </section>
+
+    <!-- ===== 4. Studio starting prices + add-ons ===== -->
+    <section class="section" id="detailing" aria-labelledby="detail-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Studio &amp; add-ons</p>
+          <h2 id="detail-title">Detailing from-prices and per-service extras</h2>
+          <p class="lead">Studio prices are for sedans; SUVs are about 15% more and trucks or vans about 25% more. Your written quote is the final number.</p>
+        </div>
+        <div class="rate-grid">
+          <div class="rate-card reveal">
+            <h3>Studio detailing &mdash; starting from</h3>
+            <ul class="rate-list">
+              <li>
+                <div class="rate-line"><strong>Interior Reset</strong><span class="leader"></span><span class="price">from $159</span></div>
+                <p>3&ndash;4 hours. Heavily soiled cabins quoted after inspection.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Full Detail</strong><span class="leader"></span><span class="price">from $289</span></div>
+                <p>Interior Reset plus a Bead Shield exterior, clay bar and hand sealant. 6&ndash;7 hours.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Paint correction, 1-step</strong><span class="leader"></span><span class="price">from $420</span></div>
+                <p>One day. Removes roughly 60&ndash;70% of swirls.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Paint correction, 2-step</strong><span class="leader"></span><span class="price">from $720</span></div>
+                <p>Two days. Removes roughly 85&ndash;95% of defects.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Ceramic coating, 3-year</strong><span class="leader"></span><span class="price">from $890</span></div>
+                <p>Includes full decon and a 1-step polish. Two days with curing.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Ceramic coating, 5-year</strong><span class="leader"></span><span class="price">from $1,390</span></div>
+                <p>Includes 2-step correction and a 12-month top-up. Three days.</p>
+              </li>
+              <li>
+                <div class="rate-line"><strong>Paint protection film</strong><span class="leader"></span><span class="price">custom quote</span></div>
+                <p>Partial front &mdash; bumper, 24&Prime; of hood and fenders, mirrors &mdash; is usually $1,200&ndash;$1,600.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="rate-card reveal" id="addons">
+            <figure class="rate-figure">
+              <img class="rounded-img" src="../assets/images/pricing-addon-dashboard.webp" alt="Gloved detailer brushing dust from the dashboard of a classic car with a soft detailing brush" width="1000" height="562" loading="lazy">
+            </figure>
+            <h3>Add-ons &mdash; per service</h3>
+            <ul class="rate-list">
+              <li><div class="rate-line"><strong>Tire shine</strong><span class="leader"></span><span class="price">$6</span></div></li>
+              <li><div class="rate-line"><strong>Underbody flush (Nov&ndash;Mar)</strong><span class="leader"></span><span class="price">$8</span></div></li>
+              <li><div class="rate-line"><strong>Child-seat deep clean</strong><span class="leader"></span><span class="price">$25 per seat</span></div></li>
+              <li><div class="rate-line"><strong>Seat shampoo &amp; extraction</strong><span class="leader"></span><span class="price">$30 per seat</span></div></li>
+              <li><div class="rate-line"><strong>Pet hair removal</strong><span class="leader"></span><span class="price">$35&ndash;$75</span></div></li>
+              <li><div class="rate-line"><strong>Rain-repellent windshield</strong><span class="leader"></span><span class="price">$35</span></div></li>
+              <li><div class="rate-line"><strong>Carnauba hand wax</strong><span class="leader"></span><span class="price">$49</span></div></li>
+              <li><div class="rate-line"><strong>Engine bay clean &amp; dress</strong><span class="leader"></span><span class="price">$55</span></div></li>
+              <li><div class="rate-line"><strong>Ozone odor treatment</strong><span class="leader"></span><span class="price">$79</span></div></li>
+              <li><div class="rate-line"><strong>Headlight restoration</strong><span class="leader"></span><span class="price">$95 per pair</span></div></li>
+              <li><div class="rate-line"><strong>Wheel ceramic coating</strong><span class="leader"></span><span class="price">$149 set of 4</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Points & rewards ===== -->
+    <section class="section section--alt" id="points" aria-labelledby="points-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Beadwell Points</p>
+          <h2 id="points-title">Every dollar earns a point. Points buy washes.</h2>
+          <p class="lead">Points are added the moment you pay, appear in your dashboard, and never expire as long as you visit at least once a year.</p>
+        </div>
+        <ol class="reward-ladder">
+          <li class="reveal"><strong>60</strong><span>Tire shine</span></li>
+          <li class="reveal"><strong>150</strong><span>Free Rinse &amp; Go</span></li>
+          <li class="reveal"><strong>290</strong><span>Free Foam Bath</span></li>
+          <li class="reveal"><strong>450</strong><span>Free Hand Finish</span></li>
+          <li class="reveal"><strong>600</strong><span>$60 off a studio detail</span></li>
+        </ol>
+        <div class="tier-grid">
+          <article class="tier reveal">
+            <h3>Clear Coat</h3>
+            <p class="range">0&ndash;499 points earned this year</p>
+            <p class="muted">1 point per $1 spent, plus 25 bonus points in your birthday month.</p>
+          </article>
+          <article class="tier reveal">
+            <h3>Gloss</h3>
+            <p class="range">500&ndash;1,499 points earned this year</p>
+            <p class="muted">+10% bonus on every visit and first pick of Saturday morning slots.</p>
+          </article>
+          <article class="tier reveal">
+            <h3>Mirror</h3>
+            <p class="range">1,500+ points earned this year</p>
+            <p class="muted">+25% bonus, a free tire shine every month and early access to studio dates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Pricing questions + closing CTA ===== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow">Pricing questions</p>
+          <h2 id="faq-title">Before you book</h2>
+          <div class="accordion">
+            <div class="acc-item">
+              <h3><button class="acc-trigger" type="button" aria-expanded="true" aria-controls="faq-1" id="faq-1-btn">Do I pay a deposit? <span class="acc-icon" aria-hidden="true">+</span></button></h3>
+              <div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><p>Not for wash bays. Studio work needs a $50 deposit to hold your date; it comes off your final bill and is refundable up to 48 hours before.</p></div>
+            </div>
+            <div class="acc-item">
+              <h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">What if I need to cancel or I&rsquo;m running late? <span class="acc-icon" aria-hidden="true">+</span></button></h3>
+              <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden><p>Move or cancel a wash slot free of charge up to 2 hours before. If you&rsquo;re more than 15 minutes late, we&rsquo;ll fit you into the next open bay or rebook you at no cost.</p></div>
+            </div>
+            <div class="acc-item">
+              <h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">Can a studio quote go up after I drop the car off? <span class="acc-icon" aria-hidden="true">+</span></button></h3>
+              <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden><p>Only if we find something photos couldn&rsquo;t show, such as thin clear coat or an old respray. We stop, show you, and re-quote before doing any extra work. You can always decline.</p></div>
+            </div>
+            <div class="acc-item">
+              <h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">Which payment methods do you accept? <span class="acc-icon" aria-hidden="true">+</span></button></h3>
+              <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden><p>Visa, Mastercard, American Express, Apple Pay, Google Pay and cash. Wash Club renews on the same card each month, and you can update it in your dashboard.</p></div>
+            </div>
+            <div class="acc-item">
+              <h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">Can two cars share one Wash Club plan? <span class="acc-icon" aria-hidden="true">+</span></button></h3>
+              <div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn" hidden><p>Plans are tied to one license plate so the bay team can check you in automatically. Add a second household car at 30% off instead.</p></div>
+            </div>
+          </div>
+        </div>
+        <aside class="card aside-cta reveal">
+          <span class="bead" aria-hidden="true">&#9719;</span>
+          <h3>Ready to book?</h3>
+          <p class="muted">Wash slots open every 20 minutes. Studio dates usually book 5&ndash;7 days out.</p>
+          <a class="btn btn--block" href="contact.html?topic=wash">Book a Slot</a>
+          <p class="small"><a href="contact.html?topic=fleet">Ask about fleet and business pricing</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="../assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="../pages/services.html">Services</a></li>
+          <li><a href="../pages/pricing.html">Pricing</a></li>
+          <li><a href="../pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="../pages/signin.html">Sign In</a></li>
+          <li><a href="../pages/signup.html">Sign Up</a></li>
+          <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

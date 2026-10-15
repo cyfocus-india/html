@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eye Test | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="Book an eye test at Lumora Optical & Eye Care, Indiranagar: standard, comprehensive, contact lens and children's appointments with prices.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link" href="brands.html">Brands</a></li>
+          <li><a class="nav-link is-current" href="eye-test.html" aria-current="page">Eye Test</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="sym" aria-hidden="true">⇄</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== EYE TEST (booking) =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Page hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-card">
+          <img src="../assets/images/hero-eye-test-optician.jpg" alt="Optician holding up a pair of glasses in front of a letter eye chart" width="1200" height="900" fetchpriority="high">
+          <div class="page-hero-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="../index.html">Home 1</a></li>
+                <li aria-current="page">Eye Test</li>
+              </ol>
+            </nav>
+            <h1 id="page-title">Eye Test</h1>
+            <p class="lead">Book a 20 to 45-minute appointment with a qualified optometrist at our Indiranagar clinic. Slots start every 30 minutes, seven days a week.</p>
+            <ul class="hero-facts">
+              <li>Same-day slots most weekdays</li>
+              <li>Results explained on screen</li>
+              <li>Prescription emailed within 24 h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Appointment types and prices -->
+    <section class="section section-alt" id="tests" aria-labelledby="tests-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Choose your appointment</p>
+          <h2 id="tests-title">Four appointment types, priced up front</h2>
+          <p class="lead">Not sure which to pick? Choose Standard. If anything needs a closer look, the optometrist can upgrade it on the day and you only pay the difference.</p>
+        </div>
+
+        <ul class="test-grid">
+          <li class="test-card" data-test-card="standard">
+            <h3>Standard Eye Test</h3>
+            <p class="test-meta"><strong dir="ltr">₹350</strong><span dir="ltr">20 min</span></p>
+            <p>For adults aged 16–40 with no symptoms who need a new or updated prescription.</p>
+            <ul class="ticks">
+              <li>Vision and refraction</li>
+              <li>Eye-muscle balance check</li>
+              <li>Slit-lamp check of the front of the eye</li>
+              <li>Fee refunded with a complete pair</li>
+            </ul>
+            <button class="btn" type="button" data-choose-test="standard">Choose Standard</button>
+          </li>
+          <li class="test-card" data-test-card="comprehensive">
+            <h3>Comprehensive Eye Exam</h3>
+            <p class="test-meta"><strong dir="ltr">₹1,200</strong><span dir="ltr">45 min</span></p>
+            <p>For anyone over 40, or with diabetes, high blood pressure or glaucoma in the family.</p>
+            <ul class="ticks">
+              <li>Everything in Standard</li>
+              <li>Eye-pressure (glaucoma) test</li>
+              <li>OCT scan of retina and optic nerve</li>
+              <li>Dilated check when needed</li>
+            </ul>
+            <button class="btn" type="button" data-choose-test="comprehensive">Choose Comprehensive</button>
+          </li>
+          <li class="test-card" data-test-card="contact">
+            <h3>Contact Lens Consultation</h3>
+            <p class="test-meta"><strong dir="ltr">₹800</strong><span dir="ltr">40 min</span></p>
+            <p>For first-time wearers or anyone switching from monthlies to dailies, toric or multifocal lenses.</p>
+            <ul class="ticks">
+              <li>Corneal measurements</li>
+              <li>Trial lenses to take home</li>
+              <li>Insertion and removal training</li>
+              <li>Follow-up check after two weeks</li>
+            </ul>
+            <button class="btn" type="button" data-choose-test="contact">Choose Contact Lens</button>
+          </li>
+          <li class="test-card" data-test-card="child">
+            <h3>Children’s Eye Test</h3>
+            <p class="test-meta"><strong dir="ltr">₹500</strong><span dir="ltr">30 min</span></p>
+            <p>For ages 4–15. Ideally before the first school year, then once a year.</p>
+            <ul class="ticks">
+              <li>Picture and letter charts</li>
+              <li>Squint and lazy-eye check</li>
+              <li>Colour vision test</li>
+              <li>Myopia risk assessment</li>
+            </ul>
+            <button class="btn" type="button" data-choose-test="child">Choose Children’s</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 — What happens during the exam -->
+    <section class="section" aria-labelledby="exam-title">
+      <div class="container exam">
+        <div class="exam-media">
+          <img src="../assets/images/exam-phoropter-optometrist.jpg" alt="Optometrist adjusting a phoropter in front of a seated patient’s eyes" width="1000" height="800" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">What happens in the room</p>
+          <h2 id="exam-title">Your comprehensive exam, step by step</h2>
+          <p>A standard test covers steps 1, 2, 3 and 6. Nothing touches your eye, and you can ask to pause at any point.</p>
+          <ol class="exam-steps">
+            <li><span class="exam-num" aria-hidden="true">1</span><div><h3>History &amp; lifestyle</h3><p>Medicines, health conditions, screen hours and whatever is bothering you.</p></div><span class="exam-time" dir="ltr">5 min</span></li>
+            <li><span class="exam-num" aria-hidden="true">2</span><div><h3>Auto-refraction</h3><p>A machine estimates your power in seconds as a starting point.</p></div><span class="exam-time" dir="ltr">3 min</span></li>
+            <li><span class="exam-num" aria-hidden="true">3</span><div><h3>Refraction</h3><p>“Better with one or two?” The optometrist fine-tunes your prescription on the phoropter.</p></div><span class="exam-time" dir="ltr">10 min</span></li>
+            <li><span class="exam-num" aria-hidden="true">4</span><div><h3>Eye pressure</h3><p>A gentle puff of air measures the pressure inside the eye — the key glaucoma check.</p></div><span class="exam-time" dir="ltr">2 min</span></li>
+            <li><span class="exam-num" aria-hidden="true">5</span><div><h3>Retina &amp; OCT scan</h3><p>A slit-lamp view and a 3D scan of the retina, saved for comparison at future visits.</p></div><span class="exam-time" dir="ltr">12 min</span></li>
+            <li><span class="exam-num" aria-hidden="true">6</span><div><h3>Results explained</h3><p>Your prescription and scan images on screen, in plain language, with time for questions.</p></div><span class="exam-time" dir="ltr">8 min</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — Booking form + preparation checklist -->
+    <section class="section section-alt" id="book" aria-labelledby="book-title">
+      <div class="container booking">
+        <div class="form-card">
+          <p class="eyebrow">Book online</p>
+          <h2 id="book-title">Request your appointment</h2>
+          <p>Pick a slot and we’ll confirm by SMS within two working hours.</p>
+
+          <div class="form-success" id="booking-success" role="status" tabindex="-1" hidden></div>
+
+          <form id="booking-form" novalidate>
+            <div class="form-grid">
+              <div class="field field--full">
+                <label for="b-test">Appointment type <span class="req" aria-hidden="true">*</span></label>
+                <select id="b-test" name="test" required data-label="An appointment type" aria-describedby="b-test-error">
+                  <option value="">Select an appointment</option>
+                  <option value="standard">Standard Eye Test — ₹350, 20 min</option>
+                  <option value="comprehensive">Comprehensive Eye Exam — ₹1,200, 45 min</option>
+                  <option value="contact">Contact Lens Consultation — ₹800, 40 min</option>
+                  <option value="child">Children’s Eye Test — ₹500, 30 min</option>
+                </select>
+                <p class="field-error" id="b-test-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+                <input type="date" id="b-date" name="date" required data-label="Date" aria-describedby="b-date-error">
+                <p class="field-error" id="b-date-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-time">Time slot <span class="req" aria-hidden="true">*</span></label>
+                <select id="b-time" name="time" required data-label="A time slot" aria-describedby="b-time-error">
+                  <option value="">Choose a date first</option>
+                </select>
+                <p class="field-error" id="b-time-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="b-name" name="name" required minlength="2" autocomplete="name" data-label="Name" aria-describedby="b-name-error">
+                <p class="field-error" id="b-name-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-age">Patient’s age <span class="optional">(optional)</span></label>
+                <input type="number" id="b-age" name="age" min="3" max="110" inputmode="numeric" data-label="Age" aria-describedby="b-age-error">
+                <p class="field-error" id="b-age-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-phone">Mobile number <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="b-phone" name="phone" required autocomplete="tel" placeholder="98450 21734" data-validate="phone" data-label="Mobile number" aria-describedby="b-phone-error">
+                <p class="field-error" id="b-phone-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="b-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="b-email" name="email" required autocomplete="email" placeholder="name@example.com" data-label="Email" aria-describedby="b-email-error">
+                <p class="field-error" id="b-email-error"></p>
+              </div>
+
+              <div class="field field--full">
+                <label for="b-notes">Anything we should know? <span class="optional">(optional)</span></label>
+                <textarea id="b-notes" name="notes" rows="3" placeholder="e.g. headaches after screen work, current contact lens brand"></textarea>
+              </div>
+
+              <div class="field field--full">
+                <label class="check-row" for="b-remind"><input type="checkbox" id="b-remind" name="remind"> Send me a WhatsApp reminder the day before</label>
+              </div>
+            </div>
+
+            <button class="btn" type="submit">Confirm Booking</button>
+            <p class="form-note">Fields marked * are required. We only use your details for this appointment.</p>
+          </form>
+        </div>
+
+        <aside class="prep-card" aria-labelledby="prep-title">
+          <h2 id="prep-title">Before you come</h2>
+          <ul class="ticks">
+            <li>Bring your current glasses and any old prescriptions.</li>
+            <li>Contact lens wearers: wear your lenses in and bring the box or foil showing the power.</li>
+            <li>Write down any medicines you take, including eye drops.</li>
+            <li>If your eyes might be dilated, bring sunglasses and plan not to drive for four hours.</li>
+            <li>Arrive ten minutes early and take the lift to the first floor.</li>
+          </ul>
+          <p>Questions before your visit? Call the clinic desk on <a href="tel:+918041276650">+91 80 4127 6650</a> (ext. 1).</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 5 — FAQ -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Eye test questions</p>
+          <h2 id="faq-title">Good to know before you book</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is the ₹350 test fee really refunded?</summary>
+            <p>Yes. Buy a complete pair — frame plus prescription lenses — within 30 days and the fee comes off your bill automatically. It also applies to the Children’s Eye Test.</p>
+          </details>
+          <details>
+            <summary>Is an optometrist the same as an eye doctor?</summary>
+            <p>Optometrists test vision and screen eye health. If we see signs of disease such as cataract or glaucoma, we refer you to a partner ophthalmologist in Indiranagar within the week and send our scans ahead.</p>
+          </details>
+          <details>
+            <summary>Can I get tested without buying glasses here?</summary>
+            <p>Of course. The prescription is yours: we email a PDF within 24 hours and you can fill it anywhere.</p>
+          </details>
+          <details>
+            <summary>Can you test a child who can’t read yet?</summary>
+            <p>Yes, from age four we use picture charts and matching games. For children under four, we refer to a paediatric ophthalmologist.</p>
+          </details>
+          <details>
+            <summary>Do you accept insurance or corporate health plans?</summary>
+            <p>We don’t bill insurers directly, but we give an itemised GST invoice and a signed prescription, which most corporate health plans accept for reimbursement.</p>
+          </details>
+          <details>
+            <summary>How do I reschedule or cancel?</summary>
+            <p>Use the link in your SMS confirmation or call us. Changes are free up to two hours before your slot.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 — Next step -->
+    <section class="section section-alt" aria-labelledby="test-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="test-cta-title">After your test, choose frames the same visit</h2>
+            <p>Your new prescription goes straight to our opticians, who’ll shortlist frames that suit both your face and your lens power.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="products.html">See Frames &amp; Lenses</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+          <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+        </a>
+        <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <div>
+          <h2 class="footer-title">Home</h2>
+          <ul>
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Shop</h2>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="brands.html">Brands</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Care</h2>
+          <ul>
+            <li><a href="eye-test.html" aria-current="page">Eye Test</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care · 1st Floor, 612, 12th Main Road, Indiranagar, Bengaluru 560008</p>
+      <p>Mon–Sat 10 am – 8:30 pm · Sun 11 am – 6 pm</p>
+    </div>
+  </footer>
+</body>
+</html>

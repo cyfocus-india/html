@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 2 | Beadwell Wash &amp; Detail</title>
+  <meta name="description" content="The Beadwell detail studio: paint correction, ceramic coatings and interior resets, quoted in writing before we start.">
+  <meta name="theme-color" content="#0F3B2E">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <script>
+    /* Apply the saved theme and direction before first paint (prevents a flash) */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem('bw-theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        d.setAttribute('data-theme', t);
+        d.setAttribute('dir', localStorage.getItem('bw-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+        <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Beadwell</span>
+          <span class="brand-sub">Wash &amp; Detail</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-current" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html">Home 1 <span>Express hand-wash bays</span></a></li>
+              <li><a href="index1.html" aria-current="page">Home 2 <span>Detail studio</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li><a class="nav-link" href="pages/pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="pages/about.html">About</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+          <div class="nav-panel-tools">
+            <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span>
+              <span class="theme-label" aria-hidden="true">Dark</span>
+            </button>
+            <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false">
+              <span aria-hidden="true">&#8644;</span>
+              <span class="toggle-label" aria-hidden="true">RTL</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">&#9790;&#65038;</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">&#8644;</span><span class="toggle-label" aria-hidden="true">RTL</span></button>
+        <a class="btn header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <!-- ===== 1. Hero: split studio layout on brand green ===== -->
+    <section class="hero-studio" aria-labelledby="studio-title">
+      <div class="container hero-studio-grid">
+        <div>
+          <p class="eyebrow">Detail studio &middot; by appointment</p>
+          <h1 id="studio-title">Paint that looks deeper than the day it left the factory.</h1>
+          <p class="lead">Our two-bay studio is built for slow, measured work: paint correction under 6,500&nbsp;K LED panels, ceramic coatings cured with infrared lamps, and interiors steamed seam by seam.</p>
+          <div class="btn-row">
+            <a class="btn" href="pages/contact.html?topic=detail">Get a Detail Quote</a>
+            <a class="link-arrow" href="#goals">Find the right detail <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+          <dl class="spec-strip">
+            <div><dt>12-point</dt><dd>paint-depth reading before any polishing</dd></div>
+            <div><dt>IR-cured</dt><dd>coatings set overnight under infrared lamps</dd></div>
+            <div><dt>2 cars</dt><dd>per studio bay per day, so nothing is rushed</dd></div>
+          </dl>
+        </div>
+        <figure class="studio-figure">
+          <img src="assets/images/hero-home2-detailer-waxing.webp" alt="Detailer in black gloves working a polishing pad across a glossy black car in a dark studio" width="1200" height="1600" fetchpriority="high">
+          <div class="studio-chip studio-chip--a"><span class="bead bead--sm" aria-hidden="true">&#9680;</span><span><strong>IDA-certified</strong>detailers lead every studio job</span></div>
+          <div class="studio-chip studio-chip--b"><span class="bead bead--sm" aria-hidden="true">&#10022;</span><span><strong>+18 GU average</strong>gloss gain after a 1-step polish</span></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. Why paint dulls: problem / fix ===== -->
+    <section class="section" aria-labelledby="issues-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why paint dulls</p>
+          <h2 id="issues-title">Four things a wash can&rsquo;t fix &mdash; and what we do instead</h2>
+          <p class="lead">If your car still looks flat after a good wash, one of these is usually the reason. Each needs a different tool, not harder scrubbing.</p>
+        </div>
+        <div class="issue-grid">
+          <article class="issue reveal">
+            <span class="bead" aria-hidden="true">&#9678;</span>
+            <div>
+              <h3>Swirl marks</h3>
+              <dl>
+                <div><dt>What you see</dt><dd>Spider-web circles around reflections in direct sun, worst on dark paint.</dd></div>
+                <div><dt>How we fix it</dt><dd>Machine polishing levels the clear coat by a few microns &mdash; only after we&rsquo;ve measured it&rsquo;s thick enough.</dd></div>
+              </dl>
+            </div>
+          </article>
+          <article class="issue reveal">
+            <span class="bead" aria-hidden="true">&#8280;</span>
+            <div>
+              <h3>Iron fallout</h3>
+              <dl>
+                <div><dt>What you see</dt><dd>Tiny orange specks on light paint and panels that feel rough, mostly behind the wheels.</dd></div>
+                <div><dt>How we fix it</dt><dd>An iron-dissolving spray turns purple as it bleeds the particles out &mdash; no scrubbing required.</dd></div>
+              </dl>
+            </div>
+          </article>
+          <article class="issue reveal">
+            <span class="bead" aria-hidden="true">&#9676;</span>
+            <div>
+              <h3>Hard-water spots</h3>
+              <dl>
+                <div><dt>What you see</dt><dd>Chalky rings left where tap water or sprinklers dried on hot panels.</dd></div>
+                <div><dt>How we fix it</dt><dd>A mild mineral remover, then a deionized rinse so new spots can&rsquo;t form while the car dries.</dd></div>
+              </dl>
+            </div>
+          </article>
+          <article class="issue reveal">
+            <span class="bead" aria-hidden="true">&#10042;</span>
+            <div>
+              <h3>Sap, tar and bug etch</h3>
+              <dl>
+                <div><dt>What you see</dt><dd>Sticky drops under trees and black flecks along the rockers after highway trips.</dd></div>
+                <div><dt>How we fix it</dt><dd>Steam softens them, a clay bar lifts them, and a light polish removes the etch they leave behind.</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Detail by goal (tabs) ===== -->
+    <section class="section section--alt" id="goals" aria-labelledby="goals-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Detail by goal</p>
+          <h2 id="goals-title">Tell us what the car needs to be ready for</h2>
+          <p class="lead">Most people don&rsquo;t need everything. Pick the goal closest to yours to see what we&rsquo;d recommend and how long the car stays with us.</p>
+        </div>
+
+        <div class="tablist" role="tablist" aria-label="Detailing goals">
+          <button class="tab" type="button" role="tab" id="tab-sell" aria-selected="true" aria-controls="panel-sell">Selling soon</button>
+          <button class="tab" type="button" role="tab" id="tab-new" aria-selected="false" aria-controls="panel-new" tabindex="-1">New car</button>
+          <button class="tab" type="button" role="tab" id="tab-family" aria-selected="false" aria-controls="panel-family" tabindex="-1">Family car reset</button>
+          <button class="tab" type="button" role="tab" id="tab-weekend" aria-selected="false" aria-controls="panel-weekend" tabindex="-1">Weekend car</button>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-sell" aria-labelledby="tab-sell" tabindex="0">
+          <div class="tabpanel-grid">
+            <img class="rounded-img" src="assets/images/home2-goal-selling.webp" alt="Detailer hand-drying a black coupe with a microfiber towel outside a brick workshop" width="900" height="1125" loading="lazy">
+            <div>
+              <h3>Full Detail + headlight restoration</h3>
+              <p>Buyers judge a used car in the first 30 seconds. Cloudy headlights, stained seats and dull paint all knock money off the offer &mdash; this combination resets all three in a single day.</p>
+              <dl class="goal-facts">
+                <div><dt>In the studio</dt><dd>1 day</dd></div>
+                <div><dt>From</dt><dd>$384</dd></div>
+                <div><dt>Book it</dt><dd>Before listing photos</dd></div>
+              </dl>
+              <ul class="check-list">
+                <li>Interior vacuumed, steamed and conditioned</li>
+                <li>Clay bar and hand-applied sealant on paint</li>
+                <li>Headlights wet-sanded, polished and UV-coated</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-new" aria-labelledby="tab-new" tabindex="0" hidden>
+          <div class="tabpanel-grid">
+            <img class="rounded-img" src="assets/images/home2-goal-new-car.webp" alt="Brand-new white sports sedan parked in the bright detail studio, seen from the rear" width="900" height="1125" loading="lazy">
+            <div>
+              <h3>3-year ceramic coating</h3>
+              <p>New cars still arrive with transport film residue, rail dust and dealer-wash swirls. We decontaminate, polish out the delivery marks, then coat the paint while it&rsquo;s at its best.</p>
+              <dl class="goal-facts">
+                <div><dt>In the studio</dt><dd>2 days</dd></div>
+                <div><dt>From</dt><dd>$890</dd></div>
+                <div><dt>Book it</dt><dd>In the first 3 months</dd></div>
+              </dl>
+              <ul class="check-list">
+                <li>Full decon including iron and tar removal</li>
+                <li>1-step polish to remove dealer-wash marring</li>
+                <li>Coating on paint, glass and wheel faces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-family" aria-labelledby="tab-family" tabindex="0" hidden>
+          <div class="tabpanel-grid">
+            <img class="rounded-img" src="assets/images/home2-goal-family.webp" alt="Clean black leather front seats and steering wheel of a car interior after a detail" width="900" height="1350" loading="lazy">
+            <div>
+              <h3>Interior Reset + pet hair + seat shampoo</h3>
+              <p>Crumbs in the rails, fur in the carpet and that juice-box smell. We pull the car apart as far as it safely goes, then put it back cleaner than the delivery day.</p>
+              <dl class="goal-facts">
+                <div><dt>In the studio</dt><dd>4&ndash;5 hours</dd></div>
+                <div><dt>From</dt><dd>$254</dd></div>
+                <div><dt>Book it</dt><dd>After a road trip</dd></div>
+              </dl>
+              <ul class="check-list">
+                <li>Child seats removed and cleaned underneath</li>
+                <li>Hot-water extraction on two stained seats</li>
+                <li>Embedded fur lifted with rubber blades</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-weekend" aria-labelledby="tab-weekend" tabindex="0" hidden>
+          <div class="tabpanel-grid">
+            <img class="rounded-img" src="assets/images/home2-goal-weekend.webp" alt="Red sports sedan with a deep, glossy finish parked in a white studio" width="900" height="1200" loading="lazy">
+            <div>
+              <h3>2-step correction + 5-year ceramic</h3>
+              <p>For the car you notice every swirl on. We compound and refine until reflections look like glass, then lock it in with our longest-lasting coating.</p>
+              <dl class="goal-facts">
+                <div><dt>In the studio</dt><dd>3 days</dd></div>
+                <div><dt>From</dt><dd>$1,390</dd></div>
+                <div><dt>Book it</dt><dd>Before winter storage</dd></div>
+              </dl>
+              <ul class="check-list">
+                <li>Compound and finishing polish on every panel</li>
+                <li>5-year coating cured under infrared lamps</li>
+                <li>Free 12-month inspection and top-up</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Protection compared ===== -->
+    <section class="section" id="protection" aria-labelledby="protect-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Protection compared</p>
+          <h2 id="protect-title">Wax, sealant or ceramic?</h2>
+          <p class="lead">All three make water bead. The difference is how long they last, what they stand up to, and how much prep they need first.</p>
+        </div>
+        <div class="compare-wrap reveal">
+          <table class="compare-table stack-table">
+            <caption class="visually-hidden">Comparison of carnauba wax, spray sealant and ceramic coating</caption>
+            <thead>
+              <tr>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">Carnauba wax</th>
+                <th scope="col">SiO&#8322; spray sealant</th>
+                <th scope="col">Ceramic coating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Lasts</th>
+                <td data-label="Carnauba wax">4&ndash;6 weeks</td>
+                <td data-label="Spray sealant">6&ndash;8 weeks</td>
+                <td data-label="Ceramic coating">3 or 5 years</td>
+              </tr>
+              <tr>
+                <th scope="row">Water behavior</th>
+                <td data-label="Carnauba wax">Soft, wide beads</td>
+                <td data-label="Spray sealant">Tight beads that roll off</td>
+                <td data-label="Ceramic coating">Tall, round beads; sheets off at highway speed</td>
+              </tr>
+              <tr>
+                <th scope="row">Stands up to</th>
+                <td data-label="Carnauba wax">Light UV fading</td>
+                <td data-label="Spray sealant">UV and road film</td>
+                <td data-label="Ceramic coating">UV, bird-dropping etch, road salt and chemical stains</td>
+              </tr>
+              <tr>
+                <th scope="row">Prep needed</th>
+                <td data-label="Carnauba wax">A clean wash</td>
+                <td data-label="Spray sealant">Wash and iron decon</td>
+                <td data-label="Ceramic coating">Full decon and at least a 1-step polish</td>
+              </tr>
+              <tr>
+                <th scope="row">At Beadwell</th>
+                <td data-label="Carnauba wax">Hand wax add-on, $49</td>
+                <td data-label="Spray sealant">Included in Bead Shield, $69</td>
+                <td data-label="Ceramic coating">From $890 (3-year) or $1,390 (5-year)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Studio reviews ===== -->
+    <section class="section section--alt" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Studio reviews</p>
+            <h2 id="reviews-title">What studio customers say at pickup</h2>
+          </div>
+          <p class="rating-summary"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.95 / 5 from 380 studio jobs</p>
+        </div>
+        <div class="review-grid">
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote><p>&ldquo;Two years of brush tunnels had wrecked my black paint. Malik showed me the swirls under the LED panel, then removed most of them in a day. It honestly looks better than delivery day.&rdquo;</p></blockquote>
+            <figcaption><span class="initials" aria-hidden="true">AK</span><span><strong>Aisha K.</strong><span>2021 Tesla Model 3 &middot; 1-step + 3-year ceramic</span></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote><p>&ldquo;Two kids, a golden retriever and a smoothie lost under the third row. They got all of it &mdash; even the smell. Picked it up at 4 PM exactly like they promised.&rdquo;</p></blockquote>
+            <figcaption><span class="initials" aria-hidden="true">BM</span><span><strong>Ben &amp; Carla M.</strong><span>2019 Honda Odyssey &middot; Interior Reset + ozone</span></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <blockquote><p>&ldquo;Booked the Full Detail and headlight restore before listing my 4Runner. It sold in five days for $1,100 over the first offer I&rsquo;d been given.&rdquo;</p></blockquote>
+            <figcaption><span class="initials" aria-hidden="true">DW</span><span><strong>Darnell W.</strong><span>2016 Toyota 4Runner &middot; Full Detail + headlights</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Closing CTA: reserve a studio day ===== -->
+    <section class="section" aria-labelledby="reserve-title">
+      <div class="container">
+        <div class="reserve reveal">
+          <div class="reserve-copy">
+            <p class="eyebrow">Reserve a studio day</p>
+            <h2 id="reserve-title">Get a written quote before you commit</h2>
+            <p class="lead">Studio work is priced on your car&rsquo;s real condition, so we look first and quote second.</p>
+            <ol class="reserve-steps">
+              <li><span><strong>Send four photos</strong> &mdash; front, side, interior and the worst spot &mdash; with the quote form.</span></li>
+              <li><span><strong>Get a fixed price</strong> within 4 business hours, including how long we&rsquo;ll keep the car.</span></li>
+              <li><span><strong>Hold your date</strong> with a deposit that comes off your final bill.</span></li>
+            </ol>
+          </div>
+          <div class="reserve-action">
+            <span class="deposit">$50</span>
+            <p>holds a studio day &middot; refundable up to 48 hours before</p>
+            <a class="btn btn--block" href="pages/contact.html?topic=detail">Get a Detail Quote</a>
+            <a href="tel:+13035550172">Or call the studio: <span dir="ltr">(303) 555-0172</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Beadwell Wash &amp; Detail, go to Home 1">
+          <img src="assets/images/logo-mark.png" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Beadwell</span>
+            <span class="brand-sub">Wash &amp; Detail</span>
+          </span>
+        </a>
+        <p>Hand-wash bays and a paint-correction studio on Foundry Street, Denver &mdash; pH-neutral soap, spot-free rinse, never a spinning brush.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-home">
+        <h2 id="f-home">Home</h2>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/pricing.html">Pricing</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-account">
+        <h2 id="f-account">Account</h2>
+        <ul>
+          <li><a href="pages/signin.html">Sign In</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+          <li><a href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Beadwell Wash &amp; Detail. Prices in USD, tax included.</p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

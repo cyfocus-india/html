@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Member portal to book class slots, monitor class pack usage, manage membership renewals, and track your practice volume.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-app">
+    <!-- Collapsible Sidebar Navigation -->
+    <aside class="dash-sidebar" aria-label="Member Navigation">
+      <div class="dash-sidebar-header">
+        <a href="../index.html" class="brand-logo" aria-label="Aura Yoga Home 1">
+          <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="34" height="34">
+          <span class="brand-text">
+            <span class="brand-name" style="font-size: 1.15rem;">Aura Yoga</span>
+            <span class="brand-sub">Member Portal</span>
+          </span>
+        </a>
+        <button type="button" class="dash-sidebar-close-btn" aria-label="Close navigation sidebar">&times;</button>
+      </div>
+
+      <nav class="dash-sidebar-nav" aria-label="Dashboard Views">
+        <div class="dash-nav-section-title">Dashboard Views</div>
+        <button type="button" class="dash-nav-btn active" data-target-view="view-overview">
+          <span class="dash-nav-icon">&#9638;</span>
+          <span>Overview</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-target-view="view-book">
+          <span class="dash-nav-icon">&#9788;</span>
+          <span>Book a Class</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-target-view="view-schedule">
+          <span class="dash-nav-icon">&#9776;</span>
+          <span>My Schedule</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-target-view="view-membership">
+          <span class="dash-nav-icon">&#9752;</span>
+          <span>Membership &amp; Packs</span>
+        </button>
+
+        <button type="button" class="dash-nav-btn" data-target-view="view-profile">
+          <span class="dash-nav-icon">&#9881;</span>
+          <span>Profile &amp; Settings</span>
+        </button>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <div class="dash-user-badge">
+          <div class="dash-user-avatar user-initial">E</div>
+          <div class="dash-user-details">
+            <h4 class="user-display-name">Dr. Elena Rostova</h4>
+            <span>Studio Unlimited</span>
+          </div>
+        </div>
+
+        <div class="dash-sidebar-toggles">
+          <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Toggle theme">&#9790; Dark</button>
+          <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Toggle direction">&#8644; RTL</button>
+        </div>
+
+        <button type="button" id="dash-logout-btn" class="btn btn-secondary btn-sm btn-block" style="margin-top: 0.5rem; color: var(--danger); border-color: rgba(179,57,57,0.3);">
+          &#8618; Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div class="dash-sidebar-backdrop"></div>
+
+    <!-- Main Workspace -->
+    <div class="dash-main">
+      <!-- Topbar Controls (Theme, RTL, Notifications, Mobile Hamburger) -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-hamburger" aria-label="Toggle Navigation Drawer">&#9776;</button>
+          <span class="dash-welcome-text">
+            Welcome, <span class="user-display-name">Elena</span>
+          </span>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- Notification Bell -->
+          <div class="notif-wrapper">
+            <button type="button" id="notif-bell-btn" class="icon-btn" aria-label="View notifications">
+              &#128276;
+              <span id="notif-badge" class="notif-badge" style="display: none;">0</span>
+            </button>
+
+            <!-- Notifications Dropdown -->
+            <div id="notif-dropdown" class="notif-dropdown" role="region" aria-label="Notifications">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-subtle);">
+                <strong>Notifications</strong>
+                <button type="button" id="mark-notifs-read-btn" style="font-size: 0.78rem; color: var(--primary); text-decoration: underline; background: none; border: none; cursor: pointer;">Mark all as read</button>
+              </div>
+              <div id="notif-items-list"></div>
+            </div>
+          </div>
+
+          <!-- Theme & RTL Toggles -->
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
+          <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+        </div>
+      </header>
+
+      <!-- Dashboard Workspace Views -->
+      <main class="dash-content">
+
+        <!-- ================================================================
+             VIEW 1: OVERVIEW
+             ================================================================ -->
+        <section id="view-overview" class="dash-view active">
+          <!-- Summary Metric KPI Cards -->
+          <div class="kpi-grid">
+            <!-- 1. Membership Status Card -->
+            <div class="kpi-card">
+              <div class="kpi-card-header">
+                <span class="kpi-label">Active Membership</span>
+                <span class="kpi-icon-pill">&#9752;</span>
+              </div>
+              <div id="kpi-membership-tier" class="kpi-value" style="font-size: 1.45rem;">Aura Studio Unlimited</div>
+              <div id="kpi-renewal-date" class="kpi-subtext">Renews Nov 1, 2026</div>
+            </div>
+
+            <!-- 2. Class Pack Usage Meter Card -->
+            <div class="kpi-card">
+              <div class="kpi-card-header">
+                <span class="kpi-label">Class Pack Tracker</span>
+                <span class="kpi-icon-pill">&#9673;</span>
+              </div>
+              <div id="kpi-pack-count" class="kpi-value">3 of 10</div>
+              <div id="kpi-pack-subtext" class="kpi-subtext">7 used &bull; Exp: Jan 15, 2027</div>
+              <div class="pack-progress-bar">
+                <div id="kpi-pack-fill" class="pack-progress-fill" style="width: 70%;"></div>
+              </div>
+            </div>
+
+            <!-- 3. Upcoming Bookings Card -->
+            <div class="kpi-card">
+              <div class="kpi-card-header">
+                <span class="kpi-label">Upcoming Sessions</span>
+                <span class="kpi-icon-pill">&#128197;</span>
+              </div>
+              <div id="kpi-bookings-count" class="kpi-value">2 Reserved</div>
+              <div class="kpi-subtext">Next: Tomorrow at 9:00 AM</div>
+            </div>
+
+            <!-- 4. Practice Streak Card -->
+            <div class="kpi-card">
+              <div class="kpi-card-header">
+                <span class="kpi-label">Practice Streak</span>
+                <span class="kpi-icon-pill">&#9733;</span>
+              </div>
+              <div id="kpi-streak-count" class="kpi-value">14 Days</div>
+              <div class="kpi-subtext">4 sessions attended this week</div>
+            </div>
+          </div>
+
+          <!-- HTML5 Canvas Chart: Weekly Practice Volume (ZERO SVG) -->
+          <div class="chart-container-card">
+            <div class="chart-header">
+              <div>
+                <h3 style="margin-bottom: 0.2rem; font-size: 1.25rem;">Weekly Practice Volume</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Sessions completed across recent 6 weeks</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" data-target-view="view-book">+ Book Session</button>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="practice-canvas-chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Upcoming Booked Sessions Quick View -->
+          <div style="margin-bottom: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-size: 1.25rem;">Your Upcoming Sessions</h3>
+              <a href="#" style="font-size: 0.88rem; color: var(--primary); font-weight: 500;" data-target-view="view-schedule">Manage All &rarr;</a>
+            </div>
+            <div id="upcoming-bookings-list"></div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 2: BOOK A CLASS
+             ================================================================ -->
+        <section id="view-book" class="dash-view">
+          <div style="margin-bottom: 2rem;">
+            <h2>Book a Class Slot</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+              Reserve your mat slot in real time. All slots include clean Manduka PRO mats and botanical amenities.
+            </p>
+
+            <!-- Search & Filters -->
+            <div class="dash-filter-bar">
+              <div class="dash-filter-item search-item">
+                <label for="slot-search-input" class="form-label" style="font-size: 0.82rem;">Search by Class or Instructor</label>
+                <input type="text" id="slot-search-input" class="form-control" placeholder="e.g. Vinyasa, Maya Chen, Sound Bath...">
+              </div>
+
+              <div class="dash-filter-item">
+                <label for="slot-style-filter" class="form-label" style="font-size: 0.82rem;">Filter by Style</label>
+                <select id="slot-style-filter" class="form-control">
+                  <option value="all">All Styles</option>
+                  <option value="vinyasa">Vinyasa Flow</option>
+                  <option value="yin">Yin &amp; Sound</option>
+                  <option value="hatha">Hatha Alignment</option>
+                  <option value="ashtanga">Ashtanga</option>
+                  <option value="pranayama">Pranayama</option>
+                  <option value="restorative">Restorative</option>
+                </select>
+              </div>
+
+              <div class="dash-filter-item">
+                <label for="slot-day-filter" class="form-label" style="font-size: 0.82rem;">Filter by Day</label>
+                <select id="slot-day-filter" class="form-control">
+                  <option value="all">All Days</option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                  <option value="Sunday">Sunday</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Filtered Slot List -->
+          <div id="available-slots-list"></div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 3: MY SCHEDULE
+             ================================================================ -->
+        <section id="view-schedule" class="dash-view">
+          <div style="margin-bottom: 2rem;">
+            <h2>My Reserved Schedule &amp; History</h2>
+            <p style="color: var(--text-muted);">
+              Manage your confirmed upcoming classes, export calendar invitations, or review completed practice milestones.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 3rem;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Confirmed Upcoming Reservations</h3>
+            <div id="my-schedule-bookings-list"></div>
+          </div>
+
+          <!-- Past Attendance Milestones History -->
+          <div class="card dash-card-padded">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem;">Past Practice Milestones (Last 30 Days)</h3>
+            <div class="dash-history-list">
+              <div class="dash-history-item">
+                <div class="dash-history-info">
+                  <div class="dash-history-title"><strong>Solar Prana Vinyasa</strong> with Maya Chen</div>
+                  <div class="dash-history-meta"><span class="nowrap">Studio&nbsp;A</span> &bull; <span class="nowrap">Saturday, Oct 11</span> &bull; <span class="nowrap">09:00&nbsp;AM</span></div>
+                </div>
+                <span class="badge-pill dash-history-badge">&#10003; Attended</span>
+              </div>
+
+              <div class="dash-history-item">
+                <div class="dash-history-info">
+                  <div class="dash-history-title"><strong>Deep Yin &amp; Alchemy Sound</strong> with Priya Sharma</div>
+                  <div class="dash-history-meta"><span class="nowrap">Sanctuary Loft</span> &bull; <span class="nowrap">Wednesday, Oct 8</span> &bull; <span class="nowrap">07:00&nbsp;PM</span></div>
+                </div>
+                <span class="badge-pill dash-history-badge">&#10003; Attended</span>
+              </div>
+
+              <div class="dash-history-item">
+                <div class="dash-history-info">
+                  <div class="dash-history-title"><strong>Classical Hatha Alignment</strong> with Amara Okafor</div>
+                  <div class="dash-history-meta"><span class="nowrap">Studio&nbsp;B</span> &bull; <span class="nowrap">Monday, Oct 6</span> &bull; <span class="nowrap">10:00&nbsp;AM</span></div>
+                </div>
+                <span class="badge-pill dash-history-badge">&#10003; Attended</span>
+              </div>
+
+              <div class="dash-history-item">
+                <div class="dash-history-info">
+                  <div class="dash-history-title"><strong>Dawn Ashtanga Mysore</strong> with Julian Vance</div>
+                  <div class="dash-history-meta"><span class="nowrap">Studio&nbsp;A</span> &bull; <span class="nowrap">Friday, Oct 3</span> &bull; <span class="nowrap">06:30&nbsp;AM</span></div>
+                </div>
+                <span class="badge-pill dash-history-badge">&#10003; Attended</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 4: MEMBERSHIP & BILLING
+             ================================================================ -->
+        <section id="view-membership" class="dash-view">
+          <div style="margin-bottom: 2rem;">
+            <h2>Membership &amp; Class Pack Management</h2>
+            <p style="color: var(--text-muted);">
+              Manage your subscription renewal, freeze terms during travel, and replenish class pack credits.
+            </p>
+          </div>
+
+          <div class="dash-membership-grid" style="margin-bottom: 2.5rem;">
+            <!-- Current Plan Details Card -->
+            <div class="card dash-card-padded">
+              <span class="badge-pill" style="color: var(--primary); background: var(--primary-light); margin-bottom: 0.5rem; display: inline-block;">Current Plan</span>
+              <h3 style="margin-bottom: 0.5rem;">Aura Studio Unlimited</h3>
+              <div style="font-size: 1.8rem; font-family: var(--font-serif); font-weight: 600; color: var(--text-primary); margin-bottom: 1rem;">$165 <span style="font-size: 0.9rem; font-family: var(--font-sans); color: var(--text-muted);">/ month</span></div>
+
+              <div class="dash-plan-meta-list">
+                <div class="dash-plan-meta-row">
+                  <span class="meta-label" style="color: var(--text-muted);">Billing Status:</span>
+                  <strong class="meta-val" style="color: var(--success);">&#10003; Active</strong>
+                </div>
+                <div class="dash-plan-meta-row">
+                  <span class="meta-label" style="color: var(--text-muted);">Next Payment Date:</span>
+                  <strong class="meta-val">Nov 1, 2026</strong>
+                </div>
+                <div class="dash-plan-meta-row">
+                  <span class="meta-label" style="color: var(--text-muted);">Payment Method:</span>
+                  <span class="meta-val">Visa ending in 4289</span>
+                </div>
+                <div class="dash-plan-meta-row">
+                  <span class="meta-label" style="color: var(--text-muted);">Mat Storage Cubby:</span>
+                  <span class="meta-val">#14 (Studio Hall A)</span>
+                </div>
+              </div>
+
+              <!-- Auto-Renewal Toggle -->
+              <div class="dash-autorenew-box">
+                <div>
+                  <strong>Monthly Auto-Renewal</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Renews on the 1st of each month</div>
+                </div>
+                <input type="checkbox" id="membership-autorenew-toggle" checked style="width: 20px; height: 20px; accent-color: var(--primary); cursor: pointer; flex-shrink: 0;">
+              </div>
+
+              <div class="dash-plan-actions">
+                <button type="button" id="open-freeze-modal-btn" class="btn btn-secondary btn-sm" style="flex: 1;">Freeze Membership</button>
+                <button type="button" id="unfreeze-membership-btn" class="btn btn-secondary btn-sm" style="flex: 1;">Unfreeze Now</button>
+              </div>
+            </div>
+
+            <!-- Reload Backup Class Packs -->
+            <div class="card dash-card-padded">
+              <span class="badge-pill" style="color: var(--accent); background: var(--accent-light); margin-bottom: 0.5rem; display: inline-block;">Class Pack Balance</span>
+              <h3 style="margin-bottom: 0.5rem;">Reload Backup Credits</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Keep prepaid credits for guest friends or family members visiting the studio with you.
+              </p>
+
+              <div class="dash-reload-pack-list">
+                <div class="dash-reload-pack-item">
+                  <div class="dash-reload-pack-info">
+                    <strong>+5 Class Pass Reload</strong>
+                    <div class="dash-reload-pack-meta">$24 / class &bull; Never expires</div>
+                  </div>
+                  <button type="button" class="btn btn-secondary btn-sm buy-pack-btn" data-pack-credits="5">$120</button>
+                </div>
+
+                <div class="dash-reload-pack-item featured">
+                  <div class="dash-reload-pack-info">
+                    <strong style="color: var(--primary);">+10 Class Pass Reload</strong>
+                    <div class="dash-reload-pack-meta" style="color: var(--primary);">$21.50 / class &bull; Most popular</div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-sm buy-pack-btn" data-pack-credits="10">$215</button>
+                </div>
+
+                <div class="dash-reload-pack-item">
+                  <div class="dash-reload-pack-info">
+                    <strong>+20 Class Pass Reload</strong>
+                    <div class="dash-reload-pack-meta">$19 / class &bull; Best value</div>
+                  </div>
+                  <button type="button" class="btn btn-secondary btn-sm buy-pack-btn" data-pack-credits="20">$380</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing History Invoices -->
+          <div class="card dash-card-padded">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem;">Billing History &amp; Invoices</h3>
+            <div class="comparison-table-wrapper">
+              <table class="comparison-table dash-invoices-table" style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 1, 2026</td>
+                    <td>Aura Studio Unlimited (Monthly)</td>
+                    <td>$165.00</td>
+                    <td><span class="badge-pill" style="color: var(--success); background: rgba(58,125,92,0.12);">&#10003; Paid</span></td>
+                    <td><button type="button" style="color: var(--primary); background: none; border: none; cursor: pointer; text-decoration: underline;" onclick="alert('Downloading PDF Receipt #INV-2026-1001')">Download</button></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 1, 2026</td>
+                    <td>Aura Studio Unlimited (Monthly)</td>
+                    <td>$165.00</td>
+                    <td><span class="badge-pill" style="color: var(--success); background: rgba(58,125,92,0.12);">&#10003; Paid</span></td>
+                    <td><button type="button" style="color: var(--primary); background: none; border: none; cursor: pointer; text-decoration: underline;" onclick="alert('Downloading PDF Receipt #INV-2026-0901')">Download</button></td>
+                  </tr>
+                  <tr>
+                    <td>Aug 14, 2026</td>
+                    <td>10-Class Guest Backup Pack</td>
+                    <td>$215.00</td>
+                    <td><span class="badge-pill" style="color: var(--success); background: rgba(58,125,92,0.12);">&#10003; Paid</span></td>
+                    <td><button type="button" style="color: var(--primary); background: none; border: none; cursor: pointer; text-decoration: underline;" onclick="alert('Downloading PDF Receipt #INV-2026-0814')">Download</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             VIEW 5: PROFILE & SETTINGS
+             ================================================================ -->
+        <section id="view-profile" class="dash-view">
+          <div style="margin-bottom: 2rem;">
+            <h2>Member Profile &amp; Studio Preferences</h2>
+            <p style="color: var(--text-muted);">
+              Keep your contact details, emergency contacts, and anatomical injury notes updated so instructors can provide mindful guidance.
+            </p>
+          </div>
+
+          <div class="card dash-card-padded" style="max-width: 720px;">
+            <form id="profile-settings-form">
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label for="profile-name" class="form-label">Full Name</label>
+                  <input type="text" id="profile-name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-email" class="form-label">Email Address</label>
+                  <input type="email" id="profile-email" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label for="profile-phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="profile-phone" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-emergency" class="form-label">Emergency Contact Name &amp; Phone</label>
+                  <input type="text" id="profile-emergency" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="profile-injuries" class="form-label">Anatomical Notes &amp; Physical Accommodations (Visible to Teachers)</label>
+                <textarea id="profile-injuries" class="form-control" rows="3" placeholder="List any joint concerns, pregnancies, or movement restrictions..."></textarea>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem;">
+                  Our instructors check this note prior to class to quietly offer tailored prop setups.
+                </div>
+              </div>
+
+              <div style="margin-block: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+                <h4 style="margin-bottom: 0.75rem; font-size: 1rem;">Notification Preferences</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; cursor: pointer;">
+                    <input type="checkbox" id="profile-reminders" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+                    Send class reminder email and SMS 2 hours before start time
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; cursor: pointer;">
+                    <input type="checkbox" id="profile-waitlist" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+                    Instant SMS alert when a waitlisted class mat becomes open
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Freeze Membership Modal Dialog -->
+  <div id="freeze-modal" class="dash-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="freeze-modal-title">
+    <div class="dash-modal-box">
+      <h3 id="freeze-modal-title" style="margin-bottom: 0.5rem;">Freeze Membership</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Traveling or recovering? You can pause your monthly autopay in 7-day increments up to 45 cumulative days per year.
+      </p>
+
+      <div class="form-group">
+        <label for="freeze-duration-select" class="form-label">Select Freeze Duration</label>
+        <select id="freeze-duration-select" class="form-control">
+          <option value="1">1 Week (7 Days)</option>
+          <option value="2" selected>2 Weeks (14 Days)</option>
+          <option value="3">3 Weeks (21 Days)</option>
+          <option value="4">4 Weeks (28 Days)</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; margin-top: 2rem;">
+        <button type="button" id="confirm-freeze-btn" class="btn btn-primary" style="flex: 1;">Confirm Freeze</button>
+        <button type="button" id="close-freeze-modal-btn" class="btn btn-secondary" style="flex: 1;">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Wanderkite Holidays</title>
+  <meta name="description" content="Wanderkite Holidays plans handcrafted holiday packages across India and 30+ countries — top destinations, live deals and 24x7 on-trip support.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Wanderkite Holidays — Home 1">
+        <img src="assets/images/logo.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-menu">
+              Home <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="index.html" aria-current="page">Home 1</a></li>
+              <li><a href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pages/domestic.html">Domestic</a></li>
+          <li><a class="nav-link" href="pages/international.html">International</a></li>
+          <li><a class="nav-link" href="pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        <a class="btn btn--sm" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===== 1. HERO: full-bleed photo + trip finder ===== -->
+    <section class="hero-full" aria-labelledby="hero-title">
+      <img class="hero-bg" src="assets/images/hero-home1.jpg" alt="Snow-capped mountain peaks rising above a sea of clouds at sunrise" width="1920" height="1280" fetchpriority="high">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">Bengaluru-based holiday planners since 2011</p>
+        <h1 id="hero-title">Go further than the brochure.</h1>
+        <p class="lead">Handcrafted holiday packages across India and 30+ countries — flights, stays, transfers and a local expert on call, all in one booking.</p>
+        <ul class="trust-row">
+          <li><span aria-hidden="true">★</span> 4.8 / 5 from 6,200+ Google reviews</li>
+          <li><span aria-hidden="true">🛡</span> IATA-accredited, fully insured trips</li>
+          <li><span aria-hidden="true">⌖</span> 30+ countries &amp; 22 Indian states</li>
+        </ul>
+
+        <form class="trip-finder" id="trip-finder" aria-label="Find a holiday package">
+          <div class="field">
+            <label for="tf-type">I'm planning</label>
+            <select class="select" id="tf-type" name="type">
+              <option value="domestic">A trip within India</option>
+              <option value="international">An international holiday</option>
+              <option value="honeymoon">A honeymoon</option>
+              <option value="family">A family holiday</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tf-month">Travel month</label>
+            <select class="select" id="tf-month" name="month">
+              <option value="">Flexible</option>
+              <option>January</option><option>February</option><option>March</option>
+              <option>April</option><option>May</option><option>June</option>
+              <option>July</option><option>August</option><option>September</option>
+              <option>October</option><option>November</option><option>December</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tf-pax">Travellers</label>
+            <select class="select" id="tf-pax" name="pax">
+              <option value="1">1 traveller</option>
+              <option value="2" selected>2 travellers</option>
+              <option value="3">3 travellers</option>
+              <option value="4">4 travellers</option>
+              <option value="6">5–6 travellers</option>
+              <option value="8">7+ travellers</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Show Packages <span class="flip" aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 2. TOP DESTINATIONS: mosaic ===== -->
+    <section class="section" aria-labelledby="dest-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Top destinations</p>
+            <h2 id="dest-title">Where our travellers are heading this season</h2>
+            <p>The six places our planners booked most in the last 90 days. Prices are per person on twin sharing, including stays, transfers and sightseeing.</p>
+          </div>
+          <a class="link-arrow" href="pages/international.html">See all international trips <span class="flip" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="dest-mosaic">
+          <a class="dest-tile" href="pages/domestic.html#pkg-kerala">
+            <img src="assets/images/dest-kerala.jpg" alt="Traditional houseboat gliding along a palm-lined backwater canal in Kerala" width="900" height="506" loading="lazy">
+            <span class="dest-label">India</span>
+            <div class="dest-info">
+              <div><h3>Kerala Backwaters</h3><p>Houseboat nights, tea hills, spice gardens</p></div>
+              <span class="dest-price">from ₹18,900</span>
+            </div>
+          </a>
+          <a class="dest-tile" href="pages/international.html#pkg-bali">
+            <img src="assets/images/dest-bali.jpg" alt="Pura Ulun Danu Bratan temple pagoda reflected in a calm lake in Bali" width="900" height="1194" loading="lazy">
+            <span class="dest-label">Indonesia</span>
+            <div class="dest-info">
+              <div><h3>Bali</h3><p>Ubud rice terraces &amp; Seminyak sunsets · flights included</p></div>
+              <span class="dest-price">from ₹54,900</span>
+            </div>
+          </a>
+          <a class="dest-tile" href="pages/international.html#pkg-maldives">
+            <img src="assets/images/dest-maldives.jpg" alt="Aerial view of overwater villas curving over a turquoise Maldives lagoon" width="900" height="1125" loading="lazy">
+            <span class="dest-label">Maldives</span>
+            <div class="dest-info">
+              <div><h3>Maldives</h3><p>Water villas &amp; seaplane transfers</p></div>
+              <span class="dest-price">from ₹89,000</span>
+            </div>
+          </a>
+          <a class="dest-tile" href="pages/domestic.html#pkg-golden-triangle">
+            <img src="assets/images/dest-jaipur.jpg" alt="Decorated horses passing the pink sandstone Hawa Mahal in Jaipur" width="900" height="600" loading="lazy">
+            <span class="dest-label">India</span>
+            <div class="dest-info">
+              <div><h3>Jaipur &amp; Rajasthan</h3><p>Forts, palaces and desert camps</p></div>
+              <span class="dest-price">from ₹22,500</span>
+            </div>
+          </a>
+          <a class="dest-tile" href="pages/domestic.html#pkg-himachal">
+            <img src="assets/images/dest-himachal.jpg" alt="Visitors on a snowy slope below Himalayan peaks near Manali" width="900" height="675" loading="lazy">
+            <span class="dest-label">India</span>
+            <div class="dest-info">
+              <div><h3>Manali &amp; Himachal</h3><p>Snow points, cafés and river camps</p></div>
+              <span class="dest-price">from ₹15,900</span>
+            </div>
+          </a>
+          <a class="dest-tile" href="pages/international.html#pkg-dubai">
+            <img src="assets/images/dest-dubai.jpg" alt="Dubai skyline with the Burj Khalifa glowing at sunset" width="900" height="600" loading="lazy">
+            <span class="dest-label">UAE</span>
+            <div class="dest-info">
+              <div><h3>Dubai</h3><p>Desert safari, Marina cruise, Burj views</p></div>
+              <span class="dest-price">from ₹46,500</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. LIMITED-TIME DEALS with live countdown ===== -->
+    <section class="section section--alt" aria-labelledby="deals-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Limited-time deals</p>
+          <h2 id="deals-title">Fixed-departure deals with real savings</h2>
+          <p>We block group seats and rooms in advance, then pass the saving on. When the timer runs out or seats sell out, the price goes back to normal.</p>
+        </div>
+
+        <div class="deal-grid">
+          <article class="deal-card">
+            <div class="deal-media">
+              <img src="assets/images/deal-krabi.jpg" alt="Colourful longtail boats moored on a white-sand beach below limestone cliffs in Krabi" width="800" height="600" loading="lazy">
+              <span class="deal-off">15% off</span>
+            </div>
+            <div class="deal-body">
+              <h3>Krabi Island Hopper · 5N/6D</h3>
+              <p class="deal-perk"><b>Free:</b> Phi Phi &amp; Maya Bay speedboat tour (worth ₹4,800)</p>
+              <div class="deal-prices"><s>₹42,900</s><strong>₹36,400</strong><span>per person, flights from Chennai &amp; Bengaluru</span></div>
+              <div class="countdown" data-countdown="4" aria-live="off"></div>
+              <div class="seats">9 of 24 seats left<div class="seat-bar"><span style="width:62%"></span></div></div>
+              <a class="btn btn--sm" href="pages/contact.html?package=Krabi%20Island%20Hopper%20deal#enquiry">Grab This Deal</a>
+            </div>
+          </article>
+
+          <article class="deal-card">
+            <div class="deal-media">
+              <img src="assets/images/deal-vietnam.jpg" alt="Walkway held by giant stone hands on the Golden Bridge in the Ba Na Hills, Vietnam" width="800" height="600" loading="lazy">
+              <span class="deal-off">₹6,600 off</span>
+            </div>
+            <div class="deal-body">
+              <h3>Da Nang &amp; Hoi An · 5N/6D</h3>
+              <p class="deal-perk"><b>Free:</b> Ba Na Hills cable car and lantern boat ride in Hoi An</p>
+              <div class="deal-prices"><s>₹61,500</s><strong>₹54,900</strong><span>per person, flights from Delhi &amp; Mumbai</span></div>
+              <div class="countdown" data-countdown="9" aria-live="off"></div>
+              <div class="seats">14 of 30 seats left<div class="seat-bar"><span style="width:53%"></span></div></div>
+              <a class="btn btn--sm" href="pages/contact.html?package=Da%20Nang%20and%20Hoi%20An%20deal#enquiry">Grab This Deal</a>
+            </div>
+          </article>
+
+          <article class="deal-card">
+            <div class="deal-media">
+              <img src="assets/images/deal-andaman-dive.jpg" alt="Scuba diver swimming beside a dense school of yellow fish over a reef" width="800" height="600" loading="lazy">
+              <span class="deal-off">Free dive</span>
+            </div>
+            <div class="deal-body">
+              <h3>Havelock Dive Week · 5N/6D</h3>
+              <p class="deal-perk"><b>Free:</b> PADI-guided intro dive at Havelock (worth ₹4,500)</p>
+              <div class="deal-prices"><s>₹32,800</s><strong>₹27,900</strong><span>per person, land only from Port Blair</span></div>
+              <div class="countdown" data-countdown="6" aria-live="off"></div>
+              <div class="seats">5 of 16 seats left<div class="seat-bar"><span style="width:69%"></span></div></div>
+              <a class="btn btn--sm" href="pages/contact.html?package=Havelock%20Dive%20Week%20deal#enquiry">Grab This Deal</a>
+            </div>
+          </article>
+
+          <article class="deal-card">
+            <div class="deal-media">
+              <img src="assets/images/deal-singapore.jpg" alt="Aerial view of Marina Bay Sands and the ArtScience Museum in Singapore" width="800" height="600" loading="lazy">
+              <span class="deal-off">Kids free</span>
+            </div>
+            <div class="deal-body">
+              <h3>Singapore with Sentosa · 4N/5D</h3>
+              <p class="deal-perk"><b>Free:</b> stay and breakfast for one child under 12 sharing parents' room</p>
+              <div class="deal-prices"><s>₹58,200</s><strong>₹51,200</strong><span>per adult, flights from 6 Indian cities</span></div>
+              <div class="countdown" data-countdown="12" aria-live="off"></div>
+              <div class="seats">11 of 20 rooms left<div class="seat-bar"><span style="width:45%"></span></div></div>
+              <a class="btn btn--sm" href="pages/contact.html?package=Singapore%20with%20Sentosa%20deal#enquiry">Grab This Deal</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. WHY WANDERKITE + proof ===== -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split">
+          <div class="why-media">
+            <img src="assets/images/why-planning.jpg" alt="Travel planning flat lay with a paper map, notebook, camera lens and backpack" width="1000" height="790" loading="lazy">
+            <div class="why-stat"><b>2 hrs</b> average reply time from your personal planner</div>
+          </div>
+          <div>
+            <p class="eyebrow">Why Wanderkite</p>
+            <h2 id="why-title">A real planner, honest prices and help at 2 a.m.</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="ico-tile" aria-hidden="true">🧭</span>
+                <div><h3>One planner from enquiry to homecoming</h3><p>The same person designs your trip, books it and answers your WhatsApp while you travel — no ticket queues.</p></div>
+              </li>
+              <li>
+                <span class="ico-tile" aria-hidden="true">⚖</span>
+                <div><h3>Price-match promise</h3><p>Found the same hotels and inclusions cheaper with a registered Indian agency? Send us the quote and we match it.</p></div>
+              </li>
+              <li>
+                <span class="ico-tile" aria-hidden="true">🛟</span>
+                <div><h3>24×7 on-trip rescue desk</h3><p>Missed ferry, closed pass or lost bag — our Bengaluru desk rebooks and reroutes, day or night.</p></div>
+              </li>
+            </ul>
+
+            <!-- Traveller quotes (rotating) -->
+            <div class="quote-box" data-quotes aria-roledescription="carousel" aria-label="Traveller reviews">
+              <div class="quote-slide">
+                <blockquote>“When the Chang La road closed, Ritika rebuilt our Ladakh plan overnight. We still watched sunrise at Pangong.”</blockquote>
+                <div class="who"><span class="avatar" aria-hidden="true">AN</span><span><b>Arjun &amp; Meera Nair, Kochi</b><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> · Ladakh, July 2026</span></div>
+              </div>
+              <div class="quote-slide" hidden>
+                <blockquote>“First trip abroad with my parents. Visas, a wheelchair at Changi and Jain meals were sorted before I even asked.”</blockquote>
+                <div class="who"><span class="avatar" aria-hidden="true">SK</span><span><b>Sneha Kulkarni, Pune</b><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> · Singapore &amp; Bali, April 2026</span></div>
+              </div>
+              <div class="quote-slide" hidden>
+                <blockquote>“They matched another agency's Maldives quote and still got us moved to a water villa on night three.”</blockquote>
+                <div class="who"><span class="avatar" aria-hidden="true">FA</span><span><b>Faizan Ahmed, Hyderabad</b><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> · Maldives, February 2026</span></div>
+              </div>
+              <div class="quote-controls">
+                <button class="icon-btn" type="button" data-quote-prev aria-label="Previous review"><span class="flip" aria-hidden="true">←</span></button>
+                <button class="icon-btn" type="button" data-quote-next aria-label="Next review"><span class="flip" aria-hidden="true">→</span></button>
+                <div class="dots" data-quote-dots></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat"><b>14 yrs</b><span>planning holidays from Bengaluru</span></div>
+          <div class="stat"><b>48,000+</b><span>travellers since 2011</span></div>
+          <div class="stat"><b>1,900+</b><span>partner hotels inspected in person</span></div>
+          <div class="stat"><b>96%</b><span>of travellers book with us again</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CTA ===== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow--light">Ready when you are</p>
+          <h2 id="cta-title">Seen something you like? We'll hold today's price for 48 hours.</h2>
+          <p>Enquire about any destination or deal on this page and your planner locks the quoted rate while you decide.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="pages/contact.html#enquiry">Plan My Trip</a>
+          <a class="link-arrow link-arrow--light" href="tel:+918047182290">or call +91 80 4718 2290</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Wanderkite Holidays — Home 1">
+            <img src="assets/images/logo.png" alt="" width="42" height="42">
+            <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+          </a>
+          <p>Handcrafted holiday packages across India and 30+ countries, planned by real people in Bengaluru since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Packages</h3>
+          <ul>
+            <li><a href="pages/domestic.html">Domestic</a></li>
+            <li><a href="pages/international.html">International</a></li>
+            <li><a href="pages/honeymoon-family.html">Honeymoon &amp; Family</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year">2026</span> Wanderkite Holidays Pvt. Ltd. · IATA-accredited travel agent · All prices in Indian Rupees (₹)</p>
+        <button class="to-top" type="button" data-scroll-top>Back to top <span aria-hidden="true">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

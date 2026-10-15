@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Copper Pot Cooking Studio</title>
+  <meta name="description" content="Hands-on cooking classes in Portland’s Pearl District. Small groups of 12, your own station, and chef-led classes in eight cuisines.">
+  <meta name="theme-color" content="#A84A22">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <!-- Fonts: Fraunces (headings) + DM Sans (body); system fallbacks keep pages usable offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme + direction before first paint (prevents a flash) */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('cp-theme'), r = localStorage.getItem('cp-dir');
+        if (t) d.setAttribute('data-theme', t);
+        if (r) d.setAttribute('dir', r);
+      } catch (e) {}
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site header (sticky) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+        <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle is-active" type="button" aria-expanded="false" aria-controls="home-submenu">Home <span class="caret" aria-hidden="true"></span></button>
+            <ul class="dropdown" id="home-submenu">
+              <li><a class="dropdown-link is-active" href="index.html" aria-current="page">Home 1</a></li>
+              <li><a class="dropdown-link" href="index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pages/classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/workshops.html">Weekend Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Shown inside the mobile panel only -->
+        <div class="nav-panel-actions">
+          <a class="btn btn--block" href="pages/signin.html">Sign In</a>
+        </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <a class="btn header-cta" href="pages/signin.html">Sign In</a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Hero (split layout) ===== -->
+    <section class="hero-split" aria-labelledby="hero-title">
+      <div class="container split">
+        <div class="hero-copy">
+          <span class="eyebrow">Hands-on cooking classes · Pearl District, Portland</span>
+          <h1 id="hero-title">Learn to cook by <em>actually</em> cooking.</h1>
+          <p class="lead">Small groups and a chef who walks the room. You chop, sear, fold and plate every dish yourself, then we sit down at the long table and eat what you made.</p>
+          <div class="hero-actions">
+            <a class="btn btn--lg" href="pages/classes.html#catalog">Book a Seat</a>
+            <a class="link-arrow" href="#chefs">Meet the chefs <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>12</strong><span>students max per class</span></li>
+            <li><strong><bdi>3 hrs</bdi></strong><span>of hands-on cooking</span></li>
+            <li><strong>4</strong><span>resident chefs, plus guests</span></li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/hero-home1-kneading-dough.jpg" alt="Student kneading a ball of fresh pasta dough on a floured wooden counter" width="1000" height="1180">
+          <div class="stamp" aria-hidden="true"><span>Since<strong>2016</strong>on Glisan St</span></div>
+          <div class="float-card">
+            <span class="label">Next class · Thu, Oct 15</span>
+            <h3>Roman Pasta Classics</h3>
+            <p>6:30 PM with Chef Elena · 3 of 12 seats left</p>
+            <div class="seat-dots" role="img" aria-label="9 seats booked, 3 seats free">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="free"></i><i class="free"></i><i class="free"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Cook by cuisine ===== -->
+    <section class="section section--alt" aria-labelledby="cuisine-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <span class="eyebrow">Browse by cuisine</span>
+            <h2 id="cuisine-title">Eight kitchens under one roof</h2>
+            <p class="lead">Each cuisine is taught by a chef who grew up cooking it or spent years in its restaurants. Pick one to jump straight to its classes.</p>
+          </div>
+          <a class="link-arrow" href="pages/classes.html#catalog">All 14 classes <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <ul class="cuisine-grid reveal">
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=italian#catalog"><span class="cuisine-name">Italian</span><span class="cuisine-meta">3 classes · from $85</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=japanese#catalog"><span class="cuisine-name">Japanese</span><span class="cuisine-meta">2 classes · from $95</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=indian#catalog"><span class="cuisine-name">Indian</span><span class="cuisine-meta">2 classes · from $89</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=thai#catalog"><span class="cuisine-name">Thai</span><span class="cuisine-meta">2 classes · from $109</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=mexican#catalog"><span class="cuisine-name">Mexican</span><span class="cuisine-meta">1 class · $85</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=french#catalog"><span class="cuisine-name">French</span><span class="cuisine-meta">2 classes · from $139</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=spanish#catalog"><span class="cuisine-name">Spanish</span><span class="cuisine-meta">1 class · $119</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+          <li><a class="cuisine-tile" href="pages/classes.html?cuisine=fundamentals#catalog"><span class="cuisine-name">Fundamentals</span><span class="cuisine-meta">1 class · $75</span><span class="arrow flip-rtl" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 3. Class highlights ===== -->
+    <section class="section" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <span class="eyebrow">Class highlights</span>
+            <h2 id="highlights-title">Booking fast this month</h2>
+            <p class="lead">Three classes students keep coming back for. Each one leaves you with a dish you'll happily cook again on a Tuesday night.</p>
+          </div>
+        </div>
+        <div class="grid grid-3">
+          <article class="class-card reveal">
+            <div class="class-card-media">
+              <img src="assets/images/class-roman-pasta.jpg" alt="Spaghetti carbonara topped with crispy guanciale and grated pecorino" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Italian</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Roman Pasta Classics</h3>
+              <p class="menu">You'll cook cacio e pepe, carbonara with guanciale and amatriciana, all from one pot of starchy pasta water.</p>
+              <ul class="class-meta">
+                <li><b>Thu, Oct 15</b> 6:30 PM</li>
+                <li>3 hrs</li>
+                <li>Chef Elena</li>
+              </ul>
+              <div class="class-card-foot">
+                <span class="price">$89 <small>/ seat</small></span>
+                <span class="seats-left low">3 seats left</span>
+              </div>
+            </div>
+          </article>
+          <article class="class-card reveal">
+            <div class="class-card-media">
+              <img src="assets/images/class-sushi-rolling.jpg" alt="Salmon and avocado sushi rolls arranged on a dark serving board" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Japanese</span><span class="chip">Beginner</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Sushi Rolling Basics</h3>
+              <p class="menu">You'll season sushi rice, roll salmon-avocado uramaki and cucumber hosomaki, and whisk up a quick miso soup.</p>
+              <ul class="class-meta">
+                <li><b>Sat, Oct 17</b> 11:00 AM</li>
+                <li>3 hrs</li>
+                <li>Chef Kenji</li>
+              </ul>
+              <div class="class-card-foot">
+                <span class="price">$95 <small>/ seat</small></span>
+                <span class="seats-left">5 seats left</span>
+              </div>
+            </div>
+          </article>
+          <article class="class-card reveal">
+            <div class="class-card-media">
+              <img src="assets/images/class-thai-street-wok.jpg" alt="Shrimp pad thai with bean sprouts and lime on a white plate" width="800" height="560" loading="lazy">
+              <div class="chip-row"><span class="chip">Thai</span><span class="chip">Intermediate</span></div>
+            </div>
+            <div class="class-card-body">
+              <h3>Thai Street Wok</h3>
+              <p class="menu">You'll cook pad thai with real tamarind, smoky pad see ew, and a green papaya salad pounded in a granite mortar.</p>
+              <ul class="class-meta">
+                <li><b>Wed, Oct 21</b> 6:30 PM</li>
+                <li>3 hrs</li>
+                <li>Chef Somchai</li>
+              </ul>
+              <div class="class-card-foot">
+                <span class="price">$109 <small>/ seat</small></span>
+                <span class="seats-left">7 seats left</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="text-center mt-6"><a class="link-arrow" href="pages/classes.html#catalog">See every date and class <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ===== 4. Chef profiles ===== -->
+    <section class="section section--alt" id="chefs" aria-labelledby="chefs-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Chef profiles</span>
+          <h2 id="chefs-title">The chefs at your elbow</h2>
+          <p class="lead">Our teaching chefs have run restaurant kitchens, bakeries and food carts. Now they spend their evenings showing home cooks the techniques that actually make a difference.</p>
+        </div>
+        <div class="chef-grid">
+          <article class="chef-card reveal">
+            <div class="chef-photo">
+              <img src="assets/images/chef-elena-russo.jpg" alt="Portrait of Chef Elena Russo smiling, hair pinned up" width="600" height="720" loading="lazy">
+              <span class="chef-years">18 years cooking</span>
+            </div>
+            <h3>Elena Russo</h3>
+            <p class="chef-role">Founder &amp; Head Chef · Italian, French pastry</p>
+            <p>Learned to roll sfoglia in her grandmother's kitchen in Bologna, then ran pastry for two busy Portland trattorias before opening Copper Pot in 2016.</p>
+            <p class="chef-signature"><span>Signature:</span> brown-butter sage ravioli</p>
+          </article>
+          <article class="chef-card reveal">
+            <div class="chef-photo">
+              <img src="assets/images/chef-kenji-mori.jpg" alt="Portrait of Chef Kenji Mori in a white chef's jacket and grey apron, arms crossed" width="600" height="720" loading="lazy">
+              <span class="chef-years">15 years cooking</span>
+            </div>
+            <h3>Kenji Mori</h3>
+            <p class="chef-role">Japanese cuisine · Knife skills</p>
+            <p>Trained in Osaka kaiseki kitchens and spent six years as head sushi chef in Seattle. His seven-minute knife-sharpening demo is a student favourite.</p>
+            <p class="chef-signature"><span>Signature:</span> chicken paitan ramen</p>
+          </article>
+          <article class="chef-card reveal">
+            <div class="chef-photo">
+              <img src="assets/images/chef-luis-ortega.jpg" alt="Portrait of Chef Luis Ortega wearing a cap, plaid shirt and canvas apron" width="600" height="720" loading="lazy">
+              <span class="chef-years">12 years cooking</span>
+            </div>
+            <h3>Luis Ortega</h3>
+            <p class="chef-role">Mexican · Live fire · Bread</p>
+            <p>Started with a taco cart on SE Division, now teaches masa, salsas and naturally leavened bread. If there's music playing in the studio, it's his playlist.</p>
+            <p class="chef-signature"><span>Signature:</span> birria tacos with consommé</p>
+          </article>
+          <article class="chef-card reveal">
+            <div class="chef-photo">
+              <img src="assets/images/chef-somchai-rattanakorn.jpg" alt="Portrait of Chef Somchai Rattanakorn in a black chef's jacket and white toque" width="600" height="720" loading="lazy">
+              <span class="chef-years">20 years cooking</span>
+            </div>
+            <h3>Somchai Rattanakorn</h3>
+            <p class="chef-role">Thai · Southeast Asian</p>
+            <p>Cooked in Bangkok hotel kitchens for a decade and still pounds every curry paste by hand. He teaches you to taste, balance and rescue a dish without a recipe.</p>
+            <p class="chef-signature"><span>Signature:</span> khao soi with crispy noodles</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. How a class night works ===== -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container timeline-wrap">
+        <figure class="timeline-media reveal">
+          <img src="assets/images/home1-class-stirring-pan.jpg" alt="Student stirring a vegetable fried rice in a skillet with a wooden spatula" width="900" height="1000" loading="lazy">
+          <figcaption>Mid-class at Thai Street Wok: fried rice going into a smoking-hot pan.</figcaption>
+        </figure>
+        <div>
+          <div class="section-head reveal">
+            <span class="eyebrow">How a class night works</span>
+            <h2 id="how-title">Three hours, from apron to supper</h2>
+            <p class="lead">Never taken a cooking class? Here's exactly what happens on an evening class at Copper Pot.</p>
+          </div>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="badge-icon" aria-hidden="true">1</span>
+              <div><time>6:15 PM</time><h3>Doors open, aprons on</h3><p>Pick up a drink at the bar, find your name card and meet the person sharing your bench.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="badge-icon" aria-hidden="true">2</span>
+              <div><time>6:30 PM</time><h3>The chef's demo</h3><p>A 20-minute walkthrough of the night's techniques, with a camera over the stove so everyone can see into the pan.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="badge-icon" aria-hidden="true">3</span>
+              <div><time>6:50 PM</time><h3>Cook at your station</h3><p>Work through the recipes at your bench. The chef circulates, tastes your sauce and adjusts your knife grip as you go.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="badge-icon" aria-hidden="true">4</span>
+              <div><time>8:45 PM</time><h3>Sit down at the long table</h3><p>Plates go to our 24-seat table and everyone eats what they cooked. Leftovers go home in compostable boxes.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="badge-icon" aria-hidden="true">5</span>
+              <div><time>Next morning</time><h3>Recipes land in your dashboard</h3><p>Every recipe card, plus the chef's notes from your class, unlocks in your student dashboard to keep.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Call to action ===== -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="eyebrow">Ready when you are</span>
+            <h2 id="cta-title">Your station is waiting</h2>
+            <p>Most classes fill about nine days ahead. Reserve a seat now, or create a free student account to track your bookings and recipes in one place.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--lg" href="pages/classes.html#catalog">Book a Seat</a>
+            <a class="link-arrow" href="pages/signup.html">Create an account <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Site footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Copper Pot Cooking Studio, go to Home 1">
+          <img class="brand-mark" src="assets/images/logo-mark.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
+        </a>
+        <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
+          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
+        </ul>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul>
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="pages/classes.html">Classes</a></li>
+            <li><a href="pages/workshops.html">Weekend Workshops</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Studio</h2>
+          <ul>
+            <li><a href="index.html#chefs">Chefs</a></li>
+            <li><a href="index1.html#pricing">Pricing</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Account</h2>
+          <ul>
+            <li><a href="pages/signin.html">Sign In</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

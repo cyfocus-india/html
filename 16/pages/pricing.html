@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Strand &amp; Steel</title>
+  <meta name="description" content="Strand &amp; Steel pricing menu: flat-rate barbering, salon services by stylist level, packages, memberships and take-home products.">
+  <meta name="theme-color" content="#1D3B34">
+  <!-- Favicon: PNG of the logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo-mark.png">
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/600 (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&amp;family=DM+Serif+Display&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Loaded in <head> so the saved theme/direction apply before first paint -->
+  <script src="../assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+        <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Strand &amp; Steel</span>
+          <span class="brand-tag">Salon · Barbershop</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (shown at 1024px and below): three CSS lines that animate into an X -->
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <p class="nav-panel-head" aria-hidden="true">Menu</p>
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="menu-home">
+              <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
+              <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/pricing.html" aria-current="page">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm nav-cta" href="../pages/contact.html#booking">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Page hero ===== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container split">
+        <div data-reveal>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home 1</a></li>
+              <li><span aria-current="page">Pricing</span></li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Pricing menu</p>
+          <h1 id="page-title">Pricing</h1>
+          <p class="lead">Barber services are flat-rate. Salon services are priced by stylist level, so you can choose the experience and budget that suit you. Every price includes the consultation, shampoo and finish.</p>
+          <dl class="levels">
+            <div><dt>Stylist</dt><dd>Kai</dd></div>
+            <div><dt>Senior</dt><dd>Elena, Amara</dd></div>
+            <div><dt>Director</dt><dd>Hannah</dd></div>
+          </dl>
+        </div>
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/pricing-hero-shears-razor.jpg" alt="Cutting shears, thinning shears and a wooden-handled straight razor laid out on a live-edge wooden counter" width="1400" height="763">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Price menu with tabs ===== -->
+    <section class="section" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Price menu</p>
+          <h2 id="menu-title">Clear prices, no surprises at checkout</h2>
+          <p class="lead">Times are typical appointment lengths. Color prices are starting prices for shoulder-length hair.</p>
+        </div>
+
+        <div data-tabs data-reveal>
+          <div class="tabs" role="tablist" aria-label="Price categories" hidden>
+            <button class="tab" type="button" role="tab" id="tab-cuts" aria-controls="panel-cuts" aria-selected="true">Haircuts</button>
+            <button class="tab" type="button" role="tab" id="tab-barber" aria-controls="panel-barber" aria-selected="false" tabindex="-1">Barbering</button>
+            <button class="tab" type="button" role="tab" id="tab-color" aria-controls="panel-color" aria-selected="false" tabindex="-1">Color</button>
+            <button class="tab" type="button" role="tab" id="tab-styling" aria-controls="panel-styling" aria-selected="false" tabindex="-1">Styling</button>
+            <button class="tab" type="button" role="tab" id="tab-addons" aria-controls="panel-addons" aria-selected="false" tabindex="-1">Add-ons</button>
+          </div>
+
+          <!-- Haircuts (salon, by level) -->
+          <div class="price-panel" role="tabpanel" id="panel-cuts" aria-labelledby="tab-cuts" tabindex="0">
+            <h3 class="price-panel-title">Haircuts</h3>
+            <table class="price-table">
+              <caption>Salon side · priced by stylist level</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">Time</th><th scope="col" class="num">Stylist</th><th scope="col" class="num">Senior</th><th scope="col" class="num">Director</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Women's cut &amp; style<span>Long or medium length</span></th><td class="time" data-label="Time"><bdi>60 min</bdi></td><td class="num" data-label="Stylist"><bdi>$72</bdi></td><td class="num" data-label="Senior"><bdi>$88</bdi></td><td class="num" data-label="Director"><bdi>$110</bdi></td></tr>
+                <tr><th scope="row">Short cut &amp; style<span>Pixies, bobs and crops</span></th><td class="time" data-label="Time"><bdi>45 min</bdi></td><td class="num" data-label="Stylist"><bdi>$62</bdi></td><td class="num" data-label="Senior"><bdi>$76</bdi></td><td class="num" data-label="Director"><bdi>$95</bdi></td></tr>
+                <tr><th scope="row">Curly dry cut<span>Includes curl styling</span></th><td class="time" data-label="Time"><bdi>75 min</bdi></td><td class="num" data-label="Stylist"><bdi>$85</bdi></td><td class="num" data-label="Senior"><bdi>$102</bdi></td><td class="num" data-label="Director"><bdi>$125</bdi></td></tr>
+                <tr><th scope="row">Men's scissor cut<span>Salon side, longer styles</span></th><td class="time" data-label="Time"><bdi>45 min</bdi></td><td class="num" data-label="Stylist"><bdi>$55</bdi></td><td class="num" data-label="Senior"><bdi>$65</bdi></td><td class="num" data-label="Director"><bdi>$80</bdi></td></tr>
+                <tr><th scope="row">Bang or neckline trim<span>Between full cuts</span></th><td class="time" data-label="Time"><bdi>15 min</bdi></td><td class="num" data-label="Stylist"><bdi>$15</bdi></td><td class="num" data-label="Senior"><bdi>$15</bdi></td><td class="num" data-label="Director"><bdi>$20</bdi></td></tr>
+                <tr><th scope="row">Kids' cut<span><bdi>12 and under</bdi></span></th><td class="time" data-label="Time"><bdi>30 min</bdi></td><td class="num" data-label="Stylist"><bdi>$35</bdi></td><td class="num" data-label="Senior"><bdi>$35</bdi></td><td class="num" data-label="Director"><bdi>$40</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Barbering (flat rate) -->
+          <div class="price-panel" role="tabpanel" id="panel-barber" aria-labelledby="tab-barber" tabindex="0">
+            <h3 class="price-panel-title">Barbering</h3>
+            <table class="price-table">
+              <caption>Barber side · flat rate with any barber</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">Time</th><th scope="col" class="num">Price</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Classic cut<span>Clipper or scissor</span></th><td class="time" data-label="Time"><bdi>30 min</bdi></td><td class="num" data-label="Price"><bdi>$42</bdi></td></tr>
+                <tr><th scope="row">Skin fade<span>Includes a neck shave</span></th><td class="time" data-label="Time"><bdi>45 min</bdi></td><td class="num" data-label="Price"><bdi>$48</bdi></td></tr>
+                <tr><th scope="row">Cut &amp; beard combo<span>Any cut plus a beard trim</span></th><td class="time" data-label="Time"><bdi>60 min</bdi></td><td class="num" data-label="Price"><bdi>$68</bdi></td></tr>
+                <tr><th scope="row">Beard trim &amp; line-up</th><td class="time" data-label="Time"><bdi>20 min</bdi></td><td class="num" data-label="Price"><bdi>$28</bdi></td></tr>
+                <tr><th scope="row">Beard sculpt<span>With hot towel and oil</span></th><td class="time" data-label="Time"><bdi>30 min</bdi></td><td class="num" data-label="Price"><bdi>$38</bdi></td></tr>
+                <tr><th scope="row">Hot-towel straight-razor shave</th><td class="time" data-label="Time"><bdi>40 min</bdi></td><td class="num" data-label="Price"><bdi>$52</bdi></td></tr>
+                <tr><th scope="row">Head shave<span>With hot towel</span></th><td class="time" data-label="Time"><bdi>35 min</bdi></td><td class="num" data-label="Price"><bdi>$45</bdi></td></tr>
+                <tr><th scope="row">Hair design<span>Added to any cut</span></th><td class="time" data-label="Time"><bdi>15 min</bdi></td><td class="num" data-label="Price"><bdi>from $12</bdi></td></tr>
+                <tr><th scope="row">Gray blending</th><td class="time" data-label="Time"><bdi>30 min</bdi></td><td class="num" data-label="Price"><bdi>$40</bdi></td></tr>
+                <tr><th scope="row">Kids' cut<span><bdi>12 and under</bdi></span></th><td class="time" data-label="Time"><bdi>30 min</bdi></td><td class="num" data-label="Price"><bdi>$30</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Color (salon, by level) -->
+          <div class="price-panel" role="tabpanel" id="panel-color" aria-labelledby="tab-color" tabindex="0">
+            <h3 class="price-panel-title">Color</h3>
+            <table class="price-table">
+              <caption>Starting prices for shoulder-length hair · toner and blow-dry included</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">Time</th><th scope="col" class="num">Stylist</th><th scope="col" class="num">Senior</th><th scope="col" class="num">Director</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Root touch-up<span>Up to 1.5 inches of regrowth</span></th><td class="time" data-label="Time"><bdi>90 min</bdi></td><td class="num" data-label="Stylist"><bdi>$78</bdi></td><td class="num" data-label="Senior"><bdi>$90</bdi></td><td class="num" data-label="Director"><bdi>$110</bdi></td></tr>
+                <tr><th scope="row">All-over color<span>Single process</span></th><td class="time" data-label="Time"><bdi>2 hr</bdi></td><td class="num" data-label="Stylist"><bdi>$105</bdi></td><td class="num" data-label="Senior"><bdi>$120</bdi></td><td class="num" data-label="Director"><bdi>$145</bdi></td></tr>
+                <tr><th scope="row">Partial highlights</th><td class="time" data-label="Time"><bdi>2 hr</bdi></td><td class="num" data-label="Stylist"><bdi>$130</bdi></td><td class="num" data-label="Senior"><bdi>$150</bdi></td><td class="num" data-label="Director"><bdi>$180</bdi></td></tr>
+                <tr><th scope="row">Full highlights</th><td class="time" data-label="Time"><bdi>2.5 hr</bdi></td><td class="num" data-label="Stylist"><bdi>$165</bdi></td><td class="num" data-label="Senior"><bdi>$190</bdi></td><td class="num" data-label="Director"><bdi>$225</bdi></td></tr>
+                <tr><th scope="row">Balayage<span>Hand-painted, lived-in color</span></th><td class="time" data-label="Time"><bdi>3 hr</bdi></td><td class="num" data-label="Stylist"><bdi>$195</bdi></td><td class="num" data-label="Senior"><bdi>$225</bdi></td><td class="num" data-label="Director"><bdi>$270</bdi></td></tr>
+                <tr><th scope="row">Gloss &amp; toner</th><td class="time" data-label="Time"><bdi>45 min</bdi></td><td class="num" data-label="Stylist"><bdi>$55</bdi></td><td class="num" data-label="Senior"><bdi>$62</bdi></td><td class="num" data-label="Director"><bdi>$75</bdi></td></tr>
+                <tr><th scope="row">Color correction<span>Quoted after a consultation</span></th><td class="time" data-label="Time"><bdi>varies</bdi></td><td class="num" data-label="Stylist"><bdi>—</bdi></td><td class="num" data-label="Senior"><bdi>—</bdi></td><td class="num" data-label="Director"><bdi>$115/hr</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Styling -->
+          <div class="price-panel" role="tabpanel" id="panel-styling" aria-labelledby="tab-styling" tabindex="0">
+            <h3 class="price-panel-title">Styling</h3>
+            <table class="price-table">
+              <caption>Braiding prices include hair; length beyond mid-back is quoted on request</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">Time</th><th scope="col" class="num">Stylist</th><th scope="col" class="num">Senior</th><th scope="col" class="num">Director</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Blowout</th><td class="time" data-label="Time"><bdi>45 min</bdi></td><td class="num" data-label="Stylist"><bdi>$50</bdi></td><td class="num" data-label="Senior"><bdi>$58</bdi></td><td class="num" data-label="Director"><bdi>$70</bdi></td></tr>
+                <tr><th scope="row">Waves &amp; curls<span>Iron or wand set</span></th><td class="time" data-label="Time"><bdi>60 min</bdi></td><td class="num" data-label="Stylist"><bdi>$60</bdi></td><td class="num" data-label="Senior"><bdi>$70</bdi></td><td class="num" data-label="Director"><bdi>$85</bdi></td></tr>
+                <tr><th scope="row">Updo &amp; event style</th><td class="time" data-label="Time"><bdi>75 min</bdi></td><td class="num" data-label="Stylist"><bdi>$95</bdi></td><td class="num" data-label="Senior"><bdi>$110</bdi></td><td class="num" data-label="Director"><bdi>$135</bdi></td></tr>
+                <tr><th scope="row">Bridal trial</th><td class="time" data-label="Time"><bdi>90 min</bdi></td><td class="num" data-label="Stylist"><bdi>$115</bdi></td><td class="num" data-label="Senior"><bdi>$125</bdi></td><td class="num" data-label="Director"><bdi>$150</bdi></td></tr>
+                <tr><th scope="row">Silk press</th><td class="time" data-label="Time"><bdi>90 min</bdi></td><td class="num" data-label="Stylist"><bdi>$90</bdi></td><td class="num" data-label="Senior"><bdi>$105</bdi></td><td class="num" data-label="Director"><bdi>$125</bdi></td></tr>
+                <tr><th scope="row">Cornrows<span>Straight back</span></th><td class="time" data-label="Time"><bdi>90 min</bdi></td><td class="num" data-label="Stylist"><bdi>—</bdi></td><td class="num" data-label="Senior"><bdi>from $70</bdi></td><td class="num" data-label="Director"><bdi>—</bdi></td></tr>
+                <tr><th scope="row">Box braids<span>Mid-back length</span></th><td class="time" data-label="Time"><bdi>5–6 hr</bdi></td><td class="num" data-label="Stylist"><bdi>—</bdi></td><td class="num" data-label="Senior"><bdi>from $240</bdi></td><td class="num" data-label="Director"><bdi>—</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="price-panel" role="tabpanel" id="panel-addons" aria-labelledby="tab-addons" tabindex="0">
+            <h3 class="price-panel-title">Add-ons</h3>
+            <table class="price-table">
+              <caption>Added to any service, on either side of the shop</caption>
+              <thead>
+                <tr><th scope="col">Add-on</th><th scope="col">Time</th><th scope="col" class="num">Price</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Bond-repair treatment</th><td class="time" data-label="Time"><bdi>+15 min</bdi></td><td class="num" data-label="Price"><bdi>$35</bdi></td></tr>
+                <tr><th scope="row">Deep conditioning mask</th><td class="time" data-label="Time"><bdi>+15 min</bdi></td><td class="num" data-label="Price"><bdi>$25</bdi></td></tr>
+                <tr><th scope="row">Scalp detox</th><td class="time" data-label="Time"><bdi>+20 min</bdi></td><td class="num" data-label="Price"><bdi>$30</bdi></td></tr>
+                <tr><th scope="row">Clear gloss<span>With any haircut</span></th><td class="time" data-label="Time"><bdi>+20 min</bdi></td><td class="num" data-label="Price"><bdi>$40</bdi></td></tr>
+                <tr><th scope="row">Hot towel &amp; charcoal mask</th><td class="time" data-label="Time"><bdi>+15 min</bdi></td><td class="num" data-label="Price"><bdi>$18</bdi></td></tr>
+                <tr><th scope="row">Brow tidy</th><td class="time" data-label="Time"><bdi>+10 min</bdi></td><td class="num" data-label="Price"><bdi>$15</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Visit estimator =====
+         Prices and times are copied from the menu above (Stylist,Senior,Director
+         or a single flat rate; "-" = not offered) — update both together. -->
+    <section class="section section--pine" id="estimate" aria-labelledby="estimate-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Visit estimator</p>
+          <h2 id="estimate-title">Build your visit, see the total</h2>
+          <p class="lead">Choose a service, a stylist level and any add-ons for a quick estimate of the price and how much time to set aside.</p>
+        </div>
+
+        <form class="estimator" data-estimator data-reveal>
+          <div class="estimator-fields">
+            <div class="qb-field">
+              <label for="est-service">1. Service</label>
+              <select id="est-service" name="service">
+                <optgroup label="Haircuts · salon side">
+                  <option data-prices="72,88,110" data-time="60" data-book="Women's cut &amp; style" selected>Women's cut &amp; style</option>
+                  <option data-prices="62,76,95" data-time="45" data-book="Short cut &amp; style">Short cut &amp; style</option>
+                  <option data-prices="85,102,125" data-time="75" data-book="Curly dry cut">Curly dry cut</option>
+                  <option data-prices="55,65,80" data-time="45" data-book="Men's scissor cut">Men's scissor cut</option>
+                  <option data-prices="15,15,20" data-time="15">Bang or neckline trim</option>
+                  <option data-prices="35,35,40" data-time="30" data-book="Kids' cut (12 &amp; under)">Kids' cut (12 &amp; under)</option>
+                </optgroup>
+                <optgroup label="Barbering · flat rate">
+                  <option data-prices="42" data-time="30" data-book="Classic cut">Classic cut</option>
+                  <option data-prices="48" data-time="45" data-book="Skin fade">Skin fade</option>
+                  <option data-prices="68" data-time="60" data-book="Cut &amp; beard combo">Cut &amp; beard combo</option>
+                  <option data-prices="28" data-time="20">Beard trim &amp; line-up</option>
+                  <option data-prices="38" data-time="30" data-book="Beard sculpt">Beard sculpt</option>
+                  <option data-prices="52" data-time="40" data-book="Hot-towel shave">Hot-towel straight-razor shave</option>
+                  <option data-prices="45" data-time="35">Head shave</option>
+                  <option data-prices="40" data-time="30" data-book="Gray blending">Gray blending</option>
+                  <option data-prices="30" data-time="30" data-book="Kids' cut (12 &amp; under)">Kids' cut, barber side</option>
+                </optgroup>
+                <optgroup label="Color · salon side">
+                  <option data-prices="78,90,110" data-time="90" data-book="Root touch-up">Root touch-up</option>
+                  <option data-prices="105,120,145" data-time="120" data-book="All-over color">All-over color</option>
+                  <option data-prices="130,150,180" data-time="120" data-book="Highlights">Partial highlights</option>
+                  <option data-prices="165,190,225" data-time="150" data-book="Highlights">Full highlights</option>
+                  <option data-prices="195,225,270" data-time="180" data-book="Balayage">Balayage</option>
+                  <option data-prices="55,62,75" data-time="45" data-book="Gloss &amp; toner">Gloss &amp; toner</option>
+                </optgroup>
+                <optgroup label="Styling · salon side">
+                  <option data-prices="50,58,70" data-time="45" data-book="Blowout">Blowout</option>
+                  <option data-prices="60,70,85" data-time="60" data-book="Waves &amp; curls">Waves &amp; curls</option>
+                  <option data-prices="95,110,135" data-time="75" data-book="Updo &amp; event style">Updo &amp; event style</option>
+                  <option data-prices="115,125,150" data-time="90" data-book="Wedding or event enquiry">Bridal trial</option>
+                  <option data-prices="90,105,125" data-time="90" data-book="Silk press">Silk press</option>
+                  <option data-prices="-,70,-" data-time="90" data-from data-book="Braids" data-note="Braiding is done by our Senior stylists.">Cornrows</option>
+                  <option data-prices="-,240,-" data-time="330" data-from data-book="Braids" data-note="Braiding is done by our Senior stylists.">Box braids (mid-back)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <fieldset class="qb-field">
+              <legend>2. Stylist level</legend>
+              <div class="qb-options est-levels">
+                <label class="qb-option"><input type="radio" name="level" value="Stylist"><span>Stylist</span></label>
+                <label class="qb-option"><input type="radio" name="level" value="Senior" checked><span>Senior</span></label>
+                <label class="qb-option"><input type="radio" name="level" value="Director"><span>Director</span></label>
+              </div>
+              <p class="est-hint" data-est-hint hidden></p>
+            </fieldset>
+
+            <fieldset class="qb-field">
+              <legend>3. Add-ons <span>(optional)</span></legend>
+              <div class="est-addons">
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Bond-repair treatment" data-price="35" data-time="15"><span>Bond-repair treatment <b class="est-price">+$35</b></span></label>
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Deep conditioning mask" data-price="25" data-time="15"><span>Deep conditioning mask <b class="est-price">+$25</b></span></label>
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Scalp detox" data-price="30" data-time="20"><span>Scalp detox <b class="est-price">+$30</b></span></label>
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Clear gloss" data-price="40" data-time="20"><span>Clear gloss <b class="est-price">+$40</b></span></label>
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Hot towel &amp; charcoal mask" data-price="18" data-time="15"><span>Hot towel &amp; charcoal mask <b class="est-price">+$18</b></span></label>
+                <label class="qb-option qb-option--check"><input type="checkbox" name="addon" value="Brow tidy" data-price="15" data-time="10"><span>Brow tidy <b class="est-price">+$15</b></span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="estimate-card">
+            <p class="estimate-label">Your estimate</p>
+            <div>
+              <p class="estimate-total"><span class="estimate-from" data-est-from hidden>from</span><span data-est-total>$88</span></p>
+              <p class="estimate-time">About <strong data-est-time>1 hr</strong> in the chair</p>
+              <p class="visually-hidden" aria-live="polite" data-est-announce></p>
+            </div>
+            <ul class="estimate-lines" data-est-lines>
+              <li><span>Women's cut &amp; style · Senior</span><span>$88</span></li>
+            </ul>
+            <a class="btn btn--block" href="../pages/contact.html?service=Women's%20cut%20%26%20style#booking" data-est-book>Book this visit</a>
+            <p class="estimate-note">Before tip. Color on long or very dense hair can add $20–$45 — we always confirm before mixing.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 4. Packages & memberships ===== -->
+    <section class="section section--alt" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Packages &amp; memberships</p>
+          <h2 id="packages-title">Ways to save if you're a regular</h2>
+          <p class="lead">Built around how our clients actually visit — no points to track, no fine print.</p>
+        </div>
+
+        <div class="package-grid">
+          <article class="card package package--featured" data-reveal>
+            <span class="package-flag">Most popular</span>
+            <h3>Fade Club</h3>
+            <p class="package-price">$85<span>per month</span></p>
+            <ul class="check-list">
+              <li>Two fades or classic cuts every month</li>
+              <li>10% off take-home products</li>
+              <li>First pick of Saturday slots</li>
+            </ul>
+            <p class="package-note">Month to month after the first three months.</p>
+          </article>
+
+          <article class="card package" data-reveal>
+            <h3>Color Keeper</h3>
+            <p class="package-price">$175<span>per visit, Senior level</span></p>
+            <ul class="check-list">
+              <li>Root touch-up, gloss and blowout together</li>
+              <li>$35 less than booking them separately</li>
+              <li>Your next visit held every 5–7 weeks</li>
+            </ul>
+            <p class="package-note">Director level: $215 per visit.</p>
+          </article>
+
+          <article class="card package" data-reveal>
+            <h3>Wedding Party</h3>
+            <p class="package-price">$380<span>bride + 2 guests</span></p>
+            <ul class="check-list">
+              <li>Bridal trial and wedding-day style</li>
+              <li>Two party styles on the day</li>
+              <li>Extra guests $90; groom's crew $95 each</li>
+            </ul>
+            <p class="package-note">On-site styling adds a $75 travel fee.</p>
+          </article>
+
+          <article class="card package" data-reveal>
+            <h3>Parent + Kid</h3>
+            <p class="package-price">$65<span>two cuts, side by side</span></p>
+            <ul class="check-list">
+              <li>Classic cut for the grown-up</li>
+              <li>Kids' cut in the next chair</li>
+              <li>A lollipop, if the cape stays on</li>
+            </ul>
+            <p class="package-note">Barber side, Tuesday to Saturday.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Take-home care ===== -->
+    <section class="section" aria-labelledby="retail-title">
+      <div class="container retail">
+        <div class="media-frame" data-reveal>
+          <img src="../assets/images/pricing-retail-shelf.jpg" alt="Shelf of shampoo, conditioner and styling bottles beside a round mirror on the salon floor" width="1000" height="667" loading="lazy">
+        </div>
+        <div data-reveal>
+          <p class="eyebrow">Take-home care</p>
+          <h2 id="retail-title">The products we actually use, at shelf prices</h2>
+          <ul class="price-list">
+            <li><span class="pl-name">Matte clay pomade<span><bdi>3 oz · our house blend</bdi></span></span><span class="pl-price">$24</span></li>
+            <li><span class="pl-name">Sea-salt texture spray<span><bdi>8 oz</bdi></span></span><span class="pl-price">$26</span></li>
+            <li><span class="pl-name">Curl defining cream<span><bdi>8 oz</bdi></span></span><span class="pl-price">$28</span></li>
+            <li><span class="pl-name">Bond-repair shampoo + conditioner<span>Set of two, 10 oz each</span></span><span class="pl-price">$54</span></li>
+            <li><span class="pl-name">Purple toning mask<span><bdi>6 oz · keeps blondes cool</bdi></span></span><span class="pl-price">$32</span></li>
+            <li><span class="pl-name">Cedar &amp; orange beard oil<span><bdi>1 oz · our house blend</bdi></span></span><span class="pl-price">$20</span></li>
+            <li><span class="pl-name">Boar-bristle beard brush</span><span class="pl-price">$18</span></li>
+            <li><span class="pl-name">Wide-tooth detangling comb</span><span class="pl-price">$9</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Pricing questions + next step ===== -->
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Pricing questions</p>
+          <h2 id="faq-title">Good to know before you book</h2>
+        </div>
+        <div class="faq-layout">
+          <div class="faq" data-reveal>
+            <details>
+              <summary>Why do salon prices change by stylist level?</summary>
+              <div><p>Levels reflect experience and demand. Every level uses the same products and standards; Senior and Director stylists simply have more years behind the chair and longer waitlists.</p></div>
+            </details>
+            <details>
+              <summary>Is there an extra charge for long or thick hair?</summary>
+              <div><p>For color, hair past the shoulder blades or very dense hair may add $20–$45 for extra product and time. We always confirm it during the consultation, before anything is mixed.</p></div>
+            </details>
+            <details>
+              <summary>Is a tip included?</summary>
+              <div><p>No. Tipping is optional and always appreciated, and tips left on a card go 100% to your stylist or barber.</p></div>
+            </details>
+            <details>
+              <summary>How can I pay?</summary>
+              <div><p>All major credit and debit cards, contactless phone payments and cash. Gift cards and Fade Club credits are applied at checkout.</p></div>
+            </details>
+            <details>
+              <summary>Can I get an exact price before booking?</summary>
+              <div><p>Yes. Email two daylight photos of your hair (front and back) to the front desk and we'll reply with a written price that's honored for 30 days.</p></div>
+            </details>
+          </div>
+
+          <div class="card quote-card" data-reveal>
+            <span class="icon-disc" aria-hidden="true">$</span>
+            <h3 id="quote-title">Want your exact price?</h3>
+            <p>Send a quote request with what you have in mind and we'll reply with a written price before you commit to anything.</p>
+            <a class="btn btn--block" href="../pages/contact.html?service=consult#booking">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Site footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
+          <img class="brand-mark" src="../assets/images/logo-mark.png" alt="" width="48" height="48">
+          <span class="brand-text">
+            <span class="brand-name">Strand &amp; Steel</span>
+            <span class="brand-tag">Salon · Barbershop</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-heading">Home</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../pages/pricing.html">Pricing</a></li>
+            <li><a href="../pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p><bdi>© 2026 Strand &amp; Steel. All rights reserved.</bdi></p>
+      <p>Photography courtesy of Unsplash contributors.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

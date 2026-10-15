@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - HydroFix Plumbing</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="HydroFix Home">
+        <img src="../assets/images/logo.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-light">
+        <img src="../assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img logo-dark">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="desktop-nav">
+          <li class="nav-item dropdown">
+            <a href="../index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Home <span class="dropdown-icon">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="emergency.html" class="nav-link">Emergency</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Tools & CTA -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="tool-btn theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <span class="theme-symbol">☾</span>
+        </button>
+
+        <!-- Direction Toggle -->
+        <button type="button" class="tool-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle text direction">
+          <span class="dir-text">⇄ RTL</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="contact.html" class="btn-primary">Book Now</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop & Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-panel" aria-label="Mobile Navigation Drawer">
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+      <button type="button" class="tool-btn theme-toggle-btn" style="flex: 1;" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <span class="theme-symbol">☾</span>
+      </button>
+      <button type="button" class="tool-btn dir-toggle-btn" style="flex: 1;" aria-label="Toggle text direction" title="Toggle text direction">
+        <span class="dir-text">⇄ RTL</span>
+      </button>
+    </div>
+
+    <ul class="mobile-links">
+      <li>
+        <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+          Home <span>▼</span>
+        </button>
+        <ul class="mobile-accordion-menu">
+          <li><a href="../index.html">Home 1</a></li>
+          <li><a href="../index1.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="emergency.html">Emergency</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div style="border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+      <a href="contact.html" class="btn-primary mobile-drawer-cta">Book Now</a>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- SECTION 1: HERO -->
+    <section class="pricing-hero">
+      <div class="container pricing-hero-grid">
+        <div>
+          <span class="section-subtitle">Upfront &amp; Transparent</span>
+          <h1 class="section-title">Straightforward Plumbing Rates — Zero Guesswork</h1>
+          <p class="section-desc">
+            We charge by the project rather than running up open-ended hourly meters. Every service receives a written quote before work begins, and our $49 diagnostic fee is 100% waived upon approving the repair.
+          </p>
+          <div style="margin-top: 1.75rem; display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-primary">Book Now</a>
+            <span style="font-size: 0.9rem; font-weight: 700; color: #15803d;">✓ Written Fixed-Price Guarantee</span>
+          </div>
+        </div>
+
+        <div>
+          <img src="../assets/images/hero-pricing.jpg" alt="Master plumber analyzing architectural blueprints and cost schedule" style="border-radius: var(--radius-lg); box-shadow: var(--card-shadow-hover); width: 100%; height: 360px; object-fit: cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PER-SERVICE STANDARD PRICE SCHEDULE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Itemized Rates</span>
+          <h2 class="section-title">Standard Service Rate Schedule</h2>
+          <p class="section-desc">
+            Review our starting-from baseline pricing for our most frequently requested plumbing, drain, and sanitation jobs.
+          </p>
+        </div>
+
+        <div class="pricing-table-card">
+          <div class="pricing-row header">
+            <div>Service Description &amp; Scope</div>
+            <div>Labor &amp; Parts</div>
+            <div>Typical Duration</div>
+            <div>Starting Rate</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Tap Washer &amp; Ceramic Cartridge Replacement</strong>
+              <span>Disassembly of faucet, replacement of internal seals or ceramic disc, re-seating valve.</span>
+            </div>
+            <div>Parts &amp; Labor Inc.</div>
+            <div>45–60 Minutes</div>
+            <div class="price-tag">From $85</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Complete Designer Mixer Tap Installation (Labor)</strong>
+              <span>Removal of old fixture, mounting new mixer tap, connecting flexible braided PEX lines.</span>
+            </div>
+            <div>Labor &amp; Removal</div>
+            <div>60–90 Minutes</div>
+            <div class="price-tag">From $125</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Standard Drain Snaking &amp; Mechanical Clearing</strong>
+              <span>Clearing localized bathroom, shower, or kitchen sink blockages using motorized cable snake.</span>
+            </div>
+            <div>Standard Augering</div>
+            <div>45–75 Minutes</div>
+            <div class="price-tag">From $140</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Sectional Pipe Leak Repair (Copper or PEX)</strong>
+              <span>Pinpoint localization, cutting out ruptured section (up to 6ft), press-crimping new couplings.</span>
+            </div>
+            <div>Pipe &amp; Press Fittings</div>
+            <div>1.5–2.5 Hours</div>
+            <div class="price-tag">From $175</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Domestic Overhead / Sump Water Tank Sanitization</strong>
+              <span>Sludge evacuation, mechanical brush scrub, food-grade antibacterial fogging, pump testing.</span>
+            </div>
+            <div>Full 6-Step Disinfection</div>
+            <div>2–3 Hours</div>
+            <div class="price-tag">From $210</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>High-Pressure 4,000 PSI Hydro-Jetting (Main Sewer)</strong>
+              <span>Heavy-duty root and grease removal up to 75ft along main sewer lateral pipe.</span>
+            </div>
+            <div>Heavy Industrial Rig</div>
+            <div>2–3 Hours</div>
+            <div class="price-tag">From $320</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>Whole-Home Pressure Regulator Valve (PRV) Install</strong>
+              <span>Replacement of failed pressure reducing valve, calibration to safe 50-65 PSI, testing.</span>
+            </div>
+            <div>OEM PRV Valve Inc.</div>
+            <div>2 Hours</div>
+            <div class="price-tag">From $280</div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="price-item-name">
+              <strong>4K CCTV Optical Sewer Camera Inspection</strong>
+              <span>Full color pipe internal scan, digital footage recording on USB, locator depth mapping.</span>
+            </div>
+            <div>Digital Report &amp; USB</div>
+            <div>60 Minutes</div>
+            <div class="price-tag">From $165</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE COST ESTIMATOR WIDGET -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Real-Time Estimator</span>
+          <h2 class="section-title">Interactive Plumbing Cost Estimator</h2>
+          <p class="section-desc">
+            Configure your required plumbing task, response urgency, and property configuration to calculate an immediate instant rate estimate.
+          </p>
+        </div>
+
+        <div class="estimator-widget">
+          <div class="estimator-grid">
+            <div class="form-group">
+              <label for="est-service" class="form-label">Select Plumbing Service</label>
+              <select id="est-service" class="form-select">
+                <option value="tap_repair">Tap Replacement &amp; Cartridge Fix</option>
+                <option value="drain_clear" selected>Drain Snaking &amp; Unblocking</option>
+                <option value="pipe_repair">Sectional Pipe Leak Repair</option>
+                <option value="tank_clean">Water Storage Tank Sanitization</option>
+                <option value="hydro_jet">4,000 PSI Hydro-Jetting</option>
+                <option value="camera_inspect">4K CCTV Camera Inspection</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="est-urgency" class="form-label">Dispatch Urgency</label>
+              <select id="est-urgency" class="form-select">
+                <option value="standard" selected>Standard Scheduled Slot ($0 Surcharge)</option>
+                <option value="urgent">Same-Day Priority Window (+$45)</option>
+                <option value="emergency">Immediate Emergency 24/7 Dispatch (+$85)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="est-property" class="form-label">Property Classification</label>
+              <select id="est-property" class="form-select">
+                <option value="residential" selected>Single-Family Home / Condominium</option>
+                <option value="commercial">Commercial Restaurant / Retail Space</option>
+                <option value="industrial">Multi-Story Facility / Industrial Depot</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="estimator-result-card">
+            <div>
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Estimated Starting Cost</span>
+              <div id="est-total-display" class="estimator-calc-value">$140</div>
+              <p id="est-breakdown" style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                Drain Snaking &amp; Unblocking • Labor &amp; standard parts included • $0 diagnostic fee on completed repair
+              </p>
+            </div>
+
+            <a href="contact.html?service=drain_unblock" data-service="drain_unblock" id="est-book-btn" class="btn-primary">Book Now at This Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SERVICE PACKAGES & BUNDLES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Bundled Packages</span>
+          <h2 class="section-title">All-Inclusive Service Bundles</h2>
+          <p class="section-desc">
+            Combine multiple repairs and preventative maintenance tasks into a single flat-rate package to maximize savings.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card pricing-bundle-card" style="border-top: 4px solid var(--brand-blue);">
+            <span class="badge" style="margin-bottom: 0.75rem;">Preventative Bundle</span>
+            <h3 class="card-title">Whole-Home Plumbing Audit</h3>
+            <p class="card-desc">
+              Comprehensive 32-point inspection covering incoming water mains, water heater anode rod inspection, shutoff valve testing, and acoustic leak detection.
+            </p>
+            <div class="bundle-price">
+              $189 <span>/ flat package</span>
+            </div>
+            <ul class="bundle-list">
+              <li>✓ Water pressure regulator calibration</li>
+              <li>✓ Water heater sediment flush</li>
+              <li>✓ Written insurer-compliant safety report</li>
+            </ul>
+            <a href="contact.html?service=audit_inspection" data-service="audit_inspection" class="btn-secondary">Book Audit Package</a>
+          </div>
+
+          <div class="card pricing-bundle-card" style="border-top: 4px solid #ea580c; position: relative;">
+            <span class="badge badge-urgent" style="margin-bottom: 0.75rem;">Sanitation Value</span>
+            <h3 class="card-title">Dual Tank Deep Sanitization</h3>
+            <p class="card-desc">
+              Complete simultaneous decontamination of both overhead rooftop tank and underground concrete sump reservoir for residential or commercial properties.
+            </p>
+            <div class="bundle-price">
+              $360 <span>/ both tanks</span>
+            </div>
+            <ul class="bundle-list">
+              <li>✓ High-pressure sludge vacuuming</li>
+              <li>✓ Food-grade antibacterial fogging</li>
+              <li>✓ Float valve and booster pump testing</li>
+            </ul>
+            <a href="contact.html?service=tank_clean" data-service="tank_clean" class="btn-primary">Book Dual Tank Bundle</a>
+          </div>
+
+          <div class="card pricing-bundle-card" style="border-top: 4px solid var(--brand-blue);">
+            <span class="badge" style="margin-bottom: 0.75rem;">Landlord Turnover</span>
+            <h3 class="card-title">Rental Turnover Refresh</h3>
+            <p class="card-desc">
+              Designed for landlords between tenant leases. Replaces up to 3 faucet cartridges, resets toilet wax rings, clears main branch drains, and certifies plumbing.
+            </p>
+            <div class="bundle-price">
+              $420 <span>/ flat package</span>
+            </div>
+            <ul class="bundle-list">
+              <li>✓ Up to 3 mixer tap cartridges replaced</li>
+              <li>✓ Toilet fill valves and flappers rebuilt</li>
+              <li>✓ Chemical-free kitchen &amp; bath drain scour</li>
+            </ul>
+            <a href="contact.html?service=tap_replace" data-service="tap_replace" class="btn-secondary">Book Turnover Refresh</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: COST FACTORS (WHAT SHAPES YOUR FINAL QUOTE) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Quote Transparency</span>
+          <h2 class="section-title">Factors That Determine Your Final Quote</h2>
+          <p class="section-desc">
+            We believe in total financial transparency. Here are the genuine variables that influence any specialized pipe repair estimate.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/cost-access.jpg" alt="Pipes exposed in crawlspaces versus sub-slab concrete accessibility" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">🧱</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Physical Accessibility</h3>
+              <p class="card-desc">
+                Pipes exposed in crawlspaces or basements require less labor than lines buried under 4 inches of reinforced concrete slabs or tiled bathroom walls.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/cost-material.jpg" alt="Commercial grade copper and PEX expansion pipe materials" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">🧪</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Material Specification</h3>
+              <p class="card-desc">
+                Premium Type-L copper press fittings and commercial PEX-A expansion tubing cost slightly more than standard PVC but provide 50+ year lifespans.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/cost-run.jpg" alt="Linear distance and depth of underground water and sewer lateral lines" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">📏</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Linear Run &amp; Depth</h3>
+              <p class="card-desc">
+                A 3-foot localized sewer patch requires far less time and equipment mobilization than a 60-foot main lateral line hydro-jetting and root excavation.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/cost-permit.jpg" alt="City plumbing permits and municipal engineering sign-off documentation" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">🏛️</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Municipal Permitting</h3>
+              <p class="card-desc">
+                Major water service replacements and commercial grease interceptors may require city plumbing permits, backflow certification, and municipal sign-offs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PAYMENT OPTIONS & REBATE PROGRAMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Financial Flexibility</span>
+          <h2 class="section-title">Flexible Payment Options &amp; Courtesy Discounts</h2>
+          <p class="section-desc">
+            Unexpected plumbing repairs shouldn't strain your family budget. We offer transparent payment flexibility, zero-interest terms, and community discounts.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/pay-financing.jpg" alt="Zero percent APR financing plans for major plumbing repairs" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">💳</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">0% APR Financing Plans</h3>
+              <p class="card-desc">
+                Flexible 6-month and 12-month zero-interest payment financing available for major sewer replacements, water line renewals, and whole-home re-piping.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/pay-discount.jpg" alt="Courtesy discounts for military veterans, seniors, and first responders" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">🎖️</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">10% Courtesy Discounts</h3>
+              <p class="card-desc">
+                We proudly extend a permanent 10% discount on all labor services to military veterans, active service members, seniors (65+), and first responders.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/pay-insurance.jpg" alt="Direct homeowner insurance claim billing and paperwork coordination" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">📑</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Direct Insurance Billing</h3>
+              <p class="card-desc">
+                For sudden catastrophic water leaks, we work directly with your homeowner insurance provider to bill claims without out-of-pocket delays.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card-img-wrap">
+              <img src="../assets/images/pay-pos.jpg" alt="Mobile contactless POS terminal accepting credit cards and instant digital receipts" class="card-top-img" loading="lazy">
+              <div class="card-icon-badge">📱</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">All Payment Types Accepted</h3>
+              <p class="card-desc">
+                Our technicians carry secure mobile POS terminals accepting all major credit/debit cards, Apple Pay, Google Pay, bank ACH, and certified checks with instant receipts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA BANNER -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-content">
+            <h2>Request a Fixed-Price Written Estimate</h2>
+            <p>
+              No unexpected surprises or hidden line items. Our technicians diagnose your plumbing issue and give you a guaranteed flat rate on the spot.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="contact.html" class="btn-primary">Book Now</a>
+            <div class="cta-phone-tag">Estimates Desk: <strong>(800) 555-7473</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="HydroFix Home">
+            <img src="../assets/images/logo-dark.png" alt="HydroFix Plumbing & Pipe Repair Logo" class="brand-logo-img">
+          </a>
+          <p class="footer-desc">
+            Licensed 24/7 plumbing, emergency pipe repair, advanced leak diagnostics, and comprehensive sanitation services.
+          </p>
+          <div class="footer-contact-item">
+            <span>📞</span> <span>(800) 555-PIPE / (800) 555-7473</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span> <span>dispatch@hydrofixplumbing.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📍</span> <span>4280 Industrial Parkway, Suite 100, Metro City</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Home</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home 1</a></li>
+            <li><a href="../index1.html">Home 2</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HydroFix Plumbing &amp; Pipe Repair Service. All rights reserved.
+        </div>
+        <div class="footer-meta">
+          <span>License #MP-849201</span>
+          <span>Fully Insured &amp; Bonded</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

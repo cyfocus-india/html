@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | Wanderkite Holidays</title>
+  <meta name="description" content="Sign in to your Wanderkite traveller dashboard to track bookings, view itineraries and download tickets and invoices.">
+  <meta name="theme-color" content="#0F5F66">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Apply saved theme & direction before first paint -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', localStorage.getItem('wk-theme') || 'light');
+        root.setAttribute('dir', localStorage.getItem('wk-dir') || 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="auth-page">
+    <!-- Visual panel (hidden on small screens) -->
+    <aside class="auth-visual" aria-label="Why sign in">
+      <img src="../assets/images/auth-signin.jpg" alt="View from an aeroplane window of the wing above sunlit clouds" width="1200" height="797">
+      <div class="inner">
+        <p class="eyebrow eyebrow--light">Traveller dashboard</p>
+        <h2>Your whole trip, in one place</h2>
+        <ul>
+          <li>Live booking and payment status</li>
+          <li>Day-by-day itineraries you can edit</li>
+          <li>E-tickets, hotel vouchers and GST invoices</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="auth-main" id="main">
+      <div class="auth-top">
+        <a class="brand" href="../index.html" aria-label="Wanderkite Holidays — Home 1">
+          <img src="../assets/images/logo.png" alt="" width="42" height="42">
+          <span class="brand-text"><span class="brand-name">Wanderkite</span><span class="brand-sub">Holidays</span></span>
+        </a>
+        <div class="auth-toggles">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-ico" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> <span class="lbl dir-lbl">RTL</span></button>
+        </div>
+      </div>
+
+      <div class="auth-box">
+        <!-- Sign in -->
+        <section id="signin-panel" aria-labelledby="signin-title">
+          <h1 id="signin-title">Welcome back</h1>
+          <p>Sign in to check your bookings, download tickets and pick up where you left off.</p>
+
+          <form id="signin-form" novalidate>
+            <div class="field">
+              <label for="si-email">Email</label>
+              <input class="input" id="si-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="si-password">Password</label>
+              <div class="pw-wrap">
+                <input class="input" id="si-password" name="password" type="password" autocomplete="current-password" data-password required>
+                <button class="pw-toggle" type="button" aria-controls="si-password" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="auth-row">
+              <label class="check"><input type="checkbox" name="remember" checked> Keep me signed in</label>
+              <button class="text-btn" type="button" id="forgot-link">Forgot password?</button>
+            </div>
+            <button class="btn btn--block" type="submit">Sign In</button>
+          </form>
+
+          <p class="auth-switch">New to Wanderkite? <a href="signup.html">Create an account</a></p>
+          <p class="demo-note">Demo portal: use any email address and a password of 8 or more characters.</p>
+        </section>
+
+        <!-- Forgot password (same page) -->
+        <section id="reset-panel" aria-labelledby="reset-title" hidden>
+          <h1 id="reset-title" tabindex="-1">Reset your password</h1>
+          <p>Enter the email you booked with and we'll send you a secure link to choose a new password.</p>
+
+          <form id="reset-form" novalidate>
+            <div class="field">
+              <label for="rs-email">Email</label>
+              <input class="input" id="rs-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <button class="btn btn--block" type="submit">Send Reset Link</button>
+          </form>
+
+          <div class="form-success" id="reset-success" role="status" tabindex="-1">
+            Check your inbox
+            <p>If an account exists for <strong data-reset-email></strong>, a reset link is on its way. It expires in 30 minutes.</p>
+          </div>
+
+          <p class="auth-switch"><button class="text-btn" type="button" data-back-signin><span class="flip" aria-hidden="true">←</span> Back to Sign In</button></p>
+        </section>
+      </div>
+
+      <p class="auth-foot">© <span class="year">2026</span> Wanderkite Holidays · <a href="contact.html">Need help signing in?</a></p>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home 1 | Aisle &amp; Aperture</title>
+  <meta name="description" content="Aisle &amp; Aperture is a Jaipur studio creating candid wedding photography and cinematic wedding films across India. Watch our highlight reels and check your date.">
+  <meta name="theme-color" content="#a8385f">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <!-- Apply the saved theme and direction before the first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("aa-theme"), r = localStorage.getItem("aa-dir");
+        if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        if (r === "rtl" || r === "ltr") d.setAttribute("dir", r);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+        <img src="assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" width="46" height="46">
+        <span class="brand-text">
+          <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+          <span class="brand-tag">Wedding Films &amp; Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-panel" id="site-nav">
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li class="has-dropdown is-current">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true"></span></button>
+              <ul class="dropdown" id="home-menu">
+                <li><a href="index.html" aria-current="page">Home 1</a></li>
+                <li><a href="index1.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/packages.html">Packages</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">&#x263E;</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-pressed="false" aria-label="Switch to right-to-left layout"><span class="icon" aria-hidden="true">&#x21C4;</span> <span class="dir-label">RTL</span></button>
+          <a class="btn btn--sm" href="pages/contact.html">Check Your Date</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+  <!-- ============ 1. Hero: cinematic background film ============ -->
+  <section class="hero-film" aria-labelledby="hero-title">
+    <div class="hero-film__media">
+      <img class="hero-film__poster" src="assets/images/home1-hero-poster.jpg" alt="Bride and groom resting their foreheads together in soft daylight on their wedding morning" fetchpriority="high" width="1600" height="900">
+      <video class="hero-film__video" autoplay muted loop playsinline preload="metadata" poster="assets/images/home1-hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/video/home-hero-reel.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <button class="icon-btn icon-btn--light hero-film__toggle" type="button" aria-pressed="false" aria-label="Pause background film">
+      <span class="icon" aria-hidden="true">&#x275A;&#x275A;</span> <span class="label">Pause</span>
+    </button>
+
+    <div class="container hero-film__inner">
+      <div class="glass glass--dark hero-film__card">
+        <p class="eyebrow eyebrow--light">Wedding films &amp; photography · Jaipur</p>
+        <h1 id="hero-title">Wedding films that feel the way <em>the day did</em>.</h1>
+        <p class="hero-film__lead">Candid photographs and cinematic films for Indian weddings — from the first haldi splash to the last baraat beat. Now booking the 2026–27 season across India.</p>
+        <div class="btn-row">
+          <a class="btn" href="pages/contact.html">Check Your Date</a>
+          <a class="link-arrow link-arrow--light" href="#reels">Watch the reels <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+
+      <ul class="hero-stats glass glass--dark" aria-label="The studio at a glance">
+        <li><strong>380+</strong><span>weddings photographed and filmed</span></li>
+        <li><strong>21</strong><span>cities across India</span></li>
+        <li><strong>9</strong><span>weddings abroad</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 2. Highlight reels ============ -->
+  <section class="section glow" id="reels" aria-labelledby="reels-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Highlight reels</p>
+        <h2 id="reels-title">Press play on three <em>real mornings</em></h2>
+        <p class="lead">Every booking includes a highlight film. These short excerpts come from recent edits — tap one to watch it full screen.</p>
+      </header>
+
+      <div class="reels">
+        <article class="reel glass reveal">
+          <button class="reel__media" type="button" data-reel-src="assets/video/reel-bridal-prep.mp4" data-reel-poster="assets/images/reel-bridal-prep.jpg" data-reel-title="The Getting-Ready Hour — Ishita &amp; Arnav" aria-label="Play excerpt: The Getting-Ready Hour">
+            <img src="assets/images/reel-bridal-prep.jpg" alt="A bridesmaid fastening a silver anklet on the bride's hennaed foot before the ceremony" loading="lazy" width="960" height="540">
+            <span class="reel__play" aria-hidden="true">&#x25B6;&#xFE0E;</span>
+            <span class="reel__time">0:06</span>
+          </button>
+          <div class="reel__body">
+            <p class="reel__meta">Ishita &amp; Arnav · Samode, Jaipur</p>
+            <h3>The Getting-Ready Hour</h3>
+            <p>Anklets, nervous laughter and a sister's steady hands — the quiet minutes before the dhol starts.</p>
+          </div>
+        </article>
+
+        <article class="reel glass reveal">
+          <button class="reel__media" type="button" data-reel-src="assets/video/reel-groom-rituals.mp4" data-reel-poster="assets/images/reel-groom-rituals.jpg" data-reel-title="The Groom's Blessings — Meenakshi &amp; Karthik" aria-label="Play excerpt: The Groom's Blessings">
+            <img src="assets/images/reel-groom-rituals.jpg" alt="The groom bowing with folded hands to receive a blessing during a South Indian temple ritual" loading="lazy" width="960" height="540">
+            <span class="reel__play" aria-hidden="true">&#x25B6;&#xFE0E;</span>
+            <span class="reel__time">0:18</span>
+          </button>
+          <div class="reel__body">
+            <p class="reel__meta">Meenakshi &amp; Karthik · Mylapore, Chennai</p>
+            <h3>The Groom's Blessings</h3>
+            <p>Temple rituals filmed at half speed, so every folded hand and whispered blessing has room to land.</p>
+          </div>
+        </article>
+
+        <article class="reel glass reveal">
+          <button class="reel__media" type="button" data-reel-src="assets/video/reel-alta-ritual.mp4" data-reel-poster="assets/images/reel-alta-ritual.jpg" data-reel-title="Alta Before the Vows — Riya &amp; Sayan" aria-label="Play excerpt: Alta Before the Vows">
+            <img src="assets/images/reel-alta-ritual.jpg" alt="Red alta dye being painted on the bride's feet, surrounded by marigold petals" loading="lazy" width="960" height="540">
+            <span class="reel__play" aria-hidden="true">&#x25B6;&#xFE0E;</span>
+            <span class="reel__time">0:20</span>
+          </button>
+          <div class="reel__body">
+            <p class="reel__meta">Riya &amp; Sayan · Ballygunge, Kolkata</p>
+            <h3>Alta Before the Vows</h3>
+            <p>The red alta ritual, shot low and handheld from the courtyard floor among the marigolds.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Reel player -->
+    <dialog class="video-dialog" id="reel-dialog" aria-labelledby="reel-dialog-title">
+      <div class="video-dialog__inner glass glass--dark">
+        <div class="dialog-bar">
+          <h2 id="reel-dialog-title">Highlight reel</h2>
+          <button class="icon-btn icon-btn--light" type="button" data-close-dialog aria-label="Close video"><span aria-hidden="true">&#x2715;</span></button>
+        </div>
+        <video controls playsinline preload="none"></video>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- ============ 3. Why couples choose us ============ -->
+  <section class="why" aria-labelledby="why-title">
+    <img class="why__bg" src="assets/images/home1-why-mandap-chandeliers.jpg" alt="A floral wedding mandap framed by roses and crystal chandeliers, waiting for the ceremony" loading="lazy" width="1600" height="1067">
+    <div class="container">
+      <header class="section-head section-head--light">
+        <p class="eyebrow eyebrow--light">Why Aisle &amp; Aperture</p>
+        <h2 id="why-title">Trusted with the one day <em>you can't redo</em></h2>
+        <p class="lead">Four promises that are written into every contract we sign.</p>
+      </header>
+
+      <div class="grid-4">
+        <article class="glass glass--dark why-card reveal">
+          <span class="icon-badge" aria-hidden="true">&#x25CE;</span>
+          <h3>Photo and film, one crew</h3>
+          <p>Our photographers and cinematographers plan every shot together, so you're never pulled between two teams asking for the same moment twice.</p>
+        </article>
+        <article class="glass glass--dark why-card reveal">
+          <span class="icon-badge" aria-hidden="true">&#x2726;</span>
+          <h3>Sneak peek in 72 hours</h3>
+          <p>Twenty-five finished photographs reach your inbox within three days — while the mehendi is still on your hands.</p>
+        </article>
+        <article class="glass glass--dark why-card reveal">
+          <span class="icon-badge" aria-hidden="true">&#x25D0;</span>
+          <h3>Edited in-house</h3>
+          <p>Every frame is retouched and colour graded in our Jaipur studio by our own editors. Nothing is outsourced, so every event matches.</p>
+        </article>
+        <article class="glass glass--dark why-card reveal">
+          <span class="icon-badge" aria-hidden="true">&#x20B9;</span>
+          <h3>A fixed price, in writing</h3>
+          <p>Your quote lists every hour, crew member and deliverable. If an event genuinely overruns, extra time is ₹6,500 an hour — agreed upfront.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. Case study ============ -->
+  <section class="section section--alt glow glow--alt" aria-labelledby="case-title">
+    <div class="container case">
+      <div class="case__media reveal">
+        <img class="case__main" src="assets/images/home1-case-jaipur-pheras.jpg" alt="Bride and groom seated beneath a flower-draped mandap during the pheras at a Jaipur haveli" loading="lazy" width="1000" height="1500">
+        <img class="case__inset" src="assets/images/home1-case-first-dance.jpg" alt="The couple sharing their first dance on a glowing dance floor at the reception" loading="lazy" width="800" height="1200">
+        <p class="case__tag glass glass--dark">Heirloom package · Nov 2025</p>
+      </div>
+
+      <div>
+        <p class="eyebrow">Inside one booking</p>
+        <h2 id="case-title">Meera &amp; Arjun: three days, <em>one Jaipur haveli</em></h2>
+        <p>Six events, a must-have list of twenty-two relatives and a varmala timed to the last ten minutes of sunlight. This is what our largest package looked like in practice.</p>
+
+        <dl class="case__stats">
+          <div class="glass"><dt>Events covered</dt><dd>6</dd></div>
+          <div class="glass"><dt>Crew on site</dt><dd>7</dd></div>
+          <div class="glass"><dt>Edited photographs</dt><dd>2,140</dd></div>
+          <div class="glass"><dt>Documentary film</dt><dd>41 min</dd></div>
+          <div class="glass"><dt>Drone flights</dt><dd>11</dd></div>
+          <div class="glass"><dt>Weeks to final delivery</dt><dd>7</dd></div>
+        </dl>
+
+        <a class="link-arrow" href="pages/packages.html">Compare all packages <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. Testimonials ============ -->
+  <section class="section glow" aria-labelledby="reviews-title">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">Kind words</p>
+        <h2 id="reviews-title">What couples say once <em>the album arrives</em></h2>
+        <p class="rating glass"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 average from 212 couple reviews</p>
+      </header>
+
+      <div class="grid-3">
+        <figure class="quote glass reveal">
+          <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+          <blockquote>
+            <p>“We cried at the teaser and again at the documentary. They caught my nani dancing — something none of us even noticed that night.”</p>
+          </blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">SR</span><span><strong>Sanya &amp; Rohan</strong>Udaipur · February 2026</span></figcaption>
+        </figure>
+
+        <figure class="quote glass reveal">
+          <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+          <blockquote>
+            <p>“Invisible during the pheras, everywhere during the sangeet. That was exactly our brief, and they delivered it to the letter.”</p>
+          </blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">AF</span><span><strong>Aditi &amp; Faraz</strong>Jaipur · December 2025</span></figcaption>
+        </figure>
+
+        <figure class="quote glass reveal">
+          <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+          <blockquote>
+            <p>“The sneak peek landed before we had even unpacked. Both families were sharing photos from the airport lounge.”</p>
+          </blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">NS</span><span><strong>Nikita &amp; Shaurya</strong>Goa · March 2026</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. CTA: check your date ============ -->
+  <section class="cta-image" aria-labelledby="cta-title">
+    <img class="cta-image__bg" src="assets/images/home1-cta-lantern-walk.jpg" alt="Newlyweds walking hand in hand beneath glowing paper lanterns at night" loading="lazy" width="1600" height="2400">
+    <div class="container">
+      <div class="glass glass--dark cta-image__panel reveal">
+        <p class="eyebrow eyebrow--light">2026–27 season</p>
+        <h2 id="cta-title">Is your date <em>still open?</em></h2>
+        <p>Pop in your wedding date and city — we'll carry them over to the enquiry form so you only type them once.</p>
+
+        <form class="date-check" action="pages/contact.html" method="get">
+          <div class="field field--light">
+            <label for="dc-date">Wedding date</label>
+            <input id="dc-date" name="date" type="date" required data-future>
+          </div>
+          <div class="field field--light">
+            <label for="dc-city">City</label>
+            <select id="dc-city" name="city">
+              <option>Jaipur</option>
+              <option>Udaipur</option>
+              <option>Jodhpur</option>
+              <option>Goa</option>
+              <option>Kerala</option>
+              <option>Rishikesh</option>
+              <option value="">Somewhere else</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Check Your Date</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ Footer (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Aisle &amp; Aperture — go to Home 1">
+          <img src="assets/images/logo.png" alt="Aisle &amp; Aperture logomark: a gold wedding band with a solitaire around a camera aperture" loading="lazy" width="46" height="46">
+          <span class="brand-text">
+            <span class="brand-name">Aisle <em>&amp;</em> Aperture</span>
+            <span class="brand-tag">Wedding Films &amp; Photography</span>
+          </span>
+        </a>
+        <p>Candid wedding photography and cinematic films from a Jaipur studio, for couples marrying anywhere in India.</p>
+      </div>
+
+      <nav aria-labelledby="footer-home">
+        <h2 class="footer-heading" id="footer-home">Home</h2>
+        <ul class="footer-links">
+          <li><a href="index.html" aria-current="page">Home 1</a></li>
+          <li><a href="index1.html">Home 2</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-studio">
+        <h2 class="footer-heading" id="footer-studio">Studio</h2>
+        <ul class="footer-links">
+          <li><a href="pages/portfolio.html">Portfolio</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-plan">
+        <h2 class="footer-heading" id="footer-plan">Plan</h2>
+        <ul class="footer-links">
+          <li><a href="pages/packages.html">Packages</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-reach">
+        <h2 class="footer-heading">Visit &amp; call</h2>
+        <address class="footer-contact">
+          <span>2nd Floor, 14 Bhawani Singh Road, C-Scheme, Jaipur 302001</span>
+          <a href="tel:+919829047215">+91 98290 47215</a>
+          <a href="mailto:hello@aisleandaperture.in">hello@aisleandaperture.in</a>
+          <span>Tue–Sat 10:30–19:00 · Sun 11:00–16:00</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aisle &amp; Aperture Studio LLP. All rights reserved.</p>
+      <p>Photographed, filmed and edited in Jaipur, Rajasthan.</p>
+    </div>
+  </footer>
+</body>
+</html>
