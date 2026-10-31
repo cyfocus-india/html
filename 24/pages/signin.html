@@ -53,7 +53,7 @@
         </a>
         <div class="auth-tools">
           <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
-          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="RTL: switch to right-to-left layout" title="RTL: switch to right-to-left layout">RTL</button>
         </div>
       </div>
 
@@ -61,9 +61,11 @@
         <div class="notice" id="signin-banner" role="status" hidden></div>
 
         <!-- Sign In view -->
-        <div id="signin-view">
-          <h1 class="mt-m">Sign In</h1>
-          <p class="muted">Welcome back. Sign in to book, track and manage your shipments.</p>
+        <div id="signin-view" data-auth-view="signin">
+          <div class="auth-head">
+            <h1>Sign In</h1>
+            <p class="muted">Welcome back. Sign in to book, track and manage your shipments.</p>
+          </div>
           <form id="signin-form" novalidate>
             <div class="field">
               <label for="si-email">Email</label>
@@ -84,14 +86,64 @@
             </div>
             <button class="btn btn-lg btn-block" type="submit">Sign In</button>
           </form>
+
+          <!-- Other ways to sign in -->
+          <p class="auth-divider"><span>or sign in with</span></p>
+          <div class="social-auth" role="group" aria-label="Other ways to sign in">
+            <button class="social-btn" type="button" data-provider="Google">
+              <img src="../assets/images/icon-google.png" alt="" width="20" height="20">
+              <span class="social-label">Continue with Google</span>
+            </button>
+            <button class="social-btn" type="button" data-provider="Microsoft">
+              <span class="ms-logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span class="social-label">Continue with Microsoft</span>
+            </button>
+            <button class="social-btn" type="button" id="otp-link">
+              <span class="phone-icon" aria-hidden="true"></span>
+              <span class="social-label">Sign in with mobile OTP</span>
+            </button>
+          </div>
           <p class="auth-switch">New to Dashmile? <a href="signup.html">Sign Up</a></p>
-          <p class="demo-hint">Demo site: any email with a password of 8+ characters signs you in. Accounts you create on Sign Up are checked against their password.</p>
+        </div>
+
+        <!-- Mobile OTP view (same page) -->
+        <div id="otp-view" data-auth-view="otp" hidden>
+          <div class="auth-head">
+            <h1>Sign in with OTP</h1>
+            <p class="muted" id="otp-intro">We'll text a 6-digit code to the mobile number on your account.</p>
+          </div>
+          <form id="otp-phone-form" novalidate>
+            <div class="field">
+              <label for="otp-phone">Mobile number</label>
+              <div class="phone-group" dir="ltr">
+                <span class="phone-prefix">+91</span>
+                <input id="otp-phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="11" placeholder="98230 55417" required>
+              </div>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <button class="btn btn-lg btn-block" type="submit">Send OTP</button>
+          </form>
+          <form id="otp-code-form" novalidate hidden>
+            <div class="field">
+              <label for="otp-code">6-digit code</label>
+              <input id="otp-code" class="otp-input" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <button class="btn btn-lg btn-block" type="submit">Verify and sign in</button>
+            <div class="auth-row auth-row--center">
+              <button class="text-btn" type="button" id="otp-resend" disabled>Resend code in 30s</button>
+              <button class="text-btn" type="button" id="otp-change">Change number</button>
+            </div>
+          </form>
+          <p class="auth-switch"><button class="text-btn" type="button" data-back-signin><span class="arrow" aria-hidden="true">←</span> Back to Sign In</button></p>
         </div>
 
         <!-- Forgot password view (same page) -->
-        <div id="reset-view" hidden>
-          <h1 class="mt-m">Reset your password</h1>
-          <p class="muted">Enter your account email and we'll send a link to set a new password.</p>
+        <div id="reset-view" data-auth-view="reset" hidden>
+          <div class="auth-head">
+            <h1>Reset your password</h1>
+            <p class="muted">Enter your account email and we'll send a link to set a new password.</p>
+          </div>
           <form id="reset-form" novalidate>
             <div class="field">
               <label for="rs-email">Email</label>

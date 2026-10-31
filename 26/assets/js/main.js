@@ -141,7 +141,7 @@
     var rtl = dir === 'rtl';
     root.setAttribute('dir', rtl ? 'rtl' : 'ltr');
     document.querySelectorAll('[data-dir-toggle]').forEach(function (btn) {
-      btn.innerHTML = '<span aria-hidden="true">⇄</span> ' + (rtl ? 'LTR' : 'RTL');
+      btn.textContent = rtl ? 'LTR' : 'RTL';
       btn.setAttribute('aria-label', rtl ? 'Switch to left-to-right layout' : 'Switch to right-to-left layout');
       btn.setAttribute('title', rtl ? 'Left-to-right layout' : 'Right-to-left layout');
       btn.setAttribute('aria-pressed', String(rtl));
@@ -339,40 +339,113 @@
     var range = finder.querySelector('#guestRange');
     var readout = finder.querySelector('#guestValue');
     var result = document.getElementById('finderResult');
+
+    var OCCASION_PROFILES = {
+      wedding: {
+        defaultGuests: 600,
+        hallId: 'ballroom',
+        tag: 'Best match for Wedding & Reception',
+        why: 'A pillarless 12,500 sq ft ballroom with a 40-foot mandap stage, royal banquet seating, crystal chandeliers and dual private bridal suites for grand celebrations.'
+      },
+      engagement: {
+        defaultGuests: 250,
+        hallId: 'saffron',
+        tag: 'Best match for Engagement & Sangeet',
+        why: 'Features a dedicated 24 × 24 ft dance floor with DJ acoustics, warm mood lighting, and flexible soundproofed partition walls for intimate ring ceremonies and vibrant sangeets.'
+      },
+      birthday: {
+        defaultGuests: 80,
+        hallId: 'lotus',
+        tag: 'Best match for Birthday Celebrations',
+        why: 'Bright daylight windows, child-friendly single-level access, dedicated cake-cutting stage, and ample open room for balloon arches, emcee games, and party tables.'
+      },
+      corporate: {
+        defaultGuests: 350,
+        hallId: 'ballroom',
+        tag: 'Best match for Corporate Conferences & Summits',
+        why: 'Equipped with dual P3.9 LED presentation walls, high-speed dedicated 300 Mbps Wi-Fi, audio-visual operator desk, podium mics, and seamless breakout buffet dining.'
+      },
+      babyshower: {
+        defaultGuests: 65,
+        hallId: 'lotus',
+        tag: 'Best match for Baby Shower & Naming',
+        why: 'A serene daylight space with traditional cradle ceremony floral backdrop, comfortable seating, traditional banana-leaf dining, and a private mother-and-baby green room.'
+      },
+      anniversary: {
+        defaultGuests: 30,
+        hallId: 'ember',
+        tag: 'Best match for Anniversary & Private Dinners',
+        why: 'One grand mahogany banquet table dressed with candelabras and fresh roses, acoustic violinist space, and dedicated white-glove butler service away from any restaurant crowd.'
+      }
+    };
+
     var renderFinder = function () {
       var g = Number(range.value);
       var typeInput = finder.querySelector('input[name="finderType"]:checked');
       var type = typeInput ? typeInput.value : 'wedding';
+      var profile = OCCASION_PROFILES[type] || OCCASION_PROFILES.wedding;
+
       readout.textContent = g;
       range.setAttribute('aria-valuetext', g + ' guests');
+
       var fits = HALLS.filter(function (h) { return g >= h.min && g <= h.max; });
       var typed = fits.filter(function (h) { return h.types.indexOf(type) > -1; });
       var list = (typed.length ? typed : fits).slice().sort(function (a, b) { return a.max - b.max; });
       var best = list[0];
       var alt = list[1] || fits.filter(function (h) { return h !== best; })[0];
       if (!best) return;
-      result.querySelector('img').src = 'assets/images/' + best.img;
-      result.querySelector('img').alt = best.alt;
-      result.querySelector('[data-f="tag"]').textContent = typed.length ? 'Best match for ' + EVENT_TYPES[type].toLowerCase() : 'Closest fit for ' + g + ' guests';
-      result.querySelector('[data-f="name"]').textContent = best.name;
-      result.querySelector('[data-f="seated"]').textContent = best.seated;
-      result.querySelector('[data-f="floating"]').textContent = best.floating;
-      result.querySelector('[data-f="area"]').textContent = best.area;
-      result.querySelector('[data-f="why"]').textContent = best.why;
-      result.querySelector('[data-f="price"]').textContent = formatINR(best.slot.dinner);
-      var link = result.querySelector('[data-f="link"]');
-      link.href = 'pages/halls.html#' + best.id;
-      link.firstChild.textContent = 'See ' + best.name + ' details ';
-      var altEl = result.querySelector('[data-f="alt"]');
-      if (alt) {
-        altEl.hidden = false;
-        altEl.innerHTML = 'Also fits: <a href="pages/halls.html#' + alt.id + '">' + alt.name + '</a> (' + alt.min + '–' + alt.max + ' guests)';
-      } else {
-        altEl.hidden = true;
-      }
+
+      var whyText = (best.id === profile.hallId) ? profile.why : best.why;
+      var tagText = typed.length ? profile.tag : ('Closest fit for ' + g + ' guests');
+
+      result.classList.add('is-animating');
+      setTimeout(function () {
+        result.querySelector('img').src = 'assets/images/' + best.img;
+        result.querySelector('img').alt = best.alt;
+        result.querySelector('[data-f="tag"]').textContent = tagText;
+        result.querySelector('[data-f="name"]').textContent = best.name;
+        result.querySelector('[data-f="seated"]').textContent = best.seated;
+        result.querySelector('[data-f="floating"]').textContent = best.floating;
+        result.querySelector('[data-f="area"]').textContent = best.area;
+        result.querySelector('[data-f="why"]').textContent = whyText;
+        result.querySelector('[data-f="price"]').textContent = formatINR(best.slot.dinner);
+        var link = result.querySelector('[data-f="link"]');
+        link.href = 'pages/halls.html#' + best.id;
+        link.firstChild.textContent = 'See ' + best.name + ' details ';
+        var altEl = result.querySelector('[data-f="alt"]');
+        if (alt) {
+          altEl.hidden = false;
+          altEl.innerHTML = 'Also fits: <a href="pages/halls.html#' + alt.id + '">' + alt.name + '</a> (' + alt.min + '–' + alt.max + ' guests)';
+        } else {
+          altEl.hidden = true;
+        }
+        result.classList.remove('is-animating');
+      }, 120);
     };
+
+    // When an occasion tab is clicked/changed, switch to that occasion's typical sweet spot
+    var syncOccasion = function (val) {
+      var prof = OCCASION_PROFILES[val];
+      if (prof) {
+        range.value = prof.defaultGuests;
+      }
+      renderFinder();
+    };
+
+    finder.querySelectorAll('input[name="finderType"]').forEach(function (radio) {
+      radio.addEventListener('change', function () { syncOccasion(radio.value); });
+      radio.addEventListener('click', function () { syncOccasion(radio.value); });
+    });
+
     range.addEventListener('input', renderFinder);
-    finder.addEventListener('change', renderFinder);
+
+    var initialRadio = finder.querySelector('input[name="finderType"]:checked');
+    if (initialRadio) {
+      var initialProf = OCCASION_PROFILES[initialRadio.value];
+      if (initialProf) {
+        range.value = initialProf.defaultGuests;
+      }
+    }
     renderFinder();
   }
 
@@ -741,4 +814,20 @@
       window.setTimeout(function () { window.location.href = 'dashboard.html'; }, 450);
     });
   }
+
+  /* Social auth handlers (Google, Apple, Phone OTP) */
+  document.querySelectorAll('[data-social]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var provider = btn.getAttribute('data-social');
+      var name = 'Ananya Rao';
+      var email = 'client@marigoldgrand.com';
+      if (provider === 'google') email = 'ananya.rao@gmail.com';
+      else if (provider === 'apple') email = 'ananya.rao@icloud.com';
+      else if (provider === 'phone') email = '9900123456@phone.auth';
+      store.setJSON(SESSION_KEY, { name: name, email: email, since: Date.now(), provider: provider, remember: true });
+      btn.disabled = true;
+      btn.textContent = 'Connecting…';
+      window.setTimeout(function () { window.location.href = 'dashboard.html'; }, 350);
+    });
+  });
 })();

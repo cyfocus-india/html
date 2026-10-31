@@ -7,6 +7,7 @@
   <meta name="description" content="Member portal to book class slots, monitor class pack usage, manage membership renewals, and track your practice volume.">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/icons.css">
   <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 <body class="dashboard-body">
@@ -16,7 +17,7 @@
     <aside class="dash-sidebar" aria-label="Member Navigation">
       <div class="dash-sidebar-header">
         <a href="../index.html" class="brand-logo" aria-label="Aura Yoga Home 1">
-          <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="34" height="34">
+          <img src="../assets/images/logo-icon.png" alt="Aura Yoga meditation logo" class="brand-mark" width="34" height="34">
           <span class="brand-text">
             <span class="brand-name" style="font-size: 1.15rem;">Aura Yoga</span>
             <span class="brand-sub">Member Portal</span>
@@ -63,8 +64,8 @@
         </div>
 
         <div class="dash-sidebar-toggles">
-          <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Toggle theme">&#9790; Dark</button>
-          <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Toggle direction">&#8644; RTL</button>
+          <button type="button" class="icon-btn theme-toggle-btn btn-block" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+          <button type="button" class="icon-btn dir-toggle-btn btn-block" aria-label="Switch to right to left layout" title="Switch to right to left layout">RTL</button>
         </div>
 
         <button type="button" id="dash-logout-btn" class="btn btn-secondary btn-sm btn-block" style="margin-top: 0.5rem; color: var(--danger); border-color: rgba(179,57,57,0.3);">
@@ -90,8 +91,8 @@
         <div class="dash-topbar-right">
           <!-- Notification Bell -->
           <div class="notif-wrapper">
-            <button type="button" id="notif-bell-btn" class="icon-btn" aria-label="View notifications">
-              &#128276;
+            <button type="button" id="notif-bell-btn" class="icon-btn" aria-label="View notifications" title="Notifications">
+              <span class="ui-icon icon-bell" aria-hidden="true"></span>
               <span id="notif-badge" class="notif-badge" style="display: none;">0</span>
             </button>
 
@@ -106,8 +107,8 @@
           </div>
 
           <!-- Theme & RTL Toggles -->
-          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
-          <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+          <button type="button" class="icon-btn dir-toggle-btn" aria-label="Switch to right to left layout" title="Switch to right to left layout">RTL</button>
         </div>
       </header>
 
@@ -347,7 +348,7 @@
 
             <!-- Reload Backup Class Packs -->
             <div class="card dash-card-padded">
-              <span class="badge-pill" style="color: var(--accent); background: var(--accent-light); margin-bottom: 0.5rem; display: inline-block;">Class Pack Balance</span>
+              <span class="badge-pill" style="color: var(--text-accent); background: var(--accent-light); margin-bottom: 0.5rem; display: inline-block;">Class Pack Balance</span>
               <h3 style="margin-bottom: 0.5rem;">Reload Backup Credits</h3>
               <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
                 Keep prepaid credits for guest friends or family members visiting the studio with you.

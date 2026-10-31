@@ -27,7 +27,10 @@
       <!-- Brand Logo linking to Home 1 -->
       <a href="index.html" class="brand" aria-label="Apex Stationery & Office Supplies Home">
         <img src="assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
-        <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+        <div class="brand-text-group">
+          <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+          <span class="brand-subtext">Stationery &amp; Office Supplies</span>
+        </div>
       </a>
 
       <!-- Primary Navigation Menu -->
@@ -46,6 +49,7 @@
         <a href="pages/products.html" class="nav-link">Products</a>
         <a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a>
         <a href="pages/bulk-orders.html" class="nav-link">Bulk Orders</a>
+        <a href="pages/about.html" class="nav-link">About</a>
         <a href="pages/contact.html" class="nav-link">Contact</a>
 
         <!-- Mobile Drawer Action Controls (Visible <= 1024px) -->
@@ -56,7 +60,6 @@
               <span class="control-text">Dark Mode</span>
             </button>
             <button type="button" class="drawer-control-btn dir-toggle-btn" id="mobile-dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
-              <span class="symbol">⇄</span>
               <span class="dir-label">RTL</span>
             </button>
           </div>
@@ -73,7 +76,7 @@
 
         <!-- Direction Toggle -->
         <button class="control-btn" id="dir-toggle" aria-label="Toggle text direction LTR and RTL" title="Toggle Direction">
-          <span class="dir-label">⇄ RTL</span>
+          <span class="dir-label">RTL</span>
         </button>
 
         <!-- Primary Header CTA -->
@@ -436,7 +439,7 @@
           </p>
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <a href="pages/bulk-orders.html" class="btn btn-primary btn-lg">Request Bulk Quote</a>
-            <a href="pages/contact.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">Speak With Sales</a>
+            <a href="pages/contact.html" class="btn btn-secondary btn-lg btn-secondary-on-dark">Speak With Sales</a>
           </div>
         </div>
       </div>
@@ -444,27 +447,43 @@
   </main>
 
   <!-- =========================================================================
-       Site Footer (Identical on every page, grouped links, full business info)
+       Site Footer (Redesigned with Address, Newsletter & Social Monograms)
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand & Description -->
-        <div class="footer-brand">
-          <a href="index.html" class="brand" aria-label="Apex Stationery Home">
+        <!-- Col 1: Brand & Headquarters Address -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="brand" aria-label="Apex Stationery & Office Supplies Home">
             <img src="assets/images/logo.png" alt="Apex Stationery Logomark" class="brand-logo-img">
-            <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+            <div class="brand-text-group">
+              <span class="brand-name">Apex<span class="brand-highlight">Office</span></span>
+              <span class="brand-subtext">Stationery &amp; Office Supplies</span>
+            </div>
           </a>
-          <p>
-            Apex Stationery & Office Supplies is a premier commercial supplier providing precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to businesses nationwide.
+          <p class="footer-desc">
+            Premier commercial supplier of precision writing instruments, archival notebooks, filing systems, and sustainable high-volume printing media to modern workplaces nationwide.
           </p>
-          <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-            <strong>Hours:</strong> Mon–Fri: 8:00 AM – 7:00 PM CST | Sat: 9:00 AM – 4:00 PM CST
-          </p>
+          <div class="footer-contact-block">
+            <address class="footer-address">
+              <strong>Corporate Headquarters:</strong>
+              1200 Logistics Parkway, Suite 400<br>
+              Chicago, IL 60607, United States
+            </address>
+            <div class="footer-contact-item">
+              <span class="contact-lbl">Toll-Free:</span> <a href="tel:+18005552739" class="footer-contact-link">+1 (800) 555-APEX</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="contact-lbl">Procurement:</span> <a href="mailto:procurement@apexoffice.com" class="footer-contact-link">procurement@apexoffice.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="contact-lbl">Hours:</span> Mon–Fri 8:00 AM–7:00 PM CST | Sat 9:00 AM–4:00 PM CST
+            </div>
+          </div>
         </div>
 
-        <!-- Navigation Group 1: Home -->
-        <div>
+        <!-- Col 2: Home -->
+        <div class="footer-col">
           <h4 class="footer-heading">Home</h4>
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home 1</a></li>
@@ -472,29 +491,55 @@
           </ul>
         </div>
 
-        <!-- Navigation Group 2: Explore -->
-        <div>
+        <!-- Col 3: Explore -->
+        <div class="footer-col">
           <h4 class="footer-heading">Explore</h4>
           <ul class="footer-links">
             <li><a href="pages/products.html" class="footer-link">Products</a></li>
             <li><a href="pages/new-arrivals.html" class="footer-link">New Arrivals</a></li>
+            <li><a href="pages/bulk-orders.html" class="footer-link">Bulk Orders</a></li>
           </ul>
         </div>
 
-        <!-- Navigation Group 3: Company -->
-        <div>
+        <!-- Col 4: Company -->
+        <div class="footer-col">
           <h4 class="footer-heading">Company</h4>
           <ul class="footer-links">
-            <li><a href="pages/bulk-orders.html" class="footer-link">Bulk Orders</a></li>
-            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+            <li><a href="pages/contact.html" class="footer-link">Contact Us</a></li>
           </ul>
+        </div>
+
+        <!-- Col 5: Newsletter & Social Icons -->
+        <div class="footer-col footer-col-newsletter">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Subscribe to our newsletter for the latest products and updates.
+          </p>
+          <form class="footer-newsletter-form" id="footer-newsletter-form" novalidate>
+            <div class="footer-input-group">
+              <input type="email" class="footer-email-input" id="footer-email-input" placeholder="Enter your email..." required aria-label="Email Address">
+              <button type="submit" class="btn btn-primary footer-subscribe-btn">Subscribe</button>
+            </div>
+            <div class="footer-newsletter-feedback" id="footer-newsletter-feedback" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="footer-social-section">
+            <span class="footer-social-title">Follow Us</span>
+            <div class="footer-social-links">
+              <a href="https://linkedin.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Apex Stationery on LinkedIn">in</a>
+              <a href="https://x.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Apex Stationery on X">X</a>
+              <a href="https://facebook.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Apex Stationery on Facebook">fb</a>
+              <a href="https://youtube.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Apex Stationery on YouTube">YT</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
         <div>
-          © 2026 Apex Stationery & Office Supplies. All rights reserved.
+          © 2026 Apex Stationery &amp; Office Supplies. All rights reserved.
         </div>
         <div class="footer-badges-list">
           <span>ISO 9001:2015 Certified Logistics</span>

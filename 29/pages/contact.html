@@ -47,6 +47,7 @@
               <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
           <li class="nav-item"><a class="nav-link" href="workshops.html">Weekend Workshops</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -61,8 +62,8 @@
       </nav>
 
       <div class="header-actions">
-        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button>
-        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><span class="theme-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="ico-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="ico-sun"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2M12 20.5v2M4.6 4.6 6 6M18 18l1.4 1.4M1.5 12h2M20.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></span></button>
+        <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span class="dir-label">RTL</span></button>
         <a class="btn header-cta" href="signin.html">Sign In</a>
         <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
           <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -72,15 +73,19 @@
   </header>
 
   <main id="main">
-    <!-- ===== Page heading ===== -->
-    <section class="page-head" aria-labelledby="contact-title">
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero" aria-labelledby="contact-title">
+      <div class="page-hero-bg">
+        <img src="../assets/images/gallery-studio-shelves.jpg" alt="The studio kitchen with open wooden shelves, turquoise cookware and a white tiled wall" width="900" height="700" fetchpriority="high">
+      </div>
       <div class="container">
         <ol class="breadcrumb">
           <li><a href="../index.html">Home 1</a></li>
           <li aria-current="page">Contact</li>
         </ol>
-        <h1 id="contact-title">Contact</h1>
+        <h1 id="contact-title">Contact: visit, call or write</h1>
         <p class="lead">Questions about a class, a private event or a gift card? Send us a note or call the studio. We reply within one business day.</p>
+        <div class="hero-pills"><span>Replies within 1 business day</span><span>Open Tue–Sun</span><span>Pearl District, Portland</span></div>
       </div>
     </section>
 
@@ -199,7 +204,7 @@
             </div>
           </form>
           <div class="form-success" data-contact-success tabindex="-1" role="status" hidden>
-            <span class="badge-icon" aria-hidden="true">✓</span>
+            <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
             <div>
               <h3>Thanks, <span data-success-name>there</span>! Your booking request is on its way.</h3>
               <p data-success-detail>Someone from the studio will reply to your email within one business day. Need an answer sooner? Call us on (503) 555-0148.</p>
@@ -210,18 +215,20 @@
 
         <div class="info-stack">
           <div class="info-card">
-            <h2><span class="badge-icon" aria-hidden="true">⌖</span>Visit the studio</h2>
+            <h2><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>Visit the studio</h2>
             <p>1127 NW Glisan Street<br>Portland, OR 97209</p>
             <p class="muted small">Entrance and bike racks on the NW 12th Avenue side.</p>
           </div>
           <div class="info-card">
-            <h2><span class="badge-icon" aria-hidden="true">☏</span>Call or email</h2>
-            <p><a href="tel:+15035550148">(503) 555-0148</a></p>
-            <p><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></p>
-            <p class="muted small">Events team: <a href="mailto:events@copperpotstudio.com">events@copperpotstudio.com</a></p>
+            <h2><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5l1.5-2.5 5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>Call or email</h2>
+            <ul class="contact-lines">
+              <li><span class="cl-label">Phone</span><a href="tel:+15035550148">(503) 555-0148</a></li>
+              <li><span class="cl-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
+              <li><span class="cl-label">Events</span><a href="mailto:events@copperpotstudio.com">events@copperpotstudio.com</a></li>
+            </ul>
           </div>
           <div class="info-card">
-            <h2><span class="badge-icon" aria-hidden="true">◷</span>Opening hours</h2>
+            <h2><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Opening hours</h2>
             <table class="hours">
               <caption class="visually-hidden">Studio opening hours</caption>
               <tbody>
@@ -242,14 +249,66 @@
     <!-- ===== Getting here ===== -->
     <section class="section section--alt" aria-labelledby="directions-title">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head section-head--center">
           <span class="eyebrow">Getting here</span>
           <h2 id="directions-title">Easy to reach from anywhere in Portland</h2>
         </div>
         <div class="directions">
-          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">⇆</span>By streetcar</h3><p>Take the NS Line to NW 11th &amp; Glisan. We're a two-minute walk east.</p></article>
-          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">P</span>By car</h3><p>Park at the Glisan Street garage and bring your ticket. We validate 3 hours for $5.</p></article>
-          <article class="direction"><h3><span class="badge-icon" aria-hidden="true">⚲</span>By bike</h3><p>Covered racks for 14 bikes at our side entrance, plus a pump and repair stand.</p></article>
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6" width="14" height="11" rx="3"/><path d="M5 11.5h14M9 3h6M12 3v3M8.5 17 7 21M15.5 17 17 21"/><circle cx="9" cy="14" r=".6" fill="currentColor"/><circle cx="15" cy="14" r=".6" fill="currentColor"/></svg></span>By streetcar</h3><p>Take the NS Line to NW 11th &amp; Glisan. We're a two-minute walk east.</p></article>
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3.5L6.5 7h11l2.5 5.5V16z"/><path d="M4 12.5h16"/><circle cx="8" cy="16.5" r="1.8"/><circle cx="16" cy="16.5" r="1.8"/></svg></span>By car</h3><p>Park at the Glisan Street garage and bring your ticket. We validate 3 hours for $5.</p></article>
+          <article class="direction"><h3><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16 9 9h6.5l3 7M12 16 9 9M14.5 6H17l-1.5 3"/></svg></span>By bike</h3><p>Covered racks for 14 bikes at our side entrance, plus a pump and repair stand.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Map section ===== -->
+    <section class="section section--map" aria-labelledby="map-section-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Studio map</span>
+          <h2 id="map-section-title">Find us in the heart of the Pearl District</h2>
+          <p class="lead">1127 NW Glisan Street, Portland, OR 97209 · Bike racks, streetcar stop and parking right outside</p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-frame-wrap">
+            <iframe
+              class="map-frame"
+              title="Copper Pot Cooking Studio Map Location"
+              src="https://maps.google.com/maps?q=1127+NW+Glisan+St,+Portland,+OR+97209&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-info-bar">
+            <div class="map-info-item">
+              <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <div>
+                <strong>Studio Address</strong>
+                <span>1127&nbsp;NW&nbsp;Glisan&nbsp;St, Portland,&nbsp;OR</span>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div>
+                <strong>Opening Hours</strong>
+                <span class="map-hours">Tue–Fri 10 AM–9:30 PM<br>Sat 9 AM–9:30 PM<br>Sun 10 AM–5 PM</span>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6" width="14" height="11" rx="3"/><path d="M5 11.5h14M9 3h6M12 3v3M8.5 17 7 21M15.5 17 17 21"/><circle cx="9" cy="14" r=".6" fill="currentColor"/><circle cx="15" cy="14" r=".6" fill="currentColor"/></svg></span>
+              <div>
+                <strong>Transit</strong>
+                <span>NS&nbsp;Line&nbsp;at NW&nbsp;11th&nbsp;&amp;&nbsp;Glisan</span>
+              </div>
+            </div>
+            <div class="map-info-actions">
+              <a class="btn" href="https://maps.google.com/?q=1127+NW+Glisan+Street+Portland+OR+97209" target="_blank" rel="noopener noreferrer">
+                Open in Google Maps <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -281,12 +340,6 @@
           <span class="brand-text"><span class="brand-name">Copper Pot</span><span class="brand-sub">Cooking Studio</span></span>
         </a>
         <p class="footer-tagline">Hands-on cooking classes and weekend workshops for home cooks, taught by working chefs in small groups.</p>
-        <ul class="footer-contact">
-          <li><span class="fc-label">Visit</span><span>1127 NW Glisan Street, Portland, OR 97209</span></li>
-          <li><span class="fc-label">Call</span><a href="tel:+15035550148">(503) 555-0148</a></li>
-          <li><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></li>
-          <li><span class="fc-label">Hours</span><span>Tue–Sat 10 AM–9:30 PM · Sun 10 AM–5 PM</span></li>
-        </ul>
       </div>
       <nav class="footer-links" aria-label="Footer">
         <div class="footer-col">
@@ -307,6 +360,7 @@
         <div class="footer-col">
           <h2 class="footer-heading">Studio</h2>
           <ul>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="../index.html#chefs">Chefs</a></li>
             <li><a href="../index1.html#pricing">Pricing</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -321,11 +375,29 @@
           </ul>
         </div>
       </nav>
+      <ul class="footer-contact" aria-label="Studio contact details">
+        <li>
+          <span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <span class="fc-text"><span class="fc-label">Visit</span><span><bdi>1127 NW Glisan Street</bdi><br>Portland, OR 97209</span></span>
+        </li>
+        <li>
+          <span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5l1.5-2.5 5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <span class="fc-text"><span class="fc-label">Call</span><a href="tel:+15035550148"><bdi dir="ltr">(503) 555-0148</bdi></a></span>
+        </li>
+        <li>
+          <span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+          <span class="fc-text"><span class="fc-label">Email</span><a href="mailto:hello@copperpotstudio.com">hello@copperpotstudio.com</a></span>
+        </li>
+        <li>
+          <span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span class="fc-text"><span class="fc-label">Hours</span><span>Tue–Fri 10 AM–9:30 PM<br>Sat 9 AM–9:30 PM<br>Sun 10 AM–5 PM</span></span>
+        </li>
+      </ul>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span data-year>2026</span> Copper Pot Cooking Studio. All rights reserved.</p>
-        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </div>
   </footer>

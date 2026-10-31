@@ -191,7 +191,7 @@
   height: 40px;
   border-radius: var(--radius-full);
   background-color: var(--primary);
-  color: #FFFFFF;
+  color: var(--primary-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,9 +293,22 @@
   margin-top: 0.5rem;
 }
 
+.dash-sidebar-toggles .icon-btn {
+  height: 40px;
+}
+
 /* Notifications Dropdown */
 .notif-wrapper {
   position: relative;
+}
+
+#notif-bell-btn {
+  padding-inline: 0;
+}
+
+#notif-bell-btn .ui-icon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .notif-badge {
@@ -303,7 +316,7 @@
   top: -4px;
   right: -4px;
   background-color: var(--danger);
-  color: #FFFFFF;
+  color: var(--text-inverse);
   font-size: 0.7rem;
   font-weight: 700;
   width: 18px;
@@ -811,7 +824,7 @@
   bottom: 2rem;
   right: 2rem;
   background-color: var(--primary);
-  color: #FFFFFF;
+  color: var(--primary-text);
   padding: 1rem 1.75rem;
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-lg);

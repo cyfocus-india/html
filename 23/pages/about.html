@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Lumora Optical &amp; Eye Care</title>
+  <meta name="description" content="The story behind Lumora Optical & Eye Care: an independent, optometrist-led eye clinic and optical store on 12th Main, Indiranagar, Bengaluru, since 2012.">
+  <meta name="theme-color" content="#0b5f66">
+
+  <!-- Favicon: PNG of the Lumora logomark -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Fonts: DM Serif Display (headings) + DM Sans 400/500/700 (body); system fallbacks in CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Apply the saved theme and direction before first paint (no flash) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem('lumora-theme');
+        var dir = localStorage.getItem('lumora-dir');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', theme);
+        if (dir === 'rtl' || dir === 'ltr') root.setAttribute('dir', dir);
+      } catch (e) {
+        root.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+        <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <ul class="dropdown" id="home-menu">
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link is-current" href="about.html" aria-current="page">About Us</a></li>
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link" href="brands.html">Brands</a></li>
+          <li><a class="nav-link" href="eye-test.html">Eye Test</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="sym" aria-hidden="true">☾</span></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="dir-label">RTL</span></button>
+          <a class="btn btn-sm" href="eye-test.html#book">Book Eye Test</a>
+        </div>
+      </nav>
+
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- =================== ABOUT US =================== -->
+  <main id="main">
+
+    <!-- Section 1 — Page hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-card page-hero-card--about">
+          <img src="../assets/images/story-frame-wall-customer.jpg" alt="Woman adjusting her new glasses in front of a wall of eyeglass frames" width="1000" height="800" fetchpriority="high">
+          <div class="page-hero-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="../index.html">Home 1</a></li>
+                <li aria-current="page">About Us</li>
+              </ol>
+            </nav>
+            <h1 id="page-title">About Us</h1>
+            <p class="lead">An independent, optometrist-led eye clinic and optical store on 12th Main, Indiranagar. Since 2012, every pair of glasses we make has started with a proper look at the eyes behind them.</p>
+            <ul class="hero-facts">
+              <li>Independent since 2012</li>
+              <li>7 eye-care professionals</li>
+              <li>Rated 4.9 on Google</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 — Our story, founder quote and key numbers -->
+    <section class="section section-alt" aria-labelledby="story-title">
+      <div class="container">
+        <div class="about-story">
+          <div class="about-story-media">
+            <img src="../assets/images/exam-phoropter-optometrist.jpg" alt="Optometrist adjusting a phoropter in front of a seated patient’s eyes" width="1000" height="800" loading="lazy">
+            <p class="since-badge" aria-hidden="true"><span>Since</span><strong>2012</strong></p>
+          </div>
+
+          <div>
+            <p class="eyebrow">Our story</p>
+            <h2 id="story-title">Founded by an optometrist who refused to rush</h2>
+            <p>Karthik Rao spent eight years in a busy hospital eye department, where every test had to fit into seven minutes. In 2012 he took two rooms on the first floor of 612, 12th Main Road and opened Lumora with one rule: an eye test lasts as long as your eyes need.</p>
+            <p>Those two rooms are now a full eye clinic, an in-house lens lab and a wall of 1,200 frames. The rule hasn’t changed — and neither has the address.</p>
+
+            <figure class="founder-quote">
+              <blockquote>
+                <p>People don’t remember how fast their eye test was. They remember whether someone actually listened.</p>
+              </blockquote>
+              <figcaption>
+                <img src="../assets/images/team-karthik-rao.jpg" alt="" width="48" height="48" loading="lazy">
+                <span><strong>Karthik Rao</strong> Founder &amp; clinical director</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="about-numbers">
+          <li><strong><span dir="ltr">38,000+</span></strong><span>eye exams since 2012</span></li>
+          <li><strong><span dir="ltr">9,400</span></strong><span>children screened free at school camps</span></li>
+          <li><strong><span dir="ltr">1,200</span></strong><span>frames to try on in store</span></li>
+          <li><strong><span dir="ltr">4.9 / 5</span></strong><span>average from 1,186 Google reviews</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 — Milestones timeline -->
+    <section class="section" aria-labelledby="milestones-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Milestones</p>
+          <h2 id="milestones-title">Fourteen years on 12th Main</h2>
+          <p class="lead">We’ve grown one careful step at a time, and we’ve never moved address.</p>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <p class="timeline-year"><time datetime="2012">2012</time></p>
+            <h3>Two chairs, one rule</h3>
+            <p>Karthik Rao opens a two-chair eye clinic on the first floor of 612, 12th Main Road.</p>
+          </li>
+          <li>
+            <p class="timeline-year"><time datetime="2014">2014</time></p>
+            <h3>Our own lens lab</h3>
+            <p>Edging lenses in-house means single-vision glasses are ready in three working days.</p>
+          </li>
+          <li>
+            <p class="timeline-year"><time datetime="2016">2016</time></p>
+            <h3>School eye camps</h3>
+            <p>Free screening drives begin in Bengaluru schools — 9,400 children checked so far.</p>
+          </li>
+          <li>
+            <p class="timeline-year"><time datetime="2019">2019</time></p>
+            <h3>Lumora Atelier</h3>
+            <p>Our own acetate frames, drawn in Indiranagar and hand-polished by a family workshop in Mumbai.</p>
+          </li>
+          <li>
+            <p class="timeline-year"><time datetime="2022">2022</time></p>
+            <h3>Specialty clinics</h3>
+            <p>Myopia control, dry eye and keratoconus clinics for problems glasses alone can’t solve.</p>
+          </li>
+          <li>
+            <p class="timeline-year">Today</p>
+            <h3>A team of seven</h3>
+            <p>Four optometrists and three dispensing opticians, with more than 38,000 eye exams behind us.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section 4 — Values -->
+    <section class="section section-alt" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">What we stand for</p>
+          <h2 id="values-title">Four promises behind every appointment</h2>
+          <p class="lead">Whoever you see and whatever you buy, these don’t change.</p>
+        </div>
+
+        <ul class="values-grid">
+          <li class="value">
+            <span class="value-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3>Eye health before eyewear</h3>
+            <p>Every appointment screens for glaucoma, cataract and diabetic changes before anyone mentions frames.</p>
+          </li>
+          <li class="value">
+            <span class="value-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </span>
+            <h3>Time, not targets</h3>
+            <p>Our optometrists aren’t paid on sales. If your eyes need longer than the booked slot, they get it.</p>
+          </li>
+          <li class="value">
+            <span class="value-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+            </span>
+            <h3>Prices on the tag</h3>
+            <p>Anti-glare, UV400 and lifetime adjustments are already included, and the test fee comes off a complete pair.</p>
+          </li>
+          <li class="value">
+            <span class="value-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Genuine, traceable frames</h3>
+            <p>Branded frames come only from authorised Indian distributors, with the serial number printed on your invoice.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5 — Team -->
+    <section class="section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <p class="eyebrow">The team</p>
+            <h2 id="team-title">The optometrists you’ll meet</h2>
+            <p class="lead">Four specialists share one patient record, so whoever you see already has your scans and notes on screen.</p>
+          </div>
+          <a class="link-arrow" href="eye-test.html#book">Book with any of them <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+
+        <ul class="team-grid">
+          <li class="member">
+            <img src="../assets/images/team-karthik-rao.jpg" alt="Karthik Rao smiling in a white coat with a stethoscope and glasses" width="600" height="700" loading="lazy">
+            <h3>Karthik Rao</h3>
+            <p class="role">Founder &amp; clinical director</p>
+            <p>M.Optom, 22 years in practice. Leads glaucoma screening and complex prescriptions.</p>
+            <p class="langs">Speaks English, Kannada, Telugu</p>
+          </li>
+          <li class="member">
+            <img src="../assets/images/team-sana-fernandes.jpg" alt="Sana Fernandes in teal scrubs, standing with arms folded and smiling" width="600" height="700" loading="lazy">
+            <h3>Sana Fernandes</h3>
+            <p class="role">Paediatric &amp; myopia optometrist</p>
+            <p>B.Optom with a paediatric fellowship. Runs the children’s clinic and our school eye camps.</p>
+            <p class="langs">Speaks English, Konkani, Hindi</p>
+          </li>
+          <li class="member">
+            <img src="../assets/images/team-arjun-menon.jpg" alt="Arjun Menon in a white coat and glasses, arms folded" width="600" height="700" loading="lazy">
+            <h3>Arjun Menon</h3>
+            <p class="role">Contact lens specialist</p>
+            <p>B.Optom, FIACLE. Fits scleral and keratoconus lenses and trains first-time wearers.</p>
+            <p class="langs">Speaks English, Malayalam, Tamil</p>
+          </li>
+          <li class="member">
+            <img src="../assets/images/team-priya-raghavan.jpg" alt="Priya Raghavan in a white coat with a stethoscope against a red wall" width="600" height="700" loading="lazy">
+            <h3>Priya Raghavan</h3>
+            <p class="role">Dry eye &amp; low vision optometrist</p>
+            <p>M.Optom. Heads the dry eye clinic and low vision aids service.</p>
+            <p class="langs">Speaks English, Tamil, Kannada</p>
+          </li>
+        </ul>
+
+        <div class="team-note">
+          <p><strong>Front of house:</strong> three dispensing opticians fit, adjust and repair every pair, and store manager Neha Kulkarni personally answers any concern within one working day.</p>
+          <a class="link-arrow" href="contact.html">Contact the team <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 — Community work -->
+    <section class="section section-alt" aria-labelledby="community-title">
+      <div class="container split">
+        <div class="split-media community-media">
+          <img src="../assets/images/collection-kids.jpg" alt="Smiling young girl wearing pink rectangular glasses" width="720" height="900" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Beyond the store</p>
+          <h2 id="community-title">Good eyesight shouldn’t depend on what you can afford</h2>
+          <p>Part of every working week goes to people who would never walk into an optical store.</p>
+          <ul class="about-list">
+            <li>
+              <h3>Free school eye camps</h3>
+              <p>Our paediatric team has screened 9,400 children in Bengaluru schools and followed up every child who needed glasses or treatment.</p>
+            </li>
+            <li>
+              <h3>A second life for old frames</h3>
+              <p>Frames traded in for ₹500 off a new pair are cleaned, re-glazed and given to people who can’t afford glasses.</p>
+            </li>
+            <li>
+              <h3>Workplace eye camps</h3>
+              <p>On-site screening for teams of 25 or more, with practical advice for long screen days.</p>
+            </li>
+          </ul>
+          <a class="link-arrow" href="contact.html?topic=corporate#contact-form">Request an eye camp <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7 — Next step -->
+    <section class="section" aria-labelledby="about-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="about-cta-title">Come and see us on 12th Main</h2>
+            <p>Browse 1,200 frames, get a free adjustment or book a 20-minute eye test. Step-free entrance, with a lift to the first floor.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="eye-test.html#book">Book Eye Test</a>
+            <a class="cta-link" href="contact.html#map-title">or get directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Visit strip: address, phone & email, opening hours with live status -->
+      <ul class="footer-visit">
+        <li>
+          <h2><span class="footer-visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Visit the store</h2>
+          <address>1st Floor, 612, 12th Main Road,<br>HAL&nbsp;2nd&nbsp;Stage, Indiranagar, Bengaluru&nbsp;560008</address>
+          <a class="footer-visit-link" href="contact.html#map-title">Get directions <span class="arr" aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h2><span class="footer-visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>Call or email</h2>
+          <p><a href="tel:+918041276650" dir="ltr">+91 80 4127 6650</a><br><a href="mailto:hello@lumoraoptical.in">hello@lumoraoptical.in</a></p>
+        </li>
+        <li>
+          <h2><span class="footer-visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>Opening hours</h2>
+          <p>Mon–Sat 10 am – 8:30 pm<br>Sun 11 am – 6 pm</p>
+          <p class="footer-status" data-store-status><span class="status-dot" aria-hidden="true"></span><span data-status-text>Walk-ins welcome</span></p>
+        </li>
+      </ul>
+
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a class="brand" href="../index.html">
+            <img src="../assets/images/logo-mark.png" alt="Lumora logomark: a pair of glasses with an amber iris in one lens" width="44" height="44">
+            <span class="brand-name">Lumora<small>Optical &amp; Eye Care</small></span>
+          </a>
+          <p class="footer-about">Eye tests, glasses and contact lenses under one roof in Indiranagar, Bengaluru, since 2012.</p>
+          <ul class="footer-social" aria-label="Lumora on social media">
+            <li>
+              <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow Lumora on Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Lumora on Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon-btn" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Follow Lumora on X (Twitter)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon-btn" href="https://wa.me/919845021734" target="_blank" rel="noopener noreferrer" aria-label="Chat with Lumora on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon-btn" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Connect with Lumora on LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer">
+          <div>
+            <h2 class="footer-title">Explore</h2>
+            <ul>
+              <li><a href="../index.html">Home 1</a></li>
+              <li><a href="../index1.html">Home 2</a></li>
+              <li><a href="about.html" aria-current="page">About Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-title">Shop</h2>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="brands.html">Brands</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-title">Care</h2>
+            <ul>
+              <li><a href="eye-test.html">Eye Test</a></li>
+              <li><a href="eye-test.html#book">Book Eye Test</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Lumora Optical &amp; Eye Care. All rights reserved.</p>
+        <a class="footer-top-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

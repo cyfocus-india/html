@@ -19,6 +19,11 @@
 (function () {
   'use strict';
 
+  /* Inline icons, drawn in the same 24px line style as the rest of the site */
+  var SVG_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+  var ICON_CHECK = SVG_OPEN + '<path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  var ICON_STAR = SVG_OPEN + '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+
   /* ------------------------------------------------------------------
      1. Helpers
      ------------------------------------------------------------------ */
@@ -651,7 +656,7 @@
       var pct = Math.round((1 - s.seatsLeft / s.cap) * 100);
       var low = s.seatsLeft <= 3;
       var action = booked
-        ? '<span class="chip chip--booked">✓ Booked</span><button class="act-btn" type="button" data-nav="sessions">Manage</button>'
+        ? '<span class="chip chip--booked">' + ICON_CHECK + 'Booked</span><button class="act-btn" type="button" data-nav="sessions">Manage</button>'
         : s.seatsLeft === 0
           ? '<button class="btn btn--sm" type="button" disabled>Full</button>'
           : '<button class="btn btn--sm" type="button" data-book="' + esc(s.id) + '">Book seat</button>';
@@ -782,7 +787,7 @@
       if (b.status === 'cancelled') actions = '<button class="act-btn act-btn--danger" type="button" data-delete-booking="' + b.id + '">Delete</button>';
       return '<tr>' +
         '<td class="cell-title"><strong>' + esc(b.title) + '</strong><span>' + esc(b.cuisine) + ' · ' + (b.type === 'workshop' ? 'Weekend workshop' : 'Class') + (b.note ? ' · Note: ' + esc(b.note) : '') + '</span></td>' +
-        '<td data-label="Date" class="nowrap">' + esc(fmtDate(b.date)) + '<br><span class="muted small">' + esc(b.type === 'workshop' ? 'Sat & Sun, 10 AM–4 PM' : b.time) + '</span></td>' +
+        '<td data-label="Date" class="nowrap"><span class="val-block">' + esc(fmtDate(b.date)) + '<br><span class="muted small">' + esc(b.type === 'workshop' ? 'Sat & Sun, 10 AM–4 PM' : b.time) + '</span></span></td>' +
         '<td data-label="Chef">' + esc(b.chef) + '</td>' +
         '<td data-label="Seats">' + b.seats + '</td>' +
         '<td data-label="Status">' + statusChip(b.status) + '</td>' +
@@ -923,7 +928,7 @@
       var media = r.img ? '<img src="' + IMG + esc(r.img) + '" alt="' + esc(r.title) + '" width="800" height="560" loading="lazy">' : '<div class="recipe-thumb" aria-hidden="true">' + esc(initials(r.title)) + '</div>';
       var own = r.own ? '<button class="act-btn" type="button" data-edit-recipe="' + r.id + '">Edit</button><button class="act-btn act-btn--danger" type="button" data-delete-recipe="' + r.id + '">Delete</button>' : '';
       return '<article class="recipe-card">' + media +
-        '<button class="fav-btn" type="button" data-fav="' + r.id + '" aria-pressed="' + (r.fav ? 'true' : 'false') + '" aria-label="' + (r.fav ? 'Remove from favourites' : 'Add to favourites') + ': ' + esc(r.title) + '">' + (r.fav ? '★' : '☆') + '</button>' +
+        '<button class="fav-btn" type="button" data-fav="' + r.id + '" aria-pressed="' + (r.fav ? 'true' : 'false') + '" aria-label="' + (r.fav ? 'Remove from favourites' : 'Add to favourites') + ': ' + esc(r.title) + '">' + ICON_STAR + '</button>' +
         '<div class="recipe-body">' +
           '<div class="chip-row"><span class="chip">' + esc(r.cuisine) + '</span>' + (r.own ? '<span class="chip chip--sage">My recipe</span>' : '') + '</div>' +
           '<h3>' + esc(r.title) + '</h3>' +

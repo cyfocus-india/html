@@ -18,8 +18,8 @@
     </a>
 
     <div class="auth-controls">
-      <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"><span class="toggle-icon">☾</span><span class="toggle-text">Dark</span></button>
-      <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Toggle text direction"><span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span></button>
+      <button type="button" class="toggle-btn theme-toggle-btn" aria-label="Switch to dark mode" title="Switch to dark mode"><span class="toggle-icon theme-icon-moon" aria-hidden="true"></span></button>
+      <button type="button" class="toggle-btn dir-toggle-btn" aria-label="Switch to right-to-left direction" title="Switch to right-to-left direction"><span class="toggle-text">RTL</span></button>
     </div>
   </header>
 
@@ -31,6 +31,14 @@
         <h1>Create Account</h1>
         <p>Start scheduling doorstep laundry &amp; dry cleaning in minutes</p>
       </div>
+
+      <!-- Social Sign-Up Options -->
+      <div class="auth-social-buttons">
+        <button type="button" class="social-auth-btn" data-provider="Google"><img src="../assets/images/signin-google.png" alt="" width="20" height="20"><span>Sign up with Google</span></button>
+        <button type="button" class="social-auth-btn" data-provider="Apple"><img src="../assets/images/signin-apple.png" alt="" class="apple-mark" width="20" height="20"><span>Sign up with Apple</span></button>
+      </div>
+
+      <div class="auth-divider">or sign up with email</div>
 
       <div id="signupError" class="alert-box" style="background-color:#fee2e2; color:#b91c1c; border:1px solid #ef4444; margin-bottom:1.25rem;"></div>
 

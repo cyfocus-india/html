@@ -1,8 +1,9 @@
 /**
  * Lumina Dental & Oral Care Center - Main JavaScript (all public and auth pages)
- * Handles: theme + direction toggles, desktop dropdown, mobile slide-in menu,
- *          contact form validation and prefill, Sign In / Reset / Sign Up forms,
- *          and scroll-reveal animations.
+ * Handles: theme + direction toggles, sticky header shadow, desktop dropdown,
+ *          mobile slide-in menu, contact form validation and prefill,
+ *          Sign In / Reset / Sign Up forms with Google and Apple buttons,
+ *          footer newsletter sign-up, and scroll-reveal animations.
  * Tech: vanilla JavaScript only (no frameworks or libraries).
  */
 (function () {
@@ -60,8 +61,9 @@
     store.set('lumina_dir', dir);
     document.querySelectorAll('[data-action="toggle-dir"]').forEach(function (btn) {
       var rtl = dir === 'rtl';
-      btn.textContent = rtl ? '⇄ LTR' : '⇄ RTL';
+      btn.textContent = rtl ? 'LTR' : 'RTL';
       btn.setAttribute('aria-label', rtl ? 'Switch to left-to-right layout' : 'Switch to right-to-left layout');
+      btn.setAttribute('title', rtl ? 'Left-to-right layout' : 'Right-to-left layout');
     });
     document.dispatchEvent(new CustomEvent('lumina:dirchange', { detail: dir }));
   }
@@ -74,6 +76,26 @@
         applyDirection(current === 'rtl' ? 'ltr' : 'rtl');
       });
     });
+  }
+
+  // -------------------------------------------------------------------------
+  // 2b. Sticky header: add a shadow once the page has scrolled
+  // -------------------------------------------------------------------------
+  function initHeaderShadow() {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var ticking = false;
+    function update() {
+      header.classList.toggle('is-scrolled', window.scrollY > 8);
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    update();
   }
 
   // -------------------------------------------------------------------------
@@ -541,12 +563,80 @@
     });
   }
 
+  // Google / Apple buttons on Sign In and Sign Up. There is no identity
+  // provider behind this demo, so they sign in with the sample patient profile.
+  function initSocialSignIn() {
+    var buttons = document.querySelectorAll('[data-social-signin]');
+    if (!buttons.length) return;
+
+    function reset() {
+      buttons.forEach(function (btn) {
+        btn.removeAttribute('aria-busy');
+        var label = btn.querySelector('.btn-social-label');
+        if (label) label.textContent = 'Continue with ' + btn.getAttribute('data-social-signin');
+      });
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.getAttribute('aria-busy') === 'true') return;
+        var label = btn.querySelector('.btn-social-label');
+        btn.setAttribute('aria-busy', 'true');
+        if (label) label.textContent = 'Connecting to ' + btn.getAttribute('data-social-signin') + '…';
+        setTimeout(function () {
+          saveUser({
+            name: 'Eleanor Vance',
+            email: 'eleanor.vance@example.com',
+            phone: '(415) 555-0192',
+            insurance: 'Delta Dental PPO #DLT-89420',
+            bloodGroup: 'O+',
+            allergies: 'None recorded',
+            smsReminders: true,
+            emailReceipts: true
+          });
+          window.location.href = 'dashboard.html';
+        }, 900);
+      });
+    });
+
+    // Coming back with the browser's Back button restores the page as it was left
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) reset();
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // 7b. Footer newsletter: validate the email, then confirm inline
+  // -------------------------------------------------------------------------
+  function initNewsletter() {
+    var form = document.getElementById('newsletterForm');
+    if (!form) return;
+    var email = document.getElementById('newsletterEmail');
+    var success = document.getElementById('newsletterSuccess');
+    liveClear(form);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrors(form);
+      success.classList.remove('is-visible');
+      var value = email.value.trim();
+      if (!EMAIL_RE.test(value)) {
+        setError(email, 'Please enter a valid email address, e.g. name@example.com.');
+        email.focus();
+        return;
+      }
+      success.textContent = 'Thanks for subscribing! A confirmation email is on its way to ' + value + '.';
+      success.classList.add('is-visible');
+      form.reset();
+    });
+  }
+
   // -------------------------------------------------------------------------
   // 8. Scroll-reveal animations (skipped when the user prefers reduced motion)
   // -------------------------------------------------------------------------
   function initScrollReveal() {
     var targets = document.querySelectorAll(
-      '.feature-card, .journey-step-card, .testimonial-card, .doctor-card, .service-card, .pricing-item-card, .plan-card, .cta-banner, .booking-split, .info-card, .contact-card, .map-card, .section-header'
+      '.feature-card, .journey-step-card, .testimonial-card, .doctor-card, .service-card, .pricing-item-card, .plan-card, .cta-banner, .booking-split, .info-card, .contact-card, .map-card, .section-header, .about-stat, .timeline-item, .rating-summary'
     );
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!targets.length || reduce || !('IntersectionObserver' in window)) return;
@@ -578,6 +668,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     initDirection();
+    initHeaderShadow();
     initDesktopDropdown();
     initMobileMenu();
     initServiceClickTracking();
@@ -585,6 +676,8 @@
     initPasswordToggles();
     initSignIn();
     initSignUp();
+    initSocialSignIn();
+    initNewsletter();
     initScrollReveal();
   });
 })();

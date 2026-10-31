@@ -561,4 +561,28 @@
       startSession(user);
     });
   }
+
+  /* ---------- Social SSO Auth (Google / Apple) ---------- */
+  document.querySelectorAll('[data-social-auth]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var provider = btn.getAttribute('data-social-auth');
+      var email = provider === 'apple' ? 'jordan.reyes@icloud.com' : 'jordan.reyes@gmail.com';
+      startSession({ name: 'Jordan Reyes', email: email });
+    });
+  });
+
+  /* ---------- Footer Newsletter ---------- */
+  document.querySelectorAll('[data-newsletter-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('.newsletter-input');
+      var msg = form.querySelector('.newsletter-msg');
+      if (!input || !input.value.trim() || !input.checkValidity()) return;
+      if (msg) {
+        msg.textContent = "✓ You're on the list! Watch your inbox for member perks.";
+        msg.hidden = false;
+      }
+      input.value = '';
+    });
+  });
 })();

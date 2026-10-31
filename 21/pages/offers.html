@@ -16,7 +16,7 @@
     <div class="container header-inner">
       <!-- Brand Logo -->
       <a href="../index.html" class="site-logo">
-        <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+        <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="48" height="48">
         <span class="logo-text">
           <span class="logo-title">Scoop & Swirl</span>
           <span class="logo-tagline">Artisan Parlour</span>
@@ -37,6 +37,7 @@
                 <li><a href="../index1.html" class="dropdown-item">Home 2</a></li>
               </ul>
             </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
             <li class="nav-item"><a href="offers.html" class="nav-link active">Offers</a></li>
             <li class="nav-item"><a href="party-orders.html" class="nav-link">Party Orders</a></li>
@@ -48,7 +49,7 @@
         <div class="mobile-drawer-bottom">
           <div class="mobile-controls-row">
             <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
-            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+            <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">RTL</button>
           </div>
           <a href="menu.html" class="btn btn-primary">Order Online</a>
         </div>
@@ -57,7 +58,7 @@
       <!-- Header Desktop Controls -->
       <div class="header-actions">
         <button class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark/light mode">☾</button>
-        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">⇄ RTL</button>
+        <button class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">RTL</button>
         <a href="menu.html" class="btn btn-primary">Order Online</a>
         <!-- CSS Animated Hamburger Button -->
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -85,7 +86,7 @@
         <p class="hero-lead">
           Enjoy recurring weekly discounts, bundled take-home dessert kits for family movie nights, and earn sweet rewards every time you visit with our Scoop Club.
         </p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <div class="btn-group">
           <a href="#weekly-specials" class="btn btn-primary">Weekly Deals</a>
           <a href="#take-home-kits" class="btn btn-secondary">Take-Home Kits</a>
         </div>
@@ -195,7 +196,7 @@
                 <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.9rem;">$45.00</span>
                 <span class="flavor-price" style="font-size: 1.45rem; margin-left: 0.5rem;">$34.00</span>
               </div>
-              <button class="btn btn-primary btn-sm btn-order-item" data-id="kit-sundae-night" data-name="The Sundae Night-In Kit" data-price="34.00" data-category="kit">+ Order Kit</button>
+              <button class="btn btn-primary btn-order-item" data-id="kit-sundae-night" data-name="The Sundae Night-In Kit" data-price="34.00" data-category="kit">+ Order Kit</button>
             </div>
           </div>
         </div>
@@ -216,7 +217,7 @@
                 <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.9rem;">$48.00</span>
                 <span class="flavor-price" style="font-size: 1.45rem; margin-left: 0.5rem;">$38.00</span>
               </div>
-              <button class="btn btn-primary btn-sm btn-order-item" data-id="kit-pints-stash" data-name="The 4-Pint Freezer Stash" data-price="38.00" data-category="kit">+ Order Kit</button>
+              <button class="btn btn-primary btn-order-item" data-id="kit-pints-stash" data-name="The 4-Pint Freezer Stash" data-price="38.00" data-category="kit">+ Order Kit</button>
             </div>
           </div>
         </div>
@@ -263,7 +264,7 @@
         </div>
 
         <div class="card loyalty-tier-card" style="border: 2px solid var(--primary);">
-          <div class="loyalty-pts-badge" style="background-color: var(--primary-light); color: var(--primary);">Birthday Perk</div>
+          <div class="loyalty-pts-badge" style="background-color: var(--primary-light); color: var(--primary-ink);">Birthday Perk</div>
           <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Birthday Sundae Free</h4>
           <p style="font-size: 0.85rem; color: var(--text-muted);">
             Celebrate your special day with a complimentary celebratory birthday sundae on the house.
@@ -342,9 +343,9 @@
       <p class="cta-banner-desc">
         Stop by either of our two convenient parlour locations or order online to start earning rewards right away.
       </p>
-      <div class="cta-banner-actions">
-        <a href="menu.html" class="btn btn-primary btn-lg">Browse Menu &amp; Order</a>
-        <a href="contact.html" class="btn btn-secondary btn-lg">View Parlour Locations</a>
+      <div class="cta-banner-actions btn-group">
+        <a href="menu.html" class="btn btn-primary">Browse Menu &amp; Order</a>
+        <a href="contact.html" class="btn btn-secondary">View Parlour Locations</a>
       </div>
     </section>
   </div>
@@ -354,11 +355,29 @@
        ====================================================================== -->
   <footer class="site-footer">
     <div class="container">
+      <!-- Newsletter Sign-up -->
+      <div class="footer-newsletter">
+        <div>
+          <h3 class="footer-newsletter-title">Get the Scoop First</h3>
+          <p class="footer-newsletter-text">
+            One short email a month with new flavour drops, secret-menu nights and members-only treats. No spam, unsubscribe anytime.
+          </p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <div class="newsletter-field-row">
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" autocomplete="email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-feedback" id="newsletterFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
       <div class="footer-top-grid">
-        <!-- Brand Info -->
+        <!-- Brand Info & Social Media -->
         <div class="footer-brand">
           <a href="../index.html" class="site-logo">
-            <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="44" height="44">
+            <img src="../assets/images/logo.png" alt="Scoop & Swirl Logo" width="48" height="48">
             <span class="logo-text">
               <span class="logo-title">Scoop & Swirl</span>
               <span class="logo-tagline">Artisan Parlour</span>
@@ -367,6 +386,20 @@
           <p class="footer-desc">
             Handcrafted small-batch ice creams, towering waffle sundaes, thick shakes, and celebration gelato cakes made fresh daily.
           </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/icon-instagram.png" alt="Follow Scoop &amp; Swirl on Instagram" width="18" height="18">
+            </a>
+            <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/icon-facebook.png" alt="Follow Scoop &amp; Swirl on Facebook" width="18" height="18">
+            </a>
+            <a href="https://www.tiktok.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/icon-tiktok.png" alt="Follow Scoop &amp; Swirl on TikTok" width="18" height="18">
+            </a>
+            <a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/icon-youtube.png" alt="Watch Scoop &amp; Swirl on YouTube" width="18" height="18">
+            </a>
+          </div>
         </div>
 
         <!-- Links Group 1: Home -->
@@ -378,22 +411,46 @@
           </ul>
         </div>
 
-        <!-- Links Group 2: Parlour -->
+        <!-- Links Group 2: Company -->
+        <div>
+          <h4 class="footer-group-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Group 3: Explore -->
         <div>
           <h4 class="footer-group-title">Explore</h4>
           <ul class="footer-links-list">
             <li><a href="menu.html" class="footer-link">Menu</a></li>
             <li><a href="offers.html" class="footer-link">Offers</a></li>
+            <li><a href="party-orders.html" class="footer-link">Party Orders</a></li>
           </ul>
         </div>
 
-        <!-- Links Group 3: Orders -->
-        <div>
-          <h4 class="footer-group-title">Orders</h4>
-          <ul class="footer-links-list">
-            <li><a href="party-orders.html" class="footer-link">Party Orders</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
+        <!-- Visit Us: Addresses, Phone & Email -->
+        <div class="footer-visit">
+          <h4 class="footer-group-title">Visit Us</h4>
+          <address class="footer-contact-list">
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon"><img src="../assets/images/icon-map-pin.png" alt="Location" width="16" height="16"></span>
+              <span><strong>Downtown Flagship</strong><bdi>742 Evergreen Terrace, Downtown District</bdi></span>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon"><img src="../assets/images/icon-map-pin.png" alt="Location" width="16" height="16"></span>
+              <span><strong>Sunset Beach Boardwalk</strong><bdi>120 Ocean Promenade, Pier Plaza Suite 4</bdi></span>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon"><img src="../assets/images/icon-phone.png" alt="Phone" width="16" height="16"></span>
+              <a href="tel:+15557266701" dir="ltr">(555) 726-6701</a>
+            </div>
+            <div class="footer-contact-row">
+              <span class="footer-contact-icon"><img src="../assets/images/icon-mail.png" alt="Email" width="16" height="16"></span>
+              <a href="mailto:hello@scoopandswirl.com">hello@scoopandswirl.com</a>
+            </div>
+          </address>
         </div>
       </div>
 

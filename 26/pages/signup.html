@@ -36,12 +36,12 @@
     <main class="auth-main" id="main">
       <div class="auth-top">
         <a class="brand" href="../index.html" aria-label="Marigold Grand Banquets, go to Home 1">
-          <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="36" height="46">
+          <img src="../assets/images/logo.png" alt="Marigold Grand logomark: a marigold bloom inside a golden arch" width="44" height="44">
           <span><span class="brand-name">Marigold Grand</span><span class="brand-tag">Client portal</span></span>
         </a>
         <div class="auth-tools">
           <button class="toggle-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">☾</button>
-          <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span> RTL</button>
+          <button class="toggle-btn" type="button" data-dir-toggle aria-label="Switch to right-to-left layout">RTL</button>
         </div>
       </div>
 
@@ -49,6 +49,24 @@
         <section aria-labelledby="signup-title">
           <h1 id="signup-title">Sign Up</h1>
           <p class="lead">Create your account in under a minute. No booking or payment needed.</p>
+
+          <div class="social-auth-grid">
+            <button class="btn-social" type="button" data-social="google">
+              <span class="social-icon social-icon--google" aria-hidden="true">G</span>
+              <span>Sign up with Google</span>
+            </button>
+            <button class="btn-social" type="button" data-social="apple">
+              <span class="social-icon social-icon--apple" aria-hidden="true"></span>
+              <span>Sign up with Apple</span>
+            </button>
+            <button class="btn-social" type="button" data-social="phone">
+              <span class="social-icon social-icon--phone" aria-hidden="true">📱</span>
+              <span>Sign up with Phone OTP</span>
+            </button>
+          </div>
+
+          <div class="auth-divider"><span>or sign up with email</span></div>
+
           <div class="auth-alert auth-alert--error" id="signupAlert" role="alert"></div>
           <form class="auth-form" id="signupForm" novalidate>
             <div class="field">

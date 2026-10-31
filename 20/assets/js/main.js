@@ -2,7 +2,8 @@
  * HYDROFIX PLUMBING & PIPE REPAIR SERVICE
  * Pure Vanilla JavaScript - No Libraries or Frameworks
  * Handles: Theme Toggle, Direction (LTR/RTL) Toggle, Responsive Mobile Drawer,
- * Accordions, Cost Estimator, Interactive Triage, & Form Validation
+ * Accordions, Cost Estimator, Interactive Triage, Form Validation,
+ * Sticky Header & Footer Newsletter Signup
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCostEstimator();
   initEmergencyChecklist();
   initContactForm();
+  initNewsletter();
   initHeaderScroll();
   initScrollAnimations();
 });
@@ -91,10 +93,10 @@ function applyDirection(dir) {
   dirToggles.forEach(btn => {
     const textSpan = btn.querySelector('.dir-text');
     if (dir === 'rtl') {
-      if (textSpan) textSpan.textContent = '⇄ LTR';
+      if (textSpan) textSpan.textContent = 'LTR';
       btn.setAttribute('aria-label', 'Switch to Left-to-Right layout');
     } else {
-      if (textSpan) textSpan.textContent = '⇄ RTL';
+      if (textSpan) textSpan.textContent = 'RTL';
       btn.setAttribute('aria-label', 'Switch to Right-to-Left layout');
     }
   });
@@ -112,12 +114,13 @@ function initMobileNav() {
 
   if (!hamburger || !mobilePanel) return;
 
+  // Scroll lock is set on <html> (not <body>) so the sticky header stays pinned while the drawer is open
   function openMenu() {
     hamburger.classList.add('is-active');
     hamburger.setAttribute('aria-expanded', 'true');
     mobilePanel.classList.add('is-open');
     if (backdrop) backdrop.classList.add('is-open');
-    document.body.classList.add('scroll-locked');
+    document.documentElement.classList.add('scroll-locked');
   }
 
   function closeMenu() {
@@ -125,7 +128,7 @@ function initMobileNav() {
     hamburger.setAttribute('aria-expanded', 'false');
     mobilePanel.classList.remove('is-open');
     if (backdrop) backdrop.classList.remove('is-open');
-    document.body.classList.remove('scroll-locked');
+    document.documentElement.classList.remove('scroll-locked');
   }
 
   hamburger.addEventListener('click', () => {
@@ -251,15 +254,15 @@ function initHome2Selector() {
     const match = solutions[val];
     if (match) {
       issueOutput.innerHTML = `
-        <div class="anim-pop" style="background-color: var(--bg-card); border: 2px solid var(--brand-blue); border-radius: var(--radius-md); padding: 1.5rem; text-align: start; margin-top: 1rem; box-shadow: var(--card-shadow);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-            <strong style="font-size: 1.15rem; color: var(--text-primary);">${match.title}</strong>
+        <div class="issue-result-card anim-pop">
+          <div class="issue-result-head">
+            <strong class="issue-result-title">${match.title}</strong>
             <span class="badge badge-guarantee">${match.eta}</span>
           </div>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">${match.desc}</p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-light); padding-top: 0.75rem;">
-            <span style="font-weight: 800; font-size: 1.1rem; color: var(--brand-blue);">${match.price}</span>
-            <a href="pages/contact.html?service=${match.serviceKey}" data-service="${match.serviceKey}" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.88rem;">Book This Service</a>
+          <p class="issue-result-desc">${match.desc}</p>
+          <div class="issue-result-foot">
+            <span class="issue-result-price">${match.price}</span>
+            <a href="pages/contact.html?service=${match.serviceKey}" data-service="${match.serviceKey}" class="btn-primary">Book This Service</a>
           </div>
         </div>
       `;
@@ -583,18 +586,65 @@ document.addEventListener('click', (e) => {
 });
 
 /* --------------------------------------------------------------------------
-   9. Sticky Header Dynamic Elevation on Scroll
+   9. Footer Newsletter Signup (Validation + Simulated Subscribe)
+   -------------------------------------------------------------------------- */
+function initNewsletter() {
+  const forms = document.querySelectorAll('.newsletter-form');
+
+  forms.forEach(form => {
+    const input = form.querySelector('.newsletter-input');
+    const feedback = form.querySelector('.newsletter-feedback');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!input || !feedback || !submitBtn) return;
+
+    function clearError() {
+      form.classList.remove('has-error');
+      input.removeAttribute('aria-invalid');
+      feedback.textContent = '';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.classList.remove('is-success');
+
+      const val = input.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(val)) {
+        form.classList.add('has-error');
+        input.setAttribute('aria-invalid', 'true');
+        feedback.textContent = val ? 'Please enter a valid email address.' : 'Please enter your email address.';
+        input.focus();
+        return;
+      }
+
+      clearError();
+      submitBtn.disabled = true;
+      feedback.textContent = 'Subscribing...';
+
+      // Subscribe Simulation
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        form.reset();
+        form.classList.add('is-success');
+        feedback.textContent = "You're subscribed! Look out for this month's maintenance checklist.";
+      }, 700);
+    });
+
+    input.addEventListener('input', () => {
+      if (form.classList.contains('has-error')) clearError();
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   10. Sticky Header Dynamic Elevation on Scroll (header stays pinned at all times)
    -------------------------------------------------------------------------- */
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
   function onScroll() {
-    if (window.scrollY > 25) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
-    }
+    header.classList.toggle('is-scrolled', window.scrollY > 25);
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -602,7 +652,7 @@ function initHeaderScroll() {
 }
 
 /* --------------------------------------------------------------------------
-   10. Scroll Reveal Animation Engine (Progressive Enhancement)
+   11. Scroll Reveal Animation Engine (Progressive Enhancement)
    -------------------------------------------------------------------------- */
 function initScrollAnimations() {
   // WCAG AA: Respect reduced-motion preferences
@@ -624,6 +674,8 @@ function initScrollAnimations() {
     '.plan-grid > *',
     '.process-step-grid > *',
     '.triage-step-grid > *',
+    '.about-stats-grid > *',
+    '.credential-grid > *',
     '.service-deep-card',
     '.emergency-cta-banner',
     '.cta-banner',
@@ -636,7 +688,7 @@ function initScrollAnimations() {
     '.pricing-tiers-wrapper'
   ];
 
-  const parentGrids = document.querySelectorAll('.grid-2, .grid-3, .grid-4, .plan-grid, .process-step-grid, .triage-step-grid');
+  const parentGrids = document.querySelectorAll('.grid-2, .grid-3, .grid-4, .plan-grid, .process-step-grid, .triage-step-grid, .about-stats-grid, .credential-grid');
   parentGrids.forEach(grid => {
     grid.classList.add('reveal-grid');
   });
@@ -665,7 +717,7 @@ function initScrollAnimations() {
 
   elementsToReveal.forEach(el => {
     // Avoid double-animating hero section items that already animate on load
-    if (el.closest('.home1-hero, .home2-hero, .services-hero, .pricing-hero, .emergency-hero, .contact-hero')) {
+    if (el.closest('.home1-hero, .home2-hero, .services-hero, .pricing-hero, .emergency-hero, .contact-hero, .about-hero')) {
       return;
     }
     el.classList.add('reveal-item');

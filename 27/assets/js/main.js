@@ -80,11 +80,11 @@
     dirToggleBtns.forEach(function (btn) {
       const labelSpan = btn.querySelector('.dir-label') || btn;
       if (dir === 'rtl') {
-        labelSpan.textContent = btn.classList.contains('drawer-control-btn') ? 'LTR Mode' : '⇄ LTR';
+        labelSpan.textContent = btn.classList.contains('drawer-control-btn') ? 'LTR Mode' : 'LTR';
         btn.setAttribute('title', 'Switch layout to Left-to-Right');
         btn.setAttribute('aria-label', 'Switch layout to Left-to-Right');
       } else {
-        labelSpan.textContent = btn.classList.contains('drawer-control-btn') ? 'RTL Mode' : '⇄ RTL';
+        labelSpan.textContent = btn.classList.contains('drawer-control-btn') ? 'RTL Mode' : 'RTL';
         btn.setAttribute('title', 'Switch layout to Right-to-Left');
         btn.setAttribute('aria-label', 'Switch layout to Right-to-Left');
       }
@@ -184,16 +184,29 @@
       });
     }
 
-    // Sticky Header Scroll Elevation
+    // Persistent Sticky Header (Remains pinned at the top on scroll)
     const siteHeader = document.querySelector('.site-header');
     if (siteHeader) {
-      window.addEventListener('scroll', function () {
+      let ticking = false;
+
+      const updateHeaderSticky = function () {
         if (window.scrollY > 15) {
           siteHeader.classList.add('scrolled');
         } else {
           siteHeader.classList.remove('scrolled');
         }
+        ticking = false;
+      };
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeaderSticky);
+          ticking = true;
+        }
       }, { passive: true });
+
+      // Initial check on page load
+      updateHeaderSticky();
     }
   }
 
@@ -694,6 +707,40 @@
   }
 
   // -------------------------------------------------------------------------
+  // 9. Footer Newsletter Subscription Controller
+  // -------------------------------------------------------------------------
+  function initFooterNewsletter() {
+    const form = document.getElementById('footer-newsletter-form');
+    if (!form) return;
+
+    const input = document.getElementById('footer-email-input');
+    const feedback = document.getElementById('footer-newsletter-feedback');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!input) return;
+
+      const email = input.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email || !emailRegex.test(email)) {
+        if (feedback) {
+          feedback.className = 'footer-newsletter-feedback error';
+          feedback.textContent = 'Please enter a valid email address.';
+        }
+        input.focus();
+        return;
+      }
+
+      if (feedback) {
+        feedback.className = 'footer-newsletter-feedback success';
+        feedback.textContent = 'Thank you! You are now subscribed to our newsletter.';
+      }
+      input.value = '';
+    });
+  }
+
+  // -------------------------------------------------------------------------
   // Initialize on DOM Ready
   // -------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
@@ -705,5 +752,6 @@
     initBulkEstimator();
     initAnimations();
     initDirectOrderSystem();
+    initFooterNewsletter();
   });
 })();

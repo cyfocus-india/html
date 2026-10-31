@@ -44,12 +44,12 @@
   /* ---------- Theme toggle (light / dark) ---------- */
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
+    var dark = theme === "dark";
     $all(".theme-toggle").forEach(function (btn) {
-      var dark = theme === "dark";
-      btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+      var label = dark ? "Switch to light theme" : "Switch to dark theme";
+      btn.setAttribute("aria-label", label);
+      btn.setAttribute("title", label);
       btn.setAttribute("aria-pressed", String(dark));
-      var icon = $(".icon", btn);
-      if (icon) icon.textContent = dark ? "☀︎" : "☾";
     });
   }
 

@@ -15,8 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initOnlineOrderingSystem();
   initStickyHeader();
+  initNewsletterForm();
   initScrollAnimations();
 });
+
+/* Lock / unlock background scrolling while a drawer or modal is open.
+   The lock goes on <html> (the real scroller) so the sticky header stays put;
+   the body class keeps the header's open-drawer styling. */
+function setScrollLock(locked) {
+  document.documentElement.classList.toggle('no-scroll', locked);
+  document.body.classList.toggle('no-scroll', locked);
+}
 
 /* ==========================================================================
    1. Theme Toggle (Light / Dark Mode with localStorage)
@@ -80,7 +89,8 @@ function applyDirection(dir) {
 
   const dirToggles = document.querySelectorAll('.dir-toggle-btn');
   dirToggles.forEach(btn => {
-    btn.textContent = dir === 'rtl' ? '⇄ LTR' : '⇄ RTL';
+    // Plain text label: shows the direction the click switches to
+    btn.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
     btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to left to right layout' : 'Switch to right to left layout');
   });
 }
@@ -101,7 +111,7 @@ function initMobileNavigation() {
     hamburgerBtn.setAttribute('aria-expanded', 'true');
     navDrawer.classList.add('active');
     navOverlay.classList.add('active');
-    document.body.classList.add('no-scroll');
+    setScrollLock(true);
   }
 
   function closeMenu() {
@@ -109,7 +119,7 @@ function initMobileNavigation() {
     hamburgerBtn.setAttribute('aria-expanded', 'false');
     navDrawer.classList.remove('active');
     navOverlay.classList.remove('active');
-    document.body.classList.remove('no-scroll');
+    setScrollLock(false);
   }
 
   hamburgerBtn.addEventListener('click', () => {
@@ -557,7 +567,7 @@ function injectOrderingElements() {
           <span>Total</span>
           <span class="total-amount" id="cartTotal">$0.00</span>
         </div>
-        <button class="btn btn-primary btn-lg" id="btnPlaceOrder" style="width: 100%;">
+        <button class="btn btn-primary" id="btnPlaceOrder" style="width: 100%;">
           Place Pickup Order
         </button>
       </div>
@@ -644,9 +654,9 @@ function injectOrderingElements() {
         <div class="order-modal-footer">
           <div>
             <small style="color: var(--text-muted); display: block;">Item Total:</small>
-            <strong id="customizerLiveTotal" style="font-size: 1.5rem; color: var(--primary);">$4.50</strong>
+            <strong id="customizerLiveTotal" style="font-size: 1.5rem; color: var(--primary-ink);">$4.50</strong>
           </div>
-          <button class="btn btn-primary btn-lg" id="btnConfirmCustomizer">
+          <button class="btn btn-primary" id="btnConfirmCustomizer">
             Add to Order
           </button>
         </div>
@@ -678,10 +688,10 @@ function injectOrderingElements() {
 
         <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.2rem; margin-bottom: 1.75rem; color: var(--text-main);">
           <span>Total Paid / Due:</span>
-          <span id="receiptTotalAmount" style="color: var(--primary);">$0.00</span>
+          <span id="receiptTotalAmount" style="color: var(--primary-ink);">$0.00</span>
         </div>
 
-        <button class="btn btn-primary btn-lg" id="btnCloseReceipt" style="width: 100%;">
+        <button class="btn btn-primary" id="btnCloseReceipt" style="width: 100%;">
           Done &amp; Order More Treats
         </button>
       </div>
@@ -746,7 +756,7 @@ function renderCartDrawer() {
         <p class="order-empty-text">
           Choose your favorite scoops, decadent sundaes, or thick milkshakes from our menu!
         </p>
-        <button class="btn btn-primary btn-sm" id="btnEmptyBrowseMenu">Browse Menu &amp; Flavors</button>
+        <button class="btn btn-primary" id="btnEmptyBrowseMenu">Browse Menu &amp; Flavors</button>
       </div>
     `;
     drawerFooter.style.display = 'none';
@@ -874,7 +884,7 @@ function openOrderDrawer() {
   if (drawer && backdrop) {
     drawer.classList.add('active');
     backdrop.classList.add('active');
-    document.body.classList.add('no-scroll');
+    setScrollLock(true);
   }
 }
 
@@ -884,7 +894,7 @@ function closeOrderDrawer() {
   if (drawer && backdrop) {
     drawer.classList.remove('active');
     backdrop.classList.remove('active');
-    document.body.classList.remove('no-scroll');
+    setScrollLock(false);
   }
 }
 
@@ -1048,14 +1058,14 @@ function openCustomizerModal(item) {
 
   calcCustomizerTotal();
   modal.classList.add('active');
-  document.body.classList.add('no-scroll');
+  setScrollLock(true);
 }
 
 function closeCustomizerModal() {
   const modal = document.getElementById('customizerModalBackdrop');
   if (modal) {
     modal.classList.remove('active');
-    document.body.classList.remove('no-scroll');
+    setScrollLock(false);
   }
 }
 
@@ -1182,7 +1192,7 @@ function setupOrderCheckout() {
     // Show Confirmation Screen
     if (receiptOverlay) {
       receiptOverlay.classList.add('active');
-      document.body.classList.add('no-scroll');
+      setScrollLock(true);
     }
   });
 
@@ -1198,25 +1208,21 @@ function closeOrderReceipt() {
   const receiptOverlay = document.getElementById('orderConfirmOverlay');
   if (receiptOverlay) {
     receiptOverlay.classList.remove('active');
-    document.body.classList.remove('no-scroll');
+    setScrollLock(false);
   }
 }
 
 /* ==========================================================================
    11. Sticky Header Ambient Shadow on Scroll
+   The header itself is CSS `position: sticky` and stays visible in both
+   scroll directions; this only adds the shadow (styled in CSS, both themes).
    ========================================================================== */
 function initStickyHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
-      header.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.08)';
-    } else {
-      header.classList.remove('scrolled');
-      header.style.boxShadow = '';
-    }
+    header.classList.toggle('scrolled', window.scrollY > 20);
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
@@ -1224,7 +1230,38 @@ function initStickyHeader() {
 }
 
 /* ==========================================================================
-   12. Smooth 60fps Scroll Reveal Animation System
+   12. Footer Newsletter Sign-up (Validation & Success Message)
+   ========================================================================== */
+function initNewsletterForm() {
+  const form = document.getElementById('newsletterForm');
+  if (!form) return;
+
+  const emailInput = document.getElementById('newsletterEmail');
+  const feedback = document.getElementById('newsletterFeedback');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    emailInput.setAttribute('aria-invalid', String(!isValid));
+    feedback.classList.toggle('is-error', !isValid);
+    feedback.classList.toggle('is-success', isValid);
+
+    if (!isValid) {
+      feedback.textContent = 'Please enter a valid email address.';
+      emailInput.focus();
+      return;
+    }
+
+    feedback.textContent = `You're on the list! Look out for our next flavour drop at ${email}.`;
+    form.reset();
+  });
+}
+
+/* ==========================================================================
+   13. Smooth 60fps Scroll Reveal Animation System
    Uses IntersectionObserver for GPU-accelerated reveals and progressive enhancement.
    ========================================================================== */
 function initScrollAnimations() {
@@ -1237,7 +1274,8 @@ function initScrollAnimations() {
     '.pricing-package-card, .offer-deal-card, .sundae-showcase-item, ' +
     '.loyalty-tier-card, .testimonial-card, .gallery-item, .contact-card, ' +
     '.accordion-item, .cta-banner, .party-calc-card, .sourcing-row, ' +
-    '.amenity-card, .calendar-table-wrap, .menu-filterable-item'
+    '.amenity-card, .calendar-table-wrap, .menu-filterable-item, ' +
+    '.story-row, .timeline-item, .team-card, .impact-card, .award-item'
   );
 
   if (!targets.length) return;
@@ -1247,7 +1285,7 @@ function initScrollAnimations() {
     '.grid, .process-grid, .weekly-offers-grid, ' +
     '.sundae-showcase-grid, .loyalty-tiers-grid, .reviews-grid, ' +
     '.gallery-grid, .contact-locations-grid, .party-calc-grid, ' +
-    '.experience-highlights-grid, .tasting-flights-grid'
+    '.experience-highlights-grid, .tasting-flights-grid, .awards-strip'
   );
 
   parentGrids.forEach(grid => {

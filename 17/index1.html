@@ -46,6 +46,7 @@
               <li><a href="index1.html" class="dropdown-link active" aria-current="page">Home 2</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a href="pages/about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="pages/services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="pages/doctors.html" class="nav-link">Doctors</a></li>
           <li class="nav-item"><a href="pages/pricing.html" class="nav-link">Pricing</a></li>
@@ -57,7 +58,7 @@
       <!-- Toggles and Sign In primary CTA -->
       <div class="header-actions">
         <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
-        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">RTL</button>
         <a href="pages/signin.html" class="btn btn-primary btn-sm header-signin-btn">Sign In</a>
 
         <!-- Hamburger (1024px and below): three CSS lines that animate into an X -->
@@ -95,6 +96,7 @@
             <li><a href="index1.html" class="mobile-accordion-link active" aria-current="page">Home 2</a></li>
           </ul>
         </li>
+        <li class="mobile-nav-item"><a href="pages/about.html" class="mobile-nav-link">About</a></li>
         <li class="mobile-nav-item"><a href="pages/services.html" class="mobile-nav-link">Services</a></li>
         <li class="mobile-nav-item"><a href="pages/doctors.html" class="mobile-nav-link">Doctors</a></li>
         <li class="mobile-nav-item"><a href="pages/pricing.html" class="mobile-nav-link">Pricing</a></li>
@@ -108,7 +110,7 @@
       <a href="pages/signin.html" class="btn btn-outline btn-block">Sign In</a>
       <div class="mobile-toggles-row">
         <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
-        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+        <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">RTL</button>
       </div>
     </div>
   </aside>
@@ -162,7 +164,7 @@
           <p>Each tool below replaces an older, slower or more invasive method, so appointments are shorter and results are more predictable.</p>
         </div>
 
-        <div class="grid-4">
+        <div class="grid-4 grid-align-rows">
           <article class="feature-card">
             <div class="feature-card-media">
               <img src="assets/images/tech-scanner.jpg" alt="Dental assistant scanning a patient's teeth with a handheld intraoral scanner while a colour 3D model appears on screen" class="feature-card-img" width="800" height="597" loading="lazy">
@@ -256,7 +258,7 @@
           <p>Traditional dental labs take weeks of waiting with unstable temporary crowns. Our in-house digital suite designs, mills, and seats permanent ceramics in one visit.</p>
         </div>
 
-        <div class="grid-4">
+        <div class="grid-4 grid-align-rows">
           <article class="feature-card">
             <span class="badge badge-accent" style="margin-bottom:0.75rem;">Stage 1 &middot; 60 Sec</span>
             <h3>Optical 3D Impression</h3>
@@ -322,7 +324,7 @@
     </section>
 
     <!-- 6. Next step: centered call to action -->
-    <section class="section">
+    <section class="section section-closing">
       <div class="container">
         <div class="cta-banner">
           <h2>See Your Teeth in 3D at Your First Visit</h2>
@@ -341,6 +343,26 @@
        ========================================================== -->
   <footer class="site-footer">
     <div class="container">
+      <!-- Newsletter sign-up -->
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-text">
+          <h2 class="footer-newsletter-title">Get Smile-Care Tips in Your Inbox</h2>
+          <p>One short email a month with prevention advice, new-patient offers and clinic news.</p>
+        </div>
+        <form class="footer-newsletter-form" id="newsletterForm" novalidate>
+          <div class="form-group">
+            <label for="newsletterEmail" class="sr-only">Email address</label>
+            <div class="newsletter-input-row">
+              <input type="email" id="newsletterEmail" class="form-control newsletter-input" placeholder="Enter your email address" autocomplete="email" required aria-describedby="newsletterEmailError">
+              <button type="submit" class="btn newsletter-btn">Subscribe</button>
+            </div>
+            <p class="form-error" id="newsletterEmailError">Please enter a valid email address.</p>
+            <p class="newsletter-success" id="newsletterSuccess" role="status" aria-live="polite"></p>
+            <p class="newsletter-note">No spam. Unsubscribe at any time.</p>
+          </div>
+        </form>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-link" aria-label="Lumina Dental, go to Home 1">
@@ -351,38 +373,65 @@
             </span>
           </a>
           <p class="footer-desc">Gentle family, cosmetic and specialist dentistry in downtown San Francisco since 2011.</p>
-        </div>
-
-        <div>
-          <h2 class="footer-group-title">Home</h2>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home 1</a></li>
-            <li><a href="index1.html" class="footer-link">Home 2</a></li>
+          <ul class="footer-social" aria-label="Lumina Dental on social media">
+            <li><a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/images/icon-facebook.png" alt="" width="17" height="17"></a></li>
+            <li><a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/images/icon-instagram.png" alt="" width="17" height="17"></a></li>
+            <li><a href="https://x.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (opens in a new tab)"><img src="assets/images/icon-x.png" alt="" width="17" height="17"></a></li>
+            <li><a href="https://www.linkedin.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/images/icon-linkedin.png" alt="" width="17" height="17"></a></li>
+            <li><a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in a new tab)"><img src="assets/images/icon-youtube.png" alt="" width="17" height="17"></a></li>
           </ul>
         </div>
 
-        <div>
-          <h2 class="footer-group-title">Explore</h2>
-          <ul class="footer-links">
-            <li><a href="pages/services.html" class="footer-link">Services</a></li>
-            <li><a href="pages/doctors.html" class="footer-link">Doctors</a></li>
-            <li><a href="pages/pricing.html" class="footer-link">Pricing</a></li>
-          </ul>
+        <div class="footer-link-groups">
+          <div>
+            <h2 class="footer-group-title">Explore</h2>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home 1</a></li>
+              <li><a href="index1.html" class="footer-link">Home 2</a></li>
+              <li><a href="pages/services.html" class="footer-link">Services</a></li>
+              <li><a href="pages/doctors.html" class="footer-link">Doctors</a></li>
+              <li><a href="pages/pricing.html" class="footer-link">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-group-title">Company</h2>
+            <ul class="footer-links">
+              <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+              <li><a href="pages/about.html#reviews" class="footer-link">Patient Reviews</a></li>
+              <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-group-title">Account</h2>
+            <ul class="footer-links">
+              <li><a href="pages/signin.html" class="footer-link">Sign In</a></li>
+              <li><a href="pages/signup.html" class="footer-link">Sign Up</a></li>
+              <li><a href="pages/dashboard.html" class="footer-link">Dashboard</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h2 class="footer-group-title">Company</h2>
-          <ul class="footer-links">
-            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="footer-group-title">Account</h2>
-          <ul class="footer-links">
-            <li><a href="pages/signin.html" class="footer-link">Sign In</a></li>
-            <li><a href="pages/signup.html" class="footer-link">Sign Up</a></li>
-            <li><a href="pages/dashboard.html" class="footer-link">Dashboard</a></li>
+        <div class="footer-visit">
+          <h2 class="footer-group-title">Visit Us</h2>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <img src="assets/images/icon-location.png" alt="" class="footer-contact-icon" width="18" height="18">
+              <span><span class="sr-only">Address: </span>450 Medical Plaza Way, Suite 300<br>San Francisco, CA 94102</span>
+            </li>
+            <li class="footer-contact-item">
+              <img src="assets/images/icon-phone.png" alt="" class="footer-contact-icon" width="18" height="18">
+              <a href="tel:+14158903321"><span class="sr-only">Phone: </span>(415) 890-3321</a>
+            </li>
+            <li class="footer-contact-item">
+              <img src="assets/images/icon-mail.png" alt="" class="footer-contact-icon" width="18" height="18">
+              <a href="mailto:care@luminadental.com"><span class="sr-only">Email: </span>care@luminadental.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <img src="assets/images/icon-clock.png" alt="" class="footer-contact-icon" width="18" height="18">
+              <span><span class="sr-only">Opening hours: </span>Mon&ndash;Fri 7:30 AM&ndash;7:00 PM<br>Sat 8:00 AM&ndash;4:00 PM</span>
+            </li>
           </ul>
         </div>
       </div>

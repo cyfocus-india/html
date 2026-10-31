@@ -279,7 +279,15 @@
 
   function renderChrome() {
     var p = state.profile;
-    $('topAvatar').textContent = initials(p.name);
+    var av = $('topAvatar');
+    if (av) {
+      if (av.tagName.toLowerCase() === 'img') {
+        if (p.avatar) av.src = p.avatar;
+        av.alt = p.name;
+      } else {
+        av.textContent = initials(p.name);
+      }
+    }
     $('topName').textContent = p.name;
     $('menuName').textContent = p.name;
     $('menuEmail').textContent = p.email;

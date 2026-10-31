@@ -41,7 +41,7 @@
         <p class="nav-panel-head" aria-hidden="true">Menu</p>
         <ul class="nav-list">
           <li class="nav-item has-dropdown">
-            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <span class="caret" aria-hidden="true">▾</span></button>
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-home">Home <svg class="svg-icon caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
             <ul class="dropdown" id="menu-home">
               <li><a class="dropdown-link" href="../index.html">Home 1</a></li>
               <li><a class="dropdown-link" href="../index1.html">Home 2</a></li>
@@ -54,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
         </ul>
         <div class="nav-actions">
-          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><span class="icon" aria-hidden="true">☾</span></button>
-          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span aria-hidden="true">⇄</span><span class="dir-label">RTL</span></button>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="svg-icon icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="svg-icon icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+          <button class="icon-btn dir-toggle" type="button" aria-label="Switch to right-to-left layout"><span class="dir-label">RTL</span></button>
           <a class="btn btn--sm nav-cta" href="../pages/contact.html#booking">Book Now</a>
         </div>
       </nav>
@@ -212,22 +212,22 @@
           <h2 id="standards-title">What happens behind the chair matters too</h2>
           <div class="standard-list">
             <div>
-              <span class="icon-disc" aria-hidden="true">✚</span>
+              <span class="icon-disc" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
               <h3>Clean between every client</h3>
               <p>Shears, combs and clipper blades go through hospital-grade disinfectant after every service; capes and towels are always fresh.</p>
             </div>
             <div>
-              <span class="icon-disc" aria-hidden="true">❦</span>
+              <span class="icon-disc" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <h3>Ingredients you can ask about</h3>
               <p>Our color and care lines are vegan and cruelty-free, and we'll write down your exact formula whenever you ask.</p>
             </div>
             <div>
-              <span class="icon-disc" aria-hidden="true">✎</span>
+              <span class="icon-disc" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" focusable="false"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
               <h3>Always learning</h3>
               <p>Every team member logs 40+ hours of advanced education a year, then teaches it back to the team on Tuesday mornings.</p>
             </div>
             <div>
-              <span class="icon-disc" aria-hidden="true">♻&#xFE0E;</span>
+              <span class="icon-disc" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" focusable="false"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg></span>
               <h3>A low-waste color bar</h3>
               <p>Color is weighed to the gram, and foils, tubes and leftover dye go to a salon recycling program instead of the drain.</p>
             </div>
@@ -310,6 +310,23 @@
 
   <!-- ===== Site footer (identical on every page) ===== -->
   <footer class="site-footer">
+    <!-- Newsletter sign-up (confirmed in the browser; nothing is sent on this static site) -->
+    <div class="container footer-newsletter">
+      <div class="newsletter-copy">
+        <h2 class="newsletter-title" id="newsletter-title">First dibs on open chairs</h2>
+        <p>One short email a month with last-minute openings, new services and seasonal offers. Unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" method="post" novalidate aria-labelledby="newsletter-title" data-newsletter-form>
+        <div class="newsletter-field">
+          <svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required aria-describedby="newsletter-msg">
+          <button class="btn" type="submit">Subscribe</button>
+        </div>
+        <p class="newsletter-msg" id="newsletter-msg" role="status"></p>
+      </form>
+    </div>
+
     <div class="container footer-top">
       <div class="footer-brand">
         <a class="brand" href="../index.html" aria-label="Strand &amp; Steel — go to Home 1">
@@ -320,6 +337,12 @@
           </span>
         </a>
         <p class="footer-tagline">Precision cuts, lived-in color and hot-towel shaves under one roof in Southeast Portland.</p>
+        <ul class="social-links" aria-label="Strand &amp; Steel on social media">
+          <li><a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)"><svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg></a></li>
+          <li><a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)"><svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+          <li><a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok (opens in a new tab)"><svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M14 3v12.5a4.5 4.5 0 1 1-4.5-4.5"/><path d="M14 3a5 5 0 0 0 5 5"/></svg></a></li>
+          <li><a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube (opens in a new tab)"><svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a></li>
+        </ul>
       </div>
 
       <nav class="footer-nav" aria-label="Footer">
@@ -346,6 +369,16 @@
           </ul>
         </div>
       </nav>
+
+      <div class="footer-visit">
+        <h2 class="footer-heading">Visit us</h2>
+        <address class="footer-contact">
+          <p><svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=2140+SE+Larkspur+Avenue+Portland+OR+97214" target="_blank" rel="noopener"><bdi>2140 SE Larkspur Avenue</bdi><br><bdi>Portland, OR 97214</bdi><span class="visually-hidden"> (opens in a new tab)</span></a></p>
+          <p><svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+15035550143"><span dir="ltr">(503) 555-0143</span></a></p>
+          <p><svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:hello@strandandsteel.com">hello@strandandsteel.com</a></p>
+          <p><svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Tue–Fri 9 am–8 pm<br>Sat 8 am–5 pm · Sun 10 am–4 pm<br>Closed Mondays</span></p>
+        </address>
+      </div>
     </div>
 
     <div class="container footer-bottom">

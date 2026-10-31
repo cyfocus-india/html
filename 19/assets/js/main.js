@@ -28,26 +28,23 @@
   function updateThemeButtonUI(theme) {
     const themeBtns = document.querySelectorAll('.theme-toggle-btn');
     themeBtns.forEach((btn) => {
-      if (theme === 'dark') {
-        btn.innerHTML = '<span class="toggle-icon">☀</span><span class="toggle-text">Light</span>';
-        btn.setAttribute('aria-label', 'Switch to light mode');
-      } else {
-        btn.innerHTML = '<span class="toggle-icon">☾</span><span class="toggle-text">Dark</span>';
-        btn.setAttribute('aria-label', 'Switch to dark mode');
-      }
+      // Icon-only button: CSS-drawn sun / moon, label carried by aria-label + title
+      const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      const iconClass = theme === 'dark' ? 'theme-icon-sun' : 'theme-icon-moon';
+      btn.innerHTML = '<span class="toggle-icon ' + iconClass + '" aria-hidden="true"></span>';
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
     });
   }
 
   function updateDirButtonUI(dir) {
     const dirBtns = document.querySelectorAll('.dir-toggle-btn');
     dirBtns.forEach((btn) => {
-      if (dir === 'rtl') {
-        btn.innerHTML = '<span class="toggle-icon">⇄</span><span class="toggle-text">LTR</span>';
-        btn.setAttribute('aria-label', 'Switch to left-to-right direction');
-      } else {
-        btn.innerHTML = '<span class="toggle-icon">⇄</span><span class="toggle-text">RTL</span>';
-        btn.setAttribute('aria-label', 'Switch to right-to-left direction');
-      }
+      // Text-only button showing the direction it switches to
+      const label = dir === 'rtl' ? 'Switch to left-to-right direction' : 'Switch to right-to-left direction';
+      btn.innerHTML = '<span class="toggle-text">' + (dir === 'rtl' ? 'LTR' : 'RTL') + '</span>';
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
     });
   }
 
@@ -123,14 +120,15 @@
       if (hamburger) hamburger.classList.remove('is-active');
       if (navMenu) navMenu.classList.remove('is-active');
       if (backdrop) backdrop.classList.remove('is-active');
-      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
     }
 
     function openMobileMenu() {
       if (hamburger) hamburger.classList.add('is-active');
       if (navMenu) navMenu.classList.add('is-active');
       if (backdrop) backdrop.classList.add('is-active');
-      document.body.classList.add('menu-open');
+      // Lock scroll on <html>; locking <body> would break the sticky header
+      document.documentElement.classList.add('menu-open');
     }
 
     if (hamburger && navMenu) {
@@ -549,6 +547,33 @@
       });
     }
 
+    /* ==========================================================================
+       8. Footer Newsletter Sign-Up (validation + inline confirmation)
+       ========================================================================== */
+    document.querySelectorAll('.footer-newsletter-form').forEach((form) => {
+      const input = form.querySelector('.newsletter-input');
+      const feedback = form.querySelector('.newsletter-feedback');
+      if (!input || !feedback) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = input.value.trim();
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          feedback.className = 'newsletter-feedback is-error';
+          feedback.textContent = 'Please enter a valid email address.';
+          input.setAttribute('aria-invalid', 'true');
+          input.focus();
+          return;
+        }
+
+        input.removeAttribute('aria-invalid');
+        feedback.className = 'newsletter-feedback is-success';
+        feedback.textContent = `✓ You're subscribed! Look out for our next care guide at ${email}.`;
+        form.reset();
+      });
+    });
+
     function showError(elementId, msg) {
       const err = document.getElementById(elementId);
       if (err) {
@@ -581,7 +606,7 @@
 
       // Collect target elements across all pages
       const targets = document.querySelectorAll(
-        '.section-header, .step-card, .service-card-deep, .tech-card, .category-card, .plan-card, .guarantee-card, .depot-card, .support-sla-card, .review-card, .calc-container, .contact-form-card, .contact-info-card, .cta-banner, .corporate-banner-grid, .impact-showcase, .faq-item'
+        '.section-header, .step-card, .service-card-deep, .tech-card, .category-card, .plan-card, .guarantee-card, .depot-card, .support-sla-card, .review-card, .calc-container, .contact-form-card, .contact-info-card, .cta-banner, .corporate-banner-grid, .impact-showcase, .faq-item, .about-story-grid, .about-timeline-intro, .milestone-item, .value-card, .team-card'
       );
 
       if (!targets.length) return;

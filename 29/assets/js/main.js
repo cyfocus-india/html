@@ -32,8 +32,6 @@
       var dark = theme === 'dark';
       btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
       btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-      var icon = btn.querySelector('[aria-hidden]');
-      if (icon) icon.textContent = dark ? '☀' : '☾';
     });
     document.dispatchEvent(new CustomEvent('cp:themechange', { detail: theme }));
   }
@@ -663,6 +661,21 @@
     var part = email.split('@')[0].replace(/[._-]+/g, ' ');
     return part.replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
+
+  /* Social sign in/up options (Google / Apple) */
+  $$('[data-auth-provider]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var provider = btn.getAttribute('data-auth-provider');
+      var isGoogle = provider === 'google';
+      var name = isGoogle ? 'Alex Rivera' : 'Jordan Chen';
+      var email = isGoogle ? 'alex.rivera@gmail.com' : 'jordan.chen@icloud.com';
+      startSession({ name: name, email: email });
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+      btn.textContent = 'Connecting with ' + (isGoogle ? 'Google' : 'Apple') + '…';
+      setTimeout(function () { window.location.href = dashboardUrl(); }, 350);
+    });
+  });
 
   var signinForm = $('[data-signin-form]');
   if (signinForm) {

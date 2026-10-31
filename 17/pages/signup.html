@@ -31,7 +31,7 @@
 
     <div class="auth-header-actions">
       <button type="button" class="control-btn theme-toggle" data-action="toggle-theme" aria-label="Switch to dark theme">&#9790;</button>
-      <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">&#8644; RTL</button>
+      <button type="button" class="control-btn dir-toggle" data-action="toggle-dir" aria-label="Switch to right-to-left layout">RTL</button>
     </div>
   </header>
 
@@ -87,6 +87,19 @@
 
         <button type="submit" class="btn btn-primary btn-lg btn-block">Create Account</button>
       </form>
+
+      <!-- Other sign-up options -->
+      <p class="auth-divider">or sign up with</p>
+      <div class="social-auth-list">
+        <button type="button" class="btn btn-social btn-block" data-social-signin="Google">
+          <img src="../assets/images/icon-google.png" alt="" width="18" height="18">
+          <span class="btn-social-label">Continue with Google</span>
+        </button>
+        <button type="button" class="btn btn-social btn-block" data-social-signin="Apple">
+          <img src="../assets/images/icon-apple.png" alt="" class="social-auth-apple" width="18" height="18">
+          <span class="btn-social-label">Continue with Apple</span>
+        </button>
+      </div>
 
       <p class="auth-switch">Already have an account? <a href="signin.html">Sign In</a></p>
     </div>

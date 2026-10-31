@@ -43,8 +43,9 @@
       btn.setAttribute('title', label);
     });
     $$('[data-dir-toggle]').forEach(function (btn) {
-      var label = rtl ? 'Switch to left-to-right layout' : 'Switch to right-to-left layout';
-      btn.innerHTML = '<span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">' + (rtl ? 'LTR' : 'RTL') + '</span>';
+      // Text-only label: shows the direction the button switches to
+      var label = rtl ? 'LTR: switch to left-to-right layout' : 'RTL: switch to right-to-left layout';
+      btn.textContent = rtl ? 'LTR' : 'RTL';
       btn.setAttribute('aria-label', label);
       btn.setAttribute('title', label);
     });
@@ -794,24 +795,78 @@
     });
   });
 
+  // Status banner at the top of the Sign In / Sign Up card
+  function showNotice(el, type, title, text) {
+    if (!el) return;
+    var icons = { success: '✓', info: 'i', error: '!' };
+    el.className = 'notice notice--' + type;
+    el.innerHTML = '<span class="notice__icon" aria-hidden="true">' + icons[type] + '</span><div><strong>' + esc(title) + '</strong>' + esc(text) + '</div>';
+    el.hidden = false;
+  }
+
+  // Account to open after Google, Microsoft or mobile OTP sign-in. This static site has no
+  // OAuth or SMS server, so it uses what the visitor typed, else the last account created
+  // on this browser, else the sample business account the dashboard data belongs to.
+  function providerUser() {
+    var name = $('#su-name'), email = $('#su-email');
+    if (name && email && name.value.trim().length >= 2 && EMAIL_RE.test(email.value.trim())) {
+      return { name: name.value.trim(), email: email.value.trim().toLowerCase(), company: $('#su-company') ? $('#su-company').value.trim() : '' };
+    }
+    var typed = $('#si-email');
+    if (typed && EMAIL_RE.test(typed.value.trim())) {
+      var addr = typed.value.trim().toLowerCase();
+      return users().filter(function (u) { return u.email === addr; })[0] || { name: nameFromEmail(addr), email: addr };
+    }
+    return users().slice(-1)[0] || { name: 'Ananya Joshi', email: 'ananya@kesarandclay.in', company: 'Kesar & Clay Ceramics' };
+  }
+
+  // "Continue with Google / Microsoft" buttons (Sign In and Sign Up)
+  $$('[data-provider]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var provider = btn.getAttribute('data-provider');
+      var group = btn.closest('.social-auth');
+      var label = $('.social-label', btn);
+      var icon = btn.firstElementChild;
+      var banner = $('#signin-banner') || $('#signup-banner');
+      var spin = document.createElement('span');
+      spin.className = 'spinner';
+      spin.setAttribute('aria-hidden', 'true');
+      $$('button', group).forEach(function (b) { b.disabled = true; });
+      btn.classList.add('is-loading');
+      btn.setAttribute('aria-busy', 'true');
+      icon.hidden = true;
+      btn.insertBefore(spin, icon);
+      label.textContent = 'Connecting to ' + provider + '…';
+      window.setTimeout(function () {
+        startSession(providerUser(), true);
+        spin.remove();
+        icon.hidden = false;
+        label.textContent = 'Signed in with ' + provider;
+        showNotice(banner, 'success', 'Signed in with ' + provider + '.', 'Opening your dashboard…');
+        window.setTimeout(goToDashboard, 700);
+      }, 1100);
+    });
+  });
+
   var signinForm = $('#signin-form');
   if (signinForm) initSignin(signinForm);
 
   function initSignin(form) {
     var resetForm = $('#reset-form');
-    var signinView = $('#signin-view');
-    var resetView = $('#reset-view');
     var banner = $('#signin-banner');
+    var opener = null; // button that opened the reset / OTP view, focused again on "Back"
     var p = params();
 
     if (p.get('logout')) {
-      banner.className = 'notice notice--success';
-      banner.innerHTML = '<span class="notice__icon" aria-hidden="true">✓</span><div><strong>You\'re signed out.</strong>See you on your next shipment.</div>';
-      banner.hidden = false;
+      showNotice(banner, 'success', 'You\'re signed out.', 'See you on your next shipment.');
     } else if (p.get('next')) {
-      banner.className = 'notice notice--info';
-      banner.innerHTML = '<span class="notice__icon" aria-hidden="true">i</span><div><strong>' + (p.get('next') === 'book' || p.get('next') === 'pickups' ? 'Sign in to book a pickup.' : 'Sign in to open your dashboard.') + '</strong>New here? Creating an account takes under a minute.</div>';
-      banner.hidden = false;
+      showNotice(banner, 'info', p.get('next') === 'book' || p.get('next') === 'pickups' ? 'Sign in to book a pickup.' : 'Sign in to open your dashboard.', 'New here? Creating an account takes under a minute.');
+    }
+
+    // Sign In, mobile OTP and password reset are three views of the same card
+    function showView(name, focusEl) {
+      $$('[data-auth-view]').forEach(function (v) { v.hidden = v.getAttribute('data-auth-view') !== name; });
+      if (focusEl) focusEl.focus();
     }
 
     form.addEventListener('submit', function (e) {
@@ -834,20 +889,110 @@
       window.setTimeout(goToDashboard, 500);
     });
 
-    function showReset(show) {
-      signinView.hidden = show;
-      resetView.hidden = !show;
-      if (show) { $('#rs-email').value = $('#si-email').value; $('#rs-email').focus(); }
-      else { $('#forgot-link').focus(); }
-    }
-    $('#forgot-link').addEventListener('click', function () { showReset(true); });
+    $('#forgot-link').addEventListener('click', function () {
+      opener = this;
+      $('#rs-email').value = $('#si-email').value;
+      showView('reset', $('#rs-email'));
+    });
+    var otpLink = $('#otp-link');
+    if (otpLink) otpLink.addEventListener('click', function () {
+      opener = otpLink;
+      resetOtp();
+      showView('otp', $('#otp-phone'));
+    });
     $$('[data-back-signin]').forEach(function (b) {
       b.addEventListener('click', function () {
         $('#reset-success').hidden = true;
         resetForm.hidden = false;
-        showReset(false);
+        resetOtp();
+        showView('signin', opener || $('#si-email'));
       });
     });
+
+    // ---------- Mobile OTP: number -> 6-digit code -> dashboard ----------
+    var phoneForm = $('#otp-phone-form');
+    var codeForm = $('#otp-code-form');
+    var otpTimer = null;
+    var sentTo = '';
+
+    function maskPhone(d) { return '+91\u00a0••••••' + d.slice(-4); } // non-breaking space keeps it on one line
+
+    function startResendTimer(seconds) {
+      var resend = $('#otp-resend');
+      var left = seconds;
+      window.clearInterval(otpTimer);
+      function step() {
+        if (left <= 0) {
+          window.clearInterval(otpTimer);
+          resend.disabled = false;
+          resend.textContent = 'Resend code';
+          return;
+        }
+        resend.disabled = true;
+        resend.textContent = 'Resend code in ' + left + 's';
+        left--;
+      }
+      step();
+      otpTimer = window.setInterval(step, 1000);
+    }
+
+    function resetOtp() {
+      if (!phoneForm) return;
+      window.clearInterval(otpTimer);
+      phoneForm.hidden = false;
+      codeForm.hidden = true;
+      $('#otp-intro').textContent = 'We\'ll text a 6-digit code to the mobile number on your account.';
+      $('#otp-code').value = '';
+      setError($('#otp-phone'), '');
+      setError($('#otp-code'), '');
+    }
+
+    if (phoneForm) {
+      phoneForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var input = $('#otp-phone');
+        var digits = input.value.replace(/[\s-]/g, '').replace(/^\+?91/, '');
+        if (!setError(input, /^[6-9]\d{9}$/.test(digits) ? '' : 'Enter the 10-digit mobile number on your account.')) { input.focus(); return; }
+        sentTo = digits;
+        phoneForm.hidden = true;
+        codeForm.hidden = false;
+        $('#otp-intro').textContent = 'Enter the 6-digit code we sent to ' + maskPhone(digits) + '. It expires in 10 minutes.';
+        $('#otp-code').value = '';
+        $('#otp-code').focus();
+        startResendTimer(30);
+      });
+
+      $('#otp-phone').addEventListener('input', function () { if (this.closest('.has-error')) setError(this, ''); });
+      $('#otp-code').addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 6);
+        if (this.closest('.has-error')) setError(this, '');
+      });
+
+      codeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var input = $('#otp-code');
+        if (!setError(input, /^\d{6}$/.test(input.value) ? '' : 'Enter the 6-digit code from the SMS.')) { input.focus(); return; }
+        window.clearInterval(otpTimer);
+        var btn = $('button[type="submit"]', codeForm);
+        btn.disabled = true;
+        btn.textContent = 'Signing you in…';
+        startSession(providerUser(), true);
+        showNotice(banner, 'success', 'Number verified.', 'Opening your dashboard…');
+        window.setTimeout(goToDashboard, 600);
+      });
+
+      $('#otp-resend').addEventListener('click', function () {
+        $('#otp-intro').textContent = 'We sent a new code to ' + maskPhone(sentTo) + '. It expires in 10 minutes.';
+        $('#otp-code').value = '';
+        $('#otp-code').focus();
+        startResendTimer(30);
+      });
+
+      $('#otp-change').addEventListener('click', function () {
+        resetOtp();
+        $('#otp-phone').focus();
+      });
+    }
 
     resetForm.addEventListener('submit', function (e) {
       e.preventDefault();

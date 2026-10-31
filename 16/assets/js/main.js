@@ -16,6 +16,7 @@
    8. Home 2: quick booking widget
    8b. Home 2: walk-in guide — today + current time slot
    9. Contact: open-now status, form prefill, validation & success message
+   10. Footer: newsletter sign-up (validation + in-place confirmation)
    ========================================================================== */
 (function () {
   'use strict';
@@ -53,11 +54,13 @@
     initWalkIn();
     initOpenStatus();
     initBookingForm();
+    initNewsletter();
   });
 
   /* Small helpers */
   function $(sel, ctx) { return (ctx || document).querySelector(sel); }
   function $all(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
+  var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   function isRTL() { return root.getAttribute('dir') === 'rtl'; }
   function focusables(container) {
     return $all('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])', container)
@@ -104,7 +107,7 @@
     function paintTheme() {
       if (!themeBtn) return;
       var dark = root.getAttribute('data-theme') === 'dark';
-      themeBtn.querySelector('.icon').textContent = dark ? '☀' : '☾'; // ☀ / ☾
+      // the moon/sun SVGs swap in CSS off [data-theme]; only the labels change here
       themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
       themeBtn.setAttribute('title', dark ? 'Light theme' : 'Dark theme');
     }
@@ -745,7 +748,7 @@
       name: function (v) { return v.trim().length < 2 ? 'Please enter your full name.' : ''; },
       email: function (v) {
         if (!v.trim()) return 'Please enter your email address.';
-        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Please enter a valid email, like name@example.com.';
+        return EMAIL_PATTERN.test(v.trim()) ? '' : 'Please enter a valid email, like name@example.com.';
       },
       phone: function (v) {
         var digits = v.replace(/\D/g, '');
@@ -837,5 +840,46 @@
         fields.name.focus();
       });
     }
+  }
+
+  /* ------------------------------------------------------------------------
+     10. Footer — newsletter: validate the email and confirm in place
+         (nothing leaves the browser on this static site)
+     ------------------------------------------------------------------------ */
+  function initNewsletter() {
+    $all('[data-newsletter-form]').forEach(function (form) {
+      var input = form.elements.email;
+      var msg = $('.newsletter-msg', form);
+
+      function show(text, state) {
+        msg.textContent = text;
+        msg.classList.toggle('is-error', state === 'error');
+        msg.classList.toggle('is-success', state === 'success');
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var value = input.value.trim();
+        var error = !value ? 'Please enter your email address.'
+          : EMAIL_PATTERN.test(value) ? '' : 'Please enter a valid email, like name@example.com.';
+        input.setAttribute('aria-invalid', error ? 'true' : 'false');
+        if (error) {
+          show(error, 'error');
+          input.focus();
+          return;
+        }
+        show("Thanks — you're on the list. Watch your inbox for next month's openings.", 'success');
+        form.reset();
+      });
+
+      // clear a shown error as soon as the address is fixed
+      input.addEventListener('input', function () {
+        if (input.getAttribute('aria-invalid') !== 'true') return;
+        if (EMAIL_PATTERN.test(input.value.trim())) {
+          input.setAttribute('aria-invalid', 'false');
+          show('', '');
+        }
+      });
+    });
   }
 })();

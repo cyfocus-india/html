@@ -7,6 +7,7 @@
   <meta name="description" content="Create your Aura Yoga member profile to reserve class slots, track class pack usage, and manage your studio membership.">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/icons.css">
   <style>
     .auth-page {
       min-height: 100vh;
@@ -42,21 +43,38 @@
     .password-wrap {
       position: relative;
     }
+    .password-wrap .form-control {
+      padding-right: 2.75rem;
+    }
     .password-toggle-btn {
       position: absolute;
       right: 12px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       color: var(--text-muted);
       cursor: pointer;
       background: none;
       border: none;
+      border-radius: var(--radius-sm);
       padding: 4px;
+    }
+    .password-toggle-btn:hover {
+      color: var(--primary);
+    }
+    .password-toggle-btn .ui-icon {
+      width: 1.15rem;
+      height: 1.15rem;
     }
     [dir="rtl"] .password-toggle-btn {
       right: auto;
       left: 12px;
+    }
+    [dir="rtl"] .password-wrap .form-control {
+      padding-right: 1.1rem;
+      padding-left: 2.75rem;
     }
   </style>
 </head>
@@ -65,7 +83,7 @@
   <!-- Top bar (No header/footer as required) -->
   <header class="auth-topbar">
     <a href="../index.html" class="brand-logo" aria-label="Back to Aura Yoga Home 1">
-      <img src="../assets/images/logo-icon.png" alt="Aura Yoga Lotus Mark" class="brand-mark" width="38" height="38">
+      <img src="../assets/images/logo-icon.png" alt="Aura Yoga meditation logo" class="brand-mark" width="40" height="40">
       <span class="brand-text">
         <span class="brand-name">Aura Yoga</span>
         <span class="brand-sub">Wellness Sanctuary</span>
@@ -73,8 +91,8 @@
     </a>
 
     <div style="display: flex; gap: 0.75rem;">
-      <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">&#9790; Dark</button>
-      <button type="button" class="icon-btn dir-toggle-btn" aria-label="Toggle direction">&#8644; RTL</button>
+      <button type="button" class="icon-btn theme-toggle-btn" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+      <button type="button" class="icon-btn dir-toggle-btn" aria-label="Switch to right to left layout" title="Switch to right to left layout">RTL</button>
     </div>
   </header>
 
@@ -87,6 +105,20 @@
       </div>
 
       <div id="signup-feedback" class="form-feedback" style="display: none;" role="alert"></div>
+
+      <!-- Social Sign-Up Options -->
+      <div class="social-auth">
+        <button type="button" class="btn btn-social" data-provider="Google">
+          <img src="../assets/images/icons/google.png" alt="" class="btn-social-logo" width="20" height="20">
+          <span>Sign up with Google</span>
+        </button>
+        <button type="button" class="btn btn-social" data-provider="Apple">
+          <span class="ui-icon icon-apple" aria-hidden="true"></span>
+          <span>Sign up with Apple</span>
+        </button>
+      </div>
+
+      <div class="auth-divider">or sign up with email</div>
 
       <form id="signup-form" novalidate>
         <div class="form-group">
@@ -114,7 +146,7 @@
           <label for="signup-password" class="form-label">Password *</label>
           <div class="password-wrap">
             <input type="password" id="signup-password" class="form-control" placeholder="At least 6 characters" required>
-            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">&#128065;</button>
+            <button type="button" class="password-toggle-btn" aria-label="Show password" title="Show password"><span class="ui-icon icon-eye" aria-hidden="true"></span></button>
           </div>
           <div class="field-error">Password must be at least 6 characters</div>
         </div>
@@ -123,7 +155,7 @@
           <label for="signup-confirm-password" class="form-label">Confirm Password *</label>
           <div class="password-wrap">
             <input type="password" id="signup-confirm-password" class="form-control" placeholder="Re-enter your password" required>
-            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">&#128065;</button>
+            <button type="button" class="password-toggle-btn" aria-label="Show password" title="Show password"><span class="ui-icon icon-eye" aria-hidden="true"></span></button>
           </div>
           <div class="field-error">Passwords do not match</div>
         </div>
@@ -148,19 +180,48 @@
   <script src="../assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Toggle password visibility
+      // Toggle password visibility: eye reveals the password, eye-off hides it again
       document.querySelectorAll('.password-toggle-btn').forEach(btn => {
         btn.addEventListener('click', function () {
           const input = btn.previousElementSibling;
+          const icon = btn.querySelector('.ui-icon');
+          const label = input.type === 'password' ? 'Hide password' : 'Show password';
           if (input.type === 'password') {
             input.type = 'text';
-            btn.innerHTML = '&#128064;';
-            btn.setAttribute('aria-label', 'Hide password');
+            icon.className = 'ui-icon icon-eye-off';
           } else {
             input.type = 'password';
-            btn.innerHTML = '&#128065;';
-            btn.setAttribute('aria-label', 'Show password');
+            icon.className = 'ui-icon icon-eye';
           }
+          btn.setAttribute('aria-label', label);
+          btn.setAttribute('title', label);
+        });
+      });
+
+      // Social Sign-Up (demo): starts a member session and opens the dashboard
+      const socialButtons = document.querySelectorAll('.btn-social');
+      socialButtons.forEach(btn => {
+        const label = btn.querySelector('span:last-child');
+        btn.setAttribute('data-label', label.textContent);
+        btn.addEventListener('click', function () {
+          const provider = btn.getAttribute('data-provider');
+          socialButtons.forEach(b => (b.disabled = true));
+          label.textContent = 'Connecting to ' + provider + '…';
+          localStorage.setItem('aura_active_user', JSON.stringify({
+            provider: provider.toLowerCase(),
+            loggedInAt: new Date().toISOString()
+          }));
+          setTimeout(function () {
+            window.location.href = 'dashboard.html';
+          }, 700);
+        });
+      });
+
+      // Restore the buttons when returning via the browser back button
+      window.addEventListener('pageshow', function () {
+        socialButtons.forEach(b => {
+          b.disabled = false;
+          b.querySelector('span:last-child').textContent = b.getAttribute('data-label');
         });
       });
 
@@ -196,15 +257,16 @@
             valid = false;
           }
 
+          // Password errors sit outside .password-wrap, so look them up from the form group
           if (!pass || pass.value.length < 6) {
             pass.classList.add('error');
-            pass.parentElement.querySelector('.field-error').classList.add('visible');
+            pass.closest('.form-group').querySelector('.field-error').classList.add('visible');
             valid = false;
           }
 
           if (!confirmPass || confirmPass.value !== pass.value) {
             confirmPass.classList.add('error');
-            confirmPass.parentElement.querySelector('.field-error').classList.add('visible');
+            confirmPass.closest('.form-group').querySelector('.field-error').classList.add('visible');
             valid = false;
           }
 

@@ -252,6 +252,38 @@
       });
     }
 
+    // Social Sign-In / Sign-Up (Google & Apple) - demo provider handoff, then Dashboard
+    const socialAuthBtns = document.querySelectorAll('.social-auth-btn');
+    socialAuthBtns.forEach((btn) => {
+      const label = btn.querySelector('span');
+      if (label) btn.dataset.label = label.textContent;
+
+      btn.addEventListener('click', function () {
+        const provider = this.getAttribute('data-provider') || 'Google';
+
+        socialAuthBtns.forEach((b) => (b.disabled = true));
+        if (label) label.textContent = `Connecting to ${provider}...`;
+
+        // Remember which provider was used for this session
+        const stored = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
+        stored.authProvider = provider;
+        localStorage.setItem(USERS_KEY, JSON.stringify(stored));
+
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 900);
+      });
+    });
+
+    // Re-enable the buttons if the page is restored from the back/forward cache
+    window.addEventListener('pageshow', () => {
+      socialAuthBtns.forEach((btn) => {
+        const label = btn.querySelector('span');
+        btn.disabled = false;
+        if (label && btn.dataset.label) label.textContent = btn.dataset.label;
+      });
+    });
+
     function showAuthError(el, msg) {
       if (el) {
         el.textContent = msg;

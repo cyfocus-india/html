@@ -34,16 +34,15 @@
     window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
   }
 
+  // Icon-only toggle: shows the theme it switches to (moon = dark, sun = light)
   function updateThemeToggleButtons(theme) {
+    const isDark = theme === 'dark';
+    const label = isDark ? 'Switch to light theme' : 'Switch to dark theme';
     const buttons = document.querySelectorAll('.theme-toggle-btn');
     buttons.forEach((btn) => {
-      if (theme === 'dark') {
-        btn.innerHTML = '☀ Light';
-        btn.setAttribute('aria-label', 'Switch to light theme');
-      } else {
-        btn.innerHTML = '☾ Dark';
-        btn.setAttribute('aria-label', 'Switch to dark theme');
-      }
+      btn.innerHTML = `<span class="ui-icon ${isDark ? 'icon-sun' : 'icon-moon'}" aria-hidden="true"></span>`;
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
     });
   }
 
@@ -64,16 +63,15 @@
     updateDirToggleButtons(newDir);
   }
 
+  // Text-only label showing the direction it switches to
   function updateDirToggleButtons(dir) {
+    const isRtl = dir === 'rtl';
+    const label = isRtl ? 'Switch to left to right layout' : 'Switch to right to left layout';
     const buttons = document.querySelectorAll('.dir-toggle-btn');
     buttons.forEach((btn) => {
-      if (dir === 'rtl') {
-        btn.innerHTML = '⇄ LTR';
-        btn.setAttribute('aria-label', 'Switch to left to right layout');
-      } else {
-        btn.innerHTML = '⇄ RTL';
-        btn.setAttribute('aria-label', 'Switch to right to left layout');
-      }
+      btn.textContent = isRtl ? 'LTR' : 'RTL';
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
     });
   }
 
@@ -324,6 +322,50 @@
   }
 
   // -------------------------------------------------------------------------
+  // 6b. Footer Newsletter Signup
+  // -------------------------------------------------------------------------
+  function initNewsletterForms() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    document.querySelectorAll('.newsletter-form').forEach((form) => {
+      const input = form.querySelector('.newsletter-input');
+      const message = form.querySelector('.newsletter-message');
+      if (!input || !message) return;
+
+      function setMessage(text, state) {
+        message.textContent = text;
+        message.className = `newsletter-message ${state}`;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = input.value.trim();
+
+        if (!emailRegex.test(email)) {
+          form.classList.add('has-error');
+          input.setAttribute('aria-invalid', 'true');
+          setMessage('Please enter a valid email address.', 'error');
+          input.focus();
+          return;
+        }
+
+        form.classList.remove('has-error');
+        input.removeAttribute('aria-invalid');
+        setMessage(`Thank you! Your first mindful note is on its way to ${email}.`, 'success');
+        form.reset();
+      });
+
+      input.addEventListener('input', function () {
+        if (form.classList.contains('has-error')) {
+          form.classList.remove('has-error');
+          input.removeAttribute('aria-invalid');
+          setMessage('', '');
+        }
+      });
+    });
+  }
+
+  // -------------------------------------------------------------------------
   // 7. Highlight Active Navigation Links
   // -------------------------------------------------------------------------
   function highlightActiveNav() {
@@ -356,7 +398,7 @@
     }
 
     const animTargets = document.querySelectorAll(
-      '.section-header, .atmosphere-card, .instructor-card, .pricing-card, .step-item, .testimonial-card, .cta-banner, .class-card, .comparison-table-wrapper, .schedule-table-wrap'
+      '.section-header, .atmosphere-card, .instructor-card, .pricing-card, .step-item, .testimonial-card, .cta-banner, .class-card, .comparison-table-wrapper, .schedule-table-wrap, .about-stats, .timeline-item, .founder-note, .sense-item'
     );
 
     if (!animTargets.length) return;
@@ -416,6 +458,7 @@
     initAccordions();
     initClassFilters();
     initContactForm();
+    initNewsletterForms();
     highlightActiveNav();
     initScrollAnimations();
   });

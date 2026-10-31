@@ -15,7 +15,7 @@
   color: var(--text-main);
   font-family: var(--font-base);
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip; /* hidden would turn <body> into a scroll container and unstick the top bar */
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -371,16 +371,6 @@
 
 [data-theme="dark"] .icon-on-primary {
   filter: brightness(0) invert(0.15);
-}
-
-.sidebar-toggles-row {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.sidebar-toggles-row .control-btn {
-  flex: 1;
 }
 
 .dash-sidebar-mobile-title {
@@ -1084,10 +1074,8 @@
     display: flex;
   }
 
-  .dash-topbar-right .control-btn {
-    display: none !important;
-  }
-
+  /* Theme and direction toggles stay in the top bar at every size; the
+     slide-in menu holds navigation only */
   .dash-topbar-right .user-name-label {
     display: none;
   }
@@ -1230,6 +1218,16 @@
     height: 36px;
   }
 
+  .dash-topbar-right .control-btn {
+    min-height: 36px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .dash-topbar-right .theme-toggle {
+    min-width: 36px;
+  }
+
   .notif-dropdown {
     width: calc(100vw - 1.5rem);
     right: -8px;
@@ -1239,6 +1237,13 @@
   [dir="rtl"] .notif-dropdown {
     right: auto;
     left: -8px;
+  }
+}
+
+/* Narrow phones: the logo alone leaves room for the theme and direction toggles */
+@media (max-width: 420px) {
+  .dash-topbar .brand-name {
+    display: none;
   }
 }
 

@@ -53,13 +53,16 @@
         </a>
         <div class="auth-tools">
           <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">☾</button>
-          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="Switch to right-to-left layout"><span class="dir-glyph" aria-hidden="true">⇄</span><span aria-hidden="true">RTL</span></button>
+          <button class="icon-btn dir-toggle" type="button" data-dir-toggle aria-label="RTL: switch to right-to-left layout" title="RTL: switch to right-to-left layout">RTL</button>
         </div>
       </div>
 
       <div class="auth-card">
-        <h1>Sign Up</h1>
-        <p class="muted">Create your free account. It takes under a minute.</p>
+        <div class="notice" id="signup-banner" role="status" hidden></div>
+        <div class="auth-head">
+          <h1>Sign Up</h1>
+          <p class="muted">Create your free account. It takes under a minute.</p>
+        </div>
         <form id="signup-form" novalidate>
           <div class="field">
             <label for="su-name">Full name</label>
@@ -99,6 +102,19 @@
           </div>
           <button class="btn btn-lg btn-block" type="submit">Create account</button>
         </form>
+
+        <!-- Other ways to sign up -->
+        <p class="auth-divider"><span>or sign up with</span></p>
+        <div class="social-auth" role="group" aria-label="Other ways to sign up">
+          <button class="social-btn" type="button" data-provider="Google">
+            <img src="../assets/images/icon-google.png" alt="" width="20" height="20">
+            <span class="social-label">Sign up with Google</span>
+          </button>
+          <button class="social-btn" type="button" data-provider="Microsoft">
+            <span class="ms-logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span class="social-label">Sign up with Microsoft</span>
+          </button>
+        </div>
         <p class="auth-switch">Already have an account? <a href="signin.html">Sign In</a></p>
       </div>
     </main>

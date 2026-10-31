@@ -36,7 +36,7 @@
 }
 [data-theme="dark"] .dash-sidebar { background: #150a13; border-inline-end: 1px solid var(--border); }
 .side-brand { padding: 0 6px 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
-.side-brand .brand img { height: 40px; }
+.side-brand .brand img { width: 40px; height: 40px; }
 .side-brand .brand-name { color: #fff; }
 .side-brand .brand-tag { display: block; color: #d4c6d0; }
 
@@ -106,6 +106,7 @@
 .side-manager strong { display: block; color: #fff; }
 .side-manager a { color: var(--gold); }
 .side-manager .avatar { background: var(--gold); color: var(--on-gold); }
+img.avatar { border-radius: 50%; object-fit: cover; display: block; border: 2px solid var(--gold); }
 
 .side-tools { display: none; align-items: center; gap: 8px; flex-wrap: wrap; }
 .side-tools .label { width: 100%; font-size: 0.82rem; color: #d4c6d0; }

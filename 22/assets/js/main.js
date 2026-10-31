@@ -6,8 +6,8 @@
    --------------------------------------------------------------------------
    1.  Helpers (storage, toast, formatting)
    2.  Theme & direction preferences
-   3.  Header: sticky state, Home dropdown, mobile panel
-   4.  Footer: back to top
+   3.  Header: sticky hide/reveal, Home dropdown, mobile panel
+   4.  Footer: back to top (newsletter form lives in 13)
    5.  Trip finder (Home 1)
    6.  Deal countdowns (Home 1)
    7.  Review rotator (Home 1)
@@ -16,8 +16,8 @@
    10. Package filter, search & sort (Domestic, International)
    11. Save to favourites (shared with the Dashboard)
    12. Romance add-on builder & family estimator
-   13. Form validation, contact & callback forms
-   14. Sign In / Sign Up
+   13. Form validation, contact, callback & newsletter forms
+   14. Sign In / Sign Up (incl. social sign-in buttons)
    ========================================================================== */
 (function () {
   'use strict';
@@ -115,8 +115,12 @@
     var dropdowns = header.querySelectorAll('.has-dropdown');
     var mobileQuery = window.matchMedia('(max-width: 1024px)');
 
-    // Shadow once the page scrolls
-    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+    // Shadow once the page scrolls. The header slides away while scrolling down
+    // and comes back on the first scroll up, so the menu is always one flick away.
+    var onScroll = function () {
+      var y = Math.max(0, window.scrollY);
+      header.classList.toggle('is-scrolled', y > 8);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
@@ -143,14 +147,15 @@
       hamburger.setAttribute('aria-expanded', 'true');
       hamburger.setAttribute('aria-label', 'Close menu');
       var first = nav.querySelector('a, button');
-      if (first) setTimeout(function () { first.focus(); }, 60);
+      if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 60);
     }
+    // The header is sticky, so focus moves inside it never need to scroll the page
     function closeNav(returnFocus) {
       if (!document.body.classList.contains('nav-open')) return;
       document.body.classList.remove('nav-open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open menu');
-      if (returnFocus !== false) hamburger.focus();
+      if (returnFocus !== false) hamburger.focus({ preventScroll: true });
     }
 
     if (hamburger && nav) {
@@ -181,7 +186,7 @@
         dropdowns.forEach(function (item) {
           if (item.classList.contains('is-open')) {
             setDropdown(item, false);
-            if (!document.body.classList.contains('nav-open')) item.querySelector('.dropdown-toggle').focus();
+            if (!document.body.classList.contains('nav-open')) item.querySelector('.dropdown-toggle').focus({ preventScroll: true });
           }
         });
         closeNav();
@@ -626,6 +631,21 @@
     });
   }
 
+  // Footer newsletter (every public page)
+  var newsForm = document.getElementById('news-form');
+  if (newsForm) {
+    newsForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateForm(newsForm)) return;
+      var success = newsForm.parentElement.querySelector('.news-success');
+      success.querySelector('[data-news-email]').textContent = newsForm.email.value.trim();
+      newsForm.hidden = true;
+      success.hidden = false;
+      success.focus();
+      toast('Subscribed — watch your inbox for our next deals');
+    });
+  }
+
   /* 14. SIGN IN / SIGN UP ------------------------------------------------- */
   // Show / hide password
   document.querySelectorAll('.pw-toggle').forEach(function (btn) {
@@ -649,6 +669,21 @@
     store.set('wk-session', { name: name, email: email, since: new Date().toISOString() });
     window.location.href = 'dashboard.html';
   }
+
+  // Google / Apple / Facebook buttons (Sign In and Sign Up). Hook each one up
+  // to the provider's OAuth flow; until then they open the dashboard like the
+  // email form does.
+  document.querySelectorAll('[data-provider]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.getAttribute('aria-busy') === 'true') return;
+      var account = store.get('wk-account', null);
+      btn.setAttribute('aria-busy', 'true');
+      toast('Connecting to ' + btn.getAttribute('data-provider') + '…');
+      setTimeout(function () {
+        startSession(account ? account.name : 'Traveller', account ? account.email : 'traveller@wanderkite.in');
+      }, 900);
+    });
+  });
 
   var signinForm = document.getElementById('signin-form');
   if (signinForm) {
