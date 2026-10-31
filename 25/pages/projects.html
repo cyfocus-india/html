@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - VoltGuard Electrical</title>
+  <meta name="description" content="Browse 3,850+ completed VoltGuard electrical projects: 200A panel upgrades, whole-home rewiring, EV chargers, lighting, and emergency repairs, all permitted and inspected.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <script>
+    /* Apply saved theme/direction before first paint (no light-mode flash) */
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        var t = q === 'light' || q === 'dark' ? q : localStorage.getItem('voltguard_theme');
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        if (localStorage.getItem('voltguard_dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Header (Identical on every page) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo (links to Home 1) -->
+      <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+        <img src="../assets/images/logo.png" alt="VoltGuard Electrical Shield Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">VoltGuard</span>
+          <span class="brand-tagline">Electrical Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <span class="dropdown-arrow" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="../index1.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+          <span aria-hidden="true">☾</span>
+        </button>
+
+        <!-- RTL Direction Toggle -->
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction" title="Toggle text direction">
+          RTL
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Service</a>
+
+        <!-- Hamburger Icon for <= 1024px -->
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+          <img src="../assets/images/logo.png" alt="VoltGuard Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">VoltGuard</span>
+            <span class="brand-tagline">Electrical Services</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close navigation menu" title="Close navigation menu">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+        <div class="mobile-accordion">
+          <button type="button" class="mobile-accordion-header" aria-expanded="false">
+            <span>Home</span>
+            <span class="accordion-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="../index.html" class="mobile-nav-link">Home 1</a>
+            <a href="../index1.html" class="mobile-nav-link">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="projects.html" class="mobile-nav-link active" aria-current="page">Projects</a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles">
+        <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle color theme">
+          <span aria-hidden="true">☾</span> Theme
+        </button>
+        <button type="button" class="toggle-btn dir-toggle" aria-label="Toggle text direction">
+          RTL
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Book An Electrician</a>
+    </div>
+  </aside>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Hero: Project Count -->
+    <section class="section hero-standard">
+      <div class="container hero-standard-grid">
+        <div class="hero-content">
+          <span class="section-badge">Project Portfolio</span>
+          <h1 class="hero-title">3,850+ Electrical Projects Completed Across the Metro</h1>
+          <p class="hero-subtitle">
+            Panel upgrades, whole-home rewires, EV chargers, and architectural lighting. Every one permitted, inspected, and backed by our 5-year guarantee. Browse recent jobs from our crews below.
+          </p>
+
+          <div class="hero-perks-list">
+            <div class="hero-perk-item">
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>100% First-Inspection Pass Rate</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>Permits Pulled on Every Job</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>4.98 / 5 Average Project Rating</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>5-Year Written Warranty</span>
+            </div>
+          </div>
+
+          <div class="hero-btn-row">
+            <a href="#project-gallery" class="btn btn-primary btn-lg">Browse Projects</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Start Your Project</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="../assets/images/projects-hero.jpg" alt="Modern home at dusk with architectural wall lights, step lighting, and garden path lights installed by VoltGuard" class="hero-image">
+          <div class="hero-float-card">
+            <div class="float-icon" aria-hidden="true">✓</div>
+            <div class="float-text">
+              <p class="float-title">0 Failed Inspections</p>
+              <p>On every permitted job since 2008</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Band -->
+    <section class="stats-band" aria-label="Projects by the numbers">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🛠️</span>
+          <span class="stat-number" data-count="3850" data-suffix="+">3,850+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">⚡</span>
+          <span class="stat-number" data-count="940" data-suffix="+">940+</span>
+          <span class="stat-label">Panel Upgrades</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🔌</span>
+          <span class="stat-number" data-count="610" data-suffix="+">610+</span>
+          <span class="stat-label">EV Chargers &amp; 240V Lines</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🏠</span>
+          <span class="stat-number" data-count="380" data-suffix="+">380+</span>
+          <span class="stat-label">Whole-Home Rewires</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">✅</span>
+          <span class="stat-number" data-count="100" data-suffix="%">100%</span>
+          <span class="stat-label">Inspection Pass Rate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Overview & Category Breakdown -->
+    <section class="section">
+      <div class="container projects-overview">
+        <div class="overview-content">
+          <span class="section-badge">What We Build</span>
+          <h2 class="section-title">Every Kind of Residential Electrical Project</h2>
+          <p>
+            From a single dimmer swap to a 400A estate service, our crews have done the work thousands of times. The chart shows where our 3,850+ completed projects have gone since 2004.
+          </p>
+
+          <div class="overview-points">
+            <div class="overview-point">
+              <span class="overview-point-icon" aria-hidden="true">📐</span>
+              <div>
+                <h3>Planned Before We Pull a Wire</h3>
+                <p>Load calculations, permit drawings, and a written scope for every project over $1,000.</p>
+              </div>
+            </div>
+            <div class="overview-point">
+              <span class="overview-point-icon" aria-hidden="true">🏛️</span>
+              <div>
+                <h3>Permitted &amp; Inspected</h3>
+                <p>We file the permit, meet the city inspector on site, and hand you the signed approval.</p>
+              </div>
+            </div>
+            <div class="overview-point">
+              <span class="overview-point-icon" aria-hidden="true">📸</span>
+              <div>
+                <h3>Documented for Resale</h3>
+                <p>Photo logs, labeled panel schedules, and transferable warranty certificates for future buyers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Projects Completed by Category</h3>
+            <p class="chart-total"><strong>3,850</strong> total since 2004</p>
+          </div>
+
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-row-head">
+                <span class="bar-name"><span aria-hidden="true">💡</span> Lighting, Fans &amp; Fixtures</span>
+                <span class="bar-value">1,120</span>
+              </div>
+              <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--bar: 100%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row-head">
+                <span class="bar-name"><span aria-hidden="true">⚡</span> Panel Upgrades &amp; Subpanels</span>
+                <span class="bar-value">940</span>
+              </div>
+              <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--bar: 84%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row-head">
+                <span class="bar-name"><span aria-hidden="true">🔧</span> Repairs &amp; Diagnostics</span>
+                <span class="bar-value">800</span>
+              </div>
+              <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--bar: 71%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row-head">
+                <span class="bar-name"><span aria-hidden="true">🔌</span> EV Chargers &amp; 240V Circuits</span>
+                <span class="bar-value">610</span>
+              </div>
+              <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--bar: 54%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row-head">
+                <span class="bar-name"><span aria-hidden="true">🏠</span> Whole-Home Rewiring</span>
+                <span class="bar-value">380</span>
+              </div>
+              <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="--bar: 34%;"></div></div>
+            </div>
+          </div>
+
+          <p class="chart-note">Figures from VoltGuard job records, January 2004 to October 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Filterable Project Gallery -->
+    <section id="project-gallery" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Recent Work</span>
+          <h2 class="section-title">Featured Projects From Our Crews</h2>
+          <p class="section-desc">
+            Filter by project type to see the scope, timeline, and results of recent VoltGuard jobs.
+          </p>
+        </div>
+
+        <div class="project-toolbar">
+          <div class="project-filters" role="group" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All Projects <span class="filter-count">12<span class="sr-only"> projects</span></span></button>
+            <button type="button" class="filter-btn" data-filter="panels" aria-pressed="false">Panels <span class="filter-count">3<span class="sr-only"> projects</span></span></button>
+            <button type="button" class="filter-btn" data-filter="rewiring" aria-pressed="false">Rewiring <span class="filter-count">2<span class="sr-only"> projects</span></span></button>
+            <button type="button" class="filter-btn" data-filter="ev" aria-pressed="false">EV &amp; 240V <span class="filter-count">2<span class="sr-only"> projects</span></span></button>
+            <button type="button" class="filter-btn" data-filter="lighting" aria-pressed="false">Lighting <span class="filter-count">3<span class="sr-only"> projects</span></span></button>
+            <button type="button" class="filter-btn" data-filter="repairs" aria-pressed="false">Repairs &amp; Safety <span class="filter-count">2<span class="sr-only"> projects</span></span></button>
+          </div>
+          <p id="project-count" class="project-count" role="status" aria-live="polite">Showing 12 of 12 projects</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- Panels -->
+          <article class="project-card" data-category="panels">
+            <div class="project-media">
+              <img src="../assets/images/panel-upgrade.jpg" alt="Electrician wiring a new residential breaker panel during a 200-amp service upgrade" class="project-img" loading="lazy">
+              <span class="project-tag">Panel Upgrade</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Oakridge Estates</p>
+              <h3 class="project-title">100A to 200A Service Upgrade for an EV-Ready Home</h3>
+              <p class="project-desc">A 1978 Federal Pacific panel couldn't carry a new heat pump and EV charger. We installed a 40-circuit 200A panel, new meter socket, and whole-home surge protection in one day.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 1 day</li>
+                <li><span aria-hidden="true">🔌</span> 40 circuits</li>
+                <li><span aria-hidden="true">✓</span> Passed 1st inspection</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="panels">
+            <div class="project-media">
+              <img src="../assets/images/workshop-subpanel.jpg" alt="Electrician inspecting a newly installed subpanel on the wall of a home workshop" class="project-img" loading="lazy">
+              <span class="project-tag">Subpanel</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> South Hills</p>
+              <h3 class="project-title">Detached Workshop 100A Subpanel</h3>
+              <p class="project-desc">A woodworker needed dedicated 240V power for a table saw, dust collector, and compressor. We trenched a feeder to the shop and added a 100A subpanel with GFCI protection.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 2 days</li>
+                <li><span aria-hidden="true">📏</span> 85 ft feeder</li>
+                <li><span aria-hidden="true">🔌</span> 12 circuits</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="panels">
+            <div class="project-media">
+              <img src="../assets/images/surge-defense.jpg" alt="Orange panel-mounted surge protection modules installed beside circuit breakers" class="project-img" loading="lazy">
+              <span class="project-tag">Surge Protection</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Valley Ridge</p>
+              <h3 class="project-title">Lightning-Strike Surge Protection Retrofit</h3>
+              <p class="project-desc">After a nearby strike destroyed two TVs and a furnace control board, we installed a Type 2 panel-mounted surge arrester and bonded the grounding system to current code.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> Half day</li>
+                <li><span aria-hidden="true">🛡️</span> 50kA Type 2</li>
+                <li><span aria-hidden="true">⚡</span> Ground bonding</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Rewiring -->
+          <article class="project-card" data-category="rewiring">
+            <div class="project-media">
+              <img src="../assets/images/project-rewire.jpg" alt="Electrician on a ladder running new conduit and wall boxes through open block walls during a renovation" class="project-img" loading="lazy">
+              <span class="project-tag">Full Rewire</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Arts District</p>
+              <h3 class="project-title">Mid-Century Block Home, Down-to-the-Walls Rewire</h3>
+              <p class="project-desc">During a gut renovation we replaced every circuit in this 1962 concrete-block home with new copper in conduit, adding kitchen, bath, and laundry circuits sized for modern loads.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 8 days</li>
+                <li><span aria-hidden="true">🔌</span> 38 circuits</li>
+                <li><span aria-hidden="true">🧱</span> 1,900 sq ft</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="rewiring">
+            <div class="project-media">
+              <img src="../assets/images/copper-wiring.jpg" alt="Coil of solid copper electrical conductor used to replace aluminum branch wiring" class="project-img" loading="lazy">
+              <span class="project-tag">Copper Upgrade</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Northgate</p>
+              <h3 class="project-title">1970s Aluminum Wiring Replaced With Solid Copper</h3>
+              <p class="project-desc">Warm outlets and flickering lights traced back to oxidized aluminum branch circuits. We rewired the bedrooms and living areas in solid copper and replaced every device.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 4 days</li>
+                <li><span aria-hidden="true">🔌</span> 22 circuits</li>
+                <li><span aria-hidden="true">🔥</span> Fire risk removed</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- EV & 240V -->
+          <article class="project-card" data-category="ev">
+            <div class="project-media">
+              <img src="../assets/images/ev-charger.jpg" alt="Level 2 charging connector plugged into an electric vehicle's charge port" class="project-img" loading="lazy">
+              <span class="project-tag">EV Charging</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Technology Corridor</p>
+              <h3 class="project-title">Dual Level 2 EV Charger Garage</h3>
+              <p class="project-desc">Two EVs, one 200A service. We ran a pair of 60A circuits with load-sharing chargers so both cars refill overnight without ever tripping the main breaker.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 1 day</li>
+                <li><span aria-hidden="true">🚗</span> 2 × 48A chargers</li>
+                <li><span aria-hidden="true">⚡</span> Load sharing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ev">
+            <div class="project-media">
+              <img src="../assets/images/appliance-run.jpg" alt="Black induction cooktop set into a white kitchen counter beneath brass pendant lights" class="project-img" loading="lazy">
+              <span class="project-tag">240V Circuit</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Midtown</p>
+              <h3 class="project-title">Gas-to-Induction Kitchen &amp; Heat Pump Circuits</h3>
+              <p class="project-desc">Going all-electric meant a 50A line for a 36-inch induction range and a 30A circuit for a heat pump water heater, routed through finished walls with minimal patching.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 1 day</li>
+                <li><span aria-hidden="true">🔌</span> 50A + 30A lines</li>
+                <li><span aria-hidden="true">🧰</span> 2 small patches</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Lighting -->
+          <article class="project-card" data-category="lighting">
+            <div class="project-media">
+              <img src="../assets/images/fan-fitting.jpg" alt="White kitchen with two crystal globe pendant lights hanging above the island" class="project-img" loading="lazy">
+              <span class="project-tag">Lighting</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Downtown</p>
+              <h3 class="project-title">Crystal Pendant Kitchen Lighting Refresh</h3>
+              <p class="project-desc">Two 28-lb crystal globe pendants over the island plus under-cabinet LEDs, each on its own dimmer. The ceiling boxes were upgraded to joist-mounted steel braces.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 1 day</li>
+                <li><span aria-hidden="true">💡</span> 3 dimmer zones</li>
+                <li><span aria-hidden="true">🏋️</span> 28-lb fixtures</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="lighting">
+            <div class="project-media">
+              <img src="../assets/images/smart-lighting.jpg" alt="Homeowner adjusting lights from a phone app next to wall-mounted smart lighting switches" class="project-img" loading="lazy">
+              <span class="project-tag">Smart Home</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Westview</p>
+              <h3 class="project-title">Whole-Home Smart Lighting Retrofit</h3>
+              <p class="project-desc">We replaced 34 standard switches with smart dimmers and scene keypads, then set up schedules, away mode, and voice control in the homeowners' app.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 2 days</li>
+                <li><span aria-hidden="true">🎛️</span> 34 smart switches</li>
+                <li><span aria-hidden="true">📱</span> App &amp; voice</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="lighting">
+            <div class="project-media">
+              <img src="../assets/images/project-landscape-lighting.jpg" alt="Brick and glass home at dusk with warm wall lights and driveway lighting" class="project-img" loading="lazy">
+              <span class="project-tag">Outdoor Lighting</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Coastal West Valley</p>
+              <h3 class="project-title">Facade, Driveway &amp; Garden Lighting Package</h3>
+              <p class="project-desc">Wall washers, step lights, and low-voltage garden fixtures on photocell and timer control, with weatherproof GFCI circuits buried to code.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">⏱</span> 3 days</li>
+                <li><span aria-hidden="true">💡</span> 26 fixtures</li>
+                <li><span aria-hidden="true">🌙</span> Dusk-to-dawn timer</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Repairs & Safety -->
+          <article class="project-card" data-category="repairs">
+            <div class="project-media">
+              <img src="../assets/images/switchboard-repair.jpg" alt="Electrician using a power driver to replace components inside an open breaker panel" class="project-img" loading="lazy">
+              <span class="project-tag">Emergency Repair</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Financial Center</p>
+              <h3 class="project-title">Sunday-Night Burnt Breaker &amp; Busbar Repair</h3>
+              <p class="project-desc">A humming panel and a scorched 50A breaker knocked out the kitchen. Our on-call electrician arrived in 41 minutes, rebuilt the damaged bus section, and restored power before midnight.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">🚐</span> 41-min arrival</li>
+                <li><span aria-hidden="true">🔧</span> Same-night fix</li>
+                <li><span aria-hidden="true">⚡</span> Power restored</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="repairs">
+            <div class="project-media">
+              <img src="../assets/images/insurance-claim.jpg" alt="Electrician testing a breaker panel with a Fluke multimeter and thermal camera beside a clipboard report" class="project-img" loading="lazy">
+              <span class="project-tag">Diagnostics</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <p class="project-location"><span aria-hidden="true">📍</span> Riverfront</p>
+              <h3 class="project-title">Flood-Damage Diagnostics &amp; Insurance Report</h3>
+              <p class="project-desc">Floodwater reached a basement subpanel. We thermal-scanned and insulation-tested every affected circuit, replaced compromised breakers, and delivered a photo report the insurer approved in full.</p>
+              <ul class="project-meta">
+                <li><span aria-hidden="true">🌡️</span> Thermal + megger tests</li>
+                <li><span aria-hidden="true">📄</span> Insurer-ready report</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Featured Case Study -->
+    <section class="section">
+      <div class="container">
+        <div class="case-study">
+          <div class="case-media">
+            <img src="../assets/images/wiring-service.jpg" alt="VoltGuard electrician on a ladder feeding new copper cable through the walls of a 1930s craftsman home" class="case-img" loading="lazy">
+            <span class="case-ribbon">Featured Case Study</span>
+          </div>
+
+          <div class="case-content">
+            <span class="section-badge">Highland Park &bull; 2025</span>
+            <h2 class="section-title">Rewiring a 1930s Craftsman Without Tearing Out Its Plaster</h2>
+
+            <div class="case-blocks">
+              <div class="case-block">
+                <h3>The Challenge</h3>
+                <p>The Vance family's 2,200 sq ft craftsman still ran on original knob-and-tube wiring. Their insurer gave them 90 days to replace it, and they wanted the original plaster and trim kept intact.</p>
+              </div>
+              <div class="case-block">
+                <h3>Our Solution</h3>
+                <p>We mapped every circuit, fished new copper cable through existing cavities from the attic and basement, and added a 200A panel with AFCI and GFCI protection. Only 11 small access holes were needed.</p>
+              </div>
+              <div class="case-block">
+                <h3>The Result</h3>
+                <p>Finished in six working days, passed city inspection on the first visit, and the family's homeowner policy renewed at a lower premium.</p>
+              </div>
+            </div>
+
+            <div class="case-metrics">
+              <div class="case-metric"><strong>6 days</strong><span>Start to finish</span></div>
+              <div class="case-metric"><strong>42</strong><span>New circuits</span></div>
+              <div class="case-metric"><strong>11</strong><span>Access holes</span></div>
+              <div class="case-metric"><strong>1st</strong><span>Inspection passed</span></div>
+            </div>
+
+            <blockquote class="case-quote">
+              "The VoltGuard crew rewired the entire 2,200 sq ft house with minimal drywall cuts. Passed the city electrical inspection on the very first visit."
+              <cite>Elena Vance, Homeowner</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Project Client Reviews -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Client Reviews</span>
+          <h2 class="section-title">What Homeowners Say After the Crew Leaves</h2>
+          <p class="section-desc">
+            Verified reviews from recent project clients across our four metro service districts.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card testimonial-card">
+            <div class="testimonial-stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <h3 class="feature-title">"Both Cars Charge Overnight, Zero Tripped Breakers"</h3>
+            <p class="feature-desc">
+              "We were told we'd need a whole new service for two EVs. VoltGuard did the load calculation, installed load-sharing chargers on our existing 200A panel, and saved us thousands."
+            </p>
+            <div class="testimonial-footer">
+              <strong>Jordan &amp; Mei Lin</strong> &bull; Dual EV Charger Garage
+            </div>
+          </div>
+
+          <div class="feature-card testimonial-card">
+            <div class="testimonial-stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <h3 class="feature-title">"Our 1978 Panel Is Finally Gone"</h3>
+            <p class="feature-desc">
+              "They coordinated the utility shutoff, swapped the panel and meter socket, and had the inspector sign off the same afternoon. The new panel is labeled better than our garage shelves."
+            </p>
+            <div class="testimonial-footer">
+              <strong>Tom Alvarez</strong> &bull; 200A Service Upgrade
+            </div>
+          </div>
+
+          <div class="feature-card testimonial-card">
+            <div class="testimonial-stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <h3 class="feature-title">"The Pendants Look Like They Came With the House"</h3>
+            <p class="feature-desc">
+              "Two heavy crystal pendants, perfectly centered over the island, with dimmers for every zone. They protected our floors, patched one tiny hole, and left the kitchen spotless."
+            </p>
+            <div class="testimonial-footer">
+              <strong>Renee Park</strong> &bull; Kitchen Lighting Refresh
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="banner-cta">
+          <div class="banner-content">
+            <span class="section-badge badge-solid">⚡ Your Project Could Be Next</span>
+            <h3>Have an Upgrade or Renovation in Mind?</h3>
+            <p>Tell us what you're planning and get a free on-site estimate for any project over $1,000, with a written scope and fixed price.</p>
+          </div>
+          <div class="banner-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Estimate</a>
+            <a href="about.html#how-booking-works" class="btn btn-on-dark btn-lg">How Booking Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer (Identical on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Signup -->
+      <div class="footer-cta">
+        <div class="footer-cta-text">
+          <span class="footer-eyebrow"><span aria-hidden="true">⚡</span> VoltGuard Safety Insider</span>
+          <h2 class="footer-cta-title">Seasonal safety tips &amp; priority booking, straight to your inbox</h2>
+          <p>One short email a month: storm-season checklists, code changes that affect your home, and members-only scheduling windows.</p>
+        </div>
+        <form class="newsletter-form" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <div class="newsletter-field">
+            <span class="newsletter-icon" aria-hidden="true">✉️</span>
+            <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="Enter your email address" autocomplete="email" required aria-describedby="newsletter-note newsletter-msg">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p id="newsletter-note" class="newsletter-note"><span aria-hidden="true">🔒</span> No spam, ever. Unsubscribe in one click.</p>
+          <p id="newsletter-msg" class="newsletter-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Col 1: Brand, License & Social -->
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-link" aria-label="VoltGuard Electrical Home">
+            <img src="../assets/images/logo.png" alt="" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-title">VoltGuard</span>
+              <span class="brand-tagline">Electrical Services</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            State-certified master electrical contractors delivering high-safety residential wiring, switchboard repairs, and panel modernizations with transparent upfront pricing since 2004.
+          </p>
+          <div class="footer-cert-badge">
+            <span aria-hidden="true">🛡️</span> Master Electrician Lic #EC-984421-B
+          </div>
+          <ul class="social-list" aria-label="VoltGuard on social media">
+            <li><a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><span class="glyph-fb" aria-hidden="true">f</span></a></li>
+            <li><a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><span class="glyph-ig" aria-hidden="true"></span></a></li>
+            <li><a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in a new tab)"><span class="glyph-yt" aria-hidden="true"></span></a></li>
+            <li><a href="https://www.linkedin.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><span class="glyph-in" aria-hidden="true">in</span></a></li>
+            <li><a href="https://x.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X, formerly Twitter (opens in a new tab)"><span class="glyph-x" aria-hidden="true">𝕏</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Company -->
+        <nav class="footer-col" aria-label="Company">
+          <h2 class="footer-col-title">Company</h2>
+          <ul class="footer-links-list">
+            <li><a href="../index.html" class="footer-link">Home 1</a></li>
+            <li><a href="../index1.html" class="footer-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="projects.html" class="footer-link">Our Projects</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Col 3: Services -->
+        <nav class="footer-col" aria-label="Services">
+          <h2 class="footer-col-title">Services</h2>
+          <ul class="footer-links-list">
+            <li><a href="services.html#wiring-service" class="footer-link">Wiring &amp; Rewiring</a></li>
+            <li><a href="services.html#panel-upgrade-service" class="footer-link">Panel Upgrades</a></li>
+            <li><a href="services.html#switchboard-service" class="footer-link">Switchboard Repair</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Guide</a></li>
+            <li><a href="about.html#how-booking-works" class="footer-link">How Booking Works</a></li>
+          </ul>
+        </nav>
+
+        <!-- Col 4: Address & Contact -->
+        <div class="footer-col">
+          <h2 class="footer-col-title">Visit &amp; Contact</h2>
+          <address class="footer-address">
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <span class="footer-contact-label">Headquarters</span>
+                <span dir="ltr">442 Ampere Parkway, Suite 100<br>Metro Technology Center, CA 90210</span><br>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=442+Ampere+Parkway+Suite+100+CA+90210" class="footer-directions" target="_blank" rel="noopener noreferrer">Get directions <span class="dir-arrow" aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📞</span>
+              <div>
+                <span class="footer-contact-label">24/7 Emergency Hotline</span>
+                <a href="tel:8005558658" dir="ltr">(800) 555-8658</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <span class="footer-contact-label">Email</span>
+                <a href="mailto:service@voltguardelectric.com" dir="ltr">service@voltguardelectric.com</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">🕒</span>
+              <div>
+                <span class="footer-contact-label">Office Hours</span>
+                Mon–Sat: 7:00 AM – 7:00 PM<br>Emergency calls: 24/7/365
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VoltGuard Electrical Services LLC. All rights reserved. Licensed, Bonded &amp; Insured.</p>
+        <p>Compliant with NEC 2023 &amp; OSHA Safety Codes</p>
+        <a href="#top" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

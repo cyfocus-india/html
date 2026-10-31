@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Aura Yoga &amp; Wellness</title>
+  <meta name="description" content="Create your Aura Yoga member profile to reserve class slots, track class pack usage, and manage your studio membership.">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/icons.css">
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-body) 100%);
+    }
+    .auth-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem var(--container-pad);
+      max-width: var(--container-max);
+      width: 100%;
+      margin-inline: auto;
+    }
+    .auth-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 500px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.25rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .password-wrap {
+      position: relative;
+    }
+    .password-wrap .form-control {
+      padding-right: 2.75rem;
+    }
+    .password-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 4px;
+    }
+    .password-toggle-btn:hover {
+      color: var(--primary);
+    }
+    .password-toggle-btn .ui-icon {
+      width: 1.15rem;
+      height: 1.15rem;
+    }
+    [dir="rtl"] .password-toggle-btn {
+      right: auto;
+      left: 12px;
+    }
+    [dir="rtl"] .password-wrap .form-control {
+      padding-right: 1.1rem;
+      padding-left: 2.75rem;
+    }
+  </style>
+</head>
+<body class="auth-page">
+
+  <!-- Top bar (No header/footer as required) -->
+  <header class="auth-topbar">
+    <a href="../index.html" class="brand-logo" aria-label="Back to Aura Yoga Home 1">
+      <img src="../assets/images/logo-icon.png" alt="Aura Yoga meditation logo" class="brand-mark" width="40" height="40">
+      <span class="brand-text">
+        <span class="brand-name">Aura Yoga</span>
+        <span class="brand-sub">Wellness Sanctuary</span>
+      </span>
+    </a>
+
+    <div style="display: flex; gap: 0.75rem;">
+      <button type="button" class="icon-btn theme-toggle-btn" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+      <button type="button" class="icon-btn dir-toggle-btn" aria-label="Switch to right to left layout" title="Switch to right to left layout">RTL</button>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="section-badge">New Practitioner</span>
+        <h1 style="font-size: 1.85rem; margin-bottom: 0.4rem;">Create Account</h1>
+        <p style="font-size: 0.92rem; color: var(--text-muted);">Join our mindful sanctuary community</p>
+      </div>
+
+      <div id="signup-feedback" class="form-feedback" style="display: none;" role="alert"></div>
+
+      <!-- Social Sign-Up Options -->
+      <div class="social-auth">
+        <button type="button" class="btn btn-social" data-provider="Google">
+          <img src="../assets/images/icons/google.png" alt="" class="btn-social-logo" width="20" height="20">
+          <span>Sign up with Google</span>
+        </button>
+        <button type="button" class="btn btn-social" data-provider="Apple">
+          <span class="ui-icon icon-apple" aria-hidden="true"></span>
+          <span>Sign up with Apple</span>
+        </button>
+      </div>
+
+      <div class="auth-divider">or sign up with email</div>
+
+      <form id="signup-form" novalidate>
+        <div class="form-group">
+          <label for="signup-name" class="form-label">Full Name *</label>
+          <input type="text" id="signup-name" class="form-control" placeholder="Maya Angelou" required>
+          <div class="field-error">Please enter your full name</div>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-email" class="form-label">Email Address *</label>
+          <input type="email" id="signup-email" class="form-control" placeholder="name@example.com" required>
+          <div class="field-error">Please enter a valid email address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-level" class="form-label">Primary Practice Experience</label>
+          <select id="signup-level" class="form-control">
+            <option value="beginner">New to Yoga &bull; Foundation Level</option>
+            <option value="intermediate" selected>Intermediate &bull; Flow &amp; Alignment</option>
+            <option value="advanced">Advanced &bull; Deep Practice &amp; Inversions</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-password" class="form-label">Password *</label>
+          <div class="password-wrap">
+            <input type="password" id="signup-password" class="form-control" placeholder="At least 6 characters" required>
+            <button type="button" class="password-toggle-btn" aria-label="Show password" title="Show password"><span class="ui-icon icon-eye" aria-hidden="true"></span></button>
+          </div>
+          <div class="field-error">Password must be at least 6 characters</div>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-confirm-password" class="form-label">Confirm Password *</label>
+          <div class="password-wrap">
+            <input type="password" id="signup-confirm-password" class="form-control" placeholder="Re-enter your password" required>
+            <button type="button" class="password-toggle-btn" aria-label="Show password" title="Show password"><span class="ui-icon icon-eye" aria-hidden="true"></span></button>
+          </div>
+          <div class="field-error">Passwords do not match</div>
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.65rem;">
+          <input type="checkbox" id="signup-terms" required style="accent-color: var(--primary); width: 17px; height: 17px; margin-top: 3px;">
+          <label for="signup-terms" style="font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+            I agree to the Studio Health &amp; Safety Waiver and honor the sanctuary etiquette.
+          </label>
+        </div>
+        <div id="terms-error" class="field-error" style="margin-top: -0.75rem; margin-bottom: 1rem;">Please agree to the studio waiver</div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Create Profile</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-secondary);">
+        Already have an account? <a href="signin.html" style="color: var(--primary); font-weight: 600;">Sign In</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Toggle password visibility: eye reveals the password, eye-off hides it again
+      document.querySelectorAll('.password-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const input = btn.previousElementSibling;
+          const icon = btn.querySelector('.ui-icon');
+          const label = input.type === 'password' ? 'Hide password' : 'Show password';
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.className = 'ui-icon icon-eye-off';
+          } else {
+            input.type = 'password';
+            icon.className = 'ui-icon icon-eye';
+          }
+          btn.setAttribute('aria-label', label);
+          btn.setAttribute('title', label);
+        });
+      });
+
+      // Social Sign-Up (demo): starts a member session and opens the dashboard
+      const socialButtons = document.querySelectorAll('.btn-social');
+      socialButtons.forEach(btn => {
+        const label = btn.querySelector('span:last-child');
+        btn.setAttribute('data-label', label.textContent);
+        btn.addEventListener('click', function () {
+          const provider = btn.getAttribute('data-provider');
+          socialButtons.forEach(b => (b.disabled = true));
+          label.textContent = 'Connecting to ' + provider + '…';
+          localStorage.setItem('aura_active_user', JSON.stringify({
+            provider: provider.toLowerCase(),
+            loggedInAt: new Date().toISOString()
+          }));
+          setTimeout(function () {
+            window.location.href = 'dashboard.html';
+          }, 700);
+        });
+      });
+
+      // Restore the buttons when returning via the browser back button
+      window.addEventListener('pageshow', function () {
+        socialButtons.forEach(b => {
+          b.disabled = false;
+          b.querySelector('span:last-child').textContent = b.getAttribute('data-label');
+        });
+      });
+
+      // Sign Up Form Submit
+      const form = document.getElementById('signup-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          let valid = true;
+
+          // Clear errors
+          form.querySelectorAll('.form-control').forEach(i => i.classList.remove('error'));
+          form.querySelectorAll('.field-error').forEach(e => e.classList.remove('visible'));
+
+          const name = document.getElementById('signup-name');
+          const email = document.getElementById('signup-email');
+          const pass = document.getElementById('signup-password');
+          const confirmPass = document.getElementById('signup-confirm-password');
+          const level = document.getElementById('signup-level');
+          const terms = document.getElementById('signup-terms');
+          const termsError = document.getElementById('terms-error');
+
+          if (!name || !name.value.trim()) {
+            name.classList.add('error');
+            name.parentElement.querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email || !emailRegex.test(email.value.trim())) {
+            email.classList.add('error');
+            email.parentElement.querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          // Password errors sit outside .password-wrap, so look them up from the form group
+          if (!pass || pass.value.length < 6) {
+            pass.classList.add('error');
+            pass.closest('.form-group').querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          if (!confirmPass || confirmPass.value !== pass.value) {
+            confirmPass.classList.add('error');
+            confirmPass.closest('.form-group').querySelector('.field-error').classList.add('visible');
+            valid = false;
+          }
+
+          if (!terms || !terms.checked) {
+            if (termsError) termsError.classList.add('visible');
+            valid = false;
+          }
+
+          if (valid) {
+            // Store new user in localStorage
+            const newUser = {
+              name: name.value.trim(),
+              email: email.value.trim(),
+              level: level.value,
+              loggedInAt: new Date().toISOString()
+            };
+            localStorage.setItem('aura_active_user', JSON.stringify(newUser));
+            window.location.href = 'dashboard.html';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
